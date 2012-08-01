@@ -1,0 +1,43 @@
+﻿PokerStars Hand #78441538809:  Hold'em Limit ($30/$60 USD) - 2012/04/06 16:45:19 ET
+Table 'Constantia III' 10-max Seat #10 is the button
+Seat 1: Crazyhug ($1192.30 in chips) 
+Seat 2: TPirahna ($2961.45 in chips) 
+Seat 3: Baronsengir1 ($782.50 in chips) 
+Seat 4: Makomar ($1949.50 in chips) 
+Seat 10: slavistas ($1080 in chips) 
+Crazyhug: posts small blind $15
+TPirahna: posts big blind $30
+*** HOLE CARDS ***
+Baronsengir1: raises $30 to $60
+Makomar: raises $30 to $90
+slavistas: folds 
+Crazyhug: folds 
+TPirahna: folds 
+Baronsengir1: raises $30 to $120
+Betting is capped
+Makomar: calls $30
+*** FLOP *** [Ad 5d 5c]
+Baronsengir1: bets $30
+mausilein joins the table at seat #5 
+Makomar: raises $30 to $60
+Baronsengir1: calls $30
+*** TURN *** [Ad 5d 5c] [4h]
+Baronsengir1: checks 
+Makomar: bets $60
+Baronsengir1: raises $60 to $120
+Makomar: calls $60
+*** RIVER *** [Ad 5d 5c 4h] [7c]
+Baronsengir1: bets $60
+Makomar: calls $60
+*** SHOW DOWN ***
+Baronsengir1: shows [Ac Qc] (two pair, Aces and Fives)
+Makomar: mucks hand 
+Baronsengir1 collected $762 from pot
+*** SUMMARY ***
+Total pot $765 | Rake $3 
+Board [Ad 5d 5c 4h 7c]
+Seat 1: Crazyhug (small blind) folded before Flop
+Seat 2: TPirahna (big blind) folded before Flop
+Seat 3: Baronsengir1 showed [Ac Qc] and won ($762) with two pair, Aces and Fives
+Seat 4: Makomar mucked
+Seat 10: slavistas (button) folded before Flop (didn't bet)

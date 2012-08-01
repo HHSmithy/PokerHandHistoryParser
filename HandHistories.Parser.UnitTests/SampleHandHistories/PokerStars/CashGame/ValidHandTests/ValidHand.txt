@@ -1,0 +1,24 @@
+﻿PokerStars Game #81199559778:  Hold'em No Limit ($0.01/$0.02 USD) - 2012/05/29 16:09:29 ET
+Table 'Polaris IV 40-100 bb' 6-max Seat #1 is the button
+Seat 1: Marius*90*V ($0.81 in chips) 
+Seat 2: stuporfly ($2.99 in chips) 
+Seat 3: Hailikisat ($3.73 in chips) 
+Seat 4: ikyQue ($2.29 in chips) 
+Seat 6: gunni121 ($2.39 in chips) 
+stuporfly: posts small blind $0.01
+Hailikisat: posts big blind $0.02
+*** HOLE CARDS ***
+ikyQue: folds 
+gunni121: folds 
+Marius*90*V: folds 
+stuporfly: folds 
+Uncalled bet ($0.01) returned to Hailikisat
+Hailikisat collected $0.02 from pot
+Hailikisat: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.02 | Rake $0 
+Seat 1: Marius*90*V (button) folded before Flop (didn't bet)
+Seat 2: stuporfly (small blind) folded before Flop
+Seat 3: Hailikisat (big blind) collected ($0.02)
+Seat 4: ikyQue folded before Flop (didn't bet)
+Seat 6: gunni121 folded before Flop (didn't bet)

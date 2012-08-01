@@ -1,0 +1,62 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Omaha PL $1/$2</gametype>
+    <tablename>Fable (No DP 50 bb min), 248179261</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-29 10:24:27</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+<game gamecode="3303075398">
+    <general>
+      <startdate>2012-05-29 10:47:54</startdate>
+      <players>
+        <player seat="1" name="is0lator" chips="$200" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="3" name="brunzen" chips="$172" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="5" name="ShortStackExpert" chips="$161.40" dealer="1" win="$0" bet="$95.90" rebuy="0" addon="0" />
+        <player seat="6" name="ailiceC" chips="$334.60" dealer="0" win="$0" bet="$1" rebuy="0" addon="0" />
+        <player seat="10" name="CSHOPE" chips="$95.90" dealer="0" win="$189.80" bet="$95.90" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="ailiceC" type="1" sum="$1" cards="[cards]" />
+      <action no="2" player="CSHOPE" type="2" sum="$2" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="is0lator">X X X X</cards>
+      <action no="3" player="is0lator" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="brunzen">X X X X</cards>
+      <action no="4" player="brunzen" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="ShortStackExpert">S7 S2 H2 C4</cards>
+      <action no="5" player="ShortStackExpert" type="23" sum="$7" cards="" />
+      <cards type="Pocket" player="ailiceC">X X X X</cards>
+      <action no="6" player="ailiceC" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="CSHOPE">SK SA CK H7</cards>
+      <action no="7" player="CSHOPE" type="3" sum="$5" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S5 H9 S8</cards>
+      <action no="9" player="ShortStackExpert" type="23" sum="$48.75" cards="" />
+      <action no="11" player="ShortStackExpert" type="3" sum="$40.15" cards="" />
+      <action no="8" player="CSHOPE" type="5" sum="$11.25" cards="" />
+      <action no="10" player="CSHOPE" type="23" sum="$88.90" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S9</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">HA</cards>
+    </round>
+  </game>
+  </session>

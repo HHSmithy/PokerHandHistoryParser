@@ -1,0 +1,33 @@
+﻿Game # 2646494962 - Omaha High Pot Limit EUR 0.50/1.00 - Table "Waco"
+
+Players(max 6):
+OffMeNut                    (EUR 255.63 in seat 1)
+stook                       (EUR 301.41 in seat 2)
+wELMA                       (EUR 26.97 in seat 4)
+Vrddhi                      (EUR 483.20 in seat 5)
+
+Dealer:                     stook
+Small Blind:                wELMA       (0.50)
+Big Blind:                  Vrddhi      (1.00)
+
+OffMeNut                    Raise       (3.50)
+stook                       Raise       (7.75)
+wELMA                       Call        (7.25)
+Vrddhi                      Fold
+OffMeNut                    Call        (4.25)
+
+Flop                        Js - 7c - 2h
+
+wELMA                       Check
+OffMeNut                    Check
+stook                       Bet         (23.00)
+wELMA                       Fold
+OffMeNut                    Fold
+stook                       Payback     (23.00)
+
+stook didn't show hand
+
+stook wins:                 EUR 23.04
+Rake:                       EUR 1.21
+
+Game ended 2012-05-31 02:00:20 GMT+01:00

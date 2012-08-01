@@ -1,0 +1,45 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $50/$100</gametype>
+    <tablename>Adhair (No DP) , 188274601</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-29 02:33:03</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302883310">
+    <general>
+      <startdate>2012-05-29 02:33:15</startdate>
+      <players>
+        <player seat="5" name="win653" chips="$3,000" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="6" name="IpokerBoss" chips="$3,000" dealer="0" win="$0" bet="$50" rebuy="0" addon="0" />
+        <player seat="8" name="iLikePOKERS1208" chips="$10,000" dealer="0" win="$150" bet="$100" rebuy="0" addon="0" />
+        <player seat="10" name="numbersnletters" chips="$3,000" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="IpokerBoss" type="1" sum="$50" cards="[cards]" />
+      <action no="2" player="iLikePOKERS1208" type="2" sum="$100" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="win653">X X</cards>
+      <action no="4" player="win653" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="IpokerBoss">X X</cards>
+      <action no="5" player="IpokerBoss" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="iLikePOKERS1208">X X</cards>
+      <cards type="Pocket" player="numbersnletters">X X</cards>
+      <action no="3" player="numbersnletters" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

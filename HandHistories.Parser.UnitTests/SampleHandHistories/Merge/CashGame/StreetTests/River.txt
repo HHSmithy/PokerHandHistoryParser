@@ -1,0 +1,49 @@
+﻿<description type="Holdem" stakes="No Limit ($0.05/$0.10)"/>
+<game id="56067014-1756" starttime="20120529031347" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Baja (56067014)|56067014|56067014-1756|false">
+	<players dealer="1">
+		<player seat="0" nickname="StunTKAwQ" balance="$10.80" dealtin="true" />
+		<player seat="1" nickname="weeverr" balance="$10.00" dealtin="true" />
+		<player seat="4" nickname="cashanddash" balance="$9.90" dealtin="true" />
+		<player seat="5" nickname="LovelyJen" balance="$10.00" dealtin="true" />
+		<player seat="7" nickname="lindsey93" balance="$21.91" dealtin="true" />
+		<player seat="8" nickname="IBeBanging" balance="$10.00" dealtin="false" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338279209109" player="4" amount="0.05"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338279209656" player="5" amount="0.10"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338279216109" player="7" amount="0.25"/>
+		<event sequence="4" type="CALL" timestamp="1338279226609" player="0" amount="0.25"/>
+		<event sequence="5" type="CALL" timestamp="1338279231390" player="1" amount="0.25"/>
+		<event sequence="6" type="FOLD" timestamp="1338279236765" player="4"/>
+		<event sequence="7" type="FOLD" timestamp="1338279239718" player="5"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="8" type="CHECK" timestamp="1338279245156" player="7"/>
+		<event sequence="9" type="BET" timestamp="1338279248265" player="0" amount="0.45"/>
+		<event sequence="10" type="FOLD" timestamp="1338279250765" player="1"/>
+		<event sequence="11" type="CALL" timestamp="1338279252343" player="7" amount="0.45"/>
+		<cards type="COMMUNITY" cards="5d,Ks,7c"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<event sequence="12" type="CHECK" timestamp="1338279254015" player="7"/>
+		<event sequence="13" type="BET" timestamp="1338279256937" player="0" amount="1.20"/>
+		<event sequence="14" type="CALL" timestamp="1338279265421" player="7" amount="1.20"/>
+		<cards type="COMMUNITY" cards="5d,Ks,7c,Jc"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<event sequence="15" type="CHECK" timestamp="1338279268968" player="7"/>
+		<event sequence="16" type="CHECK" timestamp="1338279273156" player="0"/>
+		<cards type="COMMUNITY" cards="5d,Ks,7c,Jc,7d"/>
+	</round>
+	<round id="SHOWDOWN" sequence="6">
+		<event sequence="17" type="SHOW" timestamp="1338279273687" player="7"/>
+		<event sequence="18" type="SHOW" timestamp="1338279273984" player="0"/>
+		<cards type="SHOWN" cards="Ac,4c" player="7"/>
+		<cards type="SHOWN" cards="9s,9d" player="0"/>
+	</round>
+	<round id="END_OF_GAME" sequence="7">
+		<winner amount="3.99" uncalled="false" potnumber="1" player="0" hand="Pair of Nines" pottype="n"/>
+	</round>
+</game>

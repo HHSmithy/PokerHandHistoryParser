@@ -1,0 +1,24 @@
+﻿PokerStars Hand #78448518036:  Hold'em No Limit ($50/$100 - $2000 Cap -  USD) - 2012/04/06 18:56:18 ET
+Table 'Enceladus III' 6-max Seat #4 is the button
+Seat 3: Marcotjow ($4384.20 in chips) 
+Seat 4: WizardOfAhhs ($2692.80 in chips) 
+WizardOfAhhs: posts small blind $50
+Marcotjow: posts big blind $100
+*** HOLE CARDS ***
+WizardOfAhhs: raises $100 to $200
+Marcotjow: raises $275 to $475
+WizardOfAhhs: raises $1525 to $2000 and has reached the $2000 cap
+Marcotjow: calls $1525 and has reached the $2000 cap
+*** FLOP *** [Ah 7s Ts]
+*** TURN *** [Ah 7s Ts] [Ks]
+*** RIVER *** [Ah 7s Ts Ks] [4d]
+*** SHOW DOWN ***
+Marcotjow: shows [Kh Qh] (a pair of Kings)
+WizardOfAhhs: shows [Ad Kd] (two pair, Aces and Kings)
+WizardOfAhhs collected $3998 from pot
+*** SUMMARY ***
+Total pot $4000 | Rake $2 
+Board [Ah 7s Ts Ks 4d]
+Seat 3: Marcotjow (big blind) showed [Kh Qh] and lost with a pair of Kings
+Seat 4: WizardOfAhhs (button) (small blind) showed [Ad Kd] and won ($3998) with two pair, Aces and Kings
+

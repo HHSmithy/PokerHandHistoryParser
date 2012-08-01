@@ -1,0 +1,25 @@
+﻿***** History for hand R5-244711775-335 *****
+Start hand: Wed May 30 03:12:00 CEST 2012
+Table: Leipzig [244711775] (NO_LIMIT TEXAS_HOLDEM $10/$20, Real money)
+Button: seat 5
+Players in round: 4
+Seat 4: DM899 ($1617.50) 
+Seat 5: sickseeker ($4949.00) 
+Seat 7: njoetrhawrg ($2488.00) 
+Seat 8: el_pescado99 ($4620.00) 
+njoetrhawrg posts small blind ($10)
+el_pescado99 posts big blind ($20)
+---
+Dealing pocket cards
+DM899 folds
+sickseeker folds
+njoetrhawrg folds
+---
+Summary:
+Main pot: $20.00 won by el_pescado99 ($20.00)
+Rake taken: $0.00
+Seat 4: DM899 ($1617.50), net: -$0.00
+Seat 5: sickseeker ($4949.00), net: -$0.00
+Seat 7: njoetrhawrg ($2478.00), net: -$10.00
+Seat 8: el_pescado99 ($4630.00), net: +$10.00
+***** End of hand R5-244711775-335 *****

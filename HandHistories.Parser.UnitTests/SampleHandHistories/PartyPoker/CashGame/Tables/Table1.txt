@@ -1,0 +1,26 @@
+﻿***** Hand History for Game 11614243628 *****
+$1,000 USD NL Texas Hold'em - Tuesday, April 03, 04:27:46 EDT 2012
+Table Heads Up #2412772 (No DP) (Real Money)
+Seat 1 is the button
+Total number of players : 2/2 
+Seat 1: Orikus ( $1,095.05 USD )
+Seat 2: arderi ( $1,000 USD )
+Orikus posts small blind [$5 USD].
+arderi posts big blind [$10 USD].
+** Dealing down cards **
+Orikus calls [$5 USD]
+arderi checks
+** Dealing Flop ** [ Kd, Js, 2h ]
+arderi checks
+Orikus checks
+** Dealing Turn ** [ 8c ]
+arderi checks
+Orikus bets [$10 USD]
+arderi calls [$10 USD]
+** Dealing River ** [ 9d ]
+arderi checks
+Orikus bets [$10 USD]
+arderi calls [$10 USD]
+Orikus shows [ Ad, 3d ]high card Ace.
+arderi shows [ Jc, Ts ]a pair of Jacks.
+arderi wins $59 USD from the main pot with a pair of Jacks.

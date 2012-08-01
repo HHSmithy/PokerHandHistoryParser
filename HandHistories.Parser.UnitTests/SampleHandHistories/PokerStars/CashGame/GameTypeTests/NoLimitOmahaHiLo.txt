@@ -1,0 +1,16 @@
+﻿PokerStars Game #83022242986:  Omaha Hi/Lo No Limit ($2/$4 USD) - 2012/07/08 10:09:00 ET
+Table 'Laodamia Fast,40-100 bb' 6-max Seat #2 is the button
+Seat 1: Mongano ($80 in chips) 
+Seat 2: chepps ($235.78 in chips) 
+chepps: posts small blind $2
+Mongano: posts big blind $4
+*** HOLE CARDS ***
+chepps: raises $231.78 to $235.78 and is all-in
+Mongano: folds 
+Uncalled bet ($231.78) returned to chepps
+chepps collected $8 from pot
+chepps: doesn't show hand 
+*** SUMMARY ***
+Total pot $8 | Rake $0 
+Seat 1: Mongano (big blind) folded before Flop
+Seat 2: chepps (button) (small blind) collected ($8)

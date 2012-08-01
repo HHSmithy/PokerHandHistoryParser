@@ -1,0 +1,33 @@
+﻿PokerStars Hand #78426496505:  Omaha Pot Limit ($25/$50 USD) - 2012/04/06 12:16:34 ET
+Table 'Spica VI' 6-max Seat #1 is the button
+Seat 1: tagushi ($4200 in chips) 
+Seat 2: JoeIngram1 ($5692 in chips) 
+Seat 3: Jackovski ($3047 in chips) 
+Seat 4: IFiNishfish ($697 in chips) 
+Seat 5: toweliestar ($5272 in chips) 
+Seat 6: Nussdorf ($5197 in chips) 
+JoeIngram1: posts small blind $25
+Jackovski: posts big blind $50
+*** HOLE CARDS ***
+IFiNishfish: folds 
+toweliestar: folds 
+Nussdorf: raises $75 to $125
+tagushi: calls $125
+JoeIngram1: calls $100
+Jackovski: folds 
+*** FLOP *** [7h 2d 6d]
+JoeIngram1: bets $325
+Nussdorf: folds 
+tagushi: folds 
+Uncalled bet ($325) returned to JoeIngram1
+JoeIngram1 collected $422 from pot
+JoeIngram1: doesn't show hand 
+*** SUMMARY ***
+Total pot $425 | Rake $3 
+Board [7h 2d 6d]
+Seat 1: tagushi (button) folded on the Flop
+Seat 2: JoeIngram1 (small blind) collected ($422)
+Seat 3: Jackovski (big blind) folded before Flop
+Seat 4: IFiNishfish folded before Flop (didn't bet)
+Seat 5: toweliestar folded before Flop (didn't bet)
+Seat 6: Nussdorf folded on the Flop

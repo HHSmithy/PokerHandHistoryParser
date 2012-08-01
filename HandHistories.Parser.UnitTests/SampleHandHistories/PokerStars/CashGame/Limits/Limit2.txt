@@ -1,0 +1,41 @@
+﻿PokerStars Hand #78451637869:  Omaha Pot Limit ($2/$4 USD) - 2012/04/06 20:12:24 ET
+Table 'Acubens III' 6-max Seat #5 is the button
+Seat 1: camptheblunt ($367.46 in chips) 
+Seat 2: Milana Jones ($400 in chips) 
+Seat 3: blomman_s ($86.56 in chips) 
+Seat 4: tsakaleontas ($78.54 in chips) 
+Seat 5: sharmuta160 ($130.50 in chips) 
+camptheblunt: posts small blind $2
+Milana Jones: posts big blind $4
+*** HOLE CARDS ***
+blomman_s: raises $10 to $14
+tsakaleontas: folds 
+sharmuta160: folds 
+camptheblunt: calls $12
+Milana Jones: raises $42 to $56
+blomman_s: raises $30.56 to $86.56 and is all-in
+camptheblunt: calls $72.56
+Milana Jones: calls $30.56
+*** FLOP *** [Jd Js 3h]
+camptheblunt: checks 
+Milana Jones: checks 
+*** TURN *** [Jd Js 3h] [2d]
+camptheblunt: checks 
+Milana Jones: checks 
+*** RIVER *** [Jd Js 3h 2d] [9d]
+camptheblunt: checks 
+Milana Jones: bets $148.99
+camptheblunt: folds 
+Uncalled bet ($148.99) returned to Milana Jones
+*** SHOW DOWN ***
+Milana Jones: shows [Qc Ad 7d 2c] (a flush, Ace high)
+blomman_s: shows [Ah 9h Qd Qs] (two pair, Queens and Jacks)
+Milana Jones collected $256.88 from pot
+*** SUMMARY ***
+Total pot $259.68 | Rake $2.80 
+Board [Jd Js 3h 2d 9d]
+Seat 1: camptheblunt (small blind) folded on the River
+Seat 2: Milana Jones (big blind) showed [Qc Ad 7d 2c] and won ($256.88) with a flush, Ace high
+Seat 3: blomman_s showed [Ah 9h Qd Qs] and lost with two pair, Queens and Jacks
+Seat 4: tsakaleontas folded before Flop (didn't bet)
+Seat 5: sharmuta160 (button) folded before Flop (didn't bet)

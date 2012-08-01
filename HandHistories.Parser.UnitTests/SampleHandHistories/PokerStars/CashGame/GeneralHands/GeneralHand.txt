@@ -1,0 +1,41 @@
+﻿PokerStars Hand #78451486205:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/07 02:58:27 ET
+Table 'Alemannia IV' 6-max Seat #2 is the button
+Seat 1: MrVtmn ($6.24 in chips) 
+Seat 2: 17doug11 ($16 in chips) 
+Seat 3: InsaneMelon ($16.40 in chips) 
+Seat 4: ZaNoLeT ($6.80 in chips) 
+Seat 5: gualis36 ($8.59 in chips) 
+Seat 6: lord dahl ($15.76 in chips) 
+InsaneMelon: posts small blind $0.08
+ZaNoLeT: posts big blind $0.16
+*** HOLE CARDS ***
+gualis36: folds 
+lord dahl: folds 
+MrVtmn: raises $0.32 to $0.48
+17doug11: calls $0.48
+InsaneMelon: calls $0.40
+ZaNoLeT: folds 
+*** FLOP *** [Tc Kd 3d]
+InsaneMelon: checks 
+MrVtmn: bets $0.48
+17doug11: calls $0.48
+InsaneMelon: folds 
+*** TURN *** [Tc Kd 3d] [Qd]
+MrVtmn: bets $0.80
+17doug11: raises $4.04 to $4.84
+MrVtmn: raises $0.44 to $5.28 and is all-in
+17doug11: calls $0.44
+*** RIVER *** [Tc Kd 3d Qd] [Js]
+*** SHOW DOWN ***
+MrVtmn: shows [Ad 9d] (a flush, Ace high)
+17doug11: shows [Qc Td] (two pair, Queens and Tens)
+MrVtmn collected $12.53 from pot
+*** SUMMARY ***
+Total pot $13.12 | Rake $0.59 
+Board [Tc Kd 3d Qd Js]
+Seat 1: MrVtmn showed [Ad 9d] and won ($12.53) with a flush, Ace high
+Seat 2: 17doug11 (button) showed [Qc Td] and lost with two pair, Queens and Tens
+Seat 3: InsaneMelon (small blind) folded on the Flop
+Seat 4: ZaNoLeT (big blind) folded before Flop
+Seat 5: gualis36 folded before Flop (didn't bet)
+Seat 6: lord dahl folded before Flop (didn't bet)

@@ -1,0 +1,25 @@
+﻿***** History for hand R5-68015410-5 *****
+Start hand: Fri Jun 01 04:25:00 CEST 2012
+Table: [SPEED] Sos [68015410] (NO_LIMIT TEXAS_HOLDEM €2/€4, Real money)
+Button: seat 3
+Players in round: 3
+Seat 3: tationova (€5.95) 
+Seat 5: sheme62 (€1.84) 
+Seat 10: pokerattitud (€2.00) 
+sheme62 posts small blind (€0.02)
+pokerattitud posts big blind (€0.04)
+---
+Dealing pocket cards
+tationova calls €0.04
+sheme62 calls €0.02
+pokerattitud raises €0.12 to €0.16
+tationova folds
+sheme62 folds
+---
+Summary:
+Main pot: €0.12 won by pokerattitud (€0.12)
+Rake taken: €0.00
+Seat 3: tationova (€5.91), net: -€0.04
+Seat 5: sheme62 (€1.80), net: -€0.04
+Seat 10: pokerattitud (€2.08), net: +€0.08
+***** End of hand R5-68015410-5 *****

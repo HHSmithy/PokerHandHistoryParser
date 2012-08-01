@@ -1,0 +1,35 @@
+﻿***** Hand History for Game 11615434554 *****
+$600 USD NL Texas Hold'em - Tuesday, April 03, 12:44:24 EDT 2012
+Table Jackpot #2356404 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 5: GRFpipvssfzyeir ( $220.05 USD )
+Seat 1: K A G A W A ( $600 USD )
+Seat 2: Sir Bobby Bouts ( $946.48 USD )
+Seat 4: moreonetime ( $600 USD )
+Seat 3: santifcb ( $245.47 USD )
+Seat 6: subway96 ( $659.28 USD )
+santifcb posts small blind [$3 USD].
+moreonetime posts big blind [$6 USD].
+** Dealing down cards **
+GRFpipvssfzyeir will be using his time bank for this hand.
+GRFpipvssfzyeir raises [$18 USD]
+subway96 calls [$18 USD]
+K A G A W A folds
+Sir Bobby Bouts folds
+santifcb calls [$15 USD]
+moreonetime folds
+** Dealing Flop ** [ 3h, Ks, 3s ]
+santifcb checks
+GRFpipvssfzyeir will be using his time bank for this hand.
+GRFpipvssfzyeir checks
+subway96 bets [$42.75 USD]
+santifcb folds
+GRFpipvssfzyeir will be using his time bank for this hand.
+GRFpipvssfzyeir is all-In  [$202.05 USD]
+subway96 calls [$159.30 USD]
+** Dealing Turn ** [ 8h ]
+** Dealing River ** [ 7d ]
+subway96 shows [ 4s, As ]a pair of Threes.
+GRFpipvssfzyeir shows [ Ah, Ac ]two pairs, Aces and Threes.
+GRFpipvssfzyeir wins $461.10 USD from the main pot with two pairs, Aces and Threes.

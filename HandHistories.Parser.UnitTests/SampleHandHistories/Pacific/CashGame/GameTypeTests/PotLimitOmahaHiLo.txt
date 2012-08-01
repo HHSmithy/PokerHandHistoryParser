@@ -1,0 +1,34 @@
+﻿***** Hand History for Game 11609696017 *****
+$100 USD PL Omaha Hi-Lo - Sunday, April 01, 16:08:05 EDT 2012
+Table Table  204098 (No DP) (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 3: KoNNsEnSyS ( $111.20 USD )
+Seat 4: MrDallHansen ( $75.88 USD )
+Seat 2: Tobleronez ( $50 USD )
+Seat 1: annajulia222 ( $97.15 USD )
+Seat 6: bigapple222 ( $100.59 USD )
+Seat 5: neonthai ( $50 USD )
+KoNNsEnSyS posts small blind [$0.50 USD].
+MrDallHansen posts big blind [$1 USD].
+** Dealing down cards **
+neonthai folds
+bigapple222 folds
+annajulia222 raises [$3 USD]
+KoNNsEnSyS folds
+MrDallHansen calls [$2 USD]
+** Dealing Flop ** [ 5s, 3c, 9s ]
+MrDallHansen checks
+annajulia222 bets [$4 USD]
+MrDallHansen calls [$4 USD]
+** Dealing Turn ** [ 8h ]
+MrDallHansen checks
+annajulia222 checks
+** Dealing River ** [ As ]
+MrDallHansen bets [$1 USD]
+annajulia222 calls [$1 USD]
+MrDallHansen shows [ 8c, Js, Jc, 2s ]a flush, Ace high.
+MrDallHansen shows8,5,3,2,A  for low.
+annajulia222 doesn't show [ 5d, Jd, 3d, Ac ]two pairs, Aces and Fives.
+MrDallHansen wins $7.84 USD from the main pot with a flush, Ace high.
+MrDallHansen wins Lo ($7.84 USD) from the main pot with 8,5,3,2,A.

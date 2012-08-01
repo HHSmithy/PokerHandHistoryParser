@@ -1,0 +1,35 @@
+﻿***** Hand History for Game 11615342540 *****
+$200 USD NL Texas Hold'em - Tuesday, April 03, 12:17:17 EDT 2012
+Table Table  194981 (No DP) (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 4: Enslaver ( $200 USD )
+Seat 1: F1SHH11 ( $220.40 USD )
+Seat 6: ImMovingOnUp ( $214.40 USD )
+Seat 3: K_flip_L ( $54.51 USD )
+Seat 2: bloody__9 ( $273.55 USD )
+Seat 5: l_ . - l - . _l ( $214.30 USD )
+Enslaver posts small blind [$1 USD].
+l_ . - l - . _l posts big blind [$2 USD].
+** Dealing down cards **
+ImMovingOnUp folds
+bloody__9 folds
+K_flip_L raises [$8 USD]
+Enslaver will be using his time bank for this hand.
+Enslaver folds
+l_ . - l - . _l calls [$6 USD]
+** Dealing Flop ** [ Ks, 2s, 7c ]
+l_ . - l - . _l checks
+K_flip_L bets [$10 USD]
+l_ . - l - . _l calls [$10 USD]
+** Dealing Turn ** [ Kd ]
+l_ . - l - . _l checks
+K_flip_L checks
+** Dealing River ** [ 7h ]
+l_ . - l - . _l bets [$37 USD]
+K_flip_L is all-In  [$36.51 USD]
+l_ . - l - . _l shows [ Qc, Kc ]a full house, Kings full of Sevens.
+K_flip_L doesn't show [ Ah, 7s ]a full house, Sevens full of Kings.
+l_ . - l - . _l wins $0.49 USD from the side pot 1 with a full house, Kings full of Sevens.
+l_ . - l - . _l wins $107.02 USD from the main pot with a full house, Kings full of Sevens.
+

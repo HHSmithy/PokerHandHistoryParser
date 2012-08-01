@@ -1,0 +1,40 @@
+﻿<description type="Omaha" stakes="Pot Limit ($5/$10)"/>
+<game id="56176485-33" starttime="20120529182537" numholecards="4" gametype="9" seats="6" realmoney="true" data="20120529|Ming Tombs (56176485)|56176485|56176485-33|false">
+	<players dealer="4">
+		<player seat="0" nickname="nemi711" balance="$829.00" dealtin="true" />
+		<player seat="2" nickname="gamblegambel" balance="$400.00" dealtin="false" />
+		<player seat="5" nickname="yuseff415" balance="$1169.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338333911875" player="5" amount="5.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338333912031" player="0" amount="10.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338333915687" player="5" amount="30.00"/>
+		<event sequence="4" type="CALL" timestamp="1338333917468" player="0" amount="20.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="5" type="CHECK" timestamp="1338333923812" player="5"/>
+		<event sequence="6" type="CHECK" timestamp="1338333925265" player="0"/>
+		<cards type="COMMUNITY" cards="5c,8d,4d"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<event sequence="7" type="CHECK" timestamp="1338333928484" player="5"/>
+		<event sequence="8" type="CHECK" timestamp="1338333929781" player="0"/>
+		<cards type="COMMUNITY" cards="5c,8d,4d,7s"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<event sequence="9" type="CHECK" timestamp="1338333932218" player="5"/>
+		<event sequence="10" type="CHECK" timestamp="1338333933578" player="0"/>
+		<cards type="COMMUNITY" cards="5c,8d,4d,7s,Ks"/>
+	</round>
+	<round id="SHOWDOWN" sequence="6">
+		<event sequence="11" type="SHOW" timestamp="1338333933984" player="5"/>
+		<event sequence="12" type="SHOW" timestamp="1338333934875" player="0"/>
+		<cards type="SHOWN" cards="Jc,9c,Kd,Jd" player="5"/>
+		<cards type="SHOWN" cards="Ad,As,9h,Kc" player="0"/>
+	</round>
+	<round id="END_OF_GAME" sequence="7">
+		<winner amount="59.50" uncalled="false" potnumber="1" player="0" hand="Pair of Aces" pottype="n"/>
+	</round>
+</game>

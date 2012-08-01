@@ -1,0 +1,205 @@
+﻿***** Hand History for Game 11614543080 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:24:56 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $18.54 USD )
+Seat 5: trotylion ( $77.61 USD )
+aceofsamurai posts small blind [$0.25 USD].
+trotylion posts big blind [$0.50 USD].
+** Dealing down cards **
+aceofsamurai raises [$1.25 USD]
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $2 USD
+
+
+***** Hand History for Game 11614543847 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:25:16 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 5 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $19.04 USD )
+Seat 5: trotylion ( $77.11 USD )
+trotylion posts small blind [$0.25 USD].
+aceofsamurai posts big blind [$0.50 USD].
+** Dealing down cards **
+trotylion raises [$1.25 USD]
+aceofsamurai calls [$1 USD]
+** Dealing Flop ** [ Qc, Qs, 3s ]
+aceofsamurai checks
+trotylion checks
+** Dealing Turn ** [ 3d ]
+aceofsamurai bets [$2.85 USD]
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $5.70 USD
+
+
+***** Hand History for Game 11614544726 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:25:41 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.39 USD )
+Seat 5: trotylion ( $75.61 USD )
+aceofsamurai posts small blind [$0.25 USD].
+trotylion posts big blind [$0.50 USD].
+** Dealing down cards **
+aceofsamurai calls [$0.25 USD]
+trotylion checks
+** Dealing Flop ** [ Jd, 8c, Jc ]
+trotylion checks
+aceofsamurai bets [$0.50 USD]
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $1.45 USD
+
+
+
+***** Hand History for Game 11614545300 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:25:59 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 5 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.84 USD )
+Seat 5: trotylion ( $75.11 USD )
+trotylion posts small blind [$0.25 USD].
+aceofsamurai posts big blind [$0.50 USD].
+** Dealing down cards **
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $0.75 USD
+
+
+***** Hand History for Game 11614545699 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:26:11 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $21.09 USD )
+Seat 5: trotylion ( $74.86 USD )
+aceofsamurai posts small blind [$0.25 USD].
+trotylion posts big blind [$0.50 USD].
+** Dealing down cards **
+aceofsamurai calls [$0.25 USD]
+trotylion checks
+** Dealing Flop ** [ 4c, Jh, 4s ]
+trotylion checks
+aceofsamurai checks
+** Dealing Turn ** [ Qs ]
+trotylion checks
+aceofsamurai checks
+** Dealing River ** [ 3s ]
+trotylion checks
+aceofsamurai checks
+trotylion shows [ Js, 6h, Td, Kc ]two pairs, Jacks and Fours.
+aceofsamurai doesn't show [ Th, 5s, Ac, 2h ]a pair of Fours.
+trotylion wins $0.95 USD from the main pot with two pairs, Jacks and Fours.
+
+
+
+***** Hand History for Game 11614546608 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:26:37 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 5 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.59 USD )
+Seat 5: trotylion ( $75.31 USD )
+trotylion posts small blind [$0.25 USD].
+aceofsamurai posts big blind [$0.50 USD].
+** Dealing down cards **
+trotylion raises [$1.25 USD]
+aceofsamurai calls [$1 USD]
+** Dealing Flop ** [ Ac, Ts, Ks ]
+aceofsamurai checks
+trotylion checks
+** Dealing Turn ** [ Qc ]
+aceofsamurai bets [$2.85 USD]
+trotylion raises [$11.40 USD]
+aceofsamurai is all-In  [$16.24 USD]
+trotylion calls [$7.69 USD]
+** Dealing River ** [ 4s ]
+trotylion shows [ 9c, 3h, Tc, Jd ]a straight, Ten to Ace.
+aceofsamurai shows [ Qd, Kc, 3c, Jc ]a straight, Ten to Ace.
+aceofsamurai wins $20.09 USD from the main pot with a straight, Ten to Ace.
+trotylion wins $20.09 USD from the main pot with a straight, Ten to Ace.
+
+
+***** Hand History for Game 11614547894 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:27:14 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.09 USD )
+Seat 5: trotylion ( $74.81 USD )
+aceofsamurai posts small blind [$0.25 USD].
+trotylion posts big blind [$0.50 USD].
+** Dealing down cards **
+aceofsamurai raises [$0.75 USD]
+trotylion calls [$0.50 USD]
+** Dealing Flop ** [ 7c, Ah, 6h ]
+trotylion checks
+aceofsamurai bets [$1.90 USD]
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $3.80 USD
+
+
+
+***** Hand History for Game 11614548552 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:27:33 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 5 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.99 USD )
+Seat 5: trotylion ( $73.81 USD )
+trotylion posts small blind [$0.25 USD].
+aceofsamurai posts big blind [$0.50 USD].
+** Dealing down cards **
+trotylion folds
+aceofsamurai does not show cards.
+aceofsamurai wins $0.75 USD
+
+
+***** Hand History for Game 11614550226 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:28:23 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.49 USD )
+Seat 5: trotylion ( $74.31 USD )
+aceofsamurai posts small blind [$0.25 USD].
+trotylion posts big blind [$0.50 USD].
+** Dealing down cards **
+aceofsamurai folds
+trotylion does not show cards.
+trotylion wins $0.75 USD
+
+
+
+***** Hand History for Game 11614550655 *****
+$50 USD PL Omaha - Tuesday, April 03, 07:28:35 EDT 2012
+Table Table  167035 (No DP) (Real Money)
+Seat 5 is the button
+Total number of players : 2/6 
+Seat 2: aceofsamurai ( $20.24 USD )
+Seat 5: trotylion ( $74.56 USD )
+trotylion posts small blind [$0.25 USD].
+aceofsamurai posts big blind [$0.50 USD].
+** Dealing down cards **
+trotylion raises [$1.25 USD]
+aceofsamurai calls [$1 USD]
+** Dealing Flop ** [ 8c, 4d, Qh ]
+aceofsamurai checks
+trotylion bets [$2.50 USD]
+aceofsamurai calls [$2.50 USD]
+** Dealing Turn ** [ Tc ]
+aceofsamurai checks
+trotylion checks
+** Dealing River ** [ Qs ]
+aceofsamurai checks
+trotylion checks
+aceofsamurai shows [ Ad, 3s, 9d, As ]two pairs, Aces and Queens.
+trotylion doesn't show [ Ah, Jc, 3c, 3h ]two pairs, Queens and Threes.
+aceofsamurai wins $7.60 USD from the main pot with two pairs, Aces and Queens.

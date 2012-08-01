@@ -1,0 +1,33 @@
+﻿Game # 2646553582 - Texas Hold'em No Limit EUR 0.50/1.00 - Table "Coslada Min 50BB"
+
+Players(max 6):
+fatguy691                   (EUR 47.40 in seat 2)
+204462                      (EUR 100.00 in seat 3)
+Burebista                   (EUR 102.98 in seat 4)
+
+Dealer:                     fatguy691
+Small Blind:                204462      (0.50)
+Big Blind:                  Burebista   (1.00)
+
+fatguy691                   Call        (1.00)
+204462                      Call        (0.50)
+Burebista                   Check
+
+Flop                        Kc - Ah - 7c
+
+204462                      Bet         (2.00)
+Burebista                   Fold
+fatguy691                   Call        (2.00)
+
+Turn                        Kc - Ah - 7c - 3d
+
+204462                      Bet         (3.00)
+fatguy691                   Fold
+204462                      Payback     (3.00)
+
+204462 didn't show hand
+
+204462 wins:                EUR 6.65
+Rake:                       EUR 0.35
+
+Game ended 2012-05-31 09:50:29 GMT+01:00

@@ -1,0 +1,47 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Omaha PL $0.50/$1</gametype>
+    <tablename>Goryachy Klyuch (No DP), 228172131</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 19:01:25</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302354789">
+    <general>
+      <startdate>2012-05-28 19:05:01</startdate>
+      <players>
+        <player seat="1" name="SOFUALL" chips="$64.06" dealer="1" win="$7.80" bet="$6" rebuy="0" addon="0" />
+        <player seat="3" name="Poonitsa" chips="$100" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="6" name="jyrsija9" chips="$20" dealer="0" win="$0" bet="$2" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="SOFUALL" type="1" sum="$0.50" cards="[cards]" />
+      <action no="2" player="jyrsija9" type="2" sum="$1" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="SOFUALL">X X X X</cards>
+      <action no="3" player="SOFUALL" type="23" sum="$2" cards="" />
+      <cards type="Pocket" player="jyrsija9">X X X X</cards>
+      <action no="4" player="jyrsija9" type="3" sum="$1" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">HA H7 D3</cards>
+      <action no="6" player="SOFUALL" type="5" sum="$4" cards="" />
+      <action no="5" player="jyrsija9" type="4" sum="$0" cards="" />
+      <action no="7" player="jyrsija9" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

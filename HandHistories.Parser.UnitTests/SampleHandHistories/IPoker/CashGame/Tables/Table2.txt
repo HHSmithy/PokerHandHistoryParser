@@ -1,0 +1,70 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.10/$0.20</gametype>
+    <tablename>Ambia, 98575671</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 23:47:40</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302721610">
+    <general>
+      <startdate>2012-05-28 23:48:47</startdate>
+      <players>
+        <player seat="1" name="thehardball" chips="$20.06" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="2" name="shekhark" chips="$6" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="3" name="elis78" chips="$20.50" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="4" name="padrinho74" chips="$19.46" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="5" name="westmalle123" chips="$15.16" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="6" name="TrappistBeer" chips="$23.93" dealer="0" win="$2.44" bet="$1.80" rebuy="0" addon="0" />
+        <player seat="8" name="laufer777" chips="$21.36" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="9" name="Grandimaster" chips="$23.85" dealer="0" win="$0" bet="$0.10" rebuy="0" addon="0" />
+        <player seat="10" name="okgaden" chips="$5.50" dealer="0" win="$0" bet="$0.60" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Grandimaster" type="1" sum="$0.10" cards="[cards]" />
+      <action no="2" player="okgaden" type="2" sum="$0.20" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="thehardball">X X</cards>
+      <action no="3" player="thehardball" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="elis78">X X</cards>
+      <action no="4" player="elis78" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="padrinho74">X X</cards>
+      <action no="5" player="padrinho74" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="westmalle123">X X</cards>
+      <action no="6" player="westmalle123" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="TrappistBeer">X X</cards>
+      <action no="7" player="TrappistBeer" type="23" sum="$0.60" cards="" />
+      <cards type="Pocket" player="laufer777">X X</cards>
+      <action no="8" player="laufer777" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="Grandimaster">X X</cards>
+      <action no="9" player="Grandimaster" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="okgaden">X X</cards>
+      <action no="10" player="okgaden" type="3" sum="$0.40" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">HA D2 C3</cards>
+      <action no="12" player="TrappistBeer" type="4" sum="$0" cards="" />
+      <action no="11" player="okgaden" type="4" sum="$0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S2</cards>
+      <action no="14" player="TrappistBeer" type="5" sum="$1.20" cards="" />
+      <action no="13" player="okgaden" type="4" sum="$0" cards="" />
+      <action no="15" player="okgaden" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

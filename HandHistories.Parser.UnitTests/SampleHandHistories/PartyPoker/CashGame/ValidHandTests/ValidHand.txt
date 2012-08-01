@@ -1,0 +1,18 @@
+﻿***** Hand History for Game 11607684518 *****
+$100 USD PL Omaha Hi-Lo - Sunday, April 01, 06:26:15 EDT 2012
+Table Table  137431 (No DP) (Real Money)
+Seat 4 is the button
+Total number of players : 2/6 
+Seat 2: StivDiller ( $153.42 USD )
+Seat 4: janusfaced ( $103 USD )
+janusfaced posts small blind [$0.50 USD].
+StivDiller posts big blind [$1 USD].
+** Dealing down cards **
+janusfaced raises [$2.50 USD]
+StivDiller calls [$2 USD]
+** Dealing Flop ** [ 8c, Ks, 6h ]
+StivDiller checks
+janusfaced bets [$5 USD]
+StivDiller folds
+janusfaced does not show cards.
+janusfaced wins $10.70 USD

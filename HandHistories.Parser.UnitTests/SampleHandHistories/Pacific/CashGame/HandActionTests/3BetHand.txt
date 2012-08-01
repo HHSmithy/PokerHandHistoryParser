@@ -1,0 +1,29 @@
+﻿#Game No : 176531483
+***** Cassava Hand History for Game 176531483 *****
+$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 19:28:19
+Table Alcorcon (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: suicram ( $114.25 )
+Seat 2: AUT_Camper ( $40 )
+Seat 4: PR_Eqiuty ( $144.79 )
+Seat 6: sander1900 ( $99.41 )
+Seat 7: iSmokeMeth ( $100.50 )
+Seat 9: maybmaybnot ( $103.81 )
+iSmokeMeth posts small blind [$0.50]
+maybmaybnot posts big blind [$1]
+** Dealing down cards **
+suicram folds
+AUT_Camper folds
+PR_Eqiuty raises [$3]
+sander1900 raises [$10.50]
+iSmokeMeth folds
+maybmaybnot folds
+PR_Eqiuty calls [$7.50]
+** Dealing flop ** [ Jc, 3s, 8d ]
+PR_Eqiuty checks
+sander1900 bets [$22.50]
+PR_Eqiuty folds
+** Summary **
+sander1900 did not show his hand
+sander1900 collected [ $21.38 ]

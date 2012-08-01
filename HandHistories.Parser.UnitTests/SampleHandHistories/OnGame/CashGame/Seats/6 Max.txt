@@ -1,0 +1,30 @@
+﻿***** History for hand R5-244305024-112 *****
+Start hand: Tue May 29 12:05:00 CEST 2012
+Table: Pinehurst [244305024] (POT_LIMIT OMAHA_HI $2/$2, Real money)
+Button: seat 4
+Players in round: 5
+Seat 2: Confishius ($415.66) 
+Seat 4: sam168 ($207.00) 
+Seat 5: TsarStepan96 ($337.00) 
+Seat 6: mr_mulligan ($228.70) 
+Seat 8: crazy_shark_ ($337.60) 
+TsarStepan96 posts small blind ($2)
+mr_mulligan posts big blind ($2)
+---
+Dealing pocket cards
+crazy_shark_ folds
+Confishius folds
+sam168 folds
+TsarStepan96 checks
+mr_mulligan raises $4.00 to $6.00
+TsarStepan96 folds
+---
+Summary:
+Main pot: $4.00 won by mr_mulligan ($4.00)
+Rake taken: $0.00
+Seat 2: Confishius ($415.66), net: -$0.00
+Seat 4: sam168 ($207.00), net: -$0.00
+Seat 5: TsarStepan96 ($335.00), net: -$2.00
+Seat 6: mr_mulligan ($230.70), net: +$2.00
+Seat 8: crazy_shark_ ($337.60), net: -$0.00
+***** End of hand R5-244305024-112 *****

@@ -1,0 +1,28 @@
+﻿***** History for hand R5-244263600-7 *****
+Start hand: Mon May 28 10:43:00 CEST 2012
+Table: Roodepoort [244263600] (POT_LIMIT OMAHA_HI $2/$2, Real money)
+Button: seat 8
+Players in round: 2
+Seat 3: zizinelos ($96.00) 
+Seat 8: baku53 ($370.25) 
+baku53 posts small blind ($2)
+zizinelos posts big blind ($2)
+---
+Dealing pocket cards
+baku53 raises $4.00 to $6.00
+zizinelos calls $4.00
+--- Dealing flop [4h, Ts, 5s]
+zizinelos checks
+baku53 bets $10.00
+zizinelos raises $20.00 to $20.00
+baku53 calls $10.00
+--- Dealing turn [Tc]
+zizinelos bets $26.00
+baku53 folds
+---
+Summary:
+Main pot: $52.00 won by zizinelos ($51.00)
+Rake taken: $1
+Seat 3: zizinelos ($121.00), net: +$25.00
+Seat 8: baku53 ($344.25), net: -$26.00
+***** End of hand R5-244263600-7 *****

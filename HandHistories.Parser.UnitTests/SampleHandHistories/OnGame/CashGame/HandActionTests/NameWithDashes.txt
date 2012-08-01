@@ -1,0 +1,42 @@
+﻿***** History for hand R5-246103543-261 *****
+Start hand: Mon Jun 04 10:06:00 CEST 2012
+Table: Amarillo [246103543] (NO_LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
+Button: seat 2
+Players in round: 7
+Seat 2: djiceflame70 ($2.59) 
+Seat 3: shmel77 ($7.99) 
+Seat 4: yoyogi36 ($11.11) 
+Seat 5: Mivko ($10.42) 
+Seat 6: Rpc_alpetra ($3.34) 
+Seat 7: ugeroka ($12.81) 
+Seat 8: ---ich--- ($12.64) 
+shmel77 posts small blind ($0.05)
+yoyogi36 posts big blind ($0.10)
+---
+Dealing pocket cards
+Mivko folds
+Rpc_alpetra folds
+ugeroka raises $0.40 to $0.40
+---ich--- calls $0.40
+djiceflame70 folds
+shmel77 folds
+yoyogi36 folds
+--- Dealing flop [3d, 8h, 6d]
+ugeroka checks
+---ich--- checks
+--- Dealing turn [Ks]
+ugeroka checks
+---ich--- bets $0.70
+ugeroka folds
+---
+Summary:
+Main pot: $0.95 won by ---ich--- ($0.89)
+Rake taken: $0.06
+Seat 2: djiceflame70 ($2.59), net: -$0.00
+Seat 3: shmel77 ($7.94), net: -$0.05
+Seat 4: yoyogi36 ($11.01), net: -$0.10
+Seat 5: Mivko ($10.42), net: -$0.00
+Seat 6: Rpc_alpetra ($3.34), net: -$0.00
+Seat 7: ugeroka ($12.41), net: -$0.40
+Seat 8: ---ich--- ($13.13), net: +$0.49
+***** End of hand R5-246103543-261 *****

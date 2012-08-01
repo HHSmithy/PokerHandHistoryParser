@@ -1,0 +1,37 @@
+﻿Game # 2646492691 - Texas Hold'em Pot Limit EUR 1.00/2.00 - Table "Graz"
+
+Players(max 9):
+xxSNUSxx                    (EUR 104.20 in seat 1)
+roxi88                      (EUR 41.85 in seat 2)
+
+Dealer:                     xxSNUSxx
+Small Blind:                roxi88      (1.00)
+Big Blind:                  xxSNUSxx    (2.00)
+
+roxi88                      Call        (1.00)
+xxSNUSxx                    Check
+
+Flop                        2h - Kd - 7h
+
+roxi88                      Check
+xxSNUSxx                    Check
+
+Turn                        2h - Kd - 7h - 3s
+
+roxi88                      Check
+xxSNUSxx                    Bet         (3.00)
+roxi88                      Call        (3.00)
+
+River                       2h - Kd - 7h - 3s - 5c
+
+roxi88                      Check
+xxSNUSxx                    Bet         (7.50)
+roxi88                      Fold
+xxSNUSxx                    Payback     (7.50)
+
+xxSNUSxx didn't show hand
+
+xxSNUSxx wins:              EUR 9.50
+Rake:                       EUR 0.50
+
+Game ended 2012-05-31 02:00:18 GMT+01:00

@@ -1,0 +1,19 @@
+﻿PokerStars Hand #78413941867:  Hold'em No Limit ($10/$20 USD) - 2012/04/06 7:35:19 ET
+Table 'Lagrula II' 9-max Seat #1 is the button
+Seat 1: bigacsiga ($2000 in chips) 
+Seat 8: Andrei Nemez ($1600 in chips) 
+Seat 9: plspaythxbye ($800 in chips) 
+Andrei Nemez: posts small blind $10
+plspaythxbye: posts big blind $20
+*** HOLE CARDS ***
+bigacsiga: raises $30 to $50
+Andrei Nemez: folds 
+plspaythxbye: raises $105 to $155
+bigacsiga: folds 
+Uncalled bet ($105) returned to plspaythxbye
+plspaythxbye collected $110 from pot
+*** SUMMARY ***
+Total pot $110 | Rake $0 
+Seat 1: bigacsiga (button) folded before Flop
+Seat 8: Andrei Nemez (small blind) folded before Flop
+Seat 9: plspaythxbye (big blind) collected ($110)

@@ -1,0 +1,31 @@
+﻿Game # 2646515969 - Omaha Hi/Lo Fixed Limit EUR 100.00/200.00 - Table "Portland"
+
+Players(max 2):
+YoOyYo                      (EUR 2,950.00 in seat 1)
+bglegend22                  (EUR 4,159.76 in seat 2)
+
+Dealer:                     bglegend22
+Big Blind:                  YoOyYo      (100.00)
+Small Blind:                bglegend22  (50.00)
+
+bglegend22                  Raise       (150.00)
+YoOyYo                      Raise       (500.00)
+bglegend22                  Call        (400.00)
+
+Flop                        4d - 2d - Js
+
+YoOyYo                      Bet         (900.00)
+bglegend22                  All-In      (3,559.76)
+YoOyYo                      All-In      (1,450.00)
+bglegend22                  Payback     (1,209.76)
+
+Turn                        4d - 2d - Js - 5s
+River                       4d - 2d - Js - 5s - As
+
+YoOyYo shows:               7d - 8s - 9d - Th
+bglegend22 shows:           Qc - 2c - 9s - Qd
+
+bglegend22 wins:            EUR 5,898.50
+Rake:                       EUR 1.50
+
+Game ended 2012-05-31 04:58:47 GMT+01:00

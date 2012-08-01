@@ -1,0 +1,30 @@
+﻿#Game No : 273181609
+***** Cassava Hand History for Game 273181609 *****
+$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 23:53:01
+Table Acailandia (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: snorkypig ( $89.44 )
+Seat 2: dontphil2bad ( $132.61 )
+Seat 4: mooning56 ( $105.38 )
+Seat 6: LuckyPro_4 ( $53.55 )
+Seat 7: vladoh ( $93.50 )
+Seat 9: iSmokeMeth ( $101 )
+dontphil2bad posts small blind [$0.50]
+mooning56 posts big blind [$1]
+** Dealing down cards **
+LuckyPro_4 folds
+vladoh calls [$1]
+iSmokeMeth folds
+snorkypig folds
+dontphil2bad folds
+mooning56 checks
+** Dealing flop ** [ Kc, Ah, 7c ]
+mooning56 checks
+vladoh checks
+** Dealing turn ** [ 3d ]
+mooning56 bets [$1.15]
+vladoh folds
+** Summary **
+mooning56 did not show his hand
+mooning56 collected [ $2.38 ]

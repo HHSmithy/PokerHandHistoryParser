@@ -1,0 +1,31 @@
+﻿***** History for hand R5-244090560-5 *****
+Start hand: Mon May 28 07:39:00 CEST 2012
+Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
+Button: seat 9
+Players in round: 3
+Seat 8: Max Power s ($8.46) 
+Seat 9: EvilJihnny99 ($24.23) 
+Seat 10: huda22 ($22.43) 
+huda22 posts small blind ($0.25)
+Max Power s posts big blind ($0.25)
+---
+Dealing pocket cards
+EvilJihnny99 raises $0.75 to $0.75
+huda22 folds
+Max Power s calls $0.50
+--- Dealing flop [5h, 9c, 5c]
+Max Power s checks
+EvilJihnny99 checks
+--- Dealing turn [Ts]
+Max Power s checks
+EvilJihnny99 bets $0.50
+Max Power s raises $1.25 to $1.25
+EvilJihnny99 folds
+---
+Summary:
+Main pot: $2.75 won by Max Power s ($2.62)
+Rake taken: $0.13
+Seat 8: Max Power s ($9.83), net: +$1.37
+Seat 9: EvilJihnny99 ($22.98), net: -$1.25
+Seat 10: huda22 ($22.18), net: -$0.25
+***** End of hand R5-244090560-5 *****

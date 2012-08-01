@@ -1,0 +1,52 @@
+﻿***** Hand History for Game 10160692446 *****
+$10 USD NL Texas Hold'em - Friday, February 18, 04:58:42 EST 2011
+Table 20BB Min Speed #1769256 (No DP) (Real Money)
+Seat 2 is the button
+Total number of players : 9/9 
+Seat 3: Ed4862 ( $10.70 USD )
+Seat 7: Escape1112 ( $5.20 USD )
+Seat 6: Georgievich ( $8.50 USD )
+Seat 4: Lucikow ( $5 USD )
+Seat 8: Spenc ( $10.62 USD )
+Seat 9: dsjoberg ( $8 USD )
+Seat 2: freaky_rico ( $10 USD )
+Seat 5: georiz9 ( $4.50 USD )
+Seat 1: vanika555 ( $13 USD )
+Ed4862 posts small blind [$0.10 USD].
+Lucikow posts big blind [$0.25 USD].
+** Dealing down cards **
+georiz9 folds
+Georgievich calls [$0.25 USD]
+Escape1112 calls [$0.25 USD]
+Spenc folds
+dsjoberg folds
+vanika555 raises [$0.50 USD]
+freaky_rico calls [$0.50 USD]
+Ed4862 calls [$0.40 USD]
+Lucikow calls [$0.25 USD]
+Georgievich calls [$0.25 USD]
+Escape1112 calls [$0.25 USD]
+** Dealing Flop ** [ 9s, 8h, Kc ]
+Ed4862 checks
+Lucikow checks
+Georgievich checks
+Escape1112 checks
+vanika555 bets [$0.75 USD]
+freaky_rico folds
+Ed4862 calls [$0.75 USD]
+Lucikow folds
+Georgievich calls [$0.75 USD]
+Escape1112 calls [$0.75 USD]
+** Dealing Turn ** [ 9d ]
+Ed4862 checks
+Georgievich checks
+Escape1112 checks
+vanika555 bets [$2.25 USD]
+Ed4862 folds
+Georgievich folds
+Escape1112 is all-In  [$3.95 USD]
+vanika555 calls [$1.70 USD]
+** Dealing River ** [ Jd ]
+vanika555 shows [ Ac, Qc ]a pair of Nines.
+Escape1112 shows [ Jh, 9h ]a full house, Nines full of Jacks.
+Escape1112 wins $13.21 USD from the main pot with a full house, Nines full of Jacks.

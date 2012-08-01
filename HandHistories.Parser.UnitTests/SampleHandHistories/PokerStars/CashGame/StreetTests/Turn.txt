@@ -1,0 +1,34 @@
+﻿PokerStars Hand #78455214622:  Hold'em No Limit ($2/$4 USD) - 2012/04/06 22:05:01 ET
+Table 'Amalia' 6-max Seat #3 is the button
+Seat 1: obdul50 ($246 in chips) 
+Seat 2: q1q23q ($400 in chips) 
+Seat 3: Hurloon ($400 in chips) 
+Seat 4: TopKat5757 ($560.50 in chips) 
+Seat 5: Masic.Almir ($400 in chips) 
+TopKat5757: posts small blind $2
+Masic.Almir: posts big blind $4
+GolovaNoga: sits out 
+*** HOLE CARDS ***
+obdul50: raises $8 to $12
+q1q23q: folds 
+Hurloon: raises $28 to $40
+TopKat5757: folds 
+Masic.Almir: folds 
+obdul50: calls $28
+*** FLOP *** [9c Jh Jd]
+obdul50: checks 
+Hurloon: checks 
+*** TURN *** [9c Jh Jd] [8h]
+obdul50: bets $83.20
+Hurloon: folds 
+Uncalled bet ($83.20) returned to obdul50
+obdul50 collected $83.20 from pot
+*** SUMMARY ***
+Total pot $86 | Rake $2.80 
+Board [Kc Ah 7c 3d]
+Seat 1: obdul50 collected ($83.20)
+Seat 2: q1q23q folded before Flop (didn't bet)
+Seat 3: Hurloon (button) folded on the Turn
+Seat 4: TopKat5757 (small blind) folded before Flop
+Seat 5: Masic.Almir (big blind) folded before Flop
+

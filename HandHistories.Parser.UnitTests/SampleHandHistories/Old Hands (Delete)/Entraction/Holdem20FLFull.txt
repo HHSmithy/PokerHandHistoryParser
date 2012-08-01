@@ -1,0 +1,41 @@
+﻿Game # 2535208789 - Texas Hold'em Fixed Limit EUR 0.10/0.20 - Table "Johannedal"
+
+Players(max 10):
+baldi73                     (EUR 0.97 in seat 5)
+kikkor                      (EUR 4.91 in seat 6)
+azec                        (EUR 1.67 in seat 7)
+SWEPKR-Y                    (EUR 4.39 in seat 8)
+
+Dealer:                     SWEPKR-Y
+Small Blind:                baldi73     (0.05)
+Big Blind:                  kikkor      (0.10)
+
+azec                        Fold
+SWEPKR-Y                    Fold
+baldi73                     Raise       (0.15)
+kikkor                      Raise       (0.20)
+baldi73                     Raise       (0.20)
+kikkor                      Call        (0.10)
+
+Flop                        6d - Ad - 2c
+
+baldi73                     Bet         (0.10)
+kikkor                      Raise       (0.20)
+baldi73                     Raise       (0.20)
+kikkor                      Raise       (0.20)
+baldi73                     Call        (0.10)
+
+Turn                        6d - Ad - 2c - 3h
+
+baldi73                     All-In      (0.17)
+kikkor                      Call        (0.17)
+
+River                       6d - Ad - 2c - 3h - 3c
+
+baldi73 shows:              Ah - Js
+kikkor shows:               Ac - Qd
+
+kikkor wins:                EUR 1.85
+Rake:                       EUR 0.09
+
+Game ended 2012-02-06 20:01:37 GMT+01:00

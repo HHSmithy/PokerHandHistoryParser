@@ -1,0 +1,47 @@
+﻿PokerStars Hand #78784137150: Omaha Pot Limit ($50/$100 USD) - 2012/04/13 4:32:18 ET
+Table 'Roka II' 6-max Seat #4 is the button
+Seat 1: Jeans89 ($17029.70 in chips)
+Seat 2: MrSmits ($10518.95 in chips)
+Seat 3: Vaga_Lion ($9790 in chips)
+Seat 4: mikki696 ($19987.90 in chips)
+Seat 5: Zypherin ($36154.72 in chips)
+Seat 6: LuckyGump ($51195.68 in chips)
+Zypherin: posts small blind $50
+LuckyGump: posts big blind $100
+Jeans89: posts the ante $20
+MrSmits: posts the ante $20
+Vaga_Lion: posts the ante $20
+mikki696: posts the ante $20
+Zypherin: posts the ante $20
+LuckyGump: posts the ante $20
+*** HOLE CARDS ***
+Jeans89: folds
+MrSmits: folds
+Vaga_Lion: folds
+mikki696: raises $180 to $280
+Zypherin: calls $230
+LuckyGump: raises $960 to $1240
+mikki696: folds
+Zypherin: calls $960
+*** FLOP *** [7h Qc Kh]
+Zypherin: checks
+LuckyGump: bets $1900
+Zypherin: raises $6400 to $8300
+LuckyGump: raises $19475 to $27775
+Zypherin: raises $7119.72 to $34894.72 and is all-in
+LuckyGump: calls $7119.72
+*** TURN *** [7h Qc Kh] [6s]
+*** RIVER *** [7h Qc Kh 6s] [7s]
+*** SHOW DOWN ***
+Zypherin: shows [Ks Td Kc 7d] (a full house, Kings full of Sevens)
+LuckyGump: shows [Kd 6h Qd Jh] (two pair, Kings and Queens)
+Zypherin collected $72664.44 from pot
+*** SUMMARY ***
+Total pot $72669.44 | Rake $5
+Board [7h Qc Kh 6s 7s]
+Seat 1: Jeans89 folded before Flop (didn't bet)
+Seat 2: MrSmits folded before Flop (didn't bet)
+Seat 3: Vaga_Lion folded before Flop (didn't bet)
+Seat 4: mikki696 (button) folded before Flop
+Seat 5: Zypherin (small blind) showed [Ks Td Kc 7d] and won ($72664.44) with a full house, Kings full of Sevens
+Seat 6: LuckyGump (big blind) showed [Kd 6h Qd Jh] and lost with two pair, Kings and Queens

@@ -1,0 +1,27 @@
+﻿Game # 2646505835 - Texas Hold'em No Limit EUR 25.00/50.00 - Table "Saravane"
+
+Players(max 2):
+del1verance                 (EUR 2,772.00 in seat 1)
+NO12                        (EUR 5,000.00 in seat 2)
+
+Dealer:                     NO12
+Big Blind:                  del1verance (50.00)
+Small Blind:                NO12        (25.00)
+
+NO12                        Raise       (100.00)
+del1verance                 Call        (75.00)
+
+Flop                        7h - Qs - 3c
+
+del1verance                 Check
+NO12                        Bet         (150.00)
+del1verance                 Raise       (562.50)
+NO12                        Fold
+del1verance                 Payback     (412.50)
+
+del1verance didn't show hand
+
+del1verance wins:           EUR 548.50
+Rake:                       EUR 1.50
+
+Game ended 2012-05-31 02:49:41 GMT+01:00

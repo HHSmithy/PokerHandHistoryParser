@@ -1,0 +1,67 @@
+﻿  <session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL £1/£2</gametype>
+    <tablename>Rabka, 415280081</tablename>
+    <tablecurrency>GBP</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-29 14:25:33</startdate>
+    <currency>GBP</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3303770476">
+    <general>
+      <startdate>2012-05-29 22:03:51</startdate>
+      <players>
+        <player seat="1" name="doubting" chips="£217.75" dealer="1" win="£381" bet="£188" rebuy="0" addon="0" />
+        <player seat="3" name="JohnJordan" chips="£188" dealer="0" win="£0" bet="£188" rebuy="0" addon="0" />
+        <player seat="5" name="wingirl3" chips="£266.94" dealer="0" win="£0" bet="£2" rebuy="0" addon="0" />
+        <player seat="6" name="IPullGuard" chips="£110.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" />
+        <player seat="8" name="MrJeremiahPokers" chips="£200" dealer="0" win="£0" bet="£6" rebuy="0" addon="0" />
+        <player seat="10" name="HEISENBERGG" chips="£230" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="JohnJordan" type="1" sum="£1" cards="[cards]" />
+      <action no="2" player="wingirl3" type="2" sum="£2" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="doubting">S10 S9</cards>
+      <action no="6" player="doubting" type="3" sum="£6" cards="" />
+      <action no="10" player="doubting" type="3" sum="£20" cards="" />
+      <cards type="Pocket" player="JohnJordan">CA HK</cards>
+      <action no="7" player="JohnJordan" type="23" sum="£26" cards="" />
+      <cards type="Pocket" player="wingirl3">X X</cards>
+      <action no="8" player="wingirl3" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="IPullGuard">X X</cards>
+      <action no="3" player="IPullGuard" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="MrJeremiahPokers">X X</cards>
+      <action no="4" player="MrJeremiahPokers" type="23" sum="£6" cards="" />
+      <action no="9" player="MrJeremiahPokers" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="HEISENBERGG">X X</cards>
+      <action no="5" player="HEISENBERGG" type="0" sum="£0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S6 SK D5</cards>
+      <action no="12" player="doubting" type="23" sum="£68" cards="" />
+      <action no="14" player="doubting" type="3" sum="£94" cards="" />
+      <action no="11" player="JohnJordan" type="5" sum="£26" cards="" />
+      <action no="13" player="JohnJordan" type="23" sum="£162" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">D4</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">S3</cards>
+    </round>
+  </game>
+  </session>

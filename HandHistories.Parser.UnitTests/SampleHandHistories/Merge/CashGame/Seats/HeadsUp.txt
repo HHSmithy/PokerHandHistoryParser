@@ -1,0 +1,27 @@
+﻿<description type="Holdem" stakes="Limit $10/$20"/>
+<game id="56150235-132" starttime="20120529020727" numholecards="2" gametype="2" seats="2" realmoney="true" data="20120529|Everglades (Heads Up) (56150235)|56150235|56150235-132|false">
+	<players dealer="0">
+		<player seat="0" nickname="Daisy19" balance="$153.19" dealtin="true" />
+		<player seat="1" nickname="IamInccc" balance="$140.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338275229281" player="0" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338275229312" player="1" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338275249109" player="0" amount="6.00"/>
+		<event sequence="4" type="CALL" timestamp="1338275250234" player="1" amount="4.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="5" type="CHECK" timestamp="1338275251234" player="1"/>
+		<event sequence="6" type="BET" timestamp="1338275253000" player="0" amount="6.00"/>
+		<event sequence="7" type="FOLD" timestamp="1338275254203" player="1"/>
+		<cards type="COMMUNITY" cards="2s,2c,8d"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="4">
+		<event sequence="8" type="MUCK" timestamp="1338275254812" player="0"/>
+		<winner amount="17.50" uncalled="false" potnumber="1" player="0" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="5">
+	</round>
+</game>

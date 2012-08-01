@@ -1,0 +1,214 @@
+﻿PokerStars Hand #78438784716:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 15:58:37 ET
+Table 'Aenna II' 2-max Seat #2 is the button
+Seat 1: plochisch ($21.86 in chips) 
+Seat 2: BeastOfPrey7 ($15.91 in chips) 
+BeastOfPrey7: posts small blind $0.25
+plochisch: posts big blind $0.50
+*** HOLE CARDS ***
+BeastOfPrey7: raises $1 to $1.50
+plochisch: calls $1
+*** FLOP *** [9s 3h 3c]
+plochisch: checks 
+BeastOfPrey7: checks 
+*** TURN *** [9s 3h 3c] [7c]
+plochisch: bets $2
+BeastOfPrey7: calls $2
+*** RIVER *** [9s 3h 3c 7c] [4c]
+plochisch: bets $2.50
+BeastOfPrey7: folds 
+Uncalled bet ($2.50) returned to plochisch
+plochisch collected $6.68 from pot
+plochisch: doesn't show hand 
+*** SUMMARY ***
+Total pot $7 | Rake $0.32 
+Board [9s 3h 3c 7c 4c]
+Seat 1: plochisch (big blind) collected ($6.68)
+Seat 2: BeastOfPrey7 (button) (small blind) folded on the River
+
+
+PokerStars Hand #78438808435:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 15:59:10 ET
+Table 'Aenna II' 2-max Seat #1 is the button
+Seat 1: plochisch ($25.04 in chips) 
+Seat 2: BeastOfPrey7 ($12.41 in chips) 
+plochisch: posts small blind $0.25
+BeastOfPrey7: posts big blind $0.50
+*** HOLE CARDS ***
+plochisch: raises $0.50 to $1
+BeastOfPrey7: folds 
+Uncalled bet ($0.50) returned to plochisch
+plochisch collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: plochisch (button) (small blind) collected ($1)
+Seat 2: BeastOfPrey7 (big blind) folded before Flop
+
+
+PokerStars Hand #78438822811:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 15:59:31 ET
+Table 'Aenna II' 2-max Seat #2 is the button
+Seat 1: plochisch ($25.54 in chips) 
+Seat 2: BeastOfPrey7 ($11.91 in chips) 
+BeastOfPrey7: posts small blind $0.25
+plochisch: posts big blind $0.50
+*** HOLE CARDS ***
+BeastOfPrey7: raises $1.50 to $2
+plochisch: folds 
+Uncalled bet ($1.50) returned to BeastOfPrey7
+BeastOfPrey7 collected $1 from pot
+BeastOfPrey7: doesn't show hand 
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: plochisch (big blind) folded before Flop
+Seat 2: BeastOfPrey7 (button) (small blind) collected ($1)
+
+
+PokerStars Hand #78438829016:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 15:59:39 ET
+Table 'Aenna II' 2-max Seat #1 is the button
+Seat 1: plochisch ($25.04 in chips) 
+Seat 2: BeastOfPrey7 ($12.41 in chips) 
+plochisch: posts small blind $0.25
+BeastOfPrey7: posts big blind $0.50
+*** HOLE CARDS ***
+plochisch: raises $0.50 to $1
+BeastOfPrey7: calls $0.50
+*** FLOP *** [4d 8h 3d]
+BeastOfPrey7: checks 
+plochisch: checks 
+*** TURN *** [4d 8h 3d] [8s]
+BeastOfPrey7: bets $2
+plochisch: folds 
+Uncalled bet ($2) returned to BeastOfPrey7
+BeastOfPrey7 collected $1.91 from pot
+BeastOfPrey7: doesn't show hand 
+*** SUMMARY ***
+Total pot $2 | Rake $0.09 
+Board [4d 8h 3d 8s]
+Seat 1: plochisch (button) (small blind) folded on the Turn
+Seat 2: BeastOfPrey7 (big blind) collected ($1.91)
+
+
+PokerStars Hand #78438839238:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 15:59:54 ET
+Table 'Aenna II' 2-max Seat #2 is the button
+Seat 1: plochisch ($24.04 in chips) 
+Seat 2: BeastOfPrey7 ($13.32 in chips) 
+BeastOfPrey7: posts small blind $0.25
+plochisch: posts big blind $0.50
+*** HOLE CARDS ***
+BeastOfPrey7: raises $1.50 to $2
+plochisch: calls $1.50
+*** FLOP *** [Tc Qc 2c]
+plochisch: checks 
+BeastOfPrey7: bets $2.50
+plochisch: raises $19.54 to $22.04 and is all-in
+BeastOfPrey7: folds 
+Uncalled bet ($19.54) returned to plochisch
+plochisch collected $8.60 from pot
+*** SUMMARY ***
+Total pot $9 | Rake $0.40 
+Board [Tc Qc 2c]
+Seat 1: plochisch (big blind) collected ($8.60)
+Seat 2: BeastOfPrey7 (button) (small blind) folded on the Flop
+
+
+PokerStars Hand #78438855989:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 16:00:14 ET
+Table 'Aenna II' 2-max Seat #1 is the button
+Seat 1: plochisch ($28.14 in chips) 
+Seat 2: BeastOfPrey7 ($8.82 in chips) 
+plochisch: posts small blind $0.25
+BeastOfPrey7: posts big blind $0.50
+*** HOLE CARDS ***
+plochisch: raises $1 to $1.50
+BeastOfPrey7: folds 
+Uncalled bet ($1) returned to plochisch
+plochisch collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: plochisch (button) (small blind) collected ($1)
+Seat 2: BeastOfPrey7 (big blind) folded before Flop
+
+
+PokerStars Hand #78438860138:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 16:00:19 ET
+Table 'Aenna II' 2-max Seat #2 is the button
+Seat 1: plochisch ($28.64 in chips) 
+Seat 2: BeastOfPrey7 ($8.32 in chips) 
+BeastOfPrey7: posts small blind $0.25
+plochisch: posts big blind $0.50
+*** HOLE CARDS ***
+BeastOfPrey7: raises $1 to $1.50
+plochisch: calls $1
+*** FLOP *** [2c 7s 5d]
+plochisch: checks 
+BeastOfPrey7: bets $2.50
+plochisch: folds 
+Uncalled bet ($2.50) returned to BeastOfPrey7
+BeastOfPrey7 collected $2.86 from pot
+BeastOfPrey7: doesn't show hand 
+*** SUMMARY ***
+Total pot $3 | Rake $0.14 
+Board [2c 7s 5d]
+Seat 1: plochisch (big blind) folded on the Flop
+Seat 2: BeastOfPrey7 (button) (small blind) collected ($2.86)
+
+
+PokerStars Hand #78438870728:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 16:00:34 ET
+Table 'Aenna II' 2-max Seat #1 is the button
+Seat 1: plochisch ($27.14 in chips) 
+Seat 2: BeastOfPrey7 ($9.68 in chips) 
+plochisch: posts small blind $0.25
+BeastOfPrey7: posts big blind $0.50
+*** HOLE CARDS ***
+plochisch: calls $0.25
+BeastOfPrey7: raises $1 to $1.50
+plochisch: calls $1
+*** FLOP *** [5d 6d Js]
+BeastOfPrey7: bets $2.50
+plochisch: folds 
+Uncalled bet ($2.50) returned to BeastOfPrey7
+BeastOfPrey7 collected $2.86 from pot
+BeastOfPrey7: doesn't show hand 
+*** SUMMARY ***
+Total pot $3 | Rake $0.14 
+Board [5d 6d Js]
+Seat 1: plochisch (button) (small blind) folded on the Flop
+Seat 2: BeastOfPrey7 (big blind) collected ($2.86)
+
+
+PokerStars Hand #78438887019:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 16:00:54 ET
+Table 'Aenna II' 2-max Seat #2 is the button
+Seat 1: plochisch ($25.64 in chips) 
+Seat 2: BeastOfPrey7 ($11.04 in chips) 
+BeastOfPrey7: posts small blind $0.25
+plochisch: posts big blind $0.50
+*** HOLE CARDS ***
+BeastOfPrey7: calls $0.25
+plochisch: raises $1 to $1.50
+BeastOfPrey7: calls $1
+*** FLOP *** [2h 8h Ah]
+plochisch: checks 
+BeastOfPrey7: checks 
+*** TURN *** [2h 8h Ah] [Js]
+plochisch: bets $1
+BeastOfPrey7: folds 
+Uncalled bet ($1) returned to plochisch
+plochisch collected $2.86 from pot
+*** SUMMARY ***
+Total pot $3 | Rake $0.14 
+Board [2h 8h Ah Js]
+Seat 1: plochisch (big blind) collected ($2.86)
+Seat 2: BeastOfPrey7 (button) (small blind) folded on the Turn
+
+
+PokerStars Hand #78438899729:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 16:01:09 ET
+Table 'Aenna II' 2-max Seat #1 is the button
+Seat 1: plochisch ($27 in chips) 
+Seat 2: BeastOfPrey7 ($9.54 in chips) 
+plochisch: posts small blind $0.25
+BeastOfPrey7: posts big blind $0.50
+*** HOLE CARDS ***
+plochisch: raises $1 to $1.50
+BeastOfPrey7: folds 
+Uncalled bet ($1) returned to plochisch
+plochisch collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: plochisch (button) (small blind) collected ($1)
+Seat 2: BeastOfPrey7 (big blind) folded before Flop

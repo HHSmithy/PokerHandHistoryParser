@@ -1,0 +1,45 @@
+﻿  <session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL €1/€2</gametype>
+    <tablename>Arcini, 414653751</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>00:00</duration>
+    <gamecount>0</gamecount>
+    <startdate></startdate>
+    <currency>EUR</currency>
+    <nickname>N/A</nickname>
+    <bets>€0</bets>
+    <wins>€0</wins>
+    <chipsin>€0</chipsin>
+    <chipsout>€0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3303230810">
+    <general>
+      <startdate>2012-05-29 14:17:32</startdate>
+      <players>
+        <player seat="2" name="Armstrongc" chips="€2,104.75" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="4" name="TTR116060183" chips="€2,068.75" dealer="0" win="€0" bet="€10" rebuy="0" addon="0" />
+        <player seat="7" name="yutant" chips="€1,590.94" dealer="0" win="€30" bet="€20" rebuy="0" addon="0" />
+        <player seat="9" name="BurnN0tice" chips="€2,648" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="TTR116060183" type="1" sum="€10" cards="[cards]" />
+      <action no="2" player="yutant" type="2" sum="€20" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Armstrongc">X X</cards>
+      <action no="4" player="Armstrongc" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="TTR116060183">X X</cards>
+      <action no="5" player="TTR116060183" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="yutant">X X</cards>
+      <cards type="Pocket" player="BurnN0tice">X X</cards>
+      <action no="3" player="BurnN0tice" type="0" sum="€0" cards="" />
+    </round>
+  </game>
+  </session>

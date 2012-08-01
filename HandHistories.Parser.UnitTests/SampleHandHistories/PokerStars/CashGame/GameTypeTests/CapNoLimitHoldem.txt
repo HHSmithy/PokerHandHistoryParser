@@ -1,0 +1,36 @@
+﻿PokerStars Game #81482063736:  Hold'em No Limit ($3/$6 - $120 Cap -  USD) - 2012/06/04 13:30:23 ET
+Table 'Phthia III CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 2: willybeer22 ($299.66 in chips) 
+Seat 6: YurNas ($307.81 in chips) 
+willybeer22: posts small blind $3
+apfush: is sitting out 
+PampaSeba: is sitting out 
+2w392y41ur: is sitting out 
+PampaSeba leaves the table
+YurNas: posts big blind $6
+*** HOLE CARDS ***
+willybeer22: raises $6.06 to $12.06
+apfush leaves the table
+YurNas: folds 
+Uncalled bet ($6.06) returned to willybeer22
+willybeer22 collected $12 from pot
+willybeer22: doesn't show hand 
+*** SUMMARY ***
+Total pot $12 | Rake $0 
+Seat 2: willybeer22 (button) (small blind) collected ($12)
+Seat 6: YurNas (big blind) folded before Flop
+PokerStars Game #81482110546:  Hold'em No Limit ($3/$6 - $120 Cap -  USD) - 2012/06/04 13:31:15 ET
+Table 'Phthia III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: ilats ($120 in chips) 
+Seat 6: YurNas ($301.81 in chips) 
+YurNas: posts small blind $3
+ilats: posts big blind $6
+*** HOLE CARDS ***
+YurNas: folds 
+Uncalled bet ($3) returned to ilats
+ilats collected $6 from pot
+ilats: doesn't show hand 
+*** SUMMARY ***
+Total pot $6 | Rake $0 
+Seat 1: ilats (big blind) collected ($6)
+Seat 6: YurNas (button) (small blind) folded before Flop

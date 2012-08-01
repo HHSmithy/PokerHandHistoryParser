@@ -1,0 +1,22 @@
+﻿***** Hand History for Game 10164893016 *****
+$1,000 USD NL Texas Hold'em - Saturday, February 19, 09:05:50 EST 2011
+Table Heads Up #1769625 (Real Money)
+Seat 2 is the button
+Total number of players : 2/2 
+Seat 2: Slask17 ( $1,198.95 USD )
+Seat 1: WillmaF1cken ( $3,431.11 USD )
+Slask17 posts small blind [$5 USD].
+WillmaF1cken posts big blind [$10 USD].
+** Dealing down cards **
+Slask17 raises [$20 USD]
+WillmaF1cken raises [$80 USD]
+Slask17 raises [$195 USD]
+WillmaF1cken is all-In  [$3,341.11 USD]
+Slask17 is all-In  [$978.95 USD]
+** Dealing Flop ** [ 7h, 9h, Kh ]
+** Dealing Turn ** [ 4d ]
+** Dealing River ** [ 7d ]
+Slask17 shows [ Jc, Jh ]two pairs, Jacks and Sevens.
+WillmaF1cken shows [ Qc, Qd ]two pairs, Queens and Sevens.
+WillmaF1cken wins $2,232.16 USD from the side pot 1 with two pairs, Queens and Sevens.
+WillmaF1cken wins $2,396.90 USD from the main pot with two pairs, Queens and Sevens.

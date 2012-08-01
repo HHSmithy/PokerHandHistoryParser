@@ -1,0 +1,23 @@
+﻿***** Hand History for Game 11615407724 *****
+$25 USD NL Texas Hold'em - Tuesday, April 03, 12:36:29 EDT 2012
+Table Jackpot #2409628 (No DP) (Real Money)
+Seat 3 is the button
+Total number of players : 3/9 
+Seat 5: JensSW ( $15.07 USD )
+Seat 4: bielakk ( $7.50 USD )
+Seat 3: sag68 ( $25 USD )
+sag68 posts small blind [$0.10 USD].
+bielakk posts big blind [$0.25 USD].
+** Dealing down cards **
+sag68 calls [$0.15 USD]
+bielakk raises [$0.25 USD]
+sag68 calls [$0.25 USD]
+** Dealing Flop ** [ Ts, 4c, 3c ]
+bielakk checks
+sag68 checks
+** Dealing Turn ** [ 6h ]
+bielakk checks
+sag68 bets [$0.50 USD]
+bielakk folds
+sag68 does not show cards.
+sag68 wins $1.45 USD

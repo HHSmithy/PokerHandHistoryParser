@@ -1,0 +1,31 @@
+﻿Game # 2646630562 - Omaha High Pot Limit EUR 0.10/0.20 - Table "Hiroshima"
+
+Players(max 6):
+ME_KNOWS                    (EUR 20.00 in seat 2)
+fiskennemo                  (EUR 20.00 in seat 3)
+
+Dealer:                     ME_KNOWS
+Small Blind:                fiskennemo  (0.10)
+Big Blind:                  ME_KNOWS    (0.20)
+
+fiskennemo                  Raise       (0.50)
+ME_KNOWS                    Call        (0.40)
+
+Flop                        3d - 8s - 5h
+
+fiskennemo                  Bet         (0.90)
+ME_KNOWS                    Call        (0.90)
+
+Turn                        3d - 8s - 5h - 4s
+
+fiskennemo                  Check
+ME_KNOWS                    Bet         (3.00)
+fiskennemo                  Fold
+ME_KNOWS                    Payback     (3.00)
+
+ME_KNOWS didn't show hand
+
+ME_KNOWS wins:              EUR 2.85
+Rake:                       EUR 0.15
+
+Game ended 2012-05-31 12:34:41 GMT+01:00

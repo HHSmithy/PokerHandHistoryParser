@@ -1,0 +1,401 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Time;
+
+namespace HandHistories.Parser.Parsers.FastParser._888
+{
+    class Poker888FastParserImpl : HandHistoryParserFastImpl
+    {
+        public override SiteName SiteName
+        {
+            get { return SiteName.Pacific; }
+        }
+
+        public override bool RequiresAllInDetection
+        {
+            get { return true; }
+        }
+
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            rawHandHistories = rawHandHistories.Replace("\r\n\r\n", "▄");
+
+            //This was causing an OOM exception so used LazyStringSplit
+            //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
+            //return splitUpHands.Where(s => s.Equals("\r\n") == false);
+
+            return LazyStringSplit(rawHandHistories, '▄').Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
+        }
+
+        // Based on: http://stackoverflow.com/questions/568968/does-any-one-know-of-a-faster-method-to-do-string-split
+        public static IEnumerable<string> LazyStringSplit(string s, char c)
+        {
+            int l = s.Length;
+            int i = 0, j = s.IndexOf(c, 0, l);
+            if (j == -1) // No such substring
+            {
+                yield return s; // Return original and break
+                yield break;
+            }
+
+            while (j != -1)
+            {
+                if (j - i > 0) // Non empty? 
+                {
+                    yield return s.Substring(i, j - i); // Return non-empty match
+                }
+                i = j + 1;
+                j = s.IndexOf(c, i, l - i);
+            }
+
+            if (i < l) // Has remainder?
+            {
+                yield return s.Substring(i, l - i); // Return remaining trail
+            }
+        }
+
+        private static readonly Regex DealerPositionRegex = new Regex(@"(?<=Seat )\d+", RegexOptions.Compiled);
+        protected override int ParseDealerPosition(string[] handLines)
+        {
+            return Int32.Parse(DealerPositionRegex.Match(handLines[4]).Value);
+        }
+
+        private static readonly Regex DateLineRegex = new Regex(@"\d+ \d+ \d+ \d+\:\d+\:\d+", RegexOptions.Compiled);
+        private static readonly Regex DateRegex = new Regex(@"(\d+) (\d+) (\d+) ", RegexOptions.Compiled);
+        protected override DateTime ParseDateUtc(string[] handLines)
+        {
+            //Date looks like: 04 02 2012 23:59:48
+            string dateString = DateLineRegex.Match(handLines[2]).Value;
+            //Change string so it becomes 2012-02-04 23:59:48
+            dateString = DateRegex.Replace(dateString, "$3-$2-$1 ");
+
+            DateTime dateTime = DateTime.Parse(dateString);
+
+            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, TimeZoneType.GMT);
+
+            return utcTime;
+        }
+
+        private static readonly Regex HandIdRegex = new Regex(@"(?<=#Game No \: )\d+", RegexOptions.Compiled);
+        protected override long ParseHandId(string[] handLines)
+        {
+            return long.Parse(HandIdRegex.Match(handLines[0]).Value);
+        }
+
+        private static readonly Regex TableNameRegex = new Regex(@"(?<=Table ).*$", RegexOptions.Compiled);
+        protected override string ParseTableName(string[] handLines)
+        {
+            return TableNameRegex.Match(handLines[3]).Value;
+        }
+
+        private static readonly Regex NumPlayersRegex = new Regex(@"(?<=Total number of players : )\d+", RegexOptions.Compiled);
+        protected override SeatType ParseSeatType(string[] handLines)
+        {
+            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[5]).Value);
+
+            if (seatCount <= 2)
+            {
+                return SeatType.FromMaxPlayers(2);
+            }
+            else if (seatCount <= 6)
+            {
+                return SeatType.FromMaxPlayers(6);
+            }
+            else if (seatCount <= 9)
+            {
+                return SeatType.FromMaxPlayers(9);
+            }
+            else
+            {
+                return SeatType.FromMaxPlayers(10);
+            }
+        }
+
+        private static readonly Regex GameTypeRegex = new Regex(@"(?<=Blinds ).*(?= - )", RegexOptions.Compiled);
+        protected override GameType ParseGameType(string[] handLines)
+        {
+            string gameTypeString = GameTypeRegex.Match(handLines[2]).Value;
+            switch (gameTypeString)
+            {
+                case "No Limit Holdem":
+                    return GameType.NoLimitHoldem;
+                case "Fix Limit Holdem":
+                    return GameType.FixedLimitHoldem;
+                case "Pot Limit Omaha":
+                    return GameType.PotLimitOmaha;      
+                case "No Limit Omaha":
+                    return GameType.NoLimitOmaha;                    
+                default:                    
+                    throw new NotImplementedException("Unrecognized game type " + gameTypeString ?? "NULL");
+            }
+        }
+
+        protected override TableType ParseTableType(string[] handLines)
+        {
+            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+        }
+
+        private static readonly Regex LowLimitRegex = new Regex(@"([\d,]+|[\d,]+\.\d+)(?=/)", RegexOptions.Compiled);
+        private static readonly Regex HighLimitRegex = new Regex(@"(?<=/.)([\d,]+)(\.\d+){0,1}", RegexOptions.Compiled);
+        protected override Limit ParseLimit(string[] handLines)
+        {
+            string lowLimitString = LowLimitRegex.Match(handLines[2]).Value;
+            string highLimitString = HighLimitRegex.Match(handLines[2]).Value;
+
+            decimal lowLimit = decimal.Parse(lowLimitString);
+            decimal highLimit = decimal.Parse(highLimitString);
+
+            return Limit.FromSmallBlindBigBlind(lowLimit, highLimit, Currency.USD);
+        }
+
+        public override bool IsValidHand(string[] handLines)
+        {
+            return handLines[handLines.Length - 1].Contains(" collected ");
+        }
+
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        {
+            Street currentStreet = Street.Preflop;
+
+            List<HandAction> handActions = new List<HandAction>();
+
+            for (int i = 6; i < handLines.Length; i++)
+            {
+                string handLine = handLines[i];
+
+                if (currentStreet == Street.Preflop &&
+                    handLine.IndexOf(':') != -1)
+                {
+                    continue;
+                }
+
+                if (handLine[0] == '*')
+                {
+                    if (handLine[3] == 'S')
+                    {
+                        currentStreet = Street.Showdown;
+                        continue;
+                    }
+
+                    switch (handLine[11])
+                    {
+                        case 'r':
+                            currentStreet = Street.River;
+                            break;
+                        case 'f':
+                            currentStreet = Street.Flop;
+                            break;
+                        case 't':
+                            currentStreet = Street.Turn;
+                            break;
+                    }
+                    
+                    continue;
+                }
+
+                if (currentStreet == Street.Showdown)
+                {
+                    // ignore lines such as:
+                    //  OprahTiltfre did not show his hand
+                    if (handLine[handLine.Length - 1] != ']')
+                    {
+                        continue;                            
+                    }
+
+                    int openSquareIndex = handLine.LastIndexOf('[');
+
+                    // winnings hands have numbers such as:
+                    //  OprahTiltfre collected [ $2,500 ]
+                    if (char.IsDigit(handLine[handLine.Length - 3]))
+                    {                        
+                        string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
+                        decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""));
+                        
+                        string playerName = handLine.Substring(0, openSquareIndex - 11);
+
+                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                        continue;                        
+                    }
+
+                    string action = handLine.Substring(openSquareIndex - 6, 5);
+                    if (action.Equals("shows"))
+                    {
+                        string playerName = handLine.Substring(0, openSquareIndex - 7);
+                        handActions.Add(new HandAction(playerName, HandActionType.SHOW, 0, currentStreet));
+                        continue;
+                    }
+                    else if (action.Equals("mucks"))
+                    {
+                        string playerName = handLine.Substring(0, openSquareIndex - 7);
+                        handActions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, currentStreet));
+                        continue;
+                    }
+
+                    throw new HandActionException(handLine, "Unparsed");
+                }
+
+                if (handLine[handLine.Length - 1] == ']')
+                {
+                    int openSquareIndex = handLine.LastIndexOf('[');
+                    string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
+                    decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""));
+
+                    string action = handLine.Substring(openSquareIndex - 8, 7);
+
+                    if (currentStreet == Street.Preflop)
+                    {
+                        if (action.Equals("l blind")) // small blind
+                        {
+                            string playerName = handLine.Substring(0, openSquareIndex - 19);
+                            handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet));
+                            continue;
+                        }
+                        else if (action.Equals("g blind")) // big blind
+                        {
+                            string playerName = handLine.Substring(0, openSquareIndex - 17);
+                            handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet));
+                            continue;
+                        }
+                    }
+                    
+                    if (action.EndsWith("raises"))
+                    {
+                        string playerName = handLine.Substring(0, openSquareIndex - 8);
+                        handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet));
+                        continue;
+                    }
+                    else if (action.EndsWith("bets"))
+                    {
+                        string playerName = handLine.Substring(0, openSquareIndex - 6);
+                        handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet));
+                        continue;
+                    }
+                    else if (action.EndsWith("calls"))
+                    {
+                        string playerName = handLine.Substring(0, openSquareIndex - 7);
+                        handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet));
+                        continue;
+                    }
+                    
+                }
+
+                if (handLine.EndsWith("folds"))
+                {
+                    string playerName = handLine.Substring(0, handLine.Length - 6);
+                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet));
+                    continue;
+                }
+                else if (handLine.EndsWith("checks"))
+                {
+                    string playerName = handLine.Substring(0, handLine.Length - 7);
+                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, 0, currentStreet));
+                    continue;
+                }                
+
+                throw new HandActionException(handLine, "Unknown handline.");
+            }
+
+            return handActions;
+        }
+
+        protected override PlayerList ParsePlayers(string[] handLines)
+        {
+            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[5]).Value);
+
+            PlayerList playerList = new PlayerList();
+
+            for (int i = 0; i < seatCount; i++)
+            {
+                string handLine = handLines[6 + i];
+
+                // Expected format:
+                //  Seat 1: Velmonio ( $1.05 )
+
+                int colonIndex = handLine.IndexOf(':');
+                int openParenIndex = handLine.IndexOf('(');
+
+                int seat = int.Parse(handLine.Substring(5, colonIndex - 5));
+                string playerName = handLine.Substring(colonIndex + 2, openParenIndex - colonIndex - 3);
+                decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 3, handLine.Length - openParenIndex - 3 - 2));
+
+                playerList.Add(new Player(playerName, amount, seat));
+            }
+
+            // Add hole-card info
+            for (int i = handLines.Length - 2; i >= 0; i--)
+            {
+                string handLine = handLines[i];
+
+                if (handLine[0] == '*')
+                {
+                    break;                    
+                }
+
+                if (handLine.EndsWith("]") &&
+                    char.IsDigit(handLine[handLine.Length - 3]) == false)
+                {
+                    // lines such as:
+                    //  slyguyone2 shows [ Jd, As ]
+
+                    int openSquareIndex = handLine.IndexOf('[');
+
+                    string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
+                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+
+                    string playerName = handLine.Substring(0, openSquareIndex - 7);
+
+                    Player player = playerList.First(p => p.PlayerName.Equals(playerName));
+                    player.HoleCards = holeCards;
+                }
+            }
+
+                return playerList;
+        }
+
+        protected override BoardCards ParseCommunityCards(string[] handLines)
+        {
+            string boardCards = string.Empty;
+
+            for (int i = 0; i < handLines.Length; i++)
+            {
+                string handLine = handLines[i];
+
+                if (handLine[0] != '*')
+                {
+                    continue;                    
+                }
+
+                if (handLine[3] != 'D')
+                {
+                    continue;
+                }
+
+                int openSquareIndex;
+                switch (handLine[11])
+                {
+                    case 'r':
+                        openSquareIndex = 20;
+                        break;
+                    default:
+                        openSquareIndex = 19;
+                        break;                        
+                }
+
+                string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
+
+                boardCards += cards.Replace(",", "").Replace(" ", "");
+            }
+
+            return BoardCards.FromCards(boardCards);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+﻿PokerStars Hand #78421089398:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 10:26:39 ET
+Table 'Bharani III' 6-max Seat #4 is the button
+Seat 1: thaiJhonny ($16.08 in chips) 
+Seat 2: Kiko991 ($15.60 in chips) 
+Seat 3: Netolip ($16.64 in chips) 
+Seat 4: Eva45 ($16 in chips) 
+Seat 5: miumer ($16.08 in chips) 
+Seat 6: Sascha9574 ($16 in chips) 
+miumer: posts small blind $0.08
+Sascha9574: posts big blind $0.16
+*** HOLE CARDS ***
+thaiJhonny: folds 
+Kiko991: folds 
+Netolip: folds 
+Eva45: folds 
+miumer: folds 
+Uncalled bet ($0.08) returned to Sascha9574
+Sascha9574 collected $0.16 from pot
+Sascha9574: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.16 | Rake $0 
+Seat 1: thaiJhonny folded before Flop (didn't bet)
+Seat 2: Kiko991 folded before Flop (didn't bet)
+Seat 3: Netolip folded before Flop (didn't bet)
+Seat 4: Eva45 (button) folded before Flop (didn't bet)
+Seat 5: miumer (small blind) folded before Flop
+Seat 6: Sascha9574 (big blind) collected ($0.16)

@@ -1,0 +1,40 @@
+﻿#Game No : 410992626
+***** Cassava Hand History for Game 410992626 *****
+$0.06/$0.12 Blinds Fix Limit Holdem - *** 04 02 2012 23:59:04
+Table Maracaibo (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: thecapo1983 ( $0.94 )
+Seat 2: john748 ( $8.18 )
+Seat 4: azssabv.bg ( $4.02 )
+Seat 6: billley1954 ( $1.94 )
+Seat 7: Papa.Joe ( $5.42 )
+Seat 9: ladygirl15 ( $5.75 )
+thecapo1983 posts small blind [$0.06]
+john748 posts big blind [$0.12]
+** Dealing down cards **
+azssabv.bg folds
+billley1954 calls [$0.12]
+Papa.Joe folds
+ladygirl15 calls [$0.12]
+thecapo1983 calls [$0.06]
+john748 checks
+** Dealing flop ** [ 6c, 4h, Ts ]
+thecapo1983 checks
+john748 bets [$0.12]
+billley1954 raises [$0.24]
+ladygirl15 folds
+thecapo1983 folds
+john748 calls [$0.12]
+** Dealing turn ** [ 3d ]
+john748 checks
+billley1954 bets [$0.25]
+john748 calls [$0.25]
+** Dealing river ** [ 4d ]
+john748 checks
+billley1954 bets [$0.25]
+john748 calls [$0.25]
+** Summary **
+billley1954 shows [ As, Ah ]
+john748 mucks [ 6d, 9c ]
+billley1954 collected [ $1.87 ]

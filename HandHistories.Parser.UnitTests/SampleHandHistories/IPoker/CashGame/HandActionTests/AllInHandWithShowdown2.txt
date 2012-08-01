@@ -1,0 +1,68 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Omaha PL $0.25/$0.50</gametype>
+    <tablename>Dafaran (No DP), 235367711</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-31 20:46:03</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3306155946">
+    <general>
+      <startdate>2012-05-31 22:09:14</startdate>
+      <players>
+        <player seat="1" name="elcapacapa" chips="$474.30" dealer="0" win="$0" bet="$7.75" rebuy="0" addon="0"/>
+        <player seat="3" name="Straddles" chips="$52.43" dealer="1" win="$9.12" bet="$52.43" rebuy="0" addon="0"/>
+        <player seat="5" name="MrC0ld" chips="$164.37" dealer="0" win="$0" bet="$0.25" rebuy="0" addon="0"/>
+        <player seat="6" name="1715097" chips="$43.31" dealer="0" win="$99.37" bet="$43.31" rebuy="0" addon="0"/>
+        <player seat="8" name="MrSmartMoney" chips="$204.71" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+        <player seat="10" name="WOCKAFLOCKAJOPPA" chips="$48.75" dealer="0" win="$0" bet="$7.75" rebuy="0" addon="0"/>
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="MrC0ld" type="1" sum="$0.25" cards="[cards]"/>
+      <action no="2" player="1715097" type="2" sum="$0.50" cards="[cards]"/>
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="elcapacapa">X X X X</cards>
+      <action no="5" player="elcapacapa" type="3" sum="$1.75" cards=""/>
+      <action no="10" player="elcapacapa" type="3" sum="$6" cards=""/>
+      <cards type="Pocket" player="Straddles">D7 H6 H8 D10</cards>
+      <action no="6" player="Straddles" type="23" sum="$7.75" cards=""/>
+      <cards type="Pocket" player="MrC0ld">X X X X</cards>
+      <action no="7" player="MrC0ld" type="0" sum="$0" cards=""/>
+      <cards type="Pocket" player="1715097">SK DQ CJ SQ</cards>
+      <action no="8" player="1715097" type="3" sum="$7.25" cards=""/>
+      <cards type="Pocket" player="MrSmartMoney">X X X X</cards>
+      <action no="3" player="MrSmartMoney" type="0" sum="$0" cards=""/>
+      <cards type="Pocket" player="WOCKAFLOCKAJOPPA">X X X X</cards>
+      <action no="4" player="WOCKAFLOCKAJOPPA" type="23" sum="$1.75" cards=""/>
+      <action no="9" player="WOCKAFLOCKAJOPPA" type="3" sum="$6" cards=""/>
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S8 S9 H10</cards>
+      <action no="13" player="elcapacapa" type="0" sum="$0" cards=""/>
+      <action no="14" player="Straddles" type="23" sum="$44.68" cards=""/>
+      <action no="11" player="1715097" type="5" sum="$15.62" cards=""/>
+      <action no="15" player="1715097" type="7" sum="$19.94" cards=""/>
+      <action no="12" player="WOCKAFLOCKAJOPPA" type="0" sum="$0" cards=""/>
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">CA</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">S5</cards>
+    </round>
+  </game>
+</session>

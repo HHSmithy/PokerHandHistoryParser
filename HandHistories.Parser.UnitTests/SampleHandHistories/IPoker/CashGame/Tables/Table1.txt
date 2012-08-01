@@ -1,0 +1,40 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.02/$0.04</gametype>
+    <tablename>(Shallow) Vaal (No DP Heads Up), 165636221</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 16:51:51</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302203750">
+    <general>
+      <startdate>2012-05-28 16:52:05</startdate>
+      <players>
+        <player seat="3" name="RodriDiaz3" chips="$2.21" dealer="1" win="$0.12" bet="$0.08" rebuy="0" addon="0" />
+        <player seat="8" name="Kristi48ru" chips="$6.47" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="RodriDiaz3" type="1" sum="$0.02" cards="[cards]" />
+      <action no="2" player="Kristi48ru" type="2" sum="$0.04" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="RodriDiaz3">X X</cards>
+      <action no="3" player="RodriDiaz3" type="23" sum="$0.08" cards="" />
+      <cards type="Pocket" player="Kristi48ru">X X</cards>
+      <action no="4" player="Kristi48ru" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

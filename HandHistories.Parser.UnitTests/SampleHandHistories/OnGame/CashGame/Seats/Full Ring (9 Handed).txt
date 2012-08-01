@@ -1,0 +1,51 @@
+﻿***** History for hand R5-244303234-150 *****
+Start hand: Tue May 29 04:11:00 CEST 2012
+Table: Fairbanks [244303234] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 9
+Seat 1: Tasmania2010 ($24.11) 
+Seat 2: Jallen08 ($64.08) 
+Seat 4: doc1942 ($106.08) 
+Seat 5: pkbcdnli ($100.00) 
+Seat 6: SUOT ($219.11) 
+Seat 7: XkwX ($169.88) 
+Seat 8: nyctheone ($98.40) 
+Seat 9: 88kostas88 ($39.23) 
+Seat 10: dtyhewhre ($100.00) 
+dtyhewhre posts small blind ($0.50)
+Tasmania2010 posts big blind ($1)
+---
+Dealing pocket cards
+Jallen08 folds
+doc1942 folds
+pkbcdnli folds
+SUOT folds
+XkwX folds
+nyctheone folds
+88kostas88 raises $3.00 to $3.00
+dtyhewhre calls $2.50
+Tasmania2010 calls $2.00
+--- Dealing flop [5c, 9s, Js]
+dtyhewhre checks
+Tasmania2010 checks
+88kostas88 checks
+--- Dealing turn [9h]
+dtyhewhre checks
+Tasmania2010 bets $7.00
+88kostas88 folds
+dtyhewhre raises $97.00 to $97.00 [all in] 
+Tasmania2010 folds
+---
+Summary:
+Main pot: $23.00 won by dtyhewhre ($21.85)
+Rake taken: $1.15
+Seat 1: Tasmania2010 ($14.11), net: -$10.00
+Seat 2: Jallen08 ($64.08), net: -$0.00
+Seat 4: doc1942 ($106.08), net: -$0.00
+Seat 5: pkbcdnli ($100.00), net: -$0.00
+Seat 6: SUOT ($219.11), net: -$0.00
+Seat 7: XkwX ($169.88), net: -$0.00
+Seat 8: nyctheone ($98.40), net: -$0.00
+Seat 9: 88kostas88 ($36.23), net: -$3.00
+Seat 10: dtyhewhre ($111.85), net: +$11.85
+***** End of hand R5-244303234-150 *****

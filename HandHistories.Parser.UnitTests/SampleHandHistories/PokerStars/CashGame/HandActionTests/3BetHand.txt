@@ -1,0 +1,40 @@
+﻿PokerStars Hand #78495382879:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/07 16:42:59 ET
+Table 'Abanderada III' 6-max Seat #1 is the button
+Seat 1: hefeplinz4:20pm ($16 in chips) 
+Seat 2: RECHUK ($26.65 in chips) 
+Seat 3: Fjell_konge ($17.80 in chips) 
+Seat 4: Piotr280688 ($16.64 in chips) 
+Seat 5: MS13ZEN ($16 in chips) 
+Seat 6: newlander911 ($53.48 in chips) 
+2As88 will be allowed to play after the button
+RECHUK: posts small blind $0.08
+Fjell_konge: posts big blind $0.16
+*** HOLE CARDS ***
+Piotr280688: raises $0.48 to $0.64
+MS13ZEN: raises $1.36 to $2
+newlander911: folds 
+hefeplinz4:20pm: folds 
+RECHUK: folds 
+Fjell_konge: folds 
+Piotr280688: calls $1.36
+*** FLOP *** [Tc 2h 8s]
+Piotr280688: checks 
+MS13ZEN: bets $1.76
+Piotr280688: calls $1.76
+*** TURN *** [Tc 2h 8s] [Js]
+Piotr280688: checks 
+MS13ZEN: bets $4.56
+Piotr280688: raises $8.32 to $12.88 and is all-in
+MS13ZEN: folds 
+Uncalled bet ($8.32) returned to Piotr280688
+Piotr280688 collected $16.12 from pot
+Piotr280688: doesn't show hand 
+*** SUMMARY ***
+Total pot $16.88 | Rake $0.76 
+Board [Tc 2h 8s Js]
+Seat 1: hefeplinz4:20pm (button) folded before Flop (didn't bet)
+Seat 2: RECHUK (small blind) folded before Flop
+Seat 3: Fjell_konge (big blind) folded before Flop
+Seat 4: Piotr280688 collected ($16.12)
+Seat 5: MS13ZEN folded on the Turn
+Seat 6: newlander911 folded before Flop (didn't bet)

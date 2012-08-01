@@ -1,0 +1,35 @@
+﻿<description type="Holdem" stakes="Limit $3/$6"/>
+<game id="56120887-937" starttime="20120529015849" numholecards="2" gametype="2" seats="6" realmoney="true" data="20120529|Stonehenge (56120887)|56120887|56120887-937|false">
+	<players dealer="4">
+		<player seat="0" nickname="ficaqui" balance="$118.99" dealtin="true" />
+		<player seat="1" nickname="BlackBook1" balance="$276.06" dealtin="true" />
+		<player seat="2" nickname="AtSiki" balance="$205.99" dealtin="true" />
+		<player seat="3" nickname="flatulentfox" balance="$136.65" dealtin="true" />
+		<player seat="4" nickname="etinh38" balance="$597.93" dealtin="true" />
+		<player seat="5" nickname="mylastmoneys" balance="$390.26" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338274797576" player="5" amount="1.50"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338274797810" player="0" amount="3.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338274801045" player="1" amount="6.00"/>
+		<event sequence="4" type="FOLD" timestamp="1338274803717" player="2"/>
+		<event sequence="5" type="FOLD" timestamp="1338274803842" player="3"/>
+		<event sequence="6" type="FOLD" timestamp="1338274806248" player="4"/>
+		<event sequence="7" type="FOLD" timestamp="1338274807951" player="5"/>
+		<event sequence="8" type="CALL" timestamp="1338274810185" player="0" amount="3.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="9" type="CHECK" timestamp="1338274810826" player="0"/>
+		<event sequence="10" type="BET" timestamp="1338274812467" player="1" amount="3.00"/>
+		<event sequence="11" type="FOLD" timestamp="1338274815373" player="0"/>
+		<cards type="COMMUNITY" cards="5c,3h,Js"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="4">
+		<event sequence="12" type="MUCK" timestamp="1338274815795" player="1"/>
+		<winner amount="15.83" uncalled="false" potnumber="1" player="1" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="5">
+	</round>
+</game>

@@ -1,0 +1,44 @@
+﻿<description type="Omaha" stakes="Pot Limit ($1/$2)"/>
+<game id="56134074-612" starttime="20120529015750" numholecards="4" gametype="9" seats="6" realmoney="true" data="20120529|Yangshtee River (56134074)|56134074|56134074-612|false">
+	<players dealer="5">
+		<player seat="0" nickname="GenerallyNuts" balance="$174.24" dealtin="true" />
+		<player seat="1" nickname="BurtBondy253" balance="$53.50" dealtin="true" />
+		<player seat="2" nickname="Riggzzy" balance="$73.70" dealtin="true" />
+		<player seat="3" nickname="havoc23" balance="$360.17" dealtin="true" />
+		<player seat="4" nickname="mrtae12" balance="$283.14" dealtin="true" />
+		<player seat="5" nickname="gotyoukid2244" balance="$58.89" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338274746523" player="0" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338274746757" player="1" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338274751523" player="2"/>
+		<event sequence="4" type="FOLD" timestamp="1338274752085" player="3"/>
+		<event sequence="5" type="RAISE" timestamp="1338274754507" player="4" amount="4.00"/>
+		<event sequence="6" type="CALL" timestamp="1338274757991" player="5" amount="4.00"/>
+		<event sequence="7" type="CALL" timestamp="1338274760288" player="0" amount="3.00"/>
+		<event sequence="8" type="CALL" timestamp="1338274760835" player="1" amount="2.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="9" type="CHECK" timestamp="1338274763007" player="0"/>
+		<event sequence="10" type="CHECK" timestamp="1338274765069" player="1"/>
+		<event sequence="11" type="CHECK" timestamp="1338274767054" player="4"/>
+		<event sequence="12" type="CHECK" timestamp="1338274769163" player="5"/>
+		<cards type="COMMUNITY" cards="Kc,7h,Kd"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<event sequence="13" type="CHECK" timestamp="1338274772726" player="0"/>
+		<event sequence="14" type="BET" timestamp="1338274776132" player="1" amount="7.00"/>
+		<event sequence="15" type="FOLD" timestamp="1338274779257" player="4"/>
+		<event sequence="16" type="FOLD" timestamp="1338274781554" player="5"/>
+		<event sequence="17" type="FOLD" timestamp="1338274803694" player="0"/>
+		<cards type="COMMUNITY" cards="Kc,7h,Kd,5c"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="5">
+		<event sequence="18" type="MUCK" timestamp="1338274805038" player="1"/>
+		<winner amount="22.20" uncalled="false" potnumber="1" player="1" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="6">
+	</round>
+</game>

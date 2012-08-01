@@ -1,0 +1,38 @@
+﻿PokerStars Hand #78458805064:  Omaha Hi/Lo Pot Limit ($0.05/$0.10 USD) - 2012/04/07 0:49:18 ET
+Table 'Marfik IV' 6-max Seat #3 is the button
+Seat 1: DOT19 ($20.23 in chips) 
+Seat 2: Guffings ($8.79 in chips) 
+Seat 3: HELVER4728 ($10.25 in chips) 
+Seat 5: mickeyr777 ($6.97 in chips) 
+Seat 6: JokerTKD ($12.05 in chips) 
+mickeyr777: posts small blind $0.05
+JokerTKD: posts big blind $0.10
+*** HOLE CARDS ***
+DOT19: raises $0.25 to $0.35
+Guffings: calls $0.35
+HELVER4728: folds 
+mickeyr777: folds 
+JokerTKD: raises $1.10 to $1.45
+DOT19: calls $1.10
+Guffings: calls $1.10
+*** FLOP *** [6c 4s Jd]
+JokerTKD: bets $4.20
+DOT19: raises $12.60 to $16.80
+Guffings: folds 
+JokerTKD: calls $6.40 and is all-in
+Uncalled bet ($6.20) returned to DOT19
+*** TURN *** [6c 4s Jd] [6h]
+*** RIVER *** [6c 4s Jd 6h] [Qc]
+*** SHOW DOWN ***
+JokerTKD: shows [2s 3s Ah Kh] (HI: a pair of Sixes)
+DOT19: shows [As 8h Ac Kd] (HI: two pair, Aces and Sixes)
+DOT19 collected $24.45 from pot
+No low hand qualified
+*** SUMMARY ***
+Total pot $25.60 | Rake $1.15 
+Board [6c 4s Jd 6h Qc]
+Seat 1: DOT19 showed [As 8h Ac Kd] and won ($24.45) with HI: two pair, Aces and Sixes
+Seat 2: Guffings folded on the Flop
+Seat 3: HELVER4728 (button) folded before Flop (didn't bet)
+Seat 5: mickeyr777 (small blind) folded before Flop
+Seat 6: JokerTKD (big blind) showed [2s 3s Ah Kh] and lost with HI: a pair of Sixes

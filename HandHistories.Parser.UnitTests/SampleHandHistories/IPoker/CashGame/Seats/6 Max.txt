@@ -1,0 +1,45 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.02/$0.04</gametype>
+    <tablename>Vaal (No DP Heads Up), 165636221</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 16:51:51</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3301944192">
+    <general>
+      <startdate>2012-05-28 11:55:28</startdate>
+      <players>
+        <player seat="1" name="matrix1970" chips="$0" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="3" name="eatFreshFood" chips="$160" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="5" name="ThePowerTaylor" chips="$258.40" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="6" name="cdxp" chips="$94" dealer="0" win="$0" bet="$2" rebuy="0" addon="0" />
+        <player seat="10" name="poguemahone111" chips="$198.02" dealer="0" win="$6" bet="$4" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="3" player="eatFreshFood" type="8" sum="$0" cards="[cards]" />
+      <action no="1" player="cdxp" type="1" sum="$2" cards="[cards]" />
+      <action no="2" player="poguemahone111" type="2" sum="$4" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="ThePowerTaylor">X X</cards>
+      <action no="4" player="ThePowerTaylor" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="cdxp">X X</cards>
+      <action no="5" player="cdxp" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="poguemahone111">X X</cards>
+    </round>
+  </game>
+</session>

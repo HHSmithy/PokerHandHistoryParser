@@ -1,0 +1,27 @@
+﻿***** Hand History for Game 11614245816 *****
+$200 USD NL Texas Hold'em - Tuesday, April 03, 04:29:40 EDT 2012
+Table Speed #2355417 (No DP) (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 5: A_N_D_R_O_I_D ( $381.10 USD )
+Seat 4: BetInTheDark ( $209 USD )
+Seat 2: CamillaToft ( $355.70 USD )
+Seat 1: FiskC ( $143.34 USD )
+Seat 6: PietroViesch ( $242.95 USD )
+Seat 3: SiamSato ( $200 USD )
+A_N_D_R_O_I_D posts small blind [$1 USD].
+PietroViesch posts big blind [$2 USD].
+** Dealing down cards **
+FiskC folds
+CamillaToft folds
+SiamSato folds
+BetInTheDark raises [$5 USD]
+A_N_D_R_O_I_D folds
+PietroViesch raises [$18 USD]
+BetInTheDark calls [$15 USD]
+** Dealing Flop ** [ 7h, Qs, 3c ]
+PietroViesch bets [$24 USD]
+BetInTheDark will be using his time bank for this hand.
+BetInTheDark folds
+PietroViesch does not show cards.
+PietroViesch wins $62.95 USD

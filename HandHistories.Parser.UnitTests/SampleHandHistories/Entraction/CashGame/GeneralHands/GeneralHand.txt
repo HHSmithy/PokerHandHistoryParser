@@ -1,0 +1,26 @@
+﻿Game # 2645975604 - Texas Hold'em No Limit EUR 0.50/1.00 - Table "Aguilas"
+
+Players(max 6):
+GrossoGatto                 (EUR 100.00 in seat 4)
+ORFEO                       (EUR 48.50 in seat 5)
+
+Dealer:                     GrossoGatto
+Small Blind:                ORFEO       (0.50)
+Big Blind:                  GrossoGatto (1.00)
+
+ORFEO                       Raise       (2.50)
+GrossoGatto                 Call        (2.00)
+
+Flop                        6d - 8d - 9h
+
+ORFEO                       Bet         (4.00)
+GrossoGatto                 Raise       (14.50)
+ORFEO                       Fold
+GrossoGatto                 Payback     (10.50)
+
+GrossoGatto didn't show hand
+
+GrossoGatto wins:           EUR 13.30
+Rake:                       EUR 0.70
+
+Game ended 2012-05-30 15:49:35 GMT+01:00

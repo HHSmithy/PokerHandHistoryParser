@@ -1,0 +1,39 @@
+﻿PokerStars Hand #78447360452:  Omaha Pot Limit ($3/$6 USD) - 2012/04/06 18:32:02 ET
+Table 'Anhui VII' 6-max Seat #2 is the button
+Seat 1: chico134 ($736.54 in chips) 
+Seat 2: jippo79 ($600 in chips) 
+Seat 3: cuartito76 ($355 in chips) 
+Seat 4: Gakn29 ($600 in chips) 
+Seat 5: IMALLIN723 ($625.24 in chips) 
+Seat 6: foldngst8n ($600 in chips) 
+cuartito76: posts small blind $3
+Gakn29: posts big blind $6
+*** HOLE CARDS ***
+IMALLIN723: folds 
+foldngst8n: folds 
+chico134: folds 
+jippo79: raises $12 to $18
+cuartito76: raises $42 to $60
+Gakn29: folds 
+jippo79: calls $42
+*** FLOP *** [Ah 2s Qd]
+cuartito76: bets $123.20
+jippo79: raises $170.80 to $294
+cuartito76: calls $170.80
+*** TURN *** [Ah 2s Qd] [4d]
+cuartito76: bets $1 and is all-in
+jippo79: calls $1
+*** RIVER *** [Ah 2s Qd 4d] [3c]
+*** SHOW DOWN ***
+cuartito76: shows [Ac 8c Jh Kh] (a pair of Aces)
+jippo79: shows [4h As 5s 7h] (a straight, Ace to Five)
+jippo79 collected $713.20 from pot
+*** SUMMARY ***
+Total pot $716 | Rake $2.80 
+Board [Ah 2s Qd 4d 3c]
+Seat 1: chico134 folded before Flop (didn't bet)
+Seat 2: jippo79 (button) showed [4h As 5s 7h] and won ($713.20) with a straight, Ace to Five
+Seat 3: cuartito76 (small blind) showed [Ac 8c Jh Kh] and lost with a pair of Aces
+Seat 4: Gakn29 (big blind) folded before Flop
+Seat 5: IMALLIN723 folded before Flop (didn't bet)
+Seat 6: foldngst8n folded before Flop (didn't bet)

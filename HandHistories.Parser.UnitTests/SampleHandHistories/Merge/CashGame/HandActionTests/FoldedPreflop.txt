@@ -1,0 +1,31 @@
+﻿<description type="Holdem" stakes="No Limit ($1/$2)"/>
+<game id="56114855-409" starttime="20120529015818" numholecards="2" gametype="2" seats="6" realmoney="true" data="20120529|Bad Beat - Statue of Liberty (56114855)|56114855|56114855-409|false">
+	<players dealer="4">
+		<player seat="0" nickname="GODEXISTSJK" balance="$271.96" dealtin="true" />
+		<player seat="1" nickname="anica11" balance="$184.10" dealtin="true" />
+		<player seat="2" nickname="fasthand007" balance="$302.79" dealtin="true" />
+		<player seat="3" nickname="m0ney2Blow" balance="$230.23" dealtin="true" />
+		<player seat="4" nickname="Hateordiehere" balance="$200.83" dealtin="true" />
+		<player seat="5" nickname="dugaly" balance="$223.84" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338274760906" player="5" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338274761250" player="0" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338274766093" player="1" amount="5.75"/>
+		<event sequence="4" type="FOLD" timestamp="1338274766343" player="2"/>
+		<event sequence="5" type="FOLD" timestamp="1338274773375" player="3"/>
+		<event sequence="6" type="RAISE" timestamp="1338274784109" player="4" amount="14.00"/>
+		<event sequence="7" type="FOLD" timestamp="1338274788328" player="5"/>
+		<event sequence="8" type="FOLD" timestamp="1338274794171" player="0"/>
+		<event sequence="9" type="RAISE" timestamp="1338274799343" player="1" amount="34.66"/>
+		<event sequence="10" type="FOLD" timestamp="1338274805937" player="4"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="11" type="MUCK" timestamp="1338274806453" player="1"/>
+		<winner amount="51.66" uncalled="false" potnumber="1" player="1" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>

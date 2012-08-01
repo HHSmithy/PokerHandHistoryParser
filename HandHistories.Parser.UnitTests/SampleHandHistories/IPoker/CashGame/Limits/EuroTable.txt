@@ -1,0 +1,56 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL €2/€4</gametype>
+    <tablename>Ashton-under-Lyne, 629229031</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 19:56:53</startdate>
+    <currency>EUR</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302416084">
+    <general>
+      <startdate>2012-05-28 19:57:05</startdate>
+      <players>
+        <player seat="4" name="Hypomanie" chips="€60" dealer="1" win="€0" bet="€4" rebuy="0" addon="0" />
+        <player seat="7" name="iutvf" chips="€60" dealer="0" win="€7.60" bet="€4" rebuy="0" addon="0" />
+        <player seat="9" name="Zempf" chips="€126" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Hypomanie" type="1" sum="€1" cards="[cards]" />
+      <action no="2" player="iutvf" type="2" sum="€2" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Hypomanie">X X</cards>
+      <action no="3" player="Hypomanie" type="23" sum="€4" cards="" />
+      <cards type="Pocket" player="iutvf">H6 D3</cards>
+      <action no="4" player="iutvf" type="3" sum="€2" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C5 C7 H3</cards>
+      <action no="6" player="Hypomanie" type="4" sum="€0" cards="" />
+      <action no="5" player="iutvf" type="4" sum="€0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">CK</cards>
+      <action no="8" player="Hypomanie" type="4" sum="€0" cards="" />
+      <action no="7" player="iutvf" type="4" sum="€0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">H10</cards>
+      <action no="10" player="Hypomanie" type="4" sum="€0" cards="" />
+      <action no="9" player="iutvf" type="4" sum="€0" cards="" />
+    </round>
+  </game>
+</session>

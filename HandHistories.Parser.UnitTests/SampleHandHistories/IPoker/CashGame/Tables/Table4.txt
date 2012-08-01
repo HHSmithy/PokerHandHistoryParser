@@ -1,0 +1,52 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem L $3/$6</gametype>
+    <tablename>Tilsonburg, 51071661</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 16:30:35</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302181176">
+    <general>
+      <startdate>2012-05-28 16:30:58</startdate>
+      <players>
+        <player seat="3" name="aremomak" chips="$54" dealer="1" win="$12" bet="$9" rebuy="0" addon="0" />
+        <player seat="4" name="ziczaczic" chips="$360" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="6" name="slowstorm" chips="$125.60" dealer="0" win="$0" bet="$3" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="aremomak" type="1" sum="$1.50" cards="[cards]" />
+      <action no="2" player="slowstorm" type="2" sum="$3" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="aremomak">X X</cards>
+      <action no="3" player="aremomak" type="3" sum="$1.50" cards="" />
+      <cards type="Pocket" player="slowstorm">X X</cards>
+      <action no="4" player="slowstorm" type="4" sum="$0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">CK C5 H5</cards>
+      <action no="6" player="aremomak" type="4" sum="$0" cards="" />
+      <action no="5" player="slowstorm" type="4" sum="$0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">C9</cards>
+      <action no="8" player="aremomak" type="5" sum="$6" cards="" />
+      <action no="7" player="slowstorm" type="4" sum="$0" cards="" />
+      <action no="9" player="slowstorm" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

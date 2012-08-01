@@ -1,0 +1,36 @@
+﻿#Game No : 410992808
+***** Cassava Hand History for Game 410992808 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:59:48
+Table Basel (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: VScorpio14 ( $169.57 )
+Seat 4: piraias1961 ( $22.71 )
+Seat 6: rspinola ( $16.36 )
+Seat 9: lottylee1 ( $46.20 )
+VScorpio14 posts small blind [$0.50]
+piraias1961 posts big blind [$1]
+** Dealing down cards **
+rspinola calls [$1]
+lottylee1 calls [$1]
+VScorpio14 calls [$0.50]
+piraias1961 checks
+** Dealing flop ** [ 4d, 6s, Jh ]
+VScorpio14 bets [$1]
+piraias1961 calls [$1]
+rspinola calls [$1]
+lottylee1 calls [$1]
+** Dealing turn ** [ As ]
+VScorpio14 bets [$2]
+piraias1961 folds
+rspinola calls [$2]
+lottylee1 calls [$2]
+** Dealing river ** [ 2c ]
+VScorpio14 checks
+rspinola checks
+lottylee1 checks
+** Summary **
+VScorpio14 shows [ Qc, Js ]
+rspinola mucks [ 9c, 9h ]
+lottylee1 mucks [ 7c, 8c ]
+VScorpio14 collected [ $13.30 ]

@@ -1,0 +1,34 @@
+﻿<description type="Holdem" stakes="No Limit ($0.50/$1)"/>
+<game id="56116487-983" starttime="20120529015713" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Rue St Catherine (56116487)|56116487|56116487-983|false">
+	<players dealer="3">
+		<player seat="0" nickname="sportslove011" balance="$101.50" dealtin="true" />
+		<player seat="1" nickname="dk2112" balance="$95.28" dealtin="true" />
+		<player seat="2" nickname="nikcname1" balance="$101.50" dealtin="true" />
+		<player seat="3" nickname="rossiwstaxi" balance="$104.98" dealtin="true" />
+		<player seat="4" nickname="cashgreedy00" balance="$102.74" dealtin="true" />
+		<player seat="5" nickname="bebenwong" balance="$111.16" dealtin="true" />
+		<player seat="6" nickname="MrJohn1" balance="$30.20" dealtin="true" />
+		<player seat="7" nickname="JennaMaroney" balance="$154.40" dealtin="true" />
+		<player seat="8" nickname="VegasGrinder03" balance="$64.24" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338274605687" player="4" amount="0.50"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338274605906" player="5" amount="1.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338274621828" player="7"/>
+		<event sequence="4" type="FOLD" timestamp="1338274622031" player="0"/>
+		<event sequence="5" type="FOLD" timestamp="1338274622359" player="1"/>
+		<event sequence="6" type="FOLD" timestamp="1338274622562" player="2"/>
+		<event sequence="7" type="RAISE" timestamp="1338274627578" player="3" amount="2.00"/>
+		<event sequence="8" type="RAISE" timestamp="1338274634125" player="4" amount="8.00"/>
+		<event sequence="9" type="FOLD" timestamp="1338274638578" player="5"/>
+		<event sequence="10" type="FOLD" timestamp="1338274653156" player="3"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="11" type="MUCK" timestamp="1338274653609" player="4"/>
+		<winner amount="11.00" uncalled="false" potnumber="1" player="4" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>

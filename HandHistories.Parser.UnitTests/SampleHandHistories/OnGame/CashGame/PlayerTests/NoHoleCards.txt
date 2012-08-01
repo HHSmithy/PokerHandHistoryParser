@@ -1,0 +1,32 @@
+﻿***** History for hand R5-244575935-304 *****
+Start hand: Tue May 29 02:20:00 CEST 2012
+Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+Button: seat 4
+Players in round: 5
+Seat 4: mr dark hor ($58.62) 
+Seat 7: il_conta ($16.00) 
+Seat 8: Nashpan ($17.50) 
+Seat 9: ---ich--- ($49.50) 
+Seat 10: Incubus633 ($45.50) 
+il_conta posts small blind ($0.25)
+Nashpan posts big blind ($0.50)
+---
+Dealing pocket cards
+RedStar72 folds
+Incubus633 raises $1.50 to $1.50
+mr dark hor calls $1.50
+il_conta folds
+Nashpan folds
+--- Dealing flop [ Qd, Jh, T]
+Incubus633 bets $2.50
+mr dark hor folds
+---
+Summary:
+Main pot: $3.75 won by Incubus633 ($3.57)
+Rake taken: $0.18
+Seat 4: mr dark hor ($57.12), net: -$1.50
+Seat 7: il_conta ($15.75), net: -$0.25
+Seat 8: Nashpan ($17.00), net: -$0.50
+Seat 9: RedStar72 ($49.50), net: -$0.00
+Seat 10: Incubus633 ($47.57), net: +$2.07
+***** End of hand R5-244575935-304 *****

@@ -1,0 +1,42 @@
+﻿PokerStars Hand #78417306464:  Hold'em Limit ($2/$4 USD) - 2012/04/06 9:01:48 ET
+Table 'Giclas' 10-max Seat #2 is the button
+Seat 2: Mirtoti ($118.70 in chips) 
+Seat 4: donjuanmt ($45.52 in chips) 
+Seat 5: RockKillerTY ($116.31 in chips) 
+Seat 7: yane_gt ($69.04 in chips) 
+Seat 9: rzvn_nita ($11.31 in chips) 
+donjuanmt: posts small blind $1
+RockKillerTY: posts big blind $2
+Alekhine11: sits out 
+*** HOLE CARDS ***
+yane_gt: folds 
+rzvn_nita: folds 
+Mirtoti: folds 
+donjuanmt: raises $2 to $4
+RockKillerTY: raises $2 to $6
+donjuanmt: calls $2
+*** FLOP *** [5d Jc Qs]
+donjuanmt: checks 
+HansvdLans joins the table at seat #3 
+RockKillerTY: bets $2
+donjuanmt: calls $2
+*** TURN *** [5d Jc Qs] [5h]
+donjuanmt: checks 
+RockKillerTY: bets $4
+donjuanmt: calls $4
+*** RIVER *** [5d Jc Qs 5h] [Qh]
+donjuanmt: checks 
+RockKillerTY: bets $4
+donjuanmt: calls $4
+*** SHOW DOWN ***
+RockKillerTY: shows [As Qc] (a full house, Queens full of Fives)
+donjuanmt: mucks hand 
+RockKillerTY collected $31.04 from pot
+*** SUMMARY ***
+Total pot $32 | Rake $0.96 
+Board [5d Ks 7c Jc 7d]
+Seat 2: Mirtoti (button) folded before Flop (didn't bet)
+Seat 4: donjuanmt (small blind) mucked
+Seat 5: RockKillerTY (big blind) showed [As Qc] and won ($31.04) with a full house, Queens full of Fives
+Seat 7: yane_gt folded before Flop (didn't bet)
+Seat 9: rzvn_nita folded before Flop (didn't bet)

@@ -1,0 +1,43 @@
+﻿<description type="Holdem" stakes="No Limit ($1/$2)"/>
+<game id="56114855-410" starttime="20120529015906" numholecards="2" gametype="2" seats="6" realmoney="true" data="20120529|Bad Beat - Statue of Liberty (56114855)|56114855|56114855-410|false">
+	<players dealer="5">
+		<player seat="0" nickname="GODEXISTSJK" balance="$269.96" dealtin="true" />
+		<player seat="1" nickname="anica11" balance="$201.10" dealtin="true" />
+		<player seat="2" nickname="fasthand007" balance="$302.79" dealtin="true" />
+		<player seat="3" nickname="m0ney2Blow" balance="$230.23" dealtin="true" />
+		<player seat="4" nickname="Hateordiehere" balance="$186.83" dealtin="true" />
+		<player seat="5" nickname="dugaly" balance="$222.84" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338274808843" player="0" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338274809234" player="1" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338274811484" player="2"/>
+		<event sequence="4" type="FOLD" timestamp="1338274814359" player="3"/>
+		<event sequence="5" type="RAISE" timestamp="1338274818875" player="4" amount="8.00"/>
+		<event sequence="6" type="RAISE" timestamp="1338274827640" player="5" amount="22.25"/>
+		<event sequence="7" type="FOLD" timestamp="1338274831359" player="0"/>
+		<event sequence="8" type="RAISE" timestamp="1338274841609" player="1" amount="49.00"/>
+		<event sequence="9" type="FOLD" timestamp="1338274842703" player="4"/>
+		<event sequence="10" type="ALL_IN" timestamp="1338274850359" player="5" amount="200.59"/>
+		<event sequence="11" type="ALL_IN" timestamp="1338274851859" player="1" amount="152.10"/>
+		<event sequence="12" type="SHOW" timestamp="1338274852390" player="1"/>
+		<event sequence="13" type="SHOW" timestamp="1338274852593" player="5"/>
+		<cards type="SHOWN" cards="Kc,Kh" player="1"/>
+		<cards type="SHOWN" cards="Ad,Ah" player="5"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<cards type="COMMUNITY" cards="Js,Qh,Jd"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<cards type="COMMUNITY" cards="Js,Qh,Jd,6h"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<cards type="COMMUNITY" cards="Js,Qh,Jd,6h,Th"/>
+	</round>
+	<round id="END_OF_GAME" sequence="6">
+		<winner amount="21.74" uncalled="true" potnumber="2" player="5" hand="Two Pair Aces and Jacks" pottype="n"/>
+		<winner amount="407.70" uncalled="false" potnumber="1" player="5" hand="Two Pair Aces and Jacks" pottype="n"/>
+	</round>
+</game>

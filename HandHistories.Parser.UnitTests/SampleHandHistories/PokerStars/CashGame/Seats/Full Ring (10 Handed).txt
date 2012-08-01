@@ -1,0 +1,41 @@
+﻿PokerStars Hand #78781058886:  Hold'em Limit ($5/$10 USD) - 2012/04/13 1:37:14 ET
+ Table 'Garuda II' 10-max Seat #2 is the button
+ Seat 1: buddadim ($250.59 in chips) 
+ Seat 2: FATAL463 ($283.15 in chips) 
+ Seat 3: slimfast ($357.35 in chips) 
+ Seat 10: esky7777 ($154.54 in chips) 
+ slimfast: posts small blind $2
+ esky7777: posts big blind $5
+ *** HOLE CARDS ***
+ buddadim: raises $5 to $10
+ FATAL463: folds 
+ slimfast: raises $5 to $15
+ esky7777: folds 
+ buddadim: calls $5
+ *** FLOP *** [7d Ah 8s]
+ slimfast: bets $5
+ buddadim: raises $5 to $10
+ slimfast: calls $5
+ *** TURN *** [7d Ah 8s] [3h]
+ slimfast: checks 
+ buddadim: bets $10
+ slimfast: raises $10 to $20
+ buddadim: raises $10 to $30
+ slimfast: raises $10 to $40
+ Betting is capped
+ buddadim: calls $10
+ *** RIVER *** [7d Ah 8s 3h] [5d]
+ slimfast: checks 
+ buddadim: bets $10
+ slimfast: calls $10
+ *** SHOW DOWN ***
+ buddadim: shows [Ac 8c] (two pair, Aces and Eights)
+ slimfast: mucks hand 
+ buddadim collected $153 from pot
+ *** SUMMARY ***
+ Total pot $155 | Rake $2 
+ Board [7d Ah 8s 3h 5d]
+ Seat 1: buddadim showed [Ac 8c] and won ($153) with two pair, Aces and Eights
+ Seat 2: FATAL463 (button) folded before Flop (didn't bet)
+ Seat 3: slimfast (small blind) mucked
+ Seat 10: esky7777 (big blind) folded before Flop

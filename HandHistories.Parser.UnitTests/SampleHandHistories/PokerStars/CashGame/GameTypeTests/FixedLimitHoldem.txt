@@ -1,0 +1,38 @@
+﻿PokerStars Hand #78425343804:  Hold'em Limit ($1/$2 USD) - 2012/04/06 11:53:14 ET
+Table 'Barto' 10-max Seat #6 is the button
+Seat 4: roveng ($34.49 in chips) 
+Seat 5: Thomas Boelt ($8.55 in chips) 
+Seat 6: mindoff ($38.93 in chips) 
+Seat 8: 97coyote ($59 in chips) 
+Seat 9: zsoccerino ($20 in chips) 
+97coyote: posts small blind $0.50
+zsoccerino: posts big blind $1
+*** HOLE CARDS ***
+roveng: calls $1
+Thomas Boelt: calls $1
+mindoff: folds 
+97coyote: calls $0.50
+zsoccerino: checks 
+*** FLOP *** [4h 3c Qc]
+97coyote: checks 
+zsoccerino has timed out
+zsoccerino: checks 
+roveng: checks 
+Thomas Boelt: checks 
+*** TURN *** [4h 3c Qc] [5d]
+97coyote: bets $2
+zsoccerino: raises $2 to $4
+roveng: folds 
+Thomas Boelt: folds 
+97coyote: folds 
+Uncalled bet ($2) returned to zsoccerino
+zsoccerino collected $7.68 from pot
+zsoccerino: doesn't show hand 
+*** SUMMARY ***
+Total pot $8 | Rake $0.32 
+Board [4h 3c Qc 5d]
+Seat 4: roveng folded on the Turn
+Seat 5: Thomas Boelt folded on the Turn
+Seat 6: mindoff (button) folded before Flop (didn't bet)
+Seat 8: 97coyote (small blind) folded on the Turn
+Seat 9: zsoccerino (big blind) collected ($7.68)

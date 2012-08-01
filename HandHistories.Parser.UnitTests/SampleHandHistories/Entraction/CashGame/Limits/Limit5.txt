@@ -1,0 +1,20 @@
+﻿Game # 2647361051 - Texas Hold'em Fixed Limit EUR 15.00/30.00 - Table "Tiagba"
+
+Players(max 2):
+_Oo_                        (EUR 300.00 in seat 1)
+TreeTurtle                  (EUR 750.00 in seat 2)
+
+Dealer:                     TreeTurtle
+Big Blind:                  _Oo_        (15.00)
+Small Blind:                TreeTurtle  (7.50)
+
+TreeTurtle                  Raise       (22.50)
+_Oo_                        Fold
+TreeTurtle                  Payback     (15.00)
+
+TreeTurtle didn't show hand
+
+TreeTurtle wins:            EUR 30.00
+Rake:                       EUR 0.00
+
+Game ended 2012-05-31 23:30:38 GMT+01:00

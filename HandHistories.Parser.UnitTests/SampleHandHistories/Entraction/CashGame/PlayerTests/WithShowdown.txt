@@ -1,0 +1,43 @@
+﻿Game # 2646501423 - Texas Hold'em No Limit EUR 0.50/1.00 - Table "Coslada Min 50BB"
+
+Players(max 6):
+Lechmajstr                  (EUR 118.62 in seat 1)
+hellowkit                   (EUR 68.67 in seat 3)
+Kangorooz                   (EUR 148.50 in seat 4)
+IFeelFree                   (EUR 100.00 in seat 5)
+Thx4thatM8                  (EUR 276.26 in seat 6)
+
+Dealer:                     hellowkit
+Small Blind:                Kangorooz   (0.50)
+Big Blind:                  IFeelFree   (1.00)
+
+Thx4thatM8                  Fold
+Lechmajstr                  Fold
+hellowkit                   Raise       (2.87)
+Kangorooz                   Fold
+IFeelFree                   Call        (1.87)
+
+Flop                        5h - Td - Jd
+
+IFeelFree                   Check
+hellowkit                   Bet         (3.12)
+IFeelFree                   Call        (3.12)
+
+Turn                        5h - Td - Jd - 7h
+
+IFeelFree                   Check
+hellowkit                   Check
+
+River                       5h - Td - Jd - 7h - 4s
+
+IFeelFree                   Check
+hellowkit                   Check
+
+IFeelFree shows:            Kh - Tc
+
+hellowkit didn't show hand (3h - Ad)
+
+IFeelFree wins:             EUR 11.86
+Rake:                       EUR 0.62
+
+Game ended 2012-05-31 02:34:22 GMT+01:00

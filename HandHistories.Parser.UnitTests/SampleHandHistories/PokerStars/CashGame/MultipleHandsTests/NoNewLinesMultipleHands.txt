@@ -1,0 +1,1684 @@
+﻿PokerStars Game #81158920135:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:09 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Kashi1234 ($253.40 in chips) 
+Seat 2: nikolaos778 ($390 in chips) 
+Seat 3: Alex Borodin ($1372.47 in chips) 
+Seat 4: inwooke ($903.59 in chips) 
+Seat 5: E1ephant ($652.26 in chips) 
+Seat 6: audia6m ($385.02 in chips) 
+Alex Borodin: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+audia6m: folds 
+Kashi1234: folds 
+nikolaos778: raises $20 to $40
+Alex Borodin: raises $360 to $400 and has reached the $400 cap
+inwooke: folds 
+nikolaos778: folds 
+Uncalled bet ($360) returned to Alex Borodin
+Alex Borodin collected $100 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $100 | Rake $0 
+Seat 1: Kashi1234 folded before Flop (didn't bet)
+Seat 2: nikolaos778 (button) folded before Flop
+Seat 3: Alex Borodin (small blind) collected ($100)
+Seat 4: inwooke (big blind) folded before Flop
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81158921280:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:11 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: nikolaos778 ($1464 in chips) 
+Seat 2: Alex Borodin ($400 in chips) 
+Seat 3: YurNas ($1289.28 in chips) 
+Seat 4: inwooke ($400 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2515.02 in chips) 
+Alex Borodin: posts small blind $10
+YurNas: posts big blind $20
+*** HOLE CARDS ***
+inwooke: raises $20 to $40
+E1ephant: folds 
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $50 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 (button) folded before Flop (didn't bet)
+Seat 2: Alex Borodin (small blind) folded before Flop
+Seat 3: YurNas (big blind) folded before Flop
+Seat 4: inwooke collected ($50)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: Iknwhow2play folded before Flop (didn't bet)
+PokerStars Game #81158930532:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:27 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: E1ephant ($2371.07 in chips) 
+Seat 2: _major_958 ($458.75 in chips) 
+Seat 3: VernonH ($1070 in chips) 
+Seat 4: nikolaos778 ($443.88 in chips) 
+Seat 5: Alex Borodin ($1241.75 in chips) 
+Seat 6: 2w392y41ur ($270 in chips) 
+2w392y41ur: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+_major_958: raises $20 to $40
+VernonH: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+2w392y41ur: folds 
+E1ephant: folds 
+Uncalled bet ($20) returned to _major_958
+_major_958 collected $50 from pot
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: E1ephant (big blind) folded before Flop
+Seat 2: _major_958 collected ($50)
+Seat 3: VernonH folded before Flop (didn't bet)
+Seat 4: nikolaos778 folded before Flop (didn't bet)
+Seat 5: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 6: 2w392y41ur (small blind) folded before Flop
+PokerStars Game #81158931467:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:29 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Remoh007 ($1114 in chips) 
+Seat 2: Ilyinskiy R. ($885.50 in chips) 
+Seat 3: E1ephant ($1463.28 in chips) 
+Seat 4: Alex Borodin ($670.25 in chips) 
+Seat 5: Greennday ($306.60 in chips) 
+Seat 6: ABA1907 ($597 in chips) 
+ABA1907: posts small blind $10
+Remoh007: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: raises $20 to $40
+E1ephant: folds 
+Alex Borodin: folds 
+Greennday: folds 
+ABA1907: folds 
+Remoh007: folds 
+Uncalled bet ($20) returned to Ilyinskiy R.
+Ilyinskiy R. collected $50 from pot
+Ilyinskiy R.: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 (big blind) folded before Flop
+Seat 2: Ilyinskiy R. collected ($50)
+Seat 3: E1ephant folded before Flop (didn't bet)
+Seat 4: Alex Borodin folded before Flop (didn't bet)
+Seat 5: Greennday (button) folded before Flop (didn't bet)
+Seat 6: ABA1907 (small blind) folded before Flop
+PokerStars Game #81158931889:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:30 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: nikolaos778 ($1464 in chips) 
+Seat 2: Alex Borodin ($400 in chips) 
+Seat 3: YurNas ($1269.28 in chips) 
+Seat 4: inwooke ($430 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2515.02 in chips) 
+YurNas: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: raises $20 to $40
+YurNas: folds 
+inwooke: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $50 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin (button) collected ($50)
+Seat 3: YurNas (small blind) folded before Flop
+Seat 4: inwooke (big blind) folded before Flop
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: Iknwhow2play folded before Flop (didn't bet)
+PokerStars Game #81158935189:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:36 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($400 in chips) 
+Seat 3: Alex Borodin ($1113.60 in chips) 
+Seat 4: Ilyinskiy R. ($537.40 in chips) 
+Seat 5: inwooke ($497 in chips) 
+Seat 6: Pumpingpoker ($848 in chips) 
+Pumpingpoker: posts small blind $10
+Remoh007: posts big blind $20
+*** HOLE CARDS ***
+bayaraa1002: raises $20 to $40
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: folds 
+Remoh007: folds 
+Uncalled bet ($20) returned to bayaraa1002
+bayaraa1002 collected $50 from pot
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 (big blind) folded before Flop
+Seat 2: bayaraa1002 collected ($50)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke (button) folded before Flop (didn't bet)
+Seat 6: Pumpingpoker (small blind) folded before Flop
+PokerStars Game #81158936040:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:37 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Ilyinskiy R. ($467 in chips) 
+Seat 2: E1ephant ($478.21 in chips) 
+Seat 3: x_QUIXTAR_x ($954.79 in chips) 
+Seat 4: Greennday ($834.40 in chips) 
+Seat 5: akaklimat ($481.32 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+Remoh007: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+x_QUIXTAR_x: folds 
+Greennday: folds 
+akaklimat: calls $20
+Remoh007: folds 
+Ilyinskiy R.: checks 
+*** FLOP *** [Qh Tc 9d]
+Ilyinskiy R.: checks 
+akaklimat: checks 
+*** TURN *** [Qh Tc 9d] [Kc]
+Ilyinskiy R.: checks 
+akaklimat: checks 
+*** RIVER *** [Qh Tc 9d Kc] [3d]
+Ilyinskiy R.: bets $20
+akaklimat: calls $20
+*** SHOW DOWN ***
+Ilyinskiy R.: shows [Kh Qd] (two pair, Kings and Queens)
+akaklimat: mucks hand 
+Ilyinskiy R. collected $87 from pot
+*** SUMMARY ***
+Total pot $90 | Rake $3 
+Board [Qh Tc 9d Kc 3d]
+Seat 1: Ilyinskiy R. (big blind) showed [Kh Qd] and won ($87) with two pair, Kings and Queens
+Seat 2: E1ephant folded before Flop (didn't bet)
+Seat 3: x_QUIXTAR_x folded before Flop (didn't bet)
+Seat 4: Greennday folded before Flop (didn't bet)
+Seat 5: akaklimat (button) mucked
+Seat 6: Remoh007 (small blind) folded before Flop
+PokerStars Game #81158937939:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:41 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Kashi1234 ($253.40 in chips) 
+Seat 2: nikolaos778 ($400 in chips) 
+Seat 3: Alex Borodin ($1432.47 in chips) 
+Seat 4: inwooke ($883.59 in chips) 
+Seat 5: E1ephant ($652.26 in chips) 
+Seat 6: audia6m ($385.02 in chips) 
+inwooke: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+audia6m: folds 
+Kashi1234: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: raises $20 to $40
+E1ephant: raises $360 to $400 and has reached the $400 cap
+inwooke: folds 
+Uncalled bet ($360) returned to E1ephant
+E1ephant collected $80 from pot
+E1ephant: doesn't show hand 
+*** SUMMARY ***
+Total pot $80 | Rake $0 
+Seat 1: Kashi1234 folded before Flop (didn't bet)
+Seat 2: nikolaos778 folded before Flop (didn't bet)
+Seat 3: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 4: inwooke (small blind) folded before Flop
+Seat 5: E1ephant (big blind) collected ($80)
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81158943497:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:51 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: E1ephant ($2351.07 in chips) 
+Seat 2: _major_958 ($488.75 in chips) 
+Seat 3: VernonH ($1070 in chips) 
+Seat 4: nikolaos778 ($443.88 in chips) 
+Seat 5: Alex Borodin ($1241.75 in chips) 
+Seat 6: 2w392y41ur ($260 in chips) 
+E1ephant: posts small blind $10
+_major_958: posts big blind $20
+*** HOLE CARDS ***
+VernonH: folds 
+nikolaos778: raises $20 to $40
+Alex Borodin: folds 
+2w392y41ur: folds 
+E1ephant: folds 
+_major_958: calls $20
+*** FLOP *** [7h 8s As]
+_major_958: checks 
+nikolaos778: bets $43.50
+_major_958: calls $43.50
+*** TURN *** [7h 8s As] [8h]
+_major_958: checks 
+nikolaos778: checks 
+*** RIVER *** [7h 8s As 8h] [Kc]
+_major_958: bets $120
+nikolaos778: folds 
+Uncalled bet ($120) returned to _major_958
+_major_958 collected $174 from pot
+*** SUMMARY ***
+Total pot $177 | Rake $3 
+Board [7h 8s As 8h Kc]
+Seat 1: E1ephant (small blind) folded before Flop
+Seat 2: _major_958 (big blind) collected ($174)
+Seat 3: VernonH folded before Flop (didn't bet)
+Seat 4: nikolaos778 folded on the River
+Seat 5: Alex Borodin folded before Flop (didn't bet)
+Seat 6: 2w392y41ur (button) folded before Flop (didn't bet)
+PokerStars Game #81158945369:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:54 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: nikolaos778 ($1464 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1259.28 in chips) 
+Seat 4: inwooke ($410 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2515.02 in chips) 
+inwooke: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: folds 
+inwooke: raises $20 to $40
+E1ephant: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $40 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin folded before Flop (didn't bet)
+Seat 3: YurNas (button) folded before Flop (didn't bet)
+Seat 4: inwooke (small blind) collected ($40)
+Seat 5: E1ephant (big blind) folded before Flop
+Seat 6: Iknwhow2play folded before Flop (didn't bet)
+PokerStars Game #81158948106:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:55:59 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Remoh007 ($1094 in chips) 
+Seat 2: Ilyinskiy R. ($915.50 in chips) 
+Seat 3: E1ephant ($1463.28 in chips) 
+Seat 4: Alex Borodin ($670.25 in chips) 
+Seat 5: Greennday ($306.60 in chips) 
+Seat 6: ABA1907 ($587 in chips) 
+Remoh007: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+Alex Borodin: folds 
+Greennday: raises $20 to $40
+ABA1907: folds 
+Remoh007: folds 
+Ilyinskiy R.: calls $20
+*** FLOP *** [6s Ks Qs]
+Ilyinskiy R.: checks 
+Greennday: bets $55
+Ilyinskiy R.: folds 
+Uncalled bet ($55) returned to Greennday
+Greennday collected $87 from pot
+Greennday: doesn't show hand 
+*** SUMMARY ***
+Total pot $90 | Rake $3 
+Board [6s Ks Qs]
+Seat 1: Remoh007 (small blind) folded before Flop
+Seat 2: Ilyinskiy R. (big blind) folded on the Flop
+Seat 3: E1ephant folded before Flop (didn't bet)
+Seat 4: Alex Borodin folded before Flop (didn't bet)
+Seat 5: Greennday collected ($87)
+Seat 6: ABA1907 (button) folded before Flop (didn't bet)
+PokerStars Game #81158950353:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:03 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($430 in chips) 
+Seat 3: Alex Borodin ($1113.60 in chips) 
+Seat 4: Ilyinskiy R. ($537.40 in chips) 
+Seat 5: inwooke ($497 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Remoh007: posts small blind $10
+bayaraa1002: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+inwooke: raises $20 to $40
+Pumpingpoker: folds 
+Remoh007: folds 
+bayaraa1002: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $50 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 (small blind) folded before Flop
+Seat 2: bayaraa1002 (big blind) folded before Flop
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke collected ($50)
+Seat 6: Pumpingpoker (button) folded before Flop (didn't bet)
+PokerStars Game #81158951339:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:05 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Kashi1234 ($253.40 in chips) 
+Seat 2: nikolaos778 ($400 in chips) 
+Seat 3: Alex Borodin ($1432.47 in chips) 
+Seat 4: inwooke ($843.59 in chips) 
+Seat 5: E1ephant ($692.26 in chips) 
+Seat 6: audia6m ($385.02 in chips) 
+E1ephant: posts small blind $10
+audia6m: posts big blind $20
+*** HOLE CARDS ***
+Kashi1234: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: raises $20 to $40
+Kashi1234 leaves the table
+Ilyinskiy R. joins the table at seat #1 
+E1ephant: folds 
+audia6m: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $50 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Kashi1234 folded before Flop (didn't bet)
+Seat 2: nikolaos778 folded before Flop (didn't bet)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke (button) collected ($50)
+Seat 5: E1ephant (small blind) folded before Flop
+Seat 6: audia6m (big blind) folded before Flop
+PokerStars Game #81158957444:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:16 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: nikolaos778 ($1464 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1259.28 in chips) 
+Seat 4: inwooke ($430 in chips) 
+Seat 5: E1ephant ($478.33 in chips) 
+Seat 6: Iknwhow2play ($2515.02 in chips) 
+E1ephant: posts small blind $10
+Iknwhow2play: posts big blind $20
+*** HOLE CARDS ***
+nikolaos778: folds 
+Alex Borodin: raises $20 to $40
+YurNas: folds 
+inwooke: folds 
+E1ephant: folds 
+Iknwhow2play: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $50 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin collected ($50)
+Seat 3: YurNas folded before Flop (didn't bet)
+Seat 4: inwooke (button) folded before Flop (didn't bet)
+Seat 5: E1ephant (small blind) folded before Flop
+Seat 6: Iknwhow2play (big blind) folded before Flop
+PokerStars Game #81158960344:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:21 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($410 in chips) 
+Seat 3: Alex Borodin ($1113.60 in chips) 
+Seat 4: Ilyinskiy R. ($537.40 in chips) 
+Seat 5: inwooke ($527 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+bayaraa1002: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: folds 
+Remoh007: folds 
+bayaraa1002: raises $20 to $40
+Alex Borodin: raises $360 to $400 and has reached the $400 cap
+bayaraa1002: folds 
+Uncalled bet ($360) returned to Alex Borodin
+Alex Borodin collected $80 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $80 | Rake $0 
+Seat 1: Remoh007 (button) folded before Flop (didn't bet)
+Seat 2: bayaraa1002 (small blind) folded before Flop
+Seat 3: Alex Borodin (big blind) collected ($80)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke folded before Flop (didn't bet)
+Seat 6: Pumpingpoker folded before Flop (didn't bet)
+PokerStars Game #81158963471:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:27 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Ilyinskiy R. ($400 in chips) 
+Seat 2: nikolaos778 ($400 in chips) 
+Seat 3: Alex Borodin ($1432.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($682.26 in chips) 
+Seat 6: audia6m ($365.02 in chips) 
+audia6m: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+nikolaos778: raises $20 to $40
+Alex Borodin: folds 
+inwooke: folds 
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: folds 
+Uncalled bet ($20) returned to nikolaos778
+nikolaos778 collected $50 from pot
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Ilyinskiy R. (big blind) folded before Flop
+Seat 2: nikolaos778 collected ($50)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant (button) folded before Flop (didn't bet)
+Seat 6: audia6m (small blind) folded before Flop
+PokerStars Game #81158969727:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:38 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Ilyinskiy R. ($514 in chips) 
+Seat 2: E1ephant ($478.21 in chips) 
+Seat 3: x_QUIXTAR_x ($954.79 in chips) 
+Seat 4: Greennday ($834.40 in chips) 
+Seat 5: akaklimat ($441.32 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+Ilyinskiy R.: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+x_QUIXTAR_x: folds 
+Greennday: folds 
+akaklimat: calls $20
+Remoh007: folds 
+Ilyinskiy R.: raises $170 to $190
+E1ephant: folds 
+akaklimat: raises $210 to $400 and has reached the $400 cap
+Ilyinskiy R.: calls $210 and has reached the $400 cap
+*** FLOP *** [8c 6c 2d]
+*** TURN *** [8c 6c 2d] [3c]
+*** RIVER *** [8c 6c 2d 3c] [5h]
+*** SHOW DOWN ***
+Ilyinskiy R.: shows [3h 3d] (three of a kind, Threes)
+akaklimat: mucks hand 
+Ilyinskiy R. collected $817 from pot
+*** SUMMARY ***
+Total pot $820 | Rake $3 
+Board [8c 6c 2d 3c 5h]
+Seat 1: Ilyinskiy R. (small blind) showed [3h 3d] and won ($817) with three of a kind, Threes
+Seat 2: E1ephant (big blind) folded before Flop
+Seat 3: x_QUIXTAR_x folded before Flop (didn't bet)
+Seat 4: Greennday folded before Flop (didn't bet)
+Seat 5: akaklimat mucked
+Seat 6: Remoh007 (button) folded before Flop (didn't bet)
+PokerStars Game #81158971105:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:41 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: nikolaos778 ($1464 in chips) 
+Seat 2: Alex Borodin ($460 in chips) 
+Seat 3: YurNas ($1259.28 in chips) 
+Seat 4: inwooke ($430 in chips) 
+Seat 5: E1ephant ($468.33 in chips) 
+Seat 6: Iknwhow2play ($2495.02 in chips) 
+Iknwhow2play: posts small blind $10
+nikolaos778: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+YurNas: folds 
+inwooke: raises $20 to $40
+E1ephant: folds 
+Iknwhow2play: folds 
+nikolaos778: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $50 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 (big blind) folded before Flop
+Seat 2: Alex Borodin folded before Flop (didn't bet)
+Seat 3: YurNas folded before Flop (didn't bet)
+Seat 4: inwooke collected ($50)
+Seat 5: E1ephant (button) folded before Flop (didn't bet)
+Seat 6: Iknwhow2play (small blind) folded before Flop
+PokerStars Game #81158975251:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:48 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Remoh007 ($1084 in chips) 
+Seat 2: Ilyinskiy R. ($875.50 in chips) 
+Seat 3: E1ephant ($1463.28 in chips) 
+Seat 4: Alex Borodin ($670.25 in chips) 
+Seat 5: Greennday ($353.60 in chips) 
+Seat 6: ABA1907 ($587 in chips) 
+Ilyinskiy R.: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: raises $20 to $40
+Greennday: folds 
+ABA1907: raises $360 to $400 and has reached the $400 cap
+Remoh007: folds 
+Ilyinskiy R.: folds 
+E1ephant: folds 
+Alex Borodin: folds 
+Uncalled bet ($360) returned to ABA1907
+ABA1907 collected $110 from pot
+*** SUMMARY ***
+Total pot $110 | Rake $0 
+Seat 1: Remoh007 (button) folded before Flop (didn't bet)
+Seat 2: Ilyinskiy R. (small blind) folded before Flop
+Seat 3: E1ephant (big blind) folded before Flop
+Seat 4: Alex Borodin folded before Flop
+Seat 5: Greennday folded before Flop (didn't bet)
+Seat 6: ABA1907 collected ($110)
+PokerStars Game #81158976137:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:50 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Ilyinskiy R. ($400 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1432.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($682.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+Ilyinskiy R.: posts small blind $10
+nikolaos778: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+inwooke: folds 
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: raises $340 to $360
+nikolaos778: folds 
+Uncalled bet ($340) returned to Ilyinskiy R.
+Ilyinskiy R. collected $40 from pot
+Ilyinskiy R.: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Ilyinskiy R. (small blind) collected ($40)
+Seat 2: nikolaos778 (big blind) folded before Flop
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m (button) folded before Flop (didn't bet)
+PokerStars Game #81158976685:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:56:51 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($370 in chips) 
+Seat 3: Alex Borodin ($1153.60 in chips) 
+Seat 4: Ilyinskiy R. ($537.40 in chips) 
+Seat 5: inwooke ($527 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Alex Borodin: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+inwooke: folds 
+Pumpingpoker: folds 
+Remoh007: folds 
+bayaraa1002: raises $20 to $40
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+Uncalled bet ($20) returned to bayaraa1002
+bayaraa1002 collected $50 from pot
+bayaraa1002: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 2: bayaraa1002 (button) collected ($50)
+Seat 3: Alex Borodin (small blind) folded before Flop
+Seat 4: Ilyinskiy R. (big blind) folded before Flop
+Seat 5: inwooke folded before Flop (didn't bet)
+Seat 6: Pumpingpoker folded before Flop (didn't bet)
+PokerStars Game #81158981724:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:00 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: nikolaos778 ($1444 in chips) 
+Seat 2: Alex Borodin ($460 in chips) 
+Seat 3: YurNas ($1259.28 in chips) 
+Seat 4: inwooke ($460 in chips) 
+Seat 5: E1ephant ($468.33 in chips) 
+Seat 6: Iknwhow2play ($2485.02 in chips) 
+nikolaos778: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+YurNas: folds 
+inwooke: folds 
+E1ephant: raises $20 to $40
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+Uncalled bet ($20) returned to E1ephant
+E1ephant collected $50 from pot
+E1ephant: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 (small blind) folded before Flop
+Seat 2: Alex Borodin (big blind) folded before Flop
+Seat 3: YurNas folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant collected ($50)
+Seat 6: Iknwhow2play (button) folded before Flop (didn't bet)
+PokerStars Game #81158986625:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:08 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Remoh007 ($1084 in chips) 
+Seat 2: Ilyinskiy R. ($865.50 in chips) 
+Seat 3: E1ephant ($1443.28 in chips) 
+Seat 4: Alex Borodin ($630.25 in chips) 
+Seat 5: Greennday ($353.60 in chips) 
+Seat 6: ABA1907 ($657 in chips) 
+E1ephant: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+Greennday: folds 
+ABA1907: folds 
+Remoh007: raises $20 to $40
+Ilyinskiy R.: raises $45 to $85
+E1ephant: folds 
+Alex Borodin: raises $315 to $400 and has reached the $400 cap
+Remoh007: folds 
+Ilyinskiy R.: folds 
+Uncalled bet ($315) returned to Alex Borodin
+Alex Borodin collected $220 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $220 | Rake $0 
+Seat 1: Remoh007 folded before Flop
+Seat 2: Ilyinskiy R. (button) folded before Flop
+Seat 3: E1ephant (small blind) folded before Flop
+Seat 4: Alex Borodin (big blind) collected ($220)
+Seat 5: Greennday folded before Flop (didn't bet)
+Seat 6: ABA1907 folded before Flop (didn't bet)
+PokerStars Game #81158988666:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:12 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Ilyinskiy R. ($420 in chips) 
+Seat 2: nikolaos778 ($410 in chips) 
+Seat 3: Alex Borodin ($1432.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($682.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+nikolaos778: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+inwooke: folds 
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: folds 
+nikolaos778: raises $220 to $240
+Alex Borodin: folds 
+Uncalled bet ($220) returned to nikolaos778
+nikolaos778 collected $40 from pot
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Ilyinskiy R. (button) folded before Flop (didn't bet)
+Seat 2: nikolaos778 (small blind) collected ($40)
+Seat 3: Alex Borodin (big blind) folded before Flop
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81158989975:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:14 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($400 in chips) 
+Seat 3: Alex Borodin ($1143.60 in chips) 
+Seat 4: Ilyinskiy R. ($517.40 in chips) 
+Seat 5: inwooke ($527 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Ilyinskiy R.: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+Pumpingpoker: folds 
+Remoh007: folds 
+bayaraa1002: raises $20 to $40
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+inwooke: calls $20
+*** FLOP *** [5s Kc 4s]
+inwooke: checks 
+bayaraa1002: bets $60
+inwooke: folds 
+Uncalled bet ($60) returned to bayaraa1002
+bayaraa1002 collected $87 from pot
+bayaraa1002: doesn't show hand 
+*** SUMMARY ***
+Total pot $90 | Rake $3 
+Board [5s Kc 4s]
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 2: bayaraa1002 collected ($87)
+Seat 3: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. (small blind) folded before Flop
+Seat 5: inwooke (big blind) folded on the Flop
+Seat 6: Pumpingpoker folded before Flop (didn't bet)
+PokerStars Game #81158991914:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:18 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Ilyinskiy R. ($931 in chips) 
+Seat 2: E1ephant ($458.21 in chips) 
+Seat 3: x_QUIXTAR_x ($954.79 in chips) 
+Seat 4: Greennday ($834.40 in chips) 
+Seat 5: akaklimat ($41.32 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+E1ephant: posts small blind $10
+x_QUIXTAR_x: posts big blind $20
+*** HOLE CARDS ***
+Greennday: folds 
+akaklimat: raises $21.32 to $41.32 and is all-in
+Remoh007: folds 
+Ilyinskiy R.: folds 
+E1ephant: raises $21.32 to $62.64
+x_QUIXTAR_x: folds 
+Uncalled bet ($21.32) returned to E1ephant
+*** FLOP *** [8c 5s 2h]
+*** TURN *** [8c 5s 2h] [5h]
+*** RIVER *** [8c 5s 2h 5h] [4h]
+*** SHOW DOWN ***
+E1ephant: shows [Qc Kc] (a pair of Fives)
+akaklimat: shows [Kh Qs] (a pair of Fives)
+E1ephant collected $49.82 from pot
+akaklimat collected $49.82 from pot
+*** SUMMARY ***
+Total pot $102.64 | Rake $3 
+Board [8c 5s 2h 5h 4h]
+Seat 1: Ilyinskiy R. (button) folded before Flop (didn't bet)
+Seat 2: E1ephant (small blind) showed [Qc Kc] and won ($49.82) with a pair of Fives
+Seat 3: x_QUIXTAR_x (big blind) folded before Flop
+Seat 4: Greennday folded before Flop (didn't bet)
+Seat 5: akaklimat showed [Kh Qs] and won ($49.82) with a pair of Fives
+Seat 6: Remoh007 folded before Flop (didn't bet)
+PokerStars Game #81158994531:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:22 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: E1ephant ($2341.07 in chips) 
+Seat 2: _major_958 ($579.25 in chips) 
+Seat 4: nikolaos778 ($360.38 in chips) 
+Seat 5: Alex Borodin ($1241.75 in chips) 
+Seat 6: 2w392y41ur ($260 in chips) 
+_major_958: posts small blind $10
+nikolaos778: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+2w392y41ur: folds 
+E1ephant: folds 
+_major_958: calls $10
+nikolaos778: checks 
+*** FLOP *** [9s 6c Js]
+_major_958: bets $20
+nikolaos778: calls $20
+*** TURN *** [9s 6c Js] [8c]
+_major_958: bets $20
+nikolaos778: calls $20
+*** RIVER *** [9s 6c Js 8c] [2d]
+_major_958: bets $20
+nikolaos778: calls $20
+*** SHOW DOWN ***
+_major_958: shows [Ah 9c] (a pair of Nines)
+nikolaos778: shows [Qh Jc] (a pair of Jacks)
+nikolaos778 collected $157 from pot
+*** SUMMARY ***
+Total pot $160 | Rake $3 
+Board [9s 6c Js 8c 2d]
+Seat 1: E1ephant (button) folded before Flop (didn't bet)
+Seat 2: _major_958 (small blind) showed [Ah 9c] and lost with a pair of Nines
+Seat 4: nikolaos778 (big blind) showed [Qh Jc] and won ($157) with a pair of Jacks
+Seat 5: Alex Borodin folded before Flop (didn't bet)
+Seat 6: 2w392y41ur folded before Flop (didn't bet)
+PokerStars Game #81159001175:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:34 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: nikolaos778 ($1434 in chips) 
+Seat 2: Alex Borodin ($440 in chips) 
+Seat 3: YurNas ($1259.28 in chips) 
+Seat 4: inwooke ($460 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2485.02 in chips) 
+Alex Borodin: posts small blind $10
+YurNas: posts big blind $20
+*** HOLE CARDS ***
+inwooke: raises $20 to $40
+E1ephant: folds 
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $50 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 (button) folded before Flop (didn't bet)
+Seat 2: Alex Borodin (small blind) folded before Flop
+Seat 3: YurNas (big blind) folded before Flop
+Seat 4: inwooke collected ($50)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: Iknwhow2play folded before Flop (didn't bet)
+PokerStars Game #81159005810:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:43 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Remoh007 ($1044 in chips) 
+Seat 2: Ilyinskiy R. ($780.50 in chips) 
+Seat 3: E1ephant ($1433.28 in chips) 
+Seat 4: Alex Borodin ($765.25 in chips) 
+Seat 5: Greennday ($353.60 in chips) 
+Seat 6: ABA1907 ($657 in chips) 
+Alex Borodin: posts small blind $10
+Greennday: posts big blind $20
+*** HOLE CARDS ***
+ABA1907: folds 
+Remoh007: folds 
+Ilyinskiy R.: folds 
+E1ephant: folds 
+Alex Borodin: raises $20 to $40
+Greennday: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $40 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 2: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 3: E1ephant (button) folded before Flop (didn't bet)
+Seat 4: Alex Borodin (small blind) collected ($40)
+Seat 5: Greennday (big blind) folded before Flop
+Seat 6: ABA1907 folded before Flop (didn't bet)
+PokerStars Game #81159009176:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:49 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($447 in chips) 
+Seat 3: Alex Borodin ($1143.60 in chips) 
+Seat 4: Ilyinskiy R. ($507.40 in chips) 
+Seat 5: inwooke ($487 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+inwooke: posts small blind $10
+Pumpingpoker: posts big blind $20
+*** HOLE CARDS ***
+Remoh007: folds 
+bayaraa1002: folds 
+Alex Borodin: folds 
+Ilyinskiy R.: raises $20 to $40
+inwooke: raises $140 to $180
+Pumpingpoker: folds 
+Ilyinskiy R.: folds 
+Uncalled bet ($140) returned to inwooke
+inwooke collected $100 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $100 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 2: bayaraa1002 folded before Flop (didn't bet)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. (button) folded before Flop
+Seat 5: inwooke (small blind) collected ($100)
+Seat 6: Pumpingpoker (big blind) folded before Flop
+PokerStars Game #81159009399:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:49 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Ilyinskiy R. ($420 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1412.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($682.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+Alex Borodin: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: raises $20 to $40
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: folds 
+Uncalled bet ($20) returned to Ilyinskiy R.
+Ilyinskiy R. collected $50 from pot
+Ilyinskiy R.: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Ilyinskiy R. collected ($50)
+Seat 2: nikolaos778 (button) folded before Flop (didn't bet)
+Seat 3: Alex Borodin (small blind) folded before Flop
+Seat 4: inwooke (big blind) folded before Flop
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81159014683:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:57:59 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Remoh007 ($1044 in chips) 
+Seat 2: Ilyinskiy R. ($780.50 in chips) 
+Seat 3: E1ephant ($1433.28 in chips) 
+Seat 4: Alex Borodin ($785.25 in chips) 
+Seat 5: Greennday ($333.60 in chips) 
+Seat 6: ABA1907 ($657 in chips) 
+Greennday: posts small blind $10
+ABA1907: posts big blind $20
+*** HOLE CARDS ***
+Remoh007: folds 
+Ilyinskiy R.: folds 
+E1ephant: folds 
+Alex Borodin: raises $20 to $40
+Greennday: folds 
+ABA1907: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $50 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 2: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 3: E1ephant folded before Flop (didn't bet)
+Seat 4: Alex Borodin (button) collected ($50)
+Seat 5: Greennday (small blind) folded before Flop
+Seat 6: ABA1907 (big blind) folded before Flop
+PokerStars Game #81159018348:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:05 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Ilyinskiy R. ($931 in chips) 
+Seat 2: E1ephant ($466.71 in chips) 
+Seat 3: x_QUIXTAR_x ($934.79 in chips) 
+Seat 4: Greennday ($834.40 in chips) 
+Seat 5: akaklimat ($49.82 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+x_QUIXTAR_x: posts small blind $10
+Greennday: posts big blind $20
+*** HOLE CARDS ***
+akaklimat: raises $29.82 to $49.82 and is all-in
+Remoh007: folds 
+Ilyinskiy R.: folds 
+E1ephant: folds 
+x_QUIXTAR_x: folds 
+Greennday: calls $29.82
+*** FLOP *** [Qc 6s Tc]
+*** TURN *** [Qc 6s Tc] [Th]
+*** RIVER *** [Qc 6s Tc Th] [9d]
+*** SHOW DOWN ***
+Greennday: shows [3s 8s] (a pair of Tens)
+akaklimat: shows [As 2c] (a pair of Tens - Ace kicker)
+akaklimat collected $106.64 from pot
+*** SUMMARY ***
+Total pot $109.64 | Rake $3 
+Board [Qc 6s Tc Th 9d]
+Seat 1: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 2: E1ephant (button) folded before Flop (didn't bet)
+Seat 3: x_QUIXTAR_x (small blind) folded before Flop
+Seat 4: Greennday (big blind) showed [3s 8s] and lost with a pair of Tens
+Seat 5: akaklimat showed [As 2c] and won ($106.64) with a pair of Tens
+Seat 6: Remoh007 folded before Flop (didn't bet)
+PokerStars Game #81159018640:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:06 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Ilyinskiy R. ($450 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1402.47 in chips) 
+Seat 4: inwooke ($853.59 in chips) 
+Seat 5: E1ephant ($682.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+inwooke: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+audia6m: folds 
+Ilyinskiy R.: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: raises $20 to $40
+E1ephant: folds 
+Uncalled bet ($20) returned to inwooke
+inwooke collected $40 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 2: nikolaos778 folded before Flop (didn't bet)
+Seat 3: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 4: inwooke (small blind) collected ($40)
+Seat 5: E1ephant (big blind) folded before Flop
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81159020711:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:09 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 2: bayaraa1002 ($447 in chips) 
+Seat 3: Alex Borodin ($1143.60 in chips) 
+Seat 4: Ilyinskiy R. ($467.40 in chips) 
+Seat 5: inwooke ($547 in chips) 
+Seat 6: Pumpingpoker ($818 in chips) 
+Pumpingpoker: posts small blind $10
+Remoh007: posts big blind $20
+*** HOLE CARDS ***
+bayaraa1002 has timed out
+bayaraa1002: folds 
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: raises $20 to $40
+Remoh007: folds 
+Uncalled bet ($20) returned to Pumpingpoker
+Pumpingpoker collected $40 from pot
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Remoh007 (big blind) folded before Flop
+Seat 2: bayaraa1002 folded before Flop (didn't bet)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke (button) folded before Flop (didn't bet)
+Seat 6: Pumpingpoker (small blind) collected ($40)
+PokerStars Game #81159023421:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:14 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Remoh007 ($1044 in chips) 
+Seat 2: Ilyinskiy R. ($780.50 in chips) 
+Seat 3: E1ephant ($1433.28 in chips) 
+Seat 4: Alex Borodin ($815.25 in chips) 
+Seat 5: Greennday ($323.60 in chips) 
+Seat 6: ABA1907 ($637 in chips) 
+ABA1907: posts small blind $10
+Remoh007: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: folds 
+E1ephant: folds 
+Alex Borodin: folds 
+Greennday: raises $22.60 to $42.60
+ABA1907: folds 
+Remoh007: raises $277.40 to $320
+Greennday: folds 
+Uncalled bet ($277.40) returned to Remoh007
+Remoh007 collected $95.20 from pot
+Remoh007: doesn't show hand 
+*** SUMMARY ***
+Total pot $95.20 | Rake $0 
+Seat 1: Remoh007 (big blind) collected ($95.20)
+Seat 2: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 3: E1ephant folded before Flop (didn't bet)
+Seat 4: Alex Borodin folded before Flop (didn't bet)
+Seat 5: Greennday (button) folded before Flop
+Seat 6: ABA1907 (small blind) folded before Flop
+PokerStars Game #81159025184:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:17 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: nikolaos778 ($1434 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1239.28 in chips) 
+Seat 4: inwooke ($490 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2485.02 in chips) 
+YurNas: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+Iknwhow2play: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: raises $20.22 to $40.22
+inwooke: calls $20.22
+*** FLOP *** [3s 3d 2c]
+YurNas: bets $39.49
+inwooke: folds 
+Uncalled bet ($39.49) returned to YurNas
+YurNas collected $77.44 from pot
+YurNas: doesn't show hand 
+*** SUMMARY ***
+Total pot $80.44 | Rake $3 
+Board [3s 3d 2c]
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 3: YurNas (small blind) collected ($77.44)
+Seat 4: inwooke (big blind) folded on the Flop
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: Iknwhow2play folded before Flop (didn't bet)
+PokerStars Game #81159029701:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:25 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Ilyinskiy R. ($450 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1402.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($662.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+E1ephant: posts small blind $10
+audia6m: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: folds 
+E1ephant: folds 
+Uncalled bet ($10) returned to audia6m
+audia6m collected $20 from pot
+*** SUMMARY ***
+Total pot $20 | Rake $0 
+Seat 1: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 2: nikolaos778 folded before Flop (didn't bet)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke (button) folded before Flop (didn't bet)
+Seat 5: E1ephant (small blind) folded before Flop
+Seat 6: audia6m (big blind) collected ($20)
+PokerStars Game #81159031401:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:28 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Ilyinskiy R. ($931 in chips) 
+Seat 2: E1ephant ($466.71 in chips) 
+Seat 3: x_QUIXTAR_x ($924.79 in chips) 
+Seat 4: Greennday ($784.58 in chips) 
+Seat 5: akaklimat ($106.64 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+Greennday: posts small blind $10
+akaklimat: posts big blind $20
+*** HOLE CARDS ***
+Remoh007: folds 
+Ilyinskiy R.: raises $20 to $40
+E1ephant: folds 
+x_QUIXTAR_x: folds 
+Greennday: calls $30
+akaklimat: raises $66.64 to $106.64 and is all-in
+Ilyinskiy R.: raises $293.36 to $400 and has reached the $400 cap
+Greennday: calls $360 and has reached the $400 cap
+*** FLOP *** [3d 9h 4s]
+*** TURN *** [3d 9h 4s] [6d]
+*** RIVER *** [3d 9h 4s 6d] [3c]
+*** SHOW DOWN ***
+Greennday: shows [Ah Ad] (two pair, Aces and Threes)
+Ilyinskiy R.: mucks hand 
+Greennday collected $586.72 from side pot
+akaklimat: mucks hand 
+Greennday collected $316.92 from main pot
+*** SUMMARY ***
+Total pot $906.64 Main pot $316.92. Side pot $586.72. | Rake $3 
+Board [3d 9h 4s 6d 3c]
+Seat 1: Ilyinskiy R. mucked
+Seat 2: E1ephant folded before Flop (didn't bet)
+Seat 3: x_QUIXTAR_x (button) folded before Flop (didn't bet)
+Seat 4: Greennday (small blind) showed [Ah Ad] and won ($903.64) with two pair, Aces and Threes
+Seat 5: akaklimat (big blind) mucked
+Seat 6: Remoh007 folded before Flop (didn't bet)
+PokerStars Game #81159031545:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:29 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: E1ephant ($2341.07 in chips) 
+Seat 2: _major_958 ($499.25 in chips) 
+Seat 4: nikolaos778 ($437.38 in chips) 
+Seat 5: Alex Borodin ($1241.75 in chips) 
+Seat 6: 2w392y41ur ($260 in chips) 
+nikolaos778: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+2w392y41ur: folds 
+E1ephant: raises $20 to $40
+_major_958: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+Uncalled bet ($20) returned to E1ephant
+E1ephant collected $50 from pot
+E1ephant: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: E1ephant collected ($50)
+Seat 2: _major_958 (button) folded before Flop (didn't bet)
+Seat 4: nikolaos778 (small blind) folded before Flop
+Seat 5: Alex Borodin (big blind) folded before Flop
+Seat 6: 2w392y41ur folded before Flop (didn't bet)
+PokerStars Game #81159035888:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:36 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: Ilyinskiy R. ($450 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1402.47 in chips) 
+Seat 4: inwooke ($873.59 in chips) 
+Seat 5: E1ephant ($652.26 in chips) 
+Seat 6: audia6m ($365.02 in chips) 
+audia6m: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+nikolaos778: folds 
+Alex Borodin: folds 
+inwooke: raises $20 to $40
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: raises $320 to $360
+inwooke: folds 
+Uncalled bet ($320) returned to Ilyinskiy R.
+Ilyinskiy R. collected $90 from pot
+Ilyinskiy R.: doesn't show hand 
+*** SUMMARY ***
+Total pot $90 | Rake $0 
+Seat 1: Ilyinskiy R. (big blind) collected ($90)
+Seat 2: nikolaos778 folded before Flop (didn't bet)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop
+Seat 5: E1ephant (button) folded before Flop (didn't bet)
+Seat 6: audia6m (small blind) folded before Flop
+PokerStars Game #81159039715:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:43 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 3: Alex Borodin ($1143.60 in chips) 
+Seat 4: Ilyinskiy R. ($467.40 in chips) 
+Seat 5: inwooke ($547 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Remoh007: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: folds 
+Remoh007: folds 
+Uncalled bet ($10) returned to Alex Borodin
+Alex Borodin collected $20 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $20 | Rake $0 
+Seat 1: Remoh007 (small blind) folded before Flop
+Seat 3: Alex Borodin (big blind) collected ($20)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke folded before Flop (didn't bet)
+Seat 6: Pumpingpoker (button) folded before Flop (didn't bet)
+PokerStars Game #81159041891:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:47 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: E1ephant ($2371.07 in chips) 
+Seat 2: _major_958 ($499.25 in chips) 
+Seat 4: nikolaos778 ($427.38 in chips) 
+Seat 5: Alex Borodin ($1221.75 in chips) 
+Seat 6: 2w392y41ur ($260 in chips) 
+Alex Borodin: posts small blind $10
+2w392y41ur: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+_major_958: folds 
+nikolaos778: raises $20 to $40
+Alex Borodin: folds 
+2w392y41ur: raises $220 to $260 and is all-in
+nikolaos778: folds 
+Uncalled bet ($220) returned to 2w392y41ur
+2w392y41ur collected $90 from pot
+2w392y41ur: doesn't show hand 
+*** SUMMARY ***
+Total pot $90 | Rake $0 
+Seat 1: E1ephant folded before Flop (didn't bet)
+Seat 2: _major_958 folded before Flop (didn't bet)
+Seat 4: nikolaos778 (button) folded before Flop
+Seat 5: Alex Borodin (small blind) folded before Flop
+Seat 6: 2w392y41ur (big blind) collected ($90)
+PokerStars Game #81159043186:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:49 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: nikolaos778 ($1434 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1276.50 in chips) 
+Seat 4: inwooke ($449.78 in chips) 
+Seat 5: E1ephant ($498.33 in chips) 
+Seat 6: Iknwhow2play ($2485.02 in chips) 
+inwooke: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+Iknwhow2play: raises $20 to $40
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: folds 
+inwooke: folds 
+E1ephant: folds 
+Uncalled bet ($20) returned to Iknwhow2play
+Iknwhow2play collected $50 from pot
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin folded before Flop (didn't bet)
+Seat 3: YurNas (button) folded before Flop (didn't bet)
+Seat 4: inwooke (small blind) folded before Flop
+Seat 5: E1ephant (big blind) folded before Flop
+Seat 6: Iknwhow2play collected ($50)
+PokerStars Game #81159043578:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:50 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Remoh007 ($1096.60 in chips) 
+Seat 2: Ilyinskiy R. ($780.50 in chips) 
+Seat 3: E1ephant ($1433.28 in chips) 
+Seat 4: Alex Borodin ($815.25 in chips) 
+Seat 5: Greennday ($281 in chips) 
+Seat 6: ABA1907 ($627 in chips) 
+Remoh007: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+Alex Borodin: folds 
+Greennday: raises $20 to $40
+ABA1907: raises $360 to $400 and has reached the $400 cap
+Remoh007: folds 
+Ilyinskiy R.: folds 
+Greennday: folds 
+Uncalled bet ($360) returned to ABA1907
+ABA1907 collected $110 from pot
+*** SUMMARY ***
+Total pot $110 | Rake $0 
+Seat 1: Remoh007 (small blind) folded before Flop
+Seat 2: Ilyinskiy R. (big blind) folded before Flop
+Seat 3: E1ephant folded before Flop (didn't bet)
+Seat 4: Alex Borodin folded before Flop (didn't bet)
+Seat 5: Greennday folded before Flop
+Seat 6: ABA1907 (button) collected ($110)
+PokerStars Game #81159047416:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:58:57 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 3: Alex Borodin ($1153.60 in chips) 
+Seat 4: Ilyinskiy R. ($467.40 in chips) 
+Seat 5: inwooke ($547 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Alex Borodin: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+inwooke: folds 
+Pumpingpoker: folds 
+Remoh007: folds 
+Alex Borodin: raises $20 to $40
+Ilyinskiy R.: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $40 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Remoh007 (button) folded before Flop (didn't bet)
+Seat 3: Alex Borodin (small blind) collected ($40)
+Seat 4: Ilyinskiy R. (big blind) folded before Flop
+Seat 5: inwooke folded before Flop (didn't bet)
+Seat 6: Pumpingpoker folded before Flop (didn't bet)
+PokerStars Game #81159052247:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:06 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: Ilyinskiy R. ($500 in chips) 
+Seat 2: nikolaos778 ($430 in chips) 
+Seat 3: Alex Borodin ($1402.47 in chips) 
+Seat 4: inwooke ($833.59 in chips) 
+Seat 5: E1ephant ($652.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+Ilyinskiy R.: posts small blind $10
+nikolaos778: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+inwooke: folds 
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: raises $20 to $40
+nikolaos778: raises $200 to $240
+Ilyinskiy R.: folds 
+Uncalled bet ($200) returned to nikolaos778
+nikolaos778 collected $80 from pot
+*** SUMMARY ***
+Total pot $80 | Rake $0 
+Seat 1: Ilyinskiy R. (small blind) folded before Flop
+Seat 2: nikolaos778 (big blind) collected ($80)
+Seat 3: Alex Borodin folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m (button) folded before Flop (didn't bet)
+PokerStars Game #81159058079:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:16 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 3: Alex Borodin ($1173.60 in chips) 
+Seat 4: Ilyinskiy R. ($447.40 in chips) 
+Seat 5: inwooke ($547 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+Ilyinskiy R.: posts small blind $10
+inwooke: posts big blind $20
+*** HOLE CARDS ***
+Pumpingpoker: folds 
+Remoh007: folds 
+Alex Borodin: folds 
+Ilyinskiy R.: folds 
+Uncalled bet ($10) returned to inwooke
+inwooke collected $20 from pot
+inwooke: doesn't show hand 
+*** SUMMARY ***
+Total pot $20 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 3: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 4: Ilyinskiy R. (small blind) folded before Flop
+Seat 5: inwooke (big blind) collected ($20)
+Seat 6: Pumpingpoker folded before Flop (didn't bet)
+PokerStars Game #81159058060:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:16 ET
+Table 'Phad II CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Ilyinskiy R. ($531 in chips) 
+Seat 2: E1ephant ($466.71 in chips) 
+Seat 3: x_QUIXTAR_x ($924.79 in chips) 
+Seat 4: Greennday ($1288.22 in chips) 
+Seat 6: Remoh007 ($1000 in chips) 
+Remoh007: posts small blind $10
+Ilyinskiy R.: posts big blind $20
+*** HOLE CARDS ***
+E1ephant: folds 
+x_QUIXTAR_x: folds 
+akaklimat leaves the table
+Greennday: folds 
+Remoh007: raises $20 to $40
+Ilyinskiy R.: calls $20
+*** FLOP *** [Js Th 9h]
+Remoh007: bets $40
+Ilyinskiy R.: calls $40
+*** TURN *** [Js Th 9h] [3c]
+Remoh007: checks 
+Ilyinskiy R.: bets $60
+Remoh007: raises $260 to $320 and has reached the $400 cap
+Ilyinskiy R.: calls $260 and has reached the $400 cap
+*** RIVER *** [Js Th 9h 3c] [Ah]
+*** SHOW DOWN ***
+Remoh007: shows [9c Td] (two pair, Tens and Nines)
+Ilyinskiy R.: mucks hand 
+Remoh007 collected $797 from pot
+*** SUMMARY ***
+Total pot $800 | Rake $3 
+Board [Js Th 9h 3c Ah]
+Seat 1: Ilyinskiy R. (big blind) mucked
+Seat 2: E1ephant folded before Flop (didn't bet)
+Seat 3: x_QUIXTAR_x folded before Flop (didn't bet)
+Seat 4: Greennday (button) folded before Flop (didn't bet)
+Seat 6: Remoh007 (small blind) showed [9c Td] and won ($797) with two pair, Tens and Nines
+PokerStars Game #81159059129:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:18 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: nikolaos778 ($1434 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1276.50 in chips) 
+Seat 4: inwooke ($439.78 in chips) 
+Seat 5: E1ephant ($478.33 in chips) 
+Seat 6: Iknwhow2play ($2515.02 in chips) 
+E1ephant: posts small blind $10
+Iknwhow2play: posts big blind $20
+*** HOLE CARDS ***
+nikolaos778: folds 
+Alex Borodin: folds 
+YurNas: folds 
+inwooke: folds 
+E1ephant: folds 
+Uncalled bet ($10) returned to Iknwhow2play
+Iknwhow2play collected $20 from pot
+*** SUMMARY ***
+Total pot $20 | Rake $0 
+Seat 1: nikolaos778 folded before Flop (didn't bet)
+Seat 2: Alex Borodin folded before Flop (didn't bet)
+Seat 3: YurNas folded before Flop (didn't bet)
+Seat 4: inwooke (button) folded before Flop (didn't bet)
+Seat 5: E1ephant (small blind) folded before Flop
+Seat 6: Iknwhow2play (big blind) collected ($20)
+PokerStars Game #81159067297:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:33 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: E1ephant ($2371.07 in chips) 
+Seat 2: _major_958 ($499.25 in chips) 
+Seat 4: nikolaos778 ($387.38 in chips) 
+Seat 5: Alex Borodin ($1211.75 in chips) 
+Seat 6: 2w392y41ur ($310 in chips) 
+2w392y41ur: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+_major_958: folds 
+nikolaos778: folds 
+Alex Borodin: folds 
+2w392y41ur: raises $20 to $40
+E1ephant: folds 
+Uncalled bet ($20) returned to 2w392y41ur
+2w392y41ur collected $40 from pot
+2w392y41ur: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: E1ephant (big blind) folded before Flop
+Seat 2: _major_958 folded before Flop (didn't bet)
+Seat 4: nikolaos778 folded before Flop (didn't bet)
+Seat 5: Alex Borodin (button) folded before Flop (didn't bet)
+Seat 6: 2w392y41ur (small blind) collected ($40)
+PokerStars Game #81159067312:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:33 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Remoh007 ($1086.60 in chips) 
+Seat 2: Ilyinskiy R. ($760.50 in chips) 
+Seat 3: E1ephant ($1433.28 in chips) 
+Seat 4: Alex Borodin ($815.25 in chips) 
+Seat 5: Greennday ($241 in chips) 
+Seat 6: ABA1907 ($697 in chips) 
+Ilyinskiy R.: posts small blind $10
+E1ephant: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+Greennday: folds 
+ABA1907: folds 
+Remoh007: folds 
+Ilyinskiy R.: raises $20 to $40
+E1ephant: folds 
+Uncalled bet ($20) returned to Ilyinskiy R.
+Ilyinskiy R. collected $40 from pot
+Ilyinskiy R.: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: Remoh007 (button) folded before Flop (didn't bet)
+Seat 2: Ilyinskiy R. (small blind) collected ($40)
+Seat 3: E1ephant (big blind) folded before Flop
+Seat 4: Alex Borodin folded before Flop (didn't bet)
+Seat 5: Greennday folded before Flop (didn't bet)
+Seat 6: ABA1907 folded before Flop (didn't bet)
+PokerStars Game #81159069436:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:37 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #4 is the button
+Seat 1: Remoh007 ($1000 in chips) 
+Seat 3: Alex Borodin ($1173.60 in chips) 
+Seat 4: Ilyinskiy R. ($437.40 in chips) 
+Seat 5: inwooke ($557 in chips) 
+Seat 6: Pumpingpoker ($838 in chips) 
+inwooke: posts small blind $10
+Pumpingpoker: posts big blind $20
+*** HOLE CARDS ***
+Remoh007: folds 
+Alex Borodin: raises $20 to $40
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: folds 
+Uncalled bet ($20) returned to Alex Borodin
+Alex Borodin collected $50 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 folded before Flop (didn't bet)
+Seat 3: Alex Borodin collected ($50)
+Seat 4: Ilyinskiy R. (button) folded before Flop (didn't bet)
+Seat 5: inwooke (small blind) folded before Flop
+Seat 6: Pumpingpoker (big blind) folded before Flop
+PokerStars Game #81159071046:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:39 ET
+Table 'Cosette II CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 1: nikolaos778 ($1434 in chips) 
+Seat 2: Alex Borodin ($430 in chips) 
+Seat 3: YurNas ($1276.50 in chips) 
+Seat 4: inwooke ($439.78 in chips) 
+Seat 5: E1ephant ($468.33 in chips) 
+Seat 6: Iknwhow2play ($2525.02 in chips) 
+Iknwhow2play: posts small blind $10
+nikolaos778: posts big blind $20
+*** HOLE CARDS ***
+Alex Borodin: folds 
+YurNas: folds 
+inwooke: folds 
+E1ephant: folds 
+Iknwhow2play: raises $20 to $40
+nikolaos778: calls $20
+*** FLOP *** [6h 8d 2h]
+Iknwhow2play: bets $20
+nikolaos778: calls $20
+*** TURN *** [6h 8d 2h] [Jc]
+Iknwhow2play: bets $60
+nikolaos778: calls $60
+*** RIVER *** [6h 8d 2h Jc] [6d]
+Iknwhow2play: bets $100
+nikolaos778: folds 
+Uncalled bet ($100) returned to Iknwhow2play
+Iknwhow2play collected $237 from pot
+*** SUMMARY ***
+Total pot $240 | Rake $3 
+Board [6h 8d 2h Jc 6d]
+Seat 1: nikolaos778 (big blind) folded on the River
+Seat 2: Alex Borodin folded before Flop (didn't bet)
+Seat 3: YurNas folded before Flop (didn't bet)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant (button) folded before Flop (didn't bet)
+Seat 6: Iknwhow2play (small blind) collected ($237)
+PokerStars Game #81159079936:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:55 ET
+Table 'Siebohme III CAP, Fast,20-50 bb' 6-max Seat #5 is the button
+Seat 3: Alex Borodin ($1203.60 in chips) 
+Seat 4: Ilyinskiy R. ($437.40 in chips) 
+Seat 5: inwooke ($547 in chips) 
+Seat 6: Pumpingpoker ($818 in chips) 
+Pumpingpoker: posts small blind $10
+Remoh007: is sitting out 
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+Ilyinskiy R.: folds 
+inwooke: folds 
+Pumpingpoker: raises $20 to $40
+Alex Borodin: raises $360 to $400 and has reached the $400 cap
+Pumpingpoker: folds 
+Uncalled bet ($360) returned to Alex Borodin
+Alex Borodin collected $80 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $80 | Rake $0 
+Seat 3: Alex Borodin (big blind) collected ($80)
+Seat 4: Ilyinskiy R. folded before Flop (didn't bet)
+Seat 5: inwooke (button) folded before Flop (didn't bet)
+Seat 6: Pumpingpoker (small blind) folded before Flop
+PokerStars Game #81159079910:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:55 ET
+Table 'Glarona III CAP, Fast,20-50 bb' 6-max Seat #1 is the button
+Seat 1: Ilyinskiy R. ($460 in chips) 
+Seat 2: nikolaos778 ($470 in chips) 
+Seat 3: Alex Borodin ($1402.47 in chips) 
+Seat 4: inwooke ($833.59 in chips) 
+Seat 5: E1ephant ($652.26 in chips) 
+Seat 6: audia6m ($355.02 in chips) 
+nikolaos778: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+inwooke: folds 
+E1ephant: folds 
+audia6m: folds 
+Ilyinskiy R.: folds 
+nikolaos778: folds 
+Uncalled bet ($10) returned to Alex Borodin
+Alex Borodin collected $20 from pot
+Alex Borodin: doesn't show hand 
+*** SUMMARY ***
+Total pot $20 | Rake $0 
+Seat 1: Ilyinskiy R. (button) folded before Flop (didn't bet)
+Seat 2: nikolaos778 (small blind) folded before Flop
+Seat 3: Alex Borodin (big blind) collected ($20)
+Seat 4: inwooke folded before Flop (didn't bet)
+Seat 5: E1ephant folded before Flop (didn't bet)
+Seat 6: audia6m folded before Flop (didn't bet)
+PokerStars Game #81159080101:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:55 ET
+Table 'Pegasus VI CAP, Fast,20-50 bb' 6-max Seat #6 is the button
+Seat 1: E1ephant ($2351.07 in chips) 
+Seat 2: _major_958 ($499.25 in chips) 
+Seat 4: nikolaos778 ($387.38 in chips) 
+Seat 5: Alex Borodin ($1211.75 in chips) 
+Seat 6: 2w392y41ur ($330 in chips) 
+E1ephant: posts small blind $10
+_major_958: posts big blind $20
+*** HOLE CARDS ***
+nikolaos778: folds 
+Alex Borodin: folds 
+2w392y41ur: folds 
+E1ephant: raises $20 to $40
+_major_958: folds 
+Uncalled bet ($20) returned to E1ephant
+E1ephant collected $40 from pot
+E1ephant: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0 
+Seat 1: E1ephant (small blind) collected ($40)
+Seat 2: _major_958 (big blind) folded before Flop
+Seat 4: nikolaos778 folded before Flop (didn't bet)
+Seat 5: Alex Borodin folded before Flop (didn't bet)
+Seat 6: 2w392y41ur (button) folded before Flop (didn't bet)
+PokerStars Game #81159080721:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/05/28 18:59:56 ET
+Table 'Celestia CAP, Fast,20-50 bb' 6-max Seat #2 is the button
+Seat 1: Remoh007 ($1086.60 in chips) 
+Seat 2: Ilyinskiy R. ($780.50 in chips) 
+Seat 3: E1ephant ($1413.28 in chips) 
+Seat 4: Alex Borodin ($815.25 in chips) 
+Seat 5: Greennday ($241 in chips) 
+Seat 6: ABA1907 ($697 in chips) 
+E1ephant: posts small blind $10
+Alex Borodin: posts big blind $20
+*** HOLE CARDS ***
+Greennday: folds 
+ABA1907: folds 
+Remoh007: raises $20 to $40
+Ilyinskiy R.: folds 
+E1ephant: folds 
+Alex Borodin: folds 
+Uncalled bet ($20) returned to Remoh007
+Remoh007 collected $50 from pot
+Remoh007: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: Remoh007 collected ($50)
+Seat 2: Ilyinskiy R. (button) folded before Flop (didn't bet)
+Seat 3: E1ephant (small blind) folded before Flop
+Seat 4: Alex Borodin (big blind) folded before Flop
+Seat 5: Greennday folded before Flop (didn't bet)
+Seat 6: ABA1907 folded before Flop (didn't bet)

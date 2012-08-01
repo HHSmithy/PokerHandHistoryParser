@@ -1,0 +1,36 @@
+﻿Game # 2646494612 - Texas Hold'em Fixed Limit EUR 1.00/2.00 - Table "Porsanger"
+
+Players(max 2):
+Trottola30                  (EUR 26.66 in seat 1)
+tropas                      (EUR 271.71 in seat 2)
+
+Dealer:                     Trottola30
+Big Blind:                  tropas      (1.00)
+Small Blind:                Trottola30  (0.50)
+
+Trottola30                  Call        (0.50)
+tropas                      Raise       (1.00)
+Trottola30                  Call        (1.00)
+
+Flop                        9c - Qc - 9h
+
+tropas                      Bet         (1.00)
+Trottola30                  Call        (1.00)
+
+Turn                        9c - Qc - 9h - 5d
+
+tropas                      Check
+Trottola30                  Check
+
+River                       9c - Qc - 9h - 5d - Js
+
+tropas                      Check
+Trottola30                  Check
+
+tropas shows:               Ad - 7h
+Trottola30 shows:           5c - Kc
+
+Trottola30 wins:            EUR 5.70
+Rake:                       EUR 0.30
+
+Game ended 2012-05-31 02:03:38 GMT+01:00

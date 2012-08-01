@@ -1,0 +1,27 @@
+﻿Game # 2535206389 - Texas Hold'em No Limit EUR 0.50/1.00 - Table "Abanilla"
+
+Players(max 6):
+ttiihone                    (EUR 49.89 in seat 1)
+alvarod197                  (EUR 25.73 in seat 2)
+ronoa                       (EUR 14.75 in seat 3)
+GrossoGatto                 (EUR 125.75 in seat 4)
+Zaraboy89                   (EUR 64.95 in seat 5)
+newiceland                  (EUR 125.25 in seat 6)
+
+Dealer:                     ronoa
+Small Blind:                GrossoGatto (0.50)
+Big Blind:                  Zaraboy89   (1.00)
+
+newiceland                  Fold
+ttiihone                    Fold
+alvarod197                  Fold
+ronoa                       Fold
+GrossoGatto                 Fold
+Zaraboy89                   Payback     (0.50)
+
+Zaraboy89 didn't show hand
+
+Zaraboy89 wins:             EUR 1.00
+Rake:                       EUR 0.00
+
+Game ended 2012-02-06 20:01:44 GMT+01:00

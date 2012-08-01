@@ -1,0 +1,46 @@
+﻿***** History for hand R5-244308222-32 *****
+Start hand: Mon May 28 10:41:00 CEST 2012
+Table: Nijmegen [244308222] (POT_LIMIT OMAHA_HI $0.10/$0.10, Real money)
+Button: seat 10
+Players in round: 6
+Seat 1: Brunson_90 ($11.06) 
+Seat 6: nusse12 ($4.89) 
+Seat 7: Csigger ($9.47) 
+Seat 8: cs_elis_86 ($16.29) 
+Seat 9: wena_2 ($18.09) 
+Seat 10: JopoVellu ($9.80) 
+Brunson_90 posts small blind ($0.10)
+nusse12 posts big blind ($0.10)
+---
+Dealing pocket cards
+Csigger folds
+cs_elis_86 folds
+wena_2 raises $0.40 to $0.40
+JopoVellu calls $0.40
+Brunson_90 folds
+nusse12 calls $0.30
+--- Dealing flop [6c, 8c, 2h]
+nusse12 checks
+wena_2 checks
+JopoVellu checks
+--- Dealing turn [6h]
+nusse12 bets $0.40
+wena_2 calls $0.40
+JopoVellu calls $0.40
+--- Dealing river [4h]
+nusse12 checks
+wena_2 checks
+JopoVellu bets $1.50
+nusse12 folds
+wena_2 folds
+---
+Summary:
+Main pot: $2.50 won by JopoVellu ($2.34)
+Rake taken: $0.16
+Seat 1: Brunson_90 ($10.96), net: -$0.10
+Seat 6: nusse12 ($4.09), net: -$0.80
+Seat 7: Csigger ($9.47), net: -$0.00
+Seat 8: cs_elis_86 ($16.29), net: -$0.00
+Seat 9: wena_2 ($17.29), net: -$0.80
+Seat 10: JopoVellu ($11.34), net: +$1.54
+***** End of hand R5-244308222-32 *****

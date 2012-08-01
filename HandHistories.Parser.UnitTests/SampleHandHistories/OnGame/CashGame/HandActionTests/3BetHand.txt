@@ -1,0 +1,27 @@
+﻿***** History for hand R5-244393444-22 *****
+Start hand: Tue May 29 01:02:00 CEST 2012
+Table: Managua [244393444] (POT_LIMIT OMAHA_HI $5/$5, Real money)
+Button: seat 8
+Players in round: 3
+Seat 2: AlexZander2 ($209.30) 
+Seat 7: kojac123 ($240.00) 
+Seat 8: kallepertti9 ($354.00) 
+AlexZander2 posts small blind ($5)
+kojac123 posts big blind ($5)
+---
+Dealing pocket cards
+kallepertti9 raises $20.00 to $20.00
+AlexZander2 raises $30.00 to $35.00
+kojac123 folds
+kallepertti9 calls $15.00
+--- Dealing flop [9h, 9c, 2s]
+AlexZander2 bets $40.00
+kallepertti9 folds
+---
+Summary:
+Main pot: $75.00 won by AlexZander2 ($73.00)
+Rake taken: $2
+Seat 2: AlexZander2 ($247.30), net: +$38.00
+Seat 7: kojac123 ($235.00), net: -$5.00
+Seat 8: kallepertti9 ($319.00), net: -$35.00
+***** End of hand R5-244393444-22 *****

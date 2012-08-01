@@ -1,0 +1,11 @@
+﻿PokerStars Hand #78782862553:  Hold'em Limit ($5/$10 USD) - 2012/04/13 3:28:07 ET
+ Table 'Imhotep V' 6-max Seat #5 is the button
+ Seat 5: Mieses88 ($536.51 in chips) 
+ Mieses88: posts small blind $2
+ hsb09: is sitting out 
+ FATAL463: is sitting out 
+ Inkognito46: is sitting out 
+ Hand cancelled
+ *** SUMMARY ***
+ Seat 5: Mieses88 (button) collected ($0)
+ 

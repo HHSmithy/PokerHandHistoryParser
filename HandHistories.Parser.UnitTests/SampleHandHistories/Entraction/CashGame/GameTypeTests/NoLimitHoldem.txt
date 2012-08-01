@@ -1,0 +1,38 @@
+﻿Game # 2646539198 - Texas Hold'em No Limit EUR 0.25/0.50 - Table "Burguillos"
+
+Players(max 6):
+Pinokio1                    (EUR 50.25 in seat 3)
+pauli1                      (EUR 49.75 in seat 4)
+
+Dealer:                     pauli1
+Small Blind:                Pinokio1    (0.25)
+Big Blind:                  pauli1      (0.50)
+
+Pinokio1                    Call        (0.25)
+pauli1                      Check
+
+Flop                        Ah - 6c - Jd
+
+Pinokio1                    Check
+pauli1                      Bet         (0.50)
+Pinokio1                    Call        (0.50)
+
+Turn                        Ah - 6c - Jd - 3c
+
+Pinokio1                    Check
+pauli1                      Check
+
+River                       Ah - 6c - Jd - 3c - 9s
+
+Pinokio1                    Bet         (2.50)
+pauli1                      Raise       (7.75)
+Pinokio1                    Raise       (10.50)
+pauli1                      Call        (5.25)
+
+Pinokio1 shows:             As - Qs
+pauli1 shows:               3h - 9c
+
+pauli1 wins:                EUR 27.25
+Rake:                       EUR 0.75
+
+Game ended 2012-05-31 08:56:27 GMT+01:00

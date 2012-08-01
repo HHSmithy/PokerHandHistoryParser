@@ -1,0 +1,30 @@
+﻿***** History for hand R5-243945479-8 *****
+Start hand: Sun May 27 10:27:00 CEST 2012
+Table: [SPEED] Austin [243945479] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
+Button: seat 5
+Players in round: 2
+Seat 5: klarasbanana ($1259.00) 
+Seat 8: iveyfan89 ($1069.00) 
+klarasbanana posts small blind ($5)
+iveyfan89 posts big blind ($10)
+---
+Dealing pocket cards
+klarasbanana raises $15.00 to $20.00
+iveyfan89 calls $10.00
+--- Dealing flop [Ts, Tc, 9h]
+iveyfan89 checks
+klarasbanana bets $30.00
+iveyfan89 calls $30.00
+--- Dealing turn [3s]
+iveyfan89 checks
+klarasbanana checks
+--- Dealing river [2c]
+iveyfan89 bets $75.00
+klarasbanana folds
+---
+Summary:
+Main pot: $100.00 won by iveyfan89 ($99.00)
+Rake taken: $1
+Seat 5: klarasbanana ($1209.00), net: -$50.00
+Seat 8: iveyfan89 ($1118.00), net: +$49.00
+***** End of hand R5-243945479-8 *****

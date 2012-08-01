@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9E3BA37-E416-48E9-964A-590C236BDA4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HandHistories.Parser.UnitTests</RootNamespace>
+    <AssemblyName>HandHistories.Parser.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rd Party\Ninject.3.0.0.15\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rd Party\NUnit-2.6.0.12051\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compression\HandHistoryGZipCompressorImplTests.cs" />
+    <Compile Include="Infrastructure\NinjectKernel.cs" />
+    <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
+    <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
+    <Compile Include="Parsers\HandParserTests\CommunityCardTests\HandParserCommunityCardTests.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsEntractionImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests888Impl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsIPokerImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsMergeImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsOnGameImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsPokerStarsImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsPartyPokerImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTests.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTests888Impl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsEntractionImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsIPokerImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsMergeImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsOngameImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsPartyPokerImpl.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsPokerStarsImpl.cs" />
+    <Compile Include="Parsers\FastParserTests\IPoker\FormatTests\HandParserHandFormatTests.cs" />
+    <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsHandSummaryParserExtraTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\GameTypes\HandParserGameTypeTests.cs" />
+    <Compile Include="Parsers\Base\ISampleHandHistoryRepository.cs" />
+    <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Seats\HandParserSeatTypeTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\SplitUpMultipleHandsTests\HandParserSplitUpMultipleHandsTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\IO\IFileReader.cs" />
+    <Compile Include="Utils\IO\WindowsFileReaderImpl.cs" />
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FixedLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\PotLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\NameWithDashes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\EuroTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\PlayerTests\OmahaHiLoShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Seats\4 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\FormatTests\UnformattedXmlHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AllInHandWithShowdown2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\NeedTwoHoleCardsError.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\PlayerParseError.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\GbpTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\EuroTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\20MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\HandActionTests\CancelledHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\CapNoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\PotLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\EuroTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\PlayerTests\OmahaHiLoShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Seats\4 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\NoLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\TableNameWithDash.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\PlayerWithColon.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\NoLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\PotLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\PlayerTests\OmahaHiLoShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Seats\4 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\CapNoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\PotLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\BigBlindOptionRaisesOption.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\StrangePlayerNames.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\NeedsRaiseAdjusting.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\UncalledBet.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\AnteTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\EuroTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\GbpTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\MultipleHandsTests\NoNewLinesMultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\OmahaHiLoShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\4 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\OmahaHiLoShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Seats\Full Ring %2810 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Seats\4 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Seats\Full Ring %289 Handed%29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Seats\6 Max.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Seats\HeadsUp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\Tables\Table4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\ValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\InValidHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandHistories.Evaluator\HandHistories.HandEvaluator.csproj">
+      <Project>{E340598E-D08E-40BA-B99A-61B43F0A0D2A}</Project>
+      <Name>HandHistories.HandEvaluator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandHistories.Parser\HandHistories.Parser.csproj">
+      <Project>{03B63227-CBC9-4295-8BA6-FDF194DFC7A5}</Project>
+      <Name>HandHistories.Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GameTypeTests\PotLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

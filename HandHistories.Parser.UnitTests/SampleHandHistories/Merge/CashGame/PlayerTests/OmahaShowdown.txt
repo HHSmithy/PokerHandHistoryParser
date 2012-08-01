@@ -1,0 +1,43 @@
+﻿<description type="Omaha" stakes="Pot Limit ($3/$6)"/>
+<game id="56166187-14" starttime="20120529020717" numholecards="4" gametype="9" seats="6" realmoney="true" data="20120529|Temple of Dawn (56166187)|56166187|56166187-14|false">
+	<players dealer="5">
+		<player seat="0" nickname="girlpoker69" balance="$325.50" dealtin="true" />
+		<player seat="4" nickname="IlikePLO" balance="$863.50" dealtin="true" />
+		<player seat="5" nickname="TomthegianT" balance="$600.00" dealtin="false" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338275218593" player="0" amount="3.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338275218859" player="4" amount="6.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="2" type="CHAT" timestamp="1338275219843" player="girlpoker69" text="thats your only bet"/>
+		<event sequence="3" type="RAISE" timestamp="1338275224843" player="0" amount="18.00"/>
+		<event sequence="4" type="CALL" timestamp="1338275226375" player="4" amount="12.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="5" type="BET" timestamp="1338275229750" player="0" amount="6.00"/>
+		<event sequence="6" type="CALL" timestamp="1338275231390" player="4" amount="6.00"/>
+		<cards type="COMMUNITY" cards="4h,Qs,Qd"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<event sequence="7" type="BET" timestamp="1338275235750" player="0" amount="24.00"/>
+		<event sequence="8" type="RAISE" timestamp="1338275237406" player="4" amount="48.00"/>
+		<event sequence="9" type="CALL" timestamp="1338275239578" player="0" amount="24.00"/>
+		<cards type="COMMUNITY" cards="4h,Qs,Qd,8c"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<event sequence="10" type="CHECK" timestamp="1338275242343" player="0"/>
+		<event sequence="11" type="BET" timestamp="1338275245437" player="4" amount="31.62"/>
+		<event sequence="12" type="CALL" timestamp="1338275247609" player="0" amount="31.62"/>
+		<cards type="COMMUNITY" cards="4h,Qs,Qd,8c,As"/>
+	</round>
+	<round id="SHOWDOWN" sequence="6">
+		<event sequence="13" type="SHOW" timestamp="1338275247984" player="4"/>
+		<event sequence="14" type="MUCK" timestamp="1338275250656" player="0"/>
+		<cards type="SHOWN" cards="7d,6s,Qh,Th" player="4"/>
+		<cards type="MUCKED" cards="3c,Js,Jh,6d" player="0"/>
+	</round>
+	<round id="END_OF_GAME" sequence="7">
+		<winner amount="206.74" uncalled="false" potnumber="1" player="4" hand="Three of a Kind Queens" pottype="n"/>
+	</round>
+</game>

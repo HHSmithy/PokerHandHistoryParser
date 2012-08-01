@@ -1,0 +1,36 @@
+﻿Game # 2646515978 - Omaha Hi/Lo Fixed Limit EUR 100.00/200.00 - Table "Portland"
+
+Players(max 2):
+Ballyhoo                    (EUR 3,999.25 in seat 1)
+YoOyYo                      (EUR 10,377.37 in seat 2)
+
+Dealer:                     Ballyhoo
+Big Blind:                  YoOyYo      (100.00)
+Small Blind:                Ballyhoo    (50.00)
+
+Ballyhoo                    Raise       (150.00)
+YoOyYo                      Raise       (200.00)
+Ballyhoo                    Call        (100.00)
+
+Flop                        4h - 7h - 6c
+
+YoOyYo                      Bet         (100.00)
+Ballyhoo                    Call        (100.00)
+
+Turn                        4h - 7h - 6c - 8h
+
+YoOyYo                      Bet         (200.00)
+Ballyhoo                    Call        (200.00)
+
+River                       4h - 7h - 6c - 8h - 8s
+
+YoOyYo                      Bet         (200.00)
+Ballyhoo                    Call        (200.00)
+
+YoOyYo shows:               9d - 5d - Ad - 6h
+
+Ballyhoo didn't show hand (Jd - Qh - 6s - Ac)
+
+YoOyYo wins:                EUR 799.25
+YoOyYo wins:                EUR 799.25
+Rake:                       EUR 1.50

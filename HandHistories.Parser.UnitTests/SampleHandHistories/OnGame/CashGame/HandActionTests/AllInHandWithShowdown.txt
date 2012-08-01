@@ -1,0 +1,29 @@
+﻿***** History for hand R5-244711775-328 *****
+Start hand: Wed May 30 03:08:00 CEST 2012
+Table: Leipzig [244711775] (NO_LIMIT TEXAS_HOLDEM $10/$20, Real money)
+Button: seat 7
+Players in round: 3
+Seat 4: DM899 ($1837.50) 
+Seat 7: njoetrhawrg ($2497.00) 
+Seat 8: el_pescado99 ($2323.00) 
+el_pescado99 posts small blind ($10)
+DM899 posts big blind ($20)
+---
+Dealing pocket cards
+njoetrhawrg raises $50.00 to $50.00
+el_pescado99 raises $170.00 to $180.00
+DM899 folds
+njoetrhawrg raises $330.00 to $380.00
+el_pescado99 raises $2143.00 to $2323.00 [all in] 
+njoetrhawrg calls $1943.00
+--- Dealing flop [3s, 2c, 7h]
+--- Dealing turn [7s]
+--- Dealing river [4c]
+---
+Summary:
+Main pot: $4666.00 won by el_pescado99 ($4664.00)
+Rake taken: $2
+Seat 4: DM899 ($1817.50), net: -$20.00
+Seat 7: njoetrhawrg ($174.00), net: -$2323.00, [Qs, As]
+Seat 8: el_pescado99 ($4664.00), net: +$2341.00, [Jd, Jc]
+***** End of hand R5-244711775-328 *****

@@ -1,0 +1,20 @@
+﻿Game # 2646782758 - Texas Hold'em No Limit EUR 2.00/4.00 - Table "Zaragoza"
+
+Players(max 9):
+PEKKA                       (EUR 300.00 in seat 5)
+ug_one                      (EUR 333.00 in seat 8)
+
+Dealer:                     ug_one
+Small Blind:                PEKKA       (2.00)
+Big Blind:                  ug_one      (4.00)
+
+PEKKA                       Raise       (10.00)
+ug_one                      Fold
+PEKKA                       Payback     (8.00)
+
+PEKKA didn't show hand
+
+PEKKA wins:                 EUR 8.00
+Rake:                       EUR 0.00
+
+Game ended 2012-05-31 15:53:16 GMT+01:00

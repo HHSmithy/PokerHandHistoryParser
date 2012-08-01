@@ -1,0 +1,31 @@
+﻿***** History for hand R5-244301185-2 *****
+Start hand: Mon May 28 10:01:00 CEST 2012
+Table: [SPEED] Taif [244301185] (LIMIT TEXAS_HOLDEM $50/$100, Real money)
+Button: seat 3
+Players in round: 2
+Seat 3: majee ($1585.25) 
+Seat 9: PBurress ($2350.00) 
+majee posts small blind ($25)
+PBurress posts big blind ($50)
+---
+Dealing pocket cards
+majee raises $75.00 to $100.00
+PBurress calls $50.00
+--- Dealing flop [Th, 3d, 6h]
+PBurress checks
+majee bets $50.00
+PBurress raises $100.00 to $100.00
+majee calls $50.00
+--- Dealing turn [7d]
+PBurress bets $100.00
+majee calls $100.00
+--- Dealing river [Js]
+PBurress checks
+majee checks
+---
+Summary:
+Main pot: $600.00 won by PBurress ($599.00)
+Rake taken: $1
+Seat 3: majee ($1285.25), net: -$300.00, [9d, Kc]
+Seat 9: PBurress ($2649.00), net: +$299.00, [Ah, 5h]
+***** End of hand R5-244301185-2 *****

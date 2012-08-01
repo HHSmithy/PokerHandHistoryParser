@@ -1,0 +1,21 @@
+﻿***** Hand History for Game 11614177654 *****
+$2,000 USD PL Omaha - Tuesday, April 03, 03:24:32 EDT 2012
+Table Table  135446 (No DP) (Real Money)
+Seat 3 is the button
+Total number of players : 2/6 
+Seat 3: Biiishaaap ( $433 USD )
+Seat 5: ILikeToF0LD ( $2,288.50 USD )
+Biiishaaap posts small blind [$10 USD].
+ILikeToF0LD posts big blind [$20 USD].
+** Dealing down cards **
+Biiishaaap raises [$30 USD]
+ILikeToF0LD calls [$20 USD]
+** Dealing Flop ** [ Kc, 9h, Qs ]
+ILikeToF0LD checks
+Biiishaaap checks
+** Dealing Turn ** [ Jh ]
+ILikeToF0LD bets [$79 USD]
+kondilon has joined the table.
+Biiishaaap folds
+ILikeToF0LD does not show cards.
+ILikeToF0LD wins $158 USD

@@ -1,0 +1,27 @@
+﻿PokerStars Hand #78414171709:  Hold'em No Limit ($25/$50 USD) - 2012/04/06 7:41:38 ET
+Table 'Ocllo IV' 2-max Seat #1 is the button
+Seat 1: PimpyLimpy ($5000 in chips) 
+Seat 2: KTPOKP ($6262.50 in chips) 
+PimpyLimpy: posts small blind $25
+KTPOKP: posts big blind $50
+*** HOLE CARDS ***
+PimpyLimpy: raises $100 to $150
+KTPOKP: calls $100
+*** FLOP *** [4c 6c 2c]
+KTPOKP: checks 
+PimpyLimpy: bets $250
+KTPOKP: calls $250
+*** TURN *** [4c 6c 2c] [3c]
+KTPOKP: checks 
+PimpyLimpy: checks 
+*** RIVER *** [4c 6c 2c 3c] [6d]
+KTPOKP: bets $150
+PimpyLimpy: folds 
+Uncalled bet ($150) returned to KTPOKP
+KTPOKP collected $799.50 from pot
+KTPOKP: doesn't show hand 
+*** SUMMARY ***
+Total pot $800 | Rake $0.50 
+Board [4c 6c 2c 3c 6d]
+Seat 1: PimpyLimpy (button) (small blind) folded on the River
+Seat 2: KTPOKP (big blind) collected ($799.50)

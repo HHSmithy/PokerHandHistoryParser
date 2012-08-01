@@ -1,0 +1,438 @@
+﻿#Game No : 410992808
+***** Cassava Hand History for Game 410992808 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:59:48
+Table Basel (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: VScorpio14 ( $169.57 )
+Seat 4: piraias1961 ( $22.71 )
+Seat 6: rspinola ( $16.36 )
+Seat 9: lottylee1 ( $46.20 )
+VScorpio14 posts small blind [$0.50]
+piraias1961 posts big blind [$1]
+** Dealing down cards **
+rspinola calls [$1]
+lottylee1 calls [$1]
+VScorpio14 calls [$0.50]
+piraias1961 checks
+** Dealing flop ** [ 4d, 6s, Jh ]
+VScorpio14 bets [$1]
+piraias1961 calls [$1]
+rspinola calls [$1]
+lottylee1 calls [$1]
+** Dealing turn ** [ As ]
+VScorpio14 bets [$2]
+piraias1961 folds
+rspinola calls [$2]
+lottylee1 calls [$2]
+** Dealing river ** [ 2c ]
+VScorpio14 checks
+rspinola checks
+lottylee1 checks
+** Summary **
+VScorpio14 shows [ Qc, Js ]
+rspinola mucks [ 9c, 9h ]
+lottylee1 mucks [ 7c, 8c ]
+VScorpio14 collected [ $13.30 ]
+
+
+
+#Game No : 410992630
+***** Cassava Hand History for Game 410992630 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:59:05
+Table Basel (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: VScorpio14 ( $169.57 )
+Seat 4: piraias1961 ( $31.71 )
+Seat 6: rspinola ( $16.36 )
+Seat 7: huddzchris ( $1.98 )
+Seat 9: lottylee1 ( $36.21 )
+huddzchris posts small blind [$0.50]
+lottylee1 posts big blind [$1]
+** Dealing down cards **
+VScorpio14 folds
+piraias1961 raises [$2]
+rspinola folds
+huddzchris calls [$1.48]
+lottylee1 calls [$1]
+** Dealing flop ** [ 2d, 3h, 7c ]
+lottylee1 checks
+piraias1961 bets [$1]
+lottylee1 calls [$1]
+** Dealing turn ** [ 4c ]
+lottylee1 checks
+piraias1961 bets [$2]
+lottylee1 raises [$4]
+piraias1961 calls [$2]
+** Dealing river ** [ Td ]
+lottylee1 bets [$2]
+piraias1961 calls [$2]
+** Summary **
+lottylee1 shows [ Kc, Ks ]
+piraias1961 mucks [ As, 6s ]
+huddzchris mucks [ Jd, 9c ]
+lottylee1 collected [ $5.65 ]
+lottylee1 collected [ $13.34 ]
+
+
+
+#Game No : 410992517
+***** Cassava Hand History for Game 410992517 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:58:38
+Table Basel (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $84.27 )
+Seat 2: VScorpio14 ( $169.57 )
+Seat 4: piraias1961 ( $31.71 )
+Seat 6: rspinola ( $13.61 )
+Seat 7: huddzchris ( $3.98 )
+Seat 9: lottylee1 ( $36.21 )
+rspinola posts small blind [$0.50]
+huddzchris posts big blind [$1]
+** Dealing down cards **
+lottylee1 folds
+smdg614 calls [$1]
+VScorpio14 folds
+piraias1961 folds
+rspinola calls [$0.50]
+huddzchris checks
+** Dealing flop ** [ 8c, Td, Qh ]
+rspinola bets [$1]
+huddzchris calls [$1]
+smdg614 folds
+** Dealing turn ** [ 3d ]
+rspinola bets [$2]
+huddzchris folds
+** Summary **
+rspinola did not show his hand
+rspinola collected [ $4.75 ]
+
+
+
+#Game No : 410992393
+***** Cassava Hand History for Game 410992393 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:58:02
+Table Basel (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $84.27 )
+Seat 2: VScorpio14 ( $161.37 )
+Seat 4: piraias1961 ( $38.71 )
+Seat 6: rspinola ( $15.61 )
+Seat 7: huddzchris ( $3.98 )
+Seat 9: lottylee1 ( $36.21 )
+piraias1961 posts small blind [$0.50]
+rspinola posts big blind [$1]
+** Dealing down cards **
+huddzchris folds
+lottylee1 folds
+smdg614 folds
+VScorpio14 raises [$2]
+piraias1961 calls [$1.50]
+rspinola calls [$1]
+** Dealing flop ** [ Th, 3s, Qd ]
+piraias1961 checks
+rspinola checks
+VScorpio14 bets [$1]
+piraias1961 calls [$1]
+rspinola folds
+** Dealing turn ** [ Qc ]
+piraias1961 checks
+VScorpio14 bets [$2]
+piraias1961 calls [$2]
+** Dealing river ** [ 8c ]
+piraias1961 checks
+VScorpio14 bets [$2]
+piraias1961 calls [$2]
+** Summary **
+VScorpio14 shows [ Jh, Qs ]
+piraias1961 mucks [ As, 9s ]
+VScorpio14 collected [ $15.20 ]
+
+
+
+#Game No : 410992167
+***** Cassava Hand History for Game 410992167 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:57:08
+Table Basel (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $93.27 )
+Seat 2: VScorpio14 ( $161.87 )
+Seat 4: piraias1961 ( $27.21 )
+Seat 6: rspinola ( $18.61 )
+Seat 7: huddzchris ( $3.98 )
+Seat 9: lottylee1 ( $36.21 )
+VScorpio14 posts small blind [$0.50]
+piraias1961 posts big blind [$1]
+** Dealing down cards **
+rspinola calls [$1]
+huddzchris folds
+lottylee1 folds
+smdg614 raises [$2]
+VScorpio14 folds
+piraias1961 calls [$1]
+rspinola calls [$1]
+** Dealing flop ** [ 6h, 3c, Ts ]
+piraias1961 checks
+rspinola checks
+smdg614 bets [$1]
+piraias1961 calls [$1]
+rspinola calls [$1]
+** Dealing turn ** [ Kd ]
+piraias1961 checks
+rspinola checks
+smdg614 bets [$2]
+piraias1961 raises [$4]
+rspinola folds
+smdg614 calls [$2]
+** Dealing river ** [ 9d ]
+piraias1961 bets [$2]
+smdg614 calls [$2]
+** Summary **
+piraias1961 shows [ Kh, Jh ]
+smdg614 mucks [ Td, Ac ]
+piraias1961 collected [ $20.50 ]
+
+
+
+#Game No : 410992029
+***** Cassava Hand History for Game 410992029 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:56:33
+Table Basel (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $93.77 )
+Seat 2: VScorpio14 ( $162.87 )
+Seat 4: piraias1961 ( $23.93 )
+Seat 6: rspinola ( $19.61 )
+Seat 7: huddzchris ( $4.98 )
+Seat 9: lottylee1 ( $36.21 )
+smdg614 posts small blind [$0.50]
+VScorpio14 posts big blind [$1]
+** Dealing down cards **
+piraias1961 calls [$1]
+rspinola calls [$1]
+huddzchris calls [$1]
+lottylee1 folds
+smdg614 folds
+VScorpio14 checks
+** Dealing flop ** [ 9s, Ac, 9d ]
+VScorpio14 checks
+piraias1961 checks
+rspinola checks
+huddzchris checks
+** Dealing turn ** [ 5s ]
+VScorpio14 checks
+piraias1961 bets [$2]
+rspinola folds
+huddzchris folds
+VScorpio14 folds
+** Summary **
+piraias1961 did not show his hand
+piraias1961 collected [ $4.28 ]
+
+
+
+#Game No : 410991956
+***** Cassava Hand History for Game 410991956 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:56:19
+Table Basel (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $94.77 )
+Seat 2: VScorpio14 ( $162.87 )
+Seat 4: piraias1961 ( $23.93 )
+Seat 6: rspinola ( $19.61 )
+Seat 7: huddzchris ( $3.48 )
+Seat 9: lottylee1 ( $36.71 )
+lottylee1 posts small blind [$0.50]
+smdg614 posts big blind [$1]
+** Dealing down cards **
+VScorpio14 folds
+piraias1961 folds
+rspinola folds
+huddzchris raises [$2]
+lottylee1 folds
+smdg614 folds
+** Summary **
+huddzchris did not show his hand
+huddzchris collected [ $2.50 ]
+
+
+
+#Game No : 410991799
+***** Cassava Hand History for Game 410991799 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:55:43
+Table Basel (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $94.77 )
+Seat 2: VScorpio14 ( $162.87 )
+Seat 4: piraias1961 ( $27.93 )
+Seat 6: rspinola ( $27.61 )
+Seat 7: huddzchris ( $3.98 )
+Seat 9: lottylee1 ( $25.21 )
+huddzchris posts small blind [$0.50]
+lottylee1 posts big blind [$1]
+** Dealing down cards **
+smdg614 folds
+VScorpio14 folds
+piraias1961 raises [$2]
+rspinola raises [$3]
+huddzchris folds
+lottylee1 calls [$2]
+piraias1961 calls [$1]
+** Dealing flop ** [ 4d, Jh, Kd ]
+lottylee1 bets [$1]
+piraias1961 calls [$1]
+rspinola calls [$1]
+** Dealing turn ** [ 7s ]
+lottylee1 bets [$2]
+piraias1961 folds
+rspinola calls [$2]
+** Dealing river ** [ 9d ]
+lottylee1 bets [$2]
+rspinola calls [$2]
+** Summary **
+lottylee1 shows [ Tc, Kh ]
+rspinola mucks [ Ah, Qh ]
+lottylee1 collected [ $19.50 ]
+
+
+
+#Game No : 410991641
+***** Cassava Hand History for Game 410991641 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:55:07
+Table Basel (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $88.84 )
+Seat 2: VScorpio14 ( $162.87 )
+Seat 4: piraias1961 ( $32.93 )
+Seat 6: rspinola ( $28.11 )
+Seat 7: huddzchris ( $4.98 )
+Seat 9: lottylee1 ( $25.21 )
+rspinola posts small blind [$0.50]
+huddzchris posts big blind [$1]
+** Dealing down cards **
+lottylee1 folds
+smdg614 raises [$2]
+VScorpio14 folds
+piraias1961 calls [$2]
+rspinola folds
+huddzchris folds
+** Dealing flop ** [ 6d, Kd, 3h ]
+smdg614 bets [$1]
+piraias1961 calls [$1]
+** Dealing turn ** [ 2c ]
+smdg614 bets [$2]
+piraias1961 calls [$2]
+** Dealing river ** [ 7c ]
+smdg614 bets [$2]
+piraias1961 folds
+** Summary **
+smdg614 did not show his hand
+smdg614 collected [ $10.93 ]
+
+
+
+#Game No : 410991470
+***** Cassava Hand History for Game 410991470 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:54:22
+Table Basel (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $81.11 )
+Seat 2: VScorpio14 ( $162.87 )
+Seat 4: piraias1961 ( $33.43 )
+Seat 6: rspinola ( $29.11 )
+Seat 7: huddzchris ( $11.98 )
+Seat 9: lottylee1 ( $25.21 )
+piraias1961 posts small blind [$0.50]
+rspinola posts big blind [$1]
+** Dealing down cards **
+huddzchris calls [$1]
+lottylee1 folds
+smdg614 raises [$2]
+VScorpio14 folds
+piraias1961 folds
+rspinola folds
+huddzchris calls [$1]
+** Dealing flop ** [ 6c, Ad, 8h ]
+huddzchris checks
+smdg614 bets [$1]
+huddzchris calls [$1]
+** Dealing turn ** [ 4s ]
+huddzchris checks
+smdg614 bets [$2]
+huddzchris calls [$2]
+** Dealing river ** [ Kd ]
+huddzchris bets [$2]
+smdg614 calls [$2]
+** Summary **
+huddzchris shows [ Jc, 8c ]
+smdg614 shows [ 7h, As ]
+smdg614 collected [ $14.73 ]
+
+
+
+#Game No : 410991284
+***** Cassava Hand History for Game 410991284 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:53:38
+Table Basel (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $73.28 )
+Seat 2: VScorpio14 ( $163.37 )
+Seat 4: piraias1961 ( $36.43 )
+Seat 6: rspinola ( $29.11 )
+Seat 7: huddzchris ( $16.98 )
+Seat 9: lottylee1 ( $25.21 )
+VScorpio14 posts small blind [$0.50]
+piraias1961 posts big blind [$1]
+** Dealing down cards **
+rspinola folds
+huddzchris calls [$1]
+lottylee1 folds
+smdg614 raises [$2]
+VScorpio14 folds
+piraias1961 calls [$1]
+huddzchris calls [$1]
+** Dealing flop ** [ 8d, 4d, Ad ]
+piraias1961 checks
+huddzchris checks
+smdg614 bets [$1]
+piraias1961 calls [$1]
+huddzchris calls [$1]
+** Dealing turn ** [ Qh ]
+piraias1961 checks
+huddzchris checks
+smdg614 bets [$2]
+piraias1961 folds
+huddzchris calls [$2]
+** Dealing river ** [ Ac ]
+huddzchris checks
+smdg614 checks
+** Summary **
+huddzchris shows [ Ts, Kd ]
+smdg614 shows [ Jh, Jc ]
+smdg614 collected [ $12.83 ]
+
+
+
+#Game No : 410991133
+***** Cassava Hand History for Game 410991133 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 04 02 2012 23:52:59
+Table Basel (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: smdg614 ( $64.13 )
+Seat 2: VScorpio14 ( $170.37 )
+Seat 4: piraias1961 ( $39.43 )
+Seat 6: rspinola ( $29.11 )
+Seat 7: huddzchris ( $16.98 )
+Seat 9: lottylee1 ( $25.21 )
+smdg614 posts small blind [$0.50]

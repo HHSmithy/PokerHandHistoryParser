@@ -1,0 +1,23 @@
+﻿***** Hand History for Game 11614248658 *****
+$200 USD NL Texas Hold'em - Tuesday, April 03, 04:32:01 EDT 2012
+Table Speed #2355417 (No DP) (Real Money)
+Seat 3 is the button
+Total number of players : 6/6 
+Seat 5: A_N_D_R_O_I_D ( $374.10 USD )
+Seat 4: BetInTheDark ( $206.45 USD )
+Seat 2: CamillaToft ( $352.70 USD )
+Seat 1: FiskC ( $137.34 USD )
+Seat 6: PietroViesch ( $260.90 USD )
+Seat 3: SiamSato ( $208.25 USD )
+BetInTheDark posts small blind [$1 USD].
+A_N_D_R_O_I_D posts big blind [$2 USD].
+** Dealing down cards **
+PietroViesch folds
+FiskC folds
+CamillaToft folds
+SiamSato raises [$4 USD]
+BetInTheDark folds
+A_N_D_R_O_I_D raises [$12 USD]
+SiamSato folds
+A_N_D_R_O_I_D does not show cards.
+A_N_D_R_O_I_D wins $19 USD

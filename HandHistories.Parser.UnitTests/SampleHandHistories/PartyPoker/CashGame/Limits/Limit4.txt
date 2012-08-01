@@ -1,0 +1,25 @@
+﻿***** Hand History for Game 11615195926 *****
+$30/$60 USD FL Texas Hold'em - Tuesday, April 03, 11:34:10 EDT 2012
+Table Table  127365 (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 5: AngryBird1 ( $1,752 USD )
+Seat 1: Forrest_Master ( $1,624 USD )
+Seat 3: RunDevil ( $1,410 USD )
+Seat 2: THX4edge ( $2,078 USD )
+Seat 6: brandboxx ( $1,847.80 USD )
+Seat 4: forSALE ( $1,417 USD )
+Forrest_Master posts small blind [$15 USD].
+THX4edge posts big blind [$30 USD].
+** Dealing down cards **
+RunDevil folds
+forSALE folds
+AngryBird1 folds
+brandboxx folds
+Forrest_Master raises [$45 USD]
+THX4edge calls [$30 USD]
+** Dealing Flop ** [ 8c, 2h, 4h ]
+Forrest_Master bets [$30 USD]
+THX4edge folds
+Forrest_Master does not show cards.
+Forrest_Master wins $147 USD

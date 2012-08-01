@@ -1,0 +1,25 @@
+﻿***** Hand History for Game 10443553539 *****
+$50 USD NL Texas Hold'em - Sunday, May 08, 04:26:17 EDT 2011
+Table Jackpot #1769703 (No DP) (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 4: BaasAxel ( $71.30 USD )
+Seat 1: SoHardGoPro ( $50 USD )
+Seat 2: claudiujcd ( $27.48 USD )
+Seat 5: cnfdrf ( $50 USD )
+Seat 6: ooloo ( $51.27 USD )
+Seat 3: vanBommel885 ( $52.05 USD )
+claudiujcd posts small blind [$0.25 USD].
+vanBommel885 posts big blind [$0.50 USD].
+BaasAxel posts big blind + dead [$0.75].
+** Dealing down cards **
+BaasAxel checks
+cnfdrf folds
+SoHardGoPro calls [$0.50 USD]
+claudiujcd raises [$1.75 USD]
+vanBommel885 folds
+BaasAxel folds
+SoHardGoPro folds
+claudiujcd does not show cards.
+The time at which hand ended:May 08 2011 04:26 EDT
+claudiujcd wins $3.75 USD

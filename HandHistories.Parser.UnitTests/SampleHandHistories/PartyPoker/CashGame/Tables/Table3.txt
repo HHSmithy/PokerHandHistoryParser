@@ -1,0 +1,31 @@
+﻿***** Hand History for Game 11615195852 *****
+$200 USD NL Texas Hold'em - Tuesday, April 03, 11:34:09 EDT 2012
+Table Speed #2356320 (No DP) (Real Money)
+Seat 9 is the button
+Total number of players : 9/9 
+Seat 2: Bouncer83 ( $136.20 USD )
+Seat 8: D0GgivesHead ( $200 USD )
+Seat 9: Edvin888 ( $86.93 USD )
+Seat 5: LimYoHwan ( $400 USD )
+Seat 6: SayWhat ( $200 USD )
+Seat 1: golf1999 ( $200.62 USD )
+Seat 4: landein99 ( $200 USD )
+Seat 3: sure_klar ( $200.15 USD )
+Seat 7: teigner ( $60 USD )
+golf1999 posts small blind [$1 USD].
+Bouncer83 posts big blind [$2 USD].
+** Dealing down cards **
+sure_klar folds
+landein99 folds
+LimYoHwan folds
+SayWhat folds
+D0GgivesHead folds
+Edvin888 raises [$4 USD]
+golf1999 calls [$3 USD]
+Bouncer83 folds
+** Dealing Flop ** [ 2s, 5s, Ah ]
+golf1999 checks
+Edvin888 bets [$9.50 USD]
+golf1999 folds
+Edvin888 does not show cards.
+Edvin888 wins $19 USD

@@ -1,0 +1,12 @@
+﻿<description type="Holdem" stakes="No Limit ($1/$2)"/>
+<game id="56150235-130" starttime="20120529013350" numholecards="2" gametype="2" seats="2" realmoney="true" data="20120529|Everglades (Heads Up) (56150235)|56150235|56150235-130|false">
+	<players dealer="0">
+		<player seat="0" nickname="Daisy19" balance="$153.19" dealtin="false" />
+		<player seat="1" nickname="AllAbout18" balance="$100.00" dealtin="false" />
+	</players>
+	<round id="BLINDS" sequence="1">
+	</round>
+	<round id="GAME_CANCELLED" sequence="2">
+		<event sequence="1" type="GAME_CANCELLED" timestamp="1338273214546"/>
+	</round>
+</game>

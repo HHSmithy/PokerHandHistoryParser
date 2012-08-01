@@ -1,0 +1,32 @@
+﻿<description type="Holdem" stakes="No Limit ($1/$2)"/>
+<game id="56196868-1" starttime="20120529213804" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Deal It Twice - Mississippi (56196868)|56196868|56196868-1|false">
+	<players dealer="7">
+		<player seat="3" nickname="isunkurbttlship" balance="$200.00" dealtin="true" />
+		<player seat="7" nickname="PersnicketyBeagle" balance="$200.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338345458015" player="7" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338345458187" player="3" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338345465125" player="7" amount="5.00"/>
+		<event sequence="4" type="CALL" timestamp="1338345467968" player="3" amount="3.00"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="5" type="CHECK" timestamp="1338345473875" player="3"/>
+		<event sequence="6" type="CHECK" timestamp="1338345483015" player="7"/>
+		<cards type="COMMUNITY" cards="Kc,Ah,7c"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<event sequence="7" type="CHECK" timestamp="1338345490250" player="3"/>
+		<event sequence="8" type="BET" timestamp="1338345496765" player="7" amount="7.50"/>
+		<event sequence="9" type="FOLD" timestamp="1338345501734" player="3"/>
+		<cards type="COMMUNITY" cards="Kc,Ah,7c,3d"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="5">
+		<event sequence="10" type="MUCK" timestamp="1338345502625" player="7"/>
+		<winner amount="17.00" uncalled="false" potnumber="1" player="7" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="6">
+	</round>
+</game>

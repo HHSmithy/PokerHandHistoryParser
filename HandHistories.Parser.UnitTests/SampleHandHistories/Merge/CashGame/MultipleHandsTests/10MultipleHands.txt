@@ -1,0 +1,340 @@
+﻿<description type="Holdem" stakes="No Limit ($1/$2)"/>
+<game id="56140099-478" starttime="20120529033552" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-478|false">
+	<players dealer="6">
+		<player seat="2" nickname="fizzlelicious" balance="$7.95" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$208.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$233.88" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1096.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$214.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$200.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280513750" player="7" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280514078" player="2" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338280515781" player="3"/>
+		<event sequence="4" type="FOLD" timestamp="1338280519625" player="4"/>
+		<event sequence="5" type="FOLD" timestamp="1338280526765" player="5"/>
+		<event sequence="6" type="FOLD" timestamp="1338280534421" player="6"/>
+		<event sequence="7" type="RAISE" timestamp="1338280538343" player="7" amount="8.00"/>
+		<event sequence="8" type="ALL_IN" timestamp="1338280538718" player="2" amount="5.95"/>
+		<event sequence="9" type="SHOW" timestamp="1338280539187" player="2"/>
+		<event sequence="10" type="SHOW" timestamp="1338280539390" player="7"/>
+		<cards type="SHOWN" cards="Qd,Td" player="2"/>
+		<cards type="SHOWN" cards="Ac,Qc" player="7"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<cards type="COMMUNITY" cards="Ts,6c,6d"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<cards type="COMMUNITY" cards="Ts,6c,6d,4c"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<cards type="COMMUNITY" cards="Ts,6c,6d,4c,Kh"/>
+	</round>
+	<round id="END_OF_GAME" sequence="6">
+		<winner amount="14.61" uncalled="false" potnumber="1" player="2" hand="Two Pair Tens and Sixes" pottype="n"/>
+		<winner amount="0.05" uncalled="true" potnumber="2" player="7" hand="Pair of Sixes" pottype="n"/>
+	</round>
+</game>
+
+
+
+<game id="56140099-479" starttime="20120529033630" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-479|false">
+	<players dealer="7">
+		<player seat="2" nickname="fizzlelicious" balance="$14.61" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$208.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$233.88" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1096.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$214.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$200.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280551281" player="2" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280551437" player="3" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338280553515" player="4"/>
+		<event sequence="4" type="FOLD" timestamp="1338280574812" player="5"/>
+		<event sequence="5" type="FOLD" timestamp="1338280576078" player="6"/>
+		<event sequence="6" type="FOLD" timestamp="1338280579421" player="7"/>
+		<event sequence="7" type="ALL_IN" timestamp="1338280581093" player="2" amount="13.61"/>
+		<event sequence="8" type="FOLD" timestamp="1338280582718" player="3"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="9" type="MUCK" timestamp="1338280583359" player="2"/>
+		<winner amount="16.61" uncalled="false" potnumber="1" player="2" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-480" starttime="20120529033704" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-480|false">
+	<players dealer="2">
+		<player seat="2" nickname="fizzlelicious" balance="$16.61" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$206.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$233.88" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1096.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$214.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$200.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280585750" player="3" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280586093" player="4" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338280600375" player="5"/>
+		<event sequence="4" type="RAISE" timestamp="1338280604765" player="6" amount="6.00"/>
+		<event sequence="5" type="RAISE" timestamp="1338280611500" player="7" amount="25.00"/>
+		<event sequence="6" type="FOLD" timestamp="1338280611968" player="2"/>
+		<event sequence="7" type="FOLD" timestamp="1338280613218" player="3"/>
+		<event sequence="8" type="FOLD" timestamp="1338280615906" player="4"/>
+		<event sequence="9" type="FOLD" timestamp="1338280626421" player="6"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="10" type="MUCK" timestamp="1338280627171" player="7"/>
+		<winner amount="34.00" uncalled="false" potnumber="1" player="7" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-481" starttime="20120529033749" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-481|false">
+	<players dealer="3">
+		<player seat="2" nickname="fizzlelicious" balance="$16.61" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$205.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$231.88" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1096.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$208.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$209.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280629640" player="4" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280630000" player="5" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338280632656" player="6"/>
+		<event sequence="4" type="FOLD" timestamp="1338280633171" player="7"/>
+		<event sequence="5" type="ALL_IN" timestamp="1338280636343" player="2" amount="16.61"/>
+		<event sequence="6" type="FOLD" timestamp="1338280638265" player="3"/>
+		<event sequence="7" type="CALL" timestamp="1338280644328" player="4" amount="15.61"/>
+		<event sequence="8" type="FOLD" timestamp="1338280661859" player="5"/>
+		<event sequence="9" type="SHOW" timestamp="1338280662312" player="2"/>
+		<event sequence="10" type="SHOW" timestamp="1338280662515" player="4"/>
+		<cards type="SHOWN" cards="Qs,Qh" player="2"/>
+		<cards type="SHOWN" cards="Qc,Td" player="4"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<cards type="COMMUNITY" cards="9s,3c,7d"/>
+	</round>
+	<round id="POSTTURN" sequence="4">
+		<cards type="COMMUNITY" cards="9s,3c,7d,2s"/>
+	</round>
+	<round id="POSTRIVER" sequence="5">
+		<cards type="COMMUNITY" cards="9s,3c,7d,2s,Ac"/>
+	</round>
+	<round id="END_OF_GAME" sequence="6">
+		<winner amount="32.96" uncalled="false" potnumber="1" player="2" hand="Pair of Queens" pottype="n"/>
+	</round>
+</game>
+
+
+
+<game id="56140099-482" starttime="20120529033833" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-482|false">
+	<players dealer="4">
+		<player seat="2" nickname="fizzlelicious" balance="$32.96" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$205.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$215.27" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1094.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$208.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$209.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280674171" player="5" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280674359" player="6" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338280682593" player="7"/>
+		<event sequence="4" type="FOLD" timestamp="1338280682875" player="2"/>
+		<event sequence="5" type="FOLD" timestamp="1338280685890" player="3"/>
+		<event sequence="6" type="RAISE" timestamp="1338280687921" player="4" amount="6.00"/>
+		<event sequence="7" type="FOLD" timestamp="1338280699171" player="5"/>
+		<event sequence="8" type="FOLD" timestamp="1338280702046" player="6"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="9" type="MUCK" timestamp="1338280702531" player="4"/>
+		<winner amount="9.00" uncalled="false" potnumber="1" player="4" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-483" starttime="20120529033903" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-483|false">
+	<players dealer="5">
+		<player seat="2" nickname="fizzlelicious" balance="$32.96" dealtin="true" />
+		<player seat="3" nickname="Ogreto" balance="$205.63" dealtin="true" />
+		<player seat="4" nickname="ssweetness" balance="$218.27" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1093.83" dealtin="true" />
+		<player seat="6" nickname="souprlucky" balance="$206.87" dealtin="true" />
+		<player seat="7" nickname="uCANTescapeF8" balance="$209.00" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338280704625" player="6" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338280705515" player="7" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="RAISE" timestamp="1338280710812" player="2" amount="5.00"/>
+		<event sequence="4" type="FOLD" timestamp="1338280711968" player="3"/>
+		<event sequence="5" type="FOLD" timestamp="1338280725875" player="4"/>
+		<event sequence="6" type="FOLD" timestamp="1338280731093" player="5"/>
+		<event sequence="7" type="FOLD" timestamp="1338280734515" player="6"/>
+		<event sequence="8" type="FOLD" timestamp="1338280741046" player="7"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="9" type="RABBIT" timestamp="1338280742500" player="2" text="Jh,Js"/>
+		<cards type="COMMUNITY" cards="Td,4h,9c,8d,Jd"/>
+		<cards type="SHOWN" cards="Jh,Js" player="2"/>
+		<winner amount="8.00" uncalled="false" potnumber="1" player="2" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-640" starttime="20120529055215" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-640|false">
+	<players dealer="5">
+		<player seat="0" nickname="s0815s" balance="$210.00" dealtin="true" />
+		<player seat="2" nickname="CcdRulz" balance="$216.25" dealtin="true" />
+		<player seat="3" nickname="OMGISTICKITINYOU" balance="$318.57" dealtin="true" />
+		<player seat="4" nickname="CarolinaDotty" balance="$163.67" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1513.03" dealtin="true" />
+		<player seat="7" nickname="Arttyomka" balance="$339.97" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338288715640" player="7" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338288715968" player="0" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338288721203" player="2"/>
+		<event sequence="4" type="FOLD" timestamp="1338288721328" player="3"/>
+		<event sequence="5" type="FOLD" timestamp="1338288721640" player="4"/>
+		<event sequence="6" type="FOLD" timestamp="1338288726187" player="5"/>
+		<event sequence="7" type="RAISE" timestamp="1338288730375" player="7" amount="6.00"/>
+		<event sequence="8" type="FOLD" timestamp="1338288739234" player="0"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="9" type="MUCK" timestamp="1338288740375" player="7"/>
+		<winner amount="8.00" uncalled="false" potnumber="1" player="7" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-642" starttime="20120529055354" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-642|false">
+	<players dealer="0">
+		<player seat="0" nickname="s0815s" balance="$207.00" dealtin="true" />
+		<player seat="3" nickname="OMGISTICKITINYOU" balance="$320.82" dealtin="true" />
+		<player seat="4" nickname="CarolinaDotty" balance="$163.67" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1513.03" dealtin="true" />
+		<player seat="6" nickname="bongbong68" balance="$98.00" dealtin="true" />
+		<player seat="7" nickname="Arttyomka" balance="$341.97" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338288813734" player="3" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338288814250" player="4" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338288815828" player="5"/>
+		<event sequence="4" type="FOLD" timestamp="1338288818906" player="6"/>
+		<event sequence="5" type="FOLD" timestamp="1338288826687" player="7"/>
+		<event sequence="6" type="FOLD" timestamp="1338288829328" player="0"/>
+		<event sequence="7" type="FOLD" timestamp="1338288829578" player="3"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="8" type="MUCK" timestamp="1338288829984" player="4"/>
+		<winner amount="3.00" uncalled="false" potnumber="1" player="4" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+<game id="56140099-643" starttime="20120529055412" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-643|false">
+	<players dealer="3">
+		<player seat="0" nickname="s0815s" balance="$207.00" dealtin="true" />
+		<player seat="3" nickname="OMGISTICKITINYOU" balance="$319.82" dealtin="true" />
+		<player seat="4" nickname="CarolinaDotty" balance="$164.67" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1513.03" dealtin="true" />
+		<player seat="6" nickname="bongbong68" balance="$98.00" dealtin="true" />
+		<player seat="7" nickname="Arttyomka" balance="$341.97" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338288832140" player="4" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338288832546" player="5" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="CALL" timestamp="1338288835906" player="6" amount="2.00"/>
+		<event sequence="4" type="FOLD" timestamp="1338288838187" player="7"/>
+		<event sequence="5" type="FOLD" timestamp="1338288848156" player="0"/>
+		<event sequence="6" type="RAISE" timestamp="1338288851156" player="3" amount="8.00"/>
+		<event sequence="7" type="FOLD" timestamp="1338288854531" player="4"/>
+		<event sequence="8" type="FOLD" timestamp="1338288858156" player="5"/>
+		<event sequence="9" type="FOLD" timestamp="1338288863750" player="6"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="3">
+		<event sequence="10" type="MUCK" timestamp="1338288864265" player="3"/>
+		<winner amount="13.00" uncalled="false" potnumber="1" player="3" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="4">
+	</round>
+</game>
+
+
+
+
+<game id="56140099-677" starttime="20120529061928" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Bad Beat - Mississippi (56140099)|56140099|56140099-677|false">
+	<players dealer="8">
+		<player seat="1" nickname="Just1barrel" balance="$216.90" dealtin="true" />
+		<player seat="3" nickname="OMGISTICKITINYOU" balance="$181.52" dealtin="true" />
+		<player seat="4" nickname="CarolinaDotty" balance="$178.18" dealtin="true" />
+		<player seat="5" nickname="GODEXISTSJK" balance="$1730.33" dealtin="true" />
+		<player seat="7" nickname="Gannik" balance="$200.00" dealtin="true" />
+		<player seat="8" nickname="PEACEthroughWAR" balance="$424.88" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1338290348265" player="1" amount="1.00"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1338290348468" player="3" amount="2.00"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="FOLD" timestamp="1338290351187" player="4"/>
+		<event sequence="4" type="RAISE" timestamp="1338290354343" player="5" amount="5.33"/>
+		<event sequence="5" type="CALL" timestamp="1338290356937" player="7" amount="5.33"/>
+		<event sequence="6" type="FOLD" timestamp="1338290357156" player="8"/>
+		<event sequence="7" type="FOLD" timestamp="1338290359890" player="1"/>
+		<event sequence="8" type="CALL" timestamp="1338290363687" player="3" amount="3.33"/>
+	</round>
+	<round id="POSTFLOP" sequence="3">
+		<event sequence="9" type="CHECK" timestamp="1338290364718" player="3"/>
+		<event sequence="10" type="BET" timestamp="1338290368546" player="5" amount="12.74"/>
+		<event sequence="11" type="FOLD" timestamp="1338290370593" player="7"/>
+		<event sequence="12" type="FOLD" timestamp="1338290371484" player="3"/>
+		<cards type="COMMUNITY" cards="8h,9d,Qd"/>
+	</round>
+	<round id="END_OF_FOLDED_GAME" sequence="4">
+		<event sequence="13" type="MUCK" timestamp="1338290372250" player="5"/>
+		<winner amount="28.39" uncalled="false" potnumber="1" player="5" pottype="n"/>
+	</round>
+	<round id="END_OF_GAME" sequence="5">
+	</round>
+</game>

@@ -1,0 +1,48 @@
+﻿Game # 2646492690 - Texas Hold'em No Limit EUR 0.02/0.04 - Table "Aalsmeer"
+
+Players(max 6):
+marcel8                     (EUR 6.31 in seat 2)
+trinco999                   (EUR 0.73 in seat 3)
+dimi85                      (EUR 4.29 in seat 4)
+a_vovo                      (EUR 4.00 in seat 5)
+TILTmePLZZ                  (EUR 4.97 in seat 6)
+
+Dealer:                     dimi85
+Small Blind:                a_vovo      (0.02)
+Big Blind:                  TILTmePLZZ  (0.04)
+
+marcel8                     Raise       (0.08)
+trinco999                   Raise       (0.16)
+dimi85                      Call        (0.16)
+a_vovo                      Fold
+TILTmePLZZ                  Fold
+marcel8                     Raise       (0.32)
+trinco999                   Call        (0.24)
+dimi85                      Call        (0.24)
+
+Flop                        Tc - 7c - 4d
+
+marcel8                     Check
+trinco999                   All-In      (0.33)
+dimi85                      Call        (0.33)
+marcel8                     Call        (0.33)
+
+Turn                        Tc - 7c - 4d - Qc
+
+marcel8                     Check
+dimi85                      Check
+
+River                       Tc - 7c - 4d - Qc - 8s
+
+marcel8                     Check
+dimi85                      Check
+
+marcel8 shows:              Ah - Kh
+trinco999 shows:            Kc - Kd
+
+dimi85 didn't show hand (Ac - 8h)
+
+trinco999 wins:             EUR 2.14
+Rake:                       EUR 0.11
+
+Game ended 2012-05-31 02:00:49 GMT+01:00

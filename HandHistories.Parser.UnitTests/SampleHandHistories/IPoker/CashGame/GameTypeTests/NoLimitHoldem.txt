@@ -1,0 +1,49 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $2/$4</gametype>
+    <tablename>Bovensmilde, 629228901</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-05-28 23:44:30</startdate>
+    <currency>USD</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3302716193">
+    <general>
+      <startdate>2012-05-28 23:44:47</startdate>
+      <players>
+        <player seat="4" name="tvlaozi" chips="$393.08" dealer="1" win="$33.10" bet="$24" rebuy="0" addon="0" />
+        <player seat="7" name="SoiErik" chips="$400" dealer="0" win="$0" bet="$2" rebuy="0" addon="0" />
+        <player seat="9" name="TTR126824852" chips="$400" dealer="0" win="$0" bet="$8" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="SoiErik" type="1" sum="$2" cards="[cards]" />
+      <action no="2" player="TTR126824852" type="2" sum="$4" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="tvlaozi">X X</cards>
+      <action no="3" player="tvlaozi" type="23" sum="$8" cards="" />
+      <cards type="Pocket" player="SoiErik">X X</cards>
+      <action no="4" player="SoiErik" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="TTR126824852">X X</cards>
+      <action no="5" player="TTR126824852" type="3" sum="$4" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C10 CQ H4</cards>
+      <action no="7" player="tvlaozi" type="5" sum="$16" cards="" />
+      <action no="6" player="TTR126824852" type="4" sum="$0" cards="" />
+      <action no="8" player="TTR126824852" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>

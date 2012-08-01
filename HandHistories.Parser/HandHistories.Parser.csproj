@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F131DB6-4891-4A24-A529-87F4816B9923}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HandHistories.Parser</RootNamespace>
+    <AssemblyName>HandHistories.Parser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3rd Party\NLog 2.0\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compression\HandHistoryGZipCompressorImpl.cs" />
+    <Compile Include="Compression\HandHistoryTinyFormatCompressorImpl.cs" />
+    <Compile Include="Compression\IHandHistoryCompressor.cs" />
+    <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
+    <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
+    <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />
+    <Compile Include="Parsers\Factory\IHandHistoryParserFactory.cs" />
+    <Compile Include="Parsers\Base\IHandHistoryParser.cs" />
+    <Compile Include="Parsers\Base\IHandHistorySummaryParser.cs" />
+    <Compile Include="Parsers\Exceptions\HandParseException.cs" />
+    <Compile Include="Parsers\FastParser\Base\HandHistoryParserFastImpl.cs" />
+    <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
+    <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
+    <Compile Include="Parsers\RegexParser\Base\IHandHistoryActionParser.cs" />
+    <Compile Include="Parsers\RegexParser\PartyPoker\ActionTypeRegexPair.cs" />
+    <Compile Include="Parsers\RegexParser\PartyPoker\PartyActionRegexParserImpl.cs" />
+    <Compile Include="Parsers\RegexParser\PartyPoker\PartyHandHistoryRegexParserImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexParserImplBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsers\RegexParser\PartyPoker\PartySiteActionRegexes.cs" />
+    <Compile Include="Parsers\RegexParser\PartyPoker\SiteActionRegexes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Strings\StringExtensions.cs" />
+    <Compile Include="Utils\Time\TimeZoneUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HandHistories.Evaluator\HandHistories.HandEvaluator.csproj">
+      <Project>{E340598E-D08E-40BA-B99A-61B43F0A0D2A}</Project>
+      <Name>HandHistories.HandEvaluator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
