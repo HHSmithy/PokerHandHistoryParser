@@ -119,10 +119,6 @@
       <Project>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</Project>
       <Name>HandHistories.Objects</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HandHistories.Evaluator\HandHistories.HandEvaluator.csproj">
-      <Project>{E340598E-D08E-40BA-B99A-61B43F0A0D2A}</Project>
-      <Name>HandHistories.HandEvaluator</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
