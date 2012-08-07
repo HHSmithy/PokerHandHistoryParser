@@ -172,8 +172,8 @@ namespace HandHistories.Objects.GameDescription
 
         private string GetLimitString(string currencySymbol, string seperatorCharacter, bool ignoreAntes)
         {
-            string smallBlindString = (SmallBlind < 1) ? SmallBlind.ToString("N2") : SmallBlind.ToString("N0");
-            string bigBlindString = (BigBlind < 1) ? BigBlind.ToString("N2") : BigBlind.ToString("N0");
+            string smallBlindString = (SmallBlind != Math.Round(SmallBlind)) ? SmallBlind.ToString("N2") : SmallBlind.ToString("N0");
+            string bigBlindString = (BigBlind != Math.Round(BigBlind)) ? BigBlind.ToString("N2") : BigBlind.ToString("N0");
 
             string limit = string.Format("{0}{1}{3}{0}{2}", currencySymbol, smallBlindString, bigBlindString, seperatorCharacter);
 

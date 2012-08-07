@@ -68,6 +68,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             string subFolder = System.IO.Path.Combine(GetSampleHandHistoryFolder(pokerFormat, siteName), subFolderName);
             string path = System.IO.Path.Combine(subFolder, textFileName) + ".txt";
 
+            if (_fileReader.FileExists(path) == false)
+            {
+                return null;
+            }
+
             return _fileReader.ReadAllText(path);
         }
 

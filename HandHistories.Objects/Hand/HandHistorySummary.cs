@@ -28,6 +28,10 @@ namespace HandHistories.Objects.Hand
 
         public string FullHandHistoryText { get; set; }
 
+        public decimal? TotalPot { get; set; }
+
+        public decimal? Rake { get; set; }
+
         public override int GetHashCode()
         {
             return ToString().GetHashCode();

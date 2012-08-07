@@ -61,6 +61,7 @@
     <Compile Include="GameDescription\LimitClassEnum.cs" />
     <Compile Include="GameDescription\LimitEnum.cs" />
     <Compile Include="GameDescription\LimitGameTypePair.cs" />
+    <Compile Include="GameDescription\PokerFormatUtils.cs" />
     <Compile Include="GameDescription\TableTypeDescription.cs" />
     <Compile Include="Hand\HandParseError.cs" />
     <Compile Include="Hand\HandHistory.cs" />

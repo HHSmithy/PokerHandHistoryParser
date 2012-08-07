@@ -13,7 +13,7 @@ namespace HandHistories.Parser.Parsers.Base
 
         HandHistorySummary ParseFullHandSummary(string handText, bool rethrowExceptions = false);
         int ParseDealerPosition(string handText);
-
+        
         DateTime ParseDateUtc(string handText);
 
         long ParseHandId(string handText);
@@ -30,7 +30,7 @@ namespace HandHistories.Parser.Parsers.Base
 
         Limit ParseLimit(string handText);
 
-        int ParseNumPlayers(string handText);
+        int ParseNumPlayers(string handText);        
 
         /// <summary>
         /// An intial bit of verification to check if the hand text

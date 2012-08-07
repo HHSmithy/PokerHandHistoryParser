@@ -94,12 +94,43 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return DateTime.SpecifyKind(converted, DateTimeKind.Utc);
         }
 
+        protected override void ParseExtraHandInformation(string[] handLines, Objects.Hand.HandHistorySummary handHistorySummary)
+        {
+            for (int i = handLines.Length - 1; i >= 0; i--)
+            {
+                string handLine = handLines[i];
+
+                // Check for summary line:
+                //  *** SUMMARY ***
+                if (handLine[0] == '*' && handLine[4] == 'S')
+                {
+                    // Line after summary line is:
+                    //  Total pot $13.12 | Rake $0.59 
+                    string totalLine = handLines[i + 1];
+
+                    int lastSpaceIndex = totalLine.LastIndexOf(" ");
+                    int seperatorIndex = totalLine.IndexOf("|", 13);
+
+                    handHistorySummary.Rake =
+                        decimal.Parse(totalLine.Substring(lastSpaceIndex + 2, totalLine.Length - lastSpaceIndex - 2));
+                    
+                    handHistorySummary.TotalPot =
+                        decimal.Parse(totalLine.Substring(11, seperatorIndex - 12));
+
+                    break;
+                }
+            }                
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Expect the first line to look like this: 
-            // PokerStars Hand #78453197174:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 20:56:40 ET
+            //   PokerStars Hand #78453197174:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 20:56:40 ET
+            // or
+            //   PokerStars Game #PokerStars Zoom Hand #84414134468:  Omaha Pot Limit ($0.05/$0.10 USD) - 2012/08/07 14:40:01 ET            
 
-            const int firstDigitIndex = 17;
+            // Zoom format           
+            int firstDigitIndex = handLines[0][38] == '#' ? 39 : 17;            
             int lastDigitIndex = handLines[0].IndexOf(':') - 1;
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex + 1);
@@ -177,7 +208,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         {
             // Stars does not right out things such as speed/shallow/fast to hands right now.
 
-            return TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown);
+            bool isZoom = handLines[1].Contains(" Zoom ");
+
+            return TableType.FromTableTypeDescriptions(isZoom ? TableTypeDescription.Zoom : TableTypeDescription.Regular);
         }
 
         protected override Limit ParseLimit(string[] handLines)

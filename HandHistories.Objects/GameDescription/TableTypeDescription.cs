@@ -18,6 +18,7 @@ namespace HandHistories.Objects.GameDescription
         [EnumMember] Shallow,
         [EnumMember] PushFold,
         [EnumMember] Any,
+        [EnumMember] Zoom,
         [EnumMember] Unknown,
     }
 }

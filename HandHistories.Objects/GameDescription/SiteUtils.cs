@@ -21,9 +21,7 @@ namespace HandHistories.Objects.GameDescription
                     return "Poker Stars Fr";
                 default:
                     return siteName.ToString();
-            }
-            
-            
+            }                        
         }
 
         public static SiteName ParseSiteName(string site)

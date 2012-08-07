@@ -40,7 +40,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                                                                                    Limit = Limit.FromSmallBlindBigBlind(0.10m, 0.25m, Currency.USD),
                                                                                    SeatType = SeatType.FromMaxPlayers(9),
                                                                                    Site = SiteName.PokerStars,
-                                                                                   TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown)
+                                                                                   TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
                                                                                },
                                                          DateOfHandUtc = new DateTime(2012, 7, 18, 16, 25, 8),
                                                          DealerButtonPosition = 9,
@@ -65,7 +65,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                     Limit = Limit.FromSmallBlindBigBlind(0.50m, 1.00m, Currency.USD),
                     SeatType = SeatType.FromMaxPlayers(6),
                     Site = SiteName.PokerStars,
-                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown)
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 7, 3, 51, 38),
                 DealerButtonPosition = 4,                
@@ -89,7 +89,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                     Limit = Limit.FromSmallBlindBigBlind(1.0m, 2.00m, Currency.USD),
                     SeatType = SeatType.FromMaxPlayers(9),
                     Site = SiteName.PokerStars,
-                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown)
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 10, 11, 27, 21),
                 DealerButtonPosition = 1,
@@ -113,7 +113,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                     Limit = Limit.FromSmallBlindBigBlind(25.0m, 50.00m, Currency.USD),
                     SeatType = SeatType.FromMaxPlayers(2),
                     Site = SiteName.PokerStars,
-                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown)
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 19, 00, 41, 04),
                 DealerButtonPosition = 1,

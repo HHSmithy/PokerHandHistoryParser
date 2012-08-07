@@ -23,7 +23,7 @@ The poker hand-history parser currently supports the following sites:
 Documentation
 -------------
 
-See the [documentation](https://github.com/KBelbina/PokerHandHistoryParser/wiki)
+See the [documentation](https://github.com/KBelbina/PokerHandHistoryParser/wiki).
 
 License
 -------

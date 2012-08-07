@@ -36,7 +36,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             get { return false; }
         }
-        
+     
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return HandSplitRegex.Split(rawHandHistories)
@@ -85,8 +85,22 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             handHistorySummary.NumPlayersSeated = ParsePlayers(handLines).Count;
             handHistorySummary.DealerButtonPosition = ParseDealerPosition(handLines);
             handHistorySummary.FullHandHistoryText = string.Join("\r\n", handLines);
+
+            try
+            {
+                ParseExtraHandInformation(handLines, handHistorySummary);
+            }
+            catch (Exception)
+            {
+                throw new ExtraHandParsingAction(handLines[0]);
+            }            
             
             return handHistorySummary;
+        }
+
+        protected virtual void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
+        {
+            // do nothing
         }
 
         public HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false)
@@ -142,6 +156,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     handHistory.GameDescription.Limit.IsAnteTable = true;
                     handHistory.GameDescription.Limit.Ante = Math.Abs(anteAction.Amount);
                 }
+
+                try
+                {
+                    ParseExtraHandInformation(handLines, handHistory);
+                }
+                catch (Exception)
+                {
+                    throw new ExtraHandParsingAction(handLines[0]);
+                }     
              
                 return handHistory;
             }

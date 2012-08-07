@@ -37,6 +37,14 @@ namespace HandHistories.Parser.Parsers.Exceptions
         }
     }
 
+    public class ExtraHandParsingAction : HandParseException
+    {
+        public ExtraHandParsingAction(string handText)
+            : base(handText)
+        {
+        }
+    }
+
     public class PlayersException : HandParseException
     {
         public PlayersException(string handText, string message) : base(handText, message)

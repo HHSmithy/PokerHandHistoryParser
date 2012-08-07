@@ -1,0 +1,34 @@
+﻿PokerStars Game #PokerStars Zoom Hand #84414134468:  Omaha Pot Limit ($0.05/$0.10 USD) - 2012/08/07 14:40:01 ET
+Table 'Eulalia Zoom 40-100 bb' 6-max Seat #1 is the button
+Seat 1: franzpipo10 ($10.19 in chips) 
+Seat 2: Jani23 ($9.79 in chips) 
+Seat 3: ApexPredator ($9.95 in chips) 
+Seat 4: Nishiwakiii ($12.52 in chips) 
+Seat 5: Evggenij ($2.95 in chips) 
+Seat 6: Vakumas ($5.32 in chips) 
+Jani23: posts small blind $0.05
+ApexPredator: posts big blind $0.10
+*** HOLE CARDS ***
+Nishiwakiii: folds 
+Evggenij: calls $0.10
+Vakumas: folds 
+franzpipo10: folds 
+Jani23: calls $0.05
+ApexPredator: checks 
+*** FLOP *** [9s 9d 4h]
+Jani23: checks 
+ApexPredator: bets $0.18
+Evggenij: folds 
+Jani23: folds 
+Uncalled bet ($0.18) returned to ApexPredator
+ApexPredator collected $0.29 from pot
+ApexPredator: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.30 | Rake $0.01 
+Board [9s 9d 4h]
+Seat 1: franzpipo10 (button) folded before Flop (didn't bet)
+Seat 2: Jani23 (small blind) folded on the Flop
+Seat 3: ApexPredator (big blind) collected ($0.29)
+Seat 4: Nishiwakiii folded before Flop (didn't bet)
+Seat 5: Evggenij folded on the Flop
+Seat 6: Vakumas folded before Flop (didn't bet)

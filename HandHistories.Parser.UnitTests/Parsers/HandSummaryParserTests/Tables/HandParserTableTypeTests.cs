@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
     [TestFixture("PartyPoker", "Regular", "Regular", "Speed", "Jackpot")]
-    [TestFixture("PokerStars", "Unknown", "Unknown", "Unknown", "Unknown")]
+    [TestFixture("PokerStars", "Regular", "Regular", "Regular", "Regular", "Zoom")]
     [TestFixture("OnGame", "Speed", "Regular", "Regular", "Regular")]
     [TestFixture("IPoker", "Shallow", "Regular", "Regular", "Regular")]
     [TestFixture("Pacific", "Regular", "Regular", "Regular", "Regular")]
@@ -25,6 +25,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
         {
             string handText = SampleHandHistoryRepository.GetTableExampleHandHistoryText(PokerFormat.CashGame, Site, tableTestNumber);
 
+            if (handText == null)
+            {
+                Assert.Ignore("No Table" + tableTestNumber + ".txt found.");
+            }
+
             string expectedTableTypeString = _expectedTableTypeStrings[tableTestNumber - 1];
 
             Assert.AreEqual(expectedTableTypeString, GetSummmaryParser().ParseTableType(handText).ToString(), "IHandHistorySummaryParser: ParseTableName");
@@ -35,6 +40,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
         [TestCase(2)]
         [TestCase(3)]
         [TestCase(4)]
+        [TestCase(5)]
         public void ParseTableType_Correct(int tableId)
         {            
             TestTableType(tableId);
