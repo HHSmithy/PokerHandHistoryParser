@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,7 +8,7 @@ namespace HandHistories.Objects.GameDescription
 {
     [DataContract]
     [Serializable]
-    public class TableType
+    public class TableType : IEnumerable<TableTypeDescription>
     {
         [DataMember]
         private readonly List<TableTypeDescription> _tableTypeDescriptions;
@@ -33,6 +34,11 @@ namespace HandHistories.Objects.GameDescription
             return _tableTypeDescriptions;
         }
 
+        public IEnumerator<TableTypeDescription> GetEnumerator()
+        {
+            return _tableTypeDescriptions.GetEnumerator();
+        }
+
         public override string ToString()
         {
             return string.Join("-", _tableTypeDescriptions);
@@ -54,6 +60,11 @@ namespace HandHistories.Objects.GameDescription
         public override int GetHashCode()
         {
             return ToString().GetHashCode();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

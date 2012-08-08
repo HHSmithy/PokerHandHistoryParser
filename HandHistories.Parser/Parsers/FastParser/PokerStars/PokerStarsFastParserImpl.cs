@@ -106,16 +106,18 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 {
                     // Line after summary line is:
                     //  Total pot $13.12 | Rake $0.59 
+                    // or
+                    //  Total pot $62.63 Main pot $54.75. Side pot $5.38. | Rake $2.50 
                     string totalLine = handLines[i + 1];
 
                     int lastSpaceIndex = totalLine.LastIndexOf(" ");
-                    int seperatorIndex = totalLine.IndexOf("|", 13);
+                    int spaceAfterFirstNumber = totalLine.IndexOf(" ", 11);
 
                     handHistorySummary.Rake =
                         decimal.Parse(totalLine.Substring(lastSpaceIndex + 2, totalLine.Length - lastSpaceIndex - 2));
                     
                     handHistorySummary.TotalPot =
-                        decimal.Parse(totalLine.Substring(11, seperatorIndex - 12));
+                        decimal.Parse(totalLine.Substring(11, spaceAfterFirstNumber - 11));
 
                     break;
                 }

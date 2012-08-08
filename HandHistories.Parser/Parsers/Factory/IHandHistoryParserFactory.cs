@@ -1,3 +1,4 @@
+using System;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Base;
 

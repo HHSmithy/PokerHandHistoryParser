@@ -696,6 +696,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\SidePot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\ZoomHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

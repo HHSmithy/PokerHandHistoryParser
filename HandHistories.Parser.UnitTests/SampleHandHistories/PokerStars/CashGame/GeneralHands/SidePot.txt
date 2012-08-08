@@ -1,0 +1,52 @@
+﻿PokerStars Game #84437728533:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/08/08 3:56:44 ET
+Table 'Irmela III 40-100 bb' 9-max Seat #3 is the button
+Seat 1: keksb10 ($44.66 in chips) 
+Seat 2: MauA6pukocoB ($21.44 in chips) 
+Seat 3: neugaray ($23.53 in chips) 
+Seat 4: dunhill.1983 ($18.75 in chips) 
+Seat 5: efendi80 ($83.73 in chips) 
+Seat 6: Vlondril ($21.96 in chips) 
+Seat 7: hayabusa514 ($29.75 in chips) 
+Seat 8: Illusionate ($122.31 in chips) 
+Seat 9: Aiseki ($19.38 in chips) 
+dunhill.1983: posts small blind $0.25
+efendi80: posts big blind $0.50
+*** HOLE CARDS ***
+Vlondril: calls $0.50
+hayabusa514: calls $0.50
+Illusionate: folds 
+Aiseki: folds 
+keksb10: folds 
+MauA6pukocoB: calls $0.50
+neugaray: folds 
+dunhill.1983: raises $2.50 to $3
+efendi80: folds 
+Vlondril: folds 
+hayabusa514: calls $2.50
+MauA6pukocoB: calls $2.50
+*** FLOP *** [Qd 6d 5d]
+dunhill.1983: bets $5
+hayabusa514: calls $5
+MauA6pukocoB: raises $13.44 to $18.44 and is all-in
+dunhill.1983: calls $10.75 and is all-in
+hayabusa514: calls $13.44
+*** TURN *** [Qd 6d 5d] [8h]
+*** RIVER *** [Qd 6d 5d 8h] [7c]
+*** SHOW DOWN ***
+hayabusa514: shows [8d Jd] (a flush, Queen high)
+MauA6pukocoB: shows [6h 6s] (three of a kind, Sixes)
+hayabusa514 collected $5.38 from side pot
+dunhill.1983: shows [Kc Ad] (high card Ace)
+hayabusa514 collected $54.75 from main pot
+*** SUMMARY ***
+Total pot $62.63 Main pot $54.75. Side pot $5.38. | Rake $2.50 
+Board [Qd 6d 5d 8h 7c]
+Seat 1: keksb10 folded before Flop (didn't bet)
+Seat 2: MauA6pukocoB showed [6h 6s] and lost with three of a kind, Sixes
+Seat 3: neugaray (button) folded before Flop (didn't bet)
+Seat 4: dunhill.1983 (small blind) showed [Kc Ad] and lost with high card Ace
+Seat 5: efendi80 (big blind) folded before Flop
+Seat 6: Vlondril folded before Flop
+Seat 7: hayabusa514 showed [8d Jd] and won ($60.13) with a flush, Queen high
+Seat 8: Illusionate folded before Flop (didn't bet)
+Seat 9: Aiseki folded before Flop (didn't bet)

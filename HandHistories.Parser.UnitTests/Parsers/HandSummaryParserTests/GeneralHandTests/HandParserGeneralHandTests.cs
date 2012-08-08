@@ -8,6 +8,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
     [TestFixture("PartyPoker", 11614240016l, "4/3/2012 08:24:43", 6, 5, null, null, "GeneralHand")]
     [TestFixture("PokerStars", 78451486205l, "4/7/2012 06:58:27", 2, 6, 0.59, 13.12, "GeneralHand")]
     [TestFixture("PokerStars", 84414134468l, "8/7/2012 18:40:01", 1, 6, 0.01, 0.30, "ZoomHand")]
+    [TestFixture("PokerStars", 84437728533l, "8/8/2012 07:56:44", 3, 9, 2.50, 62.63, "SidePot")]
     [TestFixture("Merge", 533636922070l, "4/17/2012 01:58:48", 8, 9, null, null, "GeneralHand")]
     [TestFixture("IPoker", 3251939984l, "4/17/2012 19:30:53", 9, 4, null, null, "GeneralHand")]
     [TestFixture("OnGame", 524409056039l, "5/28/2012 07:08:00", 10, 4, null, null, "GeneralHand")]
@@ -66,7 +67,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             var summary = GetSummmaryParser().ParseFullHandSummary(_handText);
 
             Assert.AreEqual(_expectedRake, summary.Rake, "Rake");
-            Assert.AreEqual(_expectedPotSize, summary.TotalPot, "Rake");
+            Assert.AreEqual(_expectedPotSize, summary.TotalPot, "TotalPot");
         }
 
         [Test]
