@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
 
 namespace HandHistories.Objects.GameDescription
 {
@@ -17,11 +18,18 @@ namespace HandHistories.Objects.GameDescription
         {
             // Alphabetize them and take the distincts
             _tableTypeDescriptions = new List<TableTypeDescription>(tableTypeDescriptions.OrderBy(t => t.ToString()).Distinct());
-        }      
-  
+        }
+
+        private static readonly Regex ParseRegex = new Regex("[-,;_]");
         public static TableType Parse(string tableType)
         {
-            return FromTableTypeDescriptions(tableType.Split('-').Select(t => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), t)).ToArray());
+            List<string> tableTypeDescriptionStrings = ParseRegex.Split(tableType).ToList();
+
+            return FromTableTypeDescriptions(
+                tableTypeDescriptionStrings
+                    .Select(t => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), t))
+                    .ToArray()
+                );           
         }
 
         public static TableType FromTableTypeDescriptions(params TableTypeDescription [] tableTypeDescriptions)

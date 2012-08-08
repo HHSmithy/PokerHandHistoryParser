@@ -1,0 +1,30 @@
+﻿***** Hand History for Game 11994428655 *****
+$4 USD NL Texas Hold'em - Wednesday, August 08, 18:10:04 EDT 2012
+Table Bern (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 6: Jstecklov9 ( $4.18 USD )
+Seat 3: KAMNELOM ( $4.28 USD )
+Seat 5: Robalao888 ( $4 USD )
+Seat 1: Yvery ( $3.68 USD )
+Seat 4: agaviriat ( $3.97 USD )
+Seat 2: nanocm ( $1.36 USD )
+nanocm posts small blind [$0.02 USD].
+KAMNELOM posts big blind [$0.04 USD].
+** Dealing down cards **
+agaviriat calls [$0.04 USD]
+Robalao888 folds
+Jstecklov9 calls [$0.04 USD]
+Yvery calls [$0.04 USD]
+nanocm folds
+KAMNELOM checks
+** Dealing Flop ** [ 8d, 5c, Ac ]
+KAMNELOM checks
+agaviriat bets [$0.04 USD]
+Jstecklov9 folds
+Yvery calls [$0.04 USD]
+KAMNELOM folds
+** Dealing Turn ** [ Ad ]
+agaviriat bets [$0.08 USD]
+Yvery folds
+agaviriat does not show cards.

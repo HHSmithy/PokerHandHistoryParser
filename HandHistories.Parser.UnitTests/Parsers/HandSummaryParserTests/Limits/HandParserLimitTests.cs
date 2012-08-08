@@ -4,9 +4,9 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 {
-    [TestFixture("PartyPoker", "$0.10-$0.25", "$2-$4", "$25-$50", "$30-$60", "$10-$20")]
+    [TestFixture("PartyPoker", "$0.10-$0.25", "$2-$4", "$25-$50", "$30-$60", "$10-$20", "$0.02-$0.04")]
     [TestFixture("OnGame", "$0.25-$0.25", "$0.25-$0.50", "$5-$10", "$5-$5", "$50-$100")]
-    [TestFixture("PokerStars", "$0.08-$0.16", "$2-$4", "$25-$50", "$30-$60", "$10-$20", "$0.10-$0.25-Ante-$0.05")]
+    [TestFixture("PokerStars", "$0.08-$0.16", "$2-$4", "$25-$50", "$30-$60", "$10-$20")]
     [TestFixture("IPoker", "$0.02-$0.04", "$0.10-$0.20", "$0.50-$1", "$3-$6", "$50-$100")]
     [TestFixture("Pacific", "$1-$2", "$0.02-$0.05", "$500-$1,000", "$5-$10", "$0.50-$1")]
     [TestFixture("Merge", "$0.05-$0.10", "$0.50-$1", "$1-$2", "$5-$10", "$10-$20")]
@@ -23,7 +23,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         }
 
         private void TestTLimit(int limitTestId, string fileName)
-        {           
+        {
+            if (_expectedLimits.Length < limitTestId)
+            {
+                Assert.Ignore("No matching sample hand for Limit test " + fileName);
+            }
+
             string expectedLimitString = _expectedLimits[limitTestId - 1];
 
             TestTLimit(expectedLimitString, fileName);
@@ -32,7 +37,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         private void TestTLimit(string expectedLimitString, string fileName)
         {
             string handText = SampleHandHistoryRepository.GetLimitExampleHandHistoryText(PokerFormat.CashGame, Site, fileName);
-
+            
             Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetSummmaryParser().ParseLimit(handText).ToString(), "IHandHistorySummaryParser: ParseLimit");
             Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetParser().ParseLimit(handText).ToString(), "IHandHistoryParser: ParseLimit");
         }
@@ -42,6 +47,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         [TestCase(3)]
         [TestCase(4)]
         [TestCase(5)]
+        [TestCase(6)]
         public void ParseLimit_Correct(int limitTestId)
         {
             TestTLimit(limitTestId, "Limit" + limitTestId);
@@ -65,7 +71,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 
             // Stars does not contain ante information in the limit so we actually add it once we have parsed all the actions
             string handText = SampleHandHistoryRepository.GetLimitExampleHandHistoryText(PokerFormat.CashGame, Site, "AnteTable");
-            string expectedLimitString = _expectedLimits[6 - 1];
+            string expectedLimitString = "$0.10-$0.25-Ante-$0.05";
             Assert.AreEqual(expectedLimitString, GetParser().ParseFullHandHistory(handText).GameDescription.Limit.ToString(), "IHandHistoryParser: ParseLimit");
         }
 
