@@ -172,22 +172,7 @@ namespace HandHistories.Objects.Cards
         public String CardStringValue
         {
             get  { return _rank + _suit; }
-        }
-
-        public override string ToString()
-        {
-            return CardStringValue;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj.ToString().Equals(ToString());
-        }
-
-        public override int GetHashCode()
-        {
-            return ToString().GetHashCode();
-        }
+        }       
        
         /// <summary>
         /// 2c = 0, 3c = 1, ..., Ac = 12, ..., As = 51. Returns -1 if there was an error with the rank or suit values.
@@ -313,6 +298,26 @@ namespace HandHistories.Objects.Cards
         public static string GetMinimumRank(string rank1, string rank2)
         {
             return GetRankNumericValue(rank1) < GetRankNumericValue(rank2) ? rank1 : rank2;
+        }
+
+        public override string ToString()
+        {
+            return CardStringValue;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            return obj.ToString().Equals(ToString());
+        }
+
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode();
         }
     }
 }
