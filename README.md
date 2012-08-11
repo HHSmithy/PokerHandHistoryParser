@@ -19,6 +19,7 @@ The poker hand-history parser currently supports the following sites:
  * IPoker
  * Merge
  * 888
+ * Entraction
 
 Documentation
 -------------
