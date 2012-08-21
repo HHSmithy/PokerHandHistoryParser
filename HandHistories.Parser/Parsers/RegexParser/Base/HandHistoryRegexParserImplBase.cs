@@ -288,7 +288,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
             if (tableName.StartsWith("Heads Up "))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
 
-            return TableType.FromTableTypeDescriptions(TableTypeDescription.Unknown);
+            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
         }
 
         public abstract Limit ParseLimit(string handText);

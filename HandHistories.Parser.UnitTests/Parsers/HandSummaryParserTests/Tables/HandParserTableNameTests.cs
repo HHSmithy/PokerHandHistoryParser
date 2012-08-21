@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
     [TestFixture("PokerStars", "Podarkes III", "Ancha V", "Spica VI", "Centaurus VIII", "Eulalia Zoom 40-100 bb")]
-    [TestFixture("PartyPoker", "Heads Up #2412772 (No DP)", "Table  194981 (No DP)", "Speed #2356320 (No DP)", "Jackpot #2409628 (No DP)")]
+    [TestFixture("PartyPoker", "Heads Up #2412772 (No DP)", "Table  194981 (No DP)", "Speed #2356320 (No DP)", "Accraé")]
     [TestFixture("OnGame", "[SPEED] Austin [243945479]", "San Marcos [244090560]", "Aleppo [244068606]", "Nijmegen [244308222]")]
     [TestFixture("IPoker", "(Shallow) Vaal (No DP Heads Up), 165636221", "Ambia, 98575671", "Anglicus, 687196931", "Tilsonburg, 51071661")]
     [TestFixture("Pacific", "Oviedo (Real Money)", "Barreiras (Real Money)", "Asmara (Real Money)", "Apatzingan (Real Money)")]

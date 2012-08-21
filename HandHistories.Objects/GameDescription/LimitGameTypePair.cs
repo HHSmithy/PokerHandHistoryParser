@@ -1,10 +1,14 @@
 using System;
+using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
+    [DataContract]
     public class LimitGameTypePair
     {
+        [DataMember]
         public GameType GameType { get; private set; }
+        [DataMember]
         public Limit Limit { get; private set; }
 
         public LimitGameTypePair(Limit limit, GameType gameType)

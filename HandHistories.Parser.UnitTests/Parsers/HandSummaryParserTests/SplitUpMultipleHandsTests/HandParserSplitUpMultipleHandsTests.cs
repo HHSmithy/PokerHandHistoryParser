@@ -54,5 +54,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
 
             TestSplittingUpHands(handText, expectedCount);
         }
+
+        [Test]
+        public void SplitUpMultipleHands_MinerFormat_ReturnsCorrectNumberOfHands()
+        {
+            if (Site != SiteName.IPoker)
+            {
+                Assert.Ignore("No example for site " + Site);
+            }
+
+            string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "MultipleHandsTests", "MinerFormat");
+
+            TestSplittingUpHands(handText, 4);
+        }
     }
 }

@@ -1,0 +1,184 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL €0.05/€0.10</gametype>
+    <tablename>Cratloe, 561649481</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-08-10 19:37:16</startdate>
+    <currency>GBP</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3393107555">
+    <general>
+      <startdate>2012-08-11 03:00:26</startdate>
+      <players>
+        <player seat="1" name="TwoPare" chips="€12.33" dealer="0" win="€0.50" bet="€0.40" rebuy="0" addon="0" />
+        <player seat="3" name="AXYENEN" chips="€9.94" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="5" name="hmurka" chips="€12.71" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="6" name="Chirurg103" chips="€25.19" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="10" name="JohnBignose" chips="€17.95" dealer="0" win="€0" bet="€0.10" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="2" player="TwoPare" type="2" sum="€0.10" cards="[cards]" />
+      <action no="1" player="JohnBignose" type="1" sum="€0.05" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="TwoPare">X X</cards>
+      <action no="7" player="TwoPare" type="23" sum="€0.40" cards="" />
+      <cards type="Pocket" player="AXYENEN">X X</cards>
+      <action no="3" player="AXYENEN" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="hmurka">X X</cards>
+      <action no="4" player="hmurka" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="Chirurg103">X X</cards>
+      <action no="5" player="Chirurg103" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="JohnBignose">X X</cards>
+      <action no="6" player="JohnBignose" type="3" sum="€0.05" cards="" />
+      <action no="8" player="JohnBignose" type="0" sum="€0" cards="" />
+    </round>
+  </game>
+</session>
+<?xml version="1.0" encoding="utf-8"?><session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $1/$2</gametype>
+    <tablename>Dance (No DP 50 bb min), 250570391</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-08-10 23:45:41</startdate>
+    <currency>GBP</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3393107669">
+    <general>
+      <startdate>2012-08-11 03:00:36</startdate>
+      <players>
+        <player seat="1" name="1gino1" chips="$62.68" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="3" name="Polarizando" chips="$107" dealer="1" win="$8" bet="$5" rebuy="0" addon="0" />
+        <player seat="5" name="sookie333" chips="$201.05" dealer="0" win="$0" bet="$1" rebuy="0" addon="0" />
+        <player seat="6" name="CraigPerry" chips="$320.35" dealer="0" win="$0" bet="$2" rebuy="0" addon="0" />
+        <player seat="8" name="highfivelol" chips="$271.95" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+        <player seat="10" name="MuChaCho15" chips="$200" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="sookie333" type="1" sum="$1" cards="[cards]" />
+      <action no="2" player="CraigPerry" type="2" sum="$2" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="1gino1">X X</cards>
+      <action no="5" player="1gino1" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="Polarizando">X X</cards>
+      <action no="6" player="Polarizando" type="23" sum="$5" cards="" />
+      <cards type="Pocket" player="sookie333">X X</cards>
+      <action no="7" player="sookie333" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="CraigPerry">X X</cards>
+      <action no="8" player="CraigPerry" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="highfivelol">X X</cards>
+      <action no="3" player="highfivelol" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="MuChaCho15">X X</cards>
+      <action no="4" player="MuChaCho15" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>
+<?xml version="1.0" encoding="utf-8"?><session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL €10/€20</gametype>
+    <tablename>Mukkekeburen, 655986281</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-08-11 02:17:28</startdate>
+    <currency>GBP</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3393107949">
+    <general>
+      <startdate>2012-08-11 03:00:59</startdate>
+      <players>
+        <player seat="2" name="BlackIsAfeelin" chips="€5,181.50" dealer="1" win="€60" bet="€40" rebuy="0" addon="0" />
+        <player seat="4" name="NutterRutter" chips="€600" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="7" name="w0nkawilly" chips="€2,569" dealer="0" win="€0" bet="€20" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="BlackIsAfeelin" type="1" sum="€10" cards="[cards]" />
+      <action no="2" player="w0nkawilly" type="2" sum="€20" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="BlackIsAfeelin">X X</cards>
+      <action no="3" player="BlackIsAfeelin" type="23" sum="€40" cards="" />
+      <cards type="Pocket" player="w0nkawilly">X X</cards>
+      <action no="4" player="w0nkawilly" type="0" sum="€0" cards="" />
+    </round>
+  </game>
+</session>
+<?xml version="1.0" encoding="utf-8"?><session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL €10/€20</gametype>
+    <tablename>Mukkekeburen, 655986281</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2012-08-11 02:17:28</startdate>
+    <currency>GBP</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+    <is_asian>0</is_asian>
+  </general>
+  <game gamecode="3393108099">
+    <general>
+      <startdate>2012-08-11 03:01:10</startdate>
+      <players>
+        <player seat="2" name="BlackIsAfeelin" chips="€5,201.50" dealer="0" win="€0" bet="€20" rebuy="0" addon="0" />
+        <player seat="4" name="NutterRutter" chips="€600" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="7" name="w0nkawilly" chips="€2,549" dealer="1" win="€60" bet="€40" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="2" player="BlackIsAfeelin" type="2" sum="€20" cards="[cards]" />
+      <action no="1" player="w0nkawilly" type="1" sum="€10" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="BlackIsAfeelin">X X</cards>
+      <action no="4" player="BlackIsAfeelin" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="w0nkawilly">X X</cards>
+      <action no="3" player="w0nkawilly" type="23" sum="€40" cards="" />
+    </round>
+  </game>
+</session>

@@ -97,8 +97,14 @@
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Utils\IO\IFileReader.cs" />
     <Compile Include="Utils\IO\WindowsFileReaderImpl.cs" />
+    <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\MinerFormat.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\Limits\Limit6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

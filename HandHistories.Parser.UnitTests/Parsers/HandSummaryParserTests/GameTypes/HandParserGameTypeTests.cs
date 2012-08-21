@@ -39,6 +39,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         }
 
         [Test]
+        public void ParseGameType_ParsesPotLimitOmaha()
+        {
+            TestGameType(GameType.PotLimitOmaha);
+        }
+
+
+        [Test]
         public void ParseGameType_ParsesFixedLimitOmahaHiLo()
         {
             if (Site != SiteName.Entraction)
@@ -123,20 +130,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
 
             TestGameType(GameType.NoLimitOmahaHiLo);
         }
-
-        [Test]
-        public void ParseGameType_ParsesPotLimitOmaha()
-        {
-            switch (Site)
-            {         
-                //case SiteName.Pacific:
-                //    Assert.Ignore(Site + " has no examples of PLO games.");
-                //    break;
-            }            
-
-            TestGameType(GameType.PotLimitOmaha);
-        }
-
+        
         [Test]
         public void ParseGameType_ParsesPotLimitOmahaHiLo()
         {
@@ -151,6 +145,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             }
 
             TestGameType(GameType.PotLimitOmahaHiLo);
+        }
+
+        [Test]
+        public void ParseGameType_ParsesFiveCardPotLimitOmaha()
+        {
+            if (Site != SiteName.Entraction)
+            {
+                Assert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
+            }
+
+            TestGameType(GameType.FiveCardPotLimitOmaha);
         }
     }
 }

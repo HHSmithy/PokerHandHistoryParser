@@ -120,7 +120,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 string secondString = dateString.Substring(12, 2);
 
                 return new DateTime(Int32.Parse(yearString), Int32.Parse(monthString), Int32.Parse(dayString),
-                                    Int32.Parse(hourString), Int32.Parse(minuteString), Int32.Parse(secondString));                
+                                    Int32.Parse(hourString), Int32.Parse(minuteString), Int32.Parse(secondString));
             }
             else
             {
@@ -132,7 +132,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 string secondString = dateString.Substring(17, 2);
 
                 return new DateTime(Int32.Parse(yearString), Int32.Parse(monthString), Int32.Parse(dayString),
-                                    Int32.Parse(hourString), Int32.Parse(minuteString), Int32.Parse(secondString));                                
+                                    Int32.Parse(hourString), Int32.Parse(minuteString), Int32.Parse(secondString));
             }
         }
 
@@ -147,7 +147,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 {
                     return long.Parse(match.Value.Replace("-", ""));
                 }
-            }            
+            }
 
             throw new HandIdException(handLines[1], "Couldn't find handid");
         }
@@ -167,7 +167,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
         protected override SeatType ParseSeatType(string[] handLines)
         {
             XDocument document = GetXDocumentFromLines(handLines);
-            
+
             int numPlayers = GetPlayersElementFromXDocument(document).Elements().Count();
 
             if (numPlayers <= 2)
@@ -183,9 +183,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 return SeatType.FromMaxPlayers(9);
             }
 
-            return SeatType.FromMaxPlayers(10);  
+            return SeatType.FromMaxPlayers(10);
         }
-        
+
         protected override GameType ParseGameType(string[] handLines)
         {
             string gameTypeLine = handLines[0].TrimStart();
@@ -285,7 +285,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 case "END_OF_FOLDED_GAME":
                 case "END_OF_GAME":
                 case "SHOWDOWN":
-                    return Street.Showdown;                    
+                    return Street.Showdown;
                 default:
                     throw new Exception(string.Format("Unknown round ID: {0}", roundId));
             }
@@ -313,7 +313,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 {
                     HandAction action = GetHandActionFromEventElement(eventElement, currentStreet, playerList);
                     actions.Add(action);
-                }                    
+                }
             }
 
             List<XElement> winnerElements = gameElement.Elements("round").Elements("winner").ToList();
@@ -334,7 +334,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
             Player matchingPlayer = GetPlayerBySeatId(playerList, winnerSeatId);
 
-            return new WinningsAction(matchingPlayer.PlayerName, HandActionType.WINS, amount, potNumber, Int32.MaxValue);            
+            return new WinningsAction(matchingPlayer.PlayerName, HandActionType.WINS, amount, potNumber, Int32.MaxValue);
         }
 
         private Player GetPlayerBySeatId(PlayerList playerList, int seatId)
@@ -354,26 +354,49 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             return matchingPlayer;
         }
 
+        private Player GetPlayerByName(PlayerList playerList, string playerName)
+        {
+            Player matchingPlayer = playerList.FirstOrDefault(player => player.PlayerName.Equals(playerName));
+
+            if (matchingPlayer == null)
+            {
+                throw new Exception(string.Format("No player corresponding with name {0}", playerName));
+            }
+
+            return matchingPlayer;
+
+        }
+
         private HandAction GetHandActionFromEventElement(XElement eventElement, Street currentStreet, PlayerList playerList)
         {
             string actionString = eventElement.Attribute("type").Value;
-            int actionNumber = Int32.Parse(eventElement.Attribute("sequence").Value);            
+            int actionNumber = Int32.Parse(eventElement.Attribute("sequence").Value);
             decimal value = 0;
             if (eventElement.Attribute("amount") != null)
             {
                 value = decimal.Parse(eventElement.Attribute("amount").Value);
             }
 
-            int seatId = -1;
+
+            Player matchingPlayer = GetPlayerBySeatId(playerList, -1);
             if (eventElement.Attribute("player") != null)
             {
-                seatId = Int32.Parse(eventElement.Attribute("player").Value);
+                string playerValue = eventElement.Attribute("player").Value;
+
+                if (playerValue.Length > 1)
+                {
+                    matchingPlayer = GetPlayerByName(playerList, playerValue);
+                }
+                else
+                {
+                    int seatId = Int32.Parse(playerValue);
+                    matchingPlayer = GetPlayerBySeatId(playerList, seatId);
+                }
+
             }
 
-            Player matchingPlayer = GetPlayerBySeatId(playerList, seatId);
-                      
             string playerName = matchingPlayer.PlayerName;
-            
+
             HandActionType actionType;
             switch (actionString)
             {
@@ -385,6 +408,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                     break;
                 case "BIG_BLIND":
                     actionType = HandActionType.BIG_BLIND;
+                    break;
+                case "RETURN_BLIND":
+                    actionType = HandActionType.RETURNED;
                     break;
                 case "INITIAL_BLIND":
                     actionType = HandActionType.POSTS;
@@ -422,6 +448,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 case "RABBIT":
                     actionType = HandActionType.RABBIT;
                     break;
+                case "CHAT":
+                    actionType = HandActionType.CHAT;
+                    break;
                 default:
                     throw new Exception(string.Format("Encountered unknown Action Type: {0} w/ line \r\n{1}", actionString, eventElement));
             }
@@ -443,7 +472,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             foreach (XElement playerElement in players.Elements())
             {
                 //Player Element looks like:
-             	//<player seat="0" nickname="GODEXISTSJK" balance="$269.96" dealtin="true" />
+                //<player seat="0" nickname="GODEXISTSJK" balance="$269.96" dealtin="true" />
                 decimal stack = decimal.Parse(playerElement.Attribute("balance").Value.Substring(1));
                 string playerName = playerElement.Attribute("nickname").Value;
                 int seat = Int32.Parse(playerElement.Attribute("seat").Value);
@@ -476,12 +505,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
             //Find the last <card> element with type="community". This will have our board card list as its cards attribute value
             XElement lastCardElement = cardElements.LastOrDefault(element => element.Attribute("type").Value.StartsWith("C"));
-            
+
             if (lastCardElement == null)
             {
                 return BoardCards.ForPreflop();
             }
-            
+
             string boardCards = lastCardElement.Attribute("cards").Value;
 
             return BoardCards.FromCards(boardCards);

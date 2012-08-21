@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
-    [TestFixture("PartyPoker", "Regular", "Regular", "Speed", "Jackpot")]
+    [TestFixture("PartyPoker", "Regular", "Regular", "Speed", "Regular")]
     [TestFixture("PokerStars", "Regular", "Regular", "Regular", "Regular", "Zoom")]
     [TestFixture("OnGame", "Speed", "Regular", "Regular", "Regular")]
     [TestFixture("IPoker", "Shallow", "Regular", "Regular", "Regular")]

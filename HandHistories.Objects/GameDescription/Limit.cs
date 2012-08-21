@@ -13,13 +13,7 @@ namespace HandHistories.Objects.GameDescription
         }
 
         private Limit(decimal smallBlind, decimal bigBlind, Currency currency, bool isAnteTable, decimal ante)
-        {
-            // Hardcoded fix on 4/12. Remove once PokerCollectiveWCF and old stack is removed.
-            if (bigBlind == 0.25m && smallBlind != 0.25m)
-            {
-                smallBlind = 0.10m;
-            }
-
+        {           
             Currency = currency;
             SmallBlind = smallBlind;
             BigBlind = bigBlind;
@@ -43,7 +37,7 @@ namespace HandHistories.Objects.GameDescription
         {
             if (limitEnum == LimitEnum.Any)
             {
-                return new Limit(0, 0, Currency.USD, isAnteTable, anteAmount);
+                return new Limit(0, 0, Currency.All, isAnteTable, anteAmount);
             }
 
             string smallBlindString = limitEnum.ToString().Split('_')[1].Replace("c", "");
@@ -134,17 +128,34 @@ namespace HandHistories.Objects.GameDescription
             return limitEnum;
         }        
 
-        public string ToDbSafeString()
+        public string ToDbSafeString(bool skipCurrency = false)
         {
+            if (GetLimitEnum() == LimitEnum.Any)
+            {
+                return "Any";
+            }
+
             string anteString = (IsAnteTable)
                                     ? string.Format("-Ante{0}", (int) (Ante*100))
                                     : string.Empty;                
 
-            return string.Format("L{0}c-{1}c{3}-{2}", (int)(SmallBlind * 100), (int)(BigBlind * 100), Currency, anteString);
+            string limit = string.Format("L{0}c-{1}c{2}", (int)(SmallBlind * 100), (int)(BigBlind * 100), anteString);
+
+            if (skipCurrency == false)
+            {
+                limit = limit + "-" + Currency;
+            }
+
+            return limit;
         }
 
         public static Limit ParseDbSafeString(string limitString)
         {
+            if (limitString == "Any")
+            {
+                return Limit.AllLimit();
+            }
+
             string[] split = limitString.Replace("Ante", "").Replace("L", "").Replace("c", "").Split('-');
 
             decimal smallBlind = Int32.Parse(split[0])/100.0m;
@@ -156,6 +167,11 @@ namespace HandHistories.Objects.GameDescription
             Currency currency = (Currency) Enum.Parse(typeof (Currency), currencyString);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, currency, ante != 0, ante);
+        }
+
+        public static Limit AllLimit()
+        {
+            return FromSmallBlindBigBlind(0, 0, Currency.All);
         }
 
         public override string ToString()
@@ -194,11 +210,6 @@ namespace HandHistories.Objects.GameDescription
         public override int GetHashCode()
         {
             return ToString().GetHashCode();
-        }
-
-        public static bool TryParse(string limit, out LimitEnum limitEnum)
-        {            
-            return Enum.TryParse(limit, out limitEnum);
         }
     }
 }

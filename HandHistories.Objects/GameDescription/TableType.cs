@@ -28,6 +28,7 @@ namespace HandHistories.Objects.GameDescription
             return FromTableTypeDescriptions(
                 tableTypeDescriptionStrings
                     .Select(t => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), t))
+                    .Distinct()
                     .ToArray()
                 );           
         }
