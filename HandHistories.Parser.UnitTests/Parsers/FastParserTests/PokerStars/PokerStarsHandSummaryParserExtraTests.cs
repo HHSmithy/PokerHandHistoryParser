@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.UnitTests.Parsers.Base;
@@ -167,6 +170,76 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             HandHistory actualHand = TestFullHandHistory(expectedHand, "ShowsDownSingleCard");
 
             Assert.AreEqual(string.Empty, actualHand.Players["Zaza5573"].HoleCards.ToString());
+        }
+
+        [Test]
+        public void MucksHand()
+        {
+            HandHistory expectedHand = new HandHistory()
+            {
+                GameDescription = new GameDescriptor()
+                {
+                    PokerFormat = PokerFormat.CashGame,
+                    GameType = GameType.PotLimitOmahaHiLo,
+                    Limit = Limit.FromSmallBlindBigBlind(0.05m, 0.10m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
+                    Site = SiteName.PokerStars,
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
+                },
+                DateOfHandUtc = new DateTime(2012, 9, 11, 7, 51, 48),
+                DealerButtonPosition = 4,
+                HandId = 86008517721,
+                NumPlayersSeated = 6,
+                TableName = "Muscida V 40-100 bb"
+            };
+
+            HandHistory actualHand = TestFullHandHistory(expectedHand, "MucksHand");
+        }
+
+        [Test]
+        public void PlayerNameWithSlashesAndSquareBrackets()
+        {
+            HandHistory expectedHand = new HandHistory()
+            {
+                GameDescription = new GameDescriptor()
+                {
+                    PokerFormat = PokerFormat.CashGame,
+                    GameType = GameType.CapNoLimitHoldem,
+                    Limit = Limit.FromSmallBlindBigBlind(0.25m, 0.50m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
+                    Site = SiteName.PokerStars,
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
+                },
+                DateOfHandUtc = new DateTime(2012, 9, 11, 12, 39, 12),
+                DealerButtonPosition = 3,
+                HandId = 86015904171,
+                NumPlayersSeated = 4,
+                TableName = "Acamar IV CAP, Fast,20-50 bb"
+            };
+
+            var expectedActions = new List<HandAction>()
+                {
+                    new HandAction("vitinja", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("/\\ntiHer[]", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                    new HandAction("Catharina111", HandActionType.CALL, 0.50m, Street.Preflop),
+                    new HandAction("Willo2319", HandActionType.CALL, 0.50m, Street.Preflop),
+                    new HandAction("vitinja", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0, Street.Preflop),
+                     new HandAction("/\\ntiHer[]", HandActionType.BET, 1, Street.Flop),
+                    new HandAction("Catharina111", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("Willo2319", HandActionType.CALL, 1m, Street.Flop),
+                    new HandAction("/\\ntiHer[]", HandActionType.BET, 1.50m, Street.Turn),
+                    new HandAction("Willo2319", HandActionType.CALL, 1.50m, Street.Turn),
+                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0m, Street.River),
+                    new HandAction("Willo2319", HandActionType.CHECK, 0m, Street.River),
+                    new HandAction("/\\ntiHer[]", HandActionType.SHOW, 0m, Street.Showdown),
+                     new HandAction("Willo2319", HandActionType.SHOW, 0m, Street.Showdown),
+                    new WinningsAction("Willo2319", HandActionType.WINS, 6.45m, 0),                               
+                };
+
+            HandHistory actualHand = TestFullHandHistory(expectedHand, "PlayerNameWithSlashesAndSquareBrackets");
+
+            Assert.AreEqual(expectedActions, actualHand.HandActions);
         }
     }
 }

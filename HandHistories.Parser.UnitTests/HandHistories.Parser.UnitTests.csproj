@@ -570,6 +570,12 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\NoLimitOmaha.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\MucksHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\PlayerNameWithSlashesAndSquareBrackets.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\ShowsDownSingleCard.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

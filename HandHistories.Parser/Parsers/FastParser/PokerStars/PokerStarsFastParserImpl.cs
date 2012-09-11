@@ -475,7 +475,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         {            
             // if the game type is PLO HiLo can get colons like this after the Hi
             //  DOT19: shows [As 8h Ac Kd] (HI: two pair, Aces and Sixes)            
-            if (gameType == GameType.PotLimitOmahaHiLo)
+            if (gameType == GameType.PotLimitOmahaHiLo &&
+                actionLine.Count(c => c == ':') > 1)
             {
                 int lastColon = actionLine.LastIndexOf(':');
                 colonIndex = actionLine.Remove(lastColon - 1).LastIndexOf(':');
@@ -763,7 +764,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     continue;
                 }
 
-                int firstSquareBracket = line.IndexOf('[', 6);
+                int firstSquareBracket = line.LastIndexOf('[');
 
                 if (firstSquareBracket == -1)
                 {
