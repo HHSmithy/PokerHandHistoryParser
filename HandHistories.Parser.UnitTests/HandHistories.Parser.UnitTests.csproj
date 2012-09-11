@@ -570,6 +570,9 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\NoLimitOmaha.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\SidePot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\TableNameWithDash.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

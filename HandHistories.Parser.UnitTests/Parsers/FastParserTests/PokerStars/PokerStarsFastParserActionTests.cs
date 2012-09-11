@@ -163,6 +163,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             Assert.AreEqual(new HandAction("woeze lenpip", HandActionType.UNCALLED_BET, 6, Street.Preflop), handAction);
         }
+      
+        [Test]
+        public void ParseCollectedLine_WithSidePot_Works()
+        {
+            HandAction handAction =
+                GetPokerStarsFastParser().ParseCollectedLine(@"templargio collected €6.08 from side pot-2", Street.Preflop);
+
+            Assert.AreEqual(new WinningsAction("templargio", HandActionType.WINS_SIDE_POT, 6.08m, 2), handAction);
+        }
 
         [Test]
         public void ParseCollectedLine_Works()

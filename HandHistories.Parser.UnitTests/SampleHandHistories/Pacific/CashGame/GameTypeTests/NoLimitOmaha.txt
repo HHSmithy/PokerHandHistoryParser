@@ -1,0 +1,17 @@
+﻿#Game No : 184089742
+***** Cassava Hand History for Game 184089742 *****
+$25/$50 Blinds No Limit Omaha - *** 16 07 2012 17:45:39
+Table Goiania (Real Money)
+Seat 7 is the button
+Total number of players : 2
+Seat 6: azartists ( $2,141 )
+Seat 7: cuthroateddy ( $4,744.48 )
+cuthroateddy posts small blind [$25]
+azartists posts big blind [$50]
+** Dealing down cards **
+cuthroateddy raises [$75]
+azartists raises [$2,091]
+cuthroateddy folds
+** Summary **
+azartists did not show his hand
+azartists collected [ $200 ]

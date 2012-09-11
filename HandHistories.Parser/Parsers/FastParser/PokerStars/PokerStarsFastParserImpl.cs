@@ -391,10 +391,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             if (currentStreet == Street.Showdown ||
                 colonIndex == -1)
             {                                
-                if (line[line.Length - 1] == 't')
+                if (line[line.Length - 1] == 't' ||
+                     line[line.Length - 2] == '-')
                 {
                     // woezelenpip collected $7.50 from pot
-                    if (line[line.Length - 3] == 'p')
+                    // templargio collected €6.08 from side pot-2 
+                    if (line[line.Length - 3] == 'p' ||
+                        line[line.Length - 2] == '-')
                     {
                         currentStreet = Street.Showdown;
                         handActions.Add(ParseCollectedLine(line, currentStreet));

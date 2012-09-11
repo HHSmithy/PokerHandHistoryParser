@@ -1,0 +1,44 @@
+﻿#Game No : 273164789
+***** Cassava Hand History for Game 273164789 *****
+$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 21:51:47
+Table Algiers (Real Money)
+Seat 5 is the button
+Total number of players : 9
+Seat 1: Hanno32 ( $38.10 )
+Seat 2: bystry1989 ( $106.38 )
+Seat 4: kdesaram ( $92.37 )
+Seat 5: stan031 ( $102.64 )
+Seat 6: Daikatana7 ( $36 )
+Seat 7: tezloz ( $92.40 )
+Seat 8: dix.xie ( $101.19 )
+Seat 9: FoldOrBeBust ( $111.41 )
+Seat 10: ChkMyNutOuts ( $103.58 )
+Daikatana7 posts small blind [$0.50]
+tezloz posts big blind [$1]
+** Dealing down cards **
+dix.xie calls [$1]
+FoldOrBeBust folds
+ChkMyNutOuts raises [$4.50]
+Hanno32 folds
+bystry1989 calls [$4.50]
+kdesaram folds
+stan031 folds
+Daikatana7 folds
+tezloz calls [$3.50]
+dix.xie calls [$3.50]
+** Dealing flop ** [ 3s, 9h, 8s ]
+tezloz checks
+dix.xie checks
+ChkMyNutOuts checks
+bystry1989 checks
+** Dealing turn ** [ 3d ]
+tezloz bets [$7]
+dix.xie calls [$7]
+ChkMyNutOuts folds
+bystry1989 folds
+** Dealing river ** [ 2s ]
+tezloz bets [$32.50]
+dix.xie calls [$32.50]
+** Summary **
+tezloz shows [ 9s, 9d ]
+dix.xie mucks [ Js, Ks ]

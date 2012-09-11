@@ -1,0 +1,15 @@
+﻿#Game No : 273115079
+***** Cassava Hand History for Game 273115079 *****
+$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 13:16:56
+Table Asmara (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: ThrCnBeOnly1 ( $15,740 )
+Seat 2: Trueteller ( $25,475 )
+Seat 4: LimitPot ( $9,495 )
+Trueteller folds
+LimitPot posts small blind [$500]
+ThrCnBeOnly1 folds
+** Summary **
+LimitPot did not show his hand
+LimitPot collected [ $500 ]

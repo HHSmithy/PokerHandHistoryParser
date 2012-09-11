@@ -1,0 +1,16 @@
+﻿#Game No : 438238654
+***** Cassava Hand History for Game 438238654 *****
+$1/$2 Blinds Fix Limit Holdem - *** 30 05 2012 23:41:33
+Table Arapiraca (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: FOTOREGIME ( $71.60 )
+Seat 7: kingken14 ( $82.05 )
+FOTOREGIME posts small blind [$1]
+kingken14 posts big blind [$2]
+** Dealing down cards **
+FOTOREGIME raises [$3]
+kingken14 folds
+** Summary **
+FOTOREGIME did not show his hand
+FOTOREGIME collected [ $4 ]
