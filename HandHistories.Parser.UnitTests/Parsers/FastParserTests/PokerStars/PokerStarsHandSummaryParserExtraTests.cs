@@ -13,11 +13,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         {
         }
 
-        private void TestFullHandHistory(HandHistory expectedHand, string fileName)
+        private HandHistory TestFullHandHistory(HandHistory expectedHand, string fileName)
         {
             string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "ExtraHands", fileName);
 
-            HandHistorySummary actualHand = GetParser().ParseFullHandHistory(handText, true);
+            HandHistory actualHand = GetParser().ParseFullHandHistory(handText, true);
 
             Assert.AreEqual(expectedHand.GameDescription, actualHand.GameDescription);
             Assert.AreEqual(expectedHand.DealerButtonPosition, actualHand.DealerButtonPosition);
@@ -25,9 +25,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             Assert.AreEqual(expectedHand.HandId, actualHand.HandId);
             Assert.AreEqual(expectedHand.NumPlayersSeated, actualHand.NumPlayersSeated);
             Assert.AreEqual(expectedHand.TableName, actualHand.TableName);
+
+            return actualHand;
         }
 
-        private void TestFullHandHistorySummary(HandHistorySummary expectedSummary, string fileName)
+        private HandHistorySummary TestFullHandHistorySummary(HandHistorySummary expectedSummary, string fileName)
         {
             string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "ExtraHands", fileName);
 
@@ -39,6 +41,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             Assert.AreEqual(expectedSummary.HandId, actualSummary.HandId);
             Assert.AreEqual(expectedSummary.NumPlayersSeated, actualSummary.NumPlayersSeated);
             Assert.AreEqual(expectedSummary.TableName, actualSummary.TableName);
+
+            return actualSummary;
         }
 
         // Issue with names with colons in
@@ -140,27 +144,29 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         }
 
         [Test]
-        public void SidePot()
+        public void ShowsDownSingleCard()
         {
             HandHistory expectedHand = new HandHistory()
             {
                 GameDescription = new GameDescriptor()
                 {
                     PokerFormat = PokerFormat.CashGame,
-                    GameType = GameType.NoLimitHoldem,
-                    Limit = Limit.FromSmallBlindBigBlind(0.05m, 0.10m, Currency.EURO),
-                    SeatType = SeatType.FromMaxPlayers(9),
+                    GameType = GameType.FixedLimitHoldem,
+                    Limit = Limit.FromSmallBlindBigBlind(1m, 2m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
                     Site = SiteName.PokerStars,
                     TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
                 },
-                DateOfHandUtc = new DateTime(2012, 9, 10, 23, 43, 58),
-                DealerButtonPosition = 9,
-                HandId = 85998509763,
-                NumPlayersSeated = 8,
-                TableName = "Rarahu IV Fast,40-100 bb"
+                DateOfHandUtc = new DateTime(2012, 9, 11, 4, 15, 11),
+                DealerButtonPosition = 1,
+                HandId = 86005187865,
+                NumPlayersSeated = 6,
+                TableName = "Stavropolis III 40-100 bb"
             };
 
-            TestFullHandHistory(expectedHand, "SidePot");
+            HandHistory actualHand = TestFullHandHistory(expectedHand, "ShowsDownSingleCard");
+
+            Assert.AreEqual(string.Empty, actualHand.Players["Zaza5573"].HoleCards.ToString());
         }
     }
 }

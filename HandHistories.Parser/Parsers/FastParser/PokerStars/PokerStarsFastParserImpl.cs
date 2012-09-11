@@ -770,6 +770,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     continue;
                 }
 
+                // can show single cards:
+                // Zaza5573: shows [Qc]
+                if (line[firstSquareBracket + 3] == ']')
+                {
+                    continue;
+                }
+
                 int lastSquareBracket = line.IndexOf(']', firstSquareBracket + 5);
 
                 string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
