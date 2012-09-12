@@ -778,10 +778,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     continue;
                 }
 
-                int lastSquareBracket = line.IndexOf(']', firstSquareBracket + 5);
+                int lastSquareBracket = line.LastIndexLoopsBackward(']', line.Length - 1);
+                int colonIndex = line.LastIndexLoopsBackward(':', lastSquareBracket);
+
+                if (colonIndex == -1)
+                {
+                    // players with [ in their name
+                    // [PS_UA]Tarik collected $18.57 from pot
+                    continue;
+                }
+
+                string playerName = line.Substring(0, colonIndex);
 
                 string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
-                string playerName = line.Substring(0, line.LastIndexLoopsBackward(':', lastSquareBracket));
+                
 
                 playerList[playerName].HoleCards = HoleCards.FromCards(cards);
             }
