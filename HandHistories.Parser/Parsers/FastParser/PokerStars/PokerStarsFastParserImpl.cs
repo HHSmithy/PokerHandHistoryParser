@@ -318,7 +318,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         /// <param name="handActions"></param>
         /// <returns>True if we have reached the end of the action block.</returns>
         private bool ParseLine(string line, GameType gameType, ref Street currentStreet, ref List<HandAction> handActions)
-        {            
+        {
+            if (line.Contains(" said, "))
+            {
+                return false;
+            }
+
             if (line[0] == '*') // lines with a * are either board cards, hole cards or summary info
             {
                 char typeOfEventChar = line[4];
@@ -749,6 +754,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             for (int lineNumber = lastLineRead + 1; lineNumber < handLines.Length - 1; lineNumber++)
             {
                 string line = handLines[lineNumber];
+
+                // Skip chat lines
+                if (line.Contains(" said, "))
+                {
+                    continue;                    
+                }
+
                 if (line.StartsWith(@"*** SUM"))
                 {
                     break;
