@@ -14,6 +14,7 @@ Site Support
 The poker hand-history parser currently supports the following sites:
 
  * Poker Stars (.com / .fr / .it)
+ * Full Tilt Poker
  * Party Poker
  * On Game (.com / .fr / .it)
  * IPoker
