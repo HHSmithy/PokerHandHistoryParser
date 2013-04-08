@@ -3,6 +3,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Compression;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser.Entraction;
+using HandHistories.Parser.Parsers.FastParser.FullTiltPoker;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
 using HandHistories.Parser.Parsers.FastParser.Merge;
 using HandHistories.Parser.Parsers.FastParser.OnGame;
@@ -26,15 +27,16 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.PartyPoker:
                     return new PartyHandHistoryRegexParserImpl();
                 case SiteName.PokerStars:
-                    return new PokerStarsFastParserImpl();
                 case SiteName.PokerStarsFr:
-                    return new PokerStarsFastParserImpl(SiteName.PokerStarsFr);
                 case SiteName.PokerStarsIt:
-                    return new PokerStarsFastParserImpl(SiteName.PokerStarsIt);
+                case SiteName.PokerStarsEs:
+                    return new PokerStarsFastParserImpl(siteName);
                 case SiteName.Merge:
                     return new MergeFastParserImpl();
                 case SiteName.IPoker:
                     return new IPokerFastParserImpl();
+                case SiteName.IPoker2:
+                    return new IPokerFastParserImpl(true);
                 case SiteName.OnGame:
                     return new OnGameFastParserImpl();
                 case SiteName.OnGameFr:
@@ -45,6 +47,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new Poker888FastParserImpl();
                 case SiteName.Entraction:
                     return new EntractionFastParserImpl();
+                case SiteName.FullTilt:
+                    return new FullTiltPokerFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No full regex parser for " + siteName);
             }
@@ -59,11 +63,14 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
+                case SiteName.PokerStarsEs:
                     return GetFullHandHistoryParser(siteName);
                 case SiteName.Merge:
                     return new MergeFastParserImpl();
                 case SiteName.IPoker:
                     return new IPokerFastParserImpl();
+                case SiteName.IPoker2:
+                    return new IPokerFastParserImpl(true);
                 case SiteName.Pacific:
                     return new Poker888FastParserImpl();
                 case SiteName.Entraction:
@@ -73,7 +80,9 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.OnGameFr:
                     return new OnGameFastParserImpl(SiteName.OnGameFr);
                 case SiteName.OnGameIt:
-                    return new OnGameFastParserImpl(SiteName.OnGameIt);    
+                    return new OnGameFastParserImpl(SiteName.OnGameIt);
+                case SiteName.FullTilt:
+                    return new FullTiltPokerFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No summary regex parser for " + siteName);
             }

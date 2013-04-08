@@ -65,6 +65,7 @@
     <Compile Include="Compression\IHandHistoryCompressor.cs" />
     <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
+    <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
     <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />
     <Compile Include="Parsers\Factory\IHandHistoryParserFactory.cs" />

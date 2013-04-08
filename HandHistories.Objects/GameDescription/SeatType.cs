@@ -115,6 +115,7 @@ namespace HandHistories.Objects.GameDescription
                 case "6max":
                 case "6":
                 case "6 handed":
+                case "3to6":
                     return SeatType.FromMaxPlayers(6);
                 case "7":
                 case "7 handed":

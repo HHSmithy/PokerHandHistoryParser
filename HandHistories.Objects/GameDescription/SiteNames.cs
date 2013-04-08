@@ -20,12 +20,14 @@ namespace HandHistories.Objects.GameDescription
         PokerStarsFr = 15,
         PokerStarsIt = 16,
         PartyPokerFr = 17,
-        PartyPokerIt = 18,
+        PartyPokerIt = 18,       
         OnGameIt = 19,
         OnGameFr = 20,
         IPokerIt = 21,
         IPokerFr = 22,
         Pacific = 23, // This is 888
+        IPoker2 = 24,
+        PokerStarsEs = 25,
         All = 63 // note: can't go higher than 63 due to bit value optimizations
     }
 }

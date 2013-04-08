@@ -12,6 +12,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
     [TestFixture("Entraction")]
     [TestFixture("IPoker")]
     [TestFixture("Merge")]
+    [TestFixture("FullTilt")]
     internal class HandParserSplitUpMultipleHandsTests : HandHistoryParserBaseTests
     {
         public HandParserSplitUpMultipleHandsTests(string site)

@@ -64,22 +64,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             return playersElement;
         }
 
-        private static readonly Regex HeaderRegex = new Regex("<description.*/>", RegexOptions.Compiled);
-        private static readonly Regex GameGroupRegex = new Regex("<game.*?game>", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.Multiline);
+        private static readonly Regex DescriptionGameRegex = new Regex("(<description.*?</game>)|(<game.*?</game>)", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.Multiline);
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            //Remove XML headers if necessary 
-            rawHandHistories = rawHandHistories.Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n", "");
-
-            //This code will grab the description tag and attack it to each individual history - the description tag is needed
-            //since it contains information like limit and game type.
-
-            string descriptionTag = HeaderRegex.Match(rawHandHistories).Value;
-
-            MatchCollection gameMatches = GameGroupRegex.Matches(rawHandHistories);
+            MatchCollection gameMatches = DescriptionGameRegex.Matches(rawHandHistories);
             foreach (Match gameMatch in gameMatches)
             {
-                string fullGameString = descriptionTag + "\r\n" + gameMatch.Value + "\r\n";
+                string fullGameString = gameMatch.Value + "\r\n";
                 yield return fullGameString;
             }
         }

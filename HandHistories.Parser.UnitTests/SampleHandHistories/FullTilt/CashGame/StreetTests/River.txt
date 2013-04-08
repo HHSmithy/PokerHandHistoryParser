@@ -1,0 +1,35 @@
+﻿
+Full Tilt Poker Game #26876239869: Table GiftAndTheCurse (6 max) - $100/$200 - Limit Hold'em - 09:28:18 ET - 2011/01/01
+Seat 1: bananas on way ($9,448)
+Seat 2: skillgamblin ($2,846)
+Seat 5: Umumba ($3,749)
+Seat 6: Simpiwe ($5,288)
+Umumba posts the small blind of $50
+Simpiwe posts the big blind of $100
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+bananas on way folds
+skillgamblin folds
+Umumba raises to $200
+Simpiwe calls $100
+*** FLOP *** [5d Ks 7c]
+Umumba bets $100
+Simpiwe calls $100
+*** TURN *** [5d Ks 7c] [Jc]
+Umumba checks
+Simpiwe checks
+*** RIVER *** [5d Ks 7c Jc] [7d]
+Umumba checks
+Simpiwe checks
+*** SHOW DOWN ***
+Umumba shows [Ts Kc] a pair of Nines
+Simpiwe shows [Ks Qh] a pair of Nines
+Simpiwe wins the pot ($598) with a pair of Nines
+*** SUMMARY ***
+Total pot $600 | Rake $2
+Board: [5d Ks 7c Jc 7d]
+Seat 1: bananas on way didn't bet (folded)
+Seat 2: skillgamblin (button) didn't bet (folded)
+Seat 5: Umumba (small blind) showed [Ts Kc] and lost with a pair of Nines
+Seat 6: Simpiwe (big blind) showed [Ks Qh] and won ($598) with a pair of Nines

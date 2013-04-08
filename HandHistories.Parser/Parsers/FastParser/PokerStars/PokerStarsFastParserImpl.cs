@@ -35,7 +35,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             _siteName = siteName;
         }
 
-        private static readonly Regex HandSplitRegex = new Regex("(PokerStars Game #)|(PokerStars Hand #)", RegexOptions.Compiled);
+        private static readonly Regex HandSplitRegex = new Regex("(PokerStars Game #)|(PokerStars Hand #)|(PokerStars Zoom Hand #)", RegexOptions.Compiled);
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {

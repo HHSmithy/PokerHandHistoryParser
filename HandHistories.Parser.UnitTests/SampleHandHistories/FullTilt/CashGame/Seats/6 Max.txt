@@ -1,0 +1,43 @@
+﻿Full Tilt Poker Game #26862497927: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:10:54 ET - 2010/12/31
+Seat 1: CardBluff ($89.20)
+Seat 2: 20KJAY ($43.70)
+Seat 3: lilslikster ($61.05)
+Seat 4: ljfe ($20)
+Seat 5: Darkking_pt ($80.35)
+Seat 6: silvafox39 ($42.45)
+lilslikster posts the small blind of $0.50
+ljfe posts the big blind of $1
+5 seconds left to act
+CardBluff has been disconnected
+Time has expired
+CardBluff is sitting out
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+Darkking_pt folds
+silvafox39 folds
+20KJAY folds
+lilslikster calls $0.50
+ljfe checks
+*** FLOP *** [9c 8d 7c]
+lilslikster bets $2
+ljfe calls $2
+*** TURN *** [9c 8d 7c] [6c]
+lilslikster bets $2
+ljfe calls $2
+*** RIVER *** [9c 8d 7c 6c] [Tc]
+lilslikster has 15 seconds left to act
+CardBluff has reconnected
+lilslikster bets $5
+ljfe raises to $15, and is all in
+lilslikster folds
+Uncalled bet of $10 returned to ljfe
+*** SUMMARY ***
+Total pot $20 | Rake $1
+Board: [9c 8d 7c 6c Tc]
+Seat 1: CardBluff is sitting out
+Seat 2: 20KJAY (button) didn't bet (folded)
+Seat 3: lilslikster (small blind) folded on the River
+Seat 4: ljfe (big blind) collected ($19), mucked
+Seat 5: Darkking_pt didn't bet (folded)
+Seat 6: silvafox39 didn't bet (folded)

@@ -19,6 +19,8 @@ namespace HandHistories.Objects.GameDescription
                     return "Poker Stars It";
                 case SiteName.PokerStarsFr:
                     return "Poker Stars Fr";
+                case SiteName.PokerStarsEs:
+                    return "Poker Stars Es";
                 default:
                     return siteName.ToString();
             }                        
@@ -88,6 +90,9 @@ namespace HandHistories.Objects.GameDescription
                 case "starsit":
                 case "pokerstarsit":
                     return SiteName.PokerStarsIt;
+                case "starses":
+                case "pokerstarses":
+                    return SiteName.PokerStarsEs;
                 case "partyfr":
                 case "partypokerfr":
                     return SiteName.PartyPokerFr;
@@ -102,6 +107,9 @@ namespace HandHistories.Objects.GameDescription
                     return SiteName.IPokerIt;
                 case "ipokerfr":
                     return SiteName.IPokerFr;
+                case "ipoker2":
+                case "poker770":
+                    return SiteName.IPoker2;
                 case "888":
                 case "pacific":
                     return SiteName.Pacific;                    

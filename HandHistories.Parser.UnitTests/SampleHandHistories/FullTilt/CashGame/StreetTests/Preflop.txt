@@ -1,0 +1,19 @@
+﻿Full Tilt Poker Game #26876086853: Table GiftAndTheCurse (6 max) - $100/$200 - Limit Hold'em - 09:18:29 ET - 2011/01/01
+Seat 1: Neo81 ($2,000), is sitting out
+Seat 2: skillgamblin ($2,450)
+Seat 6: Simpiwe ($3,950)
+skillgamblin posts the small blind of $50
+Simpiwe posts the big blind of $100
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+skillgamblin raises to $200
+Simpiwe folds
+Uncalled bet of $100 returned to skillgamblin
+skillgamblin mucks
+skillgamblin wins the pot ($200)
+*** SUMMARY ***
+Total pot $200 | Rake $0
+Seat 1: Neo81 is sitting out
+Seat 2: skillgamblin (small blind) collected ($200), mucked
+Seat 6: Simpiwe (big blind) folded before the Flop

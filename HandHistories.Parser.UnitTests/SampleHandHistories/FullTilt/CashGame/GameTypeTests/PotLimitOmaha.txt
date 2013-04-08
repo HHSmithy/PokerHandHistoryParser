@@ -1,0 +1,38 @@
+﻿***** Hand History for Game 11017309606 *****
+$1,000 USD PL Omaha - Saturday, October 22, 20:01:03 EDT 2011
+Table Table 167280 (No DP) (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 4: Hungry4more4 ( $458.56 USD )
+Seat 1: NHandFU ( $1,000 USD )
+Seat 2: anteeny ( $2,835.89 USD )
+Seat 3: ezyup ( $2,202.50 USD )
+Seat 5: xZAMBONIA ( $1,948.24 USD )
+Hungry4more4 posts small blind [$5 USD].
+xZAMBONIA posts big blind [$10 USD].
+** Dealing down cards **
+NHandFU raises [$26.25 USD]
+anteeny calls [$26.25 USD]
+ezyup raises [$120 USD]
+Hungry4more4 folds
+xZAMBONIA calls [$110 USD]
+NHandFU folds
+anteeny calls [$93.75 USD]
+** Dealing Flop ** [ 2h, 4d, 8h ]
+xZAMBONIA checks
+anteeny checks
+ezyup bets [$150 USD]
+xZAMBONIA calls [$150 USD]
+anteeny calls [$150 USD]
+** Dealing Turn ** [ Kd ]
+xZAMBONIA checks
+anteeny bets [$838.25 USD]
+ezyup calls [$838.25 USD]
+xZAMBONIA folds
+** Dealing River ** [ 6d ]
+anteeny is all-In [$1,727.64 USD]
+ezyup is all-In [$1,094.25 USD]
+anteeny shows [ 9s, 7d, Ad, 5h ]a flush, Ace high.
+ezyup doesn't show [ Ah, 3d, Ac, 5s ]a straight, Two to Six.
+anteeny wins $633.39 USD from the side pot 1 with a flush, Ace high.
+anteeny wins $4,703.25 USD from the main pot with a flush, Ace high.

@@ -1,0 +1,6 @@
+﻿Full Tilt Poker Game #31574202721: Table Earl (heads up) - $0.50/$1 - No Limit Hold'em - 23:06:53 ET - 2012/12/02
+*** SUMMARY ***
+Total pot $8 | Rake $0.40
+Board: [4h 3d Qs 4s Ts]
+Seat 1: JeanRoberts (small blind) showed [Js 3c] and won ($3.80) with two pair, Fours and Threes
+Seat 2: DjSoft (big blind) showed [Jh 3h] and won ($3.80) with two pair, Fours and Threes

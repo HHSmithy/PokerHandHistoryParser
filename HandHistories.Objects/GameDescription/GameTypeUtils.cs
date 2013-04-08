@@ -61,7 +61,7 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.CapNoLimitHoldem:
                     return "Cap NL Holdem";
                 case GameType.CapPotLimitOmaha:
-                    return "Cap PLO Holdem";
+                    return "Cap Pot Limit Omaha";
                 case GameType.Unknown:
                     return "Unknown";
                 case GameType.FixedLimitOmahaHiLo:
@@ -141,7 +141,7 @@ namespace HandHistories.Objects.GameDescription
                 case GameType.CapNoLimitHoldem:
                     return "Cap NL Holdem";
                 case GameType.CapPotLimitOmaha:
-                    return "Cap PLO Holdem";
+                    return "Cap Pot Limit Omaha";
                 case GameType.Unknown:
                     return "Unknown";
                 default:

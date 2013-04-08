@@ -11,6 +11,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
     [TestFixture("Pacific", "Oviedo (Real Money)", "Barreiras (Real Money)", "Asmara (Real Money)", "Apatzingan (Real Money)")]
     [TestFixture("Merge", "Baja (56067014)", "Bad Beat - Rue St Catherine (56116487)", "Deal It Twice - Mississippi (56196868)", "Ming Tombs (56176485)")]
     [TestFixture("Entraction", "Zaragoza", "Zaragoza", "Saravane", "Waco")]
+    [TestFixture("FullTilt", "Allthorn", "Dickey", "Missionary Ridge", "Bri")]
     class HandParserTableNameTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedTables;

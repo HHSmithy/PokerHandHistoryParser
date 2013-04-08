@@ -17,9 +17,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
     public class IPokerFastParserImpl : HandHistoryParserFastImpl
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+        private readonly bool _isIpoker2;
+
+        public IPokerFastParserImpl(bool isIpoker2 = false)
+        {
+            _isIpoker2 = isIpoker2;
+        }
+
         public override SiteName SiteName
         {
-            get { return SiteName.IPoker; }
+            get { return (_isIpoker2) ? SiteName.IPoker2 : SiteName.IPoker; }
         }
 
         public override bool  RequresAdjustedRaiseSizes
@@ -162,6 +171,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 //We are case 1 - convert to case 2
 
                 int endOfGeneralInfoIndex = rawHandHistories.IndexOf("</general>");
+
+                if (endOfGeneralInfoIndex == -1)
+                {
+                    logger.Fatal("IPokerFastParserImpl.SplitUpMultipleHands(): Encountered a weird file\r\n{0}", rawHandHistories);
+                }
+
                 string generalInfoString = rawHandHistories.Substring(0, endOfGeneralInfoIndex + 10);
 
                 MatchCollection gameMatches = GameGroupRegex.Matches(rawHandHistories, endOfGeneralInfoIndex + 9);
@@ -528,6 +543,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
                 case 9: //Case 9 is when a blind isn't posted - can be treated as sitting out
                     actionType = HandActionType.SITTING_OUT;
+                    break;
+                case 15:
+                    actionType = HandActionType.ANTE;
                     break;
                 case 23:                 
                     actionType = HandActionType.RAISE;

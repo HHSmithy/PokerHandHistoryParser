@@ -1,0 +1,22 @@
+﻿Full Tilt Poker Game #26873469393: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:40:58 ET - 2011/01/01
+Seat 1: TheHoboKing ($4,925)
+Seat 2: metior ($3,063.50)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $100
+TheHoboKing raises to $350
+metior calls $250
+*** FLOP *** [3c 4c Kd]
+TheHoboKing bets $400
+metior folds
+Uncalled bet of $400 returned to TheHoboKing
+TheHoboKing mucks
+TheHoboKing wins the pot ($699.50)
+*** SUMMARY ***
+Total pot $700 | Rake $0.50
+Board: [3c 4c Kd]
+Seat 1: TheHoboKing (big blind) collected ($699.50), mucked
+Seat 2: metior (small blind) folded on the Flop

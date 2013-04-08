@@ -13,7 +13,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
     [TestFixture("IPoker", 3251939984l, "4/17/2012 19:30:53", 9, 4, null, null, "GeneralHand")]
     [TestFixture("OnGame", 524409056039l, "5/28/2012 07:08:00", 10, 4, null, null, "GeneralHand")]
     [TestFixture("Pacific", 176497340, "5/30/2012 14:29:43", 2, 3, null, null, "GeneralHand")]
-    [TestFixture("Entraction", 2645975604, "5/30/2012 13:49:35", 4, 2, null, null, "GeneralHand")]  
+    [TestFixture("Entraction", 2645975604, "5/30/2012 13:49:35", 4, 2, null, null, "GeneralHand")]
+    [TestFixture("FullTilt", 26862429938, "12/31/2010 21:07:17", 5, 5, 2.10, 42.90, "GeneralHand")]  
     class HandParserGeneralHandTests : HandHistoryParserBaseTests 
     {
         private readonly long _expectedHandId;

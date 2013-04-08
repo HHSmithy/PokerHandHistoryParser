@@ -1,0 +1,31 @@
+﻿Full Tilt Poker Game #26862610528: Table Missionary Ridge (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:16:56 ET - 2010/12/31
+Seat 1: 20KJAY ($40.90)
+Seat 2: xmartenzix ($38.50)
+Seat 3: Triviani20 ($122.20), is sitting out
+Seat 4: sapsideo ($39.85)
+Seat 5: Fudikratzer ($18.50)
+Seat 6: scarbalius007 ($63.95)
+20KJAY posts the small blind of $0.50
+xmartenzix posts the big blind of $1
+sapsideo posts $1
+The button is in seat #6
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+sapsideo checks
+Fudikratzer folds
+scarbalius007 raises to $5
+20KJAY folds
+xmartenzix folds
+sapsideo has 15 seconds left to act
+sapsideo folds
+Uncalled bet of $4 returned to scarbalius007
+scarbalius007 mucks
+scarbalius007 wins the pot ($3.50)
+*** SUMMARY ***
+Total pot $3.50 | Rake $0
+Seat 1: 20KJAY (small blind) folded before the Flop
+Seat 2: xmartenzix (big blind) folded before the Flop
+Seat 3: Triviani20 is sitting out
+Seat 4: sapsideo folded before the Flop
+Seat 5: Fudikratzer didn't bet (folded)
+Seat 6: scarbalius007 (button) collected ($3.50), mucked

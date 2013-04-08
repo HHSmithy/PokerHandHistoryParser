@@ -20,6 +20,8 @@ namespace HandHistories.Parser.WindowsTestApp
             listBoxSite.Items.Add(SiteName.PokerStars);
             listBoxSite.Items.Add(SiteName.PokerStarsFr);
             listBoxSite.Items.Add(SiteName.PokerStarsIt);
+            listBoxSite.Items.Add(SiteName.PokerStarsEs);
+            listBoxSite.Items.Add(SiteName.FullTilt);
             listBoxSite.Items.Add(SiteName.PartyPoker);
             listBoxSite.Items.Add(SiteName.IPoker);
             listBoxSite.Items.Add(SiteName.OnGame);
@@ -43,8 +45,13 @@ namespace HandHistories.Parser.WindowsTestApp
 
             try
             {
-                handParser.ParseFullHandHistory(richTextBoxHandText.Text, true);
-                MessageBox.Show(this, "Parsed");
+                var hands = handParser.SplitUpMultipleHands(richTextBoxHandText.Text).ToList();
+                foreach (var hand in hands)
+                {
+                    var parsedHand = handParser.ParseFullHandHistory(hand, true);    
+                }
+                
+                MessageBox.Show(this, "Parsed " + hands.Count + " hands.");
             }
             catch (Exception ex)
             {

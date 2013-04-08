@@ -1,0 +1,51 @@
+﻿Full Tilt Poker Game #26865778091: Table Dickey - $5/$10 - Limit Hold'em - 19:19:55 ET - 2010/12/31
+Seat 1: bob from ct ($167)
+Seat 2: ZXCV999 ($100)
+Seat 3: nowhiningplease ($205.50)
+Seat 4: ciwei999 ($163)
+Seat 5: oh__pelle ($118)
+Seat 6: PreaknessPass ($138.50)
+Seat 7: fuhlsgold ($150)
+Seat 8: lonestar98 ($152)
+Seat 9: mlcruiser ($541)
+oh__pelle posts the small blind of $2.50
+PreaknessPass posts the big blind of $5
+5 seconds left to act
+The button is in seat #4
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+fuhlsgold folds
+lonestar98 folds
+mlcruiser folds
+bob from ct folds
+nowhiningplease raises to $10
+ciwei999 folds
+oh__pelle calls $7.50
+PreaknessPass calls $5
+*** FLOP *** [3d 9h 8s]
+oh__pelle bets $5
+PreaknessPass folds
+nowhiningplease raises to $10
+oh__pelle raises to $15
+nowhiningplease calls $5
+*** TURN *** [3d 9h 8s] [Kc]
+oh__pelle bets $10
+nowhiningplease calls $10
+*** RIVER *** [3d 9h 8s Kc] [2h]
+oh__pelle bets $10
+nowhiningplease folds
+Uncalled bet of $10 returned to oh__pelle
+oh__pelle mucks
+oh__pelle wins the pot ($77)
+*** SUMMARY ***
+Total pot $80 | Rake $3
+Board: [3d 9h 8s Kc 2h]
+Seat 1: bob from ct didn't bet (folded)
+Seat 2: ZXCV999 is sitting out
+Seat 3: nowhiningplease folded on the River
+Seat 4: ciwei999 (button) didn't bet (folded)
+Seat 5: oh__pelle (small blind) collected ($77), mucked
+Seat 6: PreaknessPass (big blind) folded on the Flop
+Seat 7: fuhlsgold didn't bet (folded)
+Seat 8: lonestar98 didn't bet (folded)
+Seat 9: mlcruiser didn't bet (folded)

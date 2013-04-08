@@ -11,6 +11,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
     [TestFixture("Pacific")]
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
+    [TestFixture("FullTilt")]
     class HandParserSeatTypeTests : HandHistoryParserBaseTests 
     {
         public HandParserSeatTypeTests(string site) : base(site)
@@ -49,6 +50,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.OnGame:
                 case SiteName.Entraction:
                 case SiteName.Pacific:
+                case SiteName.FullTilt:
                     Assert.Ignore(Site + " currently doesn't have 4 max games.");
                     break;
             }            
@@ -65,6 +67,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.Merge:
                 case SiteName.OnGame:
                 case SiteName.Entraction:
+                case SiteName.FullTilt:
                 case SiteName.Pacific:
                     Assert.Ignore(Site + " currently doesn't have 10 handed games.");
                     break;

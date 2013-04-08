@@ -8,6 +8,8 @@ namespace HandHistories.Objects.GameDescription
         Limit_1c_2c = 0,
         Limit_3c_6c = 2,
         Limit_2c_4c = 3,
+        Limit_4c_4c = 17,
+        Limit_5c_5c = 19,
         Limit_10c_10c = 4,
         Limit_2c_5c = 6,        
         Limit_4c_8c = 7,
@@ -67,11 +69,14 @@ namespace HandHistories.Objects.GameDescription
         Limit_20000c_20000c = 103,
         Limit_25000c_50000c = 105,
         Limit_30000c_30000c = 107,
-        Limit_30000c_60000c = 108,       
+        Limit_30000c_60000c = 108,
+        Limit_40000c_80000c = 109,
         Limit_50000c_100000c = 111,
         Limit_100000c_200000c = 114,
         Limit_150000c_300000c = 117,
-        Limit_200000c_400000c = 120,        
+        Limit_200000c_400000c = 120,
+        Limit_400000c_800000c = 124,
+        Limit_5000000c_1000000c = 130, 
         Any = 255
     }
 }

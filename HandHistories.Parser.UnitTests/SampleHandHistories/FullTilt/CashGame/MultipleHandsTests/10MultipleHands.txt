@@ -1,0 +1,227 @@
+﻿Full Tilt Poker Game #26873473534: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:41:23 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,274.50)
+Seat 2: metior ($2,713.50)
+TheHoboKing posts the small blind of $25
+metior posts the big blind of $50
+The button is in seat #1
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+TheHoboKing folds
+Uncalled bet of $25 returned to metior
+metior mucks
+metior wins the pot ($50)
+*** SUMMARY ***
+Total pot $50 | Rake $0
+Seat 1: TheHoboKing (small blind) folded before the Flop
+Seat 2: metior (big blind) collected ($50), mucked
+
+Full Tilt Poker Game #26873474741: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:41:31 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,249.50)
+Seat 2: metior ($2,738.50)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $100
+TheHoboKing calls $50
+*** FLOP *** [Js Qh 6d]
+TheHoboKing checks
+metior checks
+*** TURN *** [Js Qh 6d] [4d]
+TheHoboKing has 15 seconds left to act
+TheHoboKing bets $50
+metior calls $50
+*** RIVER *** [Js Qh 6d 4d] [Tc]
+TheHoboKing checks
+metior checks
+*** SHOW DOWN ***
+TheHoboKing shows [Ah 6s] a pair of Sixes
+metior mucks
+TheHoboKing wins the pot ($299.50) with a pair of Sixes
+*** SUMMARY ***
+Total pot $300 | Rake $0.50
+Board: [Js Qh 6d 4d Tc]
+Seat 1: TheHoboKing (big blind) collected ($299.50)
+Seat 2: metior (small blind) mucked
+
+Full Tilt Poker Game #26873479830: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:03 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,399)
+Seat 2: metior ($2,588.50)
+TheHoboKing posts the small blind of $25
+metior posts the big blind of $50
+The button is in seat #1
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+TheHoboKing raises to $100
+metior folds
+Uncalled bet of $50 returned to TheHoboKing
+TheHoboKing mucks
+TheHoboKing wins the pot ($100)
+*** SUMMARY ***
+Total pot $100 | Rake $0
+Seat 1: TheHoboKing (small blind) collected ($100), mucked
+Seat 2: metior (big blind) folded before the Flop
+
+Full Tilt Poker Game #26873481204: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:12 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,449)
+Seat 2: metior ($2,538.50)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $100
+TheHoboKing calls $50
+*** FLOP *** [7s 4s 3d]
+TheHoboKing checks
+metior bets $200
+TheHoboKing folds
+Uncalled bet of $200 returned to metior
+*** SUMMARY ***
+Total pot $200 | Rake $0.50
+Board: [7s 4s 3d]
+Seat 1: TheHoboKing (big blind) folded on the Flop
+Seat 2: metior (small blind) collected ($199.50), mucked
+
+Full Tilt Poker Game #26873485382: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:37 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,349)
+Seat 2: metior ($2,638)
+TheHoboKing posts the small blind of $25
+metior posts the big blind of $50
+The button is in seat #1
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+TheHoboKing folds
+Uncalled bet of $25 returned to metior
+metior mucks
+metior wins the pot ($50)
+*** SUMMARY ***
+Total pot $50 | Rake $0
+Seat 1: TheHoboKing (small blind) folded before the Flop
+Seat 2: metior (big blind) collected ($50), mucked
+
+Full Tilt Poker Game #26873486407: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:44 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,324)
+Seat 2: metior ($2,663)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $150
+TheHoboKing calls $100
+*** FLOP *** [5s 3d 4h]
+TheHoboKing checks
+metior bets $250
+TheHoboKing folds
+Uncalled bet of $250 returned to metior
+metior mucks
+metior wins the pot ($299.50)
+*** SUMMARY ***
+Total pot $300 | Rake $0.50
+Board: [5s 3d 4h]
+Seat 1: TheHoboKing (big blind) folded on the Flop
+Seat 2: metior (small blind) collected ($299.50), mucked
+
+Full Tilt Poker Game #26873490898: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:43:06 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,174)
+Seat 2: metior ($2,812.50)
+TheHoboKing posts the small blind of $25
+metior posts the big blind of $50
+The button is in seat #1
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+TheHoboKing raises to $100
+metior calls $50
+*** FLOP *** [4d Qc 7d]
+metior checks
+TheHoboKing checks
+*** TURN *** [4d Qc 7d] [2h]
+metior checks
+TheHoboKing checks
+*** RIVER *** [4d Qc 7d 2h] [3h]
+metior checks
+TheHoboKing bets $100
+metior calls $100
+*** SHOW DOWN ***
+TheHoboKing shows [8s 5c] Queen Eight high
+metior shows [9s 2s] a pair of Twos
+metior wins the pot ($399.50) with a pair of Twos
+*** SUMMARY ***
+Total pot $400 | Rake $0.50
+Board: [4d Qc 7d 2h 3h]
+Seat 1: TheHoboKing (small blind) showed [8s 5c] and lost with Queen Eight high
+Seat 2: metior (big blind) showed [9s 2s] and won ($399.50) with a pair of Twos
+
+Full Tilt Poker Game #26873496637: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:43:41 ET - 2011/01/01
+Seat 1: TheHoboKing ($4,974)
+Seat 2: metior ($3,012)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $100
+TheHoboKing calls $50
+*** FLOP *** [4d Ah 2c]
+TheHoboKing checks
+metior bets $150
+TheHoboKing calls $150
+*** TURN *** [4d Ah 2c] [9d]
+TheHoboKing checks
+metior checks
+*** RIVER *** [4d Ah 2c 9d] [7d]
+TheHoboKing bets $250
+metior calls $250
+*** SHOW DOWN ***
+TheHoboKing shows [Ad 5h] a pair of Aces
+metior mucks
+TheHoboKing wins the pot ($999.50) with a pair of Aces
+*** SUMMARY ***
+Total pot $1,000 | Rake $0.50
+Board: [4d Ah 2c 9d 7d]
+Seat 1: TheHoboKing (big blind) collected ($999.50)
+Seat 2: metior (small blind) mucked
+
+Full Tilt Poker Game #26873504407: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:44:28 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,473.50)
+Seat 2: metior ($2,512)
+TheHoboKing posts the small blind of $25
+metior posts the big blind of $50
+The button is in seat #1
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+TheHoboKing raises to $100
+metior raises to $150
+TheHoboKing calls $50
+*** FLOP *** [Qd Kh 6h]
+metior bets $300
+TheHoboKing folds
+Uncalled bet of $300 returned to metior
+metior mucks
+metior wins the pot ($299.50)
+*** SUMMARY ***
+Total pot $300 | Rake $0.50
+Board: [Qd Kh 6h]
+Seat 1: TheHoboKing (small blind) folded on the Flop
+Seat 2: metior (big blind) collected ($299.50), mucked
+
+Full Tilt Poker Game #26873507253: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:44:45 ET - 2011/01/01
+Seat 1: TheHoboKing ($5,323.50)
+Seat 2: metior ($2,661.50)
+metior posts the small blind of $25
+TheHoboKing posts the big blind of $50
+The button is in seat #2
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+metior raises to $100
+J0s3phM41 (Observer): HAPPY NEW YEAR GUYS!))
+TheHoboKing folds
+Uncalled bet of $50 returned to metior
+metior mucks
+metior wins the pot ($100)
+*** SUMMARY ***
+Total pot $100 | Rake $0
+Seat 1: TheHoboKing (big blind) folded before the Flop
+Seat 2: metior (small blind) collected ($100), mucked

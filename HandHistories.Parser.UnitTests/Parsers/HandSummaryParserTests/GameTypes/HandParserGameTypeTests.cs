@@ -11,6 +11,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
     [TestFixture("Pacific")]
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
+    [TestFixture("FullTilt")]
     class HandParserGameTypeTests : HandHistoryParserBaseTests 
     {
         public HandParserGameTypeTests(string site) : base(site)
@@ -41,9 +42,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         [Test]
         public void ParseGameType_ParsesPotLimitOmaha()
         {
+            switch (Site)
+            {
+                case SiteName.FullTilt:
+                    Assert.Ignore(Site + " currently doesn't have PLO example.");
+                    return;
+            }
+
             TestGameType(GameType.PotLimitOmaha);
         }
-
 
         [Test]
         public void ParseGameType_ParsesFixedLimitOmahaHiLo()
@@ -64,6 +71,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             {
                 case SiteName.Merge:
 				case SiteName.IPoker:
+                case SiteName.FullTilt:
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                     Assert.Ignore(Site + " currently doesn't have pot limit holdem.");
@@ -83,7 +91,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                     case SiteName.Merge:
                     case SiteName.OnGame:
                     case SiteName.Pacific:
-                    case SiteName.Entraction:
+                    case SiteName.Entraction:                    
                         Assert.Ignore(Site + " currently doesn't have cap games.");
                         break;
             }            
@@ -103,6 +111,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
+                case SiteName.FullTilt:
                 case SiteName.Entraction:
                     Assert.Ignore(Site + " currently doesn't have cap games.");
                     break;
@@ -122,6 +131,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                 case SiteName.PokerStarsFr:
+                case SiteName.FullTilt:
                 case SiteName.PokerStarsIt:
                 case SiteName.Entraction:
                     Assert.Ignore(Site + " currently doesn't have cap games.");
@@ -139,6 +149,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.Merge:
 				case SiteName.IPoker:
                 case SiteName.Pacific:
+                case SiteName.FullTilt:
                 case SiteName.Entraction:
                     Assert.Ignore(Site + " currently doesn't have hi-lo.");
                     break;

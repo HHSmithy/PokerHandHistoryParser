@@ -1,0 +1,47 @@
+﻿Full Tilt Poker Game #26869657069: Table Dickey - $5/$10 - Limit Hold'em - 23:30:28 ET - 2010/12/31
+Seat 1: mlcruiser ($345.50)
+Seat 2: TheMoose99 ($207)
+Seat 3: nowhiningplease ($412.50)
+Seat 4: sidsucker ($861.50)
+Seat 5: rappinpat ($169.50)
+Seat 6: louis3471 ($200)
+Seat 7: iphoneuser ($249.50)
+Seat 8: BrickDragon ($126.50)
+Seat 9: ForkNutz ($318.50)
+sidsucker posts the small blind of $2.50
+rappinpat posts the big blind of $5
+The button is in seat #3
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+louis3471 calls $5
+iphoneuser has 15 seconds left to act
+iphoneuser folds
+BrickDragon has 15 seconds left to act
+BrickDragon folds
+ForkNutz folds
+mlcruiser folds
+TheMoose99 folds
+nowhiningplease folds
+sidsucker folds
+rappinpat checks
+*** FLOP *** [7d Kh Ts]
+rappinpat bets $5
+louis3471 calls $5
+*** TURN *** [7d Kh Ts] [6d]
+rappinpat bets $10
+louis3471 raises to $20
+rappinpat folds
+Uncalled bet of $10 returned to louis3471
+louis3471 mucks
+*** SUMMARY ***
+Total pot $42.50 | Rake $2
+Board: [7d Kh Ts 6d]
+Seat 1: mlcruiser didn't bet (folded)
+Seat 2: TheMoose99 didn't bet (folded)
+Seat 3: nowhiningplease (button) didn't bet (folded)
+Seat 4: sidsucker (small blind) folded before the Flop
+Seat 5: rappinpat (big blind) folded on the Turn
+Seat 6: louis3471 collected ($40.50), mucked
+Seat 7: iphoneuser didn't bet (folded)
+Seat 8: BrickDragon didn't bet (folded)
+Seat 9: ForkNutz didn't bet (folded)

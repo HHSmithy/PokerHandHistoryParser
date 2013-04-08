@@ -145,6 +145,25 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        public static string GetRankFromNumericValue(int rank)
+        {
+            switch (rank)
+            {
+                case 10:
+                    return "T";
+                case 11:
+                    return "J";
+                case 12:
+                    return "Q";
+                case 13:
+                    return "K";
+                case 14:
+                    return "A";
+                default:
+                    return rank.ToString();
+            }
+        }
+
         public static int GetRankNumericValue(string rank)
         {
             switch (rank)

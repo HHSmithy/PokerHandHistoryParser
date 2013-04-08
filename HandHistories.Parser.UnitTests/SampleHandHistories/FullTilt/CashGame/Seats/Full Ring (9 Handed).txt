@@ -1,0 +1,64 @@
+﻿Full Tilt Poker Game #26865804439: Table Dickey - $5/$10 - Limit Hold'em - 19:21:30 ET - 2010/12/31
+Seat 1: bob from ct ($87)
+Seat 2: ZXCV999 ($100)
+Seat 3: nowhiningplease ($170.50)
+Seat 4: ciwei999 ($163)
+Seat 5: oh__pelle ($244.50)
+Seat 6: PreaknessPass ($126)
+Seat 7: fuhlsgold ($150)
+Seat 8: lonestar98 ($152)
+Seat 9: mlcruiser ($541)
+fuhlsgold posts the small blind of $2.50
+lonestar98 posts the big blind of $5
+The button is in seat #6
+*** HOLE CARDS ***
+*** HOLE CARDS ***
+mlcruiser folds
+bob from ct calls $5
+nowhiningplease folds
+ciwei999 raises to $10
+oh__pelle calls $10
+PreaknessPass folds
+fuhlsgold calls $7.50
+lonestar98 calls $5
+bob from ct calls $5
+*** FLOP *** [Qc 9s Jh]
+fuhlsgold checks
+lonestar98 bets $5
+bob from ct raises to $10
+ciwei999 calls $10
+oh__pelle raises to $15
+fuhlsgold folds
+fuhlsgold adds $10
+lonestar98 calls $10
+bob from ct calls $5
+ciwei999 calls $5
+*** TURN *** [Qc 9s Jh] [8d]
+lonestar98 checks
+bob from ct checks
+ciwei999 checks
+oh__pelle bets $10
+lonestar98 calls $10
+bob from ct folds
+ciwei999 has 15 seconds left to act
+ciwei999 folds
+*** RIVER *** [Qc 9s Jh 8d] [3h]
+lonestar98 checks
+oh__pelle bets $10
+lonestar98 calls $10
+*** SHOW DOWN ***
+oh__pelle shows [Kd Tc] a straight, King high
+lonestar98 mucks
+oh__pelle wins the pot ($147) with a straight, King high
+*** SUMMARY ***
+Total pot $150 | Rake $3
+Board: [Qc 9s Jh 8d 3h]
+Seat 1: bob from ct folded on the Turn
+Seat 2: ZXCV999 is sitting out
+Seat 3: nowhiningplease didn't bet (folded)
+Seat 4: ciwei999 folded on the Turn
+Seat 5: oh__pelle collected ($147)
+Seat 6: PreaknessPass (button) didn't bet (folded)
+Seat 7: fuhlsgold (small blind) folded on the Flop
+Seat 8: lonestar98 (big blind) mucked
+Seat 9: mlcruiser didn't bet (folded)

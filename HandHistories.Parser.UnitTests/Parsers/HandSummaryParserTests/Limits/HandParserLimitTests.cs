@@ -12,6 +12,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
     [TestFixture("Merge", "$0.05-$0.10", "$0.50-$1", "$1-$2", "$5-$10", "$10-$20")]
     // Note: Have to use e instead of € otherwise the test runner reports inconclusive. Have reported this bug.
     [TestFixture("Entraction", "e0.02-e0.04", "e2-e4", "e25-e50", "e0.50-e1", "e15-e30")]
+    [TestFixture("FullTilt", "$25-$50", "$5-$10", "$100-$200", "$0.50-$1", "$0.25-$0.50")]
     class HandParserLimitTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedLimits;
@@ -63,6 +64,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                 case SiteName.Merge:
+                case SiteName.FullTilt:
                 case SiteName.Entraction:
                     Assert.Ignore(Site.ToString() + " doesn't have ante tables.");
                     break;               
@@ -83,6 +85,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.PartyPoker:
                 case SiteName.Pacific:
                 case SiteName.Merge:
+                case SiteName.FullTilt:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
             }
@@ -100,6 +103,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Pacific:
                 case SiteName.Merge:
                 case SiteName.Entraction:
+                case SiteName.FullTilt:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
             }
