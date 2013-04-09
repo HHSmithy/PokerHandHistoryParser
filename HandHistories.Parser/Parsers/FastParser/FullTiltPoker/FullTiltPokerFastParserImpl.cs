@@ -225,6 +225,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     return playerList;
                 }
 
+                if (handLine.EndsWith(")") == false)
+                {
+                    // handline is like Seat 6: ffbigfoot ($0.90), is sitting out
+                    handLine = handLine.Substring(0, handLine.Length - 16);
+                }
+
                 //Seat 1: CardBluff ($109.65)
 
                 int colonIndex = handLine.IndexOf(':', 5);

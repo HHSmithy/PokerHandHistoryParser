@@ -11,6 +11,7 @@
         WINS,
         WINS_THE_LOW,
         WINS_SIDE_POT,
+        DEALT_HERO_CARDS,
         TIES,
         TIES_SIDE_POT,
         RAISE,

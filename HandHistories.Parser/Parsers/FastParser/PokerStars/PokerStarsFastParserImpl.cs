@@ -324,6 +324,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 return false;
             }
 
+            if (currentStreet == Street.Preflop &&
+                line.StartsWith("Dealt to"))
+            {
+                // todo: parse the player hand from this line instead of ignoring it
+                return false;
+            }
+
             if (line[0] == '*') // lines with a * are either board cards, hole cards or summary info
             {
                 char typeOfEventChar = line[4];
