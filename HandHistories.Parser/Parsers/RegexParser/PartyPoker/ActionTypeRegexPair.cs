@@ -64,7 +64,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
             var amountMatch = Regex.Match(actionText, siteActionRegexes.PostAmountRegex);
 
             if (amountMatch.Success)
-                return Decimal.Parse(amountMatch.Value);
+                return decimal.Parse(amountMatch.Value, System.Globalization.CultureInfo.InvariantCulture);
 
             return 0.0M;
         }
@@ -76,7 +76,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
             var amountMatch = Regex.Match(actionText, siteActionRegexes.AmountRegex);
 
             if (amountMatch.Success)
-                return Decimal.Parse(amountMatch.Value);
+                return decimal.Parse(amountMatch.Value, System.Globalization.CultureInfo.InvariantCulture);
 
             return 0.0M;
         }

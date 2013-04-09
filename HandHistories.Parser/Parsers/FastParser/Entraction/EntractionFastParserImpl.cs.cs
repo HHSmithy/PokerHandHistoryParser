@@ -119,8 +119,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
         {
             string limitString = LimitRegex.Match(handLines[0]).Value;
 
-            decimal lowLimit = decimal.Parse(limitString.Split('/')[0]);
-            decimal highLimit = decimal.Parse(limitString.Split('/')[1]);
+            decimal lowLimit = decimal.Parse(limitString.Split('/')[0], System.Globalization.CultureInfo.InvariantCulture);
+            decimal highLimit = decimal.Parse(limitString.Split('/')[1], System.Globalization.CultureInfo.InvariantCulture);
 
             string currencyString = CurrencyRegex.Match(handLines[0]).Value;
 
@@ -191,7 +191,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                     int lastSpaceIndex = handLine.LastIndexOf(' ');
 
                     name = handLine.Substring(0, firstSpaceIndexOf);
-                    amount = decimal.Parse(handLine.Substring(lastSpaceIndex + 1, handLine.Length - lastSpaceIndex - 1));
+                    amount = decimal.Parse(handLine.Substring(lastSpaceIndex + 1, handLine.Length - lastSpaceIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
 
                     handActions.Add(new WinningsAction(name, HandActionType.WINS, amount, 0));
                     continue;
@@ -228,7 +228,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
 
                 if (openParenIndex != -1)
                 {
-                    amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2));
+                    amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
                 }
 
                 if (currentStreet == Street.Preflop)
@@ -309,7 +309,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                 string[] seatData = seatInfo.Split(' ');
 
                 int seatNumber = int.Parse(seatData[seatData.Length - 1]);
-                decimal amount = decimal.Parse(seatData[1]);
+                decimal amount = decimal.Parse(seatData[1], System.Globalization.CultureInfo.InvariantCulture);
                 string playerName = handLine.Substring(0, firstSpaceIndex);
 
                 playerList.Add(new Player(playerName, amount, seatNumber));

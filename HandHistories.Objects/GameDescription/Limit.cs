@@ -41,10 +41,10 @@ namespace HandHistories.Objects.GameDescription
             }
 
             string smallBlindString = limitEnum.ToString().Split('_')[1].Replace("c", "");
-            decimal smallBlind = decimal.Parse(smallBlindString) / 100.0m;
+            decimal smallBlind = decimal.Parse(smallBlindString, System.Globalization.CultureInfo.InvariantCulture) / 100.0m;
 
             string bigBlindString = limitEnum.ToString().Split('_')[2].Replace("c", "");
-            decimal bigBlind = decimal.Parse(bigBlindString) / 100;
+            decimal bigBlind = decimal.Parse(bigBlindString, System.Globalization.CultureInfo.InvariantCulture) / 100;
 
             return FromSmallBlindBigBlind(smallBlind, bigBlind, currency, isAnteTable, anteAmount);
         }

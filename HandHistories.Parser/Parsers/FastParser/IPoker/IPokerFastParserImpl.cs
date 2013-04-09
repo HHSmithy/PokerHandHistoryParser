@@ -105,7 +105,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOf(" c") + 9;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-            return decimal.Parse(stackString);
+            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
         }
 
         protected decimal GetWinningsFromPlayerLine(string playerLine)
@@ -113,7 +113,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOf(" w") + 7;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-            return decimal.Parse(stackString);
+            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
         }
 
         protected string GetNameFromPlayerLine(string playerLine)
@@ -392,11 +392,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int slashIndex = limitString.IndexOf('/');
 
             string smallString = limitString.Substring(1, slashIndex - 1);
-            decimal small = decimal.Parse(smallString);
+            decimal small = decimal.Parse(smallString, System.Globalization.CultureInfo.InvariantCulture);
 
  
             string bigString = limitString.Substring(slashIndex + 2, limitString.Length - (slashIndex + 2));
-            decimal big = decimal.Parse(bigString);
+            decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
@@ -585,7 +585,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int startPos = actionLine.IndexOf(" s") + 7;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
             string value = actionLine.Substring(startPos, endPos - startPos + 1);
-            return decimal.Parse(value);
+            return decimal.Parse(value, System.Globalization.CultureInfo.InvariantCulture);
         }
 
         protected int GetActionTypeFromActionLine(string actionLine)

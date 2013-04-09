@@ -114,10 +114,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     int spaceAfterFirstNumber = totalLine.IndexOf(" ", 11);
 
                     handHistorySummary.Rake =
-                        decimal.Parse(totalLine.Substring(lastSpaceIndex + 2, totalLine.Length - lastSpaceIndex - 2));
+                        decimal.Parse(totalLine.Substring(lastSpaceIndex + 2, totalLine.Length - lastSpaceIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
                     
                     handHistorySummary.TotalPot =
-                        decimal.Parse(totalLine.Substring(11, spaceAfterFirstNumber - 11));
+                        decimal.Parse(totalLine.Substring(11, spaceAfterFirstNumber - 11), System.Globalization.CultureInfo.InvariantCulture);
 
                     break;
                 }
@@ -246,8 +246,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             int slashIndex = limitSubstring.IndexOf('/');
             int firstSpace = limitSubstring.IndexOf(' ');
 
-            decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1));
-            decimal big = decimal.Parse(limitSubstring.Substring(slashIndex + 2, firstSpace - (slashIndex + 2) + 1));
+            decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
+            decimal big = decimal.Parse(limitSubstring.Substring(slashIndex + 2, firstSpace - (slashIndex + 2) + 1), System.Globalization.CultureInfo.InvariantCulture);
 
 
             // If it is an ante table we expect to see an ante line after the big blind
@@ -549,7 +549,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         throw new HandActionException(actionLine, "ParsePostingActionLine: Unregonized lined " + actionLine) ;             
             }
 
-            decimal amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex));
+            decimal amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
             return new HandAction(playerName, handActionType, amount, Street.Preflop);
         }
 
@@ -593,14 +593,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     }
                     //MECO-LEO: calls $1.23
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
-                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex));
+                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
                     actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.CALL;                                                         
                     break;
                 
                 //MS13ZEN: bets $1.76
                 case 'b':
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
-                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex));
+                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
                     actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.BET;                                                         
                     break;
 
@@ -608,7 +608,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 'r':
                     isRaise = true;
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
-                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex));
+                    amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
                     actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.RAISE;   
                     break;
                 default:
@@ -664,7 +664,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // alecc frost collected $1.25 from pot
             
             int firstAmountDigit = actionLine.LastIndexOf(' ') + 2;
-            decimal amount = decimal.Parse(actionLine.Substring(firstAmountDigit, actionLine.Length - firstAmountDigit));
+            decimal amount = decimal.Parse(actionLine.Substring(firstAmountDigit, actionLine.Length - firstAmountDigit), System.Globalization.CultureInfo.InvariantCulture);
 
             // 12 characters from first digit to the space infront of collected
             string playerName = actionLine.Substring(0, firstAmountDigit - 12);
@@ -680,7 +680,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             // position 15 is after the currency symbol
             int closeParenIndex = actionLine.IndexOf(')', 16);
-            decimal amount = decimal.Parse(actionLine.Substring(15, closeParenIndex - 15));
+            decimal amount = decimal.Parse(actionLine.Substring(15, closeParenIndex - 15), System.Globalization.CultureInfo.InvariantCulture);
 
             int firstLetterOfName = closeParenIndex + 14; // ' returned to ' is length 14
 
@@ -739,7 +739,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 string playerName = line.Substring(colonIndex + 2, (openParenIndex - 1) - (colonIndex + 2));
 
                 string stackString = line.Substring(openParenIndex + 2, spaceAfterOpenParen - (openParenIndex + 2));
-                decimal stack = decimal.Parse(stackString);
+                decimal stack = decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
 
                 playerList.Add(new Player(playerName, stack, seatNumber));                
             }

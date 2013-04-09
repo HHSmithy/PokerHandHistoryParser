@@ -248,7 +248,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             string bigBlindString = limitString.Substring(bigBlindStartIndex, bidBlindEndIndex - bigBlindStartIndex);
 
             //All Merge limits are USD
-            return Limit.FromSmallBlindBigBlind(decimal.Parse(smallBlindString), decimal.Parse(bigBlindString),
+            return Limit.FromSmallBlindBigBlind(decimal.Parse(smallBlindString, System.Globalization.CultureInfo.InvariantCulture),
+                                                decimal.Parse(bigBlindString, System.Globalization.CultureInfo.InvariantCulture),
                                                 Currency.USD);
         }
 
@@ -321,7 +322,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
         {
             int winnerSeatId = Int32.Parse(winnerElement.Attribute("player").Value);
             int potNumber = Int32.Parse(winnerElement.Attribute("potnumber").Value) - 1;
-            decimal amount = decimal.Parse(winnerElement.Attribute("amount").Value);
+            decimal amount = decimal.Parse(winnerElement.Attribute("amount").Value, System.Globalization.CultureInfo.InvariantCulture);
 
             Player matchingPlayer = GetPlayerBySeatId(playerList, winnerSeatId);
 
@@ -365,7 +366,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             decimal value = 0;
             if (eventElement.Attribute("amount") != null)
             {
-                value = decimal.Parse(eventElement.Attribute("amount").Value);
+                value = decimal.Parse(eventElement.Attribute("amount").Value, System.Globalization.CultureInfo.InvariantCulture);
             }
 
 
@@ -464,7 +465,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             {
                 //Player Element looks like:
                 //<player seat="0" nickname="GODEXISTSJK" balance="$269.96" dealtin="true" />
-                decimal stack = decimal.Parse(playerElement.Attribute("balance").Value.Substring(1));
+                decimal stack = decimal.Parse(playerElement.Attribute("balance").Value.Substring(1), System.Globalization.CultureInfo.InvariantCulture);
                 string playerName = playerElement.Attribute("nickname").Value;
                 int seat = Int32.Parse(playerElement.Attribute("seat").Value);
                 Player player = new Player(playerName, stack, seat);

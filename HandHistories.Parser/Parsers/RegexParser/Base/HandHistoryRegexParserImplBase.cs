@@ -363,7 +363,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
 
                 do
                 {
-                    decimal startingStack = decimal.Parse(Regex.Match(seat.Value, SeatInfoStartingStackRegex).Value);
+                    decimal startingStack = decimal.Parse(Regex.Match(seat.Value, SeatInfoStartingStackRegex).Value, System.Globalization.CultureInfo.InvariantCulture);
                     int position = Int32.Parse(Regex.Match(seat.Value, SeatInfoSeatNumberRegex).Value);
                     string screenName = Regex.Match(seat.Value, SeatInfoPlayerNameRegex).Value;
 

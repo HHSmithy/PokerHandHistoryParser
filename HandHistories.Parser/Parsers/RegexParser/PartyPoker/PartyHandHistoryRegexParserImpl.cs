@@ -124,7 +124,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
                     // turn into a buy in only if the game type is not fixed limit
                     // as there are no buy ins in fixed limit.
                     if (gameType != GameType.FixedLimitHoldem)
-                        gameLimitNoSlash = (decimal.Parse(gameLimitNoSlash) * 100).ToString();
+                        gameLimitNoSlash = (decimal.Parse(gameLimitNoSlash, System.Globalization.CultureInfo.InvariantCulture) * 100).ToString();
                 }
 
                 Currency currency = ParseCurrency(handText);
@@ -136,14 +136,14 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
                 // a sb/bb
                 if (gameType == GameType.FixedLimitHoldem)
                 {
-                    bigBlind = decimal.Parse(gameLimitNoSlash);
+                    bigBlind = decimal.Parse(gameLimitNoSlash, System.Globalization.CultureInfo.InvariantCulture);
 
                     return Limit.FromSmallBlindBigBlind(bigBlind/2.0m, bigBlind, currency);
                 }
 
                 // All other game types
 
-                decimal buyIn = decimal.Parse(gameLimitNoSlash);
+                decimal buyIn = decimal.Parse(gameLimitNoSlash, System.Globalization.CultureInfo.InvariantCulture);
                 bigBlind = buyIn/100.0m;
 
                 if (bigBlind == 0.25m)

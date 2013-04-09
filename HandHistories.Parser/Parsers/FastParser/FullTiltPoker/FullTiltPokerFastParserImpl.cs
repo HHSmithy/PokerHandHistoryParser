@@ -187,11 +187,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
             }
 
-            int slashIndex = limitSubstring.IndexOf('/');            
+            int slashIndex = limitSubstring.IndexOf('/');
 
-            decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1));
+            decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
             string bigString = limitSubstring.Substring(slashIndex + 2, limitSubstring.Length - slashIndex - 2);
-            decimal big = decimal.Parse(bigString);
+            decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
             // If it is an ante table we expect to see an ante line after the big blind
             decimal ante = 0;
@@ -239,7 +239,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 int seat = Int32.Parse(handLine.Substring(colonIndex - 2, 2));
                 string name = handLine.Substring(colonIndex + 2, parenIndex - 1 - colonIndex - 2);
                 string stackSizeString = handLine.Substring(parenIndex + 2, handLine.Length - 1 - parenIndex - 2);
-                decimal amount = decimal.Parse(stackSizeString);
+                decimal amount = decimal.Parse(stackSizeString, System.Globalization.CultureInfo.InvariantCulture);
 
                 playerList.Add(new Player(name, amount, seat));
 

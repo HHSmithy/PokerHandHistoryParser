@@ -151,8 +151,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             string lowLimitString = LowLimitRegex.Match(handLines[2]).Value;
             string highLimitString = HighLimitRegex.Match(handLines[2]).Value;
 
-            decimal lowLimit = decimal.Parse(lowLimitString);
-            decimal highLimit = decimal.Parse(highLimitString);
+            decimal lowLimit = decimal.Parse(lowLimitString, System.Globalization.CultureInfo.InvariantCulture);
+            decimal highLimit = decimal.Parse(highLimitString, System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(lowLimit, highLimit, Currency.USD);
         }
@@ -218,7 +218,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     if (char.IsDigit(handLine[handLine.Length - 3]))
                     {                        
                         string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
-                        decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""));
+                        decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""), System.Globalization.CultureInfo.InvariantCulture);
                         
                         string playerName = handLine.Substring(0, openSquareIndex - 11);
 
@@ -247,7 +247,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 {
                     int openSquareIndex = handLine.LastIndexOf('[');
                     string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
-                    decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""));
+                    decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""), System.Globalization.CultureInfo.InvariantCulture);
 
                     string action = handLine.Substring(openSquareIndex - 8, 7);
 
@@ -325,7 +325,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 int seat = int.Parse(handLine.Substring(5, colonIndex - 5));
                 string playerName = handLine.Substring(colonIndex + 2, openParenIndex - colonIndex - 3);
-                decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 3, handLine.Length - openParenIndex - 3 - 2));
+                decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 3, handLine.Length - openParenIndex - 3 - 2), System.Globalization.CultureInfo.InvariantCulture);
 
                 playerList.Add(new Player(playerName, amount, seat));
             }

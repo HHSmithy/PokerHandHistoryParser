@@ -194,8 +194,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             int slashIndex = handLines[2].IndexOf('/', currencyIndex + 1);
             int commaIndex = handLines[2].IndexOf(',', slashIndex + 1);
 
-            decimal smallBlind = decimal.Parse(handLines[2].Substring(currencyIndex + 1, slashIndex - currencyIndex - 1));
-            decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 2, commaIndex - slashIndex - 2));
+            decimal smallBlind = decimal.Parse(handLines[2].Substring(currencyIndex + 1, slashIndex - currencyIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
+            decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 2, commaIndex - slashIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, handLines[2][currencyIndex] == '$' ? Currency.USD : Currency.EURO);
         }
@@ -284,7 +284,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     if (handLine.StartsWith("Main pot:"))
                     {
                         int openParenIndex = handLine.LastIndexOf('(');
-                        decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3));
+                        decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
 
                         int yIndex = handLine.IndexOf('y');
                         string playerName = handLine.Substring(yIndex + 2, openParenIndex - yIndex - 3);
@@ -301,8 +301,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     //  GlassILass posts small blind ($0.25)
                     //  EvilJihnny99 posts big blind ($0.25)
 
-                    int openParenIndex = handLine.LastIndexOf('(');                    
-                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3));
+                    int openParenIndex = handLine.LastIndexOf('(');
+                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
 
                     char blindIdentifier = handLine[openParenIndex - 10];
                     if (blindIdentifier == 'b') // big blind
@@ -356,7 +356,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     bool isAllIn = handLine.EndsWith("all in]");
                     
                     string playerName;
-                    decimal amount = decimal.Parse(handLine.Substring(dollarIndex + 1, decimalIndex + 2 - dollarIndex));
+                    decimal amount = decimal.Parse(handLine.Substring(dollarIndex + 1, decimalIndex + 2 - dollarIndex), System.Globalization.CultureInfo.InvariantCulture);
                     switch (actionIdentifier)
                     {
                         case 'l': // calls
@@ -426,8 +426,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 string name = handLine.Substring(colonIndex + 2, parenIndex - 2 - colonIndex - 1);
                 int seatNumber = Int32.Parse(handLine.Substring(5, colonIndex - 5));
                 string amount = (handLine.Substring(parenIndex + 2, handLine.Length - parenIndex - 2 - 1));
-                
-                playerList.Add(new Player(name, Decimal.Parse(amount), seatNumber));
+
+                playerList.Add(new Player(name, decimal.Parse(amount, System.Globalization.CultureInfo.InvariantCulture), seatNumber));
             }
 
             // Parse the player showdown hole-cards
