@@ -50,6 +50,10 @@ namespace HandHistories.Objects.GameDescription
             return _tableTypeDescriptions.ToString();
         }
 
+        /// <summary>
+        /// Needs to be optimized using iteration over the set bits instead of using Parsing.
+        /// </summary>
+        /// <returns>A List<> of all the set bits as TableTypeDescriptions</returns>
         public List<TableTypeDescription> ToEnumList()
         {
             return _tableTypeDescriptions.ToString()
