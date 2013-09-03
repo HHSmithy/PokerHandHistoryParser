@@ -33,7 +33,7 @@ namespace HandHistories.Objects.GameDescription
         #endregion
 
         [DataMember]
-        private readonly TableTypeDescription _tableTypeDescriptions;
+        public readonly TableTypeDescription _tableTypeDescriptions;
 
         private TableType(params TableTypeDescription [] tableTypeDescriptions)
         {
@@ -48,6 +48,11 @@ namespace HandHistories.Objects.GameDescription
         public override string ToString()
         {
             return _tableTypeDescriptions.ToString();
+        }
+
+        public bool HasTypeDescription(TableTypeDescription description)
+        {
+            return _tableTypeDescriptions.HasFlag(description);
         }
 
         /// <summary>
