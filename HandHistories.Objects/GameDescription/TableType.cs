@@ -9,7 +9,7 @@ namespace HandHistories.Objects.GameDescription
 {
     [DataContract]
     [Serializable]
-    public struct TableType
+    public struct TableType : IEnumerable<TableTypeDescription>
     {
         #region Statics
         private static readonly Regex ParseRegex = new Regex("[-,;_]");
@@ -55,15 +55,23 @@ namespace HandHistories.Objects.GameDescription
             return _tableTypeDescriptions.HasFlag(description);
         }
 
-        /// <summary>
-        /// Needs to be optimized using iteration over the set bits instead of using Parsing.
-        /// </summary>
-        /// <returns>A List<> of all the set bits as TableTypeDescriptions</returns>
-        public List<TableTypeDescription> ToEnumList()
+        #region IEnumerable Implementation
+        public IEnumerable<TableTypeDescription> GetTableTypeDescriptions()
         {
-            return _tableTypeDescriptions.ToString()
-                  .Split(new[] { ", " }, StringSplitOptions.None)
-                  .Select(v => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), v)).ToList();
+            foreach (TableTypeDescription value in TableTypeDescription.GetValues(_tableTypeDescriptions.GetType()))
+                if (_tableTypeDescriptions.HasFlag(value))
+                    yield return value;
         }
+
+        public IEnumerator<TableTypeDescription> GetEnumerator()
+        {
+            return GetTableTypeDescriptions().GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetTableTypeDescriptions().GetEnumerator();
+        } 
+        #endregion
     }
 }
