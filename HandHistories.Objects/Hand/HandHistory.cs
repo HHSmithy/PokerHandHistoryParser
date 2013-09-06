@@ -24,7 +24,7 @@ namespace HandHistories.Objects.Hand
             
         }
 
-        public List<HandAction> HandActions { get; set; }        
+        public List<HandAction> HandActions { get; set; }
 
         public BoardCards ComumnityCards { get; set; }
 

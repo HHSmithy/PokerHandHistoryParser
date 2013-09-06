@@ -23,6 +23,9 @@ namespace HandHistories.Objects.Actions
 
         [DataMember]
         public int ActionNumber { get; private set; }
+
+        [DataMember]
+        public bool isAllIn { get; protected set; }
         
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
@@ -35,14 +38,15 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
+            isAllIn = false;
         }
 
-        public override int GetHashCode()
+        public sealed override int GetHashCode()
         {
             return ToString().GetHashCode();
         }
 
-        public override bool Equals(object obj)
+        public sealed override bool Equals(object obj)
         {
             HandAction handAction = obj as HandAction;
             if (handAction == null) return false;
@@ -119,8 +123,7 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -128,14 +131,13 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
+                return Street == Street.Preflop && HandActionType == HandActionType.RAISE;
             }
         }
 
         public bool IsAllInAction
         {
-            get { return HandActionType == HandActionType.ALL_IN; }
+            get { return isAllIn; }
         }
 
         public bool IsWinningsAction
@@ -154,9 +156,8 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||                       
-                       HandActionType == HandActionType.BET ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE ||
+                       HandActionType == HandActionType.BET;
             }
         }
 
