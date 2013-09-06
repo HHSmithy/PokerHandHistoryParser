@@ -4,7 +4,7 @@ using HandHistories.Objects.Cards;
 namespace HandHistories.Objects.Actions
 {
     [DataContract]
-    public class AllInAction : HandAction
+    public sealed class AllInAction : HandAction
     {        
         public AllInAction(string playerName,
                            decimal amount,

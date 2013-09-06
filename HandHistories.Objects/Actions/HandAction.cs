@@ -144,11 +144,8 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.WINS ||
-                       HandActionType == HandActionType.WINS_SIDE_POT ||
-                       HandActionType == HandActionType.TIES || 
-                       HandActionType == HandActionType.TIES_SIDE_POT ||
-                       HandActionType == HandActionType.WINS_THE_LOW;
+                const byte WinningFlag = (byte)HandActionType.WINS;
+                return ((byte)HandActionType & WinningFlag) == WinningFlag;
             }
         }
 
@@ -165,12 +162,9 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.SMALL_BLIND ||
-                       HandActionType == HandActionType.BIG_BLIND ||
-                       HandActionType == HandActionType.POSTS;
+                const byte BlindFlag = (byte)HandActionType.POSTS;
+                return ((byte)HandActionType & BlindFlag) == BlindFlag;
             }
         }
-       
-        
     }
 }
