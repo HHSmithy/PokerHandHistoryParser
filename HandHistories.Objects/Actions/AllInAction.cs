@@ -13,6 +13,7 @@ namespace HandHistories.Objects.Actions
                            int actionNumber = 0)
             : base(playerName, (isRaiseAllIn ? HandActionType.RAISE : HandActionType.CALL), amount, street, actionNumber)
         {
+            isAllIn = true;
         }
 
         public override string ToString()
