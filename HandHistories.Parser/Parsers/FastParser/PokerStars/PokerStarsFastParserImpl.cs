@@ -240,7 +240,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     currency = Currency.GBP;
                     break;   
                 default:
-                    throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
+                    currency = Currency.PlayMoney;
+                    break;
             }
 
             int slashIndex = limitSubstring.IndexOf('/');
@@ -248,7 +249,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
             decimal big = decimal.Parse(limitSubstring.Substring(slashIndex + 2, firstSpace - (slashIndex + 2) + 1), System.Globalization.CultureInfo.InvariantCulture);
-
 
             // If it is an ante table we expect to see an ante line after the big blind
             decimal ante = 0;
@@ -282,7 +282,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
-
             int firstActionIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>(handLines.Length - firstActionIndex);

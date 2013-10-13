@@ -13,7 +13,7 @@ namespace HandHistories.Objects.Actions
         public string PlayerName { get; private set; }
 
         [DataMember]
-        public HandActionType HandActionType { get; private set; }
+        public readonly HandActionType HandActionType;
 
         [DataMember]
         public decimal Amount { get; private set; }
@@ -22,7 +22,7 @@ namespace HandHistories.Objects.Actions
         public Street Street { get; private set; }
 
         [DataMember]
-        public int ActionNumber { get; private set; }
+        public int ActionNumber { get; internal set; }
 
         [DataMember]
         public bool isAllIn { get; protected set; }
@@ -63,6 +63,11 @@ namespace HandHistories.Objects.Actions
         {
             Amount = Math.Abs(Amount) - Math.Abs(value);
             Amount = GetAdjustedAmount(Amount, HandActionType);
+        }
+
+        public bool IsRaiseAllIn
+        {
+            get { return IsRaise && isAllIn; }
         }
 
         /// <summary>
@@ -140,6 +145,15 @@ namespace HandHistories.Objects.Actions
             get { return isAllIn; }
         }
 
+        public bool IsShowdownAction
+        {
+            get
+            {
+                const byte ShowdownFlag = (byte)HandActionType.MUCKS;
+                return ((byte)HandActionType & ShowdownFlag) == ShowdownFlag;
+            }
+        }
+
         public bool IsWinningsAction
         {
             get
@@ -155,6 +169,24 @@ namespace HandHistories.Objects.Actions
             {
                 return HandActionType == HandActionType.RAISE ||
                        HandActionType == HandActionType.BET;
+            }
+        }
+
+        public bool IsGameAction
+        {
+            get
+            {
+                const byte GameActionFlag = (byte)HandActionType.FOLD;
+                return ((byte)HandActionType & GameActionFlag) == GameActionFlag;
+            }
+        }
+
+        public bool VPIP
+        {
+            get
+            {
+                const byte VPIPFlag = (byte)HandActionType.BET;
+                return ((byte)HandActionType & VPIPFlag) == VPIPFlag;
             }
         }
 
