@@ -46,7 +46,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual string [] SplitHandsLines(string handText)
         {
-             return LineSplitRegex.Split(handText.Trim('\r', '\n')).Select(s => s.Trim(' ', '\r', '\n')).Where(l => string.IsNullOrWhiteSpace(l) == false).ToArray();           
+            return LineSplitRegex.Split(handText.Trim('\r', '\n')).Select(s => s.Trim(' ', '\r', '\n', '\t')).Where(l => string.IsNullOrWhiteSpace(l) == false).ToArray();           
         }
 
         public HandHistorySummary ParseFullHandSummary(string handText, bool rethrowExceptions = false)
