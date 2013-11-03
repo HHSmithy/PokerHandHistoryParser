@@ -9,18 +9,11 @@ namespace HandHistories.Objects.GameDescription
 {
     [DataContract]
     [Serializable]
-    public class TableType : IEnumerable<TableTypeDescription>
+    public struct TableType : IEnumerable<TableTypeDescription>
     {
-        [DataMember]
-        private readonly List<TableTypeDescription> _tableTypeDescriptions;
-
-        private TableType(params TableTypeDescription [] tableTypeDescriptions)
-        {
-            // Alphabetize them and take the distincts
-            _tableTypeDescriptions = new List<TableTypeDescription>(tableTypeDescriptions.OrderBy(t => t.ToString()).Distinct());
-        }
-
+        #region Statics
         private static readonly Regex ParseRegex = new Regex("[-,;_]");
+
         public static TableType Parse(string tableType)
         {
             List<string> tableTypeDescriptionStrings = ParseRegex.Split(tableType).ToList();
@@ -33,47 +26,52 @@ namespace HandHistories.Objects.GameDescription
                 );           
         }
 
-        public static TableType FromTableTypeDescriptions(params TableTypeDescription [] tableTypeDescriptions)
+        public static TableType FromTableTypeDescriptions(params TableTypeDescription[] tableTypeDescriptions)
         {
             return new TableType(tableTypeDescriptions);
         }
+        #endregion
 
-        public IEnumerable<TableTypeDescription> GetTableTypeDescriptions()
-        {
-            return _tableTypeDescriptions;
-        }
+        [DataMember]
+        public readonly TableTypeDescription _tableTypeDescriptions;
 
-        public IEnumerator<TableTypeDescription> GetEnumerator()
+        private TableType(params TableTypeDescription [] tableTypeDescriptions)
         {
-            return _tableTypeDescriptions.GetEnumerator();
+            // Alphabetize them and take the distincts
+            _tableTypeDescriptions = 0;
+            foreach (var item in tableTypeDescriptions)
+	        {
+                _tableTypeDescriptions |= item;
+            }
         }
 
         public override string ToString()
         {
-            return string.Join("-", _tableTypeDescriptions);
+            return _tableTypeDescriptions.ToString();
         }
 
-        public override bool Equals(object obj)
+        public bool HasTypeDescription(TableTypeDescription description)
         {
-            TableType tableType = obj as TableType;
-            if (tableType == null)
-            {
-                return false;
-            }
+            return _tableTypeDescriptions.HasFlag(description);
+        }
 
-            // See if contains all the same elements
-            //  http://stackoverflow.com/questions/1673347/linq-determine-if-two-sequences-contains-exactly-the-same-elements
-            return new HashSet<TableTypeDescription>(tableType.GetTableTypeDescriptions()).SetEquals(this.GetTableTypeDescriptions());
-        }        
-
-        public override int GetHashCode()
+        #region IEnumerable Implementation
+        public IEnumerable<TableTypeDescription> GetTableTypeDescriptions()
         {
-            return ToString().GetHashCode();
+            foreach (TableTypeDescription value in TableTypeDescription.GetValues(_tableTypeDescriptions.GetType()))
+                if (_tableTypeDescriptions.HasFlag(value))
+                    yield return value;
+        }
+
+        public IEnumerator<TableTypeDescription> GetEnumerator()
+        {
+            return GetTableTypeDescriptions().GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
-        }
+            return GetTableTypeDescriptions().GetEnumerator();
+        } 
+        #endregion
     }
 }

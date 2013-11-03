@@ -9,11 +9,10 @@ namespace HandHistories.Objects.Players
     [DataContract]
     public class PlayerList : IEnumerable<Player>
     {
-        private List<Player> _players = new List<Player>(10); 
+        private List<Player> _players = new List<Player>(10);
 
         public PlayerList()
         {
-            
         }
 
         public PlayerList(IEnumerable<Player> players)
@@ -30,11 +29,7 @@ namespace HandHistories.Objects.Players
 
         public void AddRange(IEnumerable<Player> players)
         {
-            foreach (var player in players)
-            {
-                _players.Add(player);
-            }
-
+            _players.AddRange(players);
             SortList();
         }
 

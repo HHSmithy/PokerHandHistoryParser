@@ -4,7 +4,7 @@ using HandHistories.Objects.Cards;
 namespace HandHistories.Objects.Actions
 {
     [DataContract]
-    public class WinningsAction : HandAction
+    public sealed class WinningsAction : HandAction
     {
         [DataMember]
         public int PotNumber { get; private set; }
