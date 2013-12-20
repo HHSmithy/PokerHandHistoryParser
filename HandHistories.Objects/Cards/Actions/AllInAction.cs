@@ -16,9 +16,14 @@ namespace HandHistories.Objects.Actions
             isAllIn = true;
         }
 
-        public override string ToString()
+        public AllInAction(string playerName,
+                           decimal amount,
+                           Street street,
+                           HandActionType HType,
+                           int actionNumber = 0)
+            : base(playerName, HType, amount, street, actionNumber)
         {
-            return base.ToString() + " and is AllIn";
+            isAllIn = true;
         }
     }
 }

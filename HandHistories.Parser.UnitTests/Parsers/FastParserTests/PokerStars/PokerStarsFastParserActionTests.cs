@@ -60,7 +60,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             HandAction handAction =
                  GetPokerStarsFastParser().ParseRegularActionLine(@"Piotr280688: raises $8.32 to $12.88 and is all-in", 11, Street.Flop);
 
-            Assert.AreEqual(new AllInAction("Piotr280688", 12.88m, Street.Flop, true), handAction);
+            Assert.AreEqual(new AllInAction("Piotr280688", 12.88m, Street.Flop, HandActionType.RAISE), handAction);
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             HandAction handAction =
                  GetPokerStarsFastParser().ParseRegularActionLine(@"zeranex88: bets $3.03 and is all-in", 9, Street.Flop);
 
-            Assert.AreEqual(new AllInAction("zeranex88", 3.03m, Street.Flop, false), handAction);
+            Assert.AreEqual(new AllInAction("zeranex88", 3.03m, Street.Flop, HandActionType.BET), handAction);
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             HandAction handAction =
                  GetPokerStarsFastParser().ParseRegularActionLine(@"Fjell_konge: calls $7.56 and is all-in", 11, Street.Flop);
 
-            Assert.AreEqual(new AllInAction("Fjell_konge", 7.56m, Street.Flop, false), handAction);
+            Assert.AreEqual(new AllInAction("Fjell_konge", 7.56m, Street.Flop, HandActionType.CALL), handAction);
         }
 
         [Test]

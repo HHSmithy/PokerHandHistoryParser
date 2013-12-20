@@ -1,38 +1,54 @@
+using System;
 using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
+    [Flags]
     [DataContract]
     public enum GameType : byte 
     {
         [EnumMember]
         Unknown = 0,
+        #region Holdem
         [EnumMember]
-        NoLimitHoldem = 1,
+        Holdem = 1 << 3,
         [EnumMember]
-        FixedLimitHoldem = 2,
+        NoLimitHoldem = Holdem | 1,
         [EnumMember]
-        PotLimitOmaha = 3,
+        CapNoLimitHoldem = Holdem | 2,
         [EnumMember]
-        PotLimitHoldem = 4,
+        FixedLimitHoldem = Holdem | 3,
         [EnumMember]
-        PotLimitOmahaHiLo = 5,
+        PotLimitHoldem = Holdem | 4,
+        #endregion
+
+        #region Omaha
         [EnumMember]
-        CapNoLimitHoldem = 6,
+        Omaha = 1 << 4,
         [EnumMember]
-        CapPotLimitOmaha = 7,
+        PotLimitOmaha = Omaha | 1,
         [EnumMember]
-        FiveCardPotLimitOmaha = 8,
+        CapPotLimitOmaha = Omaha | 2,
         [EnumMember]
-        FiveCardPotLimitOmahaHiLo = 9,        
+        FiveCardPotLimitOmaha = Omaha | 3,
         [EnumMember]
-        NoLimitOmaha = 10,
+        NoLimitOmaha = Omaha | 4,
         [EnumMember]
-        NoLimitOmahaHiLo = 11,
+        FixedLimitOmaha = Omaha | 5,
+        #endregion
+        
+        #region OmahaHiLow
         [EnumMember]
-        FixedLimitOmaha = 12,
+        OmahaHiLow = 1 << 5,
         [EnumMember]
-        FixedLimitOmahaHiLo = 13,
+        PotLimitOmahaHiLo = OmahaHiLow | 1,
+        [EnumMember]
+        FiveCardPotLimitOmahaHiLo = OmahaHiLow | 2,
+        [EnumMember]
+        NoLimitOmahaHiLo = OmahaHiLow | 3,
+        [EnumMember]
+        FixedLimitOmahaHiLo = OmahaHiLow | 4,
+        #endregion
         [EnumMember]
         Any = 31,        
     }

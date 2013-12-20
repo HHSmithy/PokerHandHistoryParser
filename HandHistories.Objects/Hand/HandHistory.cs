@@ -57,6 +57,23 @@ namespace HandHistories.Objects.Hand
         }
         #endregion
 
+        public int GetStreetIndex(Street street)
+        {
+            switch (street)
+            {
+                case Street.Preflop:
+                    return 0;
+                case Street.Flop:
+                    return FlopStartIndex;
+                case Street.Turn:
+                    return TurnStartIndex;
+                case Street.River:
+                    return RiverStartIndex;
+                default:
+                    throw new ArgumentException("Street");
+            }
+        }
+
         public BoardCards ComumnityCards { get; set; }
 
         public PlayerList Players { get; set; }

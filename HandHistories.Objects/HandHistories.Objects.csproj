@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\AllInAction.cs" />
-    <Compile Include="Actions\HandAction.cs" />
-    <Compile Include="Actions\HandActionType.cs" />
-    <Compile Include="Actions\WinningsAction.cs" />
+    <Compile Include="Cards\Actions\AllInAction.cs" />
+    <Compile Include="Cards\Actions\HandAction.cs" />
+    <Compile Include="Cards\Actions\HandActionType.cs" />
+    <Compile Include="Cards\Actions\WinningsAction.cs" />
     <Compile Include="Cards\BoardCards.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\CardGroup.cs" />
@@ -67,6 +67,9 @@
     <Compile Include="Hand\HandHistory.cs" />
     <Compile Include="Hand\HandHistorySummary.cs" />
     <Compile Include="Cards\HoleCards.cs" />
+    <Compile Include="Utilities\PositionUtility.cs" />
+    <Compile Include="Utilities\PotUtility.cs" />
+    <Compile Include="Utilities\StreetUtility.cs" />
     <Compile Include="ITimeStamped.cs" />
     <Compile Include="GameDescription\Limit.cs" />
     <Compile Include="GameDescription\PokerFormat.cs" />

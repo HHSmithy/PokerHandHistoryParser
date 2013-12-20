@@ -38,9 +38,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         private void TestTLimit(string expectedLimitString, string fileName)
         {
             string handText = SampleHandHistoryRepository.GetLimitExampleHandHistoryText(PokerFormat.CashGame, Site, fileName);
-            
-            Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetSummmaryParser().ParseLimit(handText).ToString(), "IHandHistorySummaryParser: ParseLimit");
-            Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetParser().ParseLimit(handText).ToString(), "IHandHistoryParser: ParseLimit");
+
+            Assert.AreEqual(expectedLimitString.Replace("e", "€").Replace(",", "."), GetSummmaryParser().ParseLimit(handText).ToString().Replace(",", "."), "IHandHistorySummaryParser: ParseLimit");
+            Assert.AreEqual(expectedLimitString.Replace("e", "€").Replace(",", "."), GetParser().ParseLimit(handText).ToString().Replace(",", "."), "IHandHistoryParser: ParseLimit");
         }
 
         [TestCase(1)]

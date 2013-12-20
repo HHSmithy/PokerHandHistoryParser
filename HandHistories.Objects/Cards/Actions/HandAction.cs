@@ -56,7 +56,7 @@ namespace HandHistories.Objects.Actions
 
         public override string ToString()
         {
-            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "";
+            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "" + (IsAllInAction ? " and is AllIn" : "");
         }
 
         public void DecreaseAmount(decimal value)
