@@ -13,7 +13,7 @@ Site Support
 
 The poker hand-history parser currently supports the following sites:
 
- * Poker Stars (.com / .fr / .it)
+ * Poker Stars (.com / .fr / .it / .es)
  * Full Tilt Poker
  * Party Poker
  * On Game (.com / .fr / .it)
@@ -21,6 +21,28 @@ The poker hand-history parser currently supports the following sites:
  * Merge
  * 888
  * Entraction
+
+Format Support
+--------------
+ * Cash games (2 to 10 players)
+ * Zoom (Poker Stars Only)
+
+Game Type Support
+-----------------
+ * No Limit Hold'em
+ * Cap No Limit Hold'em
+ * Fixed Limit Hold'em
+ * Pot Limit Hold'em
+ * Pot Limit Omaha
+ * Fixed Limit Omaha
+ * Omaha Eight of Better
+
+Future Upgrades
+---------------
+ * Single and multi-table tournament support
+ * Microgaming site support
+ * Winimax site support
+ * Speed improvements for Poker Stars
 
 Documentation
 -------------
