@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Factory;
+using System.Diagnostics;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -40,6 +41,8 @@ namespace HandHistories.Parser.WindowsTestApp
                 return;
             }
 
+            Stopwatch Duration = new Stopwatch();
+            Duration.Start();
             IHandHistoryParserFactory factory = new HandHistoryParserFactoryImpl();
             var handParser = factory.GetFullHandHistoryParser((SiteName) listBoxSite.SelectedItem);
 
@@ -50,8 +53,9 @@ namespace HandHistories.Parser.WindowsTestApp
                 {
                     var parsedHand = handParser.ParseFullHandHistory(hand, true);    
                 }
-                
-                MessageBox.Show(this, "Parsed " + hands.Count + " hands.");
+
+                Duration.Stop();
+                MessageBox.Show(this, "Parsed " + hands.Count + " hands in " + Duration.ElapsedMilliseconds + "ms");
             }
             catch (Exception ex)
             {
