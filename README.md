@@ -20,7 +20,9 @@ The poker hand-history parser currently supports the following sites:
  * IPoker
  * Merge
  * 888
- * Entraction
+ * Microgaming
+ * Winimax
+ * Entraction (deprecated)
 
 Format Support
 --------------
@@ -40,8 +42,6 @@ Game Type Support
 Future Upgrades
 ---------------
  * Single and multi-table tournament support
- * Microgaming site support
- * Winimax site support
  * Speed improvements for Poker Stars
 
 Documentation
