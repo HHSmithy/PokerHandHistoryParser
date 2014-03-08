@@ -13,7 +13,7 @@ namespace HandHistories.Objects.Actions
         public string PlayerName { get; private set; }
 
         [DataMember]
-        public HandActionType HandActionType { get; private set; }
+        public readonly HandActionType HandActionType;
 
         [DataMember]
         public decimal Amount { get; private set; }
@@ -22,7 +22,10 @@ namespace HandHistories.Objects.Actions
         public Street Street { get; private set; }
 
         [DataMember]
-        public int ActionNumber { get; private set; }
+        public int ActionNumber { get; internal set; }
+
+        [DataMember]
+        public bool isAllIn { get; protected set; }
         
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
@@ -35,14 +38,15 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
+            isAllIn = false;
         }
 
-        public override int GetHashCode()
+        public sealed override int GetHashCode()
         {
             return ToString().GetHashCode();
         }
 
-        public override bool Equals(object obj)
+        public sealed override bool Equals(object obj)
         {
             HandAction handAction = obj as HandAction;
             if (handAction == null) return false;
@@ -52,13 +56,18 @@ namespace HandHistories.Objects.Actions
 
         public override string ToString()
         {
-            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "";
+            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "" + (IsAllInAction ? " and is AllIn" : "");
         }
 
         public void DecreaseAmount(decimal value)
         {
             Amount = Math.Abs(Amount) - Math.Abs(value);
             Amount = GetAdjustedAmount(Amount, HandActionType);
+        }
+
+        public bool IsRaiseAllIn
+        {
+            get { return IsRaise && isAllIn; }
         }
 
         /// <summary>
@@ -119,8 +128,7 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -128,25 +136,30 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
+                return Street == Street.Preflop && HandActionType == HandActionType.RAISE;
             }
         }
 
         public bool IsAllInAction
         {
-            get { return HandActionType == HandActionType.ALL_IN; }
+            get { return isAllIn; }
+        }
+
+        public bool IsShowdownAction
+        {
+            get
+            {
+                const byte ShowdownFlag = (byte)HandActionType.MUCKS;
+                return ((byte)HandActionType & ShowdownFlag) == ShowdownFlag;
+            }
         }
 
         public bool IsWinningsAction
         {
             get
             {
-                return HandActionType == HandActionType.WINS ||
-                       HandActionType == HandActionType.WINS_SIDE_POT ||
-                       HandActionType == HandActionType.TIES || 
-                       HandActionType == HandActionType.TIES_SIDE_POT ||
-                       HandActionType == HandActionType.WINS_THE_LOW;
+                const byte WinningFlag = (byte)HandActionType.WINS;
+                return ((byte)HandActionType & WinningFlag) == WinningFlag;
             }
         }
 
@@ -154,9 +167,26 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||                       
-                       HandActionType == HandActionType.BET ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE ||
+                       HandActionType == HandActionType.BET;
+            }
+        }
+
+        public bool IsGameAction
+        {
+            get
+            {
+                const byte GameActionFlag = (byte)HandActionType.FOLD;
+                return ((byte)HandActionType & GameActionFlag) == GameActionFlag;
+            }
+        }
+
+        public bool VPIP
+        {
+            get
+            {
+                const byte VPIPFlag = (byte)HandActionType.BET;
+                return ((byte)HandActionType & VPIPFlag) == VPIPFlag;
             }
         }
 
@@ -164,12 +194,9 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.SMALL_BLIND ||
-                       HandActionType == HandActionType.BIG_BLIND ||
-                       HandActionType == HandActionType.POSTS;
+                const byte BlindFlag = (byte)HandActionType.POSTS;
+                return ((byte)HandActionType & BlindFlag) == BlindFlag;
             }
         }
-       
-        
     }
 }

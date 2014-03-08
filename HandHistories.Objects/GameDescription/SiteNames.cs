@@ -25,6 +25,9 @@ namespace HandHistories.Objects.GameDescription
         OnGameFr = 20,
         IPokerIt = 21,
         IPokerFr = 22,
+        /// <summary>
+        /// AKA 888
+        /// </summary>
         Pacific = 23, // This is 888
         IPoker2 = 24,
         PokerStarsEs = 25,

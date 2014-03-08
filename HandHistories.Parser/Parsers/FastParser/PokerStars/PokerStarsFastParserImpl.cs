@@ -240,7 +240,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     currency = Currency.GBP;
                     break;   
                 default:
-                    throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
+                    currency = Currency.PlayMoney;
+                    break;
             }
 
             int slashIndex = limitSubstring.IndexOf('/');
@@ -248,7 +249,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
             decimal big = decimal.Parse(limitSubstring.Substring(slashIndex + 2, firstSpace - (slashIndex + 2) + 1), System.Globalization.CultureInfo.InvariantCulture);
-
 
             // If it is an ante table we expect to see an ante line after the big blind
             decimal ante = 0;
@@ -282,7 +282,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
-
             int firstActionIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>(handLines.Length - firstActionIndex);
@@ -594,14 +593,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     //MECO-LEO: calls $1.23
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.CALL;                                                         
+                    actionType = HandActionType.CALL;                                                         
                     break;
                 
                 //MS13ZEN: bets $1.76
                 case 'b':
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.BET;                                                         
+                    actionType = HandActionType.BET;                                                         
                     break;
 
                 //Zypherin: raises $6400 to $8300              
@@ -609,14 +608,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     isRaise = true;
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.RAISE;   
+                    actionType = HandActionType.RAISE;   
                     break;
                 default:
                     throw new HandActionException(actionLine, "ParseRegularActionLine: Unrecognized line:" + actionLine);
             }
 
             return isAllIn
-                       ? new AllInAction(playerName, amount, currentStreet, isRaise)
+                       ? new AllInAction(playerName, amount, currentStreet, actionType)
                        : new HandAction(playerName, actionType, amount, currentStreet);
 
         }
