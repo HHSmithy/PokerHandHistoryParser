@@ -1,29 +1,19 @@
-﻿#Game No : 234357513
-***** Cassava Hand History for Game 234357513 *****
-$0.12/$0.25 Blinds Pot Limit Omaha - *** 17 07 2012 13:07:27
-Table Murcia (Real Money)
-Seat 7 is the button
-Total number of players : 4
-Seat 1: Stramak ( $7.66 )
-Seat 6: TheLuckier ( $21.65 )
-Seat 7: yvonn27 ( $58.38 )
-Seat 9: Elmo7497 ( $38.22 )
-Elmo7497 posts small blind [$0.12]
-Stramak folds
-TheLuckier posts big blind [$0.25]
+#Game No : 349717966
+***** 888poker Hand History for Game 349717966 *****
+$0.05/$0.10 Blinds Pot Limit Omaha - *** 06 01 2014 21:05:48
+Table Baku 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 6: ANBU22 ( $10.05 )
+Seat 9: Colbefc ( $10.04 )
+ANBU22 posts small blind [$0.05]
+Colbefc posts big blind [$0.10]
 ** Dealing down cards **
-yvonn27 raises [$0.87]
-Elmo7497 calls [$0.75]
-TheLuckier calls [$0.62]
-** Dealing flop ** [ 6d, 3s, 9h ]
-Elmo7497 checks
-TheLuckier bets [$1.50]
-yvonn27 raises [$7.11]
-Elmo7497 folds
-TheLuckier calls [$5.61]
-** Dealing turn ** [ Qd ]
-TheLuckier checks
-yvonn27 bets [$16.83]
-TheLuckier folds
+ANBU22 calls [$0.05]
+Colbefc checks
+** Dealing flop ** [ Jh, 7c, 5h ]
+Colbefc checks
+ANBU22 bets [$0.10]
+Colbefc folds
 ** Summary **
-yvonn27 collected [ $15.99 ]
+ANBU22 collected [ $0.19 ]

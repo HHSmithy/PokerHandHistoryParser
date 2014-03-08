@@ -4,10 +4,10 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
-    [TestFixture("PartyPoker", "Regular", "Regular", "Speed", "Regular")]
-    [TestFixture("PokerStars", "Regular", "Regular", "Regular", "Regular", "Zoom")]
-    [TestFixture("OnGame", "Speed", "Regular", "Regular", "Regular")]
-    [TestFixture("IPoker", "Shallow", "Regular", "Regular", "Regular")]
+    [TestFixture("PartyPoker", "Regular", "Regular", "Regular", "Regular")]
+    [TestFixture("PokerStars", "Regular", "Regular", "Regular", "Regular", "Zoom", "Cap")]
+    [TestFixture("OnGame", "Regular", "Regular", "Regular", "Speed")]
+    [TestFixture("IPoker", "Regular", "Regular", "Regular", "Shallow")]
     [TestFixture("Pacific", "Regular", "Regular", "Regular", "Regular")]
     [TestFixture("Merge", "Regular", "Jackpot", "Regular", "Regular")]
     [TestFixture("Entraction", "Regular", "Regular", "Regular", "Regular")]
@@ -42,6 +42,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
         [TestCase(3)]
         [TestCase(4)]
         [TestCase(5)]
+        [TestCase(6)]
         public void ParseTableType_Correct(int tableId)
         {            
             TestTableType(tableId);

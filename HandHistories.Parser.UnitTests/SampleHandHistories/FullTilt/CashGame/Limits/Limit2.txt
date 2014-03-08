@@ -1,38 +1,31 @@
-﻿Full Tilt Poker Game #26869651523: Table Dickey - $5/$10 - Limit Hold'em - 23:30:03 ET - 2010/12/31
-Seat 1: mlcruiser ($345.50)
-Seat 2: TheMoose99 ($207)
-Seat 3: nowhiningplease ($415)
-Seat 4: sidsucker ($866.50)
-Seat 5: rappinpat ($169.50)
-Seat 6: louis3471 ($200)
-Seat 7: iphoneuser ($242)
-Seat 8: BrickDragon ($126.50)
-Seat 9: ForkNutz ($318.50)
-nowhiningplease posts the small blind of $2.50
-sidsucker posts the big blind of $5
+﻿Full Tilt Poker Game #33728746795: Table Sushi (6 max) - FL Hold'em - $0.50/$1 - 04:37:54 ET - 2014/01/06
+Seat 1: tojota ($48.35)
+Seat 2: ld541 ($8.30)
+Seat 3: gobl99 ($17.15)
+ld541 posts the small blind of $0.25
+gobl99 posts the big blind of $0.50
 The button is in seat #2
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-rappinpat folds
-louis3471 folds
-iphoneuser raises to $10
-BrickDragon has 15 seconds left to act
-BrickDragon folds
-ForkNutz folds
-mlcruiser folds
-TheMoose99 folds
-nowhiningplease folds
-sidsucker folds
-Uncalled bet of $5 returned to iphoneuser
-iphoneuser mucks
+ld541 raises to $1
+gobl99 calls $0.50
+*** FLOP *** [2s 5h Ks] (Total Pot: $2, 2 Players)
+gobl99 bets $0.50
+ld541 raises to $1
+gobl99 raises to $1.50
+ld541 raises to $2
+gobl99 calls $0.50
+*** TURN *** [2s 5h Ks] [3c] (Total Pot: $6, 2 Players)
+gobl99 bets $1
+ld541 calls $1
+*** RIVER *** [2s 5h Ks 3c] [Qd] (Total Pot: $8, 2 Players)
+gobl99 bets $1
+ld541 folds
+Uncalled bet of $1 returned to gobl99
+gobl99 mucks
+gobl99 wins the pot ($7.75)
 *** SUMMARY ***
-Total pot $12.50 | Rake $0
-Seat 1: mlcruiser didn't bet (folded)
-Seat 2: TheMoose99 (button) didn't bet (folded)
-Seat 3: nowhiningplease (small blind) folded before the Flop
-Seat 4: sidsucker (big blind) folded before the Flop
-Seat 5: rappinpat didn't bet (folded)
-Seat 6: louis3471 didn't bet (folded)
-Seat 7: iphoneuser collected ($12.50), mucked
-Seat 8: BrickDragon didn't bet (folded)
-Seat 9: ForkNutz didn't bet (folded)
+Total pot $8 | Rake $0.25
+Board: [2s 5h Ks 3c Qd]
+Seat 1: tojota is sitting out
+Seat 2: ld541 (small blind) folded on the River
+Seat 3: gobl99 (big blind) collected ($7.75), mucked

@@ -1,13 +1,13 @@
 ﻿<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem NL £0.10/£0.25</gametype>
-    <tablename>(Shallow) Beerze, 559710331</tablename>
+    <gametype>Holdem NL £0.05/£0.10</gametype>
+    <tablename>Agabeyli, 817043038</tablename>
     <tablecurrency>GBP</tablecurrency>
     <duration>N/A</duration>
     <gamecount>N/A</gamecount>
-    <startdate>2012-05-29 00:43:32</startdate>
-    <currency>GBP</currency>
+    <startdate>2014-01-06 23:43:41</startdate>
+    <currency>EUR</currency>
     <nickname>N/A</nickname>
     <bets>N/A</bets>
     <wins>N/A</wins>
@@ -16,37 +16,33 @@
     <ipoints>N/A</ipoints>
     <statuspoints>N/A</statuspoints>
     <awardpoints>N/A</awardpoints>
-    <is_asian>0</is_asian>
   </general>
-  <game gamecode="3302790770">
+  <game gamecode="5385443172">
     <general>
-      <startdate>2012-05-29 00:44:26</startdate>
+      <startdate>2014-01-06 23:44:20</startdate>
       <players>
-        <player seat="1" name="Aceropuro2" chips="£18.42" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" />
-        <player seat="3" name="PokerPlayer2013" chips="£25" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" />
-        <player seat="5" name="00JJ" chips="£3.70" dealer="1" win="£0" bet="£0" rebuy="0" addon="0" />
-        <player seat="6" name="dwelsh1" chips="£7.81" dealer="0" win="£1.50" bet="£1" rebuy="0" addon="0" />
-        <player seat="8" name="fangchengrui" chips="£26.95" dealer="0" win="£0" bet="£0.50" rebuy="0" addon="0" />
-        <player seat="10" name="IAmVeryLoose" chips="£21.22" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" />
+        <player seat="1" name="2009connor" chips="£11.04" dealer="1" win="£0.82" bet="£0.62" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="MrPresident1944" chips="£16.26" dealer="0" win="£0" bet="£0.22" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="LONGgoLONGgo" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="dwelsh1" type="1" sum="£0.25" cards="[cards]" />
-      <action no="2" player="fangchengrui" type="2" sum="£0.50" cards="[cards]" />
+      <action no="1" player="2009connor" type="15" sum="£0.02" cards="[cards]" />
+      <action no="3" player="2009connor" type="1" sum="£0.05" cards="[cards]" />
+      <action no="2" player="MrPresident1944" type="15" sum="£0.02" cards="[cards]" />
+      <action no="4" player="MrPresident1944" type="2" sum="£0.10" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="Aceropuro2">X X</cards>
-      <action no="4" player="Aceropuro2" type="0" sum="£0" cards="" />
-      <cards type="Pocket" player="PokerPlayer2013">X X</cards>
-      <action no="5" player="PokerPlayer2013" type="0" sum="£0" cards="" />
-      <cards type="Pocket" player="00JJ">X X</cards>
-      <action no="6" player="00JJ" type="0" sum="£0" cards="" />
-      <cards type="Pocket" player="dwelsh1">X X</cards>
-      <action no="7" player="dwelsh1" type="23" sum="£1" cards="" />
-      <cards type="Pocket" player="fangchengrui">X X</cards>
-      <action no="8" player="fangchengrui" type="0" sum="£0" cards="" />
-      <cards type="Pocket" player="IAmVeryLoose">X X</cards>
-      <action no="3" player="IAmVeryLoose" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="2009connor">X X</cards>
+      <action no="5" player="2009connor" type="23" sum="£0.20" cards="" />
+      <cards type="Pocket" player="MrPresident1944">X X</cards>
+      <action no="6" player="MrPresident1944" type="3" sum="£0.10" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S3 CA D10</cards>
+      <action no="8" player="2009connor" type="5" sum="£0.40" cards="" />
+      <action no="7" player="MrPresident1944" type="4" sum="£0" cards="" />
+      <action no="9" player="MrPresident1944" type="0" sum="£0" cards="" />
     </round>
   </game>
 </session>

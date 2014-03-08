@@ -1,16 +1,22 @@
-﻿#Game No : 438238654
-***** Cassava Hand History for Game 438238654 *****
-$1/$2 Blinds Fix Limit Holdem - *** 30 05 2012 23:41:33
-Table Arapiraca (Real Money)
-Seat 4 is the button
+﻿#Game No : 349695084
+***** 888poker Hand History for Game 349695084 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 06 01 2014 19:08:11
+Table Syktyvkar 2 Max (Real Money)
+Seat 9 is the button
 Total number of players : 2
-Seat 4: FOTOREGIME ( $71.60 )
-Seat 7: kingken14 ( $82.05 )
-FOTOREGIME posts small blind [$1]
-kingken14 posts big blind [$2]
+Seat 4: SharkBruce ( $81.30 )
+Seat 9: Zeleboba ( $53 )
+Zeleboba posts small blind [$0.50]
+SharkBruce posts big blind [$1]
 ** Dealing down cards **
-FOTOREGIME raises [$3]
-kingken14 folds
+Zeleboba raises [$1.50]
+SharkBruce calls [$1]
+** Dealing flop ** [ Ts, 6d, 7c ]
+SharkBruce checks
+Zeleboba checks
+** Dealing turn ** [ 9c ]
+SharkBruce bets [$2]
+Zeleboba folds
 ** Summary **
-FOTOREGIME did not show his hand
-FOTOREGIME collected [ $4 ]
+SharkBruce did not show his hand
+SharkBruce collected [ $3.80 ]

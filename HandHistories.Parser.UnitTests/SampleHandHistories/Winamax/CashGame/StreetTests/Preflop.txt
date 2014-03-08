@@ -1,0 +1,13 @@
+﻿Winamax Poker - CashGame - HandId: #5281566-215-1382586698 - Holdem no limit (0.50€/1€) - 2013/10/24 03:51:38 UTC
+Table: 'Gold Coast-Tweed 12' 2-max (real money) Seat #1 is the button
+Seat 1: solano_10-9s (171.58€)
+Seat 2: fada007 (99.50€)
+*** ANTE/BLINDS ***
+solano_10-9s posts small blind 0.50€
+fada007 posts big blind 1€
+*** PRE-FLOP *** 
+solano_10-9s folds
+fada007 collected 1.50€ from pot
+*** SUMMARY ***
+Total pot 1.50€ | No rake
+Seat 2: fada007 (big blind) won 1.50€

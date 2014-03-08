@@ -1,32 +1,29 @@
-﻿***** Hand History for Game 11614718977 *****
-$400 USD PL Omaha Hi-Lo - Tuesday, April 03, 08:46:19 EDT 2012
-Table Table  134652 (No DP) (Real Money)
-Seat 4 is the button
-Total number of players : 4/6 
-Seat 6: Scoopydoo81 ( $701 USD )
-Seat 1: janusfaced ( $448.25 USD )
-Seat 4: robertp10 ( $164.50 USD )
-Seat 3: wembrinator ( $105 USD )
-Scoopydoo81 posts small blind [$2 USD].
-janusfaced posts big blind [$4 USD].
+﻿#Game No : 280043556
+***** 888poker Hand History for Game 280043556 *****
+$0.05/$0.10 Blinds Pot Limit OmahaHL - *** 06 01 2014 09:01:04
+Table Coslada 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 2
+Seat 5: clarefrush ( $2.46 )
+Seat 6: IbetIgotYou ( $1.50 )
+clarefrush posts small blind [$0.05]
+IbetIgotYou posts big blind [$0.10]
 ** Dealing down cards **
-wembrinator folds
-DamoklesBlade has joined the table.
-robertp10 folds
-Scoopydoo81 calls [$2 USD]
-janusfaced checks
-** Dealing Flop ** [ Th, Tc, 5c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing Turn ** [ 7c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing River ** [ 3s ]
-Scoopydoo81 checks
-janusfaced checks
-Scoopydoo81 shows [ Js, 4d, As, 9d ]a pair of Tens.
-Scoopydoo81 shows7,5,4,3,A  for low.
-janusfaced shows [ Jh, 7h, 9c, 6d ]two pairs, Tens and Sevens.
-janusfaced wins $3.80 USD from the main pot with two pairs, Tens and Sevens.
-Scoopydoo81 wins Lo ($3.80 USD) from the main pot with 7,5,4,3,A.
-wembrinator has left the table.
+clarefrush calls [$0.05]
+IbetIgotYou checks
+** Dealing flop ** [ 3h, Ac, 8c ]
+IbetIgotYou checks
+clarefrush checks
+** Dealing turn ** [ 3c ]
+IbetIgotYou bets [$0.10]
+clarefrush calls [$0.10]
+** Dealing river ** [ Qs ]
+IbetIgotYou bets [$0.20]
+clarefrush calls [$0.20]
+** Summary **
+IbetIgotYou shows [ 4h, Th, 6d, Qc ]
+(Hi: Qc, Qs, 3h, 3c, Th)
+(Lo: 3c, 4h, 6d, 8c, Ac)
+clarefrush mucks [ 6s, 6h, Kc, 7h ]
+IbetIgotYou collected [ $0.38 ]
+IbetIgotYou collected [ $0.38 ]

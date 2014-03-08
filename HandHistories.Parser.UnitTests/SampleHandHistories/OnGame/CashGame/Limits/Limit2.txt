@@ -1,40 +1,34 @@
-﻿***** History for hand R5-244575935-303 *****
-Start hand: Tue May 29 02:19:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 10
-Players in round: 5
-Seat 4: mr dark hor ($51.37) 
-Seat 7: il_conta ($16.50) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($50.00) 
-Seat 10: Incubus633 ($52.50) 
-mr dark hor posts small blind ($0.25)
-il_conta posts big blind ($0.50)
-RedStar72 posts big blind ($0.50)
+﻿***** History for hand R5-361993106-31 *****
+Start hand: Mon Jan 06 16:47:00 CET 2014
+Table: Hallein [361993106] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 2: ColdDeck123 ($99.23) 
+Seat 3: FeeltheFill ($159.66) 
+Seat 5: trunaldini ($94.00) 
+Seat 8: TR3KKEN ($88.91) 
+Seat 9: wallucus ($144.80) 
+Seat 10: iPeeOnNits ($100.00) 
+iPeeOnNits posts small blind ($0.50)
+ColdDeck123 posts big blind ($1)
 ---
 Dealing pocket cards
-Nashpan folds
-RedStar72 checks
-Incubus633 raises $2.50 to $2.50
-mr dark hor calls $2.25
-il_conta folds
-RedStar72 folds
---- Dealing flop [ Jc, 4h, T]
-mr dark hor checks
-Incubus633 checks
---- Dealing turn [,7]
-mr dark hor bets $4.50
-Incubus633 calls $4.50
---- Dealing river [,8]
-mr dark hor checks
-Incubus633 checks
+FeeltheFill folds
+trunaldini folds
+TR3KKEN raises $3.00 to $3.00
+wallucus calls $3.00
+iPeeOnNits raises $13.50 to $14.00
+ColdDeck123 folds
+TR3KKEN folds
+wallucus folds
 ---
 Summary:
-Main pot: $15.00 won by mr dark hor ($14.25)
-Rake taken: $0.75
-Seat 4: mr dark hor ($58.62), net: +$7.25, [8h, 8s]
-Seat 7: il_conta ($16.00), net: -$0.50
-Seat 8: Nashpan ($17.50), net: -$0.00
-Seat 9: RedStar72 ($49.50), net: -$0.50
-Seat 10: Incubus633 ($45.50), net: -$7.00, [5d, 4d]
-***** End of hand R5-244575935-303 *****
+Main pot: $10.00 won by iPeeOnNits ($10.00)
+Rake taken: $0.00
+Seat 2: ColdDeck123 ($98.23), net: -$1.00
+Seat 3: FeeltheFill ($159.66), net: -$0.00
+Seat 5: trunaldini ($94.00), net: -$0.00
+Seat 8: TR3KKEN ($85.91), net: -$3.00
+Seat 9: wallucus ($141.80), net: -$3.00
+Seat 10: iPeeOnNits ($107.00), net: +$7.00
+***** End of hand R5-361993106-31 *****

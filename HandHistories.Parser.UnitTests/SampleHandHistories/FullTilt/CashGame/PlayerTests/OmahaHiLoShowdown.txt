@@ -1,32 +1,32 @@
-﻿***** Hand History for Game 11614718977 *****
-$400 USD PL Omaha Hi-Lo - Tuesday, April 03, 08:46:19 EDT 2012
-Table Table  134652 (No DP) (Real Money)
-Seat 4 is the button
-Total number of players : 4/6 
-Seat 6: Scoopydoo81 ( $701 USD )
-Seat 1: janusfaced ( $448.25 USD )
-Seat 4: robertp10 ( $164.50 USD )
-Seat 3: wembrinator ( $105 USD )
-Scoopydoo81 posts small blind [$2 USD].
-janusfaced posts big blind [$4 USD].
-** Dealing down cards **
-wembrinator folds
-DamoklesBlade has joined the table.
-robertp10 folds
-Scoopydoo81 calls [$2 USD]
-janusfaced checks
-** Dealing Flop ** [ Th, Tc, 5c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing Turn ** [ 7c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing River ** [ 3s ]
-Scoopydoo81 checks
-janusfaced checks
-Scoopydoo81 shows [ Js, 4d, As, 9d ]a pair of Tens.
-Scoopydoo81 shows7,5,4,3,A  for low.
-janusfaced shows [ Jh, 7h, 9c, 6d ]two pairs, Tens and Sevens.
-janusfaced wins $3.80 USD from the main pot with two pairs, Tens and Sevens.
-Scoopydoo81 wins Lo ($3.80 USD) from the main pot with 7,5,4,3,A.
-wembrinator has left the table.
+﻿Full Tilt Poker Game #33730957082: Table Vernon - PL Omaha H/L - $0.50/$1 - 15:45:53 ET - 2014/01/06
+Seat 5: WTFseeB8 ($114.45)
+Seat 6: pupsaa ($60.80)
+Seat 7: ReydelMundo ($100)
+pupsaa posts the small blind of $0.50
+ReydelMundo posts the big blind of $1
+The button is in seat #5
+*** HOLE CARDS ***
+WTFseeB8 raises to $2.50
+pupsaa: fvck ths sht
+pupsaa has 15 seconds left to act
+pupsaa raises to $8.50
+ReydelMundo raises to $28
+WTFseeB8 folds
+pupsaa calls $19.50
+*** FLOP *** [As Kc 2d] (Total Pot: $58.50, 2 Players)
+pupsaa bets $32.80, and is all in
+ReydelMundo calls $32.80
+pupsaa shows [9s 6d 7s 4c]
+ReydelMundo shows [Td Ac Ad 4d]
+*** TURN *** [As Kc 2d] [8c] (Total Pot: $124.10, 2 Players, 1 All-In)
+*** RIVER *** [As Kc 2d 8c] [5c] (Total Pot: $124.10, 2 Players, 1 All-In)
+pupsaa shows Ace King high, for high and 6,5,4,2,A, for low
+ReydelMundo shows three of a kind, Aces, for high and 8,5,4,2,A, for low
+ReydelMundo wins the high pot ($61.55) with three of a kind, Aces
+pupsaa wins the low pot ($61.55) with 6,5,4,2,A
+*** SUMMARY ***
+Total pot $124.10 | Rake $1
+Board: [As Kc 2d 8c 5c]
+Seat 5: WTFseeB8 (button) folded before the Flop
+Seat 6: pupsaa (small blind) showed [9s 6d 7s 4c] and won ($61.55) with HI: Ace King high; LO: 6,5,4,2,A
+Seat 7: ReydelMundo (big blind) showed [Td Ac Ad 4d] and won ($61.55) with HI: three of a kind, Aces; LO: 8,5,4,2,A

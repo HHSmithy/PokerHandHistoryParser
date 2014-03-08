@@ -1,64 +1,36 @@
-﻿PokerStars Hand #78456815686:  Hold'em No Limit ($0.10/$0.25 USD) - 2012/04/06 23:10:32 ET
-Table 'Hollandia V' 9-max Seat #4 is the button
-Seat 1: CAMARITA ($64.03 in chips) 
-Seat 2: Desert2DLX ($106.18 in chips) 
-Seat 3: DallasAP2 ($59.81 in chips) 
-Seat 4: nemotoha ($50 in chips) 
-Seat 5: retic77 ($84.77 in chips) 
-Seat 6: Domus84 ($21.40 in chips) 
-Seat 8: MECO-LEO ($66.28 in chips) 
-Seat 9: Lillenman ($11.08 in chips) 
-retic77: posts small blind $0.10
-Domus84: posts big blind $0.25
-CAMARITA: posts the ante $0.05
-Desert2DLX: posts the ante $0.05
-DallasAP2: posts the ante $0.05
-nemotoha: posts the ante $0.05
-retic77: posts the ante $0.05
-Domus84: posts the ante $0.05
-MECO-LEO: posts the ante $0.05
-Lillenman: posts the ante $0.05
+﻿PokerStars Game #109715173634:  Hold'em No Limit ($0.10/$0.25 USD) - 2014/01/06 18:20:08 ET
+Table 'Adelaide II 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 1: did3licious ($25 in chips) 
+Seat 2: Dessens ($25.17 in chips) 
+Seat 3: Captain2323 ($35 in chips) 
+Seat 4: sarouman_d ($36.08 in chips) 
+Seat 5: VVojtek90 ($27.47 in chips) 
+Seat 6: ramcin_g ($25 in chips) 
+did3licious: posts small blind $0.10
+Dessens: posts big blind $0.25
+did3licious: posts the ante $0.05
+Dessens: posts the ante $0.05
+Captain2323: posts the ante $0.05
+sarouman_d: posts the ante $0.05
+VVojtek90: posts the ante $0.05
+ramcin_g: posts the ante $0.05
 *** HOLE CARDS ***
-MECO-LEO: calls $0.25
-Lillenman: calls $0.25
-CAMARITA: calls $0.25
-Desert2DLX: calls $0.25
-DallasAP2: folds 
-nemotoha: calls $0.25
-retic77: folds 
-Domus84: checks 
-*** FLOP *** [6d 4h Jc]
-Domus84: checks 
-MECO-LEO: checks 
-Lillenman: checks 
-CAMARITA: checks 
-Desert2DLX: checks 
-nemotoha: checks 
-*** TURN *** [6d 4h Jc] [5s]
-Domus84: bets $1
-MECO-LEO: calls $1
-Lillenman: calls $1
-CAMARITA: calls $1
-Desert2DLX: calls $1
-nemotoha: folds 
-*** RIVER *** [6d 4h Jc 5s] [6h]
-Domus84: checks 
-MECO-LEO: bets $1
-Lillenman: folds 
-CAMARITA: folds 
-Desert2DLX: folds 
-Domus84: folds 
-Uncalled bet ($1) returned to MECO-LEO
-MECO-LEO collected $6.68 from pot
-MECO-LEO: doesn't show hand 
+Captain2323: raises $0.25 to $0.50
+sarouman_d: folds 
+VVojtek90: folds 
+ramcin_g: folds 
+ramcin_g leaves the table
+did3licious: folds 
+Dessens: folds 
+Uncalled bet ($0.25) returned to Captain2323
+Captain2323 collected $0.50 from pot
+Captain2323: doesn't show hand 
 *** SUMMARY ***
-Total pot $7 | Rake $0.32 
-Board [6d 4h Jc 5s 6h]
-Seat 1: CAMARITA folded on the River
-Seat 2: Desert2DLX folded on the River
-Seat 3: DallasAP2 folded before Flop (didn't bet)
-Seat 4: nemotoha (button) folded on the Turn
-Seat 5: retic77 (small blind) folded before Flop
-Seat 6: Domus84 (big blind) folded on the River
-Seat 8: MECO-LEO collected ($6.68)
-Seat 9: Lillenman folded on the River
+Total pot $0.50 | Rake $0 
+Seat 1: did3licious (small blind) folded before Flop
+Seat 2: Dessens (big blind) folded before Flop
+Seat 3: Captain2323 collected ($0.50)
+Seat 4: sarouman_d folded before Flop (didn't bet)
+Seat 5: VVojtek90 folded before Flop (didn't bet)
+Seat 6: ramcin_g (button) folded before Flop (didn't bet)
+

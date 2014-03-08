@@ -1,35 +1,38 @@
-﻿***** History for hand R5-244090560-4 *****
-Start hand: Mon May 28 07:39:00 CEST 2012
-Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
-Button: seat 8
-Players in round: 3
-Seat 8: Max Power s ($8.96) 
-Seat 9: EvilJihnny99 ($24.73) 
-Seat 10: huda22 ($21.50) 
-EvilJihnny99 posts small blind ($0.25)
-huda22 posts big blind ($0.25)
+﻿***** History for hand R5-361851798-349 *****
+Start hand: Mon Jan 06 00:17:00 CET 2014
+Table: Bristol [361851798] (NO_LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
+Button: seat 7
+Players in round: 6
+Seat 2: checcol ($17.88) 
+Seat 3: Houdini9918 ($11.00) 
+Seat 5: paratrixa40 ($11.35) 
+Seat 7: VoilanXuMuK ($9.30) 
+Seat 8: heroins ($7.41) 
+Seat 9: redwinnerrr ($14.07) 
+heroins posts small blind ($0.05)
+redwinnerrr posts big blind ($0.10)
 ---
 Dealing pocket cards
-Max Power s calls $0.25
-EvilJihnny99 checks
-huda22 checks
---- Dealing flop [8s, Qs, 6c]
-EvilJihnny99 checks
-huda22 checks
-Max Power s checks
---- Dealing turn [Js]
-EvilJihnny99 bets $0.25
-huda22 calls $0.25
-Max Power s calls $0.25
---- Dealing river [3s]
-EvilJihnny99 checks
-huda22 checks
-Max Power s checks
+checcol calls $0.10
+Houdini9918 folds
+paratrixa40 folds
+VoilanXuMuK calls $0.10
+heroins calls $0.05
+redwinnerrr checks
+--- Dealing flop [Kd, Td, 8s]
+heroins bets $0.10
+redwinnerrr raises $0.50 to $0.50
+checcol folds
+VoilanXuMuK folds
+heroins folds
 ---
 Summary:
-Main pot: $1.50 won by huda22 ($1.43)
-Rake taken: $0.07
-Seat 8: Max Power s ($8.46), net: -$0.50, [4h, 9s, 8d, 8h]
-Seat 9: EvilJihnny99 ($24.23), net: -$0.50, [Td, 7c, 2c, As]
-Seat 10: huda22 ($22.43), net: +$0.93, [Jd, 2s, 6s, Tc]
-***** End of hand R5-244090560-4 *****
+Main pot: $0.60 won by redwinnerrr ($0.56)
+Rake taken: $0.04
+Seat 2: checcol ($17.78), net: -$0.10
+Seat 3: Houdini9918 ($11.00), net: -$0.00
+Seat 5: paratrixa40 ($11.35), net: -$0.00
+Seat 7: VoilanXuMuK ($9.20), net: -$0.10
+Seat 8: heroins ($7.21), net: -$0.20
+Seat 9: redwinnerrr ($14.43), net: +$0.36
+***** End of hand R5-361851798-349 *****

@@ -69,7 +69,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw;
                 }
 
-                logger.Warn("Couldn't parse hand {0} with error {1}", handText, ex.Message);
+                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message,ex.StackTrace);
                 return null;
             }     
         }
@@ -175,7 +175,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw;
                 }
 
-                logger.Warn("Couldn't parse hand {0} with error {1}", handText, ex.Message);
+                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message, ex.StackTrace);
                 return null;
             }        
         }

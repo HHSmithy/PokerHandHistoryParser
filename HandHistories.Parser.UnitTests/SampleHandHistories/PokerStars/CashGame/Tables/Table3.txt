@@ -1,33 +1,30 @@
-﻿PokerStars Hand #78426496505:  Omaha Pot Limit ($25/$50 USD) - 2012/04/06 12:16:34 ET
-Table 'Spica VI' 6-max Seat #1 is the button
-Seat 1: tagushi ($4200 in chips) 
-Seat 2: JoeIngram1 ($5692 in chips) 
-Seat 3: Jackovski ($3047 in chips) 
-Seat 4: IFiNishfish ($697 in chips) 
-Seat 5: toweliestar ($5272 in chips) 
-Seat 6: Nussdorf ($5197 in chips) 
-JoeIngram1: posts small blind $25
-Jackovski: posts big blind $50
+﻿PokerStars Game #109701341216:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 14:35:04 ET
+Table 'Alathfar IV 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 3: HETnpyxuu ($256.92 in chips) 
+Seat 6: JohnyB@nanas ($556.66 in chips) 
+JohnyB@nanas: posts small blind $0.50
+HETnpyxuu: posts big blind $1
+HETnpyxuu: posts the ante $0.20
+JohnyB@nanas: posts the ante $0.20
 *** HOLE CARDS ***
-IFiNishfish: folds 
-toweliestar: folds 
-Nussdorf: raises $75 to $125
-tagushi: calls $125
-JoeIngram1: calls $100
-Jackovski: folds 
-*** FLOP *** [7h 2d 6d]
-JoeIngram1: bets $325
-Nussdorf: folds 
-tagushi: folds 
-Uncalled bet ($325) returned to JoeIngram1
-JoeIngram1 collected $422 from pot
-JoeIngram1: doesn't show hand 
+JohnyB@nanas: raises $1 to $2
+HETnpyxuu: raises $8 to $10
+JohnyB@nanas: calls $8
+*** FLOP *** [9d Js Jc]
+HETnpyxuu: bets $13.50
+JohnyB@nanas: calls $13.50
+*** TURN *** [9d Js Jc] [Td]
+HETnpyxuu: checks 
+JohnyB@nanas: checks 
+*** RIVER *** [9d Js Jc Td] [Qh]
+HETnpyxuu: checks 
+JohnyB@nanas: checks 
+*** SHOW DOWN ***
+HETnpyxuu: shows [8d 8h] (a straight, Eight to Queen)
+JohnyB@nanas: mucks hand 
+HETnpyxuu collected $46.90 from pot
 *** SUMMARY ***
-Total pot $425 | Rake $3 
-Board [7h 2d 6d]
-Seat 1: tagushi (button) folded on the Flop
-Seat 2: JoeIngram1 (small blind) collected ($422)
-Seat 3: Jackovski (big blind) folded before Flop
-Seat 4: IFiNishfish folded before Flop (didn't bet)
-Seat 5: toweliestar folded before Flop (didn't bet)
-Seat 6: Nussdorf folded on the Flop
+Total pot $47.40 | Rake $0.50 
+Board [9d Js Jc Td Qh]
+Seat 3: HETnpyxuu (big blind) showed [8d 8h] and won ($46.90) with a straight, Eight to Queen
+Seat 6: JohnyB@nanas (button) (small blind) mucked

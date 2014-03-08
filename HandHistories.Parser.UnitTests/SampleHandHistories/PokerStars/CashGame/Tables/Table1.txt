@@ -1,28 +1,22 @@
-﻿PokerStars Hand #78457870827:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/07 0:00:38 ET
-Table 'Podarkes III' 2-max Seat #1 is the button
-Seat 1: move_all ($24.50 in chips) 
-Seat 2: GamblerX1 ($22.49 in chips) 
-move_all: posts small blind $0.25
-GamblerX1: posts big blind $0.50
+﻿PokerStars Game #109688539582:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 10:30:13 ET
+Table 'Sisyphus III 40-100 bb' 2-max Seat #1 is the button
+Seat 1: Fishmax3 ($177.22 in chips) 
+Seat 2: yatga ($175.85 in chips) 
+Fishmax3: posts small blind $0.50
+yatga: posts big blind $1
 *** HOLE CARDS ***
-move_all: raises $1 to $1.50
-GamblerX1: calls $1
-*** FLOP *** [2h Jh Kh]
-GamblerX1: checks 
-move_all: bets $1.50
-GamblerX1: calls $1.50
-*** TURN *** [2h Jh Kh] [Th]
-GamblerX1: checks 
-move_all: checks 
-*** RIVER *** [2h Jh Kh Th] [2d]
-GamblerX1: bets $1.50
-move_all: calls $1.50
-*** SHOW DOWN ***
-GamblerX1: shows [9c Jd] (two pair, Jacks and Deuces)
-move_all: shows [8d 6h] (a flush, King high)
-move_all collected $8.60 from pot
+Fishmax3: raises $1 to $2
+yatga: calls $1
+*** FLOP *** [Td 9s Ks]
+yatga: checks 
+Fishmax3: checks 
+*** TURN *** [Td 9s Ks] [7h]
+yatga: bets $1
+Fishmax3: folds 
+Uncalled bet ($1) returned to yatga
+yatga collected $3.82 from pot
 *** SUMMARY ***
-Total pot $9 | Rake $0.40 
-Board [2h Jh Kh Th 2d]
-Seat 1: move_all (button) (small blind) showed [8d 6h] and won ($8.60) with a flush, King high
-Seat 2: GamblerX1 (big blind) showed [9c Jd] and lost with two pair, Jacks and Deuces
+Total pot $4 | Rake $0.18 
+Board [Td 9s Ks 7h]
+Seat 1: Fishmax3 (button) (small blind) folded on the Turn
+Seat 2: yatga (big blind) collected ($3.82)

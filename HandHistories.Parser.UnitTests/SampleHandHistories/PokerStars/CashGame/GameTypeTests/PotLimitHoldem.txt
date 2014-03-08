@@ -1,39 +1,23 @@
-﻿PokerStars Hand #78457356260:  Hold'em Pot Limit ($0.50/$1.00 USD) - 2012/04/06 23:34:56 ET
-Table 'Acamar II' 9-max Seat #2 is the button
-Seat 1: butcheN18 ($158.23 in chips) 
-Seat 2: repin nik753 ($47.85 in chips) 
-Seat 4: ANCM ($77.03 in chips) 
-Seat 7: Markgräfler ($207.91 in chips) 
-Seat 8: Rulo180 ($34 in chips) 
-ANCM: posts small blind $0.50
-Ronfar3: is sitting out 
-Markgräfler: posts big blind $1
+﻿PokerStars Game #109680643860:  Hold'em Pot Limit ($0.50/$1.00 USD) - 2014/01/06 6:59:26 ET
+Table 'Liriope III 40-100 bb' 9-max Seat #9 is the button
+Seat 1: /7cuxBY ($100 in chips) 
+Seat 9: NeoCore44 ($40 in chips) 
+NeoCore44: posts small blind $0.50
+/7cuxBY: posts big blind $1
 *** HOLE CARDS ***
-Ronfar3 leaves the table
-Rulo180: raises $1.50 to $2.50
-butcheN18: folds 
-repin nik753: folds 
-ANCM: calls $2
-Markgräfler: folds 
-*** FLOP *** [Jc 7c Qh]
-ANCM: checks 
-Rulo180: bets $3.15
-ANCM: calls $3.15
-*** TURN *** [Jc 7c Qh] [4h]
-ANCM: bets $1
-Rulo180: calls $1
-*** RIVER *** [Jc 7c Qh 4h] [Kd]
-ANCM: bets $1
-Rulo180: calls $1
-*** SHOW DOWN ***
-ANCM: shows [2d 2h] (a pair of Deuces)
-Rulo180: shows [5c 5s] (a pair of Fives)
-Rulo180 collected $15.57 from pot
+NeoCore44: calls $0.50
+/7cuxBY: raises $1 to $2
+NeoCore44: calls $1
+*** FLOP *** [Ts 6d 3c]
+/7cuxBY: checks 
+NeoCore44: bets $3
+/7cuxBY: folds 
+Uncalled bet ($3) returned to NeoCore44
+Tocmihail joins the table at seat #2 
+NeoCore44 collected $3.82 from pot
+NeoCore44: doesn't show hand 
 *** SUMMARY ***
-Total pot $16.30 | Rake $0.73 
-Board [Jc 7c Qh 4h Kd]
-Seat 1: butcheN18 folded before Flop (didn't bet)
-Seat 2: repin nik753 (button) folded before Flop (didn't bet)
-Seat 4: ANCM (small blind) showed [2d 2h] and lost with a pair of Deuces
-Seat 7: Markgräfler (big blind) folded before Flop
-Seat 8: Rulo180 showed [5c 5s] and won ($15.57) with a pair of Fives
+Total pot $4 | Rake $0.18 
+Board [Ts 6d 3c]
+Seat 1: /7cuxBY (big blind) folded on the Flop
+Seat 9: NeoCore44 (button) (small blind) collected ($3.82)

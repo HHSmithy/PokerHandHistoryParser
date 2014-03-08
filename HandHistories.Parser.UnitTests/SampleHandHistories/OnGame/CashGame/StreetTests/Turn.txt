@@ -1,33 +1,33 @@
-﻿***** History for hand R5-244090560-7 *****
-Start hand: Mon May 28 07:41:00 CEST 2012
-Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
-Button: seat 8
+﻿***** History for hand R5-361717011-53 *****
+Start hand: Sun Jan 05 09:12:00 CET 2014
+Table: [SPEED] Dallas [361717011] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
 Players in round: 3
-Seat 8: Max Power s ($9.58) 
-Seat 9: EvilJihnny99 ($22.73) 
-Seat 10: huda22 ($22.65) 
-EvilJihnny99 posts small blind ($0.25)
-huda22 posts big blind ($0.25)
+Seat 3: bil3176 ($101.50) 
+Seat 5: -mr-poker- ($99.00) 
+Seat 8: dosmou1 ($78.60) 
+-mr-poker- posts small blind ($0.50)
+dosmou1 posts big blind ($1)
 ---
 Dealing pocket cards
-Max Power s calls $0.25
-EvilJihnny99 checks
-huda22 checks
+bil3176 calls $1.00
+-mr-poker- calls $0.50
+dosmou1 checks
 --- Dealing flop [Kc, Ah, 7c]
-EvilJihnny99 checks
-huda22 checks
-Max Power s checks
+-mr-poker- checks
+dosmou1 checks
+bil3176 bets $3.00
+-mr-poker- calls $3.00
+dosmou1 folds
 --- Dealing turn [3d]
-EvilJihnny99 checks
-huda22 bets $0.25
-Max Power s raises $1.00 to $1.00
-EvilJihnny99 folds
-huda22 folds
+-mr-poker- checks
+bil3176 bets $4.50
+-mr-poker- folds
 ---
 Summary:
-Main pot: $1.25 won by Max Power s ($1.19)
-Rake taken: $0.06
-Seat 8: Max Power s ($10.27), net: +$0.69
-Seat 9: EvilJihnny99 ($22.48), net: -$0.25
-Seat 10: huda22 ($22.15), net: -$0.50
-***** End of hand R5-244090560-7 *****
+Main pot: $9.00 won by bil3176 ($8.55)
+Rake taken: $0.45
+Seat 3: bil3176 ($106.05), net: +$4.55
+Seat 5: -mr-poker- ($95.00), net: -$4.00
+Seat 8: dosmou1 ($77.60), net: -$1.00
+***** End of hand R5-361717011-53 *****

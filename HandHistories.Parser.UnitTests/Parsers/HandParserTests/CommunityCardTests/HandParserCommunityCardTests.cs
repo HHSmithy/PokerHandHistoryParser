@@ -13,6 +13,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.CommunityCardTe
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
     [TestFixture("FullTilt")]
+    [TestFixture("MicroGaming")]
+    [TestFixture("Winamax")]
     internal class HandParserCommunityCardTests : HandHistoryParserBaseTests
     {
         public HandParserCommunityCardTests(string site)

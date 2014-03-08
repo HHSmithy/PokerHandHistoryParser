@@ -1,0 +1,26 @@
+﻿Winamax Poker - CashGame - HandId: #5335178-3970-1383796438 - Holdem no limit (0.25€/0.50€) - 2013/11/07 03:53:58 UTC
+Table: 'Milwaukee 02' 5-max (real money) Seat #5 is the button
+Seat 1: totti6720 (99.36€)
+Seat 2: titi250 (64.76€)
+Seat 3: Dbrz34 (13.23€)
+Seat 4: sined20 (90.75€)
+Seat 5: fanf4K UR0 (94.85€)
+*** ANTE/BLINDS ***
+totti6720 posts small blind 0.25€
+titi250 posts big blind 0.50€
+*** PRE-FLOP *** 
+Dbrz34 calls 0.50€
+sined20 raises 1€ to 1.50€
+fanf4K UR0 folds
+totti6720 folds
+titi250 folds
+Dbrz34 calls 1€
+*** FLOP *** [4d Kc 9c]
+Dbrz34 checks
+sined20 bets 2.50€
+Dbrz34 folds
+sined20 collected 6.01€ from pot
+*** SUMMARY ***
+Total pot 6.01€ | Rake 0.24€
+Board: [4d Kc 9c]
+Seat 4: sined20 won 6.01€

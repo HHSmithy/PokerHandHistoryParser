@@ -14,6 +14,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
     [TestFixture("FullTilt")]
+    [TestFixture("MicroGaming")]
+    [TestFixture("Winamax")]
     internal class HandParserValidHandTests : HandHistoryParserBaseTests
     {
         public HandParserValidHandTests(string site)

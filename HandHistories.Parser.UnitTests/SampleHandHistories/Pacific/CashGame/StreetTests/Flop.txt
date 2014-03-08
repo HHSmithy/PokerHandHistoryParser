@@ -1,27 +1,26 @@
-﻿#Game No : 273182673
-***** Cassava Hand History for Game 273182673 *****
-$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 23:59:55
-Table Acailandia (Real Money)
-Seat 4 is the button
+﻿#Game No : 280067687
+***** 888poker Hand History for Game 280067687 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 11:58:43
+Table Astrakhan 6 Max (Real Money)
+Seat 6 is the button
 Total number of players : 5
-Seat 2: dontphil2bad ( $148.69 )
-Seat 4: mooning56 ( $109.76 )
-Seat 6: LuckyPro_4 ( $31.73 )
-Seat 7: vladoh ( $179.44 )
-Seat 9: iSmokeMeth ( $100 )
-LuckyPro_4 posts small blind [$0.50]
-vladoh posts big blind [$1]
+Seat 2: Birmancat4 ( $46.28 )
+Seat 4: JazzuJun ( $111.26 )
+Seat 6: pokermon24 ( $106.73 )
+Seat 7: Br0keDonk ( $100 )
+Seat 9: liulijia ( $100 )
+Br0keDonk posts small blind [$0.50]
+liulijia posts big blind [$1]
 ** Dealing down cards **
-iSmokeMeth raises [$3]
-dontphil2bad calls [$3]
-mooning56 calls [$3]
-LuckyPro_4 folds
-vladoh folds
+Birmancat4 raises [$2]
+JazzuJun folds
+pokermon24 folds
+Br0keDonk folds
+liulijia calls [$1]
 ** Dealing flop ** [ 7h, Qs, 3c ]
-iSmokeMeth checks
-dontphil2bad checks
-mooning56 bets [$5.25]
-iSmokeMeth folds
-dontphil2bad folds
+liulijia checks
+Birmancat4 bets [$4.50]
+liulijia folds
 ** Summary **
-mooning56 collected [ $9.98 ]
+Birmancat4 did not show his hand
+Birmancat4 collected [ $4.28 ]

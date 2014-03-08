@@ -45,6 +45,7 @@ namespace HandHistories.Objects.GameDescription
         Limit_500c_500c = 55,
         Limit_300c_600c = 57,
         Limit_600c_600c = 58,
+        Limit_600c_1200c = 59,
         Limit_400c_800c = 60,
         Limit_500c_1000c = 63,
         Limit_1000c_1000c = 64,
@@ -60,6 +61,7 @@ namespace HandHistories.Objects.GameDescription
         Limit_3000c_6000c = 84,
         Limit_4000c_8000c = 87,
         Limit_5000c_10000c = 90,
+        Limit_6000c_12000c = 91,
         Limit_7500c_15000c = 93,
         Limit_10000c_10000c = 94,
         Limit_10000c_20000c = 96,        
@@ -76,7 +78,7 @@ namespace HandHistories.Objects.GameDescription
         Limit_150000c_300000c = 117,
         Limit_200000c_400000c = 120,
         Limit_400000c_800000c = 124,
-        Limit_5000000c_1000000c = 130, 
+        Limit_500000c_1000000c = 130, 
         Any = 255
     }
 }

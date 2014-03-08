@@ -1,45 +1,47 @@
-﻿  <session sessioncode="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem NL €1/€2</gametype>
-    <tablename>Arcini, 414653751</tablename>
+    <gametype>Omaha PL €0.05/€0.10</gametype>
+    <tablename>Amorul, 404295721</tablename>
     <tablecurrency>EUR</tablecurrency>
-    <duration>00:00</duration>
-    <gamecount>0</gamecount>
-    <startdate></startdate>
-    <currency>EUR</currency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2014-01-06 09:21:18</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
-    <bets>€0</bets>
-    <wins>€0</wins>
-    <chipsin>€0</chipsin>
-    <chipsout>€0</chipsout>
-    <ipoints>0</ipoints>
-    <statuspoints>0</statuspoints>
-    <awardpoints>0</awardpoints>
-    <is_asian>0</is_asian>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
   </general>
-  <game gamecode="3303230810">
+<game gamecode="5383254382">
     <general>
-      <startdate>2012-05-29 14:17:32</startdate>
+      <startdate>2014-01-06 09:23:55</startdate>
       <players>
-        <player seat="2" name="Armstrongc" chips="€2,104.75" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" />
-        <player seat="4" name="TTR116060183" chips="€2,068.75" dealer="0" win="€0" bet="€10" rebuy="0" addon="0" />
-        <player seat="7" name="yutant" chips="€1,590.94" dealer="0" win="€30" bet="€20" rebuy="0" addon="0" />
-        <player seat="9" name="BurnN0tice" chips="€2,648" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="1" name="Blemishers" chips="€9.90" dealer="0" win="€0.15" bet="€0.10" rebuy="0" addon="0" reg_code="-" />
+        <player seat="3" name="anawhatsme" chips="€10" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="17111982" chips="€9.05" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="SongOfIceAndFire" chips="€9.85" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="Sanbka87" chips="€4" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="10" name="Frozean" chips="€9.24" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="TTR116060183" type="1" sum="€10" cards="[cards]" />
-      <action no="2" player="yutant" type="2" sum="€20" cards="[cards]" />
+      <action no="2" player="Blemishers" type="2" sum="€0.10" cards="[cards]" />
+      <action no="1" player="Frozean" type="1" sum="€0.05" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="Armstrongc">X X</cards>
-      <action no="4" player="Armstrongc" type="0" sum="€0" cards="" />
-      <cards type="Pocket" player="TTR116060183">X X</cards>
-      <action no="5" player="TTR116060183" type="0" sum="€0" cards="" />
-      <cards type="Pocket" player="yutant">X X</cards>
-      <cards type="Pocket" player="BurnN0tice">X X</cards>
-      <action no="3" player="BurnN0tice" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="Blemishers">X X X X</cards>
+      <cards type="Pocket" player="17111982">X X X X</cards>
+      <action no="3" player="17111982" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="SongOfIceAndFire">X X X X</cards>
+      <action no="4" player="SongOfIceAndFire" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="Frozean">X X X X</cards>
+      <action no="5" player="Frozean" type="0" sum="€0" cards="" />
     </round>
   </game>
-  </session>
+</session>

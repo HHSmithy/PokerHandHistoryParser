@@ -1,46 +1,57 @@
-﻿<session sessioncode="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Omaha PL $0.50/$1</gametype>
-    <tablename>Anglicus, 687196931</tablename>
+    <gametype>Holdem L $5/$10</gametype>
+    <tablename>Marble Hall, 51180351</tablename>
     <tablecurrency>USD</tablecurrency>
-    <duration>00:00</duration>
-    <gamecount>0</gamecount>
-    <startdate></startdate>
-    <currency>USD</currency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2014-01-06 02:43:57</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
-    <bets>$0</bets>
-    <wins>$0</wins>
-    <chipsin>$0</chipsin>
-    <chipsout>$0</chipsout>
-    <ipoints>0</ipoints>
-    <statuspoints>0</statuspoints>
-    <awardpoints>0</awardpoints>
-    <is_asian>0</is_asian>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
   </general>
-  <game gamecode="3301980688">
+  <game gamecode="5382966866">
     <general>
-      <startdate>2012-05-28 12:44:46</startdate>
+      <startdate>2014-01-06 02:45:44</startdate>
       <players>
-        <player seat="3" name="p0krF4c3" chips="$20.20" dealer="1" win="$1.31" bet="$0.95" rebuy="0" addon="0" />
-        <player seat="8" name="Rosiejo" chips="$23.64" dealer="0" win="$0" bet="$0.40" rebuy="0" addon="0" />
+        <player seat="3" name="alllwaysAA" chips="$0" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="hoonie" chips="$55" dealer="1" win="$0" bet="$20" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="karlmoney" chips="$239" dealer="0" win="$49" bet="$30" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="p0krF4c3" type="1" sum="$0.10" cards="[cards]" />
-      <action no="2" player="Rosiejo" type="2" sum="$0.20" cards="[cards]" />
+      <action no="1" player="hoonie" type="1" sum="$2.50" cards="[cards]" />
+      <action no="2" player="karlmoney" type="2" sum="$5" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="p0krF4c3">X X</cards>
-      <action no="3" player="p0krF4c3" type="23" sum="$0.40" cards="" />
-      <cards type="Pocket" player="Rosiejo">X X</cards>
-      <action no="4" player="Rosiejo" type="3" sum="$0.20" cards="" />
+      <cards type="Pocket" player="hoonie">X X</cards>
+      <action no="3" player="hoonie" type="23" sum="$10" cards="" />
+      <action no="5" player="hoonie" type="3" sum="$5" cards="" />
+      <cards type="Pocket" player="karlmoney">X X</cards>
+      <action no="4" player="karlmoney" type="23" sum="$15" cards="" />
     </round>
     <round no="2">
-      <cards type="Flop" player="">S4 D6 H7</cards>
-      <action no="6" player="p0krF4c3" type="5" sum="$0.55" cards="" />
-      <action no="5" player="Rosiejo" type="4" sum="$0" cards="" />
-      <action no="7" player="Rosiejo" type="0" sum="$0" cards="" />
+      <cards type="Flop" player="">HJ C7 D6</cards>
+      <action no="7" player="hoonie" type="3" sum="$5" cards="" />
+      <action no="6" player="karlmoney" type="5" sum="$5" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S5</cards>
+      <action no="9" player="hoonie" type="4" sum="$0" cards="" />
+      <action no="8" player="karlmoney" type="4" sum="$0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">CQ</cards>
+      <action no="11" player="hoonie" type="0" sum="$0" cards="" />
+      <action no="10" player="karlmoney" type="5" sum="$10" cards="" />
     </round>
   </game>
 </session>

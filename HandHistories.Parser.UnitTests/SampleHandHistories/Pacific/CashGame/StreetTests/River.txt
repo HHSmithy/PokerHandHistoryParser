@@ -1,26 +1,28 @@
-﻿#Game No : 176549669
-***** Cassava Hand History for Game 176549669 *****
-$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 21:42:13
-Table Colombes (Real Money)
-Seat 7 is the button
-Total number of players : 4
-Seat 1: ThrCnBeOnly1 ( $11,490 )
-Seat 2: OprahTiltfre ( $6,500 )
-Seat 4: LitFaSlane ( $15,995 )
-Seat 7: engils ( $5,000 )
-ThrCnBeOnly1 posts small blind [$500]
-OprahTiltfre folds
-LitFaSlane folds
-engils posts big blind [$1,000]
+﻿#Game No : 539478640
+***** 888poker Hand History for Game 539478640 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 20:46:21
+Table Birkenhead 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: MomWasRight ( $100.50 )
+Seat 6: LIDL_Earth ( $76.84 )
+Seat 9: Jack3bet ( $108.24 )
+LIDL_Earth posts small blind [$0.50]
+Jack3bet posts big blind [$1]
 ** Dealing down cards **
-ThrCnBeOnly1 raises [$10,990]
-engils calls [$4,000]
+MomWasRight raises [$2]
+LIDL_Earth folds
+Jack3bet calls [$1]
 ** Dealing flop ** [ 5d, Ks, 7c ]
+Jack3bet checks
+MomWasRight checks
 ** Dealing turn ** [ Jc ]
+Jack3bet checks
+MomWasRight checks
 ** Dealing river ** [ 7d ]
+Jack3bet checks
+MomWasRight checks
 ** Summary **
-ThrCnBeOnly1 shows [ Kd, 5c ]
-engils shows [ 2h, Kc ]
-ThrCnBeOnly1 collected [ $4,997.50 ]
-engils collected [ $4,997.50 ]
-ThrCnBeOnly1 collected [ $6,490 ]
+Jack3bet shows [ Ah, 6d ]
+MomWasRight mucks [ 4s, 4c ]
+Jack3bet collected [ $4.28 ]

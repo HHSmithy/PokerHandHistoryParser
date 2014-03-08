@@ -22,7 +22,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             get { return true; }
         }
 
-        private readonly SiteName _siteName;
+        private SiteName _siteName;
 
         public override SiteName SiteName
         {
@@ -185,15 +185,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             switch (gameTypeString.Length)
             {
                 case 16: 
-                    bool containsCap = handLines[0].LastIndexOf("Cap") != -1;
-                    return containsCap
-                               ? GameType.CapNoLimitHoldem
-                               : GameType.NoLimitHoldem;
+                    return GameType.NoLimitHoldem;
                 case 15:
                     return GameType.PotLimitOmaha;
                 case 13:
                     return GameType.FixedLimitHoldem;                    
                 case 17:
+                    if(gameTypeString[0] == 'O')
+                    {
+                        return GameType.FixedLimitOmahaHiLo;
+                    }
                     return GameType.PotLimitHoldem;
                 case 21:
                     return GameType.PotLimitOmahaHiLo;     
@@ -210,9 +211,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         {
             // Stars does not right out things such as speed/shallow/fast to hands right now.
 
-            bool isZoom = handLines[1].Contains(" Zoom ");
+            if(handLines[1].Contains(" Zoom "))
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Zoom);
+            }
 
-            return TableType.FromTableTypeDescriptions(isZoom ? TableTypeDescription.Zoom : TableTypeDescription.Regular);
+            // older hand history files have the cap mark in the first line
+            if(handLines[1].LastIndexOf(" CAP", StringComparison.Ordinal) != -1 ||
+               handLines[0].LastIndexOf(" Cap ", StringComparison.Ordinal) != -1)
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Cap);
+            }
+
+            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
         }
 
         protected override Limit ParseLimit(string[] handLines)
@@ -270,12 +281,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     string previousLine = handLines[i - 1];
 
                     // lines before summary are collection lines so shouldn't be able to start w/ a H and end w/ a d
-                    return (previousLine[0] != 'H' || previousLine[previousLine.Length - 1] != 'd') ||
+                    bool result = (previousLine[0] != 'H' || previousLine[previousLine.Length - 1] != 'd') ||
                            previousLine.EndsWith("doesn't show hand");
+                    return result;
                 }
             }
 
-            // doesn't containt a summary line
+            // doesn't contain a summary line
             return false;
         }
 
@@ -485,13 +497,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         public HandAction ParseMiscShowdownLine(string actionLine, int colonIndex, GameType gameType = GameType.Unknown)
         {            
-            // if the game type is PLO HiLo can get colons like this after the Hi
+            // if the game type is Omaha HiLo can get colons like this after the Hi
             //  DOT19: shows [As 8h Ac Kd] (HI: two pair, Aces and Sixes)            
-            if (gameType == GameType.PotLimitOmahaHiLo &&
-                actionLine.Count(c => c == ':') > 1)
+            while ((gameType == GameType.PotLimitOmahaHiLo || gameType == GameType.FixedLimitOmahaHiLo || gameType == GameType.NoLimitOmahaHiLo ) &&
+                actionLine.Count(c => c == ':') > 1 &&
+                actionLine.Contains("(HI:") || actionLine.Contains("; LO:"))
             {
                 int lastColon = actionLine.LastIndexOf(':');
-                colonIndex = actionLine.Remove(lastColon - 1).LastIndexOf(':');
+                actionLine = actionLine.Remove(lastColon - 1);
+                colonIndex = actionLine.LastIndexOf(':');
             }
 
             string playerName = actionLine.Substring(0, colonIndex);

@@ -1,24 +1,50 @@
-﻿PokerStars Hand #78448518036:  Hold'em No Limit ($50/$100 - $2000 Cap -  USD) - 2012/04/06 18:56:18 ET
-Table 'Enceladus III' 6-max Seat #4 is the button
-Seat 3: Marcotjow ($4384.20 in chips) 
-Seat 4: WizardOfAhhs ($2692.80 in chips) 
-WizardOfAhhs: posts small blind $50
-Marcotjow: posts big blind $100
+﻿PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
 *** HOLE CARDS ***
-WizardOfAhhs: raises $100 to $200
-Marcotjow: raises $275 to $475
-WizardOfAhhs: raises $1525 to $2000 and has reached the $2000 cap
-Marcotjow: calls $1525 and has reached the $2000 cap
-*** FLOP *** [Ah 7s Ts]
-*** TURN *** [Ah 7s Ts] [Ks]
-*** RIVER *** [Ah 7s Ts Ks] [4d]
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
 *** SHOW DOWN ***
-Marcotjow: shows [Kh Qh] (a pair of Kings)
-WizardOfAhhs: shows [Ad Kd] (two pair, Aces and Kings)
-WizardOfAhhs collected $3998 from pot
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
 *** SUMMARY ***
-Total pot $4000 | Rake $2 
-Board [Ah 7s Ts Ks 4d]
-Seat 3: Marcotjow (big blind) showed [Kh Qh] and lost with a pair of Kings
-Seat 4: WizardOfAhhs (button) (small blind) showed [Ad Kd] and won ($3998) with two pair, Aces and Kings
-
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)

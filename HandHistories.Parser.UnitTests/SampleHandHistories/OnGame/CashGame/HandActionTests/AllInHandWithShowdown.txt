@@ -1,29 +1,43 @@
-﻿***** History for hand R5-244711775-328 *****
-Start hand: Wed May 30 03:08:00 CEST 2012
-Table: Leipzig [244711775] (NO_LIMIT TEXAS_HOLDEM $10/$20, Real money)
-Button: seat 7
-Players in round: 3
-Seat 4: DM899 ($1837.50) 
-Seat 7: njoetrhawrg ($2497.00) 
-Seat 8: el_pescado99 ($2323.00) 
-el_pescado99 posts small blind ($10)
-DM899 posts big blind ($20)
+﻿***** History for hand R5-361850810-476 *****
+Start hand: Mon Jan 06 01:08:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 1: BlackH0L3 ($103.75) 
+Seat 2: Cockatrice ($99.99) 
+Seat 7: BONUS 1OOO ($133.31) 
+Seat 8: fyabcf ($236.15) 
+Seat 9: kliketiklok ($112.91) 
+Seat 10: Dbcee89 ($98.50) 
+kliketiklok posts small blind ($0.50)
+Dbcee89 posts big blind ($1)
 ---
 Dealing pocket cards
-njoetrhawrg raises $50.00 to $50.00
-el_pescado99 raises $170.00 to $180.00
-DM899 folds
-njoetrhawrg raises $330.00 to $380.00
-el_pescado99 raises $2143.00 to $2323.00 [all in] 
-njoetrhawrg calls $1943.00
---- Dealing flop [3s, 2c, 7h]
---- Dealing turn [7s]
---- Dealing river [4c]
+BlackH0L3 folds
+Cockatrice raises $3.00 to $3.00
+BONUS 1OOO folds
+fyabcf calls $3.00
+kliketiklok raises $10.00 to $10.50
+Dbcee89 folds
+Cockatrice folds
+fyabcf raises $23.00 to $26.00
+kliketiklok calls $15.50
+--- Dealing flop [6d, Kd, 8c]
+kliketiklok checks
+fyabcf bets $18.00
+kliketiklok raises $36.00 to $36.00
+fyabcf raises $192.15 to $210.15 [all in] 
+kliketiklok calls $50.91 [all in] 
+--- Dealing turn [Js]
+--- Dealing river [4h]
 ---
 Summary:
-Main pot: $4666.00 won by el_pescado99 ($4664.00)
-Rake taken: $2
-Seat 4: DM899 ($1817.50), net: -$20.00
-Seat 7: njoetrhawrg ($174.00), net: -$2323.00, [Qs, As]
-Seat 8: el_pescado99 ($4664.00), net: +$2341.00, [Jd, Jc]
-***** End of hand R5-244711775-328 *****
+Main pot: $229.82 won by fyabcf ($226.82)
+Rake taken: $3
+Seat 1: BlackH0L3 ($103.75), net: -$0.00
+Seat 2: Cockatrice ($96.99), net: -$3.00
+Seat 7: BONUS 1OOO ($133.31), net: -$0.00
+Seat 8: fyabcf ($350.06), net: +$113.91, [Kc, Kh]
+Seat 9: kliketiklok ($0.00), net: -$112.91, [6s, 8s]
+Seat 10: Dbcee89 ($97.50), net: -$1.00
+***** End of hand R5-361850810-476 *****

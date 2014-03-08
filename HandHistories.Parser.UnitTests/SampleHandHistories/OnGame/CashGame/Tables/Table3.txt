@@ -1,40 +1,39 @@
-﻿***** History for hand R5-244068606-42 *****
-Start hand: Sun May 27 10:48:00 CEST 2012
-Table: Aleppo [244068606] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 10
-Players in round: 7
-Seat 1: zafhur ($70.40) 
-Seat 2: Brodinsky ($65.84) 
-Seat 3: 1des1ku ($50.67) 
-Seat 5: Probableknot ($49.50) 
-Seat 6: kiwibridget ($49.10) 
-Seat 8: 78_race_all ($26.37) 
-Seat 10: reymysteri91 ($67.30) 
-zafhur posts small blind ($0.25)
-Brodinsky posts big blind ($0.50)
+﻿***** History for hand R5-361882901-144 *****
+Start hand: Mon Jan 06 00:54:00 CET 2014
+Table: Kirkuk [361882901] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 1
+Players in round: 6
+Seat 1: iPeeOnNits ($157.16) 
+Seat 3: BlackH0L3 ($137.73) 
+Seat 5: bil3176 ($194.34) 
+Seat 6: fyabcf ($100.00) 
+Seat 9: Cockatrice ($101.78) 
+Seat 10: needluck89 ($100.00) 
+BlackH0L3 posts small blind ($0.50)
+bil3176 posts big blind ($1)
 ---
 Dealing pocket cards
-1des1ku folds
-Probableknot folds
-kiwibridget folds
-78_race_all calls $0.50
-reymysteri91 raises $2.00 to $2.00
-zafhur folds
-Brodinsky raises $6.50 to $7.00
-78_race_all folds
-reymysteri91 calls $5.00
---- Dealing flop [Ks, 5d, 5h]
-Brodinsky bets $7.00
-reymysteri91 folds
+fyabcf raises $3.00 to $3.00
+Cockatrice folds
+needluck89 folds
+iPeeOnNits folds
+BlackH0L3 folds
+bil3176 calls $2.00
+--- Dealing flop [2c, 2d, Ad]
+bil3176 checks
+fyabcf checks
+--- Dealing turn [6s]
+bil3176 checks
+fyabcf bets $3.50
+bil3176 folds
 ---
 Summary:
-Main pot: $14.75 won by Brodinsky ($14.02)
-Rake taken: $0.73
-Seat 1: zafhur ($70.15), net: -$0.25
-Seat 2: Brodinsky ($72.86), net: +$7.02
-Seat 3: 1des1ku ($50.67), net: -$0.00
-Seat 5: Probableknot ($49.50), net: -$0.00
-Seat 6: kiwibridget ($49.10), net: -$0.00
-Seat 8: 78_race_all ($25.87), net: -$0.50
-Seat 10: reymysteri91 ($60.30), net: -$7.00
-***** End of hand R5-244068606-42 *****
+Main pot: $6.50 won by fyabcf ($6.18)
+Rake taken: $0.32
+Seat 1: iPeeOnNits ($157.16), net: -$0.00
+Seat 3: BlackH0L3 ($137.23), net: -$0.50
+Seat 5: bil3176 ($191.34), net: -$3.00
+Seat 6: fyabcf ($103.18), net: +$3.18
+Seat 9: Cockatrice ($101.78), net: -$0.00
+Seat 10: needluck89 ($100.00), net: -$0.00
+***** End of hand R5-361882901-144 *****

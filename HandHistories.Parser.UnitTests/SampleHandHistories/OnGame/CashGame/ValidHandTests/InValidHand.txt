@@ -1,32 +1,37 @@
-﻿
-***** History for hand R5-244575935-304 *****
-Start hand: Tue May 29 02:20:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 4
-Players in round: 5
-Seat 4: mr dark hor ($58.62) 
-Seat 7: il_conta ($16.00) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($49.50) 
-Seat 10: Incubus633 ($45.50) 
-il_conta posts small blind ($0.25)
-Nashpan posts big blind ($0.50)
+﻿***** History for hand R5-361956504-51 *****
+Start hand: Mon Jan 06 13:59:00 CET 2014
+Table: Macao [361956504] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 10
+Players in round: 6
+Seat 2: Nazgul_mrpl ($114.72) 
+Seat 3: spir12. ($35.00) 
+Seat 7: klok54321 ($33.34) 
+Seat 8: adamsin1 ($136.87) 
+Seat 9: K-S-N4 ($62.83) 
+Seat 10: Klaboem ($98.50) 
+Nazgul_mrpl posts small blind ($0.50)
+spir12. posts big blind ($1)
 ---
 Dealing pocket cards
-RedStar72 folds
-Incubus633 raises $1.50 to $1.50
-mr dark hor calls $1.50
-il_conta folds
-Nashpan folds
---- Dealing flop [ Qd, Jh, T]
-Incubus633 bets $2.50
-mr dark hor folds
+klok54321 folds
+adamsin1 folds
+K-S-N4 folds
+Klaboem raises $2.00 to $2.00
+Nazgul_mrpl calls $1.50
+spir12. calls $1.00
+--- Dealing flop [3d, Kc, Qc]
+Nazgul_mrpl checks
+spir12. checks
+Klaboem checks
+--- Dealing turn [Ad]
+Nazgul_mrpl bets $6.00
+spir12. folds
+Klaboem folds
 ---
 Summary:
-Main pot: $3.75 won by Incubus633 ($3.57)
-Rake taken: $0.18
-Seat 4: mr dark hor ($57.12), net: -$1.50
-Seat 7: il_conta ($15.75), net: -$0.25
-Seat 8: Nashpan ($17.00), net: -$0.50
-Seat 9: RedStar72 ($49.50), net: -$0.00
-Seat 10: Incu
+Main pot: $6.00 won by Nazgul_mrpl ($5.70)
+Rake taken: $0.30
+Seat 2: Nazgul_mrpl ($118.42), net: +$3.70
+Seat 3: spir12. ($33.00), net: -$2.00
+Seat 7: klok54321 ($33.34), net: -$0.00
+Seat 8: adamsin1 ($136.8

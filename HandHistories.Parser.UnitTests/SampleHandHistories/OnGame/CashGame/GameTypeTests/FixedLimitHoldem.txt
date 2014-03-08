@@ -1,42 +1,19 @@
-﻿***** History for hand R5-244311631-17 *****
-Start hand: Mon May 28 11:01:00 CEST 2012
-Table: Seattle [244311631] (LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
-Button: seat 9
-Players in round: 4
-Seat 4: LOURENCO74 ($4.74) 
-Seat 5: SonnyWortzik ($5.00) 
-Seat 6: mazimeli ($5.28) 
-Seat 9: Teixeira-86 ($1.10) 
-LOURENCO74 posts small blind ($0.02)
-SonnyWortzik posts big blind ($0.05)
-mazimeli posts big blind ($0.05)
+﻿***** History for hand R5-361709806-1 *****
+Start hand: Sun Jan 05 21:32:00 CET 2014
+Table: [SPEED] Tanga [361709806] (LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 2
+Seat 5: zbocivilexx4 ($10.00) 
+Seat 8: staatbankrot ($50.00) 
+staatbankrot posts small blind ($0.25)
+zbocivilexx4 posts big blind ($0.50)
 ---
 Dealing pocket cards
-mazimeli checks
-Teixeira-86 calls $0.05
-LOURENCO74 calls $0.03
-SonnyWortzik checks
---- Dealing flop [7h, As, Qd]
-LOURENCO74 bets $0.05
-SonnyWortzik folds
-mazimeli raises $0.10 to $0.10
-Teixeira-86 calls $0.10
-LOURENCO74 calls $0.05
---- Dealing turn [5h]
-LOURENCO74 checks
-mazimeli bets $0.10
-Teixeira-86 folds
-LOURENCO74 calls $0.10
---- Dealing river [9d]
-LOURENCO74 checks
-mazimeli bets $0.10
-LOURENCO74 calls $0.10
+staatbankrot folds
 ---
 Summary:
-Main pot: $0.90 won by mazimeli ($0.43), LOURENCO74 ($0.43)
-Rake taken: $0.04
-Seat 4: LOURENCO74 ($4.82), net: +$0.08, [Qh, 2c]
-Seat 5: SonnyWortzik ($4.95), net: -$0.05
-Seat 6: mazimeli ($5.36), net: +$0.08, [Qs, 3c]
-Seat 9: Teixeira-86 ($0.95), net: -$0.15
-***** End of hand R5-244311631-17 *****
+Main pot: $0.50 won by zbocivilexx4 ($0.50)
+Rake taken: $0.00
+Seat 5: zbocivilexx4 ($10.25), net: +$0.25
+Seat 8: staatbankrot ($49.75), net: -$0.25
+***** End of hand R5-361709806-1 *****

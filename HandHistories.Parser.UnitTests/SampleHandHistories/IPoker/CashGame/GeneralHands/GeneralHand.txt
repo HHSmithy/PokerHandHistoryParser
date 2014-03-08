@@ -1,63 +1,39 @@
 ﻿<session sessioncode="0">
   <general>
-	<mode>real</mode>
-	<gametype>Omaha PL $0.50/$1</gametype>
-	<tablename>Goryachy Klyuch (No DP), 228172131</tablename>
-	<tablecurrency>USD</tablecurrency>
-	<duration>N/A</duration>
-	<gamecount>N/A</gamecount>
-	<startdate>2012-05-28 19:01:25</startdate>
-	<currency>USD</currency>
-	<nickname>N/A</nickname>
-	<bets>N/A</bets>
-	<wins>N/A</wins>
-	<chipsin>N/A</chipsin>
-	<chipsout>N/A</chipsout>
-	<ipoints>N/A</ipoints>
-	<statuspoints>N/A</statuspoints>
-	<awardpoints>N/A</awardpoints>
-	<is_asian>0</is_asian>
+    <mode>real</mode>
+    <gametype>Holdem L $5/$10</gametype>
+    <tablename>Grimsby, 51069081</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2014-01-06 14:43:15</startdate>
+    <currency></currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
   </general>
-	<game gamecode="3251939984">
-		<general>
-		  <startdate>2012-04-17 19:30:53</startdate>
-		  <players>
-			<player seat="2" name="Yatze1977" chips="$0.65" dealer="0" win="$0.17" bet="$0.11" rebuy="0" addon="0" />
-			<player seat="4" name="pk9443" chips="$2.65" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0" />
-			<player seat="7" name="TomasKatz" chips="$6.51" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" />
-			<player seat="9" name="GJHDEYFXFCNB" chips="$1.44" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" />
-		  </players>
-		</general>
-		<round no="0">
-		  <action no="1" player="Yatze1977" type="1" sum="$0.01" cards="[cards]" />
-		  <action no="2" player="pk9443" type="2" sum="$0.02" cards="[cards]" />
-		</round>
-		<round no="1">
-		  <cards type="Pocket" player="Yatze1977">X X</cards>
-		  <action no="5" player="Yatze1977" type="3" sum="$0.01" cards="" />
-		  <cards type="Pocket" player="pk9443">X X</cards>
-		  <action no="6" player="pk9443" type="4" sum="$0" cards="" />
-		  <cards type="Pocket" player="TomasKatz">X X</cards>
-		  <action no="3" player="TomasKatz" type="3" sum="$0.02" cards="" />
-		  <cards type="Pocket" player="GJHDEYFXFCNB">X X</cards>
-		  <action no="4" player="GJHDEYFXFCNB" type="0" sum="$0" cards="" />
-		</round>
-		<round no="2">
-		  <cards type="Flop" player="">H10 H9 D5</cards>
-		  <action no="7" player="Yatze1977" type="4" sum="$0" cards="" />
-		  <action no="8" player="pk9443" type="4" sum="$0" cards="" />
-		  <action no="9" player="TomasKatz" type="4" sum="$0" cards="" />
-		</round>
-		<round no="3">
-		  <cards type="Turn" player="">C8</cards>
-		  <action no="10" player="Yatze1977" type="5" sum="$0.02" cards="" />
-		  <action no="11" player="pk9443" type="3" sum="$0.02" cards="" />
-		  <action no="12" player="TomasKatz" type="0" sum="$0" cards="" />
-		</round>
-		<round no="4">
-		  <cards type="River" player="">H2</cards>
-		  <action no="13" player="Yatze1977" type="5" sum="$0.07" cards="" />
-		  <action no="14" player="pk9443" type="0" sum="$0" cards="" />
-		</round>
-	</game>
+  <game gamecode="5383708755">
+    <general>
+      <startdate>2014-01-06 14:44:37</startdate>
+      <players>
+        <player seat="5" name="d0dge" chips="$326.20" dealer="0" win="$7.50" bet="$5" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="SirPaulGB" chips="$200" dealer="1" win="$0" bet="$2.50" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="DropOfRain" chips="$0" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="2" player="d0dge" type="2" sum="$5" cards="[cards]" />
+      <action no="1" player="SirPaulGB" type="1" sum="$2.50" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="d0dge">X X</cards>
+      <cards type="Pocket" player="SirPaulGB">X X</cards>
+      <action no="3" player="SirPaulGB" type="0" sum="$0" cards="" />
+    </round>
+  </game>
 </session>

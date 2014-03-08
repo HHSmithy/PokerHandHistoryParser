@@ -1,33 +1,30 @@
-﻿PokerStars Hand #78457374541:  Omaha Hi/Lo Pot Limit ($0.50/$1.00 USD) - 2012/04/06 23:35:46 ET
-Table 'Centaurus VIII' 6-max Seat #2 is the button
-Seat 1: funkyOne81 ($165.67 in chips) 
-Seat 2: KovácsKornél ($90.50 in chips) 
-Seat 3: Kartes_Cl ($56.66 in chips) 
-Seat 6: brutalizer20 ($52.73 in chips) 
-Kartes_Cl: posts small blind $0.50
-Eich1000: is sitting out 
-brutalizer20: posts big blind $1
+﻿PokerStars Game #109677324649:  Omaha Hi/Lo Pot Limit ($0.05/$0.10 USD) - 2014/01/06 4:56:52 ET
+Table 'Pogson 40-100 bb' 6-max Seat #2 is the button
+Seat 2: SGS62 ($9.90 in chips) 
+Seat 6: NeiLutzn ($15.27 in chips) 
+SGS62: posts small blind $0.05
+hamberman: is sitting out 
+NeiLutzn: posts big blind $0.10
 *** HOLE CARDS ***
-talisain51 leaves the table
-funkyOne81: raises $1.50 to $2.50
-KovácsKornél: folds 
-Kartes_Cl: folds 
-brutalizer20: calls $1.50
-*** FLOP *** [Td 8h 3c]
-Eich1000 leaves the table
-brutalizer20: checks 
-Cinderoga joins the table at seat #5 
-funkyOne81: checks 
-*** TURN *** [Td 8h 3c] [4d]
-brutalizer20: checks 
-funkyOne81: bets $5.25
-brutalizer20: folds 
-Uncalled bet ($5.25) returned to funkyOne81
-funkyOne81 collected $5.25 from pot
+hamberman leaves the table
+SGS62: calls $0.05
+NeiLutzn: checks 
+*** FLOP *** [Kd 2c 9h]
+NeiLutzn: checks 
+SGS62: checks 
+*** TURN *** [Kd 2c 9h] [6c]
+NeiLutzn: bets $0.15
+SGS62: calls $0.15
+*** RIVER *** [Kd 2c 9h 6c] [8s]
+NeiLutzn: bets $0.15
+SGS62: calls $0.15
+*** SHOW DOWN ***
+NeiLutzn: shows [6s Jh 2d 9d] (HI: two pair, Nines and Sixes)
+SGS62: shows [4s 2s 8d 3d] (HI: two pair, Eights and Deuces; LO: 8,6,4,3,2)
+NeiLutzn collected $0.39 from pot
+SGS62 collected $0.38 from pot
 *** SUMMARY ***
-Total pot $5.50 | Rake $0.25 
-Board [Td 8h 3c 4d]
-Seat 1: funkyOne81 collected ($5.25)
-Seat 2: KovácsKornél (button) folded before Flop (didn't bet)
-Seat 3: Kartes_Cl (small blind) folded before Flop
-Seat 6: brutalizer20 (big blind) folded on the Turn
+Total pot $0.80 | Rake $0.03 
+Board [Kd 2c 9h 6c 8s]
+Seat 2: SGS62 (button) (small blind) showed [4s 2s 8d 3d] and won ($0.38) with HI: two pair, Eights and Deuces; LO: 8,6,4,3,2
+Seat 6: NeiLutzn (big blind) showed [6s Jh 2d 9d] and won ($0.39) with HI: two pair, Nines and Sixes

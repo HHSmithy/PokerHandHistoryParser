@@ -1,35 +1,23 @@
-﻿***** Hand History for Game 11615434554 *****
-$600 USD NL Texas Hold'em - Tuesday, April 03, 12:44:24 EDT 2012
-Table Jackpot #2356404 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 6/6 
-Seat 5: GRFpipvssfzyeir ( $220.05 USD )
-Seat 1: K A G A W A ( $600 USD )
-Seat 2: Sir Bobby Bouts ( $946.48 USD )
-Seat 4: moreonetime ( $600 USD )
-Seat 3: santifcb ( $245.47 USD )
-Seat 6: subway96 ( $659.28 USD )
-santifcb posts small blind [$3 USD].
-moreonetime posts big blind [$6 USD].
+﻿***** Hand History for Game 13550493674 *****
+$100 USD PL Omaha - Monday, January 06, 06:50:34 EST 2014
+Table Paris (Real Money)
+Seat 3 is the button
+Total number of players : 3/6 
+Seat 3: FlotFyr31aar ( $123.79 USD )
+Seat 4: Ravvinn ( $100 USD )
+Seat 1: Somajano32 ( $134.09 USD )
+Ravvinn posts small blind [$0.50 USD].
+Somajano32 posts big blind [$1 USD].
 ** Dealing down cards **
-GRFpipvssfzyeir will be using his time bank for this hand.
-GRFpipvssfzyeir raises [$18 USD]
-subway96 calls [$18 USD]
-K A G A W A folds
-Sir Bobby Bouts folds
-santifcb calls [$15 USD]
-moreonetime folds
-** Dealing Flop ** [ 3h, Ks, 3s ]
-santifcb checks
-GRFpipvssfzyeir will be using his time bank for this hand.
-GRFpipvssfzyeir checks
-subway96 bets [$42.75 USD]
-santifcb folds
-GRFpipvssfzyeir will be using his time bank for this hand.
-GRFpipvssfzyeir is all-In  [$202.05 USD]
-subway96 calls [$159.30 USD]
-** Dealing Turn ** [ 8h ]
-** Dealing River ** [ 7d ]
-subway96 shows [ 4s, As ]a pair of Threes.
-GRFpipvssfzyeir shows [ Ah, Ac ]two pairs, Aces and Threes.
-GRFpipvssfzyeir wins $461.10 USD from the main pot with two pairs, Aces and Threes.
+FlotFyr31aar raises [$3.50 USD]
+Ravvinn folds
+Somajano32 calls [$2.50 USD]
+** Dealing Flop ** [ 2d, Qc, Ad ]
+Somajano32 checks
+FlotFyr31aar checks
+** Dealing Turn ** [ 5s ]
+Somajano32 checks
+FlotFyr31aar bets [$7.13 USD]
+Somajano32 folds
+FlotFyr31aar does not show cards.
+FlotFyr31aar wins $14.26 USD

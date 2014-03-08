@@ -1,26 +1,45 @@
-﻿PokerStars Hand #78407814588:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 4:02:47 ET
-Table 'Berenike' 6-max Seat #2 is the button
-Seat 1: neverJager ($22.07 in chips) 
-Seat 2: s1N91 ($16.48 in chips) 
-Seat 4: Blahdieblah ($23.07 in chips) 
-Seat 5: xPastorcitox ($6.40 in chips) 
-Seat 6: antol34 ($16 in chips) 
-bamsebimse22 will be allowed to play after the button
-Blahdieblah: posts small blind $0.08
-xPastorcitox: posts big blind $0.16
+﻿PokerStars Game #109676049949:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 3:56:02 ET
+Table 'Skuld III 40-100 bb' 9-max Seat #5 is the button
+Seat 2: sanek-54440 ($7.85 in chips) 
+Seat 4: morajk ($8 in chips) 
+Seat 5: anteklaus ($6.04 in chips) 
+sanek-54440: posts small blind $0.05
+morajk: posts big blind $0.10
 *** HOLE CARDS ***
-antol34: folds 
-neverJager: folds 
-s1N91: folds 
-Blahdieblah: raises $0.24 to $0.40
-xPastorcitox: folds 
-Uncalled bet ($0.24) returned to Blahdieblah
-Blahdieblah collected $0.32 from pot
-Blahdieblah: doesn't show hand 
+anteklaus: calls $0.10
+sanek-54440: calls $0.05
+Pokerrabe482 is disconnected 
+Scorp29R joins the table at seat #7 
+beko260 joins the table at seat #3 
+morajk has timed out
+morajk: checks 
+*** FLOP *** [2c 4c 8d]
+sanek-54440: checks 
+ustin777 joins the table at seat #8 
+marop54 joins the table at seat #9 
+morajk has timed out
+morajk: checks 
+anteklaus: checks 
+*** TURN *** [2c 4c 8d] [7d]
+sanek-54440 is disconnected 
+sanek-54440 has timed out while disconnected
+sanek-54440: checks 
+morajk has timed out
+morajk: checks 
+anteklaus: bets $0.30
+sanek-54440 has timed out while disconnected
+sanek-54440: folds 
+morajk: calls $0.30
+*** RIVER *** [2c 4c 8d 7d] [8h]
+morajk: checks 
+anteklaus: checks 
+*** SHOW DOWN ***
+morajk: shows [3s 3c] (two pair, Eights and Threes)
+anteklaus: mucks hand 
+morajk collected $0.86 from pot
 *** SUMMARY ***
-Total pot $0.32 | Rake $0 
-Seat 1: neverJager folded before Flop (didn't bet)
-Seat 2: s1N91 (button) folded before Flop (didn't bet)
-Seat 4: Blahdieblah (small blind) collected ($0.32)
-Seat 5: xPastorcitox (big blind) folded before Flop
-Seat 6: antol34 folded before Flop (didn't bet)
+Total pot $0.90 | Rake $0.04 
+Board [2c 4c 8d 7d 8h]
+Seat 2: sanek-54440 (small blind) folded on the Turn
+Seat 4: morajk (big blind) showed [3s 3c] and won ($0.86) with two pair, Eights and Threes
+Seat 5: anteklaus (button) mucked

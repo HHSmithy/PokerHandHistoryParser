@@ -1,43 +1,42 @@
-﻿PokerStars Hand #78441538809:  Hold'em Limit ($30/$60 USD) - 2012/04/06 16:45:19 ET
-Table 'Constantia III' 10-max Seat #10 is the button
-Seat 1: Crazyhug ($1192.30 in chips) 
-Seat 2: TPirahna ($2961.45 in chips) 
-Seat 3: Baronsengir1 ($782.50 in chips) 
-Seat 4: Makomar ($1949.50 in chips) 
-Seat 10: slavistas ($1080 in chips) 
-Crazyhug: posts small blind $15
-TPirahna: posts big blind $30
+﻿PokerStars Game #109671666937:  Hold'em No Limit ($100/$200 USD) - 2014/01/05 23:18:12 ET
+Table 'Pels II 100-250 bb' 6-max Seat #3 is the button
+Seat 1: OtB_RedBaron ($27343.80 in chips) 
+Seat 2: muha84 ($20595 in chips) 
+Seat 3: LhhmMaoly ($12484.45 in chips) 
+Seat 4: forhayley ($25598 in chips) 
+Seat 5: fish2013 ($32127.57 in chips) 
+Seat 6: sat1337en ($19961.38 in chips) 
+forhayley: posts small blind $100
+fish2013: posts big blind $200
 *** HOLE CARDS ***
-Baronsengir1: raises $30 to $60
-Makomar: raises $30 to $90
-slavistas: folds 
-Crazyhug: folds 
-TPirahna: folds 
-Baronsengir1: raises $30 to $120
-Betting is capped
-Makomar: calls $30
-*** FLOP *** [Ad 5d 5c]
-Baronsengir1: bets $30
-mausilein joins the table at seat #5 
-Makomar: raises $30 to $60
-Baronsengir1: calls $30
-*** TURN *** [Ad 5d 5c] [4h]
-Baronsengir1: checks 
-Makomar: bets $60
-Baronsengir1: raises $60 to $120
-Makomar: calls $60
-*** RIVER *** [Ad 5d 5c 4h] [7c]
-Baronsengir1: bets $60
-Makomar: calls $60
+sat1337en: raises $249.40 to $449.40
+OtB_RedBaron: folds 
+muha84: folds 
+LhhmMaoly: calls $449.40
+forhayley: folds 
+fish2013: calls $249.40
+*** FLOP *** [Kh 6h 9d]
+fish2013: checks 
+sat1337en: checks 
+LhhmMaoly: checks 
+*** TURN *** [Kh 6h 9d] [9h]
+fish2013: checks 
+sat1337en: bets $736.03
+LhhmMaoly: calls $736.03
+fish2013: folds 
+*** RIVER *** [Kh 6h 9d 9h] [Kd]
+sat1337en: checks 
+LhhmMaoly: checks 
 *** SHOW DOWN ***
-Baronsengir1: shows [Ac Qc] (two pair, Aces and Fives)
-Makomar: mucks hand 
-Baronsengir1 collected $762 from pot
+sat1337en: shows [Qd Qc] (two pair, Kings and Queens)
+LhhmMaoly: mucks hand 
+sat1337en collected $2915.26 from pot
 *** SUMMARY ***
-Total pot $765 | Rake $3 
-Board [Ad 5d 5c 4h 7c]
-Seat 1: Crazyhug (small blind) folded before Flop
-Seat 2: TPirahna (big blind) folded before Flop
-Seat 3: Baronsengir1 showed [Ac Qc] and won ($762) with two pair, Aces and Fives
-Seat 4: Makomar mucked
-Seat 10: slavistas (button) folded before Flop (didn't bet)
+Total pot $2920.26 | Rake $5 
+Board [Kh 6h 9d 9h Kd]
+Seat 1: OtB_RedBaron folded before Flop (didn't bet)
+Seat 2: muha84 folded before Flop (didn't bet)
+Seat 3: LhhmMaoly (button) mucked
+Seat 4: forhayley (small blind) folded before Flop
+Seat 5: fish2013 (big blind) folded on the Turn
+Seat 6: sat1337en showed [Qd Qc] and won ($2915.26) with two pair, Kings and Queens

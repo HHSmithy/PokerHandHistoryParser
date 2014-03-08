@@ -1,42 +1,32 @@
-﻿***** History for hand R5-246103543-261 *****
-Start hand: Mon Jun 04 10:06:00 CEST 2012
-Table: Amarillo [246103543] (NO_LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
-Button: seat 2
-Players in round: 7
-Seat 2: djiceflame70 ($2.59) 
-Seat 3: shmel77 ($7.99) 
-Seat 4: yoyogi36 ($11.11) 
-Seat 5: Mivko ($10.42) 
-Seat 6: Rpc_alpetra ($3.34) 
-Seat 7: ugeroka ($12.81) 
-Seat 8: ---ich--- ($12.64) 
-shmel77 posts small blind ($0.05)
-yoyogi36 posts big blind ($0.10)
+﻿***** History for hand R5-361850810-471 *****
+Start hand: Mon Jan 06 01:05:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 1: BlackH0L3 ($105.25) 
+Seat 2: ---Cockatrice--- ($101.49) 
+Seat 7: BONUS 1OOO ($132.51) 
+Seat 8: fyabcf ($237.15) 
+Seat 9: kliketiklok ($109.41) 
+Seat 10: Dbcee89 ($99.00) 
+Dbcee89 posts small blind ($0.50)
+BlackH0L3 posts big blind ($1)
 ---
 Dealing pocket cards
-Mivko folds
-Rpc_alpetra folds
-ugeroka raises $0.40 to $0.40
----ich--- calls $0.40
-djiceflame70 folds
-shmel77 folds
-yoyogi36 folds
---- Dealing flop [3d, 8h, 6d]
-ugeroka checks
----ich--- checks
---- Dealing turn [Ks]
-ugeroka checks
----ich--- bets $0.70
-ugeroka folds
+---Cockatrice--- folds
+BONUS 1OOO folds
+fyabcf folds
+kliketiklok raises $2.00 to $2.00
+Dbcee89 folds
+BlackH0L3 folds
 ---
 Summary:
-Main pot: $0.95 won by ---ich--- ($0.89)
-Rake taken: $0.06
-Seat 2: djiceflame70 ($2.59), net: -$0.00
-Seat 3: shmel77 ($7.94), net: -$0.05
-Seat 4: yoyogi36 ($11.01), net: -$0.10
-Seat 5: Mivko ($10.42), net: -$0.00
-Seat 6: Rpc_alpetra ($3.34), net: -$0.00
-Seat 7: ugeroka ($12.41), net: -$0.40
-Seat 8: ---ich--- ($13.13), net: +$0.49
-***** End of hand R5-246103543-261 *****
+Main pot: $2.50 won by kliketiklok ($2.50)
+Rake taken: $0.00
+Seat 1: BlackH0L3 ($104.25), net: -$1.00
+Seat 2: ---Cockatrice--- ($101.49), net: -$0.00
+Seat 7: BONUS 1OOO ($132.51), net: -$0.00
+Seat 8: fyabcf ($237.15), net: -$0.00
+Seat 9: kliketiklok ($110.91), net: +$1.50
+Seat 10: Dbcee89 ($98.50), net: -$0.50
+***** End of hand R5-361850810-471 *****

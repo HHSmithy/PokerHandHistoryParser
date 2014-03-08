@@ -1,38 +1,19 @@
-﻿***** Hand History for Game 10164280429 *****
-$1,000 USD NL Texas Hold'em - Saturday, February 19, 04:41:58 EST 2011
-Table Table  178744 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 6/6 
-Seat 3: BRNS16 ( $1,056.18 USD )
-Seat 4: DoNDeRei ( $1,846.75 USD )
-Seat 6: ElvisViking ( $1,654.25 USD )
-Seat 2: HPS1964 ( $1,239.57 USD )
-Seat 1: Zl0iman ( $458 USD )
-Seat 5: poker446822 ( $530 USD )
-ElvisViking posts small blind [$5 USD].
-Zl0iman posts big blind [$10 USD].
+﻿***** Hand History for Game 13550695573 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 08:54:23 EST 2014
+Table Bloemfontein (Real Money)
+Seat 2 is the button
+Total number of players : 2/6 
+Seat 2: Kelevra_91 ( $22.85 USD )
+Seat 5: hulkhoden1969 ( $10.10 USD )
+Kelevra_91 posts small blind [$0.05 USD].
+hulkhoden1969 posts big blind [$0.10 USD].
 ** Dealing down cards **
-HPS1964 raises [$20 USD]
-BRNS16 folds
-DoNDeRei folds
-poker446822 folds
-ElvisViking calls [$15 USD]
-Zl0iman raises [$60 USD]
-HPS1964 calls [$50 USD]
-ElvisViking calls [$50 USD]
-** Dealing Flop ** [ Tc, 6s, Th ]
-ElvisViking checks
-Zl0iman checks
-HPS1964 bets [$103.50 USD]
-ElvisViking raises [$207 USD]
-Zl0iman folds
-HPS1964 calls [$103.50 USD]
-** Dealing Turn ** [ Js ]
-ElvisViking checks
-HPS1964 checks
-** Dealing River ** [ 6h ]
-ElvisViking checks
-HPS1964 checks
-ElvisViking shows [ 3d, 3c ]two pairs, Tens and Sixes.
-HPS1964 shows [ Ah, 4h ]two pairs, Tens and Sixes with Ace kicker.
-HPS1964 wins $621 USD from the main pot with two pairs, Tens and Sixes with Ace kicker.
+Kelevra_91 raises [$0.25 USD]
+hulkhoden1969 raises [$0.70 USD]
+Kelevra_91 calls [$0.50 USD]
+** Dealing Flop ** [ 9c, Kd, Qs ]
+hulkhoden1969 bets [$0.80 USD]
+Kelevra_91 raises [$2.94 USD]
+hulkhoden1969 folds
+Kelevra_91 does not show cards.
+Kelevra_91 wins $5.18 USD

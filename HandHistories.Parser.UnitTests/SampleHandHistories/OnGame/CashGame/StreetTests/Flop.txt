@@ -1,35 +1,27 @@
-﻿***** History for hand R5-244575935-310 *****
-Start hand: Tue May 29 02:25:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 4
-Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($37.87) 
-Seat 7: il_conta ($28.98) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($54.60) 
-il_conta posts small blind ($0.25)
-Nashpan posts big blind ($0.50)
+﻿***** History for hand R5-361717011-52 *****
+Start hand: Sun Jan 05 09:12:00 CET 2014
+Table: [SPEED] Dallas [361717011] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 3
+Seat 3: bil3176 ($103.50) 
+Seat 5: -mr-poker- ($100.00) 
+Seat 8: dosmou1 ($75.85) 
+bil3176 posts small blind ($0.50)
+-mr-poker- posts big blind ($1)
 ---
 Dealing pocket cards
-RedStar72 folds
-Incubus633 raises $2.00 to $2.00
-Pan Sytuacji folds
-mr dark hor calls $2.00
-il_conta folds
-Nashpan folds
+dosmou1 raises $2.00 to $2.00
+bil3176 calls $1.50
+-mr-poker- folds
 --- Dealing flop [7h, Qs, 3c]
-Incubus633 bets $4.00
-mr dark hor folds
+bil3176 checks
+dosmou1 bets $4.00
+bil3176 folds
 ---
 Summary:
-Main pot: $4.75 won by Incubus633 ($4.52)
-Rake taken: $0.23
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($35.87), net: -$2.00
-Seat 7: il_conta ($28.73), net: -$0.25
-Seat 8: Nashpan ($17.00), net: -$0.50
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($57.12), net: +$2.52
-***** End of hand R5-244575935-310 *****
+Main pot: $5.00 won by dosmou1 ($4.75)
+Rake taken: $0.25
+Seat 3: bil3176 ($101.50), net: -$2.00
+Seat 5: -mr-poker- ($99.00), net: -$1.00
+Seat 8: dosmou1 ($78.60), net: +$2.75
+***** End of hand R5-361717011-52 *****

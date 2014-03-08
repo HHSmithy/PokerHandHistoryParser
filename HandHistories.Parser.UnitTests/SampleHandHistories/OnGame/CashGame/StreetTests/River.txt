@@ -1,30 +1,32 @@
-﻿***** History for hand R5-243945479-9 *****
-Start hand: Sun May 27 10:28:00 CEST 2012
-Table: [SPEED] Austin [243945479] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
-Button: seat 8
-Players in round: 2
-Seat 5: klarasbanana ($1209.00) 
-Seat 8: iveyfan89 ($1118.00) 
-iveyfan89 posts small blind ($5)
-klarasbanana posts big blind ($10)
+﻿***** History for hand R5-361717011-54 *****
+Start hand: Sun Jan 05 09:13:00 CET 2014
+Table: [SPEED] Dallas [361717011] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 5
+Players in round: 3
+Seat 3: bil3176 ($106.05) 
+Seat 5: -mr-poker- ($95.00) 
+Seat 8: dosmou1 ($77.60) 
+dosmou1 posts small blind ($0.50)
+bil3176 posts big blind ($1)
 ---
 Dealing pocket cards
-iveyfan89 raises $15.00 to $20.00
-klarasbanana calls $10.00
+-mr-poker- folds
+dosmou1 calls $0.50
+bil3176 checks
 --- Dealing flop [5d, Ks, 7c]
-klarasbanana checks
-iveyfan89 bets $30.00
-klarasbanana calls $30.00
+dosmou1 bets $4.00
+bil3176 calls $4.00
 --- Dealing turn [Jc]
-klarasbanana checks
-iveyfan89 checks
+dosmou1 bets $7.00
+bil3176 calls $7.00
 --- Dealing river [7d]
-klarasbanana checks
-iveyfan89 checks
+dosmou1 bets $7.00
+bil3176 calls $7.00
 ---
 Summary:
-Main pot: $100.00 won by klarasbanana ($99.00)
-Rake taken: $1
-Seat 5: klarasbanana ($1258.00), net: +$49.00, [9s, 4s]
-Seat 8: iveyfan89 ($1068.00), net: -$50.00, [Qs, 8s]
-***** End of hand R5-243945479-9 *****
+Main pot: $38.00 won by dosmou1 ($36.10)
+Rake taken: $1.90
+Seat 3: bil3176 ($87.05), net: -$19.00, [8c, 9c]
+Seat 5: -mr-poker- ($95.00), net: -$0.00
+Seat 8: dosmou1 ($94.70), net: +$17.10, [6h, Qc]
+***** End of hand R5-361717011-54 *****

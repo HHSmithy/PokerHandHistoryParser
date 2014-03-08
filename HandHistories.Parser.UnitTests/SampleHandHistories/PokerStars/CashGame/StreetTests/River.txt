@@ -1,42 +1,28 @@
-﻿PokerStars Hand #78417306464:  Hold'em Limit ($2/$4 USD) - 2012/04/06 9:01:48 ET
-Table 'Giclas' 10-max Seat #2 is the button
-Seat 2: Mirtoti ($118.70 in chips) 
-Seat 4: donjuanmt ($45.52 in chips) 
-Seat 5: RockKillerTY ($116.31 in chips) 
-Seat 7: yane_gt ($69.04 in chips) 
-Seat 9: rzvn_nita ($11.31 in chips) 
-donjuanmt: posts small blind $1
-RockKillerTY: posts big blind $2
-Alekhine11: sits out 
+﻿PokerStars Game #109687480274:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 10:07:05 ET
+Table 'Sisyphus III 40-100 bb' 2-max Seat #1 is the button
+Seat 1: Fishmax3 ($99 in chips) 
+Seat 2: yatga ($101 in chips) 
+Fishmax3: posts small blind $0.50
+yatga: posts big blind $1
 *** HOLE CARDS ***
-yane_gt: folds 
-rzvn_nita: folds 
-Mirtoti: folds 
-donjuanmt: raises $2 to $4
-RockKillerTY: raises $2 to $6
-donjuanmt: calls $2
-*** FLOP *** [5d Jc Qs]
-donjuanmt: checks 
-HansvdLans joins the table at seat #3 
-RockKillerTY: bets $2
-donjuanmt: calls $2
-*** TURN *** [5d Jc Qs] [5h]
-donjuanmt: checks 
-RockKillerTY: bets $4
-donjuanmt: calls $4
-*** RIVER *** [5d Jc Qs 5h] [Qh]
-donjuanmt: checks 
-RockKillerTY: bets $4
-donjuanmt: calls $4
+Fishmax3: raises $1 to $2
+yatga: raises $4 to $6
+Fishmax3: calls $4
+*** FLOP *** [5d Ks 7c]
+yatga: bets $6
+Fishmax3: calls $6
+*** TURN *** [5d Ks 7c] [Jc]
+yatga: bets $12
+Fishmax3: calls $12
+*** RIVER *** [5d Ks 7c Jc] [7d]
+yatga: bets $28
+Fishmax3: calls $28
 *** SHOW DOWN ***
-RockKillerTY: shows [As Qc] (a full house, Queens full of Fives)
-donjuanmt: mucks hand 
-RockKillerTY collected $31.04 from pot
+yatga: shows [3s 2s] (a pair of Tens)
+Fishmax3: shows [5d Kd] (two pair, Kings and Tens)
+Fishmax3 collected $103.50 from pot
 *** SUMMARY ***
-Total pot $32 | Rake $0.96 
+Total pot $104 | Rake $0.50 
 Board [5d Ks 7c Jc 7d]
-Seat 2: Mirtoti (button) folded before Flop (didn't bet)
-Seat 4: donjuanmt (small blind) mucked
-Seat 5: RockKillerTY (big blind) showed [As Qc] and won ($31.04) with a full house, Queens full of Fives
-Seat 7: yane_gt folded before Flop (didn't bet)
-Seat 9: rzvn_nita folded before Flop (didn't bet)
+Seat 1: Fishmax3 (button) (small blind) showed [5d Kd] and won ($103.50) with two pair, Kings and Tens
+Seat 2: yatga (big blind) showed [3s 2s] and lost with a pair of Tens

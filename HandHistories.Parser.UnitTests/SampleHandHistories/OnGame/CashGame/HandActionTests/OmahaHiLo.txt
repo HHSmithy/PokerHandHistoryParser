@@ -1,40 +1,28 @@
-﻿***** History for hand R5-234101608-389 *****
-Start hand: Wed Apr 18 04:45:00 CEST 2012
-Table: Praia [234101608] (POT_LIMIT OMAHA_HI_LO $0.10/$0.10, Real money)
-Button: seat 7
-Players in round: 6
-Seat 3: Hawkmoon14 ($28.79) 
-Seat 4: Anna_Nowak ($12.40) 
-Seat 5: Muppet70 ($8.95) 
-Seat 6: bobcov ($11.48) 
-Seat 7: lazos1973 ($9.79) 
-Seat 8: Buzzball x ($6.40) 
-Buzzball x posts small blind ($0.10)
-Hawkmoon14 posts big blind ($0.10)
-bobcov posts small blind ($0.10)
-bobcov posts dead blind ($0.10)
+﻿***** History for hand R5-361875219-6 *****
+Start hand: Mon Jan 06 08:55:00 CET 2014
+Table: Hospitalet [361875219] (POT_LIMIT OMAHA_HI_LO $5/$5, Real money)
+Button: seat 2
+Players in round: 2
+Seat 1: alikator21 ($355.00) 
+Seat 2: McCall901 ($513.50) 
+McCall901 posts small blind ($5)
+alikator21 posts big blind ($5)
 ---
 Dealing pocket cards
-Anna_Nowak folds
-Muppet70 folds
-bobcov checks
-lazos1973 calls $0.10
-Buzzball x checks
-Hawkmoon14 raises $0.50 to $0.60
-bobcov calls $0.50
-lazos1973 folds
-Buzzball x folds
---- Dealing flop [7c, 5c, Kd]
-Hawkmoon14 bets $0.80
-bobcov folds
+McCall901 raises $5.00 to $10.00
+alikator21 raises $25.00 to $30.00
+McCall901 calls $20.00
+--- Dealing flop [3d, 9d, 7c]
+alikator21 bets $60.00
+McCall901 raises $240.00 to $240.00
+alikator21 raises $265.00 to $325.00 [all in] 
+McCall901 calls $85.00
+--- Dealing turn [3c]
+--- Dealing river [Qh]
 ---
 Summary:
-Main pot: $1.50 won by Hawkmoon14 ($1.40)
-Rake taken: $0.10
-Seat 3: Hawkmoon14 ($29.59), net: +$0.80
-Seat 4: Anna_Nowak ($12.40), net: -$0.00
-Seat 5: Muppet70 ($8.95), net: -$0.00
-Seat 6: bobcov ($10.78), net: -$0.70
-Seat 7: lazos1973 ($9.69), net: -$0.10
-Seat 8: Buzzball x ($6.30), net: -$0.10
-***** End of hand R5-234101608-389 *****
+Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
+Rake taken: $1
+Seat 1: alikator21 ($354.50), net: -$0.50, [Kc, Ks, 6s, 5d]
+Seat 2: McCall901 ($513.00), net: -$0.50, [2d, Th, Kh, Kd]
+***** End of hand R5-361875219-6 *****

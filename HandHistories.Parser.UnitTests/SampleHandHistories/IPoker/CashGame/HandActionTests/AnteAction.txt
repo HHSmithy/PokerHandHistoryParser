@@ -1,13 +1,14 @@
-﻿<session sessioncode="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem NL $0.05/$0.10</gametype>
-    <tablename>"Ante" Acropoli, 766490881</tablename>
-    <tablecurrency>USD</tablecurrency>
+    <gametype>Holdem NL £0.05/£0.10</gametype>
+    <tablename>Albuixech, 817196375</tablename>
+    <tablecurrency>GBP</tablecurrency>
     <duration>N/A</duration>
     <gamecount>N/A</gamecount>
-    <startdate>2013-02-05 22:33:55</startdate>
-    <currency>GBP</currency>
+    <startdate>2014-01-06 17:05:34</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
     <bets>N/A</bets>
     <wins>N/A</wins>
@@ -16,64 +17,45 @@
     <ipoints>N/A</ipoints>
     <statuspoints>N/A</statuspoints>
     <awardpoints>N/A</awardpoints>
-    <is_asian>0</is_asian>
   </general>
-  <game gamecode="4531400898">
+  <game gamecode="5384038435">
     <general>
-      <startdate>2013-02-05 22:34:30</startdate>
+      <startdate>2014-01-06 17:11:41</startdate>
       <players>
-        <player seat="1" name="StrangerFish1" chips="$27.23" dealer="0" win="$24.32" bet="$12.22" rebuy="0" addon="0" />
-        <player seat="3" name="morphius007" chips="$12.22" dealer="0" win="$0" bet="$12.22" rebuy="0" addon="0" />
-        <player seat="5" name="ijdnakuri" chips="$20.06" dealer="1" win="$0" bet="$0.02" rebuy="0" addon="0" />
-        <player seat="6" name="Ge007" chips="$30.07" dealer="0" win="$0" bet="$0.42" rebuy="0" addon="0" />
-        <player seat="8" name="joinboy" chips="$87.97" dealer="0" win="$0" bet="$0.42" rebuy="0" addon="0" />
-        <player seat="10" name="xvala" chips="$20.21" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" />
+        <player seat="4" name="WWR141388412" chips="£11.25" dealer="0" win="£0.35" bet="£0.22" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="keepfishing68" chips="£9.30" dealer="0" win="£0" bet="£0.12" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="chcake515151" chips="£9.08" dealer="1" win="£0" bet="£0.02" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="4" player="StrangerFish1" type="15" sum="$0.02" cards="[cards]" />
-      <action no="5" player="morphius007" type="15" sum="$0.02" cards="[cards]" />
-      <action no="6" player="ijdnakuri" type="15" sum="$0.02" cards="[cards]" />
-      <action no="1" player="Ge007" type="15" sum="$0.02" cards="[cards]" />
-      <action no="7" player="Ge007" type="1" sum="$0.05" cards="[cards]" />
-      <action no="2" player="joinboy" type="15" sum="$0.02" cards="[cards]" />
-      <action no="8" player="joinboy" type="2" sum="$0.10" cards="[cards]" />
-      <action no="3" player="xvala" type="15" sum="$0.02" cards="[cards]" />
+      <action no="1" player="WWR141388412" type="15" sum="£0.02" cards="[cards]" />
+      <action no="4" player="WWR141388412" type="1" sum="£0.05" cards="[cards]" />
+      <action no="2" player="keepfishing68" type="15" sum="£0.02" cards="[cards]" />
+      <action no="5" player="keepfishing68" type="2" sum="£0.10" cards="[cards]" />
+      <action no="3" player="chcake515151" type="15" sum="£0.02" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="StrangerFish1">SQ DJ</cards>
-      <action no="10" player="StrangerFish1" type="3" sum="$0.10" cards="" />
-      <action no="15" player="StrangerFish1" type="3" sum="$0.30" cards="" />
-      <cards type="Pocket" player="morphius007">X X</cards>
-      <action no="11" player="morphius007" type="23" sum="$0.40" cards="" />
-      <cards type="Pocket" player="ijdnakuri">X X</cards>
-      <action no="12" player="ijdnakuri" type="0" sum="$0" cards="" />
-      <cards type="Pocket" player="Ge007">X X</cards>
-      <action no="13" player="Ge007" type="3" sum="$0.35" cards="" />
-      <cards type="Pocket" player="joinboy">X X</cards>
-      <action no="14" player="joinboy" type="3" sum="$0.30" cards="" />
-      <cards type="Pocket" player="xvala">X X</cards>
-      <action no="9" player="xvala" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="WWR141388412">X X</cards>
+      <action no="7" player="WWR141388412" type="3" sum="£0.05" cards="" />
+      <cards type="Pocket" player="keepfishing68">X X</cards>
+      <action no="8" player="keepfishing68" type="4" sum="£0" cards="" />
+      <cards type="Pocket" player="chcake515151">X X</cards>
+      <action no="6" player="chcake515151" type="0" sum="£0" cards="" />
     </round>
     <round no="2">
-      <cards type="Flop" player="">S3 DQ HJ</cards>
-      <action no="18" player="StrangerFish1" type="5" sum="$1.29" cards="" />
-      <action no="19" player="morphius007" type="3" sum="$1.29" cards="" />
-      <action no="16" player="Ge007" type="4" sum="$0" cards="" />
-      <action no="20" player="Ge007" type="0" sum="$0" cards="" />
-      <action no="17" player="joinboy" type="4" sum="$0" cards="" />
-      <action no="21" player="joinboy" type="0" sum="$0" cards="" />
+      <cards type="Flop" player="">D3 C9 H3</cards>
+      <action no="9" player="WWR141388412" type="4" sum="£0" cards="" />
+      <action no="10" player="keepfishing68" type="4" sum="£0" cards="" />
     </round>
     <round no="3">
-      <cards type="Turn" player="">D3</cards>
-      <action no="22" player="StrangerFish1" type="5" sum="$2.15" cards="" />
-      <action no="23" player="morphius007" type="3" sum="$2.15" cards="" />
+      <cards type="Turn" player="">HJ</cards>
+      <action no="11" player="WWR141388412" type="4" sum="£0" cards="" />
+      <action no="12" player="keepfishing68" type="4" sum="£0" cards="" />
     </round>
     <round no="4">
-      <cards type="River" player="">CQ</cards>
-      <action no="24" player="StrangerFish1" type="5" sum="$4.30" cards="" />
-      <action no="26" player="StrangerFish1" type="3" sum="$4.06" cards="" />
-      <action no="25" player="morphius007" type="7" sum="$8.36" cards="" />
+      <cards type="River" player="">S4</cards>
+      <action no="13" player="WWR141388412" type="5" sum="£0.10" cards="" />
+      <action no="14" player="keepfishing68" type="0" sum="£0" cards="" />
     </round>
   </game>
 </session>

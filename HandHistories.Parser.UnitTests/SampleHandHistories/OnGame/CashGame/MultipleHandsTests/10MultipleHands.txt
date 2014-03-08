@@ -1,378 +1,347 @@
-﻿***** History for hand R5-244575935-303 *****
-Start hand: Tue May 29 02:19:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 10
-Players in round: 5
-Seat 4: mr dark hor ($51.37) 
-Seat 7: il_conta ($16.50) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($50.00) 
-Seat 10: Incubus633 ($52.50) 
-mr dark hor posts small blind ($0.25)
-il_conta posts big blind ($0.50)
-RedStar72 posts big blind ($0.50)
----
-Dealing pocket cards
-Nashpan folds
-RedStar72 checks
-Incubus633 raises $2.50 to $2.50
-mr dark hor calls $2.25
-il_conta folds
-RedStar72 folds
---- Dealing flop [ Jc, 4h, T]
-mr dark hor checks
-Incubus633 checks
---- Dealing turn [,7]
-mr dark hor bets $4.50
-Incubus633 calls $4.50
---- Dealing river [,8]
-mr dark hor checks
-Incubus633 checks
----
-Summary:
-Main pot: $15.00 won by mr dark hor ($14.25)
-Rake taken: $0.75
-Seat 4: mr dark hor ($58.62), net: +$7.25, [8h, 8s]
-Seat 7: il_conta ($16.00), net: -$0.50
-Seat 8: Nashpan ($17.50), net: -$0.00
-Seat 9: RedStar72 ($49.50), net: -$0.50
-Seat 10: Incubus633 ($45.50), net: -$7.00, [5d, 4d]
-***** End of hand R5-244575935-303 *****
-
-***** History for hand R5-244575935-304 *****
-Start hand: Tue May 29 02:20:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 4
-Players in round: 5
-Seat 4: mr dark hor ($58.62) 
-Seat 7: il_conta ($16.00) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($49.50) 
-Seat 10: Incubus633 ($45.50) 
-il_conta posts small blind ($0.25)
-Nashpan posts big blind ($0.50)
----
-Dealing pocket cards
-RedStar72 folds
-Incubus633 raises $1.50 to $1.50
-mr dark hor calls $1.50
-il_conta folds
-Nashpan folds
---- Dealing flop [ Qd, Jh, T]
-Incubus633 bets $2.50
-mr dark hor folds
----
-Summary:
-Main pot: $3.75 won by Incubus633 ($3.57)
-Rake taken: $0.18
-Seat 4: mr dark hor ($57.12), net: -$1.50
-Seat 7: il_conta ($15.75), net: -$0.25
-Seat 8: Nashpan ($17.00), net: -$0.50
-Seat 9: RedStar72 ($49.50), net: -$0.00
-Seat 10: Incubus633 ($47.57), net: +$2.07
-***** End of hand R5-244575935-304 *****
-
-***** History for hand R5-244575935-305 *****
-Start hand: Tue May 29 02:20:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 7
-Players in round: 5
-Seat 4: mr dark hor ($57.12) 
-Seat 7: il_conta ($15.75) 
-Seat 8: Nashpan ($17.00) 
-Seat 9: RedStar72 ($49.50) 
-Seat 10: Incubus633 ($47.57) 
-Nashpan posts small blind ($0.25)
-RedStar72 posts big blind ($0.50)
----
-Dealing pocket cards
-Incubus633 raises $2.00 to $2.00
-mr dark hor folds
-il_conta folds
-Nashpan folds
-RedStar72 folds
----
-Summary:
-Main pot: $1.25 won by Incubus633 ($1.25)
-Rake taken: $0.00
-Seat 4: mr dark hor ($57.12), net: -$0.00
-Seat 7: il_conta ($15.75), net: -$0.00
-Seat 8: Nashpan ($16.75), net: -$0.25
-Seat 9: RedStar72 ($49.00), net: -$0.50
-Seat 10: Incubus633 ($48.32), net: +$0.75
-***** End of hand R5-244575935-305 *****
-
-***** History for hand R5-244575935-306 *****
-Start hand: Tue May 29 02:21:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 8
-Players in round: 5
-Seat 4: mr dark hor ($57.12) 
-Seat 7: il_conta ($15.75) 
-Seat 8: Nashpan ($16.75) 
-Seat 9: RedStar72 ($49.00) 
-Seat 10: Incubus633 ($48.32) 
-RedStar72 posts small blind ($0.25)
-Incubus633 posts big blind ($0.50)
----
-Dealing pocket cards
-mr dark hor folds
-il_conta folds
-Nashpan raises $1.25 to $1.25
-RedStar72 folds
-Incubus633 calls $0.75
---- Dealing flop [ 3s, Js, A]
-Incubus633 checks
-Nashpan bets $1.75
-Incubus633 raises $4.00 to $4.00
-Nashpan folds
----
-Summary:
-Main pot: $6.25 won by Incubus633 ($5.94)
-Rake taken: $0.31
-Seat 4: mr dark hor ($57.12), net: -$0.00
-Seat 7: il_conta ($15.75), net: -$0.00
-Seat 8: Nashpan ($13.75), net: -$3.00
-Seat 9: RedStar72 ($48.75), net: -$0.25
-Seat 10: Incubus633 ($51.26), net: +$2.94
-***** End of hand R5-244575935-306 *****
-
-***** History for hand R5-244575935-307 *****
-Start hand: Tue May 29 02:22:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+﻿***** History for hand R5-362037295-54 *****
+Start hand: Mon Jan 06 21:16:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 9
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.00) 
-Seat 4: mr dark hor ($57.12) 
-Seat 7: il_conta ($15.75) 
-Seat 8: Nashpan ($13.75) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($51.26) 
-Incubus633 posts small blind ($0.25)
-Pan Sytuacji posts big blind ($0.50)
+Seat 3: kalibas20055 ($98.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($154.01) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($104.28) 
+Seat 10: BlackH0L3 ($111.01) 
+BlackH0L3 posts small blind ($0.50)
+kalibas20055 posts big blind ($1)
 ---
 Dealing pocket cards
-mr dark hor folds
-il_conta calls $0.50
-Nashpan folds
-RedStar72 folds
-Incubus633 calls $0.25
-Pan Sytuacji checks
---- Dealing flop [ 9s, 3s, 4]
-Incubus633 checks
-Pan Sytuacji checks
-il_conta checks
---- Dealing turn [,2]
-Incubus633 checks
-Pan Sytuacji bets $1.00
-il_conta folds
-Incubus633 folds
+IMBASICK folds
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 raises $2.00 to $2.00
+BlackH0L3 folds
+kalibas20055 folds
 ---
 Summary:
-Main pot: $1.50 won by Pan Sytuacji ($1.43)
-Rake taken: $0.07
-Seat 3: Pan Sytuacji ($20.93), net: +$0.93
-Seat 4: mr dark hor ($57.12), net: -$0.00
-Seat 7: il_conta ($15.25), net: -$0.50
-Seat 8: Nashpan ($13.75), net: -$0.00
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($50.76), net: -$0.50
-***** End of hand R5-244575935-307 *****
+Main pot: $2.50 won by Maesttroy1 ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($97.70), net: -$1.00
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($154.01), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: +$1.50
+Seat 10: BlackH0L3 ($110.51), net: -$0.50
+***** End of hand R5-362037295-54 *****
 
-***** History for hand R5-244575935-308 *****
-Start hand: Tue May 29 02:23:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+***** History for hand R5-362037295-55 *****
+Start hand: Mon Jan 06 21:16:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 10
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.93) 
-Seat 4: mr dark hor ($57.12) 
-Seat 7: il_conta ($15.25) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($50.76) 
-Pan Sytuacji posts small blind ($0.25)
-mr dark hor posts big blind ($0.50)
+Seat 3: kalibas20055 ($97.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($154.01) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+kalibas20055 posts small blind ($0.50)
+IMBASICK posts big blind ($1)
 ---
 Dealing pocket cards
-il_conta folds
-Nashpan folds
-RedStar72 folds
-Incubus633 raises $2.00 to $2.00
-Pan Sytuacji folds
-mr dark hor calls $1.50
---- Dealing flop [ 9s, 6d, J]
-mr dark hor checks
-Incubus633 bets $2.00
-mr dark hor calls $2.00
---- Dealing turn [,Q]
-mr dark hor checks
-Incubus633 checks
---- Dealing river [,A]
-mr dark hor checks
-Incubus633 bets $4.50
-mr dark hor folds
+INKASSOdoc raises $3.00 to $3.00
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK folds
 ---
 Summary:
-Main pot: $8.25 won by Incubus633 ($7.84)
-Rake taken: $0.41
-Seat 3: Pan Sytuacji ($20.68), net: -$0.25
-Seat 4: mr dark hor ($53.12), net: -$4.00
-Seat 7: il_conta ($15.25), net: -$0.00
-Seat 8: Nashpan ($17.50), net: -$0.00
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($54.60), net: +$3.84
-***** End of hand R5-244575935-308 *****
+Main pot: $2.50 won by INKASSOdoc ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($97.20), net: -$0.50
+Seat 4: IMBASICK ($100.50), net: -$1.00
+Seat 6: INKASSOdoc ($155.51), net: +$1.50
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-55 *****
 
-***** History for hand R5-244575935-309 *****
-Start hand: Tue May 29 02:24:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+***** History for hand R5-362037295-56 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 3
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($53.12) 
-Seat 7: il_conta ($15.25) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($54.60) 
-mr dark hor posts small blind ($0.25)
-il_conta posts big blind ($0.50)
+Seat 3: kalibas20055 ($97.20) 
+Seat 4: IMBASICK ($100.50) 
+Seat 6: INKASSOdoc ($155.51) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+IMBASICK posts small blind ($0.50)
+INKASSOdoc posts big blind ($1)
 ---
 Dealing pocket cards
-Nashpan folds
-RedStar72 folds
-Incubus633 folds
-Pan Sytuacji folds
-mr dark hor raises $1.75 to $2.00
-il_conta raises $3.50 to $4.00
-mr dark hor calls $2.00
---- Dealing flop [ Js, 4s, 9]
-mr dark hor checks
-il_conta bets $8.00
-mr dark hor raises $49.12 to $49.12 [all in] 
-il_conta calls $3.25 [all in] 
---- Dealing turn [,Q]
---- Dealing river [,3]
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 raises $2.50 to $2.50
+IMBASICK folds
+INKASSOdoc calls $1.50
+--- Dealing flop [Ts, 9s, 9d]
+INKASSOdoc checks
+kalibas20055 bets $4.00
+INKASSOdoc raises $12.00 to $12.00
+kalibas20055 folds
 ---
 Summary:
-Main pot: $30.50 won by il_conta ($28.98)
-Rake taken: $1.52
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($37.87), net: -$15.25, [Ts, 3s]
-Seat 7: il_conta ($28.98), net: +$13.73, [Qh, Qs]
-Seat 8: Nashpan ($17.50), net: -$0.00
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($54.60), net: -$0.00
-***** End of hand R5-244575935-309 *****
+Main pot: $13.50 won by INKASSOdoc ($12.83)
+Rake taken: $0.67
+Seat 3: kalibas20055 ($90.70), net: -$6.50
+Seat 4: IMBASICK ($100.00), net: -$0.50
+Seat 6: INKASSOdoc ($161.84), net: +$6.33
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-56 *****
 
-***** History for hand R5-244575935-310 *****
-Start hand: Tue May 29 02:25:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+***** History for hand R5-362037295-57 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 4
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($37.87) 
-Seat 7: il_conta ($28.98) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($54.60) 
-il_conta posts small blind ($0.25)
-Nashpan posts big blind ($0.50)
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($100.00) 
+Seat 6: INKASSOdoc ($161.84) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+INKASSOdoc posts small blind ($0.50)
+RedSalamandr posts big blind ($1)
 ---
 Dealing pocket cards
-RedStar72 folds
-Incubus633 raises $2.00 to $2.00
-Pan Sytuacji folds
-mr dark hor calls $2.00
-il_conta folds
-Nashpan folds
---- Dealing flop [ Tc, 5d, 9]
-Incubus633 bets $4.00
-mr dark hor folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK folds
+INKASSOdoc folds
 ---
 Summary:
-Main pot: $4.75 won by Incubus633 ($4.52)
-Rake taken: $0.23
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($35.87), net: -$2.00
-Seat 7: il_conta ($28.73), net: -$0.25
-Seat 8: Nashpan ($17.00), net: -$0.50
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($57.12), net: +$2.52
-***** End of hand R5-244575935-310 *****
+Main pot: $1.00 won by RedSalamandr ($1.00)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($100.00), net: -$0.00
+Seat 6: INKASSOdoc ($161.34), net: -$0.50
+Seat 8: RedSalamandr ($114.11), net: +$0.50
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-57 *****
 
-***** History for hand R5-244575935-311 *****
-Start hand: Tue May 29 02:26:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 7
+***** History for hand R5-362037295-58 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 6
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($35.87) 
-Seat 7: il_conta ($28.73) 
-Seat 8: Nashpan ($17.00) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($57.12) 
-Nashpan posts small blind ($0.25)
-RedStar72 posts big blind ($0.50)
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($100.00) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($114.11) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+RedSalamandr posts small blind ($0.50)
+Maesttroy1 posts big blind ($1)
 ---
 Dealing pocket cards
-Incubus633 folds
-Pan Sytuacji folds
-mr dark hor raises $2.00 to $2.00
-il_conta folds
-Nashpan folds
-RedStar72 calls $1.50
---- Dealing flop [ 7h, Qs, 6]
-RedStar72 checks
-mr dark hor bets $2.25
-RedStar72 calls $2.25
---- Dealing turn [,J]
-RedStar72 checks
-mr dark hor checks
---- Dealing river [,3]
-RedStar72 checks
-mr dark hor bets $6.50
-RedStar72 calls $6.50
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $3.00 to $3.00
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 folds
 ---
 Summary:
-Main pot: $21.75 won by RedStar72 ($20.67)
-Rake taken: $1.08
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($25.12), net: -$10.75, [4c, 4s]
-Seat 7: il_conta ($28.73), net: -$0.00
-Seat 8: Nashpan ($16.75), net: -$0.25
-Seat 9: RedStar72 ($58.67), net: +$9.92, [Ts, Th]
-Seat 10: Incubus633 ($57.12), net: -$0.00
-***** End of hand R5-244575935-311 *****
+Main pot: $2.50 won by IMBASICK ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($101.50), net: +$1.50
+Seat 6: INKASSOdoc ($161.34), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.50
+Seat 9: Maesttroy1 ($104.78), net: -$1.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-58 *****
 
-***** History for hand R5-244575935-312 *****
-Start hand: Tue May 29 02:26:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+***** History for hand R5-362037295-59 *****
+Start hand: Mon Jan 06 21:18:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 8
 Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($25.12) 
-Seat 7: il_conta ($28.73) 
-Seat 8: Nashpan ($16.75) 
-Seat 9: RedStar72 ($58.67) 
-Seat 10: Incubus633 ($57.12) 
-RedStar72 posts small blind ($0.25)
-Incubus633 posts big blind ($0.50)
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($104.78) 
+Seat 10: BlackH0L3 ($110.51) 
+Maesttroy1 posts small blind ($0.50)
+BlackH0L3 posts big blind ($1)
 ---
 Dealing pocket cards
-Pan Sytuacji folds
-mr dark hor raises $2.00 to $2.00
-il_conta folds
-Nashpan folds
-RedStar72 folds
-Incubus633 folds
+kalibas20055 folds
+IMBASICK folds
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 raises $2.50 to $3.00
+BlackH0L3 raises $7.00 to $8.00
+Maesttroy1 folds
 ---
 Summary:
-Main pot: $1.25 won by mr dark hor ($1.25)
+Main pot: $6.00 won by BlackH0L3 ($6.00)
 Rake taken: $0.00
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($25.87), net: +$0.75
-Seat 7: il_conta ($28.73), net: -$0.00
-Seat 8: Nashpan ($16.75), net: -$0.00
-Seat 9: RedStar72 ($58.42), net: -$0.25
-Seat 10: Incubus633 ($56.62), net: -$0.50
-***** End of hand R5-244575935-312 *****
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($161.34), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($101.78), net: -$3.00
+Seat 10: BlackH0L3 ($113.51), net: +$3.00
+***** End of hand R5-362037295-59 *****
+
+***** History for hand R5-362037295-60 *****
+Start hand: Mon Jan 06 21:19:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($101.78) 
+Seat 10: BlackH0L3 ($113.51) 
+BlackH0L3 posts small blind ($0.50)
+kalibas20055 posts big blind ($1)
+---
+Dealing pocket cards
+IMBASICK folds
+INKASSOdoc raises $3.00 to $3.00
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 calls $2.00
+--- Dealing flop [9s, 6s, Jc]
+kalibas20055 checks
+INKASSOdoc checks
+--- Dealing turn [2s]
+kalibas20055 bets $4.50
+INKASSOdoc folds
+---
+Summary:
+Main pot: $6.50 won by kalibas20055 ($6.18)
+Rake taken: $0.32
+Seat 3: kalibas20055 ($93.88), net: +$3.18
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($158.34), net: -$3.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($101.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.50
+***** End of hand R5-362037295-60 *****
+
+***** History for hand R5-362037295-61 *****
+Start hand: Mon Jan 06 21:20:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 10
+Players in round: 6
+Seat 3: kalibas20055 ($100.00) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($158.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($101.78) 
+Seat 10: BlackH0L3 ($113.01) 
+kalibas20055 posts small blind ($0.50)
+IMBASICK posts big blind ($1)
+---
+Dealing pocket cards
+INKASSOdoc folds
+RedSalamandr raises $3.00 to $3.00
+Maesttroy1 calls $3.00
+BlackH0L3 folds
+kalibas20055 calls $2.50
+IMBASICK raises $12.00 to $13.00
+RedSalamandr folds
+Maesttroy1 folds
+kalibas20055 calls $10.00
+--- Dealing flop [6s, 8s, 2s]
+kalibas20055 checks
+IMBASICK bets $12.00
+kalibas20055 folds
+---
+Summary:
+Main pot: $32.00 won by IMBASICK ($30.40)
+Rake taken: $1.60
+Seat 3: kalibas20055 ($87.00), net: -$13.00
+Seat 4: IMBASICK ($118.90), net: +$17.40
+Seat 6: INKASSOdoc ($158.34), net: -$0.00
+Seat 8: RedSalamandr ($110.61), net: -$3.00
+Seat 9: Maesttroy1 ($98.78), net: -$3.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-61 *****
+
+***** History for hand R5-362037295-62 *****
+Start hand: Mon Jan 06 21:21:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
+Players in round: 6
+Seat 3: kalibas20055 ($87.00) 
+Seat 4: IMBASICK ($118.90) 
+Seat 6: INKASSOdoc ($158.34) 
+Seat 8: RedSalamandr ($110.61) 
+Seat 9: Maesttroy1 ($98.78) 
+Seat 10: BlackH0L3 ($113.01) 
+IMBASICK posts small blind ($0.50)
+INKASSOdoc posts big blind ($1)
+---
+Dealing pocket cards
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $2.50 to $3.00
+INKASSOdoc folds
+---
+Summary:
+Main pot: $2.00 won by IMBASICK ($2.00)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($87.00), net: -$0.00
+Seat 4: IMBASICK ($119.90), net: +$1.00
+Seat 6: INKASSOdoc ($157.34), net: -$1.00
+Seat 8: RedSalamandr ($110.61), net: -$0.00
+Seat 9: Maesttroy1 ($98.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-62 *****
+
+***** History for hand R5-362037295-63 *****
+Start hand: Mon Jan 06 21:21:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 4
+Players in round: 6
+Seat 3: kalibas20055 ($87.00) 
+Seat 4: IMBASICK ($119.90) 
+Seat 6: INKASSOdoc ($157.34) 
+Seat 8: RedSalamandr ($110.61) 
+Seat 9: Maesttroy1 ($98.78) 
+Seat 10: BlackH0L3 ($113.01) 
+INKASSOdoc posts small blind ($0.50)
+RedSalamandr posts big blind ($1)
+---
+Dealing pocket cards
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $2.00 to $2.00
+INKASSOdoc folds
+RedSalamandr folds
+---
+Summary:
+Main pot: $2.50 won by IMBASICK ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($87.00), net: -$0.00
+Seat 4: IMBASICK ($121.40), net: +$1.50
+Seat 6: INKASSOdoc ($156.84), net: -$0.50
+Seat 8: RedSalamandr ($109.61), net: -$1.00
+Seat 9: Maesttroy1 ($98.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-63 *****

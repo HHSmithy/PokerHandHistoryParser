@@ -54,6 +54,8 @@ namespace HandHistories.Objects.GameDescription
                 case "ipoker":
                 case "titanpoker":
                 case "titan":
+                case "poker770":
+                case "expektpoker":
                     return SiteName.IPoker;
                 case "absolute":
                 case "cereus":
@@ -108,11 +110,16 @@ namespace HandHistories.Objects.GameDescription
                 case "ipokerfr":
                     return SiteName.IPokerFr;
                 case "ipoker2":
-                case "poker770":
+                case "betmost":
                     return SiteName.IPoker2;
                 case "888":
+                case "888poker":
                 case "pacific":
-                    return SiteName.Pacific;                    
+                    return SiteName.Pacific;  
+                case "winamax":
+                case "winamaxfr":
+                case "winamax.fr":
+                    return SiteName.Winamax;
                 default:
                     string match = Enum.GetNames(typeof (SiteName)).FirstOrDefault(s => s.ToLower().Equals(site.ToLower()));
                     return match == null ? SiteName.Unknown : (SiteName) Enum.Parse(typeof (SiteName), match);

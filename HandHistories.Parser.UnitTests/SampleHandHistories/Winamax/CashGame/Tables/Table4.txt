@@ -1,0 +1,15 @@
+﻿Winamax Poker - CashGame - HandId: #5284693-1-1382600209 - Holdem no limit (0.05€/0.10€) - 2013/10/24 07:36:49 UTC
+Table: 'San Antonio' 5-max (real money) Seat #5 is the button
+Seat 4: artilleur32 (10€)
+Seat 5: bughju2b (9.05€)
+*** ANTE/BLINDS ***
+bughju2b posts small blind 0.05€
+artilleur32 posts big blind 0.10€
+*** PRE-FLOP *** 
+bughju2b calls 0.05€
+artilleur32 raises 0.20€ to 0.30€
+bughju2b folds
+artilleur32 collected 0.40€ from pot
+*** SUMMARY ***
+Total pot 0.40€ | No rake
+Seat 4: artilleur32 (big blind) won 0.40€

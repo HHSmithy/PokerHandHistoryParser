@@ -1,19 +1,17 @@
-﻿Full Tilt Poker Game #26876086853: Table GiftAndTheCurse (6 max) - $100/$200 - Limit Hold'em - 09:18:29 ET - 2011/01/01
-Seat 1: Neo81 ($2,000), is sitting out
-Seat 2: skillgamblin ($2,450)
-Seat 6: Simpiwe ($3,950)
-skillgamblin posts the small blind of $50
-Simpiwe posts the big blind of $100
-The button is in seat #2
+﻿Full Tilt Poker Game #33727841716: Table Magnetite (heads up) - NL Hold'em - $0.50/$1 - 20:33:29 ET - 2014/01/05
+Seat 1: WithoutOxygen ($120.80)
+Seat 2: valery_bro ($49)
+WithoutOxygen posts the small blind of $0.50
+valery_bro posts the big blind of $1
+The button is in seat #1
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-skillgamblin raises to $200
-Simpiwe folds
-Uncalled bet of $100 returned to skillgamblin
-skillgamblin mucks
-skillgamblin wins the pot ($200)
+WithoutOxygen raises to $2
+valery_bro raises to $49, and is all in
+WithoutOxygen folds
+Uncalled bet of $47 returned to valery_bro
+valery_bro mucks
+valery_bro wins the pot ($4)
 *** SUMMARY ***
-Total pot $200 | Rake $0
-Seat 1: Neo81 is sitting out
-Seat 2: skillgamblin (small blind) collected ($200), mucked
-Seat 6: Simpiwe (big blind) folded before the Flop
+Total pot $4 | Rake $0
+Seat 1: WithoutOxygen (small blind) folded before the Flop
+Seat 2: valery_bro (big blind) collected ($4), mucked

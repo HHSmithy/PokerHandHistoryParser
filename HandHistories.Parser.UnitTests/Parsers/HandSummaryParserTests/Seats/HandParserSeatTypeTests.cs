@@ -12,6 +12,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
     [TestFixture("FullTilt")]
+    [TestFixture("MicroGaming")]
+    [TestFixture("Winamax")]
     class HandParserSeatTypeTests : HandHistoryParserBaseTests 
     {
         public HandParserSeatTypeTests(string site) : base(site)
@@ -29,6 +31,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
         [Test]
         public void ParseSeatType_HeadsUp()
         {
+            switch (Site)
+            {
+                case SiteName.MicroGaming:
+                    Assert.Ignore(Site + " currently only has anonymous HU tables");
+                    break;
+            }
             TestSeatType(SeatType.FromMaxPlayers(2));
         }
 
@@ -51,6 +59,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.Entraction:
                 case SiteName.Pacific:
                 case SiteName.FullTilt:
+                case SiteName.MicroGaming:
+                case SiteName.Winamax:
                     Assert.Ignore(Site + " currently doesn't have 4 max games.");
                     break;
             }            
@@ -69,6 +79,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.Entraction:
                 case SiteName.FullTilt:
                 case SiteName.Pacific:
+                case SiteName.MicroGaming:
+                case SiteName.IPoker:
+                case SiteName.Winamax:
                     Assert.Ignore(Site + " currently doesn't have 10 handed games.");
                     break;
             }            
@@ -79,6 +92,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
         [Test]
         public void ParseSeatType_9Handed()
         {
+            switch (Site)
+            {
+                case SiteName.Winamax:
+                    Assert.Ignore(Site + " currently doesn't have 9 handed games.");
+                    break;
+            }
             TestSeatType(SeatType.FromMaxPlayers(9));
         }
 

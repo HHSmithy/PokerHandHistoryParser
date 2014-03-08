@@ -106,11 +106,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 GameDescription = new GameDescriptor()
                 {
                     PokerFormat = PokerFormat.CashGame,
-                    GameType = GameType.CapNoLimitHoldem,
+                    GameType = GameType.NoLimitHoldem,
                     Limit = Limit.FromSmallBlindBigBlind(1.0m, 2.00m, Currency.USD),
                     SeatType = SeatType.FromMaxPlayers(9),
                     Site = SiteName.PokerStars,
-                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Cap)
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 10, 11, 27, 21),
                 DealerButtonPosition = 1,
@@ -204,11 +204,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 GameDescription = new GameDescriptor()
                 {
                     PokerFormat = PokerFormat.CashGame,
-                    GameType = GameType.CapNoLimitHoldem,
+                    GameType = GameType.NoLimitHoldem,
                     Limit = Limit.FromSmallBlindBigBlind(0.25m, 0.50m, Currency.USD),
                     SeatType = SeatType.FromMaxPlayers(6),
                     Site = SiteName.PokerStars,
-                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Cap)
                 },
                 DateOfHandUtc = new DateTime(2012, 9, 11, 12, 39, 12),
                 DealerButtonPosition = 3,

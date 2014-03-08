@@ -1,40 +1,32 @@
-﻿***** History for hand R5-244575935-309 *****
-Start hand: Tue May 29 02:24:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
+﻿***** History for hand R5-361920831-111 *****
+Start hand: Mon Jan 06 09:05:00 CET 2014
+Table: Bagdad [361920831] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 3
-Players in round: 6
-Seat 3: Pan Sytuacji ($20.68) 
-Seat 4: mr dark hor ($53.12) 
-Seat 7: il_conta ($15.25) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: RedStar72 ($48.75) 
-Seat 10: Incubus633 ($54.60) 
-mr dark hor posts small blind ($0.25)
-il_conta posts big blind ($0.50)
+Players in round: 3
+Seat 2: kattiza ($107.38) 
+Seat 3: spir12. ($35.73) 
+Seat 8: adamsin1 ($102.00) 
+adamsin1 posts small blind ($0.50)
+kattiza posts big blind ($1)
 ---
 Dealing pocket cards
-Nashpan folds
-RedStar72 folds
-Incubus633 folds
-Pan Sytuacji folds
-mr dark hor raises $1.75 to $2.00
-il_conta raises $3.50 to $4.00
-mr dark hor calls $2.00
---- Dealing flop [ Js, 4s, 9]
-mr dark hor checks
-il_conta bets $8.00
-mr dark hor raises $49.12 to $49.12 [all in] 
-il_conta calls $3.25 [all in] 
---- Dealing turn [,Q]
---- Dealing river [,3]
+spir12. folds
+adamsin1 raises $2.50 to $3.00
+kattiza calls $2.00
+--- Dealing flop [Jd, 7c, Kc]
+adamsin1 checks
+kattiza checks
+--- Dealing turn [5h]
+adamsin1 checks
+kattiza checks
+--- Dealing river [As]
+adamsin1 bets $4.50
+kattiza calls $4.50
 ---
 Summary:
-Main pot: $30.50 won by il_conta ($28.98)
-Rake taken: $1.52
-Seat 3: Pan Sytuacji ($20.68), net: -$0.00
-Seat 4: mr dark hor ($37.87), net: -$15.25, [Ts, 3s]
-Seat 7: il_conta ($28.98), net: +$13.73, [Qh, Qs]
-Seat 8: Nashpan ($17.50), net: -$0.00
-Seat 9: RedStar72 ($48.75), net: -$0.00
-Seat 10: Incubus633 ($54.60), net: -$0.00
-***** End of hand R5-244575935-309 *****
+Main pot: $15.00 won by kattiza ($14.25)
+Rake taken: $0.75
+Seat 2: kattiza ($114.13), net: +$6.75, [Ad, 9c]
+Seat 3: spir12. ($35.73), net: -$0.00
+Seat 8: adamsin1 ($94.50), net: -$7.50, [Ah, 8s]
+***** End of hand R5-361920831-111 *****

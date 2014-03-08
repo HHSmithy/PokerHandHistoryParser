@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
+using HandHistories.Objects.Interfaces;
 
 namespace HandHistories.Parser.Parsers.Base
 {
     public interface IHandHistorySummaryParser
     {
         SiteName SiteName { get; }
-
+        
         IEnumerable<string> SplitUpMultipleHands(string rawHandHistories);
 
         HandHistorySummary ParseFullHandSummary(string handText, bool rethrowExceptions = false);

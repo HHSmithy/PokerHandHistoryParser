@@ -1,15 +1,22 @@
-﻿#Game No : 273115079
-***** Cassava Hand History for Game 273115079 *****
-$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 13:16:56
-Table Asmara (Real Money)
-Seat 1 is the button
+﻿#Game No : 301571520
+***** 888poker Hand History for Game 301571520 *****
+$100/$200 Blinds No Limit Holdem - *** 06 01 2014 16:14:49
+Table Jaffa 6 Max (Real Money)
+Seat 6 is the button
 Total number of players : 3
-Seat 1: ThrCnBeOnly1 ( $15,740 )
-Seat 2: Trueteller ( $25,475 )
-Seat 4: LimitPot ( $9,495 )
-Trueteller folds
-LimitPot posts small blind [$500]
-ThrCnBeOnly1 folds
+Seat 6: Dr.Bormental ( $1,000 )
+Seat 7: x0xox0xox0 ( $1,000 )
+Seat 9: Vines35 ( $1,000 )
+x0xox0xox0 posts small blind [$100]
+Vines35 posts big blind [$200]
+** Dealing down cards **
+Dr.Bormental folds
+x0xox0xox0 raises [$900]
+Vines35 calls [$800]
+** Dealing flop ** [ Ts, 3s, Tc ]
+** Dealing turn ** [ Td ]
+** Dealing river ** [ Kc ]
 ** Summary **
-LimitPot did not show his hand
-LimitPot collected [ $500 ]
+x0xox0xox0 shows [ Js, 7d ]
+Vines35 shows [ 2c, As ]
+Vines35 collected [ $1,995 ]

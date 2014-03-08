@@ -1,0 +1,27 @@
+﻿Winamax Poker - CashGame - HandId: #5282949-1701-1382615078 - Holdem no limit (0.05€/0.10€) - 2013/10/24 11:44:38 UTC
+Table: 'Vienna 36' 5-max (real money) Seat #2 is the button
+Seat 1: WAHIL (6.86€)
+Seat 2: beso760 (22.31€)
+Seat 3: bishop74270 (19.85€)
+Seat 4: R.Ford (10.08€)
+Seat 5: Kosmos777 (5.30€)
+*** ANTE/BLINDS ***
+bishop74270 posts small blind 0.05€
+R.Ford posts big blind 0.10€
+WAHIL posts big blind 0.10€ out of position
+*** PRE-FLOP *** 
+Kosmos777 calls 0.10€
+WAHIL checks
+beso760 folds
+bishop74270 folds
+R.Ford checks
+*** FLOP *** [3d Ac Ad]
+R.Ford checks
+Kosmos777 bets 0.35€
+WAHIL folds
+R.Ford folds
+Kosmos777 collected 0.68€ from pot
+*** SUMMARY ***
+Total pot 0.68€ | Rake 0.02€
+Board: [3d Ac Ad]
+Seat 5: Kosmos777 won 0.68€

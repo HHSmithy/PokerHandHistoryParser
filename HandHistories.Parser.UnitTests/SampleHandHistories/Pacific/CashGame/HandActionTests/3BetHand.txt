@@ -1,29 +1,36 @@
-﻿#Game No : 176531483
-***** Cassava Hand History for Game 176531483 *****
-$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 19:28:19
-Table Alcorcon (Real Money)
+﻿#Game No : 280083902
+***** 888poker Hand History for Game 280083902 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 13:39:55
+Table Alcorcon 6 Max (Real Money)
 Seat 6 is the button
 Total number of players : 6
-Seat 1: suicram ( $114.25 )
-Seat 2: AUT_Camper ( $40 )
-Seat 4: PR_Eqiuty ( $144.79 )
-Seat 6: sander1900 ( $99.41 )
-Seat 7: iSmokeMeth ( $100.50 )
-Seat 9: maybmaybnot ( $103.81 )
-iSmokeMeth posts small blind [$0.50]
-maybmaybnot posts big blind [$1]
+Seat 1: M00700 ( $29.33 )
+Seat 2: cashgamer15 ( $67.78 )
+Seat 4: Jack3bet ( $100 )
+Seat 6: Krautsturm ( $135.15 )
+Seat 7: littlez33 ( $70.51 )
+Seat 9: AceOfSpace87 ( $100 )
+littlez33 posts small blind [$0.50]
+AceOfSpace87 posts big blind [$1]
 ** Dealing down cards **
-suicram folds
-AUT_Camper folds
-PR_Eqiuty raises [$3]
-sander1900 raises [$10.50]
-iSmokeMeth folds
-maybmaybnot folds
-PR_Eqiuty calls [$7.50]
-** Dealing flop ** [ Jc, 3s, 8d ]
-PR_Eqiuty checks
-sander1900 bets [$22.50]
-PR_Eqiuty folds
+M00700 calls [$1]
+cashgamer15 raises [$2]
+Jack3bet raises [$6.37]
+Krautsturm folds
+littlez33 folds
+AceOfSpace87 folds
+M00700 folds
+cashgamer15 calls [$4.37]
+** Dealing flop ** [ 3d, 8h, Kd ]
+cashgamer15 checks
+Jack3bet bets [$10.43]
+cashgamer15 calls [$10.43]
+** Dealing turn ** [ 8c ]
+cashgamer15 checks
+Jack3bet checks
+** Dealing river ** [ 8d ]
+cashgamer15 bets [$36.10]
+Jack3bet folds
 ** Summary **
-sander1900 did not show his hand
-sander1900 collected [ $21.38 ]
+cashgamer15 did not show his hand
+cashgamer15 collected [ $34.30 ]

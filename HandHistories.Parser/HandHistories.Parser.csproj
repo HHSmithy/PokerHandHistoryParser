@@ -52,6 +52,7 @@
       <HintPath>..\..\..\3rd Party\NLog 2.0\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
@@ -66,6 +67,7 @@
     <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
     <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
     <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />
     <Compile Include="Parsers\Factory\IHandHistoryParserFactory.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
     <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
     <Compile Include="Parsers\RegexParser\Base\IHandHistoryActionParser.cs" />
     <Compile Include="Parsers\RegexParser\PartyPoker\ActionTypeRegexPair.cs" />
@@ -95,7 +98,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

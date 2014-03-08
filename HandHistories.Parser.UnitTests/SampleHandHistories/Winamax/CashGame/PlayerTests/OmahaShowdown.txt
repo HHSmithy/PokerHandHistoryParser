@@ -1,0 +1,42 @@
+﻿Winamax Poker - CashGame - HandId: #5334663-1379-1383796492 - Omaha pot limit (0.15€/0.30€) - 2013/11/07 03:54:52 UTC
+Table: 'Berkeley' 5-max (real money) Seat #5 is the button
+Seat 1: scyllah374 (30€)
+Seat 2: RICO97133 (80.89€)
+Seat 3: AtomeXxX (18.85€)
+Seat 4: trasto51 (30.77€)
+Seat 5: sharon59221 (30.74€)
+*** ANTE/BLINDS ***
+scyllah374 posts small blind 0.15€
+RICO97133 posts big blind 0.30€
+*** PRE-FLOP *** 
+AtomeXxX calls 0.30€
+trasto51 raises 1.05€ to 1.35€
+sharon59221 calls 1.35€
+scyllah374 calls 1.20€
+RICO97133 calls 1.05€
+AtomeXxX calls 1.05€
+*** FLOP *** [Jc 4s 7d]
+scyllah374 checks
+RICO97133 checks
+AtomeXxX checks
+trasto51 checks
+sharon59221 bets 4.50€
+scyllah374 folds
+RICO97133 folds
+AtomeXxX folds
+trasto51 calls 4.50€
+*** TURN *** [Jc 4s 7d] [7s]
+trasto51 checks
+sharon59221 checks
+*** RIVER *** [Jc 4s 7d 7s] [Kd]
+trasto51 checks
+sharon59221 checks
+*** SHOW DOWN ***
+trasto51 shows [Th Js 6h Kh] (Two pairs : Kings and Jacks)
+sharon59221 shows [Ah As 4c Td] (Two pairs : Aces and 7)
+sharon59221 collected 14.73€ from pot
+*** SUMMARY ***
+Total pot 14.73€ | Rake 1.02€
+Board: [Jc 4s 7d 7s Kd]
+Seat 4: trasto51 mucked
+Seat 5: sharon59221 (button) showed [Ah As 4c Td] and won 14.73€ with Two pairs : Aces and 7

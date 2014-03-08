@@ -1,31 +1,34 @@
-﻿***** History for hand R5-244090560-5 *****
-Start hand: Mon May 28 07:39:00 CEST 2012
-Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
+﻿***** History for hand R5-361993106-31 *****
+Start hand: Mon Jan 06 16:47:00 CET 2014
+Table: Hallein [361993106] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
 Button: seat 9
-Players in round: 3
-Seat 8: Max Power s ($8.46) 
-Seat 9: EvilJihnny99 ($24.23) 
-Seat 10: huda22 ($22.43) 
-huda22 posts small blind ($0.25)
-Max Power s posts big blind ($0.25)
+Players in round: 6
+Seat 2: ColdDeck123 ($99.23) 
+Seat 3: FeeltheFill ($159.66) 
+Seat 5: trunaldini ($94.00) 
+Seat 8: TR3KKEN ($88.91) 
+Seat 9: wallucus ($144.80) 
+Seat 10: iPeeOnNits ($100.00) 
+iPeeOnNits posts small blind ($0.50)
+ColdDeck123 posts big blind ($1)
 ---
 Dealing pocket cards
-EvilJihnny99 raises $0.75 to $0.75
-huda22 folds
-Max Power s calls $0.50
---- Dealing flop [5h, 9c, 5c]
-Max Power s checks
-EvilJihnny99 checks
---- Dealing turn [Ts]
-Max Power s checks
-EvilJihnny99 bets $0.50
-Max Power s raises $1.25 to $1.25
-EvilJihnny99 folds
+FeeltheFill folds
+trunaldini folds
+TR3KKEN raises $3.00 to $3.00
+wallucus calls $3.00
+iPeeOnNits raises $13.50 to $14.00
+ColdDeck123 folds
+TR3KKEN folds
+wallucus folds
 ---
 Summary:
-Main pot: $2.75 won by Max Power s ($2.62)
-Rake taken: $0.13
-Seat 8: Max Power s ($9.83), net: +$1.37
-Seat 9: EvilJihnny99 ($22.98), net: -$1.25
-Seat 10: huda22 ($22.18), net: -$0.25
-***** End of hand R5-244090560-5 *****
+Main pot: $10.00 won by iPeeOnNits ($10.00)
+Rake taken: $0.00
+Seat 2: ColdDeck123 ($98.23), net: -$1.00
+Seat 3: FeeltheFill ($159.66), net: -$0.00
+Seat 5: trunaldini ($94.00), net: -$0.00
+Seat 8: TR3KKEN ($85.91), net: -$3.00
+Seat 9: wallucus ($141.80), net: -$3.00
+Seat 10: iPeeOnNits ($107.00), net: +$7.00
+***** End of hand R5-361993106-31 *****

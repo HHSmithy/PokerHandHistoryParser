@@ -1,0 +1,47 @@
+﻿<Game hhversion="4" id="5049093555" date="2013-09-23 14:29:32" unicodetablename="VAB1AHIAYgBvADoAIABNAGkAYwByAG8AIABOAEwASABFACAAMgA4ACAALQAgAKwgMgAgAE0AYQB4AA==" tablename="Turbo: Micro NLHE 28 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="false" rake="10">
+   <Seats>
+      <Seat num="1" alias="CrzyVndl" unicodealias="QwByAHoAeQBWAG4AZABsAA==" balance="2.00" endbalance="2.00"/>
+      <Seat num="2" alias="Muszkliii" unicodealias="TQB1AHMAegBrAGwAaQBpAGkA" balance="2.87" endbalance="2.87" dealer="true"/>
+      <Seat num="3" alias="jugins" unicodealias="agB1AGcAaQBuAHMA" balance="0.56" endbalance="1.02"/>
+      <Seat num="4" alias="MrJohnCarter" unicodealias="TQByAEoAbwBoAG4AQwBhAHIAdABlAHIA" balance="2.16" endbalance="1.60"/>
+      <Seat num="5" alias="gabrieliso" unicodealias="ZwBhAGIAcgBpAGUAbABpAHMAbwA=" balance="1.46" endbalance="1.46"/>
+      <Seat num="6" alias="SinjkV" unicodealias="UwBpAG4AagBrAFYA" balance="2.62" endbalance="2.62"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="4" value="0.02"/>
+      <Action seq="3" type="Fold" seat="5"/>
+      <Action seq="4" type="Fold" seat="6"/>
+      <Action seq="5" type="Fold" seat="1"/>
+      <Action seq="6" type="Fold" seat="2"/>
+      <Action seq="7" type="Call" seat="3" value="0.01"/>
+      <Action seq="8" type="Bet" seat="4" value="0.12"/>
+      <Action seq="9" type="Call" seat="3" value="0.12"/>
+      <Action seq="10" type="DealFlop">
+         <Card value="9" suit="c" id="21"/>
+         <Card value="2" suit="c" id="14"/>
+         <Card value="10" suit="s" id="9"/>
+      </Action>
+      <Action seq="11" type="Check" seat="3"/>
+      <Action seq="12" type="AllIn" seat="4" value="2.02"/>
+      <Action seq="13" type="AllIn" seat="3" value="0.42"/>
+      <Action seq="14" type="MoneyReturned" seat="4" value="1.60"/>
+      <Action seq="15" type="ShowCards" seat="3">
+         <Card value="8" suit="c" id="20"/>
+         <Card value="7" suit="c" id="19"/>
+      </Action>
+      <Action seq="16" type="ShowCards" seat="4">
+         <Card value="10" suit="d" id="35"/>
+         <Card value="K" suit="h" id="51"/>
+      </Action>
+      <Action seq="17" type="DealTurn">
+         <Card value="3" suit="h" id="41"/>
+      </Action>
+      <Action seq="18" type="DealRiver">
+         <Card value="J" suit="s" id="10"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="3" amount="1.02" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

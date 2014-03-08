@@ -47,8 +47,7 @@ namespace HandHistories.Objects.Players
 
         public override string ToString()
         {
-            string s = 
-                string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), HoleCards.ToString());
+            string s = string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), HoleCards.ToString());
 
             if (IsSittingOut)
             {

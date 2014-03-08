@@ -1,51 +1,22 @@
-﻿Full Tilt Poker Game #26865778091: Table Dickey - $5/$10 - Limit Hold'em - 19:19:55 ET - 2010/12/31
-Seat 1: bob from ct ($167)
-Seat 2: ZXCV999 ($100)
-Seat 3: nowhiningplease ($205.50)
-Seat 4: ciwei999 ($163)
-Seat 5: oh__pelle ($118)
-Seat 6: PreaknessPass ($138.50)
-Seat 7: fuhlsgold ($150)
-Seat 8: lonestar98 ($152)
-Seat 9: mlcruiser ($541)
-oh__pelle posts the small blind of $2.50
-PreaknessPass posts the big blind of $5
-5 seconds left to act
-The button is in seat #4
+﻿Full Tilt Poker Game #33729180182: Table Narit (6 max) - FL Hold'em - $0.05/$0.10 - 08:01:08 ET - 2014/01/06
+Seat 2: miezemuis ($12.98)
+Seat 3: kerberi ($2.72)
+miezemuis posts the small blind of $0.02
+kerberi posts the big blind of $0.05
+The button is in seat #2
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-fuhlsgold folds
-lonestar98 folds
-mlcruiser folds
-bob from ct folds
-nowhiningplease raises to $10
-ciwei999 folds
-oh__pelle calls $7.50
-PreaknessPass calls $5
-*** FLOP *** [3d 9h 8s]
-oh__pelle bets $5
-PreaknessPass folds
-nowhiningplease raises to $10
-oh__pelle raises to $15
-nowhiningplease calls $5
-*** TURN *** [3d 9h 8s] [Kc]
-oh__pelle bets $10
-nowhiningplease calls $10
-*** RIVER *** [3d 9h 8s Kc] [2h]
-oh__pelle bets $10
-nowhiningplease folds
-Uncalled bet of $10 returned to oh__pelle
-oh__pelle mucks
-oh__pelle wins the pot ($77)
+miezemuis raises to $0.10
+kerberi calls $0.05
+*** FLOP *** [5c Qc 2d] (Total Pot: $0.20, 2 Players)
+kerberi checks
+miezemuis bets $0.05
+kerberi raises to $0.10
+miezemuis folds
+Uncalled bet of $0.05 returned to kerberi
+kerberi mucks
+kerberi wins the pot ($0.29)
 *** SUMMARY ***
-Total pot $80 | Rake $3
-Board: [3d 9h 8s Kc 2h]
-Seat 1: bob from ct didn't bet (folded)
-Seat 2: ZXCV999 is sitting out
-Seat 3: nowhiningplease folded on the River
-Seat 4: ciwei999 (button) didn't bet (folded)
-Seat 5: oh__pelle (small blind) collected ($77), mucked
-Seat 6: PreaknessPass (big blind) folded on the Flop
-Seat 7: fuhlsgold didn't bet (folded)
-Seat 8: lonestar98 didn't bet (folded)
-Seat 9: mlcruiser didn't bet (folded)
+Total pot $0.30 | Rake $0.01
+Board: [5c Qc 2d]
+Seat 2: miezemuis (small blind) folded on the Flop
+Seat 3: kerberi (big blind) collected ($0.29), mucked

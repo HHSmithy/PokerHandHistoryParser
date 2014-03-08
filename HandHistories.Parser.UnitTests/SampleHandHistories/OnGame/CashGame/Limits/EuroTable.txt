@@ -1,25 +1,45 @@
-﻿***** History for hand R5-68015410-5 *****
-Start hand: Fri Jun 01 04:25:00 CEST 2012
-Table: [SPEED] Sos [68015410] (NO_LIMIT TEXAS_HOLDEM €2/€4, Real money)
-Button: seat 3
-Players in round: 3
-Seat 3: tationova (€5.95) 
-Seat 5: sheme62 (€1.84) 
-Seat 10: pokerattitud (€2.00) 
-sheme62 posts small blind (€0.02)
-pokerattitud posts big blind (€0.04)
+﻿***** History for hand R5-118630507-219 *****
+Start hand: Mon Jan 06 01:00:00 CET 2014
+Table: Alessandria [118630507] (NO_LIMIT TEXAS_HOLDEM €0.50/€1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 3: danielba (€81.53) 
+Seat 4: pincClaudioc (€35.94) 
+Seat 5: iasekiller (€90.76) 
+Seat 6: DBolognese (€50.23) 
+Seat 8: TrickyChu (€116.61) 
+Seat 9: Alexdurrr (€44.77) 
+Alexdurrr posts small blind (€0.50)
+danielba posts big blind (€1)
 ---
 Dealing pocket cards
-tationova calls €0.04
-sheme62 calls €0.02
-pokerattitud raises €0.12 to €0.16
-tationova folds
-sheme62 folds
+pincClaudioc calls €1.00
+iasekiller folds
+DBolognese folds
+TrickyChu folds
+Alexdurrr calls €0.50
+danielba checks
+--- Dealing flop [8c, 3s, 3h]
+Alexdurrr checks
+danielba checks
+pincClaudioc checks
+--- Dealing turn [Qh]
+Alexdurrr checks
+danielba checks
+pincClaudioc bets €4.00
+Alexdurrr calls €4.00
+danielba folds
+--- Dealing river [5s]
+Alexdurrr bets €5.50
+pincClaudioc calls €5.50
 ---
 Summary:
-Main pot: €0.12 won by pokerattitud (€0.12)
-Rake taken: €0.00
-Seat 3: tationova (€5.91), net: -€0.04
-Seat 5: sheme62 (€1.80), net: -€0.04
-Seat 10: pokerattitud (€2.08), net: +€0.08
-***** End of hand R5-68015410-5 *****
+Main pot: €22.00 won by Alexdurrr (€20.78)
+Rake taken: €1.22
+Seat 3: danielba (€80.53), net: -€1.00
+Seat 4: pincClaudioc (€25.44), net: -€10.50, [Kh, 5h]
+Seat 5: iasekiller (€90.76)
+Seat 6: DBolognese (€50.23)
+Seat 8: TrickyChu (€116.61)
+Seat 9: Alexdurrr (€55.05), net: +€10.28, [Qc, 3c]
+***** End of hand R5-118630507-219 *****

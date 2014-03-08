@@ -1,22 +1,33 @@
-﻿***** Hand History for Game 11615410871 *****
-$25 USD NL Texas Hold'em - Tuesday, April 03, 12:37:27 EDT 2012
-Table Accraé (Real Money)
-Seat 3 is the button
-Total number of players : 3/9 
-Seat 5: JensSW ( $15.07 USD )
-Seat 4: bielakk ( $7.25 USD )
-Seat 3: sag68 ( $25.20 USD )
-sag68 posts small blind [$0.10 USD].
-bielakk posts big blind [$0.25 USD].
+﻿***** Hand History for Game 13550642683 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 08:24:17 EST 2014
+Table Karlsruhe (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 5: BEZUMNI_MAKS ( $3 USD )
+Seat 4: Dr_ZeR0 ( $9.80 USD )
+Seat 3: V0LK ( $10 USD )
+Seat 2: fabiank77 ( $9.90 USD )
+Seat 1: hotchoc5 ( $10.28 USD )
+Seat 6: thieme81 ( $0 USD )
+Dr_ZeR0 posts small blind [$0.05 USD].
+BEZUMNI_MAKS posts big blind [$0.10 USD].
 ** Dealing down cards **
-sag68 calls [$0.15 USD]
-bielakk checks
-** Dealing Flop ** [ 7c, 7s, 5d ]
-bielakk checks
-Pesa1975888 has joined the table.
-sag68 checks
-** Dealing Turn ** [ Jh ]
-bielakk bets [$0.25 USD]
-sag68 folds
-bielakk does not show cards.
-bielakk wins $0.73 USD
+hotchoc5 folds
+fabiank77 calls [$0.10 USD]
+Dr_ZeR0 calls [$0.05 USD]
+BEZUMNI_MAKS checks
+** Dealing Flop ** [ Ah, 6h, 3s ]
+Dr_ZeR0 checks
+BEZUMNI_MAKS checks
+fabiank77 bets [$0.29 USD]
+Dr_ZeR0 calls [$0.29 USD]
+BEZUMNI_MAKS folds
+** Dealing Turn ** [ Qs ]
+Dr_ZeR0 bets [$0.50 USD]
+fabiank77 calls [$0.50 USD]
+** Dealing River ** [ Jh ]
+Dr_ZeR0 bets [$0.50 USD]
+fabiank77 calls [$0.50 USD]
+Dr_ZeR0 shows [ As, Kc ]a pair of Aces with King kicker.
+fabiank77 doesn't show [ Ac, 8c ]a pair of Aces.
+Dr_ZeR0 wins $2.74 USD from the main pot with a pair of Aces with King kicker.

@@ -1,45 +1,61 @@
-﻿PokerStars Hand #78456888239:  Hold'em No Limit (€2/€4 EUR) - 2012/04/06 23:13:47 ET
-Table 'Leocadia IV' 9-max Seat #2 is the button
-Seat 2: DionisoA.C. (€148 in chips) 
-Seat 3: mrtittyy (€750.97 in chips) 
-Seat 4: Tarjei82 (€404 in chips) 
-Seat 5: MrDurden (€400 in chips) 
-Seat 6: MoraI Hazard (€400 in chips) 
-Seat 7: GusanoZ (€400 in chips) 
-Seat 8: daniferdoser (€939.96 in chips) 
-mrtittyy: posts small blind €2
-Tarjei82: posts big blind €4
-RobertFripp2: sits out 
-denitz21: sits out 
+﻿PokerStars Game #109666157973:  Hold'em No Limit (€0.50/€1.00 EUR) - 2014/01/05 20:05:11 ET
+
+Table 'Menkent IV 40-100 bb' 6-max Seat #5 is the button
+
+Seat 1: fullringrind (€233.46 in chips) 
+
+Seat 2: richbackbone (€100 in chips) 
+
+Seat 4: BorissKGB (€111.33 in chips) 
+
+Seat 5: koridallara (€26.24 in chips) 
+
+Seat 6: emilton1 (€243.44 in chips) 
+
+emilton1: posts small blind €0.50
+
+fullringrind: posts big blind €1
+
 *** HOLE CARDS ***
-MrDurden: folds 
-MoraI Hazard: folds 
-GusanoZ: folds 
-daniferdoser: folds 
-DionisoA.C.: raises €4.80 to €8.80
-mrtittyy: folds 
-Tarjei82: calls €4.80
-*** FLOP *** [8h 9s 5h]
-Tarjei82: checks 
-DionisoA.C.: checks 
-*** TURN *** [8h 9s 5h] [5c]
-Tarjei82: bets €9.36
-DionisoA.C.: raises €30.32 to €39.68
-Tarjei82: calls €30.32
-*** RIVER *** [8h 9s 5h 5c] [3c]
-Tarjei82: checks 
-DionisoA.C.: checks 
-*** SHOW DOWN ***
-Tarjei82: shows [Qs 8d] (two pair, Eights and Fives)
-DionisoA.C.: mucks hand 
-Tarjei82 collected €96.81 from pot
+
+richbackbone: raises €2 to €3
+
+BorissKGB: folds
+ 
+koridallara: calls €3
+
+emilton1: folds 
+
+fullringrind: folds 
+
+*** FLOP *** [Jh 5s 6d]
+
+richbackbone: checks 
+
+koridallara: bets €3
+
+richbackbone: raises €5 to €8
+
+koridallara: folds 
+
+Uncalled bet (€5) returned to richbackbone
+
+richbackbone collected €12.89 from pot
+
+richbackbone: doesn't show hand 
+
 *** SUMMARY ***
-Total pot €98.96 | Rake €2.15 
-Board [8h 9s 5h 5c 3c]
-Seat 2: DionisoA.C. (button) mucked
-Seat 3: mrtittyy (small blind) folded before Flop
-Seat 4: Tarjei82 (big blind) showed [Qs 8d] and won (€96.81) with two pair, Eights and Fives
-Seat 5: MrDurden folded before Flop (didn't bet)
-Seat 6: MoraI Hazard folded before Flop (didn't bet)
-Seat 7: GusanoZ folded before Flop (didn't bet)
-Seat 8: daniferdoser folded before Flop (didn't bet)
+
+Total pot €13.50 | Rake €0.61 
+
+Board [Jh 5s 6d]
+
+Seat 1: fullringrind (big blind) folded before Flop
+
+Seat 2: richbackbone collected (€12.89)
+
+Seat 4: BorissKGB folded before Flop (didn't bet)
+
+Seat 5: koridallara (button) folded on the Flop
+
+Seat 6: emilton1 (small blind) folded before Flop

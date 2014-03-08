@@ -6,8 +6,10 @@ using HandHistories.Parser.Parsers.FastParser.Entraction;
 using HandHistories.Parser.Parsers.FastParser.FullTiltPoker;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
 using HandHistories.Parser.Parsers.FastParser.Merge;
+using HandHistories.Parser.Parsers.FastParser.MicroGaming;
 using HandHistories.Parser.Parsers.FastParser.OnGame;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
+using HandHistories.Parser.Parsers.FastParser.Winamax;
 using HandHistories.Parser.Parsers.FastParser._888;
 using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
 
@@ -49,6 +51,10 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new EntractionFastParserImpl();
                 case SiteName.FullTilt:
                     return new FullTiltPokerFastParserImpl();
+                case SiteName.MicroGaming:
+                    return new MicroGamingFastParserImpl();
+                case SiteName.Winamax:
+                    return new WinamaxFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No full regex parser for " + siteName);
             }
@@ -83,6 +89,10 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new OnGameFastParserImpl(SiteName.OnGameIt);
                 case SiteName.FullTilt:
                     return new FullTiltPokerFastParserImpl();
+                case SiteName.MicroGaming:
+                    return new MicroGamingFastParserImpl();
+                case SiteName.Winamax:
+                    return new WinamaxFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No summary regex parser for " + siteName);
             }

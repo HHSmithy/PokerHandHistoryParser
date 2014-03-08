@@ -281,15 +281,21 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 if (currentStreet == Street.Showdown)
                 {
                     // Main pot: $2.25 won by zatli74 ($2.14)
+                    // Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
                     if (handLine.StartsWith("Main pot:"))
                     {
-                        int openParenIndex = handLine.LastIndexOf('(');
-                        decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
+                        var splitted = handLine.Split(',');
+                        foreach(var winner in splitted)
+                        {
+                            int openParenIndex = winner.LastIndexOf('(');
+                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 2, winner.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
 
-                        int yIndex = handLine.IndexOf('y');
-                        string playerName = handLine.Substring(yIndex + 2, openParenIndex - yIndex - 3);
+                            int yIndex = winner.IndexOf('y');
 
-                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                            string playerName = winner.Substring(yIndex + 2, openParenIndex - yIndex - 3);
+                            
+                            handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                        }
                     }
 
                     continue;

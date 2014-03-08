@@ -1,15 +1,27 @@
-﻿***** Hand History for Game 11614598721 *****
-$25 USD NL Texas Hold'em - Tuesday, April 03, 07:51:36 EDT 2012
-Table Table  201440 (No DP) (Real Money)
-Seat 1 is the button
+﻿***** Hand History for Game 13549886429 *****
+$0.05/$0.10 USD FL Texas Hold'em - Sunday, January 05, 19:00:12 EST 2014
+Table Miami (Real Money)
+Seat 5 is the button
 Total number of players : 3/6 
-Seat 1: Remmie_123 ( $26.25 USD )
-Seat 5: Tork001 ( $7.50 USD )
-Seat 4: bielakk ( $7.48 USD )
-bielakk posts small blind [$0.10 USD].
-Tork001 posts big blind [$0.25 USD].
+Seat 1: Gun5611 ( $2.02 USD )
+Seat 3: hmups ( $5.11 USD )
+Seat 5: mraeolus ( $1.42 USD )
+Gun5611 posts small blind [$0.02 USD].
+hmups posts big blind [$0.05 USD].
 ** Dealing down cards **
-Remmie_123 folds
-bielakk folds
-Tork001 does not show cards.
-Tork001 wins $0.35 USD
+mraeolus calls [$0.05 USD]
+Gun5611 folds
+hmups raises [$0.05 USD]
+mraeolus calls [$0.05 USD]
+** Dealing Flop ** [ 7h, Jd, Ah ]
+hmups bets [$0.05 USD]
+mraeolus calls [$0.05 USD]
+** Dealing Turn ** [ 9s ]
+hmups checks
+mraeolus checks
+** Dealing River ** [ 3c ]
+hmups bets [$0.10 USD]
+mraeolus calls [$0.10 USD]
+hmups shows [ 8h, 8s ]a pair of Eights.
+mraeolus shows [ 6s, Ac ]a pair of Aces.
+mraeolus wins $0.50 USD from the main pot with a pair of Aces.

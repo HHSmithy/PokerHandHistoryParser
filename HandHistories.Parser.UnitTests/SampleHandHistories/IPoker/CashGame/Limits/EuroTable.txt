@@ -1,13 +1,14 @@
-﻿<session sessioncode="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem NL €2/€4</gametype>
-    <tablename>Ashton-under-Lyne, 629229031</tablename>
+    <gametype>Holdem NL €0.50/€1</gametype>
+    <tablename>Aach, 817034263</tablename>
     <tablecurrency>EUR</tablecurrency>
     <duration>N/A</duration>
     <gamecount>N/A</gamecount>
-    <startdate>2012-05-28 19:56:53</startdate>
-    <currency>EUR</currency>
+    <startdate>2014-01-06 10:32:48</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
     <bets>N/A</bets>
     <wins>N/A</wins>
@@ -16,41 +17,36 @@
     <ipoints>N/A</ipoints>
     <statuspoints>N/A</statuspoints>
     <awardpoints>N/A</awardpoints>
-    <is_asian>0</is_asian>
   </general>
-  <game gamecode="3302416084">
+  <game gamecode="5383308893">
     <general>
-      <startdate>2012-05-28 19:57:05</startdate>
+      <startdate>2014-01-06 10:33:13</startdate>
       <players>
-        <player seat="4" name="Hypomanie" chips="€60" dealer="1" win="€0" bet="€4" rebuy="0" addon="0" />
-        <player seat="7" name="iutvf" chips="€60" dealer="0" win="€7.60" bet="€4" rebuy="0" addon="0" />
-        <player seat="9" name="Zempf" chips="€126" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" />
+        <player seat="1" name="LosDomos" chips="€54.90" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="3" name="wizby" chips="€41.50" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="IseeThatTown" chips="€52.70" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="hzler" chips="€50.15" dealer="1" win="€4.50" bet="€3" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="bf008672" chips="€50.50" dealer="0" win="€0" bet="€0.50" rebuy="0" addon="0" reg_code="-" />
+        <player seat="10" name="Zelioni82" chips="€54.35" dealer="0" win="€0" bet="€1" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="Hypomanie" type="1" sum="€1" cards="[cards]" />
-      <action no="2" player="iutvf" type="2" sum="€2" cards="[cards]" />
+      <action no="1" player="bf008672" type="1" sum="€0.50" cards="[cards]" />
+      <action no="2" player="Zelioni82" type="2" sum="€1" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="Hypomanie">X X</cards>
-      <action no="3" player="Hypomanie" type="23" sum="€4" cards="" />
-      <cards type="Pocket" player="iutvf">H6 D3</cards>
-      <action no="4" player="iutvf" type="3" sum="€2" cards="" />
-    </round>
-    <round no="2">
-      <cards type="Flop" player="">C5 C7 H3</cards>
-      <action no="6" player="Hypomanie" type="4" sum="€0" cards="" />
-      <action no="5" player="iutvf" type="4" sum="€0" cards="" />
-    </round>
-    <round no="3">
-      <cards type="Turn" player="">CK</cards>
-      <action no="8" player="Hypomanie" type="4" sum="€0" cards="" />
-      <action no="7" player="iutvf" type="4" sum="€0" cards="" />
-    </round>
-    <round no="4">
-      <cards type="River" player="">H10</cards>
-      <action no="10" player="Hypomanie" type="4" sum="€0" cards="" />
-      <action no="9" player="iutvf" type="4" sum="€0" cards="" />
+      <cards type="Pocket" player="LosDomos">X X</cards>
+      <action no="3" player="LosDomos" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="wizby">X X</cards>
+      <action no="4" player="wizby" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="IseeThatTown">X X</cards>
+      <action no="5" player="IseeThatTown" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="hzler">X X</cards>
+      <action no="6" player="hzler" type="23" sum="€3" cards="" />
+      <cards type="Pocket" player="bf008672">X X</cards>
+      <action no="7" player="bf008672" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="Zelioni82">X X</cards>
+      <action no="8" player="Zelioni82" type="0" sum="€0" cards="" />
     </round>
   </game>
 </session>

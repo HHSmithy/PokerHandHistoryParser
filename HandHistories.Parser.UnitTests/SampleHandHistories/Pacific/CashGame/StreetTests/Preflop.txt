@@ -1,22 +1,22 @@
-﻿#Game No : 176549605
-***** Cassava Hand History for Game 176549605 *****
-$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 21:41:48
-Table Colombes (Real Money)
-Seat 6 is the button
+﻿#Game No : 280067753
+***** 888poker Hand History for Game 280067753 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 11:59:06
+Table Astrakhan 6 Max (Real Money)
+Seat 7 is the button
 Total number of players : 5
-Seat 1: ThrCnBeOnly1 ( $12,490 )
-Seat 2: OprahTiltfre ( $5,000 )
-Seat 4: LitFaSlane ( $15,995 )
-Seat 6: fifafairplay ( $16,995 )
-Seat 7: engils ( $5,000 )
-engils posts small blind [$500]
-ThrCnBeOnly1 posts big blind [$1,000]
+Seat 2: Birmancat4 ( $48.56 )
+Seat 4: JazzuJun ( $111.26 )
+Seat 6: pokermon24 ( $106.73 )
+Seat 7: Br0keDonk ( $100 )
+Seat 9: liulijia ( $100 )
+liulijia posts small blind [$0.50]
+Birmancat4 posts big blind [$1]
 ** Dealing down cards **
-OprahTiltfre raises [$5,000]
-LitFaSlane folds
-fifafairplay folds
-engils folds
-ThrCnBeOnly1 folds
+JazzuJun raises [$3.50]
+pokermon24 folds
+Br0keDonk folds
+liulijia folds
+Birmancat4 folds
 ** Summary **
-OprahTiltfre did not show his hand
-OprahTiltfre collected [ $2,500 ]
+JazzuJun did not show his hand
+JazzuJun collected [ $2.50 ]

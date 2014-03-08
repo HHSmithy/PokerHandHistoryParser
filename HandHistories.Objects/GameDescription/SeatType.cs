@@ -16,7 +16,7 @@ namespace HandHistories.Objects.GameDescription
             
         }
 
-        private SeatType(int maxPlayers)
+        private SeatType(int maxPlayers, bool realTypes=false)
         {            
             if (maxPlayers > 10)
             {
@@ -34,15 +34,27 @@ namespace HandHistories.Objects.GameDescription
                 case -1:
                 case 0:
                     _seatType = "All";
-                    break;                    
+                    break;   
                 case 2:
                     _seatType = "HeadsUp";
                     break;
+                case 3:
+                    _seatType = realTypes ? "6 Max" : "3 handed";
+                    break;
                 case 4:
-                    _seatType = "4 Max";
+                    _seatType = realTypes ? "6 Max" : "4 Max";
+                    break;
+                case 5:
+                    _seatType = realTypes ? "6 Max" : "5 Handed";
                     break;
                 case 6:
                     _seatType = "6 Max";
+                    break;
+                case 7:
+                    _seatType = realTypes ? "Full Ring (9 Handed)" : "7 Handed";
+                    break;
+                case 8:
+                    _seatType = realTypes ? "Full Ring (9 Handed)" : "8 Handed";
                     break;
                 case 9:
                     _seatType = "Full Ring (9 Handed)";
@@ -75,9 +87,9 @@ namespace HandHistories.Objects.GameDescription
             return new SeatType(0);
         }
 
-        public static SeatType FromMaxPlayers(int maxPlayers)
+        public static SeatType FromMaxPlayers(int maxPlayers, bool realTypes=false)
         {
-            return new SeatType(maxPlayers);
+            return new SeatType(maxPlayers, realTypes);
         }
      
         public static SeatType Parse(string seatType)

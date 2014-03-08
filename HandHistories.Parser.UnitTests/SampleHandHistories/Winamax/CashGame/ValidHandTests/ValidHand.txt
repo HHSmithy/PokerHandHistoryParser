@@ -1,0 +1,23 @@
+Winamax Poker - CashGame - HandId: #5285192-1130-1382664338 - Holdem no limit (0.50€/1€) - 2013/10/25 01:25:38 UTC
+Table: 'Durban 02' 9-max (real money) Seat #7 is the button
+Seat 7: morfrim (40.18€)
+Seat 8: gersois59 (40.50€)
+Seat 9: VStee (166.67€)
+*** ANTE/BLINDS ***
+gersois59 posts small blind 0.50€
+VStee posts big blind 1€
+*** PRE-FLOP *** 
+morfrim raises 1.50€ to 2.50€
+gersois59 calls 2€
+VStee calls 1.50€
+*** FLOP *** [Td Kc 5h]
+gersois59 checks
+VStee bets 3.80€
+morfrim raises 5.70€ to 9.50€
+gersois59 folds
+VStee folds
+morfrim collected 19.82€ from pot
+*** SUMMARY ***
+Total pot 19.82€ | Rake 0.98€
+Board: [Td Kc 5h]
+Seat 7: morfrim (button) won 19.82€

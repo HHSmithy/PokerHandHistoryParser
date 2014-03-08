@@ -28,6 +28,8 @@ namespace HandHistories.Objects.GameDescription
         Pacific = 23, // This is 888
         IPoker2 = 24,
         PokerStarsEs = 25,
+        PokerStarsZoom = 26,
+        Winamax = 27,
         All = 63 // note: can't go higher than 63 due to bit value optimizations
     }
 }

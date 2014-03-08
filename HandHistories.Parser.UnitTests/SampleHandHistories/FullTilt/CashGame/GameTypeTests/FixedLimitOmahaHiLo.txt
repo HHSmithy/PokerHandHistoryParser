@@ -1,0 +1,33 @@
+Full Tilt Poker Game #33727835942: Table Dickson (6 max) - FL Omaha H/L - $0.50/$1 - 20:31:38 ET - 2014/01/05
+Seat 1: SomeStupid ($10.90)
+Seat 3: Greszik ($4)
+Greszik posts the small blind of $0.25
+SomeStupid posts the big blind of $0.50
+The button is in seat #3
+*** HOLE CARDS ***
+Greszik raises to $1
+SomeStupid calls $0.50
+*** FLOP *** [2h 3c Jh] (Total Pot: $2, 2 Players)
+SomeStupid checks
+Greszik bets $0.50
+SomeStupid calls $0.50
+*** TURN *** [2h 3c Jh] [Kh] (Total Pot: $3, 2 Players)
+SomeStupid checks
+Da Poker Pirate sits down
+Greszik bets $1
+SomeStupid calls $1
+Da Poker Pirate adds $10
+*** RIVER *** [2h 3c Jh Kh] [8d] (Total Pot: $5, 2 Players)
+SomeStupid bets $1
+Greszik raises to $1.50, and is all in
+SomeStupid calls $0.50
+*** SHOW DOWN ***
+Greszik shows [9c Qh Ah Js] a flush, Ace high, for high
+SomeStupid shows [5d 3h 4c Kd] two pair, Kings and Threes, for high and 8,5,4,3,2, for low
+Greszik wins the high pot ($3.90) with a flush, Ace high
+SomeStupid wins the low pot ($3.85) with 8,5,4,3,2
+*** SUMMARY ***
+Total pot $8 | Rake $0.25
+Board: [2h 3c Jh Kh 8d]
+Seat 1: SomeStupid (big blind) showed [5d 3h 4c Kd] and won ($3.85) with HI: two pair, Kings and Threes; LO: 8,5,4,3,2
+Seat 3: Greszik (small blind) showed [9c Qh Ah Js] and won ($3.90) with HI: a flush, Ace high

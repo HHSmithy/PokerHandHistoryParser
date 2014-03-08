@@ -46,9 +46,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             switch (Site)
             {
+                case SiteName.Winamax:
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                 case SiteName.Entraction:
+                case SiteName.PartyPoker:
+                case SiteName.PokerStars:
                     Assert.Ignore("No sitting out examples for " + Site);
                     break;
             }
@@ -74,9 +77,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             switch (Site)
             {
+                case SiteName.Winamax:
                 case SiteName.Merge:
                 case SiteName.IPoker:
-                case SiteName.OnGame:
                 case SiteName.Pacific:
                     Assert.Ignore("No Hi-Lo examples for " + Site);
                     break;

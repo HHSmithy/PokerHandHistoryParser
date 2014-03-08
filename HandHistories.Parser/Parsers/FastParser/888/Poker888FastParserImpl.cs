@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Interfaces;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
@@ -94,7 +96,10 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         private static readonly Regex TableNameRegex = new Regex(@"(?<=Table ).*$", RegexOptions.Compiled);
         protected override string ParseTableName(string[] handLines)
         {
-            return TableNameRegex.Match(handLines[3]).Value;
+            //"Table Athens 10 Max (Real Money)" -> "Athens"
+            var tableName = TableNameRegex.Match(handLines[3]).Value;
+            tableName = tableName.Substring(0, tableName.Length - 19).TrimEnd();
+            return tableName;
         }
 
         private static readonly Regex NumPlayersRegex = new Regex(@"(?<=Total number of players : )\d+", RegexOptions.Compiled);
@@ -133,7 +138,9 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 case "Pot Limit Omaha":
                     return GameType.PotLimitOmaha;      
                 case "No Limit Omaha":
-                    return GameType.NoLimitOmaha;                    
+                    return GameType.NoLimitOmaha;         
+                case "Pot Limit OmahaHL":
+                    return GameType.PotLimitOmahaHiLo;
                 default:                    
                     throw new NotImplementedException("Unrecognized game type " + gameTypeString ?? "NULL");
             }
@@ -141,6 +148,33 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override TableType ParseTableType(string[] handLines)
         {
+            // 888 does not store any information about the tabletype in the hand history
+
+            // we assume the table is push or fold if
+            // - there is at least one player with exactly 5bb
+            // - the average stack is < 17.5bb 
+            // - at least two players have < 10bb
+
+            // the min buyin for standard table is > 30bb, so this should work in most cases
+            // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
+            var playerList = ParsePlayers(handLines);
+            var limit = ParseLimit(handLines);
+
+            var tableStack = 0m;
+            var playersBelow10bb = 0;
+            foreach (Player player in playerList)
+            {
+                tableStack += player.StartingStack;
+                if (player.StartingStack / limit.BigBlind == 5m) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
+                if (player.StartingStack / limit.BigBlind <= 10m) playersBelow10bb++;
+
+                if (playersBelow10bb > 1) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
+            }
+
+            if (tableStack / limit.BigBlind / playerList.Count <= 17.5m)
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
+            }
             return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
         }
 

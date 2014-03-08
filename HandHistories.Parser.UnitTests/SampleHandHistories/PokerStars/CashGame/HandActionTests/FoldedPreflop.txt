@@ -1,26 +1,17 @@
-﻿PokerStars Hand #78491364761:  Hold'em No Limit ($0.50/$1.00 USD) - 2012/04/07 15:31:38 ET
-Table 'Aegina III' 6-max Seat #6 is the button
-Seat 1: bingo185 ($51.19 in chips) 
-Seat 2: gaydaddy ($112.78 in chips) 
-Seat 3: flipvampir ($136.70 in chips) 
-Seat 5: chrisvb75 ($62.06 in chips) 
-Seat 6: woezelenpip ($24.31 in chips) 
-bingo185: posts small blind $0.50
-gaydaddy: posts big blind $1
+﻿PokerStars Game #109676236486:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 4:06:31 ET
+Table 'Omicron Capricorni 40-100 bb' 2-max Seat #1 is the button
+Seat 1: idirabotai ($47.60 in chips) 
+Seat 2: jweeke ($106.60 in chips) 
+idirabotai: posts small blind $0.50
+jweeke: posts big blind $1
 *** HOLE CARDS ***
-flipvampir: folds 
-chrisvb75: raises $2 to $3
-woezelenpip: raises $6 to $9
-bingo185: folds 
-gaydaddy: folds 
-chrisvb75: folds 
-Uncalled bet ($6) returned to woezelenpip
-woezelenpip collected $7.50 from pot
-woezelenpip: doesn't show hand 
+idirabotai: calls $0.50
+jweeke: raises $2 to $3
+idirabotai: folds 
+Uncalled bet ($2) returned to jweeke
+jweeke collected $2 from pot
+jweeke: doesn't show hand 
 *** SUMMARY ***
-Total pot $7.50 | Rake $0 
-Seat 1: bingo185 (small blind) folded before Flop
-Seat 2: gaydaddy (big blind) folded before Flop
-Seat 3: flipvampir folded before Flop (didn't bet)
-Seat 5: chrisvb75 folded before Flop
-Seat 6: woezelenpip (button) collected ($7.50)
+Total pot $2 | Rake $0 
+Seat 1: idirabotai (button) (small blind) folded before Flop
+Seat 2: jweeke (big blind) collected ($2)

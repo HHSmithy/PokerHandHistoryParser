@@ -1,32 +1,40 @@
-﻿PokerStars Hand #78437191654:  Hold'em No Limit (€0.25/€0.50 EUR) - 2012/04/06 15:30:48 ET
-Table 'Alcor V' 6-max Seat #4 is the button
-Seat 2: walliwasya (€102.20 in chips) 
-Seat 3: cuepoker (€50 in chips) 
-Seat 4: MeTrOpOll@ (€18.72 in chips) 
-Seat 5: aaand2009 (€51.50 in chips) 
-Seat 6: susan63nl (€32.21 in chips) 
-aaand2009: posts small blind €0.25
-susan63nl: posts big blind €0.50
+﻿PokerStars Game #109707013172:  Omaha Hi/Lo Pot Limit ($0.05/$0.10 USD) - 2014/01/06 16:05:07 ET
+Table 'Rastaban V 40-100 bb' 6-max Seat #2 is the button
+Seat 1: besteffect+ ($7.06 in chips) 
+Seat 2: soma-ruse ($41.16 in chips) 
+Seat 3: topspud ($10.05 in chips) 
+Seat 5: HELVER4728 ($9.65 in chips) 
+Seat 6: immo 1000 ($8.86 in chips) 
+topspud: posts small blind $0.05
+HELVER4728: posts big blind $0.10
 *** HOLE CARDS ***
-walliwasya: folds 
-cuepoker: folds 
-MeTrOpOll@: raises €0.75 to €1.25
-aaand2009: folds 
-susan63nl: calls €0.75
-*** FLOP *** [Js 6c Qc]
-susan63nl: checks 
-MeTrOpOll@: bets €1.31
-susan63nl: calls €1.31
-*** TURN *** [Js 6c Qc] [Ts]
-susan63nl: bets €1
-MeTrOpOll@: folds 
-Uncalled bet (€1) returned to susan63nl
-susan63nl collected €5.13 from pot
+immo 1000: calls $0.10
+besteffect+: folds 
+soma-ruse: folds 
+topspud: calls $0.05
+HELVER4728: checks 
+*** FLOP *** [Jh Td 8c]
+topspud: checks 
+HELVER4728: bets $0.29
+immo 1000: raises $0.87 to $1.16
+topspud: folds 
+HELVER4728: raises $2.61 to $3.77
+immo 1000: calls $2.61
+*** TURN *** [Jh Td 8c] [9c]
+HELVER4728: bets $5.78 and is all-in
+immo 1000: calls $4.99 and is all-in
+Uncalled bet ($0.79) returned to HELVER4728
+*** RIVER *** [Jh Td 8c 9c] [3h]
+*** SHOW DOWN ***
+HELVER4728: shows [3s 9d Kd Qs] (HI: a straight, Nine to King)
+immo 1000: shows [Qc Qh 9h Ts] (HI: a straight, Eight to Queen)
+HELVER4728 collected $17.06 from pot
+No low hand qualified
 *** SUMMARY ***
-Total pot €5.37 | Rake €0.24 
-Board [Js 6c Qc Ts]
-Seat 2: walliwasya folded before Flop (didn't bet)
-Seat 3: cuepoker folded before Flop (didn't bet)
-Seat 4: MeTrOpOll@ (button) folded on the Turn
-Seat 5: aaand2009 (small blind) folded before Flop
-Seat 6: susan63nl (big blind) collected (€5.13)
+Total pot $17.82 | Rake $0.76 
+Board [Jh Td 8c 9c 3h]
+Seat 1: besteffect+ folded before Flop (didn't bet)
+Seat 2: soma-ruse (button) folded before Flop (didn't bet)
+Seat 3: topspud (small blind) folded on the Flop
+Seat 5: HELVER4728 (big blind) showed [3s 9d Kd Qs] and won ($17.06) with HI: a straight, Nine to King
+Seat 6: immo 1000 showed [Qc Qh 9h Ts] and lost with HI: a straight, Eight to Queen

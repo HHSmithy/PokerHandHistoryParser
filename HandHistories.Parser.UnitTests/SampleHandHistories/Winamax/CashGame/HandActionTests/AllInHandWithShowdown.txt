@@ -1,0 +1,29 @@
+﻿Winamax Poker - CashGame - HandId: #5343878-96-1383820687 - Holdem no limit (0.25€/0.50€) - 2013/11/07 10:38:07 UTC
+Table: 'Athens 11' 5-max (real money) Seat #4 is the button
+Seat 1: PornstarX (67.80€)
+Seat 2: nico86190 (38.52€)
+Seat 3: -LePianiste- (53.65€)
+Seat 4: LEROISALO (22.85€)
+Seat 5: Matthieu_59_ (42.59€)
+*** ANTE/BLINDS ***
+Matthieu_59_ posts small blind 0.25€
+PornstarX posts big blind 0.50€
+*** PRE-FLOP *** 
+nico86190 raises 2€ to 2.50€
+-LePianiste- folds
+LEROISALO raises 20.35€ to 22.85€ and is all-in
+Matthieu_59_ folds
+PornstarX folds
+nico86190 calls 20.35€
+*** FLOP *** [3c 7c Jd]
+*** TURN *** [3c 7c Jd] [6c]
+*** RIVER *** [3c 7c Jd 6c] [5s]
+*** SHOW DOWN ***
+LEROISALO shows [Kh Ah] (high card : Ace)
+nico86190 shows [Qh Qc] (One pair : Queens)
+nico86190 collected 43.45€ from pot
+*** SUMMARY ***
+Total pot 43.45€ | Rake 3€
+Board: [3c 7c Jd 6c 5s]
+Seat 2: nico86190 showed [Qh Qc] and won 43.45€ with One pair : Queens
+Seat 4: LEROISALO (button) mucked

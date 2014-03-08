@@ -22,11 +22,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("mr dark hor", 58.62m, 4),
-                               new Player("il_conta", 16m, 7),
-                               new Player("Nashpan", 17.50m, 8),                               
-                               new Player("---ich---", 49.50m, 9),
-                               new Player("Incubus633", 45.50m, 10),
+                               new Player("kattiza", 94.10m, 2),
+                               new Player("adamsin1", 108.75m, 8),
+                               new Player("R1verM0nster", 100m, 9)   
                            };
             }
         }
@@ -37,18 +35,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("Pan Sytuacji", 20.68m, 3),
-                               new Player("mr dark hor", 53.12m, 4)
+                               new Player("kattiza", 107.38m, 2)
                                    {
-                                       HoleCards = HoleCards.FromCards("Ts3s")
-                                   },                               
-                               new Player("il_conta", 15.25m, 7)
+                                       HoleCards = HoleCards.FromCards("Ad9c")
+                                   },     
+                               new Player("spir12.", 35.73m, 3),
+                                                             
+                               new Player("adamsin1", 102m, 8)
                                    {
-                                       HoleCards = HoleCards.FromCards("QhQs")
-                                   },                               
-                               new Player("Nashpan", 17.50m, 8),                               
-                               new Player("RedStar72", 48.75m, 9),
-                               new Player("Incubus633", 54.60m, 10),
+                                       HoleCards = HoleCards.FromCards("Ah8s")
+                                   }                           
                            };
             }
         }
@@ -64,25 +60,38 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("zatli74", 19.68m, 2)
+                               new Player("Cockie", 454.05m, 3)
                                    {
-                                       HoleCards = HoleCards.FromCards("9c6s3sAc")
+                                       HoleCards = HoleCards.FromCards("JdTsTdKd")
                                    },      
-                               new Player("Max Power s", 9.66m, 8)
+                               new Player("zoo0ega", 1666.40m, 4),   
+                               new Player("Ronstorm", 498m, 5),    
+                               new Player("LagTard_x", 742.05m, 6),     
+                               new Player("the_mino", 129.50m, 8)
                                    {
-                                       HoleCards = HoleCards.FromCards("4c3c8d6c")
-                                   },                               
-                               new Player("EvilJihnny99", 28.36m, 9)
-                                   {
-                                       HoleCards = HoleCards.FromCards("AsKcJh5c")
-                                   },                                                             
+                                       HoleCards = HoleCards.FromCards("Ad4c4dJc")
+                                   }, 
+                                                            
                            };
             }
         }
 
         protected override PlayerList ExpectedOmahaHiLoShowdownPlayers
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return new PlayerList()
+                           {
+                               new Player("alikator21", 332m, 1)
+                                   {
+                                       HoleCards = HoleCards.FromCards("AdJs7dAh")
+                                   },      
+                               new Player("McCall901", 531m, 2)
+                                   {
+                                       HoleCards = HoleCards.FromCards("2h3cAs9h")
+                                   }                                                            
+                           };
+            }
         }
     }
 }

@@ -1,46 +1,33 @@
-﻿***** History for hand R5-244308222-32 *****
-Start hand: Mon May 28 10:41:00 CEST 2012
-Table: Nijmegen [244308222] (POT_LIMIT OMAHA_HI $0.10/$0.10, Real money)
-Button: seat 10
-Players in round: 6
-Seat 1: Brunson_90 ($11.06) 
-Seat 6: nusse12 ($4.89) 
-Seat 7: Csigger ($9.47) 
-Seat 8: cs_elis_86 ($16.29) 
-Seat 9: wena_2 ($18.09) 
-Seat 10: JopoVellu ($9.80) 
-Brunson_90 posts small blind ($0.10)
-nusse12 posts big blind ($0.10)
+﻿***** History for hand R5-361726027-6 *****
+Start hand: Mon Jan 06 01:45:00 CET 2014
+Table: [SPEED] Homs [361726027] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
+Button: seat 4
+Players in round: 3
+Seat 4: emtypoket ($709.00) 
+Seat 5: Exquisite.. ($645.00) 
+Seat 6: the_road ($1000.00) 
+Exquisite.. posts small blind ($5)
+the_road posts big blind ($10)
 ---
 Dealing pocket cards
-Csigger folds
-cs_elis_86 folds
-wena_2 raises $0.40 to $0.40
-JopoVellu calls $0.40
-Brunson_90 folds
-nusse12 calls $0.30
---- Dealing flop [6c, 8c, 2h]
-nusse12 checks
-wena_2 checks
-JopoVellu checks
---- Dealing turn [6h]
-nusse12 bets $0.40
-wena_2 calls $0.40
-JopoVellu calls $0.40
---- Dealing river [4h]
-nusse12 checks
-wena_2 checks
-JopoVellu bets $1.50
-nusse12 folds
-wena_2 folds
+emtypoket raises $20.00 to $20.00
+Exquisite.. folds
+the_road calls $10.00
+--- Dealing flop [6h, Qh, 4h]
+the_road checks
+emtypoket bets $20.00
+the_road calls $20.00
+--- Dealing turn [Qs]
+the_road checks
+emtypoket checks
+--- Dealing river [Ac]
+the_road bets $70.00
+emtypoket calls $70.00
 ---
 Summary:
-Main pot: $2.50 won by JopoVellu ($2.34)
-Rake taken: $0.16
-Seat 1: Brunson_90 ($10.96), net: -$0.10
-Seat 6: nusse12 ($4.09), net: -$0.80
-Seat 7: Csigger ($9.47), net: -$0.00
-Seat 8: cs_elis_86 ($16.29), net: -$0.00
-Seat 9: wena_2 ($17.29), net: -$0.80
-Seat 10: JopoVellu ($11.34), net: +$1.54
-***** End of hand R5-244308222-32 *****
+Main pot: $225.00 won by the_road ($223.00)
+Rake taken: $2
+Seat 4: emtypoket ($599.00), net: -$110.00, [Ks, Ah]
+Seat 5: Exquisite.. ($640.00), net: -$5.00
+Seat 6: the_road ($1113.00), net: +$113.00, [8s, Qd]
+***** End of hand R5-361726027-6 *****

@@ -1,27 +1,23 @@
-﻿PokerStars Hand #78408403633:  Omaha Pot Limit ($5/$10 USD) - 2012/04/06 4:28:07 ET
-Table 'Arenda III' 2-max Seat #1 is the button
-Seat 1: ady_aek ($484 in chips) 
-Seat 2: Eversti78 ($500 in chips) 
-ady_aek: posts small blind $5
-Eversti78: posts big blind $10
+﻿PokerStars Game #109663597247:  Omaha Pot Limit ($0.05/$0.10 USD) - 2014/01/05 19:05:34 ET
+Table 'Alisary IV 100-250 bb, Ante' 9-max Seat #5 is the button
+Seat 1: Zubasa89 ($28.91 in chips) 
+Seat 5: pendle45 ($56.17 in chips) 
+pendle45: posts small blind $0.05
+Zubasa89: posts big blind $0.10
+Zubasa89: posts the ante $0.02
+pendle45: posts the ante $0.02
 *** HOLE CARDS ***
-ady_aek: raises $10 to $20
-Eversti78: calls $10
-*** FLOP *** [3s 6d 5s]
-Eversti78: bets $30
-ady_aek: calls $30
-*** TURN *** [3s 6d 5s] [3h]
-Eversti78: bets $70
-ady_aek: calls $70
-*** RIVER *** [3s 6d 5s 3h] [4c]
-Eversti78: checks 
-ady_aek: bets $180
-Eversti78: folds 
-Uncalled bet ($180) returned to ady_aek
-ady_aek collected $239.50 from pot
-ady_aek: doesn't show hand 
+pendle45: raises $0.24 to $0.34
+Zubasa89: calls $0.24
+*** FLOP *** [6c Jc Ah]
+Zubasa89: checks 
+pendle45: bets $0.55
+Zubasa89: folds 
+Uncalled bet ($0.55) returned to pendle45
+pendle45 collected $0.69 from pot
+pendle45: doesn't show hand 
 *** SUMMARY ***
-Total pot $240 | Rake $0.50 
-Board [3s 6d 5s 3h 4c]
-Seat 1: ady_aek (button) (small blind) collected ($239.50)
-Seat 2: Eversti78 (big blind) folded on the River
+Total pot $0.72 | Rake $0.03 
+Board [6c Jc Ah]
+Seat 1: Zubasa89 (big blind) folded on the Flop
+Seat 5: pendle45 (button) (small blind) collected ($0.69)

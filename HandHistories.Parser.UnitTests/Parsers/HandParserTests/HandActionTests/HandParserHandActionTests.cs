@@ -62,6 +62,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             switch (Site)
             {              
+                case SiteName.Winamax:
                 case SiteName.Pacific:
                     Assert.Ignore("No example for omaha hi-lo hands for site " + Site);
                     break;

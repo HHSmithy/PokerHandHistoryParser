@@ -1,26 +1,30 @@
-﻿***** Hand History for Game 11614243628 *****
-$1,000 USD NL Texas Hold'em - Tuesday, April 03, 04:27:46 EDT 2012
-Table Heads Up #2412772 (No DP) (Real Money)
+﻿***** Hand History for Game 13549886519 *****
+$0.05/$0.10 USD NL Texas Hold'em - Sunday, January 05, 19:00:14 EST 2014
+Table Avatele (Real Money)
 Seat 1 is the button
-Total number of players : 2/2 
-Seat 1: Orikus ( $1,095.05 USD )
-Seat 2: arderi ( $1,000 USD )
-Orikus posts small blind [$5 USD].
-arderi posts big blind [$10 USD].
+Total number of players : 6/6 
+Seat 1: Mav1190 ( $13.90 USD )
+Seat 3: Mr.Haze420 ( $17.41 USD )
+Seat 5: Wolfmace ( $3.75 USD )
+Seat 6: hausen89 ( $26.03 USD )
+Seat 4: lukason ( $9.90 USD )
+Seat 2: pagmoz ( $9.90 USD )
+pagmoz posts small blind [$0.05 USD].
+Mr.Haze420 posts big blind [$0.10 USD].
 ** Dealing down cards **
-Orikus calls [$5 USD]
-arderi checks
-** Dealing Flop ** [ Kd, Js, 2h ]
-arderi checks
-Orikus checks
-** Dealing Turn ** [ 8c ]
-arderi checks
-Orikus bets [$10 USD]
-arderi calls [$10 USD]
-** Dealing River ** [ 9d ]
-arderi checks
-Orikus bets [$10 USD]
-arderi calls [$10 USD]
-Orikus shows [ Ad, 3d ]high card Ace.
-arderi shows [ Jc, Ts ]a pair of Jacks.
-arderi wins $59 USD from the main pot with a pair of Jacks.
+lukason calls [$0.10 USD]
+Wolfmace calls [$0.10 USD]
+hausen89 calls [$0.10 USD]
+Mav1190 folds
+pagmoz folds
+Mr.Haze420 checks
+** Dealing Flop ** [ 6s, 9c, 3s ]
+Mr.Haze420 checks
+lukason checks
+Wolfmace checks
+hausen89 bets [$0.21 USD]
+Mr.Haze420 folds
+lukason folds
+Wolfmace folds
+hausen89 does not show cards.
+hausen89 wins $0.64 USD

@@ -1,24 +1,49 @@
-﻿PokerStars Game #81199559778:  Hold'em No Limit ($0.01/$0.02 USD) - 2012/05/29 16:09:29 ET
-Table 'Polaris IV 40-100 bb' 6-max Seat #1 is the button
-Seat 1: Marius*90*V ($0.81 in chips) 
-Seat 2: stuporfly ($2.99 in chips) 
-Seat 3: Hailikisat ($3.73 in chips) 
-Seat 4: ikyQue ($2.29 in chips) 
-Seat 6: gunni121 ($2.39 in chips) 
-stuporfly: posts small blind $0.01
-Hailikisat: posts big blind $0.02
+﻿PokerStars Game #109681289672:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 7:20:20 ET
+Table 'Mora IV 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 1: robinsongo ($25 in chips) 
+Seat 2: Selim_Maroc ($15.02 in chips) 
+Seat 3: H6U5r ($25 in chips) 
+Seat 4: driessen10 ($38.57 in chips) 
+Seat 5: D9e7J0aV8u ($36.22 in chips) 
+Seat 6: smolniy27 ($9.17 in chips) 
+robinsongo: posts small blind $0.05
+Selim_Maroc: posts big blind $0.10
+robinsongo: posts the ante $0.02
+Selim_Maroc: posts the ante $0.02
+H6U5r: posts the ante $0.02
+driessen10: posts the ante $0.02
+D9e7J0aV8u: posts the ante $0.02
+smolniy27: posts the ante $0.02
 *** HOLE CARDS ***
-ikyQue: folds 
-gunni121: folds 
-Marius*90*V: folds 
-stuporfly: folds 
-Uncalled bet ($0.01) returned to Hailikisat
-Hailikisat collected $0.02 from pot
-Hailikisat: doesn't show hand 
+H6U5r: raises $0.20 to $0.30
+driessen10: folds 
+D9e7J0aV8u: folds 
+smolniy27: folds 
+robinsongo: calls $0.25
+Selim_Maroc: calls $0.20
+*** FLOP *** [3h 9s 2d]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: checks 
+*** TURN *** [3h 9s 2d] [4s]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: checks 
+*** RIVER *** [3h 9s 2d 4s] [Ts]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: bets $0.72
+driessen10 is disconnected 
+robinsongo: folds 
+Selim_Maroc: folds 
+Uncalled bet ($0.72) returned to H6U5r
+H6U5r collected $0.97 from pot
 *** SUMMARY ***
-Total pot $0.02 | Rake $0 
-Seat 1: Marius*90*V (button) folded before Flop (didn't bet)
-Seat 2: stuporfly (small blind) folded before Flop
-Seat 3: Hailikisat (big blind) collected ($0.02)
-Seat 4: ikyQue folded before Flop (didn't bet)
-Seat 6: gunni121 folded before Flop (didn't bet)
+Total pot $1.02 | Rake $0.05 
+Board [3h 9s 2d 4s Ts]
+Seat 1: robinsongo (small blind) folded on the River
+Seat 2: Selim_Maroc (big blind) folded on the River
+Seat 3: H6U5r collected ($0.97)
+Seat 4: driessen10 folded before Flop (didn't bet)
+Seat 5: D9e7J0aV8u folded before Flop (didn't bet)
+Seat 6: smolniy27 (button) folded before Flop (didn't bet)

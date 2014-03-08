@@ -1,0 +1,25 @@
+﻿<Game hhversion="4" id="5049092880" date="2013-09-23 14:28:43" unicodetablename="VAB1AHIAYgBvADoAIABNAGkAYwByAG8AIABOAEwASABFACAAMgA4ACAALQAgAKwgMgAgAE0AYQB4AA==" tablename="Turbo: Micro NLHE 28 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="false" rake="0">
+   <Seats>
+      <Seat num="1" alias="CrzyVndl" unicodealias="QwByAHoAeQBWAG4AZABsAA==" balance="2.00" endbalance="1.93"/>
+      <Seat num="2" alias="Muszkliii" unicodealias="TQB1AHMAegBrAGwAaQBpAGkA" balance="2.64" endbalance="2.71"/>
+      <Seat num="3" alias="jugins" unicodealias="agB1AGcAaQBuAHMA" balance="0.58" endbalance="0.58"/>
+      <Seat num="4" alias="MrJohnCarter" unicodealias="TQByAEoAbwBoAG4AQwBhAHIAdABlAHIA" balance="2.16" endbalance="2.16"/>
+      <Seat num="5" alias="gabrieliso" unicodealias="ZwBhAGIAcgBpAGUAbABpAHMAbwA=" balance="1.48" endbalance="1.48"/>
+      <Seat num="6" alias="SinjkV" unicodealias="UwBpAG4AagBrAFYA" balance="2.74" endbalance="2.74" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="1" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="2" value="0.02"/>
+      <Action seq="3" type="Fold" seat="3"/>
+      <Action seq="4" type="Fold" seat="4"/>
+      <Action seq="5" type="Fold" seat="5"/>
+      <Action seq="6" type="Fold" seat="6"/>
+      <Action seq="7" type="Raise" seat="1" value="0.06"/>
+      <Action seq="8" type="Raise" seat="2" value="0.14"/>
+      <Action seq="9" type="Fold" seat="1"/>
+      <Action seq="10" type="MuckCards" seat="2"/>
+      <Action type="Win">
+         <Seat num="2" amount="0.23" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

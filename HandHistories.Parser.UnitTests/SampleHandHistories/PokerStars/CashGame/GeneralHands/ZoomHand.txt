@@ -1,34 +1,28 @@
-﻿PokerStars Game #PokerStars Zoom Hand #84414134468:  Omaha Pot Limit ($0.05/$0.10 USD) - 2012/08/07 14:40:01 ET
-Table 'Eulalia Zoom 40-100 bb' 6-max Seat #1 is the button
-Seat 1: franzpipo10 ($10.19 in chips) 
-Seat 2: Jani23 ($9.79 in chips) 
-Seat 3: ApexPredator ($9.95 in chips) 
-Seat 4: Nishiwakiii ($12.52 in chips) 
-Seat 5: Evggenij ($2.95 in chips) 
-Seat 6: Vakumas ($5.32 in chips) 
-Jani23: posts small blind $0.05
-ApexPredator: posts big blind $0.10
+﻿PokerStars Game #109664415396:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/05 19:22:42 ET
+Table 'Triangulum Zoom 40-100 bb' 6-max Seat #1 is the button
+Seat 1: chukimarios ($49.57 in chips) 
+Seat 2: M.Moliere ($153.67 in chips) 
+Seat 3: NikolaSRBin ($78.60 in chips) 
+Seat 4: 9124-3 ($36.85 in chips) 
+Seat 5: JoeBlack_MS ($101 in chips) 
+Seat 6: SumerianHaze ($138.16 in chips) 
+M.Moliere: posts small blind $0.50
+NikolaSRBin: posts big blind $1
 *** HOLE CARDS ***
-Nishiwakiii: folds 
-Evggenij: calls $0.10
-Vakumas: folds 
-franzpipo10: folds 
-Jani23: calls $0.05
-ApexPredator: checks 
-*** FLOP *** [9s 9d 4h]
-Jani23: checks 
-ApexPredator: bets $0.18
-Evggenij: folds 
-Jani23: folds 
-Uncalled bet ($0.18) returned to ApexPredator
-ApexPredator collected $0.29 from pot
-ApexPredator: doesn't show hand 
+9124-3: folds 
+JoeBlack_MS: folds 
+SumerianHaze: raises $2 to $3
+chukimarios: folds 
+M.Moliere: folds 
+NikolaSRBin: folds 
+Uncalled bet ($2) returned to SumerianHaze
+SumerianHaze collected $2.50 from pot
+SumerianHaze: doesn't show hand 
 *** SUMMARY ***
-Total pot $0.30 | Rake $0.01 
-Board [9s 9d 4h]
-Seat 1: franzpipo10 (button) folded before Flop (didn't bet)
-Seat 2: Jani23 (small blind) folded on the Flop
-Seat 3: ApexPredator (big blind) collected ($0.29)
-Seat 4: Nishiwakiii folded before Flop (didn't bet)
-Seat 5: Evggenij folded on the Flop
-Seat 6: Vakumas folded before Flop (didn't bet)
+Total pot $2.50 | Rake $0 
+Seat 1: chukimarios (button) folded before Flop (didn't bet)
+Seat 2: M.Moliere (small blind) folded before Flop
+Seat 3: NikolaSRBin (big blind) folded before Flop
+Seat 4: 9124-3 folded before Flop (didn't bet)
+Seat 5: JoeBlack_MS folded before Flop (didn't bet)
+Seat 6: SumerianHaze collected ($2.50)

@@ -21,27 +21,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             {
                 return new List<HandAction>()
                            {
-                               new HandAction("yrrrhh33", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
-                               new HandAction("lhjynfobn", HandActionType.BIG_BLIND, 2m, Street.Preflop),
-                               new HandAction("igalo1979", HandActionType.CALL, 2m, Street.Preflop),
-                               new HandAction("YienRang", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("lillil32", HandActionType.RAISE, 6m, Street.Preflop),
-                               new HandAction("pepealas5", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("yrrrhh33", HandActionType.CALL, 5m, Street.Preflop),
-                               new HandAction("lhjynfobn", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("igalo1979", HandActionType.CALL, 4m, Street.Preflop),
-                               new HandAction("yrrrhh33", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("igalo1979", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("lillil32", HandActionType.BET, 18m, Street.Flop),
-                               new HandAction("yrrrhh33", HandActionType.FOLD, 0m, Street.Flop),
-                               new HandAction("igalo1979", HandActionType.CALL, 18m, Street.Flop),
-                               new HandAction("igalo1979", HandActionType.CHECK, 0m, Street.Turn),
-                               new HandAction("lillil32", HandActionType.CHECK, 0m, Street.Turn),
-                               new HandAction("igalo1979", HandActionType.CHECK, 0m, Street.River),
-                               new HandAction("lillil32", HandActionType.BET, 30m, Street.River),
-                               new HandAction("igalo1979", HandActionType.CALL, 30m, Street.River),
-                               new HandAction("lillil32", HandActionType.SHOW, 0, Street.Showdown),
-                               new WinningsAction("lillil32", HandActionType.WINS, 113m, 0),                               
+                               new HandAction("joemags", HandActionType.SMALL_BLIND, 0.05m, Street.Preflop),
+                               new HandAction("Dullaghan", HandActionType.BIG_BLIND, 0.1m, Street.Preflop),
+                               new HandAction("Frozean", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("joemags", HandActionType.CALL, 0.05m, Street.Preflop),
+                               new HandAction("Dullaghan", HandActionType.CHECK, 0m, Street.Preflop),
+
+                               new HandAction("joemags", HandActionType.BET, 0.1m, Street.Flop),
+                               new HandAction("Dullaghan", HandActionType.RAISE, 0.2m, Street.Flop),
+                               new HandAction("joemags", HandActionType.CALL, 0.1m, Street.Flop),
+
+                               new HandAction("joemags", HandActionType.CHECK, 0m, Street.Turn),
+                               new HandAction("Dullaghan", HandActionType.BET, 0.2m, Street.Turn),
+                               new HandAction("joemags", HandActionType.CALL, 0.2m, Street.Turn),
+
+                               new HandAction("joemags", HandActionType.BET, 0.20m, Street.River),
+                               new HandAction("Dullaghan", HandActionType.RAISE, 0.5m, Street.River),
+                               new HandAction("joemags", HandActionType.FOLD, 0m, Street.River),
+
+                               new WinningsAction("Dullaghan", HandActionType.WINS, 1.61m, 0),                               
                            };
             }
         }
@@ -52,12 +50,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             {
                 return new List<HandAction>()
                            {
-                               new HandAction("TTR116060183", HandActionType.SMALL_BLIND, 10m, Street.Preflop),
-                               new HandAction("yutant", HandActionType.BIG_BLIND, 20m, Street.Preflop),
-                               new HandAction("BurnN0tice", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("Armstrongc", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("TTR116060183", HandActionType.FOLD, 0, Street.Preflop),
-                               new WinningsAction("yutant", HandActionType.WINS, 30m, 0),                               
+                               new HandAction("Frozean", HandActionType.SMALL_BLIND, 0.05m, Street.Preflop),
+                               new HandAction("Blemishers", HandActionType.BIG_BLIND, 0.1m, Street.Preflop),
+                               new HandAction("17111982", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("SongOfIceAndFire", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("Frozean", HandActionType.FOLD, 0, Street.Preflop),
+                               new WinningsAction("Blemishers", HandActionType.WINS, 0.15m, 0),                               
                            };
             }
         }
@@ -68,24 +66,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             {
                 return new List<HandAction>()
                            {
-                               new HandAction("JohnJordan", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
-                               new HandAction("wingirl3", HandActionType.BIG_BLIND, 2m, Street.Preflop),
-                               new HandAction("IPullGuard", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("MrJeremiahPokers", HandActionType.RAISE, 6m, Street.Preflop),
-                               new HandAction("HEISENBERGG", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("doubting", HandActionType.CALL, 6m, Street.Preflop),
-                               //Raises don't account for previous bets
-                               new HandAction("JohnJordan", HandActionType.RAISE, 26m - 1m, Street.Preflop),
-                               new HandAction("wingirl3", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("MrJeremiahPokers", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("doubting", HandActionType.CALL, 20m, Street.Preflop),
-                               new HandAction("JohnJordan", HandActionType.BET, 26m, Street.Flop),
-                               new HandAction("doubting", HandActionType.RAISE, 68m, Street.Flop),
-                               new AllInAction("JohnJordan", 162m - 26m, Street.Flop, true),
-                               new HandAction("doubting", HandActionType.CALL, 94m, Street.Flop),
-                               new HandAction("doubting", HandActionType.SHOW, 0, Street.Showdown),
-                               new HandAction("JohnJordan", HandActionType.SHOW, 0, Street.Showdown),
-                               new WinningsAction("doubting", HandActionType.WINS, 381m, 0),                               
+                               new HandAction("Amalfitano1", HandActionType.ANTE, 0.02m, Street.Preflop),
+                               new HandAction("killAA007", HandActionType.ANTE, 0.02m, Street.Preflop),
+                               new HandAction("Amalfitano1", HandActionType.SMALL_BLIND, 0.05m, Street.Preflop),
+                               new HandAction("killAA007", HandActionType.BIG_BLIND, 0.10m, Street.Preflop),
+                               new HandAction("Amalfitano1", HandActionType.RAISE, 0.35m, Street.Preflop),
+                               new HandAction("killAA007", HandActionType.RAISE, 1.10m, Street.Preflop),
+                               new HandAction("Amalfitano1",HandActionType.RAISE, 11.70m, Street.Preflop),
+                               new AllInAction("killAA007",5.88m, Street.Preflop,false),
+                               
+                               new HandAction("Amalfitano1", HandActionType.SHOW, 0, Street.Showdown),
+                               new HandAction("killAA007", HandActionType.SHOW, 0, Street.Showdown),
+                               new WinningsAction("Amalfitano1", HandActionType.WINS, 18.28m, 0),                               
                            };
             }
         }
@@ -96,20 +88,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             {
                 return new List<HandAction>()
                            {
-                               new HandAction("RunningNuts1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
-                               new HandAction("pepealas5", HandActionType.BIG_BLIND, 2m, Street.Preflop),
-                               new HandAction("RunningNuts1", HandActionType.RAISE, 6m - 1m, Street.Preflop),
-                               new HandAction("pepealas5", HandActionType.CALL, 4m, Street.Preflop),
-                               new HandAction("pepealas5", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("RunningNuts1", HandActionType.BET, 6m, Street.Flop),
-                               new HandAction("pepealas5", HandActionType.RAISE, 16m, Street.Flop),
-                               new HandAction("RunningNuts1", HandActionType.CALL, 10m, Street.Flop),
-                               new HandAction("pepealas5", HandActionType.BET, 22m, Street.Turn),
-                               new HandAction("RunningNuts1", HandActionType.CALL, 22m, Street.Turn),
-                               new HandAction("pepealas5", HandActionType.CHECK, 0m, Street.River),
-                               new AllInAction("RunningNuts1", 56m, Street.River, true),
-                               new HandAction("pepealas5", HandActionType.FOLD, 0m, Street.River),
-                               new WinningsAction("RunningNuts1", HandActionType.WINS, 143m, 0),                               
+                               new HandAction("Amalfitano1", HandActionType.SMALL_BLIND, 0.05m, Street.Preflop),
+                               new HandAction("Taras2107", HandActionType.BIG_BLIND, 0.1m, Street.Preflop),
+                               new HandAction("Amalfitano1", HandActionType.RAISE, 0.15m, Street.Preflop),
+                               new HandAction("Taras2107", HandActionType.RAISE, 0.30m, Street.Preflop),
+                               new AllInAction("Amalfitano1", 19.05m, Street.Preflop,true),
+                               new AllInAction("Taras2107", 1.30m, Street.Preflop, false),
+                               
+                               new HandAction("Amalfitano1", HandActionType.SHOW, 0, Street.Showdown),
+                               new HandAction("Taras2107", HandActionType.SHOW, 0, Street.Showdown),
+                               new WinningsAction("Amalfitano1", HandActionType.WINS, 17.55m, 0),
+                               new WinningsAction("Taras2107", HandActionType.WINS, 3.18m, 0),                                         
                            };
 
             }
@@ -129,76 +118,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             List<HandAction> expectedActions = new List<HandAction>()
                                     {
-                                        new HandAction("MrC0ld", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
-                                        new HandAction("1715097", HandActionType.BIG_BLIND, 0.5m, Street.Preflop),
-                                        new HandAction("MrSmartMoney", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("WOCKAFLOCKAJOPPA", HandActionType.RAISE, 1.75m, Street.Preflop),
-                                        new HandAction("elcapacapa", HandActionType.CALL, 1.75m, Street.Preflop),
-                                        new HandAction("Straddles", HandActionType.RAISE, 7.75m, Street.Preflop),
-                                        new HandAction("MrC0ld", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("1715097", HandActionType.CALL, 7.25m, Street.Preflop),                                      
-                                        new HandAction("WOCKAFLOCKAJOPPA", HandActionType.CALL, 6m, Street.Preflop),
-                                        new HandAction("elcapacapa", HandActionType.CALL, 6m, Street.Preflop),
+                                        new HandAction("bf324846", HandActionType.SMALL_BLIND, 0.05m, Street.Preflop),
+                                        new HandAction("SSfullHH", HandActionType.BIG_BLIND, 0.10m, Street.Preflop),
+                                        new HandAction("bf324846", HandActionType.RAISE, 0.25m, Street.Preflop),
+                                        new HandAction("SSfullHH", HandActionType.RAISE, 0.4m, Street.Preflop),
+                                        new HandAction("bf324846", HandActionType.CALL, 0.2m, Street.Preflop),
 
-                                        new HandAction("1715097", HandActionType.BET, 15.62m, Street.Flop),                                      
-                                        new HandAction("WOCKAFLOCKAJOPPA", HandActionType.FOLD, 0m, Street.Flop),
-                                        new HandAction("elcapacapa", HandActionType.FOLD, 0m, Street.Flop),
-                                        new AllInAction("Straddles", 44.68m, Street.Flop, true),
-                                        new AllInAction("1715097", 19.94m, Street.Flop, false),
+                                        new HandAction("SSfullHH", HandActionType.CHECK, 0m, Street.Flop),
+                                        new HandAction("bf324846", HandActionType.BET, 0.7m, Street.Flop),
+                                        new HandAction("SSfullHH", HandActionType.CALL, 0.7m, Street.Flop),
+                                      
+                                        new HandAction("SSfullHH", HandActionType.BET, 2.40m, Street.Turn),
+                                        new HandAction("bf324846", HandActionType.CALL, 2.40m, Street.Turn),
 
-                                        new HandAction("Straddles", HandActionType.SHOW, 0, Street.Showdown),
-                                        new HandAction("1715097", HandActionType.SHOW, 0, Street.Showdown),
-                                        new WinningsAction("Straddles", HandActionType.WINS, 9.12m, 0),
-                                        new WinningsAction("1715097", HandActionType.WINS, 99.37m, 0),
+                                        new AllInAction("SSfullHH", 1.37m, Street.River,true),     
+                                        new HandAction("bf324846", HandActionType.CALL, 1.37m, Street.River), 
+
+                                        new HandAction("bf324846", HandActionType.SHOW, 0, Street.Showdown),
+                                        new HandAction("SSfullHH", HandActionType.SHOW, 0, Street.Showdown),
+
+                                        new WinningsAction("bf324846", HandActionType.WINS, 9.28m, 0)
                                     };
 
             TestParseActions("AllInHandWithShowdown2", expectedActions);
         }
 
-        [Test]
-        public void PlayerParse_Works()
-        {
-            List<HandAction> expectedActions = new List<HandAction>()
-                                    {
-                                        new HandAction("klunkepose", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
-                                        new HandAction("zh100", HandActionType.BIG_BLIND, 1m, Street.Preflop),
-                                        new HandAction("klunkepose", HandActionType.RAISE, 2m - 0.5m, Street.Preflop),
-                                        new HandAction("zh100", HandActionType.CALL, 1m, Street.Preflop),
-
-                                        new HandAction("zh100", HandActionType.BET, 4m, Street.Flop),                                      
-                                        new HandAction("klunkepose", HandActionType.RAISE, 16m, Street.Flop),
-                                        new HandAction("zh100", HandActionType.RAISE, 52m - 4m, Street.Flop),
-                                        new AllInAction("klunkepose", 39.12m, Street.Flop, false),
-                                        new HandAction("zh100", HandActionType.CALL, 3.12m, Street.Flop),
-
-                                        new HandAction("zh100", HandActionType.SHOW, 0, Street.Showdown),
-                                        new HandAction("klunkepose", HandActionType.SHOW, 0, Street.Showdown),
-                                        new WinningsAction("klunkepose", HandActionType.WINS, 113.24m, 0),
-                                    };
-
-            TestParseActions("PlayerParseError", expectedActions);
-        }
-
-        [Test]
-        public void NeedTwoHoleCardsError_Fixed()
-        {
-            List<HandAction> expectedActions = new List<HandAction>()
-                                    {
-                                        new HandAction("leokadia19", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
-                                        new HandAction("carpediem424", HandActionType.BIG_BLIND, 10m, Street.Preflop),
-                                        new HandAction("numbersnletters", HandActionType.SITTING_OUT, 0m, Street.Preflop),
-                                        new HandAction("PAYNLES", HandActionType.RAISE, 20m, Street.Preflop),                                      
-                                        new HandAction("leokadia19", HandActionType.RAISE, 80m - 5m, Street.Preflop),
-                                        new AllInAction("carpediem424", 256m - 10m, Street.Preflop, true),
-                                        new HandAction("PAYNLES", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("leokadia19", HandActionType.CALL, 176m, Street.Preflop),
-                                        new HandAction("carpediem424", HandActionType.SHOW, 0, Street.Showdown),
-                                        new HandAction("leokadia19", HandActionType.SHOW, 0, Street.Showdown),
-                                        new WinningsAction("carpediem424", HandActionType.WINS, 530m, 0),
-                                    };
-
-            TestParseActions("NeedTwoHoleCardsError", expectedActions);
-        }
+        
 
         [Test]
         [Ignore("Issues with local dev environment running tests - this should work but can't verify and don't want to break builds.")]

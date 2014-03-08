@@ -1,42 +1,39 @@
-﻿PokerStars Hand #78495565240:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/07 16:46:13 ET
-Table 'Abanderada III' 6-max Seat #5 is the button
-Seat 1: niletamei ($6.24 in chips) 
-Seat 2: RECHUK ($27.01 in chips) 
-Seat 3: Fjell_konge ($17.80 in chips) 
-Seat 4: Piotr280688 ($24.44 in chips) 
-Seat 5: MS13ZEN ($16 in chips) 
-niletamei: posts small blind $0.08
-RECHUK: posts big blind $0.16
+﻿PokerStars Game #109688230087:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 10:23:24 ET
+Table 'Skat III 100-250 bb, Ante' 6-max Seat #3 is the button
+Seat 2: Captain2323 ($15 in chips) 
+Seat 3: matze1987 ($12.26 in chips) 
+Seat 4: numbush ($38.74 in chips) 
+Seat 5: DonKingKong ($21.06 in chips) 
+Seat 6: Gaben13 ($10.21 in chips) 
+numbush: posts small blind $0.05
+DonKingKong: posts big blind $0.10
+Captain2323: posts the ante $0.02
+matze1987: posts the ante $0.02
+numbush: posts the ante $0.02
+DonKingKong: posts the ante $0.02
+Gaben13: posts the ante $0.02
 *** HOLE CARDS ***
-Fjell_konge: raises $0.32 to $0.48
-Piotr280688: folds 
-MS13ZEN: folds 
-niletamei: folds 
-RECHUK: calls $0.32
-*** FLOP *** [3h Qd As]
-RECHUK: checks 
-Fjell_konge: bets $0.48
-RECHUK: raises $0.97 to $1.45
-Fjell_konge: raises $2.87 to $4.32
-MS13ZEN leaves the table
-RECHUK: calls $2.87
-*** TURN *** [3h Qd As] [Ad]
-RECHUK: checks 
-zeranex88 joins the table at seat #5 
-Fjell_konge: bets $5.44
-RECHUK: raises $16.77 to $22.21 and is all-in
-Fjell_konge: calls $7.56 and is all-in
-Uncalled bet ($9.21) returned to RECHUK
-*** RIVER *** [3h Qd As Ad] [5c]
+Gaben13: folds 
+Captain2323: folds 
+matze1987: raises $0.20 to $0.30
+numbush: raises $1 to $1.30
+DonKingKong: folds 
+matze1987: calls $1
+*** FLOP *** [5c 4c 4h]
+numbush: bets $2
+matze1987: raises $8.94 to $10.94 and is all-in
+numbush: calls $8.94
+*** TURN *** [5c 4c 4h] [Qs]
+*** RIVER *** [5c 4c 4h Qs] [Kc]
 *** SHOW DOWN ***
-RECHUK: shows [Ac Qh] (a full house, Aces full of Queens)
-Fjell_konge: mucks hand 
-RECHUK collected $34.18 from pot
+numbush: shows [Ah Ks] (two pair, Kings and Fours)
+matze1987: shows [8h 8c] (two pair, Eights and Fours)
+numbush collected $23.57 from pot
 *** SUMMARY ***
-Total pot $35.68 | Rake $1.50 
-Board [3h Qd As Ad 5c]
-Seat 1: niletamei (small blind) folded before Flop
-Seat 2: RECHUK (big blind) showed [Ac Qh] and won ($34.18) with a full house, Aces full of Queens
-Seat 3: Fjell_konge mucked
-Seat 4: Piotr280688 folded before Flop (didn't bet)
-Seat 5: MS13ZEN (button) folded before Flop (didn't bet)
+Total pot $24.68 | Rake $1.11 
+Board [5c 4c 4h Qs Kc]
+Seat 2: Captain2323 folded before Flop (didn't bet)
+Seat 3: matze1987 (button) showed [8h 8c] and lost with two pair, Eights and Fours
+Seat 4: numbush (small blind) showed [Ah Ks] and won ($23.57) with two pair, Kings and Fours
+Seat 5: DonKingKong (big blind) folded before Flop
+Seat 6: Gaben13 folded before Flop (didn't bet)

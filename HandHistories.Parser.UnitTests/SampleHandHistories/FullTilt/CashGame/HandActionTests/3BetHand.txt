@@ -1,38 +1,22 @@
-﻿***** Hand History for Game 10164280429 *****
-$1,000 USD NL Texas Hold'em - Saturday, February 19, 04:41:58 EST 2011
-Table Table  178744 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 6/6 
-Seat 3: BRNS16 ( $1,056.18 USD )
-Seat 4: DoNDeRei ( $1,846.75 USD )
-Seat 6: ElvisViking ( $1,654.25 USD )
-Seat 2: HPS1964 ( $1,239.57 USD )
-Seat 1: Zl0iman ( $458 USD )
-Seat 5: poker446822 ( $530 USD )
-ElvisViking posts small blind [$5 USD].
-Zl0iman posts big blind [$10 USD].
-** Dealing down cards **
-HPS1964 raises [$20 USD]
-BRNS16 folds
-DoNDeRei folds
-poker446822 folds
-ElvisViking calls [$15 USD]
-Zl0iman raises [$60 USD]
-HPS1964 calls [$50 USD]
-ElvisViking calls [$50 USD]
-** Dealing Flop ** [ Tc, 6s, Th ]
-ElvisViking checks
-Zl0iman checks
-HPS1964 bets [$103.50 USD]
-ElvisViking raises [$207 USD]
-Zl0iman folds
-HPS1964 calls [$103.50 USD]
-** Dealing Turn ** [ Js ]
-ElvisViking checks
-HPS1964 checks
-** Dealing River ** [ 6h ]
-ElvisViking checks
-HPS1964 checks
-ElvisViking shows [ 3d, 3c ]two pairs, Tens and Sixes.
-HPS1964 shows [ Ah, 4h ]two pairs, Tens and Sixes with Ace kicker.
-HPS1964 wins $621 USD from the main pot with two pairs, Tens and Sixes with Ace kicker.
+﻿Full Tilt Poker Game #33730060070: Table Iowa (heads up) - NL Hold'em - $5/$10 - 12:28:01 ET - 2014/01/06
+Seat 1: jobetzu ($1,020)
+Seat 2: theking881 ($1,151.70)
+jobetzu posts the small blind of $5
+theking881 posts the big blind of $10
+The button is in seat #1
+*** HOLE CARDS ***
+jobetzu raises to $20
+theking881 raises to $50
+jobetzu calls $30
+*** FLOP *** [Qc 2s 7h] (Total Pot: $100, 2 Players)
+theking881 bets $30
+jobetzu folds
+jobetzu adds $30
+Uncalled bet of $30 returned to theking881
+theking881 mucks
+theking881 wins the pot ($99.50)
+*** SUMMARY ***
+Total pot $100 | Rake $0.50
+Board: [Qc 2s 7h]
+Seat 1: jobetzu (small blind) folded on the Flop
+Seat 2: theking881 (big blind) collected ($99.50), mucked

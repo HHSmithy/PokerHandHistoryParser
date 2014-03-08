@@ -1,6 +1,12 @@
-﻿Full Tilt Poker Game #31574202721: Table Earl (heads up) - $0.50/$1 - No Limit Hold'em - 23:06:53 ET - 2012/12/02
+﻿Full Tilt Poker Game #33730308005: Table Bosco - NL Hold'em - $0.50/$1 - 13:27:08 ET - 2014/01/06
 *** SUMMARY ***
-Total pot $8 | Rake $0.40
-Board: [4h 3d Qs 4s Ts]
-Seat 1: JeanRoberts (small blind) showed [Js 3c] and won ($3.80) with two pair, Fours and Threes
-Seat 2: DjSoft (big blind) showed [Jh 3h] and won ($3.80) with two pair, Fours and Threes
+Total pot $2.50 | Rake $0
+Seat 1: DoceBee collected ($2.50)
+Seat 2: Kukus V didn't bet (folded)
+Seat 3: Daiv200 didn't bet (folded)
+Seat 4: max_polonez didn't bet (folded)
+Seat 5: Palkan93 (button) didn't bet (folded)
+Seat 6: insomnieux is sitting out
+Seat 7: GM604 (small blind) folded before the Flop
+Seat 8: 2emjay3 (big blind) folded before the Flop
+Seat 9: antonovd is sitting out

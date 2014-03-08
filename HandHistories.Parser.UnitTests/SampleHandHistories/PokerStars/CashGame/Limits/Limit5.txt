@@ -1,27 +1,33 @@
-﻿PokerStars Hand #78456396653:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/04/06 22:51:18 ET
-Table 'Clavel II' 6-max Seat #6 is the button
-Seat 3: mypokerf ($750 in chips) 
-Seat 6: nanonoko ($1259 in chips) 
-nanonoko: posts small blind $10
-mypokerf: posts big blind $20
+﻿PokerStars Game #109675960819:  Hold'em No Limit ($200/$400 USD) - 2014/01/06 3:50:59 ET
+Table 'Figneria IV 100-250 bb' 6-max Seat #3 is the button
+Seat 3: fish2013 ($40000 in chips) 
+Seat 4: LhhmMaoly ($40000 in chips) 
+Seat 5: forhayley ($41111 in chips) 
+Seat 6: Lottenice ($40000 in chips) 
+LhhmMaoly: posts small blind $200
+Ben86 joins the table at seat #1 
+forhayley: posts big blind $400
 *** HOLE CARDS ***
-nanonoko: raises $20 to $40
-mypokerf: calls $20
-*** FLOP *** [Ts 2c 7c]
-mypokerf: checks 
-nanonoko: checks 
-*** TURN *** [Ts 2c 7c] [9c]
-mypokerf: checks 
-nanonoko: checks 
-*** RIVER *** [Ts 2c 7c 9c] [9s]
-mypokerf: checks 
-nanonoko: checks 
+Lottenice: folds 
+fish2013: folds 
+LhhmMaoly: raises $800 to $1200
+forhayley: raises $3200 to $4400
+LhhmMaoly: raises $9200 to $13600
+forhayley: raises $27511 to $41111 and is all-in
+LhhmMaoly: calls $26400 and is all-in
+Uncalled bet ($1111) returned to forhayley
+*** FLOP *** [Jc Qs Ac]
+*** TURN *** [Jc Qs Ac] [5d]
+*** RIVER *** [Jc Qs Ac 5d] [8h]
 *** SHOW DOWN ***
-mypokerf: shows [Qh 8d] (a pair of Nines)
-nanonoko: shows [6s Ad] (a pair of Nines - Ace kicker)
-nanonoko collected $79.50 from pot
+LhhmMaoly: shows [Qd As] (two pair, Aces and Queens)
+forhayley: mucks hand 
+w00ki3z. joins the table at seat #2 
+LhhmMaoly collected $79995 from pot
 *** SUMMARY ***
-Total pot $80 | Rake $0.50 
-Board [Ts 2c 7c 9c 9s]
-Seat 3: mypokerf (big blind) showed [Qh 8d] and lost with a pair of Nines
-Seat 6: nanonoko (button) (small blind) showed [6s Ad] and won ($79.50) with a pair of Nines
+Total pot $80000 | Rake $5 
+Board [Jc Qs Ac 5d 8h]
+Seat 3: fish2013 (button) folded before Flop (didn't bet)
+Seat 4: LhhmMaoly (small blind) showed [Qd As] and won ($79995) with two pair, Aces and Queens
+Seat 5: forhayley (big blind) mucked
+Seat 6: Lottenice folded before Flop (didn't bet)

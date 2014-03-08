@@ -1,31 +1,26 @@
-﻿***** Hand History for Game 11614156332 *****
-$200 USD NL Texas Hold'em - Tuesday, April 03, 02:59:57 EDT 2012
-Table Speed #2355417 (No DP) (Real Money)
-Seat 6 is the button
+﻿***** Hand History for Game 13550345166 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 04:45:00 EST 2014
+Table Arkhangelsk (Real Money)
+Seat 3 is the button
 Total number of players : 5/6 
-Seat 2: CamillaToft ( $193 USD )
-Seat 6: Il0veCash ( $299.24 USD )
-Seat 4: Mlobb ( $165.26 USD )
-Seat 1: lonelykitty ( $59.85 USD )
-Seat 3: maltekbh ( $242.25 USD )
-lonelykitty posts small blind [$1 USD].
-CamillaToft posts big blind [$2 USD].
+Seat 5: Amad1971 ( $4.90 USD )
+Seat 2: Kimy1 ( $10.22 USD )
+Seat 4: SandCylinder ( $10 USD )
+Seat 3: mackini1987 ( $9.50 USD )
+Seat 1: mm1964 ( $10.50 USD )
+SandCylinder posts small blind [$0.05 USD].
+Amad1971 posts big blind [$0.10 USD].
 ** Dealing down cards **
-A_N_D_R_O_I_D has joined the table.
-maltekbh did not respond in time
-maltekbh folds
-Mlobb raises [$4 USD]
-Il0veCash will be using his time bank for this hand.
-Il0veCash folds
-lonelykitty folds
-CamillaToft calls [$2 USD]
+mm1964 folds
+Kimy1 folds
+mackini1987 calls [$0.10 USD]
+SandCylinder folds
+Amad1971 checks
 ** Dealing Flop ** [ Kc, Ah, 7c ]
-CamillaToft checks
-Mlobb bets [$2 USD]
-CamillaToft calls [$2 USD]
+Amad1971 bets [$0.10 USD]
+mackini1987 calls [$0.10 USD]
 ** Dealing Turn ** [ 3d ]
-CamillaToft checks
-Mlobb bets [$2 USD]
-CamillaToft folds
-Mlobb does not show cards.
-Mlobb wins $14.35 USD
+Amad1971 bets [$0.20 USD]
+mackini1987 folds
+Amad1971 does not show cards.
+Amad1971 wins $0.63 USD

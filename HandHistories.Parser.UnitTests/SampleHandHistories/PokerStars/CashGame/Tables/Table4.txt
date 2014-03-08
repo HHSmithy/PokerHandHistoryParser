@@ -1,33 +1,14 @@
-﻿PokerStars Hand #78457374541:  Omaha Hi/Lo Pot Limit ($0.50/$1.00 USD) - 2012/04/06 23:35:46 ET
-Table 'Centaurus VIII' 6-max Seat #2 is the button
-Seat 1: funkyOne81 ($165.67 in chips) 
-Seat 2: KovácsKornél ($90.50 in chips) 
-Seat 3: Kartes_Cl ($56.66 in chips) 
-Seat 6: brutalizer20 ($52.73 in chips) 
-Kartes_Cl: posts small blind $0.50
-Eich1000: is sitting out 
-brutalizer20: posts big blind $1
+﻿PokerStars Game #109707358395:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 16:10:11 ET
+Table 'Kythera III 40-100 bb' 2-max Seat #2 is the button
+Seat 1: NikolayBibov ($175.97 in chips) 
+Seat 2: JordanPAA ($129.43 in chips) 
+JordanPAA: posts small blind $0.50
+NikolayBibov: posts big blind $1
 *** HOLE CARDS ***
-talisain51 leaves the table
-funkyOne81: raises $1.50 to $2.50
-KovácsKornél: folds 
-Kartes_Cl: folds 
-brutalizer20: calls $1.50
-*** FLOP *** [Td 8h 3c]
-Eich1000 leaves the table
-brutalizer20: checks 
-Cinderoga joins the table at seat #5 
-funkyOne81: checks 
-*** TURN *** [Td 8h 3c] [4d]
-brutalizer20: checks 
-funkyOne81: bets $5.25
-brutalizer20: folds 
-Uncalled bet ($5.25) returned to funkyOne81
-funkyOne81 collected $5.25 from pot
+JordanPAA: folds 
+Uncalled bet ($0.50) returned to NikolayBibov
+NikolayBibov collected $1 from pot
 *** SUMMARY ***
-Total pot $5.50 | Rake $0.25 
-Board [Td 8h 3c 4d]
-Seat 1: funkyOne81 collected ($5.25)
-Seat 2: KovácsKornél (button) folded before Flop (didn't bet)
-Seat 3: Kartes_Cl (small blind) folded before Flop
-Seat 6: brutalizer20 (big blind) folded on the Turn
+Total pot $1 | Rake $0 
+Seat 1: NikolayBibov (big blind) collected ($1)
+Seat 2: JordanPAA (button) (small blind) folded before Flop

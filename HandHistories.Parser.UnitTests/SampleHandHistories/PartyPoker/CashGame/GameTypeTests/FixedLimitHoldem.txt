@@ -1,31 +1,27 @@
-﻿***** Hand History for Game 11609494397 *****
-$10/$20 USD FL Texas Hold'em - Sunday, April 01, 15:30:25 EDT 2012
-Table Table  130467 (Real Money)
-Seat 1 is the button
-Total number of players : 5/10 
-Seat 3: Bakchich ( $266 USD )
-Seat 4: Rocketphant ( $182 USD )
-Seat 2: Urajerk123 ( $373 USD )
-Seat 1: allenb1 ( $960 USD )
-Seat 5: tomte_999 ( $611 USD )
-Urajerk123 posts small blind [$5 USD].
-Rocketphant posts big blind [$10 USD].
+﻿***** Hand History for Game 13549974403 *****
+$0.05/$0.10 USD FL Texas Hold'em - Sunday, January 05, 19:48:45 EST 2014
+Table Rio (Real Money)
+Seat 3 is the button
+Total number of players : 7/10 
+Seat 10: aisberg_2013 ( $1.44 USD )
+Seat 1: dam81 ( $4.58 USD )
+Seat 6: jaygeew ( $2.45 USD )
+Seat 8: kachanow ( $1.01 USD )
+Seat 4: miccetta1 ( $2.50 USD )
+Seat 3: transkybeat ( $2.30 USD )
+Seat 2: xtracktor ( $1.26 USD )
+jaygeew posts small blind [$0.02 USD].
+kachanow posts big blind [$0.05 USD].
 ** Dealing down cards **
-tomte_999 folds
-allenb1 raises [$20 USD]
-Urajerk123 raises [$25 USD]
-Rocketphant folds
-allenb1 calls [$10 USD]
-** Dealing Flop ** [ Tc, 9d, 5c ]
-Urajerk123 bets [$10 USD]
-allenb1 calls [$10 USD]
-** Dealing Turn ** [ 2s ]
-Urajerk123 bets [$20 USD]
-allenb1 calls [$20 USD]
-** Dealing River ** [ Ad ]
-Urajerk123 bets [$20 USD]
-allenb1 raises [$40 USD]
-Urajerk123 calls [$20 USD]
-allenb1 shows [ Ac, Qs ]a pair of Aces.
-Urajerk123 doesn't show [ Jh, Ts ]a pair of Tens.
-allenb1 wins $208 USD from the main pot with a pair of Aces.
+aisberg_2013 calls [$0.05 USD]
+dam81 folds
+xtracktor folds
+transkybeat folds
+jaygeew folds
+kachanow checks
+** Dealing Flop ** [ Jc, 4h, 6s ]
+kachanow checks
+aisberg_2013 bets [$0.05 USD]
+kachanow folds
+aisberg_2013 does not show cards.
+aisberg_2013 wins $0.17 USD

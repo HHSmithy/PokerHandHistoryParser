@@ -1,19 +1,25 @@
-﻿PokerStars Hand #78822200715:  Hold'em No Limit ($10/$20 USD) - 2012/04/13 18:51:46 ET
-Table 'Proserpina III' 2-max Seat #2 is the button
-Seat 1: brtnboarder ($1813.65 in chips)
-Seat 2: mypokerf ($1038.50 in chips)
-mypokerf: posts small blind $10
-brtnboarder: posts big blind $20
+﻿PokerStars Game #109676258573:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 4:07:34 ET
+Table 'Omicron Capricorni 40-100 bb' 2-max Seat #1 is the button
+Seat 1: idirabotai ($49.15 in chips) 
+Seat 2: jweeke ($104.42 in chips) 
+idirabotai: posts small blind $0.50
+jweeke: posts big blind $1
 *** HOLE CARDS ***
-mypokerf: calls $10
-brtnboarder: raises $80 to $100
-mypokerf: raises $120 to $220
-brtnboarder: raises $1593.65 to $1813.65 and is all-in
-mypokerf: folds
-Uncalled bet ($1593.65) returned to brtnboarder
-brtnboarder collected $440 from pot
-brtnboarder: doesn't show hand
+idirabotai: calls $0.50
+jweeke: raises $2 to $3
+idirabotai: calls $2
+*** FLOP *** [Ah Qs 6h]
+jweeke: bets $4
+idirabotai: calls $4
+*** TURN *** [Ah Qs 6h] [3h]
+jweeke: checks 
+idirabotai: bets $7
+jweeke: folds 
+Uncalled bet ($7) returned to idirabotai
+idirabotai collected $13.50 from pot
+idirabotai: doesn't show hand 
 *** SUMMARY ***
-Total pot $440 | Rake $0
-Seat 1: brtnboarder (big blind) collected ($440)
-Seat 2: mypokerf (button) (small blind) folded before Flop
+Total pot $14 | Rake $0.50 
+Board [Ah Qs 6h 3h]
+Seat 1: idirabotai (button) (small blind) collected ($13.50)
+Seat 2: jweeke (big blind) folded on the Turn

@@ -1,0 +1,20 @@
+﻿Winamax Poker - CashGame - HandId: #5340841-606-1383796241 - Holdem no limit (5€/10€) - 2013/11/07 03:50:41 UTC
+Table: 'Florence 03' 5-max (real money) Seat #2 is the button
+Seat 1: Booobisar (2030.75€)
+Seat 2: LASCONI4 (1010€)
+Seat 3: I_M_ALL_IN (1046.14€)
+Seat 4: justlucky (2723.25€)
+Seat 5: arthurxxx (1238.50€)
+*** ANTE/BLINDS ***
+I_M_ALL_IN posts small blind 5€
+justlucky posts big blind 10€
+*** PRE-FLOP *** 
+arthurxxx folds
+Booobisar folds
+LASCONI4 raises 10€ to 20€
+I_M_ALL_IN folds
+justlucky folds
+LASCONI4 collected 35€ from pot
+*** SUMMARY ***
+Total pot 35€ | No rake
+Seat 2: LASCONI4 (button) won 35€

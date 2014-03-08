@@ -1,0 +1,25 @@
+﻿<Game hhversion="4" id="5049096506" date="2013-09-23 14:32:15" unicodetablename="RgBsAG8AcAAgADEAOQAgAC0AIACsIDQAMAAwACAATQBhAHgA" tablename="Flop 19 - €400 Max" stakes="2|4" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="0">
+   <Seats>
+      <Seat num="1" alias="Crystalised" unicodealias="QwByAHkAcwB0AGEAbABpAHMAZQBkAA==" balance="498.30" endbalance="498.30"/>
+      <Seat num="2" alias="skjoldfz" unicodealias="cwBrAGoAbwBsAGQAZgB6AA==" balance="438.00" endbalance="438.00" dealer="true"/>
+      <Seat num="3" alias="Nnnnn1" unicodealias="TgBuAG4AbgBuADEA" balance="418.00" endbalance="422.00"/>
+      <Seat num="4" alias="kodeyoung" unicodealias="awBvAGQAZQB5AG8AdQBuAGcA" balance="161.92" endbalance="157.90"/>
+      <Seat num="5" alias="ksspara" unicodealias="awBzAHMAcABhAHIAYQA=" balance="439.00" endbalance="439.00"/>
+      <Seat num="6" alias="BubbleGum2" unicodealias="QgB1AGIAYgBsAGUARwB1AG0AMgA=" balance="406.00" endbalance="406.00"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="2.00"/>
+      <Action seq="2" type="BigBlind" seat="4" value="4.00"/>
+      <Action seq="3" type="BadBeatContribution" seat="4" value="0.02"/>
+      <Action seq="4" type="Fold" seat="5"/>
+      <Action seq="5" type="Fold" seat="6"/>
+      <Action seq="6" type="Fold" seat="1"/>
+      <Action seq="7" type="Fold" seat="2"/>
+      <Action seq="8" type="Raise" seat="3" value="10.00"/>
+      <Action seq="9" type="Fold" seat="4"/>
+      <Action seq="10" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="16.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

@@ -1,22 +1,41 @@
-﻿***** Hand History for Game 10164893016 *****
-$1,000 USD NL Texas Hold'em - Saturday, February 19, 09:05:50 EST 2011
-Table Heads Up #1769625 (Real Money)
-Seat 2 is the button
-Total number of players : 2/2 
-Seat 2: Slask17 ( $1,198.95 USD )
-Seat 1: WillmaF1cken ( $3,431.11 USD )
-Slask17 posts small blind [$5 USD].
-WillmaF1cken posts big blind [$10 USD].
+﻿***** Hand History for Game 13549932236 *****
+$0.05/$0.10 USD NL Texas Hold'em - Sunday, January 05, 19:24:07 EST 2014
+Table Aksay (Real Money)
+Seat 5 is the button
+Total number of players : 6/6 
+Seat 2: GrindAA ( $29.58 USD )
+Seat 5: TYRANNOMAN1 ( $8.13 USD )
+Seat 4: dr. spaz ( $10 USD )
+Seat 6: kewen ( $24.77 USD )
+Seat 3: mumija80 ( $11.37 USD )
+Seat 1: xyxyTiltyxyx ( $15.02 USD )
+kewen posts small blind [$0.05 USD].
+xyxyTiltyxyx posts big blind [$0.10 USD].
 ** Dealing down cards **
-Slask17 raises [$20 USD]
-WillmaF1cken raises [$80 USD]
-Slask17 raises [$195 USD]
-WillmaF1cken is all-In  [$3,341.11 USD]
-Slask17 is all-In  [$978.95 USD]
-** Dealing Flop ** [ 7h, 9h, Kh ]
-** Dealing Turn ** [ 4d ]
-** Dealing River ** [ 7d ]
-Slask17 shows [ Jc, Jh ]two pairs, Jacks and Sevens.
-WillmaF1cken shows [ Qc, Qd ]two pairs, Queens and Sevens.
-WillmaF1cken wins $2,232.16 USD from the side pot 1 with two pairs, Queens and Sevens.
-WillmaF1cken wins $2,396.90 USD from the main pot with two pairs, Queens and Sevens.
+GrindAA folds
+mumija80 folds
+dr. spaz raises [$0.30 USD]
+TYRANNOMAN1 calls [$0.30 USD]
+kewen calls [$0.25 USD]
+xyxyTiltyxyx calls [$0.20 USD]
+** Dealing Flop ** [ 8s, 5c, 6h ]
+kewen checks
+xyxyTiltyxyx checks
+dr. spaz bets [$1.10 USD]
+TYRANNOMAN1 calls [$1.10 USD]
+kewen folds
+xyxyTiltyxyx calls [$1.10 USD]
+** Dealing Turn ** [ Ac ]
+xyxyTiltyxyx checks
+dr. spaz bets [$3.70 USD]
+TYRANNOMAN1 calls [$3.70 USD]
+xyxyTiltyxyx calls [$3.70 USD]
+** Dealing River ** [ Tc ]
+xyxyTiltyxyx checks
+dr. spaz is all-In  [$4.90 USD]
+TYRANNOMAN1 is all-In  [$3.03 USD]
+xyxyTiltyxyx folds
+dr. spaz shows [ 8c, 8d ]three of a kind, Eights.
+TYRANNOMAN1 doesn't show [ Jc, Jd ]a pair of Jacks.
+dr. spaz wins $1.87 USD from the side pot 1 with three of a kind, Eights.
+dr. spaz wins $20.66 USD from the main pot with three of a kind, Eights.

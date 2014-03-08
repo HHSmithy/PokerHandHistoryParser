@@ -1,36 +1,33 @@
-﻿#Game No : 358659858
-***** Cassava Hand History for Game 358659858 *****
-$1/$2 Blinds No Limit Holdem - *** 30 05 2012 03:47:44
-Table Ivanovo (Real Money)
-Seat 3 is the button
-Total number of players : 9
-Seat 1: sashque ( $236.21 )
-Seat 2: Spankme4 ( $200 )
-Seat 3: ladygaga87 ( $122.70 )
-Seat 4: IwillfoldNOT ( $301.36 )
-Seat 5: AApocketKK ( $81.49 )
-Seat 6: Russ888 ( $221.30 )
-Seat 7: joeyjoejr ( $377.52 )
-Seat 9: izzyg2 ( $17.75 )
-Seat 10: soncrockett ( $279.76 )
-IwillfoldNOT posts small blind [$1]
-AApocketKK posts big blind [$2]
+#Game No : 349615227
+***** 888poker Hand History for Game 349615227 *****
+$0.05/$0.10 Blinds No Limit Holdem - *** 06 01 2014 08:35:17
+Table Amsterdam 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 7
+Seat 1: HROckabilly ( $10 )
+Seat 4: Mr.Zsombor ( $10 )
+Seat 5: diamondjin ( $8.31 )
+Seat 6: SitOutPliz ( $5 )
+Seat 7: rameez23 ( $9.85 )
+Seat 9: ann1986 ( $7.62 )
+Seat 10: Frankykiller ( $7.09 )
+Frankykiller posts small blind [$0.05]
+HROckabilly posts big blind [$0.10]
 ** Dealing down cards **
-Russ888 raises [$6]
-joeyjoejr folds
-izzyg2 folds
-soncrockett folds
-sashque calls [$6]
-Spankme4 folds
-ladygaga87 folds
-IwillfoldNOT folds
-AApocketKK calls [$4]
-** Dealing flop ** [ Qh, 6s, 2c ]
-AApocketKK checks
-Russ888 checks
-sashque bets [$12]
-AApocketKK folds
-Russ888 folds
+Mr.Zsombor folds
+diamondjin folds
+SitOutPliz folds
+rameez23 folds
+ann1986 folds
+Frankykiller calls [$0.05]
+HROckabilly checks
+** Dealing flop ** [ 7d, Kh, 5h ]
+Frankykiller checks
+HROckabilly bets [$0.10]
+Frankykiller calls [$0.10]
+** Dealing turn ** [ 4d ]
+Frankykiller checks
+HROckabilly bets [$0.30]
+Frankykiller folds
 ** Summary **
-sashque did not show his hand
-sashque collected [ $18.05 ]
+HROckabilly collected [ $0.38 ]

@@ -1,34 +1,14 @@
-﻿PokerStars Hand #78425956005:  Hold'em No Limit ($1/$2 USD) - 2012/04/06 12:06:24 ET
-Table 'Ancha V' 6-max Seat #3 is the button
-Seat 3: theobqaz ($504.20 in chips) 
-Seat 4: TheFullWrap ($187.40 in chips) 
-Seat 5: Akrash0r ($257.04 in chips) 
-TheFullWrap: posts small blind $1
-Akrash0r: posts big blind $2
-theobqaz: posts the ante $0.40
-TheFullWrap: posts the ante $0.40
-Akrash0r: posts the ante $0.40
+﻿PokerStars Game #109706457016:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 15:55:06 ET
+Table 'Alterf II 40-100 bb' 2-max Seat #2 is the button
+Seat 1: Freddekungen ($120.37 in chips) 
+Seat 2: JordanPAA ($76.50 in chips) 
+JordanPAA: posts small blind $0.50
+Freddekungen: posts big blind $1
 *** HOLE CARDS ***
-theobqaz: folds 
-TheFullWrap: calls $1
-Akrash0r: raises $5 to $7
-TheFullWrap: calls $5
-*** FLOP *** [2c Js 8h]
-TheFullWrap: checks 
-MadAgenda joins the table at seat #6 
-726Xd34 joins the table at seat #1 
-Akrash0r: bets $11
-TheFullWrap: calls $11
-*** TURN *** [2c Js 8h] [8d]
-TheFullWrap: checks 
-Akrash0r: bets $26
-TheFullWrap: folds 
-Uncalled bet ($26) returned to Akrash0r
-Akrash0r collected $35.70 from pot
-Akrash0r: doesn't show hand 
+JordanPAA: folds 
+Uncalled bet ($0.50) returned to Freddekungen
+Freddekungen collected $1 from pot
 *** SUMMARY ***
-Total pot $37.20 | Rake $1.50 
-Board [2c Js 8h 8d]
-Seat 3: theobqaz (button) folded before Flop (didn't bet)
-Seat 4: TheFullWrap (small blind) folded on the Turn
-Seat 5: Akrash0r (big blind) collected ($35.70)
+Total pot $1 | Rake $0 
+Seat 1: Freddekungen (big blind) collected ($1)
+Seat 2: JordanPAA (button) (small blind) folded before Flop

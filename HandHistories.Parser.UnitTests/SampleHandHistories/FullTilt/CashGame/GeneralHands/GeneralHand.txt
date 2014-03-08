@@ -1,40 +1,19 @@
-﻿Full Tilt Poker Game #26862429938: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:07:17 ET - 2010/12/31
-Seat 1: CardBluff ($109.65)
-Seat 2: 20KJAY ($40)
-Seat 3: lilslikster ($68.05)
-Seat 4: ljfe ($20)
-Seat 5: Darkking_pt ($80.35)
-silvafox39 posts the small blind of $0.50
-CardBluff posts the big blind of $1
-The button is in seat #5
+﻿Full Tilt Poker Game #33728803548: Table Crane (6 max) - CAP NL Hold'em - $0.05/$0.10 - 05:11:48 ET - 2014/01/06
+Seat 1: acthu ($2.73)
+Seat 2: ferdono ($10)
+Seat 3: gygyndra1 ($6)
+Seat 6: Agent 00nix ($5.01)
+Agent 00nix posts the small blind of $0.05
+acthu posts the big blind of $0.10
+The button is in seat #6
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-20KJAY folds
-lilslikster raises to $2
-ljfe folds
-Darkking_pt has 15 seconds left to act
-Darkking_pt folds
-silvafox39 calls $1.50
-CardBluff calls $1
-*** FLOP *** [3c 6s 5h]
-silvafox39 bets $5
-CardBluff calls $5
-lilslikster folds
-*** TURN *** [3c 6s 5h] [Ac]
-silvafox39 bets $13.45, and is all in
-CardBluff calls $13.45
-silvafox39 shows [9d 8s]
-CardBluff shows [5d 9c]
-*** RIVER *** [3c 6s 5h Ac] [8c]
-silvafox39 shows a pair of Eights
-CardBluff shows a pair of Fives
-silvafox39 wins the pot ($40.80) with a pair of Eights
+Agent 00nix folds
+Uncalled bet of $0.05 returned to acthu
+acthu mucks
+acthu wins the pot ($0.10)
 *** SUMMARY ***
-Total pot $42.90 | Rake $2.10
-Board: [3c 6s 5h Ac 8c]
-Seat 1: CardBluff (big blind) showed [5d 9c] and lost with a pair of Fives
-Seat 2: 20KJAY didn't bet (folded)
-Seat 3: lilslikster folded on the Flop
-Seat 4: ljfe didn't bet (folded)
-Seat 5: Darkking_pt (button) didn't bet (folded)
-Seat 6: silvafox39 (small blind) showed [9d 8s] and won ($40.80) with a pair of Eights
+Total pot $0.10 | Rake $0
+Seat 1: acthu (big blind) collected ($0.10), mucked
+Seat 2: ferdono is sitting out
+Seat 3: gygyndra1 is sitting out
+Seat 6: Agent 00nix (small blind) folded before the Flop

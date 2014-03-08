@@ -1,21 +1,17 @@
-﻿Full Tilt Poker Game #26873508760: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:44:54 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,273.50)
-Seat 2: metior ($2,711.50)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
+﻿Full Tilt Poker Game #33730815165: Table Toss (New to the Game, 6 max) - FL Hold'em - $0.05/$0.10 - 15:17:05 ET - 2014/01/06
+Seat 1: swedbankeris ($0.48)
+Seat 2: Prinzronaldo ($1)
+Seat 4: milesa13 ($1.22)
+milesa13 posts the small blind of $0.02
+swedbankeris posts the big blind of $0.05
+The button is in seat #4
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing raises to $100
-metior calls $50
-*** FLOP *** [Qs 4c Js]
-metior bets $200
-TheHoboKing folds
-Uncalled bet of $200 returned to metior
-metior mucks
-metior wins the pot ($199.50)
+milesa13 folds
+Uncalled bet of $0.03 returned to swedbankeris
+swedbankeris mucks
+swedbankeris wins the pot ($0.04)
 *** SUMMARY ***
-Total pot $200 | Rake $0.50
-Board: [Qs 4c Js]
-Seat 1: TheHoboKing (small blind) folded on the Flop
-Seat 2: metior (big blind) collected ($199.50), mucked
+Total pot $0.04 | Rake $0
+Seat 1: swedbankeris (big blind) collected ($0.04), mucked
+Seat 2: Prinzronaldo is sitting out
+Seat 4: milesa13 (small blind) folded before the Flop

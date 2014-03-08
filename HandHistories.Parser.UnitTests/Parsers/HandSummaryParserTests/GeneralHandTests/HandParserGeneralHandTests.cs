@@ -1,20 +1,23 @@
 ﻿using System;
+using System.Globalization;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralHandTests
 {
-    [TestFixture("PartyPoker", 11614240016l, "4/3/2012 08:24:43", 6, 5, null, null, "GeneralHand")]
-    [TestFixture("PokerStars", 78451486205l, "4/7/2012 06:58:27", 2, 6, 0.59, 13.12, "GeneralHand")]
-    [TestFixture("PokerStars", 84414134468l, "8/7/2012 18:40:01", 1, 6, 0.01, 0.30, "ZoomHand")]
-    [TestFixture("PokerStars", 84437728533l, "8/8/2012 07:56:44", 3, 9, 2.50, 62.63, "SidePot")]
+    [TestFixture("PartyPoker", 13550319286l, "1/6/2014 09:15:12", 3, 9, null, null, "GeneralHand")]
+    [TestFixture("PokerStars", 109681313810l, "1/6/2014 12:21:05", 4, 6, 0.06, 1.27, "GeneralHand")]
+    [TestFixture("PokerStars", 109664415396l, "1/6/2014 00:22:42", 1, 6, 0.00, 2.50, "ZoomHand")]
+    [TestFixture("PokerStars", 109690806574l, "1/6/2014 16:19:47", 5, 6, 1.50, 39.78, "SidePot")]
     [TestFixture("Merge", 533636922070l, "4/17/2012 01:58:48", 8, 9, null, null, "GeneralHand")]
-    [TestFixture("IPoker", 3251939984l, "4/17/2012 19:30:53", 9, 4, null, null, "GeneralHand")]
-    [TestFixture("OnGame", 524409056039l, "5/28/2012 07:08:00", 10, 4, null, null, "GeneralHand")]
-    [TestFixture("Pacific", 176497340, "5/30/2012 14:29:43", 2, 3, null, null, "GeneralHand")]
+    [TestFixture("IPoker", 5383708755l, "1/6/2014 14:44:37", 6, 3, null, null, "GeneralHand")]
+    [TestFixture("OnGame", 5361850810464l, "1/6/2014 00:00:00", 8, 6, null, null, "GeneralHand")]
+    [TestFixture("Pacific", 349736402, "1/6/2014 22:40:28", 9, 2, null, null, "GeneralHand")]
     [TestFixture("Entraction", 2645975604, "5/30/2012 13:49:35", 4, 2, null, null, "GeneralHand")]
-    [TestFixture("FullTilt", 26862429938, "12/31/2010 21:07:17", 5, 5, 2.10, 42.90, "GeneralHand")]  
+    [TestFixture("FullTilt", 33728803548, "1/6/2014 10:11:48", 6, 4, 0.00, 0.10, "GeneralHand")]
+    [TestFixture("MicroGaming", 5049092010, "9/23/2013 14:27:42",4,6, null, null, "GeneralHand")]
+    [TestFixture("Winamax",5281577471, "10/24/2013 03:51:47",2,2, null, null, "GeneralHand")]
     class HandParserGeneralHandTests : HandHistoryParserBaseTests 
     {
         private readonly long _expectedHandId;
@@ -44,8 +47,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             if (expectedPotSize != null) _expectedPotSize = (decimal)expectedPotSize;
 
             try
-            {              
-                _expectedDateTime = DateTime.Parse(expectedDateOfHand);
+            {
+                _expectedDateTime = DateTime.Parse(expectedDateOfHand, new CultureInfo("en-US"));
 
                 _handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, _handFile);
             }

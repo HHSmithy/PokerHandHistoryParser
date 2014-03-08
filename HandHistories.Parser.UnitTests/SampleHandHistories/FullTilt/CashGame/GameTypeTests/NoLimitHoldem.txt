@@ -1,51 +1,30 @@
-﻿Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:09:19 ET - 2010/12/31
-Seat 1: CardBluff ($89.20)
-Seat 2: 20KJAY ($40)
-Seat 3: lilslikster ($63.05)
-Seat 4: ljfe ($20)
-Seat 5: Darkking_pt ($80.35)
-Seat 6: silvafox39 ($44.45)
-20KJAY posts the small blind of $0.50
-lilslikster posts the big blind of $1
-The button is in seat #1
+﻿Full Tilt Poker Game #33728217123: Table Brit (New to the Game) - NL Hold'em - $0.05/$0.10 - 22:56:02 ET - 2014/01/05
+Seat 1: Tvankaat ($7.53)
+Seat 7: bonniebbb9 ($12.61)
+bonniebbb9 posts the small blind of $0.05
+Tvankaat posts the big blind of $0.10
+The button is in seat #7
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-ljfe folds
-Darkking_pt has 15 seconds left to act
-Darkking_pt folds
-silvafox39 has 15 seconds left to act
-silvafox39 calls $1
-20KJAY calls $0.50
-lilslikster checks
-*** FLOP *** [Kd 5s Td]
-20KJAY has 15 seconds left to act
-20KJAY checks
-lilslikster bets $1
-silvafox39 calls $1
-20KJAY has 15 seconds left to act
-20KJAY calls $1
-*** TURN *** [Kd 5s Td] [4c]
-20KJAY has 15 seconds left to act
-20KJAY checks
-lilslikster checks
-silvafox39 checks
-*** RIVER *** [Kd 5s Td 4c] [4s]
-CardBluff has been disconnected
-20KJAY checks
-lilslikster checks
-silvafox39 checks
+bonniebbb9 calls $0.05
+Tvankaat checks
+*** FLOP *** [Tc 6c 6h] (Total Pot: $0.20, 2 Players)
+Tvankaat checks
+bonniebbb9 bets $0.10
+Tvankaat calls $0.10
+*** TURN *** [Tc 6c 6h] [8c] (Total Pot: $0.40, 2 Players)
+Tvankaat checks
+bonniebbb9 bets $0.10
+Tvankaat calls $0.10
+*** RIVER *** [Tc 6c 6h 8c] [Kc] (Total Pot: $0.60, 2 Players)
+Tvankaat checks
+bonniebbb9 bets $1.20
+Tvankaat calls $1.20
 *** SHOW DOWN ***
-lilslikster shows [2c Jh] a pair of Fours
-silvafox39 shows [Ad 7h] a pair of Fours
-20KJAY shows [Ts 3s] two pair, Tens and Fours
-CardBluff has reconnected
-20KJAY wins the pot ($5.70) with two pair, Tens and Fours
+bonniebbb9 shows [9c Jd] a flush, King high
+Tvankaat mucks
+bonniebbb9 wins the pot ($2.85) with a flush, King high
 *** SUMMARY ***
-Total pot $6 | Rake $0.30
-Board: [Kd 5s Td 4c 4s]
-Seat 1: CardBluff (button) is sitting out
-Seat 2: 20KJAY (small blind) showed [Ts 3s] and won ($5.70) with two pair, Tens and Fours
-Seat 3: lilslikster (big blind) showed [2c Jh] and lost with a pair of Fours
-Seat 4: ljfe didn't bet (folded)
-Seat 5: Darkking_pt didn't bet (folded)
-Seat 6: silvafox39 showed [Ad 7h] and lost with a pair of Fours
+Total pot $3 | Rake $0.15
+Board: [Tc 6c 6h 8c Kc]
+Seat 1: Tvankaat (big blind) mucked
+Seat 7: bonniebbb9 (small blind) collected ($2.85)

@@ -1,28 +1,34 @@
-﻿***** Hand History for Game 11614215445 *****
-$1,000 USD PL Omaha - Tuesday, April 03, 04:02:54 EDT 2012
-Table Table  135451 (No DP) (Real Money)
+﻿#Game No : 280176450
+***** 888poker Hand History for Game 280176450 *****
+$0.50/$1 Blinds Pot Limit Omaha - *** 06 01 2014 21:28:15
+Table Coruna 6 Max (Real Money)
 Seat 2 is the button
-Total number of players : 6/6 
-Seat 2: Call_911 ( $2,186.72 USD )
-Seat 5: TightRaiseR123 ( $1,888.64 USD )
-Seat 6: donkeykong58 ( $708.75 USD )
-Seat 3: kondilon ( $1,000 USD )
-Seat 1: m3str3n0va ( $1,372.39 USD )
-kondilon posts small blind [$5 USD].
-TightRaiseR123 posts big blind [$10 USD].
+Total number of players : 6
+Seat 1: v0rtexx ( $100 )
+Seat 2: AndyGlaeser ( $121.13 )
+Seat 4: 777set ( $74.99 )
+Seat 6: Silbercherry ( $117 )
+Seat 7: T.R.N ( $83.49 )
+Seat 9: borkot091 ( $100 )
+777set posts small blind [$0.50]
+Silbercherry posts big blind [$1]
 ** Dealing down cards **
-donkeykong58 raises [$35 USD]
-m3str3n0va folds
-Call_911 folds
-kondilon raises [$110 USD]
-TightRaiseR123 folds
-donkeykong58 raises [$320 USD]
-kondilon is all-In  [$885 USD]
-donkeykong58 is all-In  [$353.75 USD]
-** Dealing Flop ** [ Qs, 8s, 9c ]
-** Dealing Turn ** [ Jc ]
-** Dealing River ** [ 7c ]
-donkeykong58 shows [ Kh, Qd, Qh, Kd ]three of a kind, Queens.
-kondilon shows [ 3d, 3h, Ac, Ah ]a pair of Aces.
-kondilon wins $291.25 USD from the side pot 1 with a pair of Aces.
-donkeykong58 wins $1,424.50 USD from the main pot with three of a kind, Queens.
+T.R.N folds
+borkot091 folds
+v0rtexx folds
+AndyGlaeser raises [$3.50]
+777set calls [$3]
+Silbercherry folds
+** Dealing flop ** [ 6s, Qd, Jc ]
+777set checks
+AndyGlaeser checks
+** Dealing turn ** [ Kd ]
+777set bets [$5]
+AndyGlaeser calls [$5]
+** Dealing river ** [ Js ]
+777set bets [$12]
+AndyGlaeser calls [$12]
+** Summary **
+777set shows [ Kc, 3c, 7h, Ks ]
+AndyGlaeser mucks [ 8h, Qh, Ts, 9h ]
+777set collected [ $39.90 ]

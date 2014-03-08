@@ -1,0 +1,55 @@
+﻿<Game hhversion="4" id="5049160112" date="2013-09-23 15:38:37" unicodetablename="TQBpAGMAcgBvACAASABJAEwATwAgADcAIAAtACAArCAyACAATQBhAHgA" tablename="Micro HILO 7 - €2 Max" stakes="0.01|0.02" betlimit="PL" tabletype="Cash Game" gametypeid="51" gametype="Omaha H/L" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="4" tablesize="6" badbeat="false" rake="10">
+   <Seats>
+      <Seat num="3" alias="makkis__" unicodealias="bQBhAGsAawBpAHMAXwBfAA==" balance="2.25" endbalance="2.23"/>
+      <Seat num="4" alias="tigersue" unicodealias="dABpAGcAZQByAHMAdQBlAA==" balance="2.23" endbalance="2.21"/>
+      <Seat num="5" alias="theweman" unicodealias="dABoAGUAdwBlAG0AYQBuAA==" balance="3.52" endbalance="3.49" dealer="true"/>
+      <Seat num="6" alias="hoop" unicodealias="aABvAG8AcAA=" balance="1.76" endbalance="1.73"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="6" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="3" value="0.02"/>
+      <Action seq="3" type="Call" seat="4" value="0.02"/>
+      <Action seq="4" type="Call" seat="5" value="0.02"/>
+      <Action seq="5" type="Call" seat="6" value="0.01"/>
+      <Action seq="6" type="Check" seat="3"/>
+      <Action seq="7" type="DealFlop">
+         <Card value="6" suit="s" id="5"/>
+         <Card value="8" suit="s" id="7"/>
+         <Card value="3" suit="c" id="15"/>
+      </Action>
+      <Action seq="8" type="Check" seat="6"/>
+      <Action seq="9" type="Check" seat="3"/>
+      <Action seq="10" type="Check" seat="4"/>
+      <Action seq="11" type="Bet" seat="5" value="0.08"/>
+      <Action seq="12" type="Raise" seat="6" value="0.32"/>
+      <Action seq="13" type="Fold" seat="3"/>
+      <Action seq="14" type="Fold" seat="4"/>
+      <Action seq="15" type="Call" seat="5" value="0.24"/>
+      <Action seq="16" type="DealTurn">
+         <Card value="J" suit="h" id="49"/>
+      </Action>
+      <Action seq="17" type="Bet" seat="6" value="0.72"/>
+      <Action seq="18" type="Call" seat="5" value="0.72"/>
+      <Action seq="19" type="DealRiver">
+         <Card value="J" suit="c" id="23"/>
+      </Action>
+      <Action seq="20" type="AllIn" seat="6" value="0.70"/>
+      <Action seq="21" type="Call" seat="5" value="0.70"/>
+      <Action seq="22" type="ShowCards" seat="5">
+         <Card value="5" suit="h" id="43"/>
+         <Card value="9" suit="s" id="8"/>
+         <Card value="K" suit="s" id="12"/>
+         <Card value="2" suit="s" id="1"/>
+      </Action>
+      <Action seq="23" type="ShowCards" seat="6">
+         <Card value="2" suit="d" id="27"/>
+         <Card value="3" suit="d" id="28"/>
+         <Card value="K" suit="d" id="38"/>
+         <Card value="6" suit="c" id="18"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="5" amount="1.73" pot="0" type="" lowhandwin="1"/>
+         <Seat num="6" amount="1.73" pot="0" type="" lowhandwin="1"/>
+      </Action>
+   </Gameplay>
+</Game>

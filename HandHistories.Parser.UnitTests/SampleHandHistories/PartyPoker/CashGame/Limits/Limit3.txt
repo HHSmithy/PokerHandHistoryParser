@@ -1,38 +1,15 @@
-﻿***** Hand History for Game 11614933899 *****
-$5,000 USD NL Texas Hold'em - Tuesday, April 03, 10:09:49 EDT 2012
-Table Table  202224 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 9/9 
-Seat 5: AngryBird1 ( $10,780 USD )
-Seat 2: CALLCALL ( $5,475 USD )
-Seat 4: KingLouie63 ( $6,421.50 USD )
-Seat 7: Larissam ( $2,245 USD )
-Seat 3: N1TP1CKER ( $5,000 USD )
-Seat 9: Prince_Phlip-it ( $6,173 USD )
-Seat 8: WalterSobchak ( $5,645 USD )
-Seat 6: k0b0ldm4k1 ( $5,120 USD )
-Seat 1: scout315 ( $15,675 USD )
-k0b0ldm4k1 posts small blind [$25 USD].
-Larissam posts big blind [$50 USD].
+﻿***** Hand History for Game 13550323824 *****
+$5/$10 USD FL Texas Hold'em - Monday, January 06, 04:21:09 EST 2014
+Table Jerusalem (Real Money)
+Seat 3 is the button
+Total number of players : 3/6 
+Seat 2: Azrarnq ( $344.50 USD )
+Seat 3: Heissler6 ( $297.19 USD )
+Seat 1: prince263 ( $491.50 USD )
+prince263 posts small blind [$2 USD].
+Azrarnq posts big blind [$5 USD].
 ** Dealing down cards **
-WalterSobchak folds
-Prince_Phlip-it raises [$150 USD]
-scout315 folds
-CALLCALL calls [$150 USD]
-N1TP1CKER folds
-KingLouie63 folds
-AngryBird1 folds
-k0b0ldm4k1 folds
-Larissam will be using his time bank for this hand.
-Larissam folds
-** Dealing Flop ** [ Jc, 5s, 9h ]
-Prince_Phlip-it will be using his time bank for this hand.
-Prince_Phlip-it bets [$250 USD]
-CALLCALL calls [$250 USD]
-** Dealing Turn ** [ 3s ]
-Prince_Phlip-it will be using his time bank for this hand.
-Prince_Phlip-it checks
-CALLCALL bets [$652.50 USD]
-Prince_Phlip-it folds
-CALLCALL does not show cards.
-CALLCALL wins $1,522.50 USD
+Heissler6 folds
+prince263 folds
+Azrarnq does not show cards.
+Azrarnq wins $7 USD

@@ -9,6 +9,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Strings;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
@@ -127,46 +128,79 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
         protected override GameType ParseGameType(string[] handLines)
         {
-            // Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:09:19 ET - 2010/12/31
+            // OLD: Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:09:19 ET - 2010/12/31
+            // NEW: Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - NL Hold'em - $0.50/$1 - 16:09:19 ET - 2010/12/31
 
-            string handLine = handLines[0];
-
-            string gameTypeString = handLine.Split('-')[2];
+            // we add this code in order to make it work for both starting lines
+            string gameTypeString;
+            string[] splitter = handLines[0].Split('-');
+            if (splitter[2].Contains("/"))
+            {
+                gameTypeString = splitter[1];
+            }
+            else
+            {
+                gameTypeString = splitter[2];
+            }
 
             switch (gameTypeString)
             {
+                case " FL Omaha H/L ":
+                case " Limit Omaha H/L ":
+                    return GameType.FixedLimitOmahaHiLo;
+                case " FL Omaha":
+                case " Limit Omaha":
+                    return GameType.FixedLimitOmaha;
+                case " CAP NL Hold'em ":
+                case " Cap No Limit Hold'em":
+                case " NL Hold'em ":
                 case " No Limit Hold'em ":
-                    return GameType.NoLimitHoldem;                
+                    return GameType.NoLimitHoldem;
+                case " Cap PL Omaha Hi ":
+                case " Cap Pot Limit Omaha Hi ":
+                case " PL Omaha Hi ":
                 case " Pot Limit Omaha Hi ":
                     return GameType.PotLimitOmaha;
+                case " Cap Pot Limit Omaha H/L ":
+                case " CAP PL Omaha H/L ":
+                case " PL Omaha H/L ":
+                case " Pot Limit Omaha H/L ":
+                    return GameType.PotLimitOmahaHiLo;
+                case " FL Hold'em ":
                 case " Limit Hold'em ":
                     return GameType.FixedLimitHoldem;
-                case " Cap Pot Limit Omaha Hi ":
-                    return GameType.CapPotLimitOmaha;                
+                case " NL Omaha H/L ":
+                case " No Limit Omaha H/L ":
+                    return GameType.NoLimitOmahaHiLo;               
                 default:
-                    if (gameTypeString.EndsWith("Cap No Limit Hold'em "))
-                    {
-                        return GameType.CapNoLimitHoldem;                        
-                    }
-                    else if (gameTypeString.EndsWith("Cap Pot Limit Omaha Hi "))
-                    {
-                        return GameType.CapPotLimitOmaha;    
-                    }
-                    throw new UnrecognizedGameTypeException(handLine, "Did not recognize.");
+                    throw new UnrecognizedGameTypeException(handLines[0], "Did not recognize.");
             }
         }
 
         protected override TableType ParseTableType(string[] handLines)
         {
-            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+            bool isCap = handLines[0].ToLower().Contains(" cap ");
+
+            return TableType.FromTableTypeDescriptions(isCap ? TableTypeDescription.Cap : TableTypeDescription.Regular);
         }
 
         protected override Limit ParseLimit(string[] handLines)
         {
             // Expect the first line to look like:
-            // Full Tilt Poker Game #28617512574: Table Bri (6 max) - $0.25/$0.50 - $15 Cap No Limit Hold'em - 18:46:08 ET - 2011/02/28
-
-            string limit = handLines[0].Split('-')[1];
+            // OLD: Full Tilt Poker Game #28617512574: Table Bri (6 max) - $0.25/$0.50 - $15 Cap No Limit Hold'em - 18:46:08 ET - 2011/02/28
+            // NEW: Full Tilt Poker Game #28617512574: Table Bri (6 max) - $15 Cap No Limit Hold'em - $0.25/$0.50- 18:46:08 ET - 2011/02/28
+            
+            // we add this code in order to make it work for both starting lines
+            string limit;
+            string[] splitter = handLines[0].Split('-');
+            if(splitter[2].Contains("/"))
+            {
+                limit = splitter[2];
+            }
+            else
+            {
+                limit = splitter[1];
+            }
             string limitSubstring = limit.Trim();
 
             char currencySymbol = limitSubstring[0];
@@ -187,13 +221,18 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
             }
 
+            // we don't care for the ante amount, so just throw it away
+            if (limitSubstring.Contains("Ante"))
+            {
+                limitSubstring = limitSubstring.Split(' ')[0];
+            }
+
             int slashIndex = limitSubstring.IndexOf('/');
 
             decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
             string bigString = limitSubstring.Substring(slashIndex + 2, limitSubstring.Length - slashIndex - 2);
             decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
-            // If it is an ante table we expect to see an ante line after the big blind
             decimal ante = 0;
             bool isAnte = false;
 
@@ -207,7 +246,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
-            // tood: implement
+            // TODO: implement
 
             return new List<HandAction>();
         }
@@ -219,16 +258,18 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             for (int i = 1; i < 12; i++)
             {
                 string handLine = handLines[i];
+                var sittingOut = false;
 
                 if (handLine.StartsWith("Seat ") == false)
                 {
-                    return playerList;
+                    break;
                 }
 
                 if (handLine.EndsWith(")") == false)
                 {
                     // handline is like Seat 6: ffbigfoot ($0.90), is sitting out
                     handLine = handLine.Substring(0, handLine.Length - 16);
+                    sittingOut = true;
                 }
 
                 //Seat 1: CardBluff ($109.65)
@@ -241,10 +282,72 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 string stackSizeString = handLine.Substring(parenIndex + 2, handLine.Length - 1 - parenIndex - 2);
                 decimal amount = decimal.Parse(stackSizeString, System.Globalization.CultureInfo.InvariantCulture);
 
-                playerList.Add(new Player(name, amount, seat));
+                playerList.Add(new Player(name, amount, seat)
+                                   {
+                                       IsSittingOut = sittingOut
+                                   });
 
             }
 
+            // OmahaHiLo has a different way of storing the hands at showdown, so we need to separate
+            bool inCorrectBlock = false;
+            bool isOmahaHiLo = ParseGameType(handLines).Equals(GameType.PotLimitOmahaHiLo);
+            for (int lineNumber = 13; lineNumber < handLines.Length; lineNumber++)
+            {
+                string line = handLines[lineNumber];
+
+                if (line.StartsWith(@"*** SUM") && isOmahaHiLo)
+                {
+                    lineNumber = lineNumber + 2;
+                    inCorrectBlock = true;
+                }
+                else if(line.StartsWith(@"*** SH") && !isOmahaHiLo)
+                {
+                    inCorrectBlock = true;
+                }
+
+                if (inCorrectBlock == false)
+                {
+                    continue;
+                }
+
+                int firstSquareBracket = line.LastIndexOf('[');
+
+                if (firstSquareBracket == -1)
+                {
+                    continue;
+                }
+
+                // can show single cards
+                if (line[firstSquareBracket + 3] == ']')
+                {
+                    continue;
+                }
+
+                int lastSquareBracket = line.LastIndexLoopsBackward(']', line.Length - 1);
+                int colonIndex = line.LastIndexLoopsBackward(':', lastSquareBracket);
+
+                string seat;
+                string playerName;
+                if (isOmahaHiLo)
+                {
+                    seat = line.Substring(5, colonIndex-5);
+                    playerName = playerList.First(p => p.SeatNumber.Equals(Convert.ToInt32(seat))).PlayerName;
+                }
+                else
+                {
+                    int playerNameEndIndex = line.IndexOf(" shows", StringComparison.Ordinal);
+                    if (playerNameEndIndex == -1)
+                        break;
+
+                    playerName = line.Substring(0, playerNameEndIndex);
+                }
+                
+                string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
+
+
+                playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+            }
             return playerList;
         }
 
@@ -298,6 +401,16 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 // Total pot $42.90 | Rake $2.10            
                 if (handLine[0] == 'T')
                 {
+
+                    int lastSpaceIndex = handLine.LastIndexOf(" ", System.StringComparison.Ordinal);
+                    int spaceAfterFirstNumber = handLine.IndexOf(" ", 11, System.StringComparison.Ordinal);
+
+                    handHistorySummary.Rake =
+                        decimal.Parse(handLine.Substring(lastSpaceIndex + 2, handLine.Length - lastSpaceIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
+
+                    handHistorySummary.TotalPot =
+                        decimal.Parse(handLine.Substring(11, spaceAfterFirstNumber - 11), System.Globalization.CultureInfo.InvariantCulture);
+
                     return;
                 }
             }

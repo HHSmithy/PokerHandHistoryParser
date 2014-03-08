@@ -1,38 +1,30 @@
-﻿Full Tilt Poker Game #28617512574: Table Bri (6 max) - $0.25/$0.50 - $15 Cap No Limit Hold'em - 18:46:08 ET - 2011/02/28
-Seat 1: hockenspit50 ($56.15)
-Seat 2: drc40 ($36.60)
-Seat 3: oggie the fox ($10.05)
-Seat 4: diknek ($16.70)
-Seat 5: Naturalblow ($26.25)
-Seat 6: BeerMySole ($26)
-Naturalblow posts the small blind of $0.25
-BeerMySole posts the big blind of $0.50
-The button is in seat #4
+﻿Full Tilt Poker Game #33728113660: Table Link (heads up) - NL Hold'em - $0.50/$1 - 22:09:38 ET - 2014/01/05
+Seat 1: Piri0 ($105.30)
+Seat 2: dimanzhiv26 ($29.20)
+dimanzhiv26 posts the small blind of $0.50
+Piri0 posts the big blind of $1
+The button is in seat #2
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-hockenspit50 folds
-drc40 raises to $1.50
-oggie the fox folds
-diknek calls $1.50
-Naturalblow folds
-BeerMySole folds
-*** FLOP *** [9h Ts 8h]
-drc40 checks
-diknek bets $2
-drc40 calls $2
-*** TURN *** [9h Ts 8h] [6c]
-drc40 checks
-diknek bets $4
-drc40 folds
-Uncalled bet of $4 returned to diknek
-diknek mucks
-diknek wins the pot ($7.40)
+dimanzhiv26 calls $0.50
+Piri0 checks
+*** FLOP *** [7c 9h 8d] (Total Pot: $2, 2 Players)
+Piri0 checks
+dimanzhiv26 checks
+*** TURN *** [7c 9h 8d] [2c] (Total Pot: $2, 2 Players)
+Piri0 has 15 seconds left to act
+Piri0 bets $1.40
+dimanzhiv26 calls $1.40
+*** RIVER *** [7c 9h 8d 2c] [7d] (Total Pot: $4.80, 2 Players)
+Piri0 has 15 seconds left to act
+Piri0 checks
+dimanzhiv26 bets $3
+Piri0 has 15 seconds left to act
+Piri0 folds
+Uncalled bet of $3 returned to dimanzhiv26
+dimanzhiv26 mucks
+dimanzhiv26 wins the pot ($4.60)
 *** SUMMARY ***
-Total pot $7.75 | Rake $0.35
-Board: [9h Ts 8h 6c]
-Seat 1: hockenspit50 didn't bet (folded)
-Seat 2: drc40 folded on the Turn
-Seat 3: oggie the fox didn't bet (folded)
-Seat 4: diknek (button) collected ($7.40), mucked
-Seat 5: Naturalblow (small blind) folded before the Flop
-Seat 6: BeerMySole (big blind) folded before the Flop
+Total pot $4.80 | Rake $0.20
+Board: [7c 9h 8d 2c 7d]
+Seat 1: Piri0 (big blind) folded on the River
+Seat 2: dimanzhiv26 (small blind) collected ($4.60), mucked

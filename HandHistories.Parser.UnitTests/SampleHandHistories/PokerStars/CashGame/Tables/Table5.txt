@@ -1,34 +1,28 @@
-﻿PokerStars Game #PokerStars Zoom Hand #84414134468:  Omaha Pot Limit ($0.05/$0.10 USD) - 2012/08/07 14:40:01 ET
-Table 'Eulalia Zoom 40-100 bb' 6-max Seat #1 is the button
-Seat 1: franzpipo10 ($10.19 in chips) 
-Seat 2: Jani23 ($9.79 in chips) 
-Seat 3: ApexPredator ($9.95 in chips) 
-Seat 4: Nishiwakiii ($12.52 in chips) 
-Seat 5: Evggenij ($2.95 in chips) 
-Seat 6: Vakumas ($5.32 in chips) 
-Jani23: posts small blind $0.05
-ApexPredator: posts big blind $0.10
+﻿PokerStars Game #109682903125:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 8:09:21 ET
+Table 'Klinkenberg Zoom 40-100 bb' 6-max Seat #1 is the button
+Seat 1: Coo1fish ($3.21 in chips) 
+Seat 2: Bluemi72 ($15.75 in chips) 
+Seat 3: STORM221221 ($10.64 in chips) 
+Seat 4: ciuchcik ($10.15 in chips) 
+Seat 5: skylookx ($10 in chips) 
+Seat 6: Parshenix ($20.08 in chips) 
+Bluemi72: posts small blind $0.05
+STORM221221: posts big blind $0.10
 *** HOLE CARDS ***
-Nishiwakiii: folds 
-Evggenij: calls $0.10
-Vakumas: folds 
-franzpipo10: folds 
-Jani23: calls $0.05
-ApexPredator: checks 
-*** FLOP *** [9s 9d 4h]
-Jani23: checks 
-ApexPredator: bets $0.18
-Evggenij: folds 
-Jani23: folds 
-Uncalled bet ($0.18) returned to ApexPredator
-ApexPredator collected $0.29 from pot
-ApexPredator: doesn't show hand 
+ciuchcik: folds 
+skylookx: raises $0.20 to $0.30
+Parshenix: folds 
+Coo1fish: folds 
+Bluemi72: folds 
+STORM221221: folds 
+Uncalled bet ($0.20) returned to skylookx
+skylookx collected $0.25 from pot
+skylookx: doesn't show hand 
 *** SUMMARY ***
-Total pot $0.30 | Rake $0.01 
-Board [9s 9d 4h]
-Seat 1: franzpipo10 (button) folded before Flop (didn't bet)
-Seat 2: Jani23 (small blind) folded on the Flop
-Seat 3: ApexPredator (big blind) collected ($0.29)
-Seat 4: Nishiwakiii folded before Flop (didn't bet)
-Seat 5: Evggenij folded on the Flop
-Seat 6: Vakumas folded before Flop (didn't bet)
+Total pot $0.25 | Rake $0 
+Seat 1: Coo1fish (button) folded before Flop (didn't bet)
+Seat 2: Bluemi72 (small blind) folded before Flop
+Seat 3: STORM221221 (big blind) folded before Flop
+Seat 4: ciuchcik folded before Flop (didn't bet)
+Seat 5: skylookx collected ($0.25)
+Seat 6: Parshenix folded before Flop (didn't bet)

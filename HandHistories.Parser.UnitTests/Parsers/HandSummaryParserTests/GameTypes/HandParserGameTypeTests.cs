@@ -12,6 +12,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
     [TestFixture("Merge")]
     [TestFixture("Entraction")]
     [TestFixture("FullTilt")]
+    [TestFixture("MicroGaming")]
+    [TestFixture("Winamax")]
     class HandParserGameTypeTests : HandHistoryParserBaseTests 
     {
         public HandParserGameTypeTests(string site) : base(site)
@@ -30,6 +32,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         [Test]
         public void ParseGameType_ParsesFixedLimitHoldem()
         {
+            switch (Site)
+            {
+                case SiteName.Winamax:
+                    Assert.Ignore(Site + " currently doesn't have FL example.");
+                    return;
+            }
             TestGameType(GameType.FixedLimitHoldem);
         }
 
@@ -45,7 +53,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             switch (Site)
             {
                 case SiteName.FullTilt:
-                    Assert.Ignore(Site + " currently doesn't have PLO example.");
+                    Assert.Ignore(Site + " currently doesn't have Pot Limit Omaha example.");
                     return;
             }
 
@@ -57,7 +65,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             if (Site != SiteName.Entraction)
             {
-                Assert.Ignore(Site + " currently doesn't have pot limit holdem.");                
+                Assert.Ignore(Site + " currently doesn't have Fixed Limit Omaha HiLo.");                
                 return;
             }
 
@@ -69,11 +77,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.Merge:
 				case SiteName.IPoker:
                 case SiteName.FullTilt:
                 case SiteName.OnGame:
                 case SiteName.Pacific:
+                case SiteName.Winamax:
+                case SiteName.PartyPoker:
                     Assert.Ignore(Site + " currently doesn't have pot limit holdem.");
                     break;
             }
@@ -82,28 +93,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         }
 
         [Test]
-        public void ParseGameType_ParsesCapNoLimitHoldem()
-        {
-            switch (Site)
-            {
-                    case SiteName.IPoker:
-					case SiteName.PartyPoker:
-                    case SiteName.Merge:
-                    case SiteName.OnGame:
-                    case SiteName.Pacific:
-                    case SiteName.Entraction:                    
-                        Assert.Ignore(Site + " currently doesn't have cap games.");
-                        break;
-            }            
-
-            TestGameType(GameType.CapNoLimitHoldem);
-        }
-
-        [Test]
         public void ParseGameType_ParsesNoLimitOmaha()
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.IPoker:
                 case SiteName.PartyPoker:
                 case SiteName.Merge:
@@ -113,7 +107,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.PokerStarsIt:
                 case SiteName.FullTilt:
                 case SiteName.Entraction:
-                    Assert.Ignore(Site + " currently doesn't have cap games.");
+                case SiteName.Winamax:
+                case SiteName.Pacific:
+                    Assert.Ignore(Site + " currently doesn't have No Limit Omaha example.");
                     break;
             }
 
@@ -125,6 +121,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.IPoker:
                 case SiteName.PartyPoker:
                 case SiteName.Merge:
@@ -134,7 +131,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.FullTilt:
                 case SiteName.PokerStarsIt:
                 case SiteName.Entraction:
-                    Assert.Ignore(Site + " currently doesn't have cap games.");
+                case SiteName.Winamax:
+                    Assert.Ignore(Site + " currently doesn't have No Limit Omaha HiLo example.");
                     break;
             }
 
@@ -148,10 +146,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             {
                 case SiteName.Merge:
 				case SiteName.IPoker:
-                case SiteName.Pacific:
                 case SiteName.FullTilt:
                 case SiteName.Entraction:
-                    Assert.Ignore(Site + " currently doesn't have hi-lo.");
+                case SiteName.Winamax:
+                    Assert.Ignore(Site + " currently doesn't have Pot Limit Omaha HiLo example.");
                     break;
             }
 

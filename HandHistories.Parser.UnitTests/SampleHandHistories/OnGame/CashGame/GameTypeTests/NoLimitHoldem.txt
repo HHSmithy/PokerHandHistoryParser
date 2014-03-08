@@ -1,29 +1,20 @@
-﻿***** History for hand R5-243945479-7 *****
-Start hand: Sun May 27 10:27:00 CEST 2012
-Table: [SPEED] Austin [243945479] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
-Button: seat 8
+﻿***** History for hand R5-362012167-85 *****
+Start hand: Mon Jan 06 19:34:00 CET 2014
+Table: [SPEED] Baguio [362012167] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
 Players in round: 2
-Seat 5: klarasbanana ($1279.00) 
-Seat 8: iveyfan89 ($1050.00) 
-iveyfan89 posts small blind ($5)
-klarasbanana posts big blind ($10)
+Seat 3: -ShottaZ- ($64.46) 
+Seat 8: Catchup_ ($146.00) 
+-ShottaZ- posts small blind ($0.50)
+Catchup_ posts big blind ($1)
 ---
 Dealing pocket cards
-iveyfan89 raises $15.00 to $20.00
-klarasbanana calls $10.00
---- Dealing flop [7s, 6s, 8d]
-klarasbanana checks
-iveyfan89 checks
---- Dealing turn [5h]
-klarasbanana checks
-iveyfan89 checks
---- Dealing river [2d]
-klarasbanana checks
-iveyfan89 checks
+-ShottaZ- raises $2.50 to $3.00
+Catchup_ folds
 ---
 Summary:
-Main pot: $40.00 won by iveyfan89 ($39.00)
-Rake taken: $1
-Seat 5: klarasbanana ($1259.00), net: -$20.00, [Jh, Qc]
-Seat 8: iveyfan89 ($1069.00), net: +$19.00, [Kh, 2c]
-***** End of hand R5-243945479-7 *****
+Main pot: $2.00 won by -ShottaZ- ($2.00)
+Rake taken: $0.00
+Seat 3: -ShottaZ- ($65.46), net: +$1.00
+Seat 8: Catchup_ ($145.00), net: -$1.00
+***** End of hand R5-362012167-85 *****

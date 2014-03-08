@@ -1,43 +1,30 @@
-﻿***** Hand History for Game 11614344753 *****
-$200 USD NL Texas Hold'em - Tuesday, April 03, 05:38:13 EDT 2012
-Table Speed #2355417 (No DP) (Real Money)
+﻿***** Hand History for Game 13550345553 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 04:45:27 EST 2014
+Table Arkhangelsk (Real Money)
 Seat 4 is the button
-Total number of players : 6/6 
-Seat 2: BlackKing884 ( $61.95 USD )
-Seat 6: Bretters69 ( $100.85 USD )
-Seat 3: DogEatMeat ( $205 USD )
-Seat 1: FiskC ( $199.19 USD )
-Seat 4: RiverJazz_ ( $200 USD )
-Seat 5: sobrr ( $53.55 USD )
-sobrr posts small blind [$1 USD].
-Bretters69 posts big blind [$2 USD].
+Total number of players : 5/6 
+Seat 5: Amad1971 ( $5.13 USD )
+Seat 2: Kimy1 ( $10.22 USD )
+Seat 4: SandCylinder ( $10 USD )
+Seat 3: mackini1987 ( $9.30 USD )
+Seat 1: mm1964 ( $10.50 USD )
+Amad1971 posts small blind [$0.05 USD].
+mm1964 posts big blind [$0.10 USD].
 ** Dealing down cards **
-FiskC calls [$2 USD]
-BlackKing884 folds
-DogEatMeat folds
-RiverJazz_ will be using his time bank for this hand.
-RiverJazz_ folds
-sobrr will be using his time bank for this hand.
-sobrr calls [$1 USD]
-Bretters69 checks
+Kimy1 folds
+mackini1987 calls [$0.10 USD]
+SandCylinder folds
+Amad1971 folds
+mm1964 checks
 ** Dealing Flop ** [ 5d, Ks, 7c ]
-sobrr will be using his time bank for this hand.
-sobrr checks
-Bretters69 checks
-FiskC checks
+mm1964 checks
+mackini1987 checks
 ** Dealing Turn ** [ Jc ]
-sobrr will be using his time bank for this hand.
-sobrr bets [$2 USD]
-Bretters69 calls [$2 USD]
-FiskC calls [$2 USD]
+mm1964 checks
+mackini1987 checks
 ** Dealing River ** [ 7d ]
-sobrr will be using his time bank for this hand.
-sobrr checks
-Bretters69 bets [$4 USD]
-FiskC folds
-sobrr will be using his time bank for this hand.
-sobrr calls [$4 USD]
-Bretters69 shows [ 2h, Jd ]two pairs, Jacks and Sevens.
-sobrr shows [ Jh, 8h ]two pairs, Jacks and Sevens.
-sobrr wins $9.50 USD from the main pot with two pairs, Jacks and Sevens.
-Bretters69 wins $9.50 USD from the main pot with two pairs, Jacks and Sevens.
+mm1964 checks
+mackini1987 bets [$0.10 USD]
+mm1964 folds
+mackini1987 does not show cards.
+mackini1987 wins $0.34 USD

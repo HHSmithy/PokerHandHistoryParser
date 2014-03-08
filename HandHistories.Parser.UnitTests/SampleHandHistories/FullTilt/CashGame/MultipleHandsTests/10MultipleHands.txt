@@ -1,227 +1,470 @@
-﻿Full Tilt Poker Game #26873473534: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:41:23 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,274.50)
-Seat 2: metior ($2,713.50)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
+﻿Full Tilt Poker Game #33727523266: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:00:42 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($6.05)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.23)
+Seat 5: El Viejo Tico ($3.25)
+Seat 6: Corvus81 ($10)
+Seat 7: tomasjejidas ($11.02)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+El Viejo Tico posts the small blind of $0.05
+Corvus81 posts the big blind of $0.10
+The button is in seat #4
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing folds
-Uncalled bet of $25 returned to metior
-metior mucks
-metior wins the pot ($50)
+tomasjejidas folds
+OMGStoneAiken folds
+BayerVidal folds
+Relaxed86 folds
+ryhmy folds
+Vfab1 raises to $0.20
+El Viejo Tico folds
+Corvus81 has 15 seconds left to act
+Corvus81 folds
+Corvus81 adds $0.10
+Uncalled bet of $0.10 returned to Vfab1
+Vfab1 mucks
+Vfab1 wins the pot ($0.25)
 *** SUMMARY ***
-Total pot $50 | Rake $0
-Seat 1: TheHoboKing (small blind) folded before the Flop
-Seat 2: metior (big blind) collected ($50), mucked
+Total pot $0.25 | Rake $0
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 didn't bet (folded)
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 (button) collected ($0.25), mucked
+Seat 5: El Viejo Tico (small blind) folded before the Flop
+Seat 6: Corvus81 (big blind) folded before the Flop
+Seat 7: tomasjejidas didn't bet (folded)
+Seat 8: 14grant is sitting out
+Seat 9: OMGStoneAiken didn't bet (folded)
 
-Full Tilt Poker Game #26873474741: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:41:31 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,249.50)
-Seat 2: metior ($2,738.50)
-metior posts the small blind of $25
-TheHoboKing posts the big blind of $50
-The button is in seat #2
+
+Full Tilt Poker Game #33727523266: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:00:42 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($6.05)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.23)
+Seat 5: El Viejo Tico ($3.25)
+Seat 6: Corvus81 ($10)
+Seat 7: tomasjejidas ($11.02)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+El Viejo Tico posts the small blind of $0.05
+Corvus81 posts the big blind of $0.10
+The button is in seat #4
 *** HOLE CARDS ***
+tomasjejidas folds
+OMGStoneAiken folds
+BayerVidal folds
+Relaxed86 folds
+ryhmy folds
+Vfab1 raises to $0.20
+El Viejo Tico folds
+Corvus81 has 15 seconds left to act
+Corvus81 folds
+Corvus81 adds $0.10
+Uncalled bet of $0.10 returned to Vfab1
+Vfab1 mucks
+Vfab1 wins the pot ($0.25)
+*** SUMMARY ***
+Total pot $0.25 | Rake $0
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 didn't bet (folded)
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 (button) collected ($0.25), mucked
+Seat 5: El Viejo Tico (small blind) folded before the Flop
+Seat 6: Corvus81 (big blind) folded before the Flop
+Seat 7: tomasjejidas didn't bet (folded)
+Seat 8: 14grant is sitting out
+Seat 9: OMGStoneAiken didn't bet (folded)
+
+
+Full Tilt Poker Game #33727525247: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:01:16 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($6.05)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10)
+Seat 7: tomasjejidas ($11.02)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+Corvus81 posts the small blind of $0.05
+tomasjejidas posts the big blind of $0.10
+The button is in seat #5
 *** HOLE CARDS ***
-metior raises to $100
-TheHoboKing calls $50
-*** FLOP *** [Js Qh 6d]
-TheHoboKing checks
-metior checks
-*** TURN *** [Js Qh 6d] [4d]
-TheHoboKing has 15 seconds left to act
-TheHoboKing bets $50
-metior calls $50
-*** RIVER *** [Js Qh 6d 4d] [Tc]
-TheHoboKing checks
-metior checks
+OMGStoneAiken folds
+BayerVidal folds
+Relaxed86 calls $0.10
+ryhmy folds
+Vfab1 folds
+El Viejo Tico folds
+Corvus81 calls $0.05
+tomasjejidas checks
+*** FLOP *** [8s 4h 2h] (Total Pot: $0.30, 3 Players)
+Corvus81 checks
+tomasjejidas checks
+Relaxed86 checks
+*** TURN *** [8s 4h 2h] [Ts] (Total Pot: $0.30, 3 Players)
+Corvus81 has 15 seconds left to act
+Corvus81 bets $0.15
+tomasjejidas folds
+Relaxed86 folds
+Uncalled bet of $0.15 returned to Corvus81
+Corvus81 mucks
+Corvus81 wins the pot ($0.29)
+*** SUMMARY ***
+Total pot $0.30 | Rake $0.01
+Board: [8s 4h 2h Ts]
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 folded on the Turn
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 didn't bet (folded)
+Seat 5: El Viejo Tico (button) didn't bet (folded)
+Seat 6: Corvus81 (small blind) collected ($0.29), mucked
+Seat 7: tomasjejidas (big blind) folded on the Turn
+Seat 8: 14grant is sitting out
+Seat 9: OMGStoneAiken didn't bet (folded)
+
+
+Full Tilt Poker Game #33727525247: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:01:16 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($6.05)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10)
+Seat 7: tomasjejidas ($11.02)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+Corvus81 posts the small blind of $0.05
+tomasjejidas posts the big blind of $0.10
+The button is in seat #5
+*** HOLE CARDS ***
+OMGStoneAiken folds
+BayerVidal folds
+Relaxed86 calls $0.10
+ryhmy folds
+Vfab1 folds
+El Viejo Tico folds
+Corvus81 calls $0.05
+tomasjejidas checks
+*** FLOP *** [8s 4h 2h] (Total Pot: $0.30, 3 Players)
+Corvus81 checks
+tomasjejidas checks
+Relaxed86 checks
+*** TURN *** [8s 4h 2h] [Ts] (Total Pot: $0.30, 3 Players)
+Corvus81 has 15 seconds left to act
+Corvus81 bets $0.15
+tomasjejidas folds
+Relaxed86 folds
+Uncalled bet of $0.15 returned to Corvus81
+Corvus81 mucks
+Corvus81 wins the pot ($0.29)
+*** SUMMARY ***
+Total pot $0.30 | Rake $0.01
+Board: [8s 4h 2h Ts]
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 folded on the Turn
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 didn't bet (folded)
+Seat 5: El Viejo Tico (button) didn't bet (folded)
+Seat 6: Corvus81 (small blind) collected ($0.29), mucked
+Seat 7: tomasjejidas (big blind) folded on the Turn
+Seat 8: 14grant is sitting out
+Seat 9: OMGStoneAiken didn't bet (folded)
+
+
+Full Tilt Poker Game #33727528605: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:02:10 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($5.95)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($10.92)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+tomasjejidas posts the small blind of $0.05
+14grant posts the big blind of $0.10
+The button is in seat #6
+*** HOLE CARDS ***
+OMGStoneAiken folds
+BayerVidal has 15 seconds left to act
+BayerVidal has timed out
+BayerVidal folds
+BayerVidal is sitting out
+Relaxed86 raises to $0.30
+ryhmy folds
+Vfab1 folds
+El Viejo Tico folds
+Corvus81 folds
+tomasjejidas folds
+14grant folds
+14grant adds $0.10
+Uncalled bet of $0.20 returned to Relaxed86
+Relaxed86 mucks
+Relaxed86 wins the pot ($0.25)
+*** SUMMARY ***
+Total pot $0.25 | Rake $0
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 collected ($0.25), mucked
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 didn't bet (folded)
+Seat 5: El Viejo Tico didn't bet (folded)
+Seat 6: Corvus81 (button) didn't bet (folded)
+Seat 7: tomasjejidas (small blind) folded before the Flop
+Seat 8: 14grant (big blind) folded before the Flop
+Seat 9: OMGStoneAiken didn't bet (folded)
+
+
+Full Tilt Poker Game #33727528605: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:02:10 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49)
+Seat 2: Relaxed86 ($5.95)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($10.92)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+tomasjejidas posts the small blind of $0.05
+14grant posts the big blind of $0.10
+The button is in seat #6
+*** HOLE CARDS ***
+OMGStoneAiken folds
+BayerVidal has 15 seconds left to act
+BayerVidal has timed out
+BayerVidal folds
+BayerVidal is sitting out
+Relaxed86 raises to $0.30
+ryhmy folds
+Vfab1 folds
+El Viejo Tico folds
+Corvus81 folds
+tomasjejidas folds
+14grant folds
+14grant adds $0.10
+Uncalled bet of $0.20 returned to Relaxed86
+Relaxed86 mucks
+Relaxed86 wins the pot ($0.25)
+*** SUMMARY ***
+Total pot $0.25 | Rake $0
+Seat 1: BayerVidal didn't bet (folded)
+Seat 2: Relaxed86 collected ($0.25), mucked
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 didn't bet (folded)
+Seat 5: El Viejo Tico didn't bet (folded)
+Seat 6: Corvus81 (button) didn't bet (folded)
+Seat 7: tomasjejidas (small blind) folded before the Flop
+Seat 8: 14grant (big blind) folded before the Flop
+Seat 9: OMGStoneAiken didn't bet (folded)
+
+
+Full Tilt Poker Game #33727531727: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:02:56 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49), is sitting out
+Seat 2: Relaxed86 ($6.10)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($10.87)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+14grant posts the small blind of $0.05
+OMGStoneAiken posts the big blind of $0.10
+The button is in seat #7
+*** HOLE CARDS ***
+Relaxed86 folds
+ryhmy folds
+Vfab1 raises to $0.20
+El Viejo Tico calls $0.20
+Corvus81 folds
+tomasjejidas raises to $0.90
+14grant folds
+14grant adds $0.05
+OMGStoneAiken has 15 seconds left to act
+OMGStoneAiken folds
+Vfab1 calls $0.70
+El Viejo Tico calls $0.70
+*** FLOP *** [3s 5c 5s] (Total Pot: $2.85, 3 Players)
+Vfab1 checks
+El Viejo Tico has 15 seconds left to act
+El Viejo Tico bets $1
+tomasjejidas has 15 seconds left to act
+tomasjejidas raises to $2.40
+Vfab1 folds
+El Viejo Tico folds
+Uncalled bet of $1.40 returned to tomasjejidas
+tomasjejidas mucks
+tomasjejidas wins the pot ($4.61)
+*** SUMMARY ***
+Total pot $4.85 | Rake $0.24
+Board: [3s 5c 5s]
+Seat 1: BayerVidal is sitting out
+Seat 2: Relaxed86 didn't bet (folded)
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 folded on the Flop
+Seat 5: El Viejo Tico folded on the Flop
+Seat 6: Corvus81 didn't bet (folded)
+Seat 7: tomasjejidas (button) collected ($4.61), mucked
+Seat 8: 14grant (small blind) folded before the Flop
+Seat 9: OMGStoneAiken (big blind) folded before the Flop
+
+
+Full Tilt Poker Game #33727531727: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:02:56 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49), is sitting out
+Seat 2: Relaxed86 ($6.10)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($5.38)
+Seat 5: El Viejo Tico ($3.20)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($10.87)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($11.03)
+14grant posts the small blind of $0.05
+OMGStoneAiken posts the big blind of $0.10
+The button is in seat #7
+*** HOLE CARDS ***
+Relaxed86 folds
+ryhmy folds
+Vfab1 raises to $0.20
+El Viejo Tico calls $0.20
+Corvus81 folds
+tomasjejidas raises to $0.90
+14grant folds
+14grant adds $0.05
+OMGStoneAiken has 15 seconds left to act
+OMGStoneAiken folds
+Vfab1 calls $0.70
+El Viejo Tico calls $0.70
+*** FLOP *** [3s 5c 5s] (Total Pot: $2.85, 3 Players)
+Vfab1 checks
+El Viejo Tico has 15 seconds left to act
+El Viejo Tico bets $1
+tomasjejidas has 15 seconds left to act
+tomasjejidas raises to $2.40
+Vfab1 folds
+El Viejo Tico folds
+Uncalled bet of $1.40 returned to tomasjejidas
+tomasjejidas mucks
+tomasjejidas wins the pot ($4.61)
+*** SUMMARY ***
+Total pot $4.85 | Rake $0.24
+Board: [3s 5c 5s]
+Seat 1: BayerVidal is sitting out
+Seat 2: Relaxed86 didn't bet (folded)
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 folded on the Flop
+Seat 5: El Viejo Tico folded on the Flop
+Seat 6: Corvus81 didn't bet (folded)
+Seat 7: tomasjejidas (button) collected ($4.61), mucked
+Seat 8: 14grant (small blind) folded before the Flop
+Seat 9: OMGStoneAiken (big blind) folded before the Flop
+
+
+Full Tilt Poker Game #33727537504: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:04:22 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49), is sitting out
+Seat 2: Relaxed86 ($6.10)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($4.48)
+Seat 5: El Viejo Tico ($1.30)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($13.58)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($10.93)
+OMGStoneAiken posts the small blind of $0.05
+Relaxed86 posts the big blind of $0.10
+The button is in seat #8
+*** HOLE CARDS ***
+ryhmy folds
+Vfab1 calls $0.10
+El Viejo Tico has 15 seconds left to act
+El Viejo Tico raises to $0.40
+Corvus81 folds
+tomasjejidas folds
+14grant folds
+OMGStoneAiken folds
+Relaxed86 calls $0.30
+Vfab1 calls $0.30
+*** FLOP *** [Ks 6s 8c] (Total Pot: $1.25, 3 Players)
+Relaxed86 bets $0.20
+Vfab1 calls $0.20
+El Viejo Tico folds
+El Viejo Tico adds $5
+*** TURN *** [Ks 6s 8c] [Ad] (Total Pot: $1.65, 2 Players)
+Relaxed86 bets $0.20
+Vfab1 raises to $0.40
+Relaxed86 calls $0.20
+*** RIVER *** [Ks 6s 8c Ad] [Kc] (Total Pot: $2.45, 2 Players)
+Relaxed86 bets $0.30
+Vfab1 calls $0.30
 *** SHOW DOWN ***
-TheHoboKing shows [Ah 6s] a pair of Sixes
-metior mucks
-TheHoboKing wins the pot ($299.50) with a pair of Sixes
+Relaxed86 shows [Js Jh] two pair, Kings and Jacks
+Vfab1 shows [Ah 9d] two pair, Aces and Kings
+Vfab1 wins the pot ($2.90) with two pair, Aces and Kings
 *** SUMMARY ***
-Total pot $300 | Rake $0.50
-Board: [Js Qh 6d 4d Tc]
-Seat 1: TheHoboKing (big blind) collected ($299.50)
-Seat 2: metior (small blind) mucked
+Total pot $3.05 | Rake $0.15
+Board: [Ks 6s 8c Ad Kc]
+Seat 1: BayerVidal is sitting out
+Seat 2: Relaxed86 (big blind) showed [Js Jh] and lost with two pair, Kings and Jacks
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 showed [Ah 9d] and won ($2.90) with two pair, Aces and Kings
+Seat 5: El Viejo Tico folded on the Flop
+Seat 6: Corvus81 didn't bet (folded)
+Seat 7: tomasjejidas didn't bet (folded)
+Seat 8: 14grant (button) didn't bet (folded)
+Seat 9: OMGStoneAiken (small blind) folded before the Flop
 
-Full Tilt Poker Game #26873479830: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:03 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,399)
-Seat 2: metior ($2,588.50)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing raises to $100
-metior folds
-Uncalled bet of $50 returned to TheHoboKing
-TheHoboKing mucks
-TheHoboKing wins the pot ($100)
-*** SUMMARY ***
-Total pot $100 | Rake $0
-Seat 1: TheHoboKing (small blind) collected ($100), mucked
-Seat 2: metior (big blind) folded before the Flop
 
-Full Tilt Poker Game #26873481204: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:12 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,449)
-Seat 2: metior ($2,538.50)
-metior posts the small blind of $25
-TheHoboKing posts the big blind of $50
-The button is in seat #2
+Full Tilt Poker Game #33727537504: Table Bravo - NL Hold'em - $0.05/$0.10 - 19:04:22 ET - 2014/01/05
+Seat 1: BayerVidal ($10.49), is sitting out
+Seat 2: Relaxed86 ($6.10)
+Seat 3: ryhmy ($8.51)
+Seat 4: Vfab1 ($4.48)
+Seat 5: El Viejo Tico ($1.30)
+Seat 6: Corvus81 ($10.19)
+Seat 7: tomasjejidas ($13.58)
+Seat 8: 14grant ($10)
+Seat 9: OMGStoneAiken ($10.93)
+OMGStoneAiken posts the small blind of $0.05
+Relaxed86 posts the big blind of $0.10
+The button is in seat #8
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-metior raises to $100
-TheHoboKing calls $50
-*** FLOP *** [7s 4s 3d]
-TheHoboKing checks
-metior bets $200
-TheHoboKing folds
-Uncalled bet of $200 returned to metior
-*** SUMMARY ***
-Total pot $200 | Rake $0.50
-Board: [7s 4s 3d]
-Seat 1: TheHoboKing (big blind) folded on the Flop
-Seat 2: metior (small blind) collected ($199.50), mucked
-
-Full Tilt Poker Game #26873485382: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:37 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,349)
-Seat 2: metior ($2,638)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing folds
-Uncalled bet of $25 returned to metior
-metior mucks
-metior wins the pot ($50)
-*** SUMMARY ***
-Total pot $50 | Rake $0
-Seat 1: TheHoboKing (small blind) folded before the Flop
-Seat 2: metior (big blind) collected ($50), mucked
-
-Full Tilt Poker Game #26873486407: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:42:44 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,324)
-Seat 2: metior ($2,663)
-metior posts the small blind of $25
-TheHoboKing posts the big blind of $50
-The button is in seat #2
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-metior raises to $150
-TheHoboKing calls $100
-*** FLOP *** [5s 3d 4h]
-TheHoboKing checks
-metior bets $250
-TheHoboKing folds
-Uncalled bet of $250 returned to metior
-metior mucks
-metior wins the pot ($299.50)
-*** SUMMARY ***
-Total pot $300 | Rake $0.50
-Board: [5s 3d 4h]
-Seat 1: TheHoboKing (big blind) folded on the Flop
-Seat 2: metior (small blind) collected ($299.50), mucked
-
-Full Tilt Poker Game #26873490898: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:43:06 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,174)
-Seat 2: metior ($2,812.50)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing raises to $100
-metior calls $50
-*** FLOP *** [4d Qc 7d]
-metior checks
-TheHoboKing checks
-*** TURN *** [4d Qc 7d] [2h]
-metior checks
-TheHoboKing checks
-*** RIVER *** [4d Qc 7d 2h] [3h]
-metior checks
-TheHoboKing bets $100
-metior calls $100
+ryhmy folds
+Vfab1 calls $0.10
+El Viejo Tico has 15 seconds left to act
+El Viejo Tico raises to $0.40
+Corvus81 folds
+tomasjejidas folds
+14grant folds
+OMGStoneAiken folds
+Relaxed86 calls $0.30
+Vfab1 calls $0.30
+*** FLOP *** [Ks 6s 8c] (Total Pot: $1.25, 3 Players)
+Relaxed86 bets $0.20
+Vfab1 calls $0.20
+El Viejo Tico folds
+El Viejo Tico adds $5
+*** TURN *** [Ks 6s 8c] [Ad] (Total Pot: $1.65, 2 Players)
+Relaxed86 bets $0.20
+Vfab1 raises to $0.40
+Relaxed86 calls $0.20
+*** RIVER *** [Ks 6s 8c Ad] [Kc] (Total Pot: $2.45, 2 Players)
+Relaxed86 bets $0.30
+Vfab1 calls $0.30
 *** SHOW DOWN ***
-TheHoboKing shows [8s 5c] Queen Eight high
-metior shows [9s 2s] a pair of Twos
-metior wins the pot ($399.50) with a pair of Twos
+Relaxed86 shows [Js Jh] two pair, Kings and Jacks
+Vfab1 shows [Ah 9d] two pair, Aces and Kings
+Vfab1 wins the pot ($2.90) with two pair, Aces and Kings
 *** SUMMARY ***
-Total pot $400 | Rake $0.50
-Board: [4d Qc 7d 2h 3h]
-Seat 1: TheHoboKing (small blind) showed [8s 5c] and lost with Queen Eight high
-Seat 2: metior (big blind) showed [9s 2s] and won ($399.50) with a pair of Twos
-
-Full Tilt Poker Game #26873496637: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:43:41 ET - 2011/01/01
-Seat 1: TheHoboKing ($4,974)
-Seat 2: metior ($3,012)
-metior posts the small blind of $25
-TheHoboKing posts the big blind of $50
-The button is in seat #2
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-metior raises to $100
-TheHoboKing calls $50
-*** FLOP *** [4d Ah 2c]
-TheHoboKing checks
-metior bets $150
-TheHoboKing calls $150
-*** TURN *** [4d Ah 2c] [9d]
-TheHoboKing checks
-metior checks
-*** RIVER *** [4d Ah 2c 9d] [7d]
-TheHoboKing bets $250
-metior calls $250
-*** SHOW DOWN ***
-TheHoboKing shows [Ad 5h] a pair of Aces
-metior mucks
-TheHoboKing wins the pot ($999.50) with a pair of Aces
-*** SUMMARY ***
-Total pot $1,000 | Rake $0.50
-Board: [4d Ah 2c 9d 7d]
-Seat 1: TheHoboKing (big blind) collected ($999.50)
-Seat 2: metior (small blind) mucked
-
-Full Tilt Poker Game #26873504407: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:44:28 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,473.50)
-Seat 2: metior ($2,512)
-TheHoboKing posts the small blind of $25
-metior posts the big blind of $50
-The button is in seat #1
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-TheHoboKing raises to $100
-metior raises to $150
-TheHoboKing calls $50
-*** FLOP *** [Qd Kh 6h]
-metior bets $300
-TheHoboKing folds
-Uncalled bet of $300 returned to metior
-metior mucks
-metior wins the pot ($299.50)
-*** SUMMARY ***
-Total pot $300 | Rake $0.50
-Board: [Qd Kh 6h]
-Seat 1: TheHoboKing (small blind) folded on the Flop
-Seat 2: metior (big blind) collected ($299.50), mucked
-
-Full Tilt Poker Game #26873507253: Table Allthorn (heads up) - $25/$50 - No Limit Hold'em - 05:44:45 ET - 2011/01/01
-Seat 1: TheHoboKing ($5,323.50)
-Seat 2: metior ($2,661.50)
-metior posts the small blind of $25
-TheHoboKing posts the big blind of $50
-The button is in seat #2
-*** HOLE CARDS ***
-*** HOLE CARDS ***
-metior raises to $100
-J0s3phM41 (Observer): HAPPY NEW YEAR GUYS!))
-TheHoboKing folds
-Uncalled bet of $50 returned to metior
-metior mucks
-metior wins the pot ($100)
-*** SUMMARY ***
-Total pot $100 | Rake $0
-Seat 1: TheHoboKing (big blind) folded before the Flop
-Seat 2: metior (small blind) collected ($100), mucked
+Total pot $3.05 | Rake $0.15
+Board: [Ks 6s 8c Ad Kc]
+Seat 1: BayerVidal is sitting out
+Seat 2: Relaxed86 (big blind) showed [Js Jh] and lost with two pair, Kings and Jacks
+Seat 3: ryhmy didn't bet (folded)
+Seat 4: Vfab1 showed [Ah 9d] and won ($2.90) with two pair, Aces and Kings
+Seat 5: El Viejo Tico folded on the Flop
+Seat 6: Corvus81 didn't bet (folded)
+Seat 7: tomasjejidas didn't bet (folded)
+Seat 8: 14grant (button) didn't bet (folded)
+Seat 9: OMGStoneAiken (small blind) folded before the Flop

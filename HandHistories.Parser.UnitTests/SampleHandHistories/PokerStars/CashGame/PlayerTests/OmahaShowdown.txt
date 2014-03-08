@@ -1,39 +1,31 @@
-﻿PokerStars Hand #78447360452:  Omaha Pot Limit ($3/$6 USD) - 2012/04/06 18:32:02 ET
-Table 'Anhui VII' 6-max Seat #2 is the button
-Seat 1: chico134 ($736.54 in chips) 
-Seat 2: jippo79 ($600 in chips) 
-Seat 3: cuartito76 ($355 in chips) 
-Seat 4: Gakn29 ($600 in chips) 
-Seat 5: IMALLIN723 ($625.24 in chips) 
-Seat 6: foldngst8n ($600 in chips) 
-cuartito76: posts small blind $3
-Gakn29: posts big blind $6
+﻿PokerStars Game #109665973281:  Omaha Pot Limit ($0.50/$1.00 USD) - 2014/01/05 20:00:23 ET
+Table 'Albireo III 40-100 bb' 2-max Seat #1 is the button
+Seat 1: MajinVeta ($108.23 in chips) 
+Seat 2: Dracospinner ($434.77 in chips) 
+MajinVeta: posts small blind $0.50
+Dracospinner: posts big blind $1
 *** HOLE CARDS ***
-IMALLIN723: folds 
-foldngst8n: folds 
-chico134: folds 
-jippo79: raises $12 to $18
-cuartito76: raises $42 to $60
-Gakn29: folds 
-jippo79: calls $42
-*** FLOP *** [Ah 2s Qd]
-cuartito76: bets $123.20
-jippo79: raises $170.80 to $294
-cuartito76: calls $170.80
-*** TURN *** [Ah 2s Qd] [4d]
-cuartito76: bets $1 and is all-in
-jippo79: calls $1
-*** RIVER *** [Ah 2s Qd 4d] [3c]
+MajinVeta: raises $2 to $3
+Dracospinner: raises $6 to $9
+MajinVeta: calls $6
+*** FLOP *** [7s 3s Qc]
+Dracospinner: bets $7
+MajinVeta: raises $15.75 to $22.75
+Dracospinner: calls $15.75
+*** TURN *** [7s 3s Qc] [8d]
+Dracospinner: checks 
+MajinVeta: bets $63
+Dracospinner: calls $63
+*** RIVER *** [7s 3s Qc 8d] [3h]
+Dracospinner: bets $189
+MajinVeta: calls $13.48 and is all-in
+Uncalled bet ($175.52) returned to Dracospinner
 *** SHOW DOWN ***
-cuartito76: shows [Ac 8c Jh Kh] (a pair of Aces)
-jippo79: shows [4h As 5s 7h] (a straight, Ace to Five)
-jippo79 collected $713.20 from pot
+Dracospinner: shows [3d 5s 6h Kd] (three of a kind, Threes)
+MajinVeta: shows [7d 6s 9s 7h] (a full house, Sevens full of Threes)
+MajinVeta collected $215.96 from pot
 *** SUMMARY ***
-Total pot $716 | Rake $2.80 
-Board [Ah 2s Qd 4d 3c]
-Seat 1: chico134 folded before Flop (didn't bet)
-Seat 2: jippo79 (button) showed [4h As 5s 7h] and won ($713.20) with a straight, Ace to Five
-Seat 3: cuartito76 (small blind) showed [Ac 8c Jh Kh] and lost with a pair of Aces
-Seat 4: Gakn29 (big blind) folded before Flop
-Seat 5: IMALLIN723 folded before Flop (didn't bet)
-Seat 6: foldngst8n folded before Flop (didn't bet)
+Total pot $216.46 | Rake $0.50 
+Board [7s 3s Qc 8d 3h]
+Seat 1: MajinVeta (button) (small blind) showed [7d 6s 9s 7h] and won ($215.96) with a full house, Sevens full of Threes
+Seat 2: Dracospinner (big blind) showed [3d 5s 6h Kd] and lost with three of a kind, Threes

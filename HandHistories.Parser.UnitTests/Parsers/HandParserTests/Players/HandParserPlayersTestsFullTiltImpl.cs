@@ -19,12 +19,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("hockenspit50", 56.15m, 1),
-                               new Player("drc40", 36.60m, 2),
-                               new Player("oggie the fox", 10.05m, 3),                               
-                               new Player("diknek", 16.70m, 4),
-                               new Player("Naturalblow", 26.25m, 5),
-                               new Player("BeerMySole", 26m, 6),
+                               new Player("jacksparrow8119", 86.55m, 1),
+                               new Player("Steamkid79", 65.65m, 2)
+                               {
+                                   IsSittingOut = true
+                               },
+                               new Player("kukuruzkuckuck", 42.70m, 3),                               
+                               new Player("erki1964", 143.05m, 4),
+                               new Player("Jarmuli", 40m, 5),
+                               new Player("M_Mathers", 46.55m, 6),
                            };
             }
         }
@@ -35,17 +38,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("Enslaver", 200.00m, 4),
-                               new Player("ImMovingOnUp", 214.40m, 6),
-                               new Player("K_flip_L", 54.51m, 3)
+                               new Player("burjennio", 30.06m, 1),
+                               new Player("Haklot", 17.32m, 2),
+                               new Player("14grant", 10.15m, 3)
                                    {
-                                       HoleCards = HoleCards.ForHoldem(Card.Parse("Ah"), Card.Parse("7s"))
+                                       HoleCards = HoleCards.FromCards("KhKs")
                                    },
-                               new Player("l_ . - l - . _l", 214.30m, 5)
+                               new Player("Caribou0", 9.78m, 4),
+                               new Player("Corvus81", 10m, 5),
+                               new Player("MUFTI76", 16.67m, 6),
+                               new Player("luka-poker", 15.58m, 7)
                                    {
-                                       HoleCards = HoleCards.ForHoldem(Card.Parse("Qc"), Card.Parse("Kc"))
+                                       IsSittingOut = true
                                    },
-                               new Player("bloody__9", 273.55m, 2),
+                               new Player("ilya1681", 10m, 8),
+                               new Player("OMGStoneAiken", 35.75m, 9),
                            };
             }
         }
@@ -56,24 +63,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("DirkDiggIer", 5000m, 6)
+                               new Player("jacksparrow8119", 86.55m, 1),
+                               new Player("Steamkid79", 65.65m, 2)
                                {
                                    IsSittingOut = true
                                },
-                               new Player("Kanu7", 5000m, 2),
-                               new Player("beebsela", 5000m, 5),
-                               new Player("don_perignon", 5000m, 4)
-                               {
-                                   IsSittingOut = true
-                               },
-                               new Player("subway96", 5000m, 3)
-                               {
-                                   IsSittingOut = true
-                               },
-                               new Player("weeee84", 5000m, 1)
-                               {
-                                   IsSittingOut = true
-                               },
+                               new Player("kukuruzkuckuck", 42.70m, 3),                               
+                               new Player("erki1964", 143.05m, 4),
+                               new Player("Jarmuli", 40m, 5),
+                               new Player("M_Mathers", 46.55m, 6),
                            };
             }
         }
@@ -84,17 +82,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("Call_911", 2186.72m, 2),
-                               new Player("TightRaiseR123", 1888.64m, 5),
-                               new Player("donkeykong58", 708.75m, 6)
+                               new Player("VoitikD", 215.35m, 1)
                                    {
-                                       HoleCards = HoleCards.ForOmaha(Card.Parse("Kh"), Card.Parse("Qd"), Card.Parse("Qh"), Card.Parse("Kd"))
+                                       HoleCards = HoleCards.FromCards("Qc7d9c7h")
                                    },
-                               new Player("kondilon", 1000.0m, 3)
+                               new Player("Mr_Turban", 38.90m, 2)
                                    {
-                                       HoleCards = HoleCards.ForOmaha(Card.Parse("3d"), Card.Parse("3h"), Card.Parse("Ac"), Card.Parse("Ah"))
-                                   },
-                               new Player("m3str3n0va", 1372.39m, 1),
+                                       HoleCards = HoleCards.FromCards("2cJh2s8d")
+                                   }
                            };
             }
         }
@@ -105,16 +100,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("Scoopydoo81", 701m, 6)
+                               new Player("WTFseeB8", 114.45m, 5),
+                               new Player("pupsaa", 60.80m, 6)
                                {
-                                       HoleCards = HoleCards.ForOmaha(Card.Parse("Js"), Card.Parse("4d"), Card.Parse("As"), Card.Parse("9d"))
+                                       HoleCards = HoleCards.FromCards("9s6d7s4c")
                                },
-                               new Player("janusfaced", 448.25m, 1)
+                               new Player("ReydelMundo", 100m, 7)
                                {
-                                       HoleCards = HoleCards.ForOmaha(Card.Parse("Jh"), Card.Parse("7h"), Card.Parse("9c"), Card.Parse("6d"))
+                                       HoleCards = HoleCards.FromCards("TdAcAd4d")
                                },
-                               new Player("robertp10", 164.50m, 4),
-                               new Player("wembrinator", 105m, 3)
                            };
             }
         }

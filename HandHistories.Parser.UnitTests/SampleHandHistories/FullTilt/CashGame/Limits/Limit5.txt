@@ -1,29 +1,29 @@
-﻿Full Tilt Poker Game #28617503692: Table Bri (6 max) - $0.25/$0.50 - $15 Cap No Limit Hold'em - 18:45:48 ET - 2011/02/28
-Seat 1: hockenspit50 ($55.40)
-Seat 2: drc40 ($36.60)
-Seat 3: oggie the fox ($10.05)
-Seat 4: diknek ($16.95)
-Seat 5: Naturalblow ($26.75)
-Seat 6: BeerMySole ($26)
-diknek posts the small blind of $0.25
-Naturalblow posts the big blind of $0.50
-The button is in seat #3
+﻿Full Tilt Poker Game #33727700367: Table Mention (heads up) - FL Omaha H/L - $2000/$4000 - 19:48:22 ET - 2014/01/05
+Seat 1: SallyWoo ($110,999.50)
+Seat 2: Isildur1 ($29,000)
+SallyWoo posts the small blind of $1,000
+Isildur1 posts the big blind of $2,000
+The button is in seat #1
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-BeerMySole folds
-hockenspit50 raises to $1
-drc40 folds
-oggie the fox folds
-diknek folds
-Naturalblow has 15 seconds left to act
-Naturalblow folds
-Uncalled bet of $0.50 returned to hockenspit50
-hockenspit50 mucks
-hockenspit50 wins the pot ($1.25)
+SallyWoo raises to $4,000
+Isildur1 raises to $6,000
+SallyWoo calls $2,000
+*** FLOP *** [Ac Qs 5s] (Total Pot: $12,000, 2 Players)
+Isildur1 bets $2,000
+SallyWoo calls $2,000
+*** TURN *** [Ac Qs 5s] [8c] (Total Pot: $16,000, 2 Players)
+Isildur1 bets $4,000
+SallyWoo calls $4,000
+*** RIVER *** [Ac Qs 5s 8c] [6c] (Total Pot: $24,000, 2 Players)
+Isildur1 bets $4,000
+SallyWoo calls $4,000
+*** SHOW DOWN ***
+Isildur1 shows [As Ah 3c 8h] three of a kind, Aces, for high and 8,6,5,3,A, for low
+SallyWoo mucks
+Isildur1 wins the high pot ($16,000) with three of a kind, Aces
+Isildur1 wins the low pot ($15,999.50) with 8,6,5,3,A
 *** SUMMARY ***
-Total pot $1.25 | Rake $0
-Seat 1: hockenspit50 collected ($1.25), mucked
-Seat 2: drc40 didn't bet (folded)
-Seat 3: oggie the fox (button) didn't bet (folded)
-Seat 4: diknek (small blind) folded before the Flop
-Seat 5: Naturalblow (big blind) folded before the Flop
+Total pot $32,000 | Rake $0.50
+Board: [Ac Qs 5s 8c 6c]
+Seat 1: SallyWoo (small blind) mucked
+Seat 2: Isildur1 (big blind) collected ($31,999.50)

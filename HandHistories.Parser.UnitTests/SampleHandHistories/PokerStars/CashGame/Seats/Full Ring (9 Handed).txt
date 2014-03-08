@@ -1,42 +1,39 @@
-﻿PokerStars Hand #78422360284:  Hold'em No Limit ($0.25/$0.50 USD) - 2012/04/06 10:52:42 ET
-Table 'Acamar III' 9-max Seat #2 is the button
-Seat 1: gorozito ($62.90 in chips) 
-Seat 2: nestle00 ($54.51 in chips) 
-Seat 4: Yort1977 ($25.65 in chips) 
-Seat 5: PlayerPdW ($20.32 in chips) 
-Seat 6: CK the 1 ($50 in chips) 
-Seat 7: NicoleOA ($49.50 in chips) 
-Seat 8: raise2AA ($34.14 in chips) 
-Seat 9: adrianrl ($29.21 in chips) 
-SanchazSS will be allowed to play after the button
-Yort1977: posts small blind $0.25
-PlayerPdW: posts big blind $0.50
+﻿PokerStars Game #109698736646:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 13:50:24 ET
+Table 'Imperatrix III 40-100 bb' 9-max Seat #6 is the button
+Seat 1: ralfindus ($9.35 in chips) 
+Seat 2: Quks ($10.15 in chips) 
+Seat 3: drplayhard ($15.26 in chips) 
+Seat 5: zeigertier ($15.45 in chips) 
+Seat 6: ChiLam825 ($11.95 in chips) 
+Seat 7: schapu1209 ($10 in chips) 
+Seat 8: liliya.poker ($5.29 in chips) 
+Seat 9: joe3pistoale ($9.85 in chips) 
+schapu1209: posts small blind $0.05
+liliya.poker: posts big blind $0.10
+jwsando: sits out 
 *** HOLE CARDS ***
-CK the 1: raises $1 to $1.50
-NicoleOA: folds 
-raise2AA: folds 
-adrianrl: folds 
-gorozito: folds 
-nestle00 has timed out
-nestle00: folds 
-Yort1977: calls $1.25
-PlayerPdW: calls $1
-*** FLOP *** [As 6s Jc]
-Yort1977: checks 
-PlayerPdW: bets $1.50
-CK the 1: folds 
-Yort1977: folds 
-Uncalled bet ($1.50) returned to PlayerPdW
-PlayerPdW collected $4.30 from pot
-PlayerPdW: doesn't show hand 
+joe3pistoale: folds 
+ralfindus: folds 
+Quks: folds 
+drplayhard: raises $0.20 to $0.30
+zeigertier: folds 
+ChiLam825: folds 
+schapu1209: raises $0.60 to $0.90
+liliya.poker: folds 
+drplayhard: calls $0.60
+*** FLOP *** [4d Kd Jd]
+schapu1209: bets $0.90
+drplayhard: folds 
+Uncalled bet ($0.90) returned to schapu1209
+schapu1209 collected $1.81 from pot
 *** SUMMARY ***
-Total pot $4.50 | Rake $0.20 
-Board [As 6s Jc]
-Seat 1: gorozito folded before Flop (didn't bet)
-Seat 2: nestle00 (button) folded before Flop (didn't bet)
-Seat 4: Yort1977 (small blind) folded on the Flop
-Seat 5: PlayerPdW (big blind) collected ($4.30)
-Seat 6: CK the 1 folded on the Flop
-Seat 7: NicoleOA folded before Flop (didn't bet)
-Seat 8: raise2AA folded before Flop (didn't bet)
-Seat 9: adrianrl folded before Flop (didn't bet)
+Total pot $1.90 | Rake $0.09 
+Board [4d Kd Jd]
+Seat 1: ralfindus folded before Flop (didn't bet)
+Seat 2: Quks folded before Flop (didn't bet)
+Seat 3: drplayhard folded on the Flop
+Seat 5: zeigertier folded before Flop (didn't bet)
+Seat 6: ChiLam825 (button) folded before Flop (didn't bet)
+Seat 7: schapu1209 (small blind) collected ($1.81)
+Seat 8: liliya.poker (big blind) folded before Flop
+Seat 9: joe3pistoale folded before Flop (didn't bet)

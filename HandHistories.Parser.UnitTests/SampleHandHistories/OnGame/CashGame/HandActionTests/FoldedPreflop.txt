@@ -1,25 +1,31 @@
-﻿***** History for hand R5-244711775-335 *****
-Start hand: Wed May 30 03:12:00 CEST 2012
-Table: Leipzig [244711775] (NO_LIMIT TEXAS_HOLDEM $10/$20, Real money)
-Button: seat 5
-Players in round: 4
-Seat 4: DM899 ($1617.50) 
-Seat 5: sickseeker ($4949.00) 
-Seat 7: njoetrhawrg ($2488.00) 
-Seat 8: el_pescado99 ($4620.00) 
-njoetrhawrg posts small blind ($10)
-el_pescado99 posts big blind ($20)
+﻿***** History for hand R5-361850810-475 *****
+Start hand: Mon Jan 06 01:06:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 7
+Players in round: 6
+Seat 1: BlackH0L3 ($103.75) 
+Seat 2: Cockatrice ($99.99) 
+Seat 7: BONUS 1OOO ($133.31) 
+Seat 8: fyabcf ($236.65) 
+Seat 9: kliketiklok ($112.41) 
+Seat 10: Dbcee89 ($98.50) 
+fyabcf posts small blind ($0.50)
+kliketiklok posts big blind ($1)
 ---
 Dealing pocket cards
-DM899 folds
-sickseeker folds
-njoetrhawrg folds
+Dbcee89 folds
+BlackH0L3 folds
+Cockatrice folds
+BONUS 1OOO folds
+fyabcf folds
 ---
 Summary:
-Main pot: $20.00 won by el_pescado99 ($20.00)
+Main pot: $1.00 won by kliketiklok ($1.00)
 Rake taken: $0.00
-Seat 4: DM899 ($1617.50), net: -$0.00
-Seat 5: sickseeker ($4949.00), net: -$0.00
-Seat 7: njoetrhawrg ($2478.00), net: -$10.00
-Seat 8: el_pescado99 ($4630.00), net: +$10.00
-***** End of hand R5-244711775-335 *****
+Seat 1: BlackH0L3 ($103.75), net: -$0.00
+Seat 2: Cockatrice ($99.99), net: -$0.00
+Seat 7: BONUS 1OOO ($133.31), net: -$0.00
+Seat 8: fyabcf ($236.15), net: -$0.50
+Seat 9: kliketiklok ($112.91), net: +$0.50
+Seat 10: Dbcee89 ($98.50), net: -$0.00
+***** End of hand R5-361850810-475 *****

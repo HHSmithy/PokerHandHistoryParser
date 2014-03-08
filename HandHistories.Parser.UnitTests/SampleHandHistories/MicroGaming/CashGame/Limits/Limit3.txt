@@ -1,0 +1,34 @@
+<Game hhversion="4" id="5049133688" date="2013-09-23 15:10:50" unicodetablename="VAB1AHIAYgBvADoAIABDAHUAdAAtAE8AZgBmACAANAAwACAALQAgAKwgMgAwADAAIABNAGEAeAA=" tablename="Turbo: Cut-Off 40 - €200 Max" stakes="1|2" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="195">
+   <Seats>
+      <Seat num="1" alias="Crystalised" unicodealias="QwByAHkAcwB0AGEAbABpAHMAZQBkAA==" balance="232.00" endbalance="251.05" dealer="true"/>
+      <Seat num="2" alias="Nnnnn1" unicodealias="TgBuAG4AbgBuADEA" balance="201.00" endbalance="200.00"/>
+      <Seat num="3" alias="Spaceless" unicodealias="UwBwAGEAYwBlAGwAZQBzAHMA" balance="356.40" endbalance="354.40"/>
+      <Seat num="4" alias="DonkeyHumper" unicodealias="RABvAG4AawBlAHkASAB1AG0AcABlAHIA" balance="395.30" endbalance="395.30"/>
+      <Seat num="5" alias="BubbleGum2" unicodealias="QgB1AGIAYgBsAGUARwB1AG0AMgA=" balance="222.00" endbalance="222.00"/>
+      <Seat num="6" alias="Dinho1010" unicodealias="RABpAG4AaABvADEAMAAxADAA" balance="740.68" endbalance="722.66"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="2" value="1.00"/>
+      <Action seq="2" type="BigBlind" seat="3" value="2.00"/>
+      <Action seq="3" type="BadBeatContribution" seat="6" value="0.02"/>
+      <Action seq="4" type="Fold" seat="4"/>
+      <Action seq="5" type="Fold" seat="5"/>
+      <Action seq="6" type="Raise" seat="6" value="6.00"/>
+      <Action seq="7" type="Raise" seat="1" value="18.00"/>
+      <Action seq="8" type="Fold" seat="2"/>
+      <Action seq="9" type="Fold" seat="3"/>
+      <Action seq="10" type="Call" seat="6" value="12.00"/>
+      <Action seq="11" type="DealFlop">
+         <Card value="8" suit="s" id="7"/>
+         <Card value="7" suit="h" id="45"/>
+         <Card value="J" suit="c" id="23"/>
+      </Action>
+      <Action seq="12" type="Check" seat="6"/>
+      <Action seq="13" type="Bet" seat="1" value="19.00"/>
+      <Action seq="14" type="Fold" seat="6"/>
+      <Action seq="15" type="MuckCards" seat="1"/>
+      <Action type="Win">
+         <Seat num="1" amount="56.05" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

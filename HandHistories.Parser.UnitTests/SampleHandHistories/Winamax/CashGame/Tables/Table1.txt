@@ -1,0 +1,19 @@
+﻿Winamax Poker - CashGame - HandId: #5284692-1-1382604644 - Holdem no limit (0.05€/0.10€) - 2013/10/24 08:50:44 UTC
+Table: 'Istanbul' 9-max (real money) Seat #1 is the button
+Seat 1: TALISMAN01 (4€)
+Seat 2: LiOn3L.B (10€)
+*** ANTE/BLINDS ***
+TALISMAN01 posts small blind 0.05€
+LiOn3L.B posts big blind 0.10€
+*** PRE-FLOP *** 
+TALISMAN01 calls 0.05€
+LiOn3L.B checks
+*** FLOP *** [9c Td Kc]
+LiOn3L.B checks
+TALISMAN01 bets 0.13€
+LiOn3L.B folds
+TALISMAN01 collected 0.32€ from pot
+*** SUMMARY ***
+Total pot 0.32€ | Rake 0.01€
+Board: [9c Td Kc]
+Seat 1: TALISMAN01 (small blind) (button) won 0.32€

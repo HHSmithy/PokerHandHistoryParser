@@ -174,7 +174,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
                 if (endOfGeneralInfoIndex == -1)
                 {
-                    logger.Fatal("IPokerFastParserImpl.SplitUpMultipleHands(): Encountered a weird file\r\n{0}", rawHandHistories);
+                    // log the first 1000 chars of the file, so we can at least guess what's the problem
+                    logger.Fatal("IPokerFastParserImpl.SplitUpMultipleHands(): Encountered a weird file\r\n{0}", rawHandHistories.Substring(0,1000));
                 }
 
                 string generalInfoString = rawHandHistories.Substring(0, endOfGeneralInfoIndex + 10);
@@ -261,22 +262,32 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected string GetStartDateFromHandLines(string[] handLines)
         {
-            //This is the 23rd line if we have the <session> tag header
-            return handLines[22];
+            // in order to find the exact date of the hand we search the startdate of the hand ( and not the table )
+            
+            for(int i=0; i<= handLines.Count(); i++)
+            {
+                if(handLines[i].Contains("gamecode=\""))
+                {
+                    return handLines[i + 2];
+                }
+            }
+
+            // if we're unable to find the dateline for the hand, we just use the date for the table
+            return handLines[8];
         }
 
         protected string[] GetPlayerLinesFromHandLines(string[] handLines)
         {
             /*
               Returns all of the detail lines between the <players> tags
-              <players> <-- Line offset 23
+              <players> <-- Line offset 22
                 <player seat="1" name="Leichenghui" chips="£1,866.23" dealer="1" win="£0" bet="£5" rebuy="0" addon="0" />
                 ...
                 <player seat="10" name="CraigyColesBRL" chips="£2,297.25" dealer="0" win="£15" bet="£10" rebuy="0" addon="0" />
               </players>             
              */
 
-            int offset = 24;
+            int offset = 23;
             List<string> playerLines = new List<string>();
 
             string line = handLines[offset];
@@ -319,11 +330,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         protected override GameType ParseGameType(string[] handLines)
         {
             /*
-             * NLH <gametype>Holdem NL $2/$4</gametype>     
+             * NLH <gametype>Holdem NL $2/$4</gametype>  
+             * NLH <gametype>Holdem PL $2/$4</gametype>    
              * FL  <gametype>Holdem L $2/$4</gametype>
              * PLO <gametype>Omaha PL $0.50/$1</gametype>
              */
-            
+
             string gameTypeLine = GetGameTypeLineFromHandLines(handLines);
 
             //If this is an H we're a Holdem, if O, Omaha
@@ -345,6 +357,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             if (holdemTypeChar == 'N')
             {
                 return GameType.NoLimitHoldem;
+            }
+
+            if (holdemTypeChar == 'P')
+            {
+                return GameType.PotLimitHoldem;
             }
 
             throw new Exception("Could not parse GameType for hand.");
@@ -411,7 +428,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             //Check 2 - Do we have a Game Tag
-            if (handLines[20].StartsWith("<game") == false)
+            if (handLines[19].StartsWith("<game") == false && handLines[20].StartsWith("<game") == false)
             {
                 return false;
             }
@@ -433,7 +450,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             string[] playerLines = GetPlayerLinesFromHandLines(handLines);
             //The 2nd line after the </player> line is the beginning of the <round> rows
-            int startRow = 24 + playerLines.Length + 2;
+
+
+            int offset =  23;
+
+            int startRow = offset + playerLines.Length + 2;
 
             Street currentStreet = Street.Null;
 

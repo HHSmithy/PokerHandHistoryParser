@@ -1,33 +1,44 @@
-﻿***** Hand History for Game 11614240016 *****
-$3/$6 USD FL Texas Hold'em - Tuesday, April 03, 04:24:43 EDT 2012
-Table Table  126900 (Real Money)
-Seat 6 is the button
-Total number of players : 5/6 
-Seat 6: DrMathy ( $117.75 USD )
-Seat 4: PadJenPoker ( $91 USD )
-Seat 2: joquer ( $179.99 USD )
-Seat 5: kulebyaka ( $167.50 USD )
-Seat 3: waity ( $259.50 USD )
-joquer posts small blind [$1 USD].
-waity posts big blind [$3 USD].
+﻿***** Hand History for Game 13550319286 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 04:15:12 EST 2014
+Table Cádiz (Real Money)
+Seat 3 is the button
+Total number of players : 9/9 
+Seat 2: Bavariared ( $12.22 USD )
+Seat 1: DarkSun2011 ( $10.20 USD )
+Seat 5: Kruglenya77 ( $10 USD )
+Seat 6: MasterP002 ( $6.26 USD )
+Seat 9: Raskolnikov89 ( $10.30 USD )
+Seat 8: Te-ta-tet ( $8.27 USD )
+Seat 3: joyce.lunoue ( $11.68 USD )
+Seat 7: lenstr1 ( $13.65 USD )
+Seat 4: rickybobby83 ( $0 USD )
+Kruglenya77 posts small blind [$0.05 USD].
+MasterP002 posts big blind [$0.10 USD].
 ** Dealing down cards **
-Siliciom has joined the table.
-PadJenPoker folds
-kulebyaka raises [$6 USD]
-DrMathy folds
-joquer folds
-waity calls [$3 USD]
-** Dealing Flop ** [ 2h, 9c, Th ]
-waity checks
-kulebyaka bets [$3 USD]
-waity calls [$3 USD]
-** Dealing Turn ** [ 8d ]
-waity checks
-kulebyaka bets [$6 USD]
-waity calls [$6 USD]
-** Dealing River ** [ As ]
-waity checks
-kulebyaka checks
-waity shows [ 8s, Jd ]a pair of Eights.
-kulebyaka shows [ Qd, Ts ]a pair of Tens.
-kulebyaka wins $29.50 USD from the main pot with a pair of Tens.
+lenstr1 calls [$0.10 USD]
+rickybobby83 has left the table.
+Te-ta-tet folds
+Raskolnikov89 folds
+DarkSun2011 folds
+Bavariared calls [$0.10 USD]
+joyce.lunoue calls [$0.10 USD]
+Kruglenya77 folds
+MasterP002 checks
+** Dealing Flop ** [ Qs, 7h, 2s ]
+MasterP002 checks
+lenstr1 checks
+Bavariared checks
+joyce.lunoue checks
+** Dealing Turn ** [ 7s ]
+MasterP002 checks
+lenstr1 checks
+Bavariared checks
+joyce.lunoue checks
+** Dealing River ** [ Kc ]
+MasterP002 checks
+lenstr1 bets [$0.10 USD]
+Bavariared folds
+joyce.lunoue folds
+MasterP002 folds
+lenstr1 does not show cards.
+lenstr1 wins $0.53 USD

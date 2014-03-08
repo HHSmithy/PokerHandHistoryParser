@@ -1,13 +1,13 @@
 ﻿<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem NL $2/$4</gametype>
-    <tablename>Bovensmilde, 629228901</tablename>
-    <tablecurrency>USD</tablecurrency>
+    <gametype>Holdem NL €0.50/€1</gametype>
+    <tablename>Auli, 817034223</tablename>
+    <tablecurrency>EUR</tablecurrency>
     <duration>N/A</duration>
     <gamecount>N/A</gamecount>
-    <startdate>2012-05-28 23:44:30</startdate>
-    <currency>USD</currency>
+    <startdate>2014-01-06 15:17:01</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
     <bets>N/A</bets>
     <wins>N/A</wins>
@@ -16,34 +16,37 @@
     <ipoints>N/A</ipoints>
     <statuspoints>N/A</statuspoints>
     <awardpoints>N/A</awardpoints>
-    <is_asian>0</is_asian>
   </general>
-  <game gamecode="3302716193">
+  <game gamecode="5383809491">
     <general>
-      <startdate>2012-05-28 23:44:47</startdate>
+      <startdate>2014-01-06 15:30:38</startdate>
       <players>
-        <player seat="4" name="tvlaozi" chips="$393.08" dealer="1" win="$33.10" bet="$24" rebuy="0" addon="0" />
-        <player seat="7" name="SoiErik" chips="$400" dealer="0" win="$0" bet="$2" rebuy="0" addon="0" />
-        <player seat="9" name="TTR126824852" chips="$400" dealer="0" win="$0" bet="$8" rebuy="0" addon="0" />
+        <player seat="2" name="soulIIsoul" chips="€54.20" dealer="0" win="€0" bet="€0.50" rebuy="0" addon="0" reg_code="-" />
+        <player seat="3" name="HelpRequired" chips="€100" dealer="0" win="€0" bet="€1" rebuy="0" addon="0" reg_code="-" />
+        <player seat="4" name="Lo4everlove" chips="€159.85" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="silverbackmoney" chips="€38" dealer="0" win="€4.50" bet="€3" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="IrunlikeBolt" chips="€100" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="9" name="kudox33" chips="€33.60" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="10" name="BIGandSCARE" chips="€42.70" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="SoiErik" type="1" sum="$2" cards="[cards]" />
-      <action no="2" player="TTR126824852" type="2" sum="$4" cards="[cards]" />
+      <action no="1" player="soulIIsoul" type="1" sum="€0.50" cards="[cards]" />
+      <action no="2" player="HelpRequired" type="2" sum="€1" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="tvlaozi">X X</cards>
-      <action no="3" player="tvlaozi" type="23" sum="$8" cards="" />
-      <cards type="Pocket" player="SoiErik">X X</cards>
-      <action no="4" player="SoiErik" type="0" sum="$0" cards="" />
-      <cards type="Pocket" player="TTR126824852">X X</cards>
-      <action no="5" player="TTR126824852" type="3" sum="$4" cards="" />
-    </round>
-    <round no="2">
-      <cards type="Flop" player="">C10 CQ H4</cards>
-      <action no="7" player="tvlaozi" type="5" sum="$16" cards="" />
-      <action no="6" player="TTR126824852" type="4" sum="$0" cards="" />
-      <action no="8" player="TTR126824852" type="0" sum="$0" cards="" />
+      <cards type="Pocket" player="soulIIsoul">X X</cards>
+      <action no="7" player="soulIIsoul" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="HelpRequired">X X</cards>
+      <action no="8" player="HelpRequired" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="Lo4everlove">X X</cards>
+      <action no="3" player="Lo4everlove" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="silverbackmoney">X X</cards>
+      <action no="4" player="silverbackmoney" type="23" sum="€3" cards="" />
+      <cards type="Pocket" player="kudox33">X X</cards>
+      <action no="5" player="kudox33" type="0" sum="€0" cards="" />
+      <cards type="Pocket" player="BIGandSCARE">X X</cards>
+      <action no="6" player="BIGandSCARE" type="0" sum="€0" cards="" />
     </round>
   </game>
 </session>

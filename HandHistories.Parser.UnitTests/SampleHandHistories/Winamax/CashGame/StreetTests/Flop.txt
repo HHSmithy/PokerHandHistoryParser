@@ -1,0 +1,19 @@
+﻿Winamax Poker - CashGame - HandId: #5281577-483-1382586829 - Holdem no limit (0.50€/1€) - 2013/10/24 03:53:49 UTC
+Table: 'Gold Coast-Tweed 13' 2-max (real money) Seat #2 is the button
+Seat 1: Barthez91 (112.62€)
+Seat 2: titi63000 (137.43€)
+*** ANTE/BLINDS ***
+titi63000 posts small blind 0.50€
+Barthez91 posts big blind 1€
+*** PRE-FLOP *** 
+titi63000 raises 1.50€ to 2.50€
+Barthez91 raises 5€ to 7.50€
+titi63000 calls 5€
+*** FLOP *** [3d 3s 2s]
+Barthez91 bets 7.50€
+titi63000 folds
+Barthez91 collected 21.52€ from pot
+*** SUMMARY ***
+Total pot 21.52€ | Rake 0.98€
+Board: [7h Qs 3c]
+Seat 1: Barthez91 (big blind) won 21.52€

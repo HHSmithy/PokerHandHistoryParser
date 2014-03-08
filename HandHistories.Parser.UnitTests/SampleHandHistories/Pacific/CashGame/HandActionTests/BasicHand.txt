@@ -1,22 +1,19 @@
-﻿#Game No : 176549605
-***** Cassava Hand History for Game 176549605 *****
-$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 21:41:48
-Table Colombes (Real Money)
-Seat 6 is the button
-Total number of players : 5
-Seat 1: ThrCnBeOnly1 ( $12,490 )
-Seat 2: OprahTiltfre ( $50,000 )
-Seat 4: LitFaSlane ( $15,995 )
-Seat 6: fifafairplay ( $16,995 )
-Seat 7: engils ( $5,000 )
-engils posts small blind [$500]
-ThrCnBeOnly1 posts big blind [$1,000]
+﻿#Game No : 349736402
+***** 888poker Hand History for Game 349736402 *****
+$0.05/$0.10 Blinds No Limit Holdem - *** 06 01 2014 22:40:28
+Table Abbotsford 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 2
+Seat 4: silas_tomkyn ( $10.98 )
+Seat 9: FCSM_1935 ( $4.66 )
+FCSM_1935 posts small blind [$0.05]
+silas_tomkyn posts big blind [$0.10]
 ** Dealing down cards **
-OprahTiltfre raises [$5,000]
-LitFaSlane folds
-fifafairplay folds
-engils folds
-ThrCnBeOnly1 folds
+FCSM_1935 calls [$0.05]
+silas_tomkyn checks
+** Dealing flop ** [ Jc, Kc, 3c ]
+silas_tomkyn checks
+FCSM_1935 bets [$0.10]
+silas_tomkyn folds
 ** Summary **
-OprahTiltfre did not show his hand
-OprahTiltfre collected [ $2,500 ]
+FCSM_1935 collected [ $0.19 ]

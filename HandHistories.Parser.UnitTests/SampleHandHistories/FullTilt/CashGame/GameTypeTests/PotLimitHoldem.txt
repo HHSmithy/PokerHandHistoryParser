@@ -1,26 +1,18 @@
-﻿#Game No : 11614201072 
-***** Hand History for Game 11614201072 *****
-$50 USD PL Texas Hold'em - Tuesday, April 03, 03:48:45 EDT 2012
-Table Table  131342 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 2/6 
-Seat 3: PI3rdTImpSIBanI ( $97.65 USD )
-Seat 2: marlboro man ( $45.70 USD )
-marlboro man posts small blind [$0.25 USD].
-PI3rdTImpSIBanI posts big blind [$0.50 USD].
-** Dealing down cards **
-marlboro man calls [$0.25 USD]
-PI3rdTImpSIBanI checks
-** Dealing Flop ** [ Kh, 7c, 2h ]
-PI3rdTImpSIBanI bets [$0.71 USD]
-marlboro man calls [$0.71 USD]
-** Dealing Turn ** [ Ts ]
-PI3rdTImpSIBanI checks
-marlboro man checks
-** Dealing River ** [ Tc ]
-PI3rdTImpSIBanI checks
-marlboro man checks
-PI3rdTImpSIBanI shows [ 2c, Qs ]two pairs, Tens and Twos.
-marlboro man shows [ 7s, 9h ]two pairs, Tens and Sevens.
-marlboro man wins $2.30 USD from the main pot with two pairs, Tens and Sevens.
-Game #11614201761 starts.
+﻿Full Tilt Poker Game #33727659185: Table CLD - PL Hold'em - $0.50/$1 - 19:36:22 ET - 2014/01/05
+Seat 1: Palmotix ($102.25)
+Seat 5: Doc Tobing ($76.55)
+Seat 8: 198eR ($65.35), is sitting out
+Doc Tobing posts the small blind of $0.50
+Palmotix posts the big blind of $1
+The button is in seat #5
+*** HOLE CARDS ***
+Doc Tobing raises to $2
+Palmotix folds
+Uncalled bet of $1 returned to Doc Tobing
+Doc Tobing mucks
+Doc Tobing wins the pot ($2)
+*** SUMMARY ***
+Total pot $2 | Rake $0
+Seat 1: Palmotix (big blind) folded before the Flop
+Seat 5: Doc Tobing (small blind) collected ($2), mucked
+Seat 8: 198eR is sitting out

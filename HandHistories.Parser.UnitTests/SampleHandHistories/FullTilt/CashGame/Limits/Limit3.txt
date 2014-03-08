@@ -1,19 +1,33 @@
-﻿Full Tilt Poker Game #26876082638: Table GiftAndTheCurse (6 max) - $100/$200 - Limit Hold'em - 09:18:12 ET - 2011/01/01
-Seat 1: Neo81 ($2,000), is sitting out
-Seat 2: skillgamblin ($2,400)
-Seat 6: Simpiwe ($4,000)
-Simpiwe has 5 seconds left to act
-Simpiwe posts the small blind of $50
-skillgamblin posts the big blind of $100
-The button is in seat #6
+﻿Full Tilt Poker Game #33728757016: Table Soft (6 max) - FL Hold'em - $5/$10 - 04:44:14 ET - 2014/01/06
+Seat 1: chiles0n ($250)
+Seat 3: BeetRootSalad ($77)
+Seat 4: ptci88 ($405.50)
+ptci88 posts the small blind of $2.50
+chiles0n posts the big blind of $5
+The button is in seat #3
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-Simpiwe folds
-Uncalled bet of $50 returned to skillgamblin
-skillgamblin mucks
-skillgamblin wins the pot ($100)
+BeetRootSalad folds
+ptci88 raises to $10
+chiles0n raises to $15
+ptci88 calls $5
+*** FLOP *** [Qs Jh Ks] (Total Pot: $30, 2 Players)
+ptci88 checks
+chiles0n bets $5
+ptci88 calls $5
+*** TURN *** [Qs Jh Ks] [5h] (Total Pot: $40, 2 Players)
+ptci88 checks
+chiles0n bets $10
+ptci88 calls $10
+*** RIVER *** [Qs Jh Ks 5h] [As] (Total Pot: $60, 2 Players)
+ptci88 checks
+chiles0n bets $10
+ptci88 folds
+Uncalled bet of $10 returned to chiles0n
+chiles0n mucks
+chiles0n wins the pot ($59)
 *** SUMMARY ***
-Total pot $100 | Rake $0
-Seat 1: Neo81 is sitting out
-Seat 2: skillgamblin (big blind) collected ($100), mucked
-Seat 6: Simpiwe (small blind) folded before the Flop
+Total pot $60 | Rake $1
+Board: [Qs Jh Ks 5h As]
+Seat 1: chiles0n (big blind) collected ($59), mucked
+Seat 3: BeetRootSalad (button) didn't bet (folded)
+Seat 4: ptci88 (small blind) folded on the River

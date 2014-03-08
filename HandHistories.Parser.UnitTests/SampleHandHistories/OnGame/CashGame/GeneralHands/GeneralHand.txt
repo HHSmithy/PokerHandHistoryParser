@@ -1,30 +1,31 @@
-﻿***** History for hand R5-244090560-39 *****
-Start hand: Mon May 28 08:08:00 CET 2012
-Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
-Button: seat 10
-Players in round: 4
-Seat 1: zatli74 ($19.10) 
-Seat 3: GlassILass ($18.95) 
-Seat 9: EvilJihnny99 ($41.86) 
-Seat 10: burtias ($24.50) 
-GlassILass posts small blind ($0.25)
-EvilJihnny99 posts big blind ($0.25)
+﻿***** History for hand R5-361850810-464 *****
+Start hand: Mon Jan 06 01:00:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 1: BlackH0L3 ($113.97) 
+Seat 2: Cockatrice ($97.84) 
+Seat 7: BONUS 1OOO ($135.01) 
+Seat 8: fyabcf ($238.65) 
+Seat 9: kliketiklok ($101.28) 
+Seat 10: Dbcee89 ($100.00) 
+kliketiklok posts small blind ($0.50)
+Dbcee89 posts big blind ($1)
 ---
 Dealing pocket cards
-burtias folds
-zatli74 raises $1.00 to $1.00
-GlassILass calls $0.75
-EvilJihnny99 folds
---- Dealing flop [Js, 2h, 9d]
-GlassILass checks
-zatli74 bets $2.25
-GlassILass folds
+BlackH0L3 folds
+Cockatrice folds
+BONUS 1OOO folds
+fyabcf folds
+kliketiklok folds
 ---
 Summary:
-Main pot: $2.25 won by zatli74 ($2.14)
-Rake taken: $0.11
-Seat 1: zatli74 ($20.24), net: +$1.14
-Seat 3: GlassILass ($17.95), net: -$1.00
-Seat 9: EvilJihnny99 ($41.61), net: -$0.25
-Seat 10: burtias ($24.50), net: -$0.00
-***** End of hand R5-244090560-39 *****`
+Main pot: $1.00 won by Dbcee89 ($1.00)
+Rake taken: $0.00
+Seat 1: BlackH0L3 ($113.97), net: -$0.00
+Seat 2: Cockatrice ($97.84), net: -$0.00
+Seat 7: BONUS 1OOO ($135.01), net: -$0.00
+Seat 8: fyabcf ($238.65), net: -$0.00
+Seat 9: kliketiklok ($100.78), net: -$0.50
+Seat 10: Dbcee89 ($100.50), net: +$0.50
+***** End of hand R5-361850810-464 *****

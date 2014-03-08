@@ -1,0 +1,14 @@
+﻿Winamax Poker - CashGame - HandId: #5334642-851-1383822088 - Holdem no limit (3€/6€) - 2013/11/07 11:01:28 UTC
+Table: 'Dublin' 5-max (real money) Seat #5 is the button
+Seat 2: TORINOFA (531.21€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+ovechkin08 posts small blind 3€
+TORINOFA posts big blind 6€
+*** PRE-FLOP *** 
+ovechkin08 raises 12€ to 18€
+TORINOFA folds
+ovechkin08 collected 24€ from pot
+*** SUMMARY ***
+Total pot 24€ | No rake
+Seat 5: ovechkin08 (small blind) (button) won 24€

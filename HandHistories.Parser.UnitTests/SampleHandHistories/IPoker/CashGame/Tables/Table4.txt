@@ -1,13 +1,14 @@
-﻿<session sessioncode="0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
   <general>
     <mode>real</mode>
-    <gametype>Holdem L $3/$6</gametype>
-    <tablename>Tilsonburg, 51071661</tablename>
-    <tablecurrency>USD</tablecurrency>
+    <gametype>Holdem NL £0.50/£1</gametype>
+    <tablename>(Shallow) Haalderen, 755803691</tablename>
+    <tablecurrency>GBP</tablecurrency>
     <duration>N/A</duration>
     <gamecount>N/A</gamecount>
-    <startdate>2012-05-28 16:30:35</startdate>
-    <currency>USD</currency>
+    <startdate>2014-01-06 01:19:22</startdate>
+    <currency></currency>
     <nickname>N/A</nickname>
     <bets>N/A</bets>
     <wins>N/A</wins>
@@ -16,37 +17,42 @@
     <ipoints>N/A</ipoints>
     <statuspoints>N/A</statuspoints>
     <awardpoints>N/A</awardpoints>
-    <is_asian>0</is_asian>
   </general>
-  <game gamecode="3302181176">
+  <game gamecode="5382837311">
     <general>
-      <startdate>2012-05-28 16:30:58</startdate>
+      <startdate>2014-01-06 01:20:19</startdate>
       <players>
-        <player seat="3" name="aremomak" chips="$54" dealer="1" win="$12" bet="$9" rebuy="0" addon="0" />
-        <player seat="4" name="ziczaczic" chips="$360" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" />
-        <player seat="6" name="slowstorm" chips="$125.60" dealer="0" win="$0" bet="$3" rebuy="0" addon="0" />
+        <player seat="1" name="Kevinuts" chips="£99.66" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" reg_code="-" />
+        <player seat="3" name="Technostyle96" chips="£67.84" dealer="1" win="£0" bet="£4" rebuy="0" addon="0" reg_code="-" />
+        <player seat="5" name="Maksimka131415" chips="£14.05" dealer="0" win="£0" bet="£0.50" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="Faust1808" chips="£50" dealer="0" win="£0" bet="£1" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="Jessie2013" chips="£20.75" dealer="0" win="£15.05" bet="£10" rebuy="0" addon="0" reg_code="-" />
+        <player seat="10" name="xxSWEARENGENxx" chips="£31.95" dealer="0" win="£0" bet="£0" rebuy="0" addon="0" reg_code="-" />
       </players>
     </general>
     <round no="0">
-      <action no="1" player="aremomak" type="1" sum="$1.50" cards="[cards]" />
-      <action no="2" player="slowstorm" type="2" sum="$3" cards="[cards]" />
+      <action no="1" player="Maksimka131415" type="1" sum="£0.50" cards="[cards]" />
+      <action no="2" player="Faust1808" type="2" sum="£1" cards="[cards]" />
     </round>
     <round no="1">
-      <cards type="Pocket" player="aremomak">X X</cards>
-      <action no="3" player="aremomak" type="3" sum="$1.50" cards="" />
-      <cards type="Pocket" player="slowstorm">X X</cards>
-      <action no="4" player="slowstorm" type="4" sum="$0" cards="" />
+      <cards type="Pocket" player="Kevinuts">X X</cards>
+      <action no="5" player="Kevinuts" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="Technostyle96">X X</cards>
+      <action no="6" player="Technostyle96" type="23" sum="£4" cards="" />
+      <cards type="Pocket" player="Maksimka131415">X X</cards>
+      <action no="7" player="Maksimka131415" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="Faust1808">X X</cards>
+      <action no="8" player="Faust1808" type="0" sum="£0" cards="" />
+      <cards type="Pocket" player="Jessie2013">X X</cards>
+      <action no="3" player="Jessie2013" type="3" sum="£1" cards="" />
+      <action no="9" player="Jessie2013" type="3" sum="£3" cards="" />
+      <cards type="Pocket" player="xxSWEARENGENxx">X X</cards>
+      <action no="4" player="xxSWEARENGENxx" type="0" sum="£0" cards="" />
     </round>
     <round no="2">
-      <cards type="Flop" player="">CK C5 H5</cards>
-      <action no="6" player="aremomak" type="4" sum="$0" cards="" />
-      <action no="5" player="slowstorm" type="4" sum="$0" cards="" />
-    </round>
-    <round no="3">
-      <cards type="Turn" player="">C9</cards>
-      <action no="8" player="aremomak" type="5" sum="$6" cards="" />
-      <action no="7" player="slowstorm" type="4" sum="$0" cards="" />
-      <action no="9" player="slowstorm" type="0" sum="$0" cards="" />
+      <cards type="Flop" player="">H3 C10 H9</cards>
+      <action no="11" player="Technostyle96" type="0" sum="£0" cards="" />
+      <action no="10" player="Jessie2013" type="5" sum="£6" cards="" />
     </round>
   </game>
 </session>

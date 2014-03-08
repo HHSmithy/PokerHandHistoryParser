@@ -1,32 +1,30 @@
-﻿***** Hand History for Game 11614718977 *****
-$400 USD PL Omaha Hi-Lo - Tuesday, April 03, 08:46:19 EDT 2012
-Table Table  134652 (No DP) (Real Money)
-Seat 4 is the button
-Total number of players : 4/6 
-Seat 6: Scoopydoo81 ( $701 USD )
-Seat 1: janusfaced ( $448.25 USD )
-Seat 4: robertp10 ( $164.50 USD )
-Seat 3: wembrinator ( $105 USD )
-Scoopydoo81 posts small blind [$2 USD].
-janusfaced posts big blind [$4 USD].
+﻿***** Hand History for Game 13550918572 *****
+$100 USD PL Omaha Hi-Lo - Monday, January 06, 10:49:40 EST 2014
+Table Paris (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 3: MrGoldenCox ( $100 USD )
+Seat 1: annajulia222 ( $68 USD )
+Seat 5: berndi1488 ( $26 USD )
+Seat 2: fistfock123 ( $30 USD )
+Seat 4: prinzgoldi ( $84.98 USD )
+Seat 6: robertp10 ( $103.65 USD )
+annajulia222 posts small blind [$0.50 USD].
+fistfock123 posts big blind [$1 USD].
 ** Dealing down cards **
-wembrinator folds
-DamoklesBlade has joined the table.
-robertp10 folds
-Scoopydoo81 calls [$2 USD]
-janusfaced checks
-** Dealing Flop ** [ Th, Tc, 5c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing Turn ** [ 7c ]
-Scoopydoo81 checks
-janusfaced checks
-** Dealing River ** [ 3s ]
-Scoopydoo81 checks
-janusfaced checks
-Scoopydoo81 shows [ Js, 4d, As, 9d ]a pair of Tens.
-Scoopydoo81 shows7,5,4,3,A  for low.
-janusfaced shows [ Jh, 7h, 9c, 6d ]two pairs, Tens and Sevens.
-janusfaced wins $3.80 USD from the main pot with two pairs, Tens and Sevens.
-Scoopydoo81 wins Lo ($3.80 USD) from the main pot with 7,5,4,3,A.
-wembrinator has left the table.
+prinzgoldi folds
+berndi1488 folds
+robertp10 raises [$3.50 USD]
+annajulia222 folds
+fistfock123 raises [$10 USD]
+robertp10 raises [$27.50 USD]
+fistfock123 is all-In  [$19 USD]
+** Dealing Flop ** [ 5c, 2d, Jh ]
+** Dealing Turn ** [ 4d ]
+** Dealing River ** [ 9d ]
+robertp10 shows [ Kh, Kd, 4c, Ac ]a pair of Kings.
+fistfock123 shows [ 8s, Qh, Ad, 7h ]high card Ace.
+fistfock123 shows7,5,4,2,A  for low.
+robertp10 wins $1 USD from the side pot 1 with a pair of Kings.
+robertp10 wins $28.75 USD from the main pot with a pair of Kings.
+fistfock123 wins Lo ($28.75 USD) from the main pot with 7,5,4,2,A.

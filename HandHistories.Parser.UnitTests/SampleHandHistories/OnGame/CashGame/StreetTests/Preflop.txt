@@ -1,21 +1,21 @@
-﻿***** History for hand R5-243945479-6 *****
-Start hand: Sun May 27 10:26:00 CEST 2012
-Table: [SPEED] Austin [243945479] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
-Button: seat 5
-Players in round: 2
-Seat 5: klarasbanana ($1299.00) 
-Seat 8: iveyfan89 ($1030.00) 
-klarasbanana posts small blind ($5)
-iveyfan89 posts big blind ($10)
+﻿***** History for hand R5-361717011-37 *****
+Start hand: Sun Jan 05 09:08:00 CET 2014
+Table: [SPEED] Dallas [361717011] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 3
+Seat 3: bil3176 ($100.90) 
+Seat 4: ladyclitoris ($100.00) 
+Seat 8: dosmou1 ($36.35) 
+bil3176 posts small blind ($0.50)
+dosmou1 posts big blind ($1)
 ---
 Dealing pocket cards
-klarasbanana raises $15.00 to $20.00
-iveyfan89 raises $70.00 to $80.00
-klarasbanana folds
+bil3176 folds
 ---
 Summary:
-Main pot: $40.00 won by iveyfan89 ($40.00)
+Main pot: $1.00 won by dosmou1 ($1.00)
 Rake taken: $0.00
-Seat 5: klarasbanana ($1279.00), net: -$20.00
-Seat 8: iveyfan89 ($1050.00), net: +$20.00
-***** End of hand R5-243945479-6 *****
+Seat 3: bil3176 ($100.40), net: -$0.50
+Seat 4: ladyclitoris ($100.00), net: -$0.00
+Seat 8: dosmou1 ($36.85), net: +$0.50
+***** End of hand R5-361717011-37 *****

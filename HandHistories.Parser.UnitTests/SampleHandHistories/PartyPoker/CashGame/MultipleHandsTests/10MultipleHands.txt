@@ -1,205 +1,375 @@
-﻿***** Hand History for Game 11614543080 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:24:56 EDT 2012
-Table Table  167035 (No DP) (Real Money)
+﻿***** Hand History for Game 13549887181 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:00:42 EST 2014
+Table Des Moines (Real Money)
+Seat 1 is the button
+Total number of players : 8/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $165.26 USD )
+Seat 1: Budhareaction ( $142.87 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 2: michel129 ( $213.70 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+michel129 posts small blind [$0.50 USD].
+BCE KPACuBO posts big blind [$1 USD].
+** Dealing down cards **
+Skalidis folds
+Badboybaddy raises [$2 USD]
+BKS1945 folds
+pokerkid6767 did not respond in time
+pokerkid6767 folds
+Budhareaction folds
+michel129 calls [$1.50 USD]
+BCE KPACuBO folds
+** Dealing Flop ** [ 2c, 6d, Jc ]
+michel129 checks
+Badboybaddy checks
+** Dealing Turn ** [ 3h ]
+michel129 checks
+Badboybaddy checks
+** Dealing River ** [ Ks ]
+michel129 checks
+Badboybaddy checks
+michel129 shows [ 5s, Qc ]high card King.
+Badboybaddy shows [ Ad, 9c ]high card Ace.
+Badboybaddy wins $4.75 USD from the main pot with high card, Ace.
+
+
+***** Hand History for Game 13549888675 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:01:41 EST 2014
+Table Des Moines (Real Money)
 Seat 2 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $18.54 USD )
-Seat 5: trotylion ( $77.61 USD )
-aceofsamurai posts small blind [$0.25 USD].
-trotylion posts big blind [$0.50 USD].
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $168.01 USD )
+Seat 1: Budhareaction ( $142.87 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $211.70 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+BCE KPACuBO posts small blind [$0.50 USD].
+Badboybaddy posts big blind [$1 USD].
 ** Dealing down cards **
-aceofsamurai raises [$1.25 USD]
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $2 USD
-
-
-***** Hand History for Game 11614543847 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:25:16 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $19.04 USD )
-Seat 5: trotylion ( $77.11 USD )
-trotylion posts small blind [$0.25 USD].
-aceofsamurai posts big blind [$0.50 USD].
-** Dealing down cards **
-trotylion raises [$1.25 USD]
-aceofsamurai calls [$1 USD]
-** Dealing Flop ** [ Qc, Qs, 3s ]
-aceofsamurai checks
-trotylion checks
-** Dealing Turn ** [ 3d ]
-aceofsamurai bets [$2.85 USD]
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $5.70 USD
-
-
-***** Hand History for Game 11614544726 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:25:41 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.39 USD )
-Seat 5: trotylion ( $75.61 USD )
-aceofsamurai posts small blind [$0.25 USD].
-trotylion posts big blind [$0.50 USD].
-** Dealing down cards **
-aceofsamurai calls [$0.25 USD]
-trotylion checks
-** Dealing Flop ** [ Jd, 8c, Jc ]
-trotylion checks
-aceofsamurai bets [$0.50 USD]
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $1.45 USD
-
-
-
-***** Hand History for Game 11614545300 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:25:59 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.84 USD )
-Seat 5: trotylion ( $75.11 USD )
-trotylion posts small blind [$0.25 USD].
-aceofsamurai posts big blind [$0.50 USD].
-** Dealing down cards **
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $0.75 USD
-
-
-***** Hand History for Game 11614545699 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:26:11 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $21.09 USD )
-Seat 5: trotylion ( $74.86 USD )
-aceofsamurai posts small blind [$0.25 USD].
-trotylion posts big blind [$0.50 USD].
-** Dealing down cards **
-aceofsamurai calls [$0.25 USD]
-trotylion checks
-** Dealing Flop ** [ 4c, Jh, 4s ]
-trotylion checks
-aceofsamurai checks
-** Dealing Turn ** [ Qs ]
-trotylion checks
-aceofsamurai checks
-** Dealing River ** [ 3s ]
-trotylion checks
-aceofsamurai checks
-trotylion shows [ Js, 6h, Td, Kc ]two pairs, Jacks and Fours.
-aceofsamurai doesn't show [ Th, 5s, Ac, 2h ]a pair of Fours.
-trotylion wins $0.95 USD from the main pot with two pairs, Jacks and Fours.
-
-
-
-***** Hand History for Game 11614546608 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:26:37 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.59 USD )
-Seat 5: trotylion ( $75.31 USD )
-trotylion posts small blind [$0.25 USD].
-aceofsamurai posts big blind [$0.50 USD].
-** Dealing down cards **
-trotylion raises [$1.25 USD]
-aceofsamurai calls [$1 USD]
-** Dealing Flop ** [ Ac, Ts, Ks ]
-aceofsamurai checks
-trotylion checks
+BKS1945 folds
+Budhareaction folds
+michel129 calls [$1 USD]
+BCE KPACuBO folds
+Badboybaddy checks
+** Dealing Flop ** [ 2h, 6s, 9s ]
+Badboybaddy bets [$1 USD]
+michel129 calls [$1 USD]
 ** Dealing Turn ** [ Qc ]
-aceofsamurai bets [$2.85 USD]
-trotylion raises [$11.40 USD]
-aceofsamurai is all-In  [$16.24 USD]
-trotylion calls [$7.69 USD]
+Badboybaddy bets [$2 USD]
+michel129 calls [$2 USD]
+** Dealing River ** [ 2c ]
+Badboybaddy checks
+michel129 bets [$8.08 USD]
+Badboybaddy folds
+michel129 does not show cards.
+michel129 wins $16.16 USD
+
+
+***** Hand History for Game 13549889937 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:02:23 EST 2014
+Table Des Moines (Real Money)
+Seat 4 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $164.01 USD )
+Seat 1: Budhareaction ( $142.87 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $215.78 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+Badboybaddy posts small blind [$0.50 USD].
+BKS1945 posts big blind [$1 USD].
+** Dealing down cards **
+Budhareaction raises [$2 USD]
+michel129 folds
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO folds
+Badboybaddy folds
+BKS1945 folds
+Budhareaction does not show cards.
+Budhareaction wins $3.50 USD
+
+
+***** Hand History for Game 13549890695 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:02:49 EST 2014
+Table Des Moines (Real Money)
+Seat 6 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $163.51 USD )
+Seat 1: Budhareaction ( $144.37 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $215.78 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+BKS1945 posts small blind [$0.50 USD].
+Budhareaction posts big blind [$1 USD].
+** Dealing down cards **
+michel129 calls [$1 USD]
+BCE KPACuBO folds
+Badboybaddy folds
+BKS1945 folds
+Budhareaction raises [$1 USD]
+michel129 calls [$1 USD]
+** Dealing Flop ** [ 4s, Qh, 5d ]
+Budhareaction bets [$3 USD]
+michel129 calls [$3 USD]
+** Dealing Turn ** [ 7s ]
+Budhareaction bets [$9 USD]
+michel129 calls [$9 USD]
+** Dealing River ** [ 3d ]
+Budhareaction bets [$16 USD]
+michel129 raises [$32 USD]
+Budhareaction calls [$16 USD]
+michel129 shows [ 6h, Kh ]a straight, Three to Seven.
+Budhareaction doesn't show [ 5h, 5c ]three of a kind, Fives.
+michel129 wins $89.50 USD from the main pot with a straight, Three to Seven.
+
+
+***** Hand History for Game 13549892587 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:03:52 EST 2014
+Table Des Moines (Real Money)
+Seat 8 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $163.51 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $259.28 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+Budhareaction posts small blind [$0.50 USD].
+michel129 posts big blind [$1 USD].
+** Dealing down cards **
+BCE KPACuBO raises [$3 USD]
+Badboybaddy folds
+BKS1945 folds
+Budhareaction folds
+michel129 raises [$4 USD]
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO calls [$2 USD]
+** Dealing Flop ** [ Ad, Jd, 8d ]
+michel129 checks
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO checks
+** Dealing Turn ** [ 2c ]
+michel129 checks
+BCE KPACuBO checks
+** Dealing River ** [ Td ]
+michel129 bets [$9.98 USD]
+BCE KPACuBO calls [$9.98 USD]
+michel129 shows [ Ks, 2d ]a flush, Ace high.
+BCE KPACuBO doesn't show [ Tc, Th ]three of a kind, Tens.
+michel129 wins $28.94 USD from the main pot with a flush, Ace high.
+
+
+***** Hand History for Game 13549896018 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:05:13 EST 2014
+Table Des Moines (Real Money)
+Seat 1 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $100 USD )
+Seat 6: Badboybaddy ( $163.51 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $273.24 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+michel129 posts small blind [$0.50 USD].
+crapprotectd posts big blind [$1 USD].
+** Dealing down cards **
+BCE KPACuBO folds
+Badboybaddy folds
+BKS1945 raises [$3 USD]
+Budhareaction folds
+michel129 calls [$2.50 USD]
+crapprotectd folds
+** Dealing Flop ** [ 8h, 4d, Qh ]
+michel129 checks
+BKS1945 checks
+** Dealing Turn ** [ 7h ]
+michel129 checks
+BKS1945 checks
+** Dealing River ** [ As ]
+michel129 checks
+BKS1945 checks
+michel129 shows [ Kd, 6h ]high card Ace.
+BKS1945 shows [ 3d, 3h ]a pair of Threes.
+BKS1945 wins $6.65 USD from the main pot with a pair of Threes.
+
+
+***** Hand History for Game 13549897705 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:06:07 EST 2014
+Table Des Moines (Real Money)
+Seat 2 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $103.65 USD )
+Seat 6: Badboybaddy ( $163.51 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $270.24 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+crapprotectd posts small blind [$0.50 USD].
+BCE KPACuBO posts big blind [$1 USD].
+** Dealing down cards **
+Badboybaddy raises [$2 USD]
+BKS1945 calls [$2 USD]
+Budhareaction folds
+michel129 calls [$2 USD]
+crapprotectd folds
+BCE KPACuBO folds
+** Dealing Flop ** [ Kd, Qs, 3s ]
+Badboybaddy bets [$2 USD]
+BKS1945 folds
+michel129 folds
+Badboybaddy does not show cards.
+Badboybaddy wins $9.13 USD
+
+
+***** Hand History for Game 13549898757 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:06:43 EST 2014
+Table Des Moines (Real Money)
+Seat 3 is the button
+Total number of players : 9/9 
+Seat 4: BCE KPACuBO ( $100 USD )
+Seat 8: BKS1945 ( $101.65 USD )
+Seat 6: Badboybaddy ( $168.64 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $100 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $268.24 USD )
+Seat 9: pokerkid6767 ( $64.98 USD )
+BCE KPACuBO posts small blind [$0.50 USD].
+Skalidis posts big blind [$1 USD].
+** Dealing down cards **
+Badboybaddy folds
+BKS1945 folds
+Budhareaction folds
+michel129 calls [$1 USD]
+crapprotectd folds
+BCE KPACuBO calls [$0.50 USD]
+Skalidis raises [$4 USD]
+pokerkid6767 has left the table.
+michel129 calls [$4 USD]
+BCE KPACuBO calls [$4 USD]
+** Dealing Flop ** [ 7h, 5s, Qc ]
+BCE KPACuBO checks
+Skalidis bets [$7.12 USD]
+michel129 folds
+BCE KPACuBO calls [$7.12 USD]
+** Dealing Turn ** [ 3d ]
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO checks
+Skalidis checks
+** Dealing River ** [ 6d ]
+BCE KPACuBO bets [$20.83 USD]
+Skalidis calls [$20.83 USD]
+BCE KPACuBO shows [ 7d, 7c ]three of a kind, Sevens.
+Skalidis doesn't show [ Qh, 9s ]a pair of Queens.
+BCE KPACuBO wins $67.90 USD from the main pot with three of a kind, Sevens.
+
+
+***** Hand History for Game 13549900240 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:07:33 EST 2014
+Table Des Moines (Real Money)
+Seat 4 is the button
+Total number of players : 8/9 
+Seat 4: BCE KPACuBO ( $134.95 USD )
+Seat 8: BKS1945 ( $101.65 USD )
+Seat 6: Badboybaddy ( $168.64 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $67.05 USD )
+Seat 3: crapprotectd ( $100 USD )
+Seat 2: michel129 ( $263.24 USD )
+Skalidis posts small blind [$0.50 USD].
+Badboybaddy posts big blind [$1 USD].
+** Dealing down cards **
+BKS1945 folds
+Budhareaction folds
+michel129 calls [$1 USD]
+crapprotectd raises [$3 USD]
+BCE KPACuBO folds
+Skalidis calls [$2.50 USD]
+Badboybaddy folds
+michel129 calls [$2 USD]
+** Dealing Flop ** [ As, Th, 3h ]
+Skalidis checks
+michel129 checks
+crapprotectd bets [$7 USD]
+Skalidis calls [$7 USD]
+michel129 folds
+** Dealing Turn ** [ Kc ]
+Skalidis checks
+crapprotectd checks
+** Dealing River ** [ Qh ]
+Skalidis checks
+crapprotectd checks
+Skalidis shows [ Ac, Qc ]two pairs, Aces and Queens.
+crapprotectd shows [ Qd, Ad ]two pairs, Aces and Queens.
+crapprotectd wins $11.40 USD from the main pot with two pairs, Aces and Queens.
+Skalidis wins $11.40 USD from the main pot with two pairs, Aces and Queens.
+
+
+***** Hand History for Game 13549902526 *****
+$0.50/$1 USD NL Texas Hold'em - Sunday, January 05, 19:08:47 EST 2014
+Table Des Moines (Real Money)
+Seat 5 is the button
+Total number of players : 8/9 
+Seat 4: BCE KPACuBO ( $134.95 USD )
+Seat 8: BKS1945 ( $101.65 USD )
+Seat 6: Badboybaddy ( $167.64 USD )
+Seat 1: Budhareaction ( $100 USD )
+Seat 7: HITYESCA ( $125.18 USD )
+Seat 5: Skalidis ( $68.45 USD )
+Seat 3: crapprotectd ( $101.40 USD )
+Seat 2: michel129 ( $260.24 USD )
+Badboybaddy posts small blind [$0.50 USD].
+BKS1945 posts big blind [$1 USD].
+** Dealing down cards **
+Budhareaction folds
+michel129 calls [$1 USD]
+crapprotectd folds
+BCE KPACuBO raises [$3 USD]
+Skalidis folds
+Badboybaddy folds
+BKS1945 folds
+michel129 calls [$2 USD]
+** Dealing Flop ** [ 2c, 7c, 4d ]
+michel129 checks
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO bets [$6.34 USD]
+michel129 calls [$6.34 USD]
+** Dealing Turn ** [ 3c ]
+michel129 checks
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO bets [$10.59 USD]
+michel129 raises [$21.18 USD]
+BCE KPACuBO calls [$10.59 USD]
 ** Dealing River ** [ 4s ]
-trotylion shows [ 9c, 3h, Tc, Jd ]a straight, Ten to Ace.
-aceofsamurai shows [ Qd, Kc, 3c, Jc ]a straight, Ten to Ace.
-aceofsamurai wins $20.09 USD from the main pot with a straight, Ten to Ace.
-trotylion wins $20.09 USD from the main pot with a straight, Ten to Ace.
-
-
-***** Hand History for Game 11614547894 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:27:14 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.09 USD )
-Seat 5: trotylion ( $74.81 USD )
-aceofsamurai posts small blind [$0.25 USD].
-trotylion posts big blind [$0.50 USD].
-** Dealing down cards **
-aceofsamurai raises [$0.75 USD]
-trotylion calls [$0.50 USD]
-** Dealing Flop ** [ 7c, Ah, 6h ]
-trotylion checks
-aceofsamurai bets [$1.90 USD]
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $3.80 USD
-
-
-
-***** Hand History for Game 11614548552 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:27:33 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.99 USD )
-Seat 5: trotylion ( $73.81 USD )
-trotylion posts small blind [$0.25 USD].
-aceofsamurai posts big blind [$0.50 USD].
-** Dealing down cards **
-trotylion folds
-aceofsamurai does not show cards.
-aceofsamurai wins $0.75 USD
-
-
-***** Hand History for Game 11614550226 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:28:23 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.49 USD )
-Seat 5: trotylion ( $74.31 USD )
-aceofsamurai posts small blind [$0.25 USD].
-trotylion posts big blind [$0.50 USD].
-** Dealing down cards **
-aceofsamurai folds
-trotylion does not show cards.
-trotylion wins $0.75 USD
-
-
-
-***** Hand History for Game 11614550655 *****
-$50 USD PL Omaha - Tuesday, April 03, 07:28:35 EDT 2012
-Table Table  167035 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 2/6 
-Seat 2: aceofsamurai ( $20.24 USD )
-Seat 5: trotylion ( $74.56 USD )
-trotylion posts small blind [$0.25 USD].
-aceofsamurai posts big blind [$0.50 USD].
-** Dealing down cards **
-trotylion raises [$1.25 USD]
-aceofsamurai calls [$1 USD]
-** Dealing Flop ** [ 8c, 4d, Qh ]
-aceofsamurai checks
-trotylion bets [$2.50 USD]
-aceofsamurai calls [$2.50 USD]
-** Dealing Turn ** [ Tc ]
-aceofsamurai checks
-trotylion checks
-** Dealing River ** [ Qs ]
-aceofsamurai checks
-trotylion checks
-aceofsamurai shows [ Ad, 3s, 9d, As ]two pairs, Aces and Queens.
-trotylion doesn't show [ Ah, Jc, 3c, 3h ]two pairs, Queens and Threes.
-aceofsamurai wins $7.60 USD from the main pot with two pairs, Aces and Queens.
+michel129 checks
+BCE KPACuBO will be using his time bank for this hand.
+BCE KPACuBO bets [$52.65 USD]
+michel129 calls [$52.65 USD]
+BCE KPACuBO shows [ 2s, 2d ]a full house, Twos full of Fours.
+michel129 doesn't show [ Kd, Kc ]two pairs, Kings and Fours.
+BCE KPACuBO wins $164.84 USD from the main pot with a full house, Twos full of Fours.

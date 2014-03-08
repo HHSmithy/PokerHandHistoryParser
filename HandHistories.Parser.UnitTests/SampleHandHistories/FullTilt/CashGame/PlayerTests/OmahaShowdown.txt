@@ -1,28 +1,27 @@
-﻿***** Hand History for Game 11614215445 *****
-$1,000 USD PL Omaha - Tuesday, April 03, 04:02:54 EDT 2012
-Table Table  135451 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 6/6 
-Seat 2: Call_911 ( $2,186.72 USD )
-Seat 5: TightRaiseR123 ( $1,888.64 USD )
-Seat 6: donkeykong58 ( $708.75 USD )
-Seat 3: kondilon ( $1,000 USD )
-Seat 1: m3str3n0va ( $1,372.39 USD )
-kondilon posts small blind [$5 USD].
-TightRaiseR123 posts big blind [$10 USD].
-** Dealing down cards **
-donkeykong58 raises [$35 USD]
-m3str3n0va folds
-Call_911 folds
-kondilon raises [$110 USD]
-TightRaiseR123 folds
-donkeykong58 raises [$320 USD]
-kondilon is all-In  [$885 USD]
-donkeykong58 is all-In  [$353.75 USD]
-** Dealing Flop ** [ Qs, 8s, 9c ]
-** Dealing Turn ** [ Jc ]
-** Dealing River ** [ 7c ]
-donkeykong58 shows [ Kh, Qd, Qh, Kd ]three of a kind, Queens.
-kondilon shows [ 3d, 3h, Ac, Ah ]a pair of Aces.
-kondilon wins $291.25 USD from the side pot 1 with a pair of Aces.
-donkeykong58 wins $1,424.50 USD from the main pot with three of a kind, Queens.
+﻿Full Tilt Poker Game #33727560890: Table Huge (heads up) - PL Omaha Hi - $0.50/$1 - 19:10:13 ET - 2014/01/05
+Seat 1: VoitikD ($215.35)
+Seat 2: Mr_Turban ($38.90)
+Mr_Turban posts the small blind of $0.50
+VoitikD posts the big blind of $1
+The button is in seat #2
+*** HOLE CARDS ***
+Mr_Turban raises to $3
+VoitikD calls $2
+*** FLOP *** [Kc Qh Js] (Total Pot: $6, 2 Players)
+VoitikD checks
+Mr_Turban checks
+*** TURN *** [Kc Qh Js] [Td] (Total Pot: $6, 2 Players)
+VoitikD checks
+Mr_Turban checks
+*** RIVER *** [Kc Qh Js Td] [Ad] (Total Pot: $6, 2 Players)
+VoitikD checks
+Mr_Turban checks
+*** SHOW DOWN ***
+Mr_Turban shows [2c Jh 2s 8d] a pair of Jacks
+VoitikD shows [Qc 7d 9c 7h] a straight, King high
+VoitikD wins the pot ($5.70) with a straight, King high
+*** SUMMARY ***
+Total pot $6 | Rake $0.30
+Board: [Kc Qh Js Td Ad]
+Seat 1: VoitikD (big blind) showed [Qc 7d 9c 7h] and won ($5.70) with a straight, King high
+Seat 2: Mr_Turban (small blind) showed [2c Jh 2s 8d] and lost with a pair of Jacks

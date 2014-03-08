@@ -1,28 +1,36 @@
-﻿#Game No : 176549295
-***** Cassava Hand History for Game 176549295 *****
-$500/$1,000 Blinds No Limit Holdem - *** 30 05 2012 21:39:45
-Table Colombes (Real Money)
-Seat 9 is the button
-Total number of players : 6
-Seat 1: ThrCnBeOnly1 ( $5,000 )
-Seat 2: OprahTiltfre ( $9,995 )
-Seat 4: LitFaSlane ( $5,000 )
-Seat 6: fifafairplay ( $18,495 )
-Seat 7: engils ( $5,000 )
-Seat 9: SANP3R ( $9,995 )
-ThrCnBeOnly1 posts small blind [$500]
-OprahTiltfre posts big blind [$1,000]
+﻿#Game No : 349444554
+***** 888poker Hand History for Game 349444554 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 10:56:05
+Table Valledupar 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: dynamoz6 ( $100 )
+Seat 4: qprcuz ( $105.28 )
+Seat 6: FishPredator ( $100 )
+Seat 7: zvony_tango7 ( $100 )
+Seat 9: kiss014 ( $100 )
+zvony_tango7 posts small blind [$0.50]
+kiss014 posts big blind [$1]
+dynamoz6 posts big blind [$1]
 ** Dealing down cards **
-LitFaSlane folds
-fifafairplay folds
-engils folds
-SANP3R folds
-ThrCnBeOnly1 raises [$4,500]
-OprahTiltfre calls [$4,000]
-** Dealing flop ** [ 9d, Ks, Ts ]
-** Dealing turn ** [ Td ]
-** Dealing river ** [ 3d ]
+dynamoz6 checks
+qprcuz calls [$1]
+FishPredator folds
+zvony_tango7 folds
+kiss014 checks
+** Dealing flop ** [ 4h, Kc, 3s ]
+kiss014 checks
+dynamoz6 checks
+qprcuz checks
+** Dealing turn ** [ Kh ]
+kiss014 bets [$2.62]
+dynamoz6 folds
+qprcuz calls [$2.62]
+** Dealing river ** [ 6c ]
+kiss014 bets [$6.55]
+qprcuz raises [$101.66]
+kiss014 calls [$89.83]
 ** Summary **
-ThrCnBeOnly1 shows [ Qd, Kc ]
-OprahTiltfre shows [ As, 4c ]
-ThrCnBeOnly1 collected [ $9,995 ]
+qprcuz shows [ 3d, 3c ]
+kiss014 shows [ 5h, 2h ]
+qprcuz collected [ $197.50 ]

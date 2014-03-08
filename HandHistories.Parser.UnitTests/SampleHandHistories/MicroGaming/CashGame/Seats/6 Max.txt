@@ -1,0 +1,45 @@
+﻿<Game hhversion="4" id="5049101732" date="2013-09-23 14:37:50" unicodetablename="VAB1AHIAYgBvADoAIABIAGkAagBhAGMAawAgADQAMQAgAC0AIACsIDEAMAAwACAATQBhAHgA" tablename="Turbo: Hijack 41 - €100 Max" stakes="0.50|1" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="52">
+   <Seats>
+      <Seat num="1" alias="ybmistake" unicodealias="eQBiAG0AaQBzAHQAYQBrAGUA" balance="12.34" endbalance="12.34"/>
+      <Seat num="2" alias="Wake_Boy" unicodealias="VwBhAGsAZQBfAEIAbwB5AA==" balance="114.46" endbalance="114.44"/>
+      <Seat num="3" alias="AlGundersen" unicodealias="QQBsAEcAdQBuAGQAZQByAHMAZQBuAA==" balance="119.45" endbalance="124.41"/>
+      <Seat num="4" alias="wrodec" unicodealias="dwByAG8AZABlAGMA" balance="25.23" endbalance="25.23" dealer="true"/>
+      <Seat num="5" alias="Hakuhosho" unicodealias="SABhAGsAdQBoAG8AcwBoAG8A" balance="121.25" endbalance="120.75"/>
+      <Seat num="6" alias="letsplay011" unicodealias="bABlAHQAcwBwAGwAYQB5ADAAMQAxAA==" balance="172.84" endbalance="167.84"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="5" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="6" value="1.00"/>
+      <Action seq="3" type="BadBeatContribution" seat="2" value="0.02"/>
+      <Action seq="4" type="BadBeatContribution" seat="3" value="0.02"/>
+      <Action seq="5" type="Fold" seat="1"/>
+      <Action seq="6" type="Fold" seat="2"/>
+      <Action seq="7" type="Call" seat="3" value="1.00"/>
+      <Action seq="8" type="Fold" seat="4"/>
+      <Action seq="9" type="Fold" seat="5"/>
+      <Action seq="10" type="Check" seat="6"/>
+      <Action seq="11" type="DealFlop">
+         <Card value="5" suit="d" id="30"/>
+         <Card value="Q" suit="d" id="37"/>
+         <Card value="2" suit="s" id="1"/>
+      </Action>
+      <Action seq="12" type="Check" seat="6"/>
+      <Action seq="13" type="Check" seat="3"/>
+      <Action seq="14" type="DealTurn">
+         <Card value="3" suit="c" id="15"/>
+      </Action>
+      <Action seq="15" type="Bet" seat="6" value="1.50"/>
+      <Action seq="16" type="Raise" seat="3" value="4.00"/>
+      <Action seq="17" type="Call" seat="6" value="2.50"/>
+      <Action seq="18" type="DealRiver">
+         <Card value="10" suit="h" id="48"/>
+      </Action>
+      <Action seq="19" type="Check" seat="6"/>
+      <Action seq="20" type="Bet" seat="3" value="14.00"/>
+      <Action seq="21" type="Fold" seat="6"/>
+      <Action seq="22" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="23.98" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

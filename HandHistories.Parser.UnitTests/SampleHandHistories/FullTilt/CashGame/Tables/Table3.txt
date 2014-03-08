@@ -1,31 +1,22 @@
-﻿Full Tilt Poker Game #26862610528: Table Missionary Ridge (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:16:56 ET - 2010/12/31
-Seat 1: 20KJAY ($40.90)
-Seat 2: xmartenzix ($38.50)
-Seat 3: Triviani20 ($122.20), is sitting out
-Seat 4: sapsideo ($39.85)
-Seat 5: Fudikratzer ($18.50)
-Seat 6: scarbalius007 ($63.95)
-20KJAY posts the small blind of $0.50
-xmartenzix posts the big blind of $1
-sapsideo posts $1
-The button is in seat #6
+﻿Full Tilt Poker Game #33727724642: Table Oveja (6 max, shallow) - NL Hold'em - $0.50/$1 - 19:55:53 ET - 2014/01/05
+Seat 4: komb ($16.50)
+Seat 6: joaozinhopina ($42.70)
+komb posts the small blind of $0.50
+joaozinhopina posts the big blind of $1
+The button is in seat #4
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-sapsideo checks
-Fudikratzer folds
-scarbalius007 raises to $5
-20KJAY folds
-xmartenzix folds
-sapsideo has 15 seconds left to act
-sapsideo folds
-Uncalled bet of $4 returned to scarbalius007
-scarbalius007 mucks
-scarbalius007 wins the pot ($3.50)
+komb raises to $2
+joaozinhopina calls $1
+*** FLOP *** [3h Ad Kc] (Total Pot: $4, 2 Players)
+joaozinhopina checks
+komb bets $4
+joaozinhopina raises to $40.70, and is all in
+komb folds
+Uncalled bet of $36.70 returned to joaozinhopina
+joaozinhopina mucks
+joaozinhopina wins the pot ($11.50)
 *** SUMMARY ***
-Total pot $3.50 | Rake $0
-Seat 1: 20KJAY (small blind) folded before the Flop
-Seat 2: xmartenzix (big blind) folded before the Flop
-Seat 3: Triviani20 is sitting out
-Seat 4: sapsideo folded before the Flop
-Seat 5: Fudikratzer didn't bet (folded)
-Seat 6: scarbalius007 (button) collected ($3.50), mucked
+Total pot $12 | Rake $0.50
+Board: [3h Ad Kc]
+Seat 4: komb (small blind) folded on the Flop
+Seat 6: joaozinhopina (big blind) collected ($11.50), mucked

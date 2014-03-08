@@ -1,0 +1,52 @@
+﻿<Game hhversion="4" id="5049131775" date="2013-09-23 15:09:52" unicodetablename="SABpAGoAYQBjAGsAIABQAEwATwAgADQAMgAgAC0AIACsIDEAMAAwACAATQBhAHgA" tablename="Hijack PLO 42 - €100 Max" stakes="0.50|1" betlimit="PL" tabletype="Cash Game" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="false" rake="90">
+   <Seats>
+      <Seat num="1" alias="Srajdanek" unicodealias="UwByAGEAagBkAGEAbgBlAGsA" balance="22.50" endbalance="22.50"/>
+      <Seat num="2" alias="edisheri" unicodealias="ZQBkAGkAcwBoAGUAcgBpAA==" balance="156.52" endbalance="155.52"/>
+      <Seat num="3" alias="Justin2010" unicodealias="SgB1AHMAdABpAG4AMgAwADEAMAA=" balance="153.73" endbalance="165.33"/>
+      <Seat num="4" alias="WTFareU" unicodealias="VwBUAEYAYQByAGUAVQA=" balance="129.96" endbalance="124.46" dealer="true"/>
+      <Seat num="5" alias="NisshinMaru" unicodealias="TgBpAHMAcwBoAGkAbgBNAGEAcgB1AA==" balance="100.00" endbalance="99.50"/>
+      <Seat num="6" alias="BunkerMental" unicodealias="QgB1AG4AawBlAHIATQBlAG4AdABhAGwA" balance="104.02" endbalance="98.52"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="5" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="6" value="1.00"/>
+      <Action seq="3" type="Fold" seat="1"/>
+      <Action seq="4" type="Call" seat="2" value="1.00"/>
+      <Action seq="5" type="Call" seat="3" value="1.00"/>
+      <Action seq="6" type="Raise" seat="4" value="5.50"/>
+      <Action seq="7" type="Fold" seat="5"/>
+      <Action seq="8" type="Call" seat="6" value="4.50"/>
+      <Action seq="9" type="Fold" seat="2"/>
+      <Action seq="10" type="Call" seat="3" value="4.50"/>
+      <Action seq="11" type="DealFlop">
+         <Card value="2" suit="c" id="14"/>
+         <Card value="2" suit="d" id="27"/>
+         <Card value="J" suit="h" id="49"/>
+      </Action>
+      <Action seq="12" type="Check" seat="6"/>
+      <Action seq="13" type="Check" seat="3"/>
+      <Action seq="14" type="Check" seat="4"/>
+      <Action seq="15" type="DealTurn">
+         <Card value="10" suit="d" id="35"/>
+      </Action>
+      <Action seq="16" type="Check" seat="6"/>
+      <Action seq="17" type="Check" seat="3"/>
+      <Action seq="18" type="Check" seat="4"/>
+      <Action seq="19" type="DealRiver">
+         <Card value="5" suit="s" id="4"/>
+      </Action>
+      <Action seq="20" type="Check" seat="6"/>
+      <Action seq="21" type="Bet" seat="3" value="14.00"/>
+      <Action seq="22" type="Fold" seat="4"/>
+      <Action seq="23" type="Fold" seat="6"/>
+      <Action seq="24" type="ShowCards" seat="3">
+         <Card value="5" suit="c" id="17"/>
+         <Card value="3" suit="c" id="15"/>
+         <Card value="K" suit="s" id="12"/>
+         <Card value="Q" suit="s" id="11"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="3" amount="31.10" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

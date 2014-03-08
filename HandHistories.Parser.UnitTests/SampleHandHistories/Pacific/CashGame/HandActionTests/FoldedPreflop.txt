@@ -1,24 +1,19 @@
-﻿#Game No : 176529424
-***** Cassava Hand History for Game 176529424 *****
-$0.50/$1 Blinds No Limit Holdem - *** 30 05 2012 19:15:22
-Table Alcorcon (Real Money)
-Seat 6 is the button
-Total number of players : 6
-Seat 1: suicram ( $109.35 )
-Seat 2: AUT_Camper ( $40 )
-Seat 4: PR_Eqiuty ( $140.03 )
-Seat 6: sander1900 ( $80.83 )
-Seat 7: iSmokeMeth ( $100.50 )
-Seat 9: maybmaybnot ( $88.86 )
-iSmokeMeth posts small blind [$0.50]
-maybmaybnot posts big blind [$1]
+﻿#Game No : 301639730
+***** 888poker Hand History for Game 301639730 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 22:27:48
+Table Asmara 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: Grieche6969 ( $71.41 )
+Seat 2: dbhbrb ( $11.82 )
+Seat 4: Lesnik444 ( $47.50 )
+Seat 9: Griini ( $100 )
+Lesnik444 posts small blind [$0.50]
+Griini posts big blind [$1]
 ** Dealing down cards **
-suicram folds
-AUT_Camper folds
-PR_Eqiuty folds
-sander1900 raises [$3.50]
-iSmokeMeth folds
-maybmaybnot folds
+Grieche6969 folds
+dbhbrb raises [$2]
+Lesnik444 folds
+Griini folds
 ** Summary **
-sander1900 did not show his hand
-sander1900 collected [ $2.50 ]
+dbhbrb collected [ $2.50 ]

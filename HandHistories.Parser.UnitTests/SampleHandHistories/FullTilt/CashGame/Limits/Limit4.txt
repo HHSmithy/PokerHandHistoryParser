@@ -1,32 +1,16 @@
-﻿Full Tilt Poker Game #28620001839: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 20:26:24 ET - 2011/02/28
-Seat 1: Mental Donkey ($20)
-Seat 2: kruttulf ($68.75)
-Seat 4: maexx7 ($41.35)
-Seat 5: Telash ($20.10)
-Seat 6: pokerking44328 ($23.25)
-pokerking44328 posts the small blind of $0.50
-Mental Donkey posts the big blind of $1
-The button is in seat #5
+﻿Full Tilt Poker Game #33727758724: Table Huard (heads up) - FL Hold'em - $300/$600 - 20:07:23 ET - 2014/01/05
+Seat 1: cottonseed1 ($11,699.50)
+Seat 2: Rosiepod ($6,299)
+cottonseed1 posts the small blind of $150
+Rosiepod posts the big blind of $300
+The button is in seat #1
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-kruttulf folds
-maexx7 folds
-Telash raises to $3
-pokerking44328 calls $2.50
-Mental Donkey folds
-Mental Donkey adds $1
-*** FLOP *** [4s 7s 8c]
-pokerking44328 checks
-Telash bets $3
-pokerking44328 folds
-Uncalled bet of $3 returned to Telash
-Telash mucks
-Telash wins the pot ($6.65)
+cottonseed1 raises to $600
+Rosiepod folds
+Uncalled bet of $300 returned to cottonseed1
+cottonseed1 mucks
+cottonseed1 wins the pot ($600)
 *** SUMMARY ***
-Total pot $7 | Rake $0.35
-Board: [4s 7s 8c]
-Seat 1: Mental Donkey (big blind) folded before the Flop
-Seat 2: kruttulf didn't bet (folded)
-Seat 4: maexx7 didn't bet (folded)
-Seat 5: Telash (button) collected ($6.65), mucked
-Seat 6: pokerking44328 (small blind) folded on the Flop
+Total pot $600 | Rake $0
+Seat 1: cottonseed1 (small blind) collected ($600), mucked
+Seat 2: Rosiepod (big blind) folded before the Flop

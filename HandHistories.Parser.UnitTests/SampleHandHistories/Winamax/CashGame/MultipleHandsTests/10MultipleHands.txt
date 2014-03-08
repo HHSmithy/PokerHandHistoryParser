@@ -1,0 +1,260 @@
+﻿Winamax Poker - CashGame - HandId: #5334642-851-1383822088 - Holdem no limit (3€/6€) - 2013/11/07 11:01:28 UTC
+Table: 'Dublin' 5-max (real money) Seat #5 is the button
+Seat 2: TORINOFA (531.21€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+ovechkin08 posts small blind 3€
+TORINOFA posts big blind 6€
+*** PRE-FLOP *** 
+ovechkin08 raises 12€ to 18€
+TORINOFA folds
+ovechkin08 collected 24€ from pot
+*** SUMMARY ***
+Total pot 24€ | No rake
+Seat 5: ovechkin08 (small blind) (button) won 24€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-852-1383822101 - Holdem no limit (3€/6€) - 2013/11/07 11:01:41 UTC
+Table: 'Dublin' 5-max (real money) Seat #2 is the button
+Seat 2: TORINOFA (525.21€)
+Seat 5: ovechkin08 (606€)
+*** ANTE/BLINDS ***
+TORINOFA posts small blind 3€
+ovechkin08 posts big blind 6€
+*** PRE-FLOP *** 
+TORINOFA calls 3€
+ovechkin08 checks
+*** FLOP *** [4c 9h 8c]
+ovechkin08 checks
+TORINOFA checks
+*** TURN *** [4c 9h 8c] [As]
+ovechkin08 checks
+TORINOFA bets 12€
+ovechkin08 folds
+TORINOFA collected 23.22€ from pot
+*** SUMMARY ***
+Total pot 23.22€ | Rake 0.78€
+Board: [4c 9h 8c As]
+Seat 2: TORINOFA (small blind) (button) won 23.22€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-853-1383822121 - Holdem no limit (3€/6€) - 2013/11/07 11:02:01 UTC
+Table: 'Dublin' 5-max (real money) Seat #5 is the button
+Seat 2: TORINOFA (530.43€)
+Seat 3: malcom69 (600€)
+Seat 4: Belle___Vue (0€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+TORINOFA posts small blind 3€
+malcom69 posts big blind 6€
+*** PRE-FLOP *** 
+ovechkin08 raises 6€ to 12€
+TORINOFA calls 9€
+malcom69 folds
+*** FLOP *** [Qd 5c 4c]
+TORINOFA bets 30€
+ovechkin08 folds
+TORINOFA collected 58.05€ from pot
+*** SUMMARY ***
+Total pot 58.05€ | Rake 1.95€
+Board: [Qd 5c 4c]
+Seat 2: TORINOFA (small blind) won 58.05€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-854-1383822172 - Holdem no limit (3€/6€) - 2013/11/07 11:02:52 UTC
+Table: 'Dublin' 5-max (real money) Seat #2 is the button
+Seat 2: TORINOFA (546.48€)
+Seat 3: malcom69 (594€)
+Seat 4: jouby44 (600€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+malcom69 posts small blind 3€
+jouby44 posts big blind 6€
+*** PRE-FLOP *** 
+ovechkin08 raises 12€ to 18€
+TORINOFA folds
+malcom69 folds
+jouby44 folds
+ovechkin08 collected 27€ from pot
+*** SUMMARY ***
+Total pot 27€ | No rake
+Seat 5: ovechkin08 won 27€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-855-1383822188 - Holdem no limit (3€/6€) - 2013/11/07 11:03:08 UTC
+Table: 'Dublin' 5-max (real money) Seat #3 is the button
+Seat 2: TORINOFA (546.48€)
+Seat 3: malcom69 (591€)
+Seat 4: jouby44 (600€)
+Seat 5: ovechkin08 (609€)
+*** ANTE/BLINDS ***
+jouby44 posts small blind 3€
+ovechkin08 posts big blind 6€
+*** PRE-FLOP *** 
+TORINOFA raises 6€ to 12€
+malcom69 calls 12€
+jouby44 folds
+ovechkin08 calls 6€
+*** FLOP *** [8c 3c Kd]
+ovechkin08 checks
+TORINOFA checks
+malcom69 checks
+*** TURN *** [8c 3c Kd] [5d]
+ovechkin08 checks
+TORINOFA checks
+malcom69 bets 29.50€
+ovechkin08 folds
+TORINOFA folds
+malcom69 collected 66€ from pot
+*** SUMMARY ***
+Total pot 66€ | Rake 2.50€
+Board: [8c 3c Kd 5d]
+Seat 3: malcom69 (button) won 66€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-859-1383822324 - Holdem no limit (3€/6€) - 2013/11/07 11:05:24 UTC
+Table: 'Dublin' 5-max (real money) Seat #3 is the button
+Seat 2: TORINOFA (519.48€)
+Seat 3: malcom69 (606.50€)
+Seat 4: jouby44 (613.24€)
+Seat 5: ovechkin08 (609€)
+*** ANTE/BLINDS ***
+jouby44 posts small blind 3€
+ovechkin08 posts big blind 6€
+*** PRE-FLOP *** 
+TORINOFA calls 6€
+malcom69 folds
+jouby44 folds
+ovechkin08 checks
+*** FLOP *** [Ah 8d Qh]
+ovechkin08 checks
+TORINOFA bets 15€
+ovechkin08 folds
+TORINOFA collected 29.02€ from pot
+*** SUMMARY ***
+Total pot 29.02€ | Rake 0.98€
+Board: [Ah 8d Qh]
+Seat 2: TORINOFA won 29.02€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-860-1383822346 - Holdem no limit (3€/6€) - 2013/11/07 11:05:46 UTC
+Table: 'Dublin' 5-max (real money) Seat #4 is the button
+Seat 1: LASCONI4 (600€)
+Seat 2: TORINOFA (527.50€)
+Seat 3: malcom69 (606.50€)
+Seat 4: jouby44 (610.24€)
+Seat 5: ovechkin08 (603€)
+*** ANTE/BLINDS ***
+ovechkin08 posts small blind 3€
+LASCONI4 posts big blind 6€
+*** PRE-FLOP *** 
+TORINOFA calls 6€
+malcom69 folds
+jouby44 folds
+ovechkin08 folds
+LASCONI4 checks
+*** FLOP *** [2c Jc 5h]
+LASCONI4 checks
+TORINOFA checks
+*** TURN *** [2c Jc 5h] [9c]
+LASCONI4 bets 11.25€
+TORINOFA calls 11.25€
+*** RIVER *** [2c Jc 5h 9c] [9s]
+LASCONI4 bets 37.50€
+TORINOFA folds
+LASCONI4 collected 72.56€ from pot
+*** SUMMARY ***
+Total pot 72.56€ | Rake 2.44€
+Board: [2c Jc 5h 9c 9s]
+Seat 1: LASCONI4 (big blind) won 72.56€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-861-1383822375 - Holdem no limit (3€/6€) - 2013/11/07 11:06:15 UTC
+Table: 'Dublin' 5-max (real money) Seat #5 is the button
+Seat 1: LASCONI4 (617.81€)
+Seat 2: TORINOFA (510.25€)
+Seat 3: malcom69 (606.50€)
+Seat 4: jouby44 (610.24€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+LASCONI4 posts small blind 3€
+TORINOFA posts big blind 6€
+*** PRE-FLOP *** 
+malcom69 folds
+jouby44 folds
+ovechkin08 raises 6€ to 12€
+LASCONI4 folds
+TORINOFA folds
+ovechkin08 collected 21€ from pot
+*** SUMMARY ***
+Total pot 21€ | No rake
+Seat 5: ovechkin08 (button) won 21€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-876-1383822984 - Holdem no limit (3€/6€) - 2013/11/07 11:16:24 UTC
+Table: 'Dublin' 5-max (real money) Seat #2 is the button
+Seat 1: LASCONI4 (600€)
+Seat 2: TORINOFA (631.49€)
+Seat 3: malcom69 (597.50€)
+Seat 4: jouby44 (633€)
+Seat 5: ovechkin08 (606€)
+*** ANTE/BLINDS ***
+jouby44 posts small blind 3€
+ovechkin08 posts big blind 6€
+*** PRE-FLOP *** 
+LASCONI4 raises 9€ to 15€
+TORINOFA folds
+jouby44 folds
+ovechkin08 folds
+LASCONI4 collected 24€ from pot
+*** SUMMARY ***
+Total pot 24€ | No rake
+Seat 1: LASCONI4 won 24€
+
+
+
+
+
+Winamax Poker - CashGame - HandId: #5334642-877-1383823023 - Holdem no limit (3€/6€) - 2013/11/07 11:17:03 UTC
+Table: 'Dublin' 5-max (real money) Seat #4 is the button
+Seat 1: LASCONI4 (609€)
+Seat 2: TORINOFA (631.49€)
+Seat 3: malcom69 (597.50€)
+Seat 4: jouby44 (630€)
+Seat 5: ovechkin08 (600€)
+*** ANTE/BLINDS ***
+ovechkin08 posts small blind 3€
+LASCONI4 posts big blind 6€
+*** PRE-FLOP *** 
+TORINOFA folds
+jouby44 folds
+ovechkin08 raises 12€ to 18€
+LASCONI4 folds
+ovechkin08 collected 24€ from pot
+*** SUMMARY ***
+Total pot 24€ | No rake
+Seat 5: ovechkin08 (small blind) won 24€

@@ -1,32 +1,27 @@
-﻿***** History for hand R5-244575935-304 *****
-Start hand: Tue May 29 02:20:00 CEST 2012
-Table: Williston [244575935] (NO_LIMIT TEXAS_HOLDEM $0.25/$0.50, Real money)
-Button: seat 4
-Players in round: 5
-Seat 4: mr dark hor ($58.62) 
-Seat 7: il_conta ($16.00) 
-Seat 8: Nashpan ($17.50) 
-Seat 9: ---ich--- ($49.50) 
-Seat 10: Incubus633 ($45.50) 
-il_conta posts small blind ($0.25)
-Nashpan posts big blind ($0.50)
+﻿***** History for hand R5-361920831-66 *****
+Start hand: Mon Jan 06 08:52:00 CET 2014
+Table: Bagdad [361920831] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 2
+Players in round: 3
+Seat 2: kattiza ($94.10) 
+Seat 8: adamsin1 ($108.75) 
+Seat 9: R1verM0nster ($100.00) 
+adamsin1 posts small blind ($0.50)
+R1verM0nster posts big blind ($1)
 ---
 Dealing pocket cards
-RedStar72 folds
-Incubus633 raises $1.50 to $1.50
-mr dark hor calls $1.50
-il_conta folds
-Nashpan folds
---- Dealing flop [ Qd, Jh, T]
-Incubus633 bets $2.50
-mr dark hor folds
+kattiza folds
+adamsin1 raises $2.50 to $3.00
+R1verM0nster calls $2.00
+--- Dealing flop [Qc, 9d, 4s]
+adamsin1 checks
+R1verM0nster bets $3.00
+adamsin1 folds
 ---
 Summary:
-Main pot: $3.75 won by Incubus633 ($3.57)
-Rake taken: $0.18
-Seat 4: mr dark hor ($57.12), net: -$1.50
-Seat 7: il_conta ($15.75), net: -$0.25
-Seat 8: Nashpan ($17.00), net: -$0.50
-Seat 9: RedStar72 ($49.50), net: -$0.00
-Seat 10: Incubus633 ($47.57), net: +$2.07
-***** End of hand R5-244575935-304 *****
+Main pot: $6.00 won by R1verM0nster ($5.70)
+Rake taken: $0.30
+Seat 2: kattiza ($94.10), net: -$0.00
+Seat 8: adamsin1 ($105.75), net: -$3.00
+Seat 9: R1verM0nster ($102.70), net: +$2.70
+***** End of hand R5-361920831-66 *****

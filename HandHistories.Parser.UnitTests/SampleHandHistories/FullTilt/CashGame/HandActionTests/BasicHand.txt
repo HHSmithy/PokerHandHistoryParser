@@ -1,31 +1,21 @@
-﻿***** Hand History for Game 10100865223 *****
-$1,000 USD NL Texas Hold'em - Tuesday, February 01, 02:12:13 EST 2011
-Table Table  177951 (No DP) (Real Money)
-Seat 5 is the button
-Total number of players : 6/6 
-Seat 6: Evora__ ( $231.50 USD )
-Seat 5: RunBKK ( $1,742.50 USD )
-Seat 2: Sm1lingSnake ( $1,554.25 USD )
-Seat 3: Stanozololo ( $873.11 USD )
-Seat 4: WACONOIA ( $1,155.44 USD )
-Seat 1: prestonmaddo ( $1,231.25 USD )
-Evora__ posts small blind [$5 USD].
-prestonmaddo posts big blind [$10 USD].
-** Dealing down cards **
-Sm1lingSnake folds
-Stanozololo raises [$22 USD]
-WACONOIA folds
-RunBKK folds
-Evora__ folds
-prestonmaddo calls [$12 USD]
-** Dealing Flop ** [ 7c, 9s, 5c ]
-prestonmaddo checks
-Stanozololo checks
-** Dealing Turn ** [ 3s ]
-prestonmaddo checks
-Stanozololo checks
-** Dealing River ** [ 4d ]
-prestonmaddo bets [$380 USD]
-Stanozololo folds
-prestonmaddo does not show cards.
-prestonmaddo wins $426.55 USD
+﻿Full Tilt Poker Game #33727950903: Table Goldring (heads up) - NL Hold'em - $5/$10 - 21:11:15 ET - 2014/01/05
+Seat 1: Rene Lacoste ($1,000)
+Seat 2: ElkY ($1,044.50)
+Rene Lacoste posts the small blind of $5
+ElkY posts the big blind of $10
+The button is in seat #1
+*** HOLE CARDS ***
+Rene Lacoste raises to $20
+ElkY calls $10
+*** FLOP *** [3s 6d 8h] (Total Pot: $40, 2 Players)
+ElkY checks
+Rene Lacoste bets $20
+ElkY folds
+Uncalled bet of $20 returned to Rene Lacoste
+Rene Lacoste mucks
+Rene Lacoste wins the pot ($39.50)
+*** SUMMARY ***
+Total pot $40 | Rake $0.50
+Board: [3s 6d 8h]
+Seat 1: Rene Lacoste (small blind) collected ($39.50), mucked
+Seat 2: ElkY (big blind) folded on the Flop

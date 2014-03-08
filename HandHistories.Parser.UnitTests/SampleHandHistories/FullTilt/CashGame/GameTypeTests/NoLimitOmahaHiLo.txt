@@ -1,0 +1,17 @@
+Full Tilt Poker Game #33729249937: Table Mason (6 max, shallow) - NL Omaha H/L - $0.05/$0.10 - 08:25:48 ET - 2014/01/06
+Seat 3: great johnny ($5.31)
+Seat 6: YOLO SWAGGINS ($4)
+great johnny posts the small blind of $0.05
+YOLO SWAGGINS posts the big blind of $0.10
+The button is in seat #3
+*** HOLE CARDS ***
+great johnny calls $0.05
+YOLO SWAGGINS raises to $4, and is all in
+great johnny folds
+Uncalled bet of $3.90 returned to YOLO SWAGGINS
+YOLO SWAGGINS mucks
+YOLO SWAGGINS wins the pot ($0.20)
+*** SUMMARY ***
+Total pot $0.20 | Rake $0
+Seat 3: great johnny (small blind) folded before the Flop
+Seat 6: YOLO SWAGGINS (big blind) collected ($0.20), mucked

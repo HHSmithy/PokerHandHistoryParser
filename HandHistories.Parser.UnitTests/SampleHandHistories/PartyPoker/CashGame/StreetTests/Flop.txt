@@ -1,27 +1,25 @@
-﻿***** Hand History for Game 11614245816 *****
-$200 USD NL Texas Hold'em - Tuesday, April 03, 04:29:40 EDT 2012
-Table Speed #2355417 (No DP) (Real Money)
-Seat 4 is the button
-Total number of players : 6/6 
-Seat 5: A_N_D_R_O_I_D ( $381.10 USD )
-Seat 4: BetInTheDark ( $209 USD )
-Seat 2: CamillaToft ( $355.70 USD )
-Seat 1: FiskC ( $143.34 USD )
-Seat 6: PietroViesch ( $242.95 USD )
-Seat 3: SiamSato ( $200 USD )
-A_N_D_R_O_I_D posts small blind [$1 USD].
-PietroViesch posts big blind [$2 USD].
+﻿***** Hand History for Game 13550345899 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 04:45:50 EST 2014
+Table Arkhangelsk (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 5: Amad1971 ( $5.08 USD )
+Seat 2: Kimy1 ( $10.22 USD )
+Seat 4: SandCylinder ( $10 USD )
+Seat 3: mackini1987 ( $9.44 USD )
+Seat 1: mm1964 ( $10.40 USD )
+mm1964 posts small blind [$0.05 USD].
+Kimy1 posts big blind [$0.10 USD].
 ** Dealing down cards **
-FiskC folds
-CamillaToft folds
-SiamSato folds
-BetInTheDark raises [$5 USD]
-A_N_D_R_O_I_D folds
-PietroViesch raises [$18 USD]
-BetInTheDark calls [$15 USD]
+mackini1987 calls [$0.10 USD]
+SandCylinder folds
+Amad1971 calls [$0.10 USD]
+mm1964 folds
+Kimy1 checks
 ** Dealing Flop ** [ 7h, Qs, 3c ]
-PietroViesch bets [$24 USD]
-BetInTheDark will be using his time bank for this hand.
-BetInTheDark folds
-PietroViesch does not show cards.
-PietroViesch wins $62.95 USD
+Kimy1 checks
+mackini1987 bets [$0.10 USD]
+Amad1971 folds
+Kimy1 folds
+mackini1987 does not show cards.
+mackini1987 wins $0.44 USD

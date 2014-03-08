@@ -1,27 +1,37 @@
-﻿PokerStars Hand #78414171709:  Hold'em No Limit ($25/$50 USD) - 2012/04/06 7:41:38 ET
-Table 'Ocllo IV' 2-max Seat #1 is the button
-Seat 1: PimpyLimpy ($5000 in chips) 
-Seat 2: KTPOKP ($6262.50 in chips) 
-PimpyLimpy: posts small blind $25
-KTPOKP: posts big blind $50
+﻿PokerStars Game #109685169023:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 9:10:28 ET
+Table 'Wilkens II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: SGrifon ($857 in chips) 
+Seat 2: MrChiffo ($832 in chips) 
+Seat 3: BoomDoon ($975 in chips) 
+Seat 4: fodevich ($1000 in chips) 
+Seat 5: DÃ¼ss2411 ($383 in chips) 
+Seat 6: TimStone ($1015 in chips) 
+Seat 7: floriiiiider ($1065.40 in chips) 
+Seat 8: PeVu24 ($1038.50 in chips) 
+Seat 9: cipple444 ($1046 in chips) 
+PeVu24: posts small blind $5
+cipple444: posts big blind $10
 *** HOLE CARDS ***
-PimpyLimpy: raises $100 to $150
-KTPOKP: calls $100
-*** FLOP *** [4c 6c 2c]
-KTPOKP: checks 
-PimpyLimpy: bets $250
-KTPOKP: calls $250
-*** TURN *** [4c 6c 2c] [3c]
-KTPOKP: checks 
-PimpyLimpy: checks 
-*** RIVER *** [4c 6c 2c 3c] [6d]
-KTPOKP: bets $150
-PimpyLimpy: folds 
-Uncalled bet ($150) returned to KTPOKP
-KTPOKP collected $799.50 from pot
-KTPOKP: doesn't show hand 
+SGrifon: raises $11.10 to $21.10
+MrChiffo: folds 
+BoomDoon: folds 
+fodevich: folds 
+DÃ¼ss2411: folds 
+TimStone: folds 
+floriiiiider: folds 
+PeVu24: folds 
+cipple444: folds 
+Uncalled bet ($11.10) returned to SGrifon
+SGrifon collected $25 from pot
+SGrifon: doesn't show hand 
 *** SUMMARY ***
-Total pot $800 | Rake $0.50 
-Board [4c 6c 2c 3c 6d]
-Seat 1: PimpyLimpy (button) (small blind) folded on the River
-Seat 2: KTPOKP (big blind) collected ($799.50)
+Total pot $25 | Rake $0 
+Seat 1: SGrifon collected ($25)
+Seat 2: MrChiffo folded before Flop (didn't bet)
+Seat 3: BoomDoon folded before Flop (didn't bet)
+Seat 4: fodevich folded before Flop (didn't bet)
+Seat 5: DÃ¼ss2411 folded before Flop (didn't bet)
+Seat 6: TimStone folded before Flop (didn't bet)
+Seat 7: floriiiiider (button) folded before Flop (didn't bet)
+Seat 8: PeVu24 (small blind) folded before Flop
+Seat 9: cipple444 (big blind) folded before Flop

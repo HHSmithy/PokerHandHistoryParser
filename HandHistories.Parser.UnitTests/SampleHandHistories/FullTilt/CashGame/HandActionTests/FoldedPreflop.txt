@@ -1,21 +1,16 @@
-﻿***** Hand History for Game 11616597812 *****
-$200 USD NL Texas Hold'em - Tuesday, April 03, 17:33:18 EDT 2012
-Table Table  195737 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 6/6 
-Seat 5: Buddy Guy ( $214.35 USD )
-Seat 2: Pumwaree ( $323.69 USD )
-Seat 6: erttre99 ( $130.50 USD )
-Seat 4: feretboy666 ( $192 USD )
-Seat 3: l_ . - l - . _l ( $253.10 USD )
-Seat 1: wlips ( $108 USD )
-l_ . - l - . _l posts small blind [$1 USD].
-feretboy666 posts big blind [$2 USD].
-** Dealing down cards **
-Buddy Guy folds
-erttre99 folds
-wlips folds
-Pumwaree folds
-l_ . - l - . _l folds
-feretboy666 does not show cards.
-feretboy666 wins $3 USD
+﻿Full Tilt Poker Game #33728380895: Table Reliant (6 max) - NL Hold'em - $5/$10 - 00:23:11 ET - 2014/01/06
+Seat 1: gosuoposum1 ($1,000)
+Seat 2: goSuckout ($970)
+gosuoposum1 posts the small blind of $5
+goSuckout has 5 seconds left to act
+goSuckout posts the big blind of $10
+The button is in seat #1
+*** HOLE CARDS ***
+gosuoposum1 folds
+Uncalled bet of $5 returned to goSuckout
+goSuckout mucks
+goSuckout wins the pot ($10)
+*** SUMMARY ***
+Total pot $10 | Rake $0
+Seat 1: gosuoposum1 (small blind) folded before the Flop
+Seat 2: goSuckout (big blind) collected ($10), mucked

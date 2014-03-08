@@ -1,0 +1,13 @@
+﻿Winamax Poker - CashGame - HandId: #5338991-463-1383816406 - Holdem no limit (10€/20€) - 2013/11/07 09:26:46 UTC
+Table: 'Cardiff' 5-max (real money) Seat #1 is the button
+Seat 1: benhansen (800€)
+Seat 4: ovechkin08 (2000€)
+*** ANTE/BLINDS ***
+benhansen posts small blind 10€
+ovechkin08 posts big blind 20€
+*** PRE-FLOP *** 
+benhansen folds
+ovechkin08 collected 30€ from pot
+*** SUMMARY ***
+Total pot 30€ | No rake
+Seat 4: ovechkin08 (big blind) won 30€

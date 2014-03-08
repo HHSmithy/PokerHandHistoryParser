@@ -1,30 +1,29 @@
-﻿***** History for hand R5-243945479-8 *****
-Start hand: Sun May 27 10:27:00 CEST 2012
-Table: [SPEED] Austin [243945479] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
-Button: seat 5
-Players in round: 2
-Seat 5: klarasbanana ($1259.00) 
-Seat 8: iveyfan89 ($1069.00) 
-klarasbanana posts small blind ($5)
-iveyfan89 posts big blind ($10)
+﻿***** History for hand R5-361886770-3 *****
+Start hand: Mon Jan 06 00:22:00 CET 2014
+Table: Hungnam [361886770] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
+Button: seat 2
+Players in round: 3
+Seat 2: _BigSam_ ($980.00) 
+Seat 8: PNPoker ($1019.00) 
+Seat 9: the_road ($1000.00) 
+PNPoker posts small blind ($5)
+the_road posts big blind ($10)
 ---
 Dealing pocket cards
-klarasbanana raises $15.00 to $20.00
-iveyfan89 calls $10.00
---- Dealing flop [Ts, Tc, 9h]
-iveyfan89 checks
-klarasbanana bets $30.00
-iveyfan89 calls $30.00
---- Dealing turn [3s]
-iveyfan89 checks
-klarasbanana checks
---- Dealing river [2c]
-iveyfan89 bets $75.00
-klarasbanana folds
+_BigSam_ raises $20.00 to $20.00
+PNPoker calls $15.00
+the_road calls $10.00
+--- Dealing flop [Th, Ah, 3s]
+PNPoker checks
+the_road checks
+_BigSam_ bets $45.00
+PNPoker folds
+the_road folds
 ---
 Summary:
-Main pot: $100.00 won by iveyfan89 ($99.00)
-Rake taken: $1
-Seat 5: klarasbanana ($1209.00), net: -$50.00
-Seat 8: iveyfan89 ($1118.00), net: +$49.00
-***** End of hand R5-243945479-8 *****
+Main pot: $60.00 won by _BigSam_ ($58.00)
+Rake taken: $2
+Seat 2: _BigSam_ ($1018.00), net: +$38.00
+Seat 8: PNPoker ($999.00), net: -$20.00
+Seat 9: the_road ($980.00), net: -$20.00
+***** End of hand R5-361886770-3 *****

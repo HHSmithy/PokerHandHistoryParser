@@ -1,1 +1,31 @@
-﻿
+﻿***** History for hand R5-361875219-14 *****
+Start hand: Mon Jan 06 08:58:00 CET 2014
+Table: Hospitalet [361875219] (POT_LIMIT OMAHA_HI_LO $5/$5, Real money)
+Button: seat 2
+Players in round: 2
+Seat 1: alikator21 ($332.00) 
+Seat 2: McCall901 ($531.00) 
+McCall901 posts small blind ($5)
+alikator21 posts big blind ($5)
+---
+Dealing pocket cards
+McCall901 raises $5.00 to $10.00
+alikator21 raises $25.00 to $30.00
+McCall901 calls $20.00
+--- Dealing flop [8d, 6c, Kd]
+alikator21 bets $60.00
+McCall901 calls $60.00
+--- Dealing turn [2d]
+alikator21 checks
+McCall901 bets $90.00
+alikator21 calls $90.00
+--- Dealing river [3d]
+alikator21 bets $80.00
+McCall901 calls $80.00
+---
+Summary:
+Main pot: $520.00 won by alikator21 ($259.50), alikator21 ($259.50)
+Rake taken: $1
+Seat 1: alikator21 ($591.00), net: +$259.00, [Ad, Js, 7d, Ah]
+Seat 2: McCall901 ($271.00), net: -$260.00, [2h, 3c, As, 9h]
+***** End of hand R5-361875219-14 *****

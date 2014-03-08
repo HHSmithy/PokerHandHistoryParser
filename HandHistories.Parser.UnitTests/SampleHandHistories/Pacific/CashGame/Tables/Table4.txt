@@ -1,24 +1,43 @@
-﻿#Game No : 176459125
-***** Cassava Hand History for Game 176459125 *****
-$5/$10 Blinds No Limit Holdem - *** 30 05 2012 07:55:40
-Table Apatzingan (Real Money)
-Seat 6 is the button
-Total number of players : 3
-Seat 4: edekit ( $50 )
-Seat 6: piewie4 ( $311.50 )
-Seat 7: Iliketocheck ( $137 )
-Iliketocheck posts small blind [$5]
-edekit posts big blind [$10]
+﻿#Game No : 441518778
+***** 888poker Hand History for Game 441518778 *****
+$0.05/$0.10 Blinds No Limit Holdem - *** 06 01 2014 00:00:28
+Table Santarem 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 9
+Seat 1: MPS2013 ( $10.65 )
+Seat 2: sitout9384 ( $4.40 )
+Seat 3: paisios08 ( $10.42 )
+Seat 4: janarr5 ( $8 )
+Seat 5: RonJesus ( $18.45 )
+Seat 6: Hotblade58 ( $42.93 )
+Seat 7: Sumatra11 ( $14.87 )
+Seat 9: datigo ( $12.93 )
+Seat 10: kidzoltan ( $17.89 )
+janarr5 posts small blind [$0.05]
+RonJesus posts big blind [$0.10]
 ** Dealing down cards **
-piewie4 raises [$20]
-Iliketocheck folds
-edekit calls [$10]
-** Dealing flop ** [ 5h, Ts, 6d ]
-edekit bets [$30]
-piewie4 calls [$30]
-** Dealing turn ** [ 7h ]
-** Dealing river ** [ Qd ]
+Hotblade58 calls [$0.10]
+Sumatra11 raises [$0.40]
+datigo calls [$0.40]
+kidzoltan folds
+MPS2013 folds
+sitout9384 folds
+paisios08 folds
+janarr5 folds
+RonJesus folds
+Hotblade58 calls [$0.30]
+** Dealing flop ** [ 7h, 5h, Jh ]
+Hotblade58 checks
+Sumatra11 checks
+datigo bets [$0.67]
+Hotblade58 calls [$0.67]
+Sumatra11 folds
+** Dealing turn ** [ Kh ]
+Hotblade58 checks
+datigo checks
+** Dealing river ** [ 8h ]
+Hotblade58 bets [$2.01]
+datigo folds
 ** Summary **
-edekit shows [ 6h, 4s ]
-piewie4 shows [ Jc, Td ]
-piewie4 collected [ $102.50 ]
+Hotblade58 did not show his hand
+Hotblade58 collected [ $2.56 ]

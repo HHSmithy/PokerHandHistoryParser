@@ -4,15 +4,17 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 {
-    [TestFixture("PartyPoker", "$0.10-$0.25", "$2-$4", "$25-$50", "$30-$60", "$10-$20", "$0.02-$0.04")]
-    [TestFixture("OnGame", "$0.25-$0.25", "$0.25-$0.50", "$5-$10", "$5-$5", "$50-$100")]
-    [TestFixture("PokerStars", "$0.08-$0.16", "$2-$4", "$25-$50", "$30-$60", "$10-$20")]
-    [TestFixture("IPoker", "$0.02-$0.04", "$0.10-$0.20", "$0.50-$1", "$3-$6", "$50-$100")]
-    [TestFixture("Pacific", "$1-$2", "$0.02-$0.05", "$500-$1,000", "$5-$10", "$0.50-$1")]
+    [TestFixture("PartyPoker", "$0.05-$0.10", "$0.50-$1", "$5-$10")]
+    [TestFixture("OnGame", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$0.25-$0.25", "$5-$5")]
+    [TestFixture("PokerStars", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$100-$200", "$200-$400")]
+    [TestFixture("IPoker", "e0.05-e0.10", "£0.50-£1", "$5-$10")]
+    [TestFixture("Pacific", "$0.05-$0.10", "$0.50-$1", "$100-$200", "$5-$10")]
     [TestFixture("Merge", "$0.05-$0.10", "$0.50-$1", "$1-$2", "$5-$10", "$10-$20")]
     // Note: Have to use e instead of € otherwise the test runner reports inconclusive. Have reported this bug.
     [TestFixture("Entraction", "e0.02-e0.04", "e2-e4", "e25-e50", "e0.50-e1", "e15-e30")]
-    [TestFixture("FullTilt", "$25-$50", "$5-$10", "$100-$200", "$0.50-$1", "$0.25-$0.50")]
+    [TestFixture("FullTilt", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$300-$600", "$2,000-$4,000")]
+    [TestFixture("MicroGaming", "e0.01-e0.02", "e0.50-e1", "e1-e2")]
+    [TestFixture("Winamax", "e0.05-e0.10", "e0.50-e1", "e5-e10")]
     class HandParserLimitTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedLimits;
@@ -59,6 +61,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.IPoker:
                 case SiteName.PartyPoker:
                 case SiteName.OnGame:
@@ -66,6 +69,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Merge:
                 case SiteName.FullTilt:
                 case SiteName.Entraction:
+                case SiteName.Winamax:
                     Assert.Ignore(Site.ToString() + " doesn't have ante tables.");
                     break;               
                 
@@ -82,15 +86,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.PartyPoker:
                 case SiteName.Pacific:
                 case SiteName.Merge:
                 case SiteName.FullTilt:
-                    Assert.Ignore("Site doesn't have euro tables.");
+                case SiteName.Winamax:
+                    Assert.Ignore("Site doesn't have euro tables ( example ).");
+                    break;
+                case SiteName.Entraction:
+                    TestTLimit("€2-€4", "EuroTable");
+                    break;
+                default:
+                    TestTLimit("€0.50-€1", "EuroTable");
                     break;
             }
-
-            TestTLimit("€2-€4", "EuroTable");
         }
 
         [Test]
@@ -98,17 +108,22 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         {
             switch (Site)
             {
+                case SiteName.MicroGaming:
                 case SiteName.PartyPoker:
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                 case SiteName.Merge:
                 case SiteName.Entraction:
                 case SiteName.FullTilt:
+                case SiteName.Winamax:
+                case SiteName.PokerStars:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
-            }
+                default:
+                    TestTLimit("£0.05-£0.10", "GbpTable");
+                    break;
 
-            TestTLimit("£0.10-£0.25", "GbpTable");
+            }
         }
     }
 }

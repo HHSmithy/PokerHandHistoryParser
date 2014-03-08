@@ -1,22 +1,22 @@
-﻿***** Hand History for Game 11615009827 *****
-$400 USD NL Texas Hold'em - Tuesday, April 03, 10:36:40 EDT 2012
-Table Speed #2357102 (No DP) (Real Money)
-Seat 6 is the button
+﻿***** Hand History for Game 13549916413 *****
+$0.50/$1 USD FL Texas Hold'em - Sunday, January 05, 19:15:33 EST 2014
+Table Dhaka (Real Money)
+Seat 2 is the button
 Total number of players : 6/6 
-Seat 4: Cruzan ( $427 USD )
-Seat 5: D0GgivesHead ( $412 USD )
-Seat 6: DutyOfCall ( $468.10 USD )
-Seat 1: Larry_D ( $479 USD )
-Seat 2: aLochson ( $400 USD )
-Seat 3: olvi773 ( $141 USD )
-Larry_D posts small blind [$2 USD].
-aLochson posts big blind [$4 USD].
+Seat 2: Mr_Delorme ( $9.55 USD )
+Seat 4: Trebax ( $14.85 USD )
+Seat 5: Willwat ( $17.33 USD )
+Seat 6: kobe0077 ( $46.50 USD )
+Seat 3: trener2355577 ( $64.90 USD )
+Seat 1: virtualmike ( $17.35 USD )
+trener2355577 posts small blind [$0.25 USD].
+Trebax posts big blind [$0.50 USD].
 ** Dealing down cards **
-olvi773 raises [$8 USD]
-Cruzan folds
-D0GgivesHead folds
-DutyOfCall folds
-Larry_D folds
-aLochson folds
-olvi773 does not show cards.
-olvi773 wins $14 USD
+Willwat folds
+kobe0077 folds
+virtualmike folds
+Mr_Delorme raises [$1 USD]
+trener2355577 folds
+Trebax folds
+Mr_Delorme does not show cards.
+Mr_Delorme wins $1.75 USD

@@ -1,0 +1,459 @@
+﻿<Game hhversion="4" id="5079073759" date="2013-10-17 16:58:20" unicodetablename="QwB1AHQALQBPAGYAZgAgADIAOAAzACAAKABEAGUAZQBwACkAIAAtACAArCA0ADAAMAAgAE0AYQB4AA==" tablename="Cut-Off 283 (Deep) - €400 Max" stakes="1|2" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="300">
+   <Seats>
+      <Seat num="1" alias="nogueirita" unicodealias="bgBvAGcAdQBlAGkAcgBpAHQAYQA=" balance="400.00" endbalance="400.00"/>
+      <Seat num="2" alias="USSR2013" unicodealias="VQBTAFMAUgAyADAAMQAzAA==" balance="420.75" endbalance="420.75"/>
+      <Seat num="3" alias="IIIHELLIII" unicodealias="SQBJAEkASABFAEwATABJAEkASQA=" balance="231.85" endbalance="291.85"/>
+      <Seat num="4" alias="JennaJames0n" unicodealias="SgBlAG4AbgBhAEoAYQBtAGUAcwAwAG4A" balance="327.90" endbalance="285.90" dealer="true"/>
+      <Seat num="5" alias="NeedYourBB" unicodealias="TgBlAGUAZABZAG8AdQByAEIAQgA=" balance="171.55" endbalance="152.55"/>
+      <Seat num="6" alias="Cimex" unicodealias="QwBpAG0AZQB4AA==" balance="550.40" endbalance="548.40"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="5" value="1.00"/>
+      <Action seq="2" type="BigBlind" seat="6" value="2.00"/>
+      <Action seq="3" type="Fold" seat="2"/>
+      <Action seq="4" type="Raise" seat="3" value="6.00"/>
+      <Action seq="5" type="Call" seat="4" value="6.00"/>
+      <Action seq="6" type="Call" seat="5" value="5.00"/>
+      <Action seq="7" type="Fold" seat="6"/>
+      <Action seq="8" type="DealFlop">
+         <Card value="4" suit="h" id="42"/>
+         <Card value="10" suit="s" id="9"/>
+         <Card value="6" suit="d" id="31"/>
+      </Action>
+      <Action seq="9" type="Check" seat="5"/>
+      <Action seq="10" type="Check" seat="3"/>
+      <Action seq="11" type="Check" seat="4"/>
+      <Action seq="12" type="DealTurn">
+         <Card value="3" suit="s" id="2"/>
+      </Action>
+      <Action seq="13" type="Bet" seat="5" value="13.00"/>
+      <Action seq="14" type="Call" seat="3" value="13.00"/>
+      <Action seq="15" type="Raise" seat="4" value="36.00"/>
+      <Action seq="16" type="Fold" seat="5"/>
+      <Action seq="17" type="Call" seat="3" value="23.00"/>
+      <Action seq="18" type="DealRiver">
+         <Card value="K" suit="c" id="25"/>
+      </Action>
+      <Action seq="19" type="Check" seat="3"/>
+      <Action seq="20" type="Check" seat="4"/>
+      <Action seq="21" type="ShowCards" seat="3">
+         <Card value="10" suit="c" id="22"/>
+         <Card value="9" suit="h" id="47"/>
+      </Action>
+      <Action seq="22" type="MuckCards" seat="4">
+         <Card value="A" suit="s" id="0"/>
+         <Card value="2" suit="s" id="1"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="3" amount="102.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079074393" date="2013-10-17 16:58:28" unicodetablename="VAB1AHIAYgBvADoAIABNAGkAYwByAG8AIABOAEwASABFACAAMgAwADIAIAAtACAArCAyACAATQBhAHgA" tablename="Turbo: Micro NLHE 202 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="9" tablesize="9" badbeat="false" rake="2">
+   <Seats>
+      <Seat num="1" alias="kolesov" unicodealias="awBvAGwAZQBzAG8AdgA=" balance="2.51" endbalance="2.51"/>
+      <Seat num="2" alias="StormSever" unicodealias="UwB0AG8AcgBtAFMAZQB2AGUAcgA=" balance="1.86" endbalance="1.86"/>
+      <Seat num="3" alias="iceman222" unicodealias="aQBjAGUAbQBhAG4AMgAyADIA" balance="1.97" endbalance="2.09"/>
+      <Seat num="4" alias="MethDamon" unicodealias="TQBlAHQAaABEAGEAbQBvAG4A" balance="2.00" endbalance="2.00"/>
+      <Seat num="5" alias="naval-k" unicodealias="bgBhAHYAYQBsAC0AawA=" balance="2.29" endbalance="2.27" dealer="true"/>
+      <Seat num="6" alias="serega1979" unicodealias="cwBlAHIAZQBnAGEAMQA5ADcAOQA=" balance="2.00" endbalance="2.00"/>
+      <Seat num="7" alias="Patt34" unicodealias="UABhAHQAdAAzADQA" balance="1.98" endbalance="1.88"/>
+      <Seat num="8" alias="Skaman" unicodealias="UwBrAGEAbQBhAG4A" balance="2.02" endbalance="2.00"/>
+      <Seat num="9" alias="vsilus" unicodealias="dgBzAGkAbAB1AHMA" balance="1.65" endbalance="1.65"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="7" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="8" value="0.02"/>
+      <Action seq="3" type="Fold" seat="9"/>
+      <Action seq="4" type="Fold" seat="1"/>
+      <Action seq="5" type="Fold" seat="2"/>
+      <Action seq="6" type="Call" seat="3" value="0.02"/>
+      <Action seq="7" type="Fold" seat="4"/>
+      <Action seq="8" type="Call" seat="5" value="0.02"/>
+      <Action seq="9" type="Call" seat="7" value="0.01"/>
+      <Action seq="10" type="Check" seat="8"/>
+      <Action seq="11" type="DealFlop">
+         <Card value="2" suit="d" id="27"/>
+         <Card value="9" suit="h" id="47"/>
+         <Card value="5" suit="c" id="17"/>
+      </Action>
+      <Action seq="12" type="Check" seat="7"/>
+      <Action seq="13" type="Check" seat="8"/>
+      <Action seq="14" type="Bet" seat="3" value="0.08"/>
+      <Action seq="15" type="Fold" seat="5"/>
+      <Action seq="16" type="Call" seat="7" value="0.08"/>
+      <Action seq="17" type="Fold" seat="8"/>
+      <Action seq="18" type="DealTurn">
+         <Card value="2" suit="s" id="1"/>
+      </Action>
+      <Action seq="19" type="Check" seat="7"/>
+      <Action seq="20" type="Check" seat="3"/>
+      <Action seq="21" type="DealRiver">
+         <Card value="2" suit="c" id="14"/>
+      </Action>
+      <Action seq="22" type="Check" seat="7"/>
+      <Action seq="23" type="Bet" seat="3" value="0.24"/>
+      <Action seq="24" type="Fold" seat="7"/>
+      <Action seq="25" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="0.46" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079074639" date="2013-10-17 16:58:28" unicodetablename="SABpAGoAYQBjAGsAIAAyADQANwAgAC0AIACsIDEAMAAwACAATQBhAHgA" tablename="Hijack 247 - €100 Max" stakes="0.50|1" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="9" tablesize="9" badbeat="true" rake="300">
+   <Seats>
+      <Seat num="1" alias="JennaJames0n" unicodealias="SgBlAG4AbgBhAEoAYQBtAGUAcwAwAG4A" balance="336.81" endbalance="336.31"/>
+      <Seat num="2" alias="VonKaups" unicodealias="VgBvAG4ASwBhAHUAcABzAA==" balance="100.00" endbalance="99.00"/>
+      <Seat num="3" alias="RB26DETT" unicodealias="UgBCADIANgBEAEUAVABUAA==" balance="269.20" endbalance="269.20"/>
+      <Seat num="4" alias="WiseWhale" unicodealias="VwBpAHMAZQBXAGgAYQBsAGUA" balance="123.00" endbalance="123.00"/>
+      <Seat num="5" alias="terjesen" unicodealias="dABlAHIAagBlAHMAZQBuAA==" balance="103.00" endbalance="144.00"/>
+      <Seat num="6" alias="michelor" unicodealias="bQBpAGMAaABlAGwAbwByAA==" balance="179.17" endbalance="136.67"/>
+      <Seat num="7" alias="krkroo957" unicodealias="awByAGsAcgBvAG8AOQA1ADcA" balance="155.38" endbalance="155.38"/>
+      <Seat num="8" alias="superkob" unicodealias="cwB1AHAAZQByAGsAbwBiAA==" balance="30.63" endbalance="30.63"/>
+      <Seat num="9" alias="-Heskey27-" unicodealias="LQBIAGUAcwBrAGUAeQAyADcALQA=" balance="110.28" endbalance="110.28" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="1" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="2" value="1.00"/>
+      <Action seq="3" type="Fold" seat="3"/>
+      <Action seq="4" type="Raise" seat="5" value="4.00"/>
+      <Action seq="5" type="Call" seat="6" value="4.00"/>
+      <Action seq="6" type="Fold" seat="7"/>
+      <Action seq="7" type="Fold" seat="8"/>
+      <Action seq="8" type="Fold" seat="9"/>
+      <Action seq="9" type="Fold" seat="1"/>
+      <Action seq="10" type="Fold" seat="2"/>
+      <Action seq="11" type="DealFlop">
+         <Card value="4" suit="d" id="29"/>
+         <Card value="3" suit="s" id="2"/>
+         <Card value="4" suit="c" id="16"/>
+      </Action>
+      <Action seq="12" type="Bet" seat="5" value="6.00"/>
+      <Action seq="13" type="Call" seat="6" value="6.00"/>
+      <Action seq="14" type="DealTurn">
+         <Card value="10" suit="h" id="48"/>
+      </Action>
+      <Action seq="15" type="Check" seat="5"/>
+      <Action seq="16" type="Bet" seat="6" value="10.50"/>
+      <Action seq="17" type="Raise" seat="5" value="32.50"/>
+      <Action seq="18" type="Call" seat="6" value="22.00"/>
+      <Action seq="19" type="DealRiver">
+         <Card value="6" suit="s" id="5"/>
+      </Action>
+      <Action seq="20" type="AllIn" seat="5" value="60.50"/>
+      <Action seq="21" type="Fold" seat="6"/>
+      <Action seq="22" type="MuckCards" seat="5"/>
+      <Action type="Win">
+         <Seat num="5" amount="144.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079074821" date="2013-10-17 16:58:26" unicodetablename="VAB1AHIAYgBvADoAIABIAGkAagBhAGMAawAgADQAMwAgAC0AIACsIDEAMAAwACAATQBhAHgA" tablename="Turbo: Hijack 43 - €100 Max" stakes="0.50|1" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="87">
+   <Seats>
+      <Seat num="1" alias="JennaJames0n" unicodealias="SgBlAG4AbgBhAEoAYQBtAGUAcwAwAG4A" balance="320.47" endbalance="320.47" dealer="true"/>
+      <Seat num="2" alias="GladideG" unicodealias="RwBsAGEAZABpAGQAZQBHAA==" balance="166.02" endbalance="175.15"/>
+      <Seat num="3" alias="Lorika" unicodealias="TABvAHIAaQBrAGEA" balance="100.00" endbalance="97.50"/>
+      <Seat num="4" alias="I_Raise_You" unicodealias="SQBfAFIAYQBpAHMAZQBfAFkAbwB1AA==" balance="100.00" endbalance="100.00"/>
+      <Seat num="5" alias="jigaar" unicodealias="agBpAGcAYQBhAHIA" balance="100.00" endbalance="100.00"/>
+      <Seat num="6" alias="Suvorov1983" unicodealias="UwB1AHYAbwByAG8AdgAxADkAOAAzAA==" balance="100.00" endbalance="92.48"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="2" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="3" value="1.00"/>
+      <Action seq="3" type="BadBeatContribution" seat="6" value="0.02"/>
+      <Action seq="4" type="Fold" seat="4"/>
+      <Action seq="5" type="Fold" seat="5"/>
+      <Action seq="6" type="Raise" seat="6" value="2.50"/>
+      <Action seq="7" type="Fold" seat="1"/>
+      <Action seq="8" type="Call" seat="2" value="2.00"/>
+      <Action seq="9" type="Call" seat="3" value="1.50"/>
+      <Action seq="10" type="DealFlop">
+         <Card value="K" suit="s" id="12"/>
+         <Card value="6" suit="s" id="5"/>
+         <Card value="9" suit="h" id="47"/>
+      </Action>
+      <Action seq="11" type="Check" seat="2"/>
+      <Action seq="12" type="Check" seat="3"/>
+      <Action seq="13" type="Check" seat="6"/>
+      <Action seq="14" type="DealTurn">
+         <Card value="5" suit="d" id="30"/>
+      </Action>
+      <Action seq="15" type="Bet" seat="2" value="5.00"/>
+      <Action seq="16" type="Fold" seat="3"/>
+      <Action seq="17" type="Call" seat="6" value="5.00"/>
+      <Action seq="18" type="DealRiver">
+         <Card value="3" suit="c" id="15"/>
+      </Action>
+      <Action seq="19" type="Check" seat="2"/>
+      <Action seq="20" type="Check" seat="6"/>
+      <Action seq="21" type="ShowCards" seat="2">
+         <Card value="8" suit="d" id="33"/>
+         <Card value="8" suit="s" id="7"/>
+      </Action>
+      <Action seq="22" type="MuckCards" seat="6">
+         <Card value="J" suit="h" id="49"/>
+         <Card value="10" suit="s" id="9"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="2" amount="16.63" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079074860" date="2013-10-17 16:58:25" unicodetablename="TQBpAGMAcgBvACAATgBMAEgARQAgADIAMQA1ACAALQAgAKwgMgAgAE0AYQB4AA==" tablename="Micro NLHE 215 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="9" tablesize="9" badbeat="false" rake="2">
+   <Seats>
+      <Seat num="1" alias="naval-k" unicodealias="bgBhAHYAYQBsAC0AawA=" balance="1.55" endbalance="1.49"/>
+      <Seat num="2" alias="turkii" unicodealias="dAB1AHIAawBpAGkA" balance="0.70" endbalance="0.70" dealer="true"/>
+      <Seat num="3" alias="HesBluffin" unicodealias="SABlAHMAQgBsAHUAZgBmAGkAbgA=" balance="2.45" endbalance="2.44"/>
+      <Seat num="4" alias="kolesov" unicodealias="awBvAGwAZQBzAG8AdgA=" balance="2.42" endbalance="2.40"/>
+      <Seat num="5" alias="Skaman" unicodealias="UwBrAGEAbQBhAG4A" balance="2.00" endbalance="2.00"/>
+      <Seat num="6" alias="yovenko" unicodealias="eQBvAHYAZQBuAGsAbwA=" balance="2.03" endbalance="1.97"/>
+      <Seat num="7" alias="chef666" unicodealias="YwBoAGUAZgA2ADYANgA=" balance="3.60" endbalance="3.60"/>
+      <Seat num="8" alias="StormSever" unicodealias="UwB0AG8AcgBtAFMAZQB2AGUAcgA=" balance="1.99" endbalance="1.99"/>
+      <Seat num="9" alias="MethDamon" unicodealias="TQBlAHQAaABEAGEAbQBvAG4A" balance="2.06" endbalance="2.19"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="4" value="0.02"/>
+      <Action seq="3" type="Fold" seat="5"/>
+      <Action seq="4" type="Raise" seat="6" value="0.06"/>
+      <Action seq="5" type="Fold" seat="7"/>
+      <Action seq="6" type="Fold" seat="8"/>
+      <Action seq="7" type="Call" seat="9" value="0.06"/>
+      <Action seq="8" type="Call" seat="1" value="0.06"/>
+      <Action seq="9" type="Fold" seat="2"/>
+      <Action seq="10" type="Fold" seat="3"/>
+      <Action seq="11" type="Fold" seat="4"/>
+      <Action seq="12" type="DealFlop">
+         <Card value="5" suit="c" id="17"/>
+         <Card value="2" suit="s" id="1"/>
+         <Card value="J" suit="c" id="23"/>
+      </Action>
+      <Action seq="13" type="Check" seat="6"/>
+      <Action seq="14" type="Check" seat="9"/>
+      <Action seq="15" type="Check" seat="1"/>
+      <Action seq="16" type="DealTurn">
+         <Card value="10" suit="c" id="22"/>
+      </Action>
+      <Action seq="17" type="Check" seat="6"/>
+      <Action seq="18" type="Check" seat="9"/>
+      <Action seq="19" type="Check" seat="1"/>
+      <Action seq="20" type="DealRiver">
+         <Card value="6" suit="d" id="31"/>
+      </Action>
+      <Action seq="21" type="Check" seat="6"/>
+      <Action seq="22" type="Check" seat="9"/>
+      <Action seq="23" type="Check" seat="1"/>
+      <Action seq="24" type="ShowCards" seat="6">
+         <Card value="A" suit="s" id="0"/>
+         <Card value="K" suit="s" id="12"/>
+      </Action>
+      <Action seq="25" type="ShowCards" seat="9">
+         <Card value="8" suit="h" id="46"/>
+         <Card value="8" suit="c" id="20"/>
+      </Action>
+      <Action seq="26" type="MuckCards" seat="1">
+         <Card value="K" suit="d" id="38"/>
+         <Card value="9" suit="d" id="34"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="9" amount="0.19" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079075075" date="2013-10-17 16:58:19" unicodetablename="RgBsAG8AcAAgADMAMgAgAC0AIACsIDQAMAAwACAATQBhAHgA" tablename="Flop 32 - €400 Max" stakes="2|4" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="0">
+   <Seats>
+      <Seat num="1" alias="SuperUnit" unicodealias="UwB1AHAAZQByAFUAbgBpAHQA" balance="447.00" endbalance="437.00"/>
+      <Seat num="2" alias="Oshossen" unicodealias="TwBzAGgAbwBzAHMAZQBuAA==" balance="582.00" endbalance="582.00" dealer="true"/>
+      <Seat num="3" alias="BubbleGum2" unicodealias="QgB1AGIAYgBsAGUARwB1AG0AMgA=" balance="593.00" endbalance="607.00"/>
+      <Seat num="4" alias="lillen19" unicodealias="bABpAGwAbABlAG4AMQA5AA==" balance="889.20" endbalance="885.20"/>
+      <Seat num="5" alias="NextToDGL" unicodealias="TgBlAHgAdABUAG8ARABHAEwA" balance="406.00" endbalance="406.00"/>
+      <Seat num="6" alias="Cimex" unicodealias="QwBpAG0AZQB4AA==" balance="1517.30" endbalance="1517.30"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="2.00"/>
+      <Action seq="2" type="BigBlind" seat="4" value="4.00"/>
+      <Action seq="3" type="Fold" seat="5"/>
+      <Action seq="4" type="Fold" seat="6"/>
+      <Action seq="5" type="Raise" seat="1" value="10.00"/>
+      <Action seq="6" type="Fold" seat="2"/>
+      <Action seq="7" type="Raise" seat="3" value="38.00"/>
+      <Action seq="8" type="Fold" seat="4"/>
+      <Action seq="9" type="Fold" seat="1"/>
+      <Action seq="10" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="54.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079075153" date="2013-10-17 16:58:19" unicodetablename="SABpAGoAYQBjAGsAIAAyADkAIAAtACAArCAxADAAMAAgAE0AYQB4AA==" tablename="Hijack 29 - €100 Max" stakes="0.50|1" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="5" tablesize="6" badbeat="true" rake="22">
+   <Seats>
+      <Seat num="2" alias="-Heskey27-" unicodealias="LQBIAGUAcwBrAGUAeQAyADcALQA=" balance="117.39" endbalance="117.39"/>
+      <Seat num="3" alias="OMGpixAAli4" unicodealias="TwBNAEcAcABpAHgAQQBBAGwAaQA0AA==" balance="100.00" endbalance="102.28" dealer="true"/>
+      <Seat num="4" alias="mellizos" unicodealias="bQBlAGwAbABpAHoAbwBzAA==" balance="95.56" endbalance="406.00" sittingout="true"/>
+      <Seat num="5" alias="I_Raise_You" unicodealias="SQBfAFIAYQBpAHMAZQBfAFkAbwB1AA==" balance="136.92" endbalance="136.42"/>
+      <Seat num="6" alias="jimare" unicodealias="agBpAG0AYQByAGUA" balance="49.47" endbalance="47.47"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="5" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="6" value="1.00"/>
+      <Action seq="3" type="Fold" seat="2"/>
+      <Action seq="4" type="Raise" seat="3" value="2.00"/>
+      <Action seq="5" type="Fold" seat="5"/>
+      <Action seq="6" type="Call" seat="6" value="1.00"/>
+      <Action seq="7" type="DealFlop">
+         <Card value="J" suit="d" id="36"/>
+         <Card value="4" suit="h" id="42"/>
+         <Card value="2" suit="s" id="1"/>
+      </Action>
+      <Action seq="8" type="Check" seat="6"/>
+      <Action seq="9" type="Bet" seat="3" value="3.00"/>
+      <Action seq="10" type="Fold" seat="6"/>
+      <Action seq="11" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="7.28" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079075214" date="2013-10-17 16:59:00" unicodetablename="TQBpAGMAcgBvACAATgBMAEgARQAgADIAMAA2ACAALQAgAKwgMgAgAE0AYQB4AA==" tablename="Micro NLHE 206 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="9" tablesize="9" badbeat="false" rake="2">
+   <Seats>
+      <Seat num="1" alias="qutuk" unicodealias="cQB1AHQAdQBrAA==" balance="0.71" endbalance="0.63"/>
+      <Seat num="2" alias="RICHWIN05" unicodealias="UgBJAEMASABXAEkATgAwADUA" balance="0.41" endbalance="0.39"/>
+      <Seat num="3" alias="Skaman" unicodealias="UwBrAGEAbQBhAG4A" balance="2.00" endbalance="2.00"/>
+      <Seat num="4" alias="StormSever" unicodealias="UwB0AG8AcgBtAFMAZQB2AGUAcgA=" balance="2.27" endbalance="2.27"/>
+      <Seat num="5" alias="havana_beach" unicodealias="aABhAHYAYQBuAGEAXwBiAGUAYQBjAGgA" balance="1.63" endbalance="1.55"/>
+      <Seat num="6" alias="HesBluffin" unicodealias="SABlAHMAQgBsAHUAZgBmAGkAbgA=" balance="2.07" endbalance="2.07"/>
+      <Seat num="7" alias="MethDamon" unicodealias="TQBlAHQAaABEAGEAbQBvAG4A" balance="2.01" endbalance="2.01"/>
+      <Seat num="8" alias="dradil" unicodealias="ZAByAGEAZABpAGwA" balance="2.11" endbalance="2.11"/>
+      <Seat num="9" alias="el1111" unicodealias="ZQBsADEAMQAxADEA" balance="1.61" endbalance="1.77" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="1" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="2" value="0.02"/>
+      <Action seq="3" type="Fold" seat="3"/>
+      <Action seq="4" type="Fold" seat="4"/>
+      <Action seq="5" type="Raise" seat="5" value="0.06"/>
+      <Action seq="6" type="Fold" seat="6"/>
+      <Action seq="7" type="Fold" seat="7"/>
+      <Action seq="8" type="Fold" seat="8"/>
+      <Action seq="9" type="Call" seat="9" value="0.06"/>
+      <Action seq="10" type="Call" seat="1" value="0.05"/>
+      <Action seq="11" type="Fold" seat="2"/>
+      <Action seq="12" type="DealFlop">
+         <Card value="6" suit="s" id="5"/>
+         <Card value="3" suit="h" id="41"/>
+         <Card value="9" suit="d" id="34"/>
+      </Action>
+      <Action seq="13" type="Check" seat="1"/>
+      <Action seq="14" type="Check" seat="5"/>
+      <Action seq="15" type="Check" seat="9"/>
+      <Action seq="16" type="DealTurn">
+         <Card value="J" suit="h" id="49"/>
+      </Action>
+      <Action seq="17" type="Bet" seat="1" value="0.02"/>
+      <Action seq="18" type="Call" seat="5" value="0.02"/>
+      <Action seq="19" type="Call" seat="9" value="0.02"/>
+      <Action seq="20" type="DealRiver">
+         <Card value="9" suit="c" id="21"/>
+      </Action>
+      <Action seq="21" type="Check" seat="1"/>
+      <Action seq="22" type="Check" seat="5"/>
+      <Action seq="23" type="Check" seat="9"/>
+      <Action seq="24" type="ShowCards" seat="1">
+         <Card value="7" suit="d" id="32"/>
+         <Card value="8" suit="s" id="7"/>
+      </Action>
+      <Action seq="25" type="MuckCards" seat="5">
+         <Card value="A" suit="s" id="0"/>
+         <Card value="K" suit="h" id="51"/>
+      </Action>
+      <Action seq="26" type="ShowCards" seat="9">
+         <Card value="K" suit="d" id="38"/>
+         <Card value="J" suit="d" id="36"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="9" amount="0.24" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079075350" date="2013-10-17 16:58:22" unicodetablename="QwB1AHQALQBPAGYAZgAgADEANwAgAC0AIACsIDIAMAAwACAATQBhAHgA" tablename="Cut-Off 17 - €200 Max" stakes="1|2" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="0">
+   <Seats>
+      <Seat num="1" alias="sylvanshine" unicodealias="cwB5AGwAdgBhAG4AcwBoAGkAbgBlAA==" balance="211.80" endbalance="211.80" dealer="true"/>
+      <Seat num="2" alias="IIIHELLIII" unicodealias="SQBJAEkASABFAEwATABJAEkASQA=" balance="447.80" endbalance="446.80"/>
+      <Seat num="3" alias="Berkley1" unicodealias="QgBlAHIAawBsAGUAeQAxAA==" balance="0.00" endbalance="0.00"/>
+      <Seat num="4" alias="wrodec" unicodealias="dwByAG8AZABlAGMA" balance="75.65" endbalance="76.65"/>
+      <Seat num="5" alias="nogueirita" unicodealias="bgBvAGcAdQBlAGkAcgBpAHQAYQA=" balance="221.50" endbalance="221.50"/>
+      <Seat num="6" alias="Cimex" unicodealias="QwBpAG0AZQB4AA==" balance="203.40" endbalance="203.40"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="2" value="1.00"/>
+      <Action seq="2" type="BigBlind" seat="4" value="2.00"/>
+      <Action seq="3" type="Fold" seat="5"/>
+      <Action seq="4" type="Fold" seat="6"/>
+      <Action seq="5" type="Fold" seat="1"/>
+      <Action seq="6" type="Fold" seat="2"/>
+      <Action seq="7" type="MuckCards" seat="4"/>
+      <Action type="Win">
+         <Seat num="4" amount="3.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>
+
+<Game hhversion="4" id="5079075425" date="2013-10-17 16:59:06" unicodetablename="SABpAGoAYQBjAGsAIAAzADkAIAAtACAArCAxADAAMAAgAE0AYQB4AA==" tablename="Hijack 39 - €100 Max" stakes="0.50|1" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="true" rake="241">
+   <Seats>
+      <Seat num="1" alias="JennaJames0n" unicodealias="SgBlAG4AbgBhAEoAYQBtAGUAcwAwAG4A" balance="100.00" endbalance="99.50"/>
+      <Seat num="2" alias="-Heskey27-" unicodealias="LQBIAGUAcwBrAGUAeQAyADcALQA=" balance="100.00" endbalance="98.00"/>
+      <Seat num="3" alias="jigaar" unicodealias="agBpAGcAYQBhAHIA" balance="159.10" endbalance="159.10"/>
+      <Seat num="4" alias="WiseWhale" unicodealias="VwBpAHMAZQBXAGgAYQBsAGUA" balance="100.00" endbalance="100.00"/>
+      <Seat num="5" alias="tevusta" unicodealias="dABlAHYAdQBzAHQAYQA=" balance="52.14" endbalance="29.29"/>
+      <Seat num="6" alias="mark198" unicodealias="bQBhAHIAawAxADkAOAA=" balance="162.52" endbalance="185.44" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="1" value="0.50"/>
+      <Action seq="2" type="BigBlind" seat="2" value="1.00"/>
+      <Action seq="3" type="BadBeatContribution" seat="6" value="0.02"/>
+      <Action seq="4" type="Fold" seat="3"/>
+      <Action seq="5" type="Fold" seat="4"/>
+      <Action seq="6" type="Raise" seat="5" value="2.00"/>
+      <Action seq="7" type="Call" seat="6" value="2.00"/>
+      <Action seq="8" type="Fold" seat="1"/>
+      <Action seq="9" type="Call" seat="2" value="1.00"/>
+      <Action seq="10" type="DealFlop">
+         <Card value="4" suit="c" id="16"/>
+         <Card value="3" suit="d" id="28"/>
+         <Card value="9" suit="c" id="21"/>
+      </Action>
+      <Action seq="11" type="Check" seat="2"/>
+      <Action seq="12" type="Bet" seat="5" value="3.09"/>
+      <Action seq="13" type="Call" seat="6" value="3.09"/>
+      <Action seq="14" type="Fold" seat="2"/>
+      <Action seq="15" type="DealTurn">
+         <Card value="4" suit="h" id="42"/>
+      </Action>
+      <Action seq="16" type="Bet" seat="5" value="6.02"/>
+      <Action seq="17" type="Call" seat="6" value="6.02"/>
+      <Action seq="18" type="DealRiver">
+         <Card value="8" suit="h" id="46"/>
+      </Action>
+      <Action seq="19" type="Bet" seat="5" value="11.74"/>
+      <Action seq="20" type="Call" seat="6" value="11.74"/>
+      <Action seq="21" type="ShowCards" seat="5">
+         <Card value="J" suit="s" id="10"/>
+         <Card value="A" suit="c" id="13"/>
+      </Action>
+      <Action seq="22" type="ShowCards" seat="6">
+         <Card value="5" suit="c" id="17"/>
+         <Card value="5" suit="s" id="4"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="6" amount="45.79" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

@@ -1,38 +1,43 @@
-﻿Full Tilt Poker Game #28617512574: Table Bri (6 max) - $0.25/$0.50 - $15 Cap No Limit Hold'em - 18:46:08 ET - 2011/02/28
-Seat 1: hockenspit50 ($56.15)
-Seat 2: drc40 ($36.60)
-Seat 3: oggie the fox ($10.05)
-Seat 4: diknek ($16.70)
-Seat 5: Naturalblow ($26.25)
-Seat 6: BeerMySole ($26)
-Naturalblow posts the small blind of $0.25
-BeerMySole posts the big blind of $0.50
-The button is in seat #4
+﻿Full Tilt Poker Game #33730308005: Table Bosco - NL Hold'em - $0.50/$1 - 13:27:08 ET - 2014/01/06
+Seat 1: DoceBee ($101.25)
+Seat 2: Kukus V ($39.70)
+Seat 3: Daiv200 ($100)
+Seat 4: max_polonez ($100)
+Seat 5: Palkan93 ($40)
+Seat 6: insomnieux ($100), is sitting out
+Seat 7: GM604 ($100)
+Seat 8: 2emjay3 ($95.20)
+Seat 9: antonovd ($100)
+GM604 posts the small blind of $0.50
+2emjay3 posts the big blind of $1
+The button is in seat #5
 *** HOLE CARDS ***
-*** HOLE CARDS ***
-hockenspit50 folds
-drc40 raises to $1.50
-oggie the fox folds
-diknek calls $1.50
-Naturalblow folds
-BeerMySole folds
-*** FLOP *** [9h Ts 8h]
-drc40 checks
-diknek bets $2
-drc40 calls $2
-*** TURN *** [9h Ts 8h] [6c]
-drc40 checks
-diknek bets $4
-drc40 folds
-Uncalled bet of $4 returned to diknek
-diknek mucks
-diknek wins the pot ($7.40)
+DoceBee raises to $3
+Kukus V folds
+Daiv200 has 15 seconds left to act
+Daiv200 has been disconnected
+Daiv200 has reconnected
+Daiv200 has timed out
+Daiv200 folds
+Daiv200 is sitting out
+max_polonez folds
+Palkan93 folds
+GM604 folds
+GM604 adds $0.50
+Daiv200 has returned
+2emjay3 has 15 seconds left to act
+2emjay3 folds
+Uncalled bet of $2 returned to DoceBee
+DoceBee shows [Ah Jc] Ace Jack high
+DoceBee wins the pot ($2.50)
 *** SUMMARY ***
-Total pot $7.75 | Rake $0.35
-Board: [9h Ts 8h 6c]
-Seat 1: hockenspit50 didn't bet (folded)
-Seat 2: drc40 folded on the Turn
-Seat 3: oggie the fox didn't bet (folded)
-Seat 4: diknek (button) collected ($7.40), mucked
-Seat 5: Naturalblow (small blind) folded before the Flop
-Seat 6: BeerMySole (big blind) folded before the Flop
+Total pot $2.50 | Rake $0
+Seat 1: DoceBee collected ($2.50)
+Seat 2: Kukus V didn't bet (folded)
+Seat 3: Daiv200 didn't bet (folded)
+Seat 4: max_polonez didn't bet (folded)
+Seat 5: Palkan93 (button) didn't bet (folded)
+Seat 6: insomnieux is sitting out
+Seat 7: GM604 (small blind) folded before the Flop
+Seat 8: 2emjay3 (big blind) folded before the Flop
+Seat 9: antonovd is sitting out

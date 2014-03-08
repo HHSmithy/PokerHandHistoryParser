@@ -1,0 +1,33 @@
+﻿<Game hhversion="4" id="5049091555" date="2013-09-23 14:27:28" unicodetablename="VAB1AHIAYgBvADoAIABNAGkAYwByAG8AIABOAEwASABFACAAMwAgAC0AIACsIDIAIABNAGEAeAA=" tablename="Turbo: Micro NLHE 3 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="false" rake="0">
+   <Seats>
+      <Seat num="1" alias="mirimm" unicodealias="bQBpAHIAaQBtAG0A" balance="2.22" endbalance="2.22" dealer="true"/>
+      <Seat num="2" alias="Quard1010" unicodealias="UQB1AGEAcgBkADEAMAAxADAA" balance="1.00" endbalance="1.00"/>
+      <Seat num="3" alias="YunitaCantik" unicodealias="WQB1AG4AaQB0AGEAQwBhAG4AdABpAGsA" balance="0.44" endbalance="0.46"/>
+      <Seat num="4" alias="WodzUchieF" unicodealias="VwBvAGQAegBVAGMAaABpAGUARgA=" balance="2.53" endbalance="2.51"/>
+      <Seat num="5" alias="_joker_" unicodealias="XwBqAG8AawBlAHIAXwA=" balance="2.00" endbalance="0.00" sittingout="true"/>
+      <Seat num="6" alias="4WHawkft" unicodealias="NABXAEgAYQB3AGsAZgB0AA==" balance="2.08" endbalance="2.08" sittingout="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="0.01"/>
+      <Action seq="2" type="BigBlind" seat="4" value="0.02"/>
+      <Action seq="3" type="Fold" seat="1"/>
+      <Action seq="4" type="Call" seat="3" value="0.01"/>
+      <Action seq="5" type="Check" seat="4"/>
+      <Action seq="6" type="DealFlop">
+         <Card value="K" suit="c" id="50"/>
+         <Card value="A" suit="h" id="32"/>
+         <Card value="7" suit="c" id="27"/>
+      </Action>
+      <Action seq="7" type="Check" seat="3"/>
+      <Action seq="8" type="Check" seat="4"/>
+      <Action seq="9" type="DealTurn">
+         <Card value="3" suit="d" id="17"/>
+      </Action>
+      <Action seq="10" type="Bet" seat="3" value="0.02"/>
+      <Action seq="11" type="Fold" seat="4"/>
+      <Action seq="12" type="MuckCards" seat="3"/>
+      <Action type="Win">
+         <Seat num="3" amount="0.06" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

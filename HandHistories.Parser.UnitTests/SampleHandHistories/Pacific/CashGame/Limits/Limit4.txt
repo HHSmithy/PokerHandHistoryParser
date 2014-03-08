@@ -1,24 +1,17 @@
-﻿#Game No : 176459125
-***** Cassava Hand History for Game 176459125 *****
-$5/$10 Blinds No Limit Holdem - *** 30 05 2012 07:55:40
-Table Apatzingan (Real Money)
-Seat 6 is the button
+﻿#Game No : 539512407
+***** 888poker Hand History for Game 539512407 *****
+$5/$10 Blinds No Limit Holdem - *** 06 01 2014 23:15:54
+Table Jiutepec 6 Max (Real Money)
+Seat 4 is the button
 Total number of players : 3
-Seat 4: edekit ( $50 )
-Seat 6: piewie4 ( $311.50 )
-Seat 7: Iliketocheck ( $137 )
-Iliketocheck posts small blind [$5]
-edekit posts big blind [$10]
+Seat 4: dearugly ( $1,033 )
+Seat 6: GabeKaplan ( $490 )
+Seat 7: alen1986 ( $2,000 )
+GabeKaplan posts small blind [$5]
+alen1986 posts big blind [$10]
 ** Dealing down cards **
-piewie4 raises [$20]
-Iliketocheck folds
-edekit calls [$10]
-** Dealing flop ** [ 5h, Ts, 6d ]
-edekit bets [$30]
-piewie4 calls [$30]
-** Dealing turn ** [ 7h ]
-** Dealing river ** [ Qd ]
+dearugly raises [$26.25]
+GabeKaplan folds
+alen1986 folds
 ** Summary **
-edekit shows [ 6h, 4s ]
-piewie4 shows [ Jc, Td ]
-piewie4 collected [ $102.50 ]
+dearugly collected [ $25 ]

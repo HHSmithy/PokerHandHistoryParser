@@ -1,27 +1,33 @@
-﻿***** History for hand R5-244393444-22 *****
-Start hand: Tue May 29 01:02:00 CEST 2012
-Table: Managua [244393444] (POT_LIMIT OMAHA_HI $5/$5, Real money)
-Button: seat 8
-Players in round: 3
-Seat 2: AlexZander2 ($209.30) 
-Seat 7: kojac123 ($240.00) 
-Seat 8: kallepertti9 ($354.00) 
-AlexZander2 posts small blind ($5)
-kojac123 posts big blind ($5)
+﻿***** History for hand R5-361850810-504 *****
+Start hand: Mon Jan 06 01:23:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 2
+Players in round: 6
+Seat 1: BlackH0L3 ($98.03) 
+Seat 2: Cockatrice ($96.27) 
+Seat 7: BONUS 1OOO ($131.59) 
+Seat 8: fyabcf ($341.56) 
+Seat 9: kliketiklok ($120.03) 
+Seat 10: Dbcee89 ($100.00) 
+BONUS 1OOO posts small blind ($0.50)
+fyabcf posts big blind ($1)
 ---
 Dealing pocket cards
-kallepertti9 raises $20.00 to $20.00
-AlexZander2 raises $30.00 to $35.00
-kojac123 folds
-kallepertti9 calls $15.00
---- Dealing flop [9h, 9c, 2s]
-AlexZander2 bets $40.00
-kallepertti9 folds
+kliketiklok folds
+Dbcee89 folds
+BlackH0L3 folds
+Cockatrice folds
+BONUS 1OOO raises $1.50 to $2.00
+fyabcf raises $5.00 to $6.00
+BONUS 1OOO folds
 ---
 Summary:
-Main pot: $75.00 won by AlexZander2 ($73.00)
-Rake taken: $2
-Seat 2: AlexZander2 ($247.30), net: +$38.00
-Seat 7: kojac123 ($235.00), net: -$5.00
-Seat 8: kallepertti9 ($319.00), net: -$35.00
-***** End of hand R5-244393444-22 *****
+Main pot: $4.00 won by fyabcf ($4.00)
+Rake taken: $0.00
+Seat 1: BlackH0L3 ($98.03), net: -$0.00
+Seat 2: Cockatrice ($96.27), net: -$0.00
+Seat 7: BONUS 1OOO ($129.59), net: -$2.00
+Seat 8: fyabcf ($343.56), net: +$2.00
+Seat 9: kliketiklok ($120.03), net: -$0.00
+Seat 10: Dbcee89 ($100.00), net: -$0.00
+***** End of hand R5-361850810-504 *****

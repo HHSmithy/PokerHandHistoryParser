@@ -1,36 +1,20 @@
-﻿PokerStars Game #81482063736:  Hold'em No Limit ($3/$6 - $120 Cap -  USD) - 2012/06/04 13:30:23 ET
-Table 'Phthia III CAP, Fast,20-50 bb' 6-max Seat #2 is the button
-Seat 2: willybeer22 ($299.66 in chips) 
-Seat 6: YurNas ($307.81 in chips) 
-willybeer22: posts small blind $3
-apfush: is sitting out 
-PampaSeba: is sitting out 
-2w392y41ur: is sitting out 
-PampaSeba leaves the table
-YurNas: posts big blind $6
+﻿PokerStars Game #109680936246:  Hold'em No Limit ($0.50/$1.00 - $20 Cap -  USD) - 2014/01/06 7:09:08 ET
+Table 'Ascanios II CAP,20-50 bb' 6-max Seat #1 is the button
+Seat 1: SirCedric ($40.14 in chips) 
+Seat 3: V_Koning ($26.91 in chips) 
+Seat 4: Giovanni1983 ($100 in chips) 
+V_Koning: posts small blind $0.50
+Giovanni1983: posts big blind $1
+asekk: sits out 
 *** HOLE CARDS ***
-willybeer22: raises $6.06 to $12.06
-apfush leaves the table
-YurNas: folds 
-Uncalled bet ($6.06) returned to willybeer22
-willybeer22 collected $12 from pot
-willybeer22: doesn't show hand 
+SirCedric: folds 
+V_Koning: folds 
+Uncalled bet ($0.50) returned to Giovanni1983
+Giovanni1983 collected $1 from pot
+SirCedric leaves the table
+Giovanni1983: doesn't show hand 
 *** SUMMARY ***
-Total pot $12 | Rake $0 
-Seat 2: willybeer22 (button) (small blind) collected ($12)
-Seat 6: YurNas (big blind) folded before Flop
-PokerStars Game #81482110546:  Hold'em No Limit ($3/$6 - $120 Cap -  USD) - 2012/06/04 13:31:15 ET
-Table 'Phthia III CAP, Fast,20-50 bb' 6-max Seat #6 is the button
-Seat 1: ilats ($120 in chips) 
-Seat 6: YurNas ($301.81 in chips) 
-YurNas: posts small blind $3
-ilats: posts big blind $6
-*** HOLE CARDS ***
-YurNas: folds 
-Uncalled bet ($3) returned to ilats
-ilats collected $6 from pot
-ilats: doesn't show hand 
-*** SUMMARY ***
-Total pot $6 | Rake $0 
-Seat 1: ilats (big blind) collected ($6)
-Seat 6: YurNas (button) (small blind) folded before Flop
+Total pot $1 | Rake $0 
+Seat 1: SirCedric (button) folded before Flop (didn't bet)
+Seat 3: V_Koning (small blind) folded before Flop
+Seat 4: Giovanni1983 (big blind) collected ($1)

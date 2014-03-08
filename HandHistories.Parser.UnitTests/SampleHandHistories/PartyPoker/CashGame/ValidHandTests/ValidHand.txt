@@ -1,18 +1,22 @@
-﻿***** Hand History for Game 11607684518 *****
-$100 USD PL Omaha Hi-Lo - Sunday, April 01, 06:26:15 EDT 2012
-Table Table  137431 (No DP) (Real Money)
-Seat 4 is the button
-Total number of players : 2/6 
-Seat 2: StivDiller ( $153.42 USD )
-Seat 4: janusfaced ( $103 USD )
-janusfaced posts small blind [$0.50 USD].
-StivDiller posts big blind [$1 USD].
+﻿***** Hand History for Game 13551039167 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 11:42:48 EST 2014
+Table Gyumri (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: IknowUrAho ( $10.05 USD )
+Seat 5: RoadTrips ( $20.76 USD )
+Seat 6: ahahhahahahahah ( $19.17 USD )
+Seat 1: kalamasz ( $10 USD )
+Seat 4: radpl ( $10 USD )
+Seat 3: wadereckons ( $16.23 USD )
+IknowUrAho posts small blind [$0.05 USD].
+wadereckons posts big blind [$0.10 USD].
 ** Dealing down cards **
-janusfaced raises [$2.50 USD]
-StivDiller calls [$2 USD]
-** Dealing Flop ** [ 8c, Ks, 6h ]
-StivDiller checks
-janusfaced bets [$5 USD]
-StivDiller folds
-janusfaced does not show cards.
-janusfaced wins $10.70 USD
+RoadTrips raises [$0.30 USD]
+ahahhahahahahah folds
+kalamasz folds
+IknowUrAho raises [$0.95 USD]
+wadereckons folds
+RoadTrips folds
+IknowUrAho does not show cards.
+IknowUrAho wins $1.40 USD

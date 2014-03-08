@@ -1,30 +1,44 @@
-﻿***** History for hand R5-244305024-112 *****
-Start hand: Tue May 29 12:05:00 CEST 2012
-Table: Pinehurst [244305024] (POT_LIMIT OMAHA_HI $2/$2, Real money)
-Button: seat 4
-Players in round: 5
-Seat 2: Confishius ($415.66) 
-Seat 4: sam168 ($207.00) 
-Seat 5: TsarStepan96 ($337.00) 
-Seat 6: mr_mulligan ($228.70) 
-Seat 8: crazy_shark_ ($337.60) 
-TsarStepan96 posts small blind ($2)
-mr_mulligan posts big blind ($2)
+﻿***** History for hand R5-362019465-110 *****
+Start hand: Mon Jan 06 20:53:00 CET 2014
+Table: Barquisimeto [362019465] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 6
+Players in round: 6
+Seat 3: julejeipen ($54.56) 
+Seat 4: xxGibaxx ($56.75) 
+Seat 5: TrickyRojer ($108.28) 
+Seat 6: BlackH0L3 ($97.55) 
+Seat 7: trunaldini ($131.61) 
+Seat 9: Iamreadless ($161.91) 
+trunaldini posts small blind ($0.50)
+Iamreadless posts big blind ($1)
 ---
 Dealing pocket cards
-crazy_shark_ folds
-Confishius folds
-sam168 folds
-TsarStepan96 checks
-mr_mulligan raises $4.00 to $6.00
-TsarStepan96 folds
+julejeipen calls $1.00
+xxGibaxx calls $1.00
+TrickyRojer folds
+BlackH0L3 calls $1.00
+trunaldini folds
+Iamreadless checks
+--- Dealing flop [Qc, 6d, 8c]
+Iamreadless checks
+julejeipen checks
+xxGibaxx checks
+BlackH0L3 checks
+--- Dealing turn [Js]
+Iamreadless checks
+julejeipen bets $1.00
+xxGibaxx raises $4.00 to $4.00
+BlackH0L3 folds
+Iamreadless folds
+julejeipen folds
 ---
 Summary:
-Main pot: $4.00 won by mr_mulligan ($4.00)
-Rake taken: $0.00
-Seat 2: Confishius ($415.66), net: -$0.00
-Seat 4: sam168 ($207.00), net: -$0.00
-Seat 5: TsarStepan96 ($335.00), net: -$2.00
-Seat 6: mr_mulligan ($230.70), net: +$2.00
-Seat 8: crazy_shark_ ($337.60), net: -$0.00
-***** End of hand R5-244305024-112 *****
+Main pot: $6.50 won by xxGibaxx ($6.18)
+Rake taken: $0.32
+Seat 3: julejeipen ($52.56), net: -$2.00
+Seat 4: xxGibaxx ($60.93), net: +$4.18
+Seat 5: TrickyRojer ($108.28), net: -$0.00
+Seat 6: BlackH0L3 ($96.55), net: -$1.00
+Seat 7: trunaldini ($131.11), net: -$0.50
+Seat 9: Iamreadless ($160.91), net: -$1.00
+***** End of hand R5-362019465-110 *****

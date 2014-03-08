@@ -1,0 +1,28 @@
+Winamax Poker - CashGame - HandId: #5313422-1-1383828693 - Omaha pot limit (0.25€/0.50€) - 2013/11/07 12:51:33 UTC
+Table: 'Orlando' 9-max (real money) Seat #2 is the button
+Seat 1: ChuuuuuuuT (50€)
+Seat 2: Tichydu69 (20€)
+*** ANTE/BLINDS ***
+Tichydu69 posts small blind 0.25€
+ChuuuuuuuT posts big blind 0.50€
+*** PRE-FLOP *** 
+Tichydu69 raises 0.50€ to 1€
+ChuuuuuuuT raises 2€ to 3€
+Tichydu69 calls 2€
+*** FLOP *** [Jh Kc 5s]
+ChuuuuuuuT checks
+Tichydu69 checks
+*** TURN *** [Jh Kc 5s] [2s]
+ChuuuuuuuT bets 6€
+Tichydu69 raises 11€ to 17€ and is all-in
+ChuuuuuuuT calls 11€
+*** RIVER *** [Jh Kc 5s 2s] [6d]
+*** SHOW DOWN ***
+Tichydu69 shows [9s 3s Jd 7d] (One pair : Jacks)
+ChuuuuuuuT shows [3d Ts 3h Js] (One pair : Jacks)
+ChuuuuuuuT collected 38.50€ from pot
+*** SUMMARY ***
+Total pot 38.50€ | Rake 1.50€
+Board: [Jh Kc 5s 2s 6d]
+Seat 1: ChuuuuuuuT (big blind) showed [3d Ts 3h Js] and won 38.50€ with One pair : Jacks
+Seat 2: Tichydu69 (small blind) (button) mucked

@@ -1,22 +1,32 @@
-﻿***** Hand History for Game 10164893016 *****
-$1,000 USD NL Texas Hold'em - Saturday, February 19, 09:05:50 EST 2011
-Table Heads Up #1769625 (Real Money)
-Seat 2 is the button
-Total number of players : 2/2 
-Seat 2: Slask17 ( $1,198.95 USD )
-Seat 1: WillmaF1cken ( $3,431.11 USD )
-Slask17 posts small blind [$5 USD].
-WillmaF1cken posts big blind [$10 USD].
-** Dealing down cards **
-Slask17 raises [$20 USD]
-WillmaF1cken raises [$80 USD]
-Slask17 raises [$195 USD]
-WillmaF1cken is all-In  [$3,341.11 USD]
-Slask17 is all-In  [$978.95 USD]
-** Dealing Flop ** [ 7h, 9h, Kh ]
-** Dealing Turn ** [ 4d ]
-** Dealing River ** [ 7d ]
-Slask17 shows [ Jc, Jh ]two pairs, Jacks and Sevens.
-WillmaF1cken shows [ Qc, Qd ]two pairs, Queens and Sevens.
-WillmaF1cken wins $2,232.16 USD from the side pot 1 with two pairs, Queens and Sevens.
-WillmaF1cken wins $2,396.90 USD from the main pot with two pairs, Queens and Sevens.
+﻿Full Tilt Poker Game #33730111975: Table Iowa (heads up) - NL Hold'em - $5/$10 - 12:40:19 ET - 2014/01/06
+Seat 1: jobetzu ($2,094.70)
+Seat 2: theking881 ($308)
+theking881 posts the small blind of $5
+jobetzu posts the big blind of $10
+The button is in seat #2
+*** HOLE CARDS ***
+theking881 raises to $25
+jobetzu calls $15
+*** FLOP *** [9h As 9d] (Total Pot: $50, 2 Players)
+jobetzu checks
+theking881 bets $25
+jobetzu calls $25
+*** TURN *** [9h As 9d] [8s] (Total Pot: $100, 2 Players)
+jobetzu checks
+theking881 bets $50
+jobetzu has 15 seconds left to act
+jobetzu raises to $120
+theking881 calls $70
+*** RIVER *** [9h As 9d 8s] [8h] (Total Pot: $340, 2 Players)
+jobetzu bets $170
+theking881 calls $138, and is all in
+Uncalled bet of $32 returned to jobetzu
+*** SHOW DOWN ***
+jobetzu shows [Ac 9s] a full house, Nines full of Aces
+theking881 mucks
+jobetzu wins the pot ($615.50) with a full house, Nines full of Aces
+*** SUMMARY ***
+Total pot $616 | Rake $0.50
+Board: [9h As 9d 8s 8h]
+Seat 1: jobetzu (big blind) collected ($615.50)
+Seat 2: theking881 (small blind) mucked
