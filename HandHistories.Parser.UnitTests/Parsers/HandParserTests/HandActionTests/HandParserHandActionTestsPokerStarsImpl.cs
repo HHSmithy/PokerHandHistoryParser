@@ -29,7 +29,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("wo_ooly :D", HandActionType.UNCALLED_BET, 2, Street.Preflop),                  
                                         new WinningsAction("wo_ooly :D", HandActionType.WINS, 2.50m, 0),
                                         new HandAction("wo_ooly :D", HandActionType.MUCKS,0, Street.Showdown)
-
                                     };
 
             TestParseActions("StrangePlayerNames", expectedActions);

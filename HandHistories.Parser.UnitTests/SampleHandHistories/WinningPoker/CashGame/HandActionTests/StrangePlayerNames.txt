@@ -1,0 +1,45 @@
+﻿Game started at: 2014/2/28 22:45:3
+Game ID: 258671202 2/4 Braunite ( Beast ) (Omaha)
+Seat 5 is the button
+Seat 2: OhGoodGolly (735.90).
+Seat 3: dont.do.it (478.08).
+Seat 5: COMON-JOE-JUG (486.80).
+Seat 6: do not-call (890.16).
+Player do not-call has small blind (2)
+Player OhGoodGolly has big blind (4)
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player OhGoodGolly received a card.
+Player OhGoodGolly received a card.
+Player OhGoodGolly received a card.
+Player OhGoodGolly received a card.
+Player dont.do.it received a card.
+Player dont.do.it received a card.
+Player dont.do.it received a card.
+Player dont.do.it received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player dont.do.it folds
+Player COMON-JOE-JUG raises (14)
+Player do not-call calls (12)
+Player OhGoodGolly calls (10)
+*** FLOP ***: [10s Js 3h]
+Player do not-call checks
+Player OhGoodGolly checks
+Player COMON-JOE-JUG bets (39.75)
+Player do not-call folds
+Player OhGoodGolly folds
+Uncalled bet (39.75) returned to COMON-JOE-JUG
+Player COMON-JOE-JUG mucks cards
+------ Summary ------
+Pot: 39.75. Rake 2
+Board: [10s Js 3h]
+Player OhGoodGolly does not show cards.Bets: 14. Collects: 0. Loses: 14.
+Player dont.do.it does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player COMON-JOE-JUG mucks (does not show cards). Bets: 14. Collects: 39.75. Wins: 25.75.
+Player do not-call does not show cards.Bets: 14. Collects: 0. Loses: 14.
+Game ended at: 2014/2/28 22:46:0

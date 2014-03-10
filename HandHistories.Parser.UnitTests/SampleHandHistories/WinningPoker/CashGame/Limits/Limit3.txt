@@ -1,0 +1,40 @@
+﻿Game started at: 2014/3/9 16:42:40
+Game ID: 261639973 0.10/0.25 Tantalite   (JP) (Hold'em)
+Seat 6 is the button
+Seat 1: Shipologist (33.68).
+Seat 2: borjilius79 (21.67).
+Seat 3: LadyStack (31.41).
+Seat 4: FetusMunch (36.27).
+Seat 5: xXxAudiA5xXx (12.50).
+Seat 6: Daviciko (27.47).
+Player Shipologist has small blind (0.10)
+Player borjilius79 has big blind (0.25)
+Player Shipologist received a card.
+Player Shipologist received a card.
+Player borjilius79 received a card.
+Player borjilius79 received a card.
+Player LadyStack received a card.
+Player LadyStack received a card.
+Player FetusMunch received a card.
+Player FetusMunch received a card.
+Player xXxAudiA5xXx received a card.
+Player xXxAudiA5xXx received a card.
+Player Daviciko received a card.
+Player Daviciko received a card.
+Player LadyStack folds
+Player FetusMunch folds
+Player xXxAudiA5xXx folds
+Player Daviciko raises (0.75)
+Player Shipologist folds
+Player borjilius79 folds
+Uncalled bet (0.50) returned to Daviciko
+Player Daviciko mucks cards
+------ Summary ------
+Pot: 0.60. Rake 0
+Player Shipologist does not show cards.Bets: 0.10. Collects: 0. Loses: 0.10.
+Player borjilius79 does not show cards.Bets: 0.25. Collects: 0. Loses: 0.25.
+Player LadyStack does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player FetusMunch does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player xXxAudiA5xXx does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player Daviciko mucks (does not show cards). Bets: 0.25. Collects: 0.60. Wins: 0.35.
+Game ended at: 2014/3/9 16:42:56

@@ -15,6 +15,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
     [TestFixture("FullTilt", "Lynn", "Dega", "Oveja", "Link")]
     [TestFixture("MicroGaming", "Turbo: Hijack 41 - €100 Max", "Turbo: Shuffle 111 - €4 Max", "Turbo: Micro NLHE 3 - €2 Max", "Cut-Off 17 - €200 Max")]
     [TestFixture("Winamax", "Istanbul", "Dublin", "Vienna 36","San Antonio")]
+    [TestFixture("WinningPoker", "Braunite", "Baryte", "Baotite")]
     class HandParserTableNameTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedTables;

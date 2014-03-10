@@ -12,6 +12,7 @@ using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.Parsers.FastParser.Winamax;
 using HandHistories.Parser.Parsers.FastParser._888;
 using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
+using HandHistories.Parser.Parsers.FastParser.Winning;
 
 namespace HandHistories.Parser.Parsers.Factory
 {
@@ -55,6 +56,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new MicroGamingFastParserImpl();
                 case SiteName.Winamax:
                     return new WinamaxFastParserImpl();
+                case SiteName.WinningPoker:
+                    return new WinningPokerNetworkFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No full regex parser for " + siteName);
             }
@@ -93,6 +96,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new MicroGamingFastParserImpl();
                 case SiteName.Winamax:
                     return new WinamaxFastParserImpl();
+                case SiteName.WinningPoker:
+                    return new WinningPokerNetworkFastParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No summary regex parser for " + siteName);
             }
