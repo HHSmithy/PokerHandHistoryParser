@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\CardPerformance.cs" />
+    <Compile Include="Cards\CardEqualTest.cs" />
     <Compile Include="GameDescription\Limits\FromLimitEnumTests.cs" />
     <Compile Include="Cards\GetCardFromIntValueTests.cs" />
     <Compile Include="Cards\CardConstructorTests.cs" />
