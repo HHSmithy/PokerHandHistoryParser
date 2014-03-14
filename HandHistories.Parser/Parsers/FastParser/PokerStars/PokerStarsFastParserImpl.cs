@@ -12,6 +12,7 @@ using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
+using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
@@ -77,19 +78,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             dateString = dateString.Trim(' ');
 
+            CultureInfo provider = CultureInfo.InvariantCulture;
             // DateString is one of:
             // 2012/04/07 2:58:27
             // 2012/04/07 18:58:27
 
-            int year = int.Parse(dateString.Substring(0, 4));
-            int month = int.Parse(dateString.Substring(5, 2));
-            int day = int.Parse(dateString.Substring(8, 2));
-
-            int second = int.Parse(dateString.Substring(dateString.Length - 2, 2));
-            int minute = int.Parse(dateString.Substring(dateString.Length - 5, 2));
-            int hour = int.Parse(dateString.Substring(11, dateString.IndexOf(':', 12) - 11));
-
-            DateTime dateTime = new DateTime(year, month, day, hour, minute, second);
+            DateTime dateTime = DateTime.ParseExact(dateString, "yyyy/MM/dd H:mm:ss", provider);//new DateTime(year, month, day, hour, minute, second);
 
             DateTime converted = TimeZoneInfo.ConvertTimeToUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
@@ -332,8 +326,18 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         /// <returns>True if we have reached the end of the action block.</returns>
         private bool ParseLine(string line, GameType gameType, ref Street currentStreet, ref List<HandAction> handActions)
         {
-            if (line.Contains(" said, "))
+            //Chat lines start with the PlayerName and
+            //PlayerNames can contain characters that disturb parsing
+            //So we must check for chatlines first
+            char lastChar = line[line.Length - 1];
+            if (lastChar == '\"')
             {
+#if DEBUG
+                if (!line.Contains(" said, "))
+                {
+                    throw new ArgumentException("Did not find \" said, \"");
+                }
+#endif
                 return false;
             }
 
@@ -418,12 +422,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 //}
             }
 
-            // throw away chat lines. can contain : and anything else so check before we proceed.
-            // allpokerjon said, "33 :-)"
-            if (line[line.Length - 1] == '\"')
-            {
-                return false;
-            }
+            //Duplicate ChatLine Check removed
+            //// throw away chat lines. can contain : and anything else so check before we proceed.
+            //// allpokerjon said, "33 :-)"
+            //if (line[line.Length - 1] == '\"')
+            //{
+            //    return false;
+            //}
 
             int colonIndex = line.LastIndexOf(':'); // do backwards as players can have : in their name
 
@@ -495,7 +500,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case Street.Null:
                     // Can have non posting action lines:
                     //    Craftyspirit: is sitting out                   
-                    char lastChar = line[line.Length - 1];
                     if (lastChar == 't' || // sitting out line
                         lastChar == 'n') // play after button line
                     {
@@ -748,15 +752,30 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int lastLineRead = -1;
 
+            List<Player> newPlayers = new List<Player>(10);
             // We start on line index 2 as first 2 lines are table and limit info.
             for (int lineNumber = 2; lineNumber < handLines.Length - 1; lineNumber++)
             {
                 string line = handLines[lineNumber];
-                if (line.StartsWith(@"Seat ") == false)
+
+                char startChar = line[0];
+                char endChar = line[line.Length - 1];
+
+                if (endChar != ')')
                 {
+                    
                     lastLineRead = lineNumber;
                     break;
                 }
+#if DEBUG
+                else
+                {
+                    if (!line.StartsWith(@"Seat "))
+                    {
+                        throw new ArgumentException("Did not find \"Seat \"");
+                    }
+                }
+#endif
 
                 // seat info expected in format: 
                 //Seat 1: thaiJhonny ($16.08 in chips)
@@ -774,8 +793,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 string stackString = line.Substring(openParenIndex + 2, spaceAfterOpenParen - (openParenIndex + 2));
                 decimal stack = decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
 
-                playerList.Add(new Player(playerName, stack, seatNumber));
+                newPlayers.Add(new Player(playerName, stack, seatNumber));
             }
+
+            playerList.AddRange(newPlayers);
 
             if (lastLineRead == -1)
             {
@@ -810,12 +831,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     }
 
                     int lastSquareBracket = line.LastIndexLoopsBackward(']', line.Length - 1);
-                    int firstSquareBracket = line.LastIndexOf('[', lastSquareBracket);
 
-                    if (firstSquareBracket == -1)
+                    if (lastSquareBracket == -1)
                     {
                         continue;
                     }
+
+                    int firstSquareBracket = line.LastIndexOf('[', lastSquareBracket);
 
                     // can show single cards:
                     // Zaza5573: shows [Qc]

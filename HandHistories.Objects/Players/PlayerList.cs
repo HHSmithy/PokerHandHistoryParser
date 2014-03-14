@@ -30,10 +30,7 @@ namespace HandHistories.Objects.Players
 
         public void AddRange(IEnumerable<Player> players)
         {
-            foreach (var player in players)
-            {
-                _players.Add(player);
-            }
+            _players.AddRange(players);
 
             SortList();
         }

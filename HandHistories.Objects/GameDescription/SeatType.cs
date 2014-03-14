@@ -68,6 +68,7 @@ namespace HandHistories.Objects.GameDescription
             }
         }
 
+        //TODO: remove this to avoid allocations during the construction
         [DataMember]
         private string _seatType;
        
