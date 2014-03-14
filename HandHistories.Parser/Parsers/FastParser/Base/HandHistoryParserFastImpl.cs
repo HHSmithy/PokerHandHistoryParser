@@ -107,14 +107,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             try
             {
-                string[] lines = SplitHandsLines(handText);
+                string[] handLines = SplitHandsLines(handText);
 
-                if (IsValidHand(lines) == false)
+                if (IsValidHand(handLines) == false)
                 {
                     throw new InvalidHandException(handText ?? "NULL");                    
                 }
-
-                string[] handLines = SplitHandsLines(handText);
                
                 HandHistory handHistory = new HandHistory
                         {
