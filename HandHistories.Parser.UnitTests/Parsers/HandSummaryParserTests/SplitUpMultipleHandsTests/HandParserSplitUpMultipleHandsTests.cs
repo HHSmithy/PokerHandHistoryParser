@@ -15,6 +15,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
     [TestFixture("FullTilt")]
     [TestFixture("MicroGaming")]
     [TestFixture("Winamax")]
+    [TestFixture("WinningPoker")]
     internal class HandParserSplitUpMultipleHandsTests : HandHistoryParserBaseTests
     {
         public HandParserSplitUpMultipleHandsTests(string site)

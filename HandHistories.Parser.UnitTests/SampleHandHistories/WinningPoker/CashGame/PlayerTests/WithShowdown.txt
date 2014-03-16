@@ -1,0 +1,31 @@
+﻿Game started at: 2014/2/28 15:59:51
+Game ID: 258592968 2/4 Gabilite (JP) - CAP - Max - 2 (Hold'em)
+Seat 4 is the button
+Seat 1: xx59704 (159.21).
+Seat 4: Xavier2500 (110.40).
+Player Xavier2500 has small blind (2)
+Player xx59704 has big blind (4)
+Player xx59704 received a card.
+Player xx59704 received a card.
+Player Xavier2500 received a card.
+Player Xavier2500 received a card.
+Player Xavier2500 calls (2)
+Player xx59704 checks
+*** FLOP ***: [5c 8s 6c]
+Player xx59704 bets (4)
+Player Xavier2500 raises (8)
+Player xx59704 raises (12)
+Player Xavier2500 calls (8)
+*** TURN ***: [5c 8s 6c] [Jd]
+Player xx59704 bets (26.33)
+Player Xavier2500 calls (26.33)
+*** RIVER ***: [5c 8s 6c Jd] [Js]
+Player xx59704 bets (61.44)
+Player Xavier2500 allin (64.07)
+Player xx59704 calls (2.63)
+------ Summary ------
+Pot: 220.30. Rake 0.50
+Board: [5c 8s 6c Jd Js]
+*Player xx59704 shows: Straight to 8 [7s 4h]. Bets: 110.40. Collects: 220.30. Wins: 109.90.
+Player Xavier2500 shows: Two pairs. Js and 8s [10h 8c]. Bets: 110.40. Collects: 0. Loses: 110.40.
+Game ended at: 2014/2/28 16:0:36

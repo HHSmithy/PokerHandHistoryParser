@@ -1,0 +1,24 @@
+﻿Game started at: 2014/3/10 17:3:35
+Game ID: 262002530 0.05/0.10 Aleonite - CAP - (Hold'em)
+Seat 1 is the button
+Seat 1: 70moparman (3.48).
+Seat 4: JayTee18 (0.90).
+Seat 5: karol (3.44).
+Player JayTee18 has small blind (0.05)
+Player karol has big blind (0.10)
+Player JayTee18 received a card.
+Player JayTee18 received a card.
+Player karol received a card.
+Player karol received a card.
+Player 70moparman received a card.
+Player 70moparman received a card.
+Player 70moparman folds
+Player JayTee18 folds
+Uncalled bet (0.05) returned to karol
+Player karol mucks cards
+------ Summary ------
+Pot: 0.10. Rake 0
+Player 70moparman does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player JayTee18 does not show cards.Bets: 0.05. Collects: 0. Loses: 0.05.
+*Player karol mucks (does not show cards). Bets: 0.05. Collects: 0.10. Wins: 0.05.
+Game ended at: 2014/3/10 17:3:46

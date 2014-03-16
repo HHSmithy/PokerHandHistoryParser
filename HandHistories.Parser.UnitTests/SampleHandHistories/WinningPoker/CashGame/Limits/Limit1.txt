@@ -1,0 +1,52 @@
+﻿Game started at: 2014/3/9 1:47:3
+Game ID: 261477404 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 2 is the button
+Seat 1: enron_kenlay (438).
+Seat 2: hmongambler (1495.68).
+Seat 3: JstClcknBtns (454.30).
+Seat 4: PimpinDonks (506.15).
+Seat 5: thesl1ceman (400).
+Seat 6: SirNits-A-Lot (400).
+Player JstClcknBtns has small blind (2)
+Player PimpinDonks has big blind (4)
+Player JstClcknBtns received a card.
+Player JstClcknBtns received a card.
+Player PimpinDonks received a card.
+Player PimpinDonks received a card.
+Player thesl1ceman received a card.
+Player thesl1ceman received a card.
+Player SirNits-A-Lot received a card.
+Player SirNits-A-Lot received a card.
+Player enron_kenlay received a card.
+Player enron_kenlay received a card.
+Player hmongambler received a card.
+Player hmongambler received a card.
+Player thesl1ceman raises (12)
+Player SirNits-A-Lot folds
+Player enron_kenlay calls (12)
+Player hmongambler folds
+Player JstClcknBtns folds
+Player PimpinDonks calls (8)
+*** FLOP ***: [Kh 3h 5s]
+Player PimpinDonks checks
+Player thesl1ceman checks
+Player enron_kenlay checks
+*** TURN ***: [Kh 3h 5s] [4c]
+Player PimpinDonks bets (24)
+Player thesl1ceman calls (24)
+Player enron_kenlay folds
+*** RIVER ***: [Kh 3h 5s 4c] [10s]
+Player PimpinDonks checks
+Player thesl1ceman bets (60)
+Player PimpinDonks raises (214)
+Player thesl1ceman calls (154)
+------ Summary ------
+Pot: 510.75. Rake 3
+Board: [Kh 3h 5s 4c 10s]
+Player enron_kenlay does not show cards.Bets: 12. Collects: 0. Loses: 12.
+Player hmongambler does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player JstClcknBtns does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Player PimpinDonks shows: High card A [Jd Ah]. Bets: 250. Collects: 0. Loses: 250.
+*Player thesl1ceman shows: Three Of Kind of 4s [4h 4s]. Bets: 250. Collects: 510.75. Wins: 260.75.
+Player SirNits-A-Lot does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 1:49:47

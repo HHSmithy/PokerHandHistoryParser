@@ -1,0 +1,344 @@
+﻿Game started at: 2014/3/9 0:0:7
+Game ID: 261441531 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 4 is the button
+Seat 1: maxcady444 (255.10).
+Seat 2: Ra1syDa1sy (193.61).
+Seat 4: NoahSDsDad (457.71).
+Seat 5: KiWiKaKi (479.89).
+Player KiWiKaKi has small blind (2)
+Player maxcady444 has big blind (4)
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player Ra1syDa1sy folds
+Player NoahSDsDad raises (8)
+Player KiWiKaKi raises (30)
+Player maxcady444 folds
+Player NoahSDsDad folds
+Uncalled bet (24) returned to KiWiKaKi
+Player KiWiKaKi mucks cards
+------ Summary ------
+Pot: 20. Rake 0
+Player maxcady444 does not show cards.Bets: 4. Collects: 0. Loses: 4.
+Player Ra1syDa1sy does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player NoahSDsDad does not show cards.Bets: 8. Collects: 0. Loses: 8.
+*Player KiWiKaKi mucks (does not show cards). Bets: 8. Collects: 20. Wins: 12.
+Game ended at: 2014/3/9 0:0:39
+
+Game started at: 2014/3/9 0:0:41
+Game ID: 261441726 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 5 is the button
+Seat 1: maxcady444 (251.10).
+Seat 2: Ra1syDa1sy (193.61).
+Seat 4: NoahSDsDad (449.71).
+Seat 5: KiWiKaKi (491.89).
+Player maxcady444 has small blind (2)
+Player Ra1syDa1sy has big blind (4)
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player NoahSDsDad folds
+Player KiWiKaKi folds
+Player maxcady444 folds
+Uncalled bet (2) returned to Ra1syDa1sy
+Player Ra1syDa1sy mucks cards
+------ Summary ------
+Pot: 4. Rake 0
+Player maxcady444 does not show cards.Bets: 2. Collects: 0. Loses: 2.
+*Player Ra1syDa1sy mucks (does not show cards). Bets: 2. Collects: 4. Wins: 2.
+Player NoahSDsDad does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player KiWiKaKi does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 0:1:1
+
+Game started at: 2014/3/9 0:1:3
+Game ID: 261441841 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 1 is the button
+Seat 1: maxcady444 (249.10).
+Seat 2: Ra1syDa1sy (195.61).
+Seat 4: NoahSDsDad (449.71).
+Seat 5: KiWiKaKi (491.89).
+Player Ra1syDa1sy has small blind (2)
+Player NoahSDsDad has big blind (4)
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player KiWiKaKi raises (12)
+Player maxcady444 calls (12)
+Player Ra1syDa1sy calls (10)
+Player NoahSDsDad folds
+*** FLOP ***: [Jh 8s 3h]
+Player Ra1syDa1sy checks
+Player KiWiKaKi checks
+Player maxcady444 bets (35)
+Player Ra1syDa1sy folds
+Player KiWiKaKi folds
+Uncalled bet (35) returned to maxcady444
+Player maxcady444 mucks cards
+------ Summary ------
+Pot: 37.75. Rake 2
+Board: [Jh 8s 3h]
+*Player maxcady444 mucks (does not show cards). Bets: 12. Collects: 37.75. Wins: 25.75.
+Player Ra1syDa1sy does not show cards.Bets: 12. Collects: 0. Loses: 12.
+Player NoahSDsDad does not show cards.Bets: 4. Collects: 0. Loses: 4.
+Player KiWiKaKi does not show cards.Bets: 12. Collects: 0. Loses: 12.
+Game ended at: 2014/3/9 0:1:44
+
+Game started at: 2014/3/9 0:1:46
+Game ID: 261442074 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 2 is the button
+Seat 1: maxcady444 (274.85).
+Seat 2: Ra1syDa1sy (183.61).
+Seat 4: NoahSDsDad (445.71).
+Seat 5: KiWiKaKi (479.89).
+Player NoahSDsDad has small blind (2)
+Player KiWiKaKi has big blind (4)
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player maxcady444 folds
+Player Ra1syDa1sy raises (8)
+Player NoahSDsDad folds
+Player KiWiKaKi raises (20)
+Player Ra1syDa1sy folds
+Uncalled bet (16) returned to KiWiKaKi
+Player KiWiKaKi mucks cards
+------ Summary ------
+Pot: 18. Rake 0
+Player maxcady444 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Ra1syDa1sy does not show cards.Bets: 8. Collects: 0. Loses: 8.
+Player NoahSDsDad does not show cards.Bets: 2. Collects: 0. Loses: 2.
+*Player KiWiKaKi mucks (does not show cards). Bets: 8. Collects: 18. Wins: 10.
+Game ended at: 2014/3/9 0:2:11
+
+Game started at: 2014/3/9 0:2:13
+Game ID: 261442219 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 4 is the button
+Seat 1: maxcady444 (274.85).
+Seat 2: Ra1syDa1sy (175.61).
+Seat 4: NoahSDsDad (443.71).
+Seat 5: KiWiKaKi (489.89).
+Player KiWiKaKi has small blind (2)
+Player maxcady444 has big blind (4)
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player Ra1syDa1sy folds
+Player NoahSDsDad raises (8)
+Player KiWiKaKi folds
+Player maxcady444 calls (4)
+*** FLOP ***: [7d Ah Qs]
+Player maxcady444 bets (4)
+Player NoahSDsDad folds
+Uncalled bet (4) returned to maxcady444
+Player maxcady444 mucks cards
+------ Summary ------
+Pot: 16.85. Rake 0.90
+Board: [7d Ah Qs]
+*Player maxcady444 mucks (does not show cards). Bets: 8. Collects: 16.85. Wins: 8.85.
+Player Ra1syDa1sy does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player NoahSDsDad does not show cards.Bets: 8. Collects: 0. Loses: 8.
+Player KiWiKaKi does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Game ended at: 2014/3/9 0:2:54
+
+Game started at: 2014/3/9 0:2:56
+Game ID: 261442490 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 5 is the button
+Seat 1: maxcady444 (283.70).
+Seat 2: Ra1syDa1sy (175.61).
+Seat 4: NoahSDsDad (435.71).
+Seat 5: KiWiKaKi (487.89).
+Player maxcady444 has small blind (2)
+Player Ra1syDa1sy has big blind (4)
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player NoahSDsDad raises (12)
+Player KiWiKaKi folds
+Player maxcady444 calls (10)
+Player Ra1syDa1sy folds
+*** FLOP ***: [Ah Ks Qh]
+Player maxcady444 checks
+Player NoahSDsDad bets (12)
+Player maxcady444 folds
+Uncalled bet (12) returned to NoahSDsDad
+Player NoahSDsDad mucks cards
+------ Summary ------
+Pot: 26.35. Rake 1.40
+Board: [Ah Ks Qh]
+Player maxcady444 does not show cards.Bets: 12. Collects: 0. Loses: 12.
+Player Ra1syDa1sy does not show cards.Bets: 4. Collects: 0. Loses: 4.
+*Player NoahSDsDad mucks (does not show cards). Bets: 12. Collects: 26.35. Wins: 14.35.
+Player KiWiKaKi does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 0:3:46
+
+Game started at: 2014/3/9 0:3:48
+Game ID: 261442762 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 1 is the button
+Seat 1: maxcady444 (271.70).
+Seat 2: Ra1syDa1sy (171.61).
+Seat 4: NoahSDsDad (450.06).
+Seat 5: KiWiKaKi (487.89).
+Player Ra1syDa1sy has small blind (2)
+Player NoahSDsDad has big blind (4)
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player KiWiKaKi folds
+Player maxcady444 folds
+Player Ra1syDa1sy folds
+Uncalled bet (2) returned to NoahSDsDad
+Player NoahSDsDad mucks cards
+------ Summary ------
+Pot: 4. Rake 0
+Player maxcady444 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Ra1syDa1sy does not show cards.Bets: 2. Collects: 0. Loses: 2.
+*Player NoahSDsDad mucks (does not show cards). Bets: 2. Collects: 4. Wins: 2.
+Player KiWiKaKi does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 0:3:58
+
+Game started at: 2014/3/9 0:4:1
+Game ID: 261442843 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 2 is the button
+Seat 1: maxcady444 (271.70).
+Seat 2: Ra1syDa1sy (169.61).
+Seat 4: NoahSDsDad (452.06).
+Seat 5: KiWiKaKi (487.89).
+Player NoahSDsDad has small blind (2)
+Player KiWiKaKi has big blind (4)
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player maxcady444 raises (8)
+Player Ra1syDa1sy folds
+Player NoahSDsDad folds
+Player KiWiKaKi calls (4)
+*** FLOP ***: [4s 3c 8h]
+Player KiWiKaKi checks
+Player maxcady444 checks
+*** TURN ***: [4s 3c 8h] [3h]
+Player KiWiKaKi checks
+Player maxcady444 checks
+*** RIVER ***: [4s 3c 8h 3h] [6s]
+Player KiWiKaKi checks
+Player maxcady444 checks
+Player KiWiKaKi mucks cards
+------ Summary ------
+Pot: 16.85. Rake 0.90
+Board: [4s 3c 8h 3h 6s]
+*Player maxcady444 shows: One pair of 3s [9c Ac]. Bets: 8. Collects: 16.85. Wins: 8.85.
+Player Ra1syDa1sy does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player NoahSDsDad does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Player KiWiKaKi mucks (does not show cards). Bets: 8. Collects: 0. Loses: 8.
+Game ended at: 2014/3/9 0:4:59
+
+Game started at: 2014/3/9 0:5:2
+Game ID: 261443201 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 4 is the button
+Seat 1: maxcady444 (280.55).
+Seat 2: Ra1syDa1sy (169.61).
+Seat 4: NoahSDsDad (450.06).
+Seat 5: KiWiKaKi (479.89).
+Player KiWiKaKi has small blind (2)
+Player maxcady444 has big blind (4)
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player Ra1syDa1sy raises (8)
+Player NoahSDsDad folds
+Player KiWiKaKi raises (22)
+Player maxcady444 folds
+Player Ra1syDa1sy folds
+Uncalled bet (16) returned to KiWiKaKi
+Player KiWiKaKi mucks cards
+------ Summary ------
+Pot: 20. Rake 0
+Player maxcady444 does not show cards.Bets: 4. Collects: 0. Loses: 4.
+Player Ra1syDa1sy does not show cards.Bets: 8. Collects: 0. Loses: 8.
+Player NoahSDsDad does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player KiWiKaKi mucks (does not show cards). Bets: 8. Collects: 20. Wins: 12.
+Game ended at: 2014/3/9 0:5:34
+
+Game started at: 2014/3/9 0:5:36
+Game ID: 261443389 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 5 is the button
+Seat 1: maxcady444 (276.55).
+Seat 2: Ra1syDa1sy (161.61).
+Seat 4: NoahSDsDad (450.06).
+Seat 5: KiWiKaKi (491.89).
+Player maxcady444 has small blind (2)
+Player Ra1syDa1sy has big blind (4)
+Player maxcady444 received a card.
+Player maxcady444 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player NoahSDsDad folds
+Player KiWiKaKi folds
+Player maxcady444 calls (2)
+Player Ra1syDa1sy checks
+*** FLOP ***: [5c 8s 4h]
+Player maxcady444 bets (4)
+Player Ra1syDa1sy calls (4)
+*** TURN ***: [5c 8s 4h] [10c]
+Player maxcady444 checks
+Player Ra1syDa1sy checks
+*** RIVER ***: [5c 8s 4h 10c] [10s]
+Player maxcady444 checks
+Player Ra1syDa1sy checks
+Player maxcady444 mucks cards
+------ Summary ------
+Pot: 14.95. Rake 0.80
+Board: [5c 8s 4h 10c 10s]
+Player maxcady444 mucks (does not show cards). Bets: 8. Collects: 0. Loses: 8.
+*Player Ra1syDa1sy shows: Two pairs. 10s and 4s [Ks 4d]. Bets: 8. Collects: 14.95. Wins: 6.95.
+Player NoahSDsDad does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player KiWiKaKi does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 0:6:20

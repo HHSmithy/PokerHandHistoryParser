@@ -1,0 +1,35 @@
+﻿Game started at: 2014/3/9 0:25:12
+Game ID: 261449994 2/4 Baryte   (JP) (Hold'em)
+Seat 2 is the button
+Seat 1: Ra1syDa1sy (182.22).
+Seat 2: sweetdough (738.20).
+Seat 3: NoahSDsDad (427.75).
+Seat 4: xx45809 (445.54).
+Seat 5: megadouche (397.56).
+Seat 6: KiWiKaKi (844.29).
+Player NoahSDsDad has small blind (2)
+Player xx45809 sitting out
+Player megadouche sitting out
+Player KiWiKaKi has big blind (4)
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player KiWiKaKi received a card.
+Player KiWiKaKi received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player sweetdough received a card.
+Player sweetdough received a card.
+Player Ra1syDa1sy folds
+Player sweetdough folds
+Player NoahSDsDad folds
+Uncalled bet (2) returned to KiWiKaKi
+Player KiWiKaKi mucks cards
+------ Summary ------
+Pot: 4. Rake 0
+Player Ra1syDa1sy does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player sweetdough does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player NoahSDsDad does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Player xx45809 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player megadouche does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player KiWiKaKi mucks (does not show cards). Bets: 2. Collects: 4. Wins: 2.
+Game ended at: 2014/3/9 0:25:29

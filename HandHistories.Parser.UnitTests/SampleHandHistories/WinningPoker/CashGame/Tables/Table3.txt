@@ -1,0 +1,28 @@
+﻿Game started at: 2014/3/9 12:35:56
+Game ID: 261616962 2/4 Baotite (Hold'em)
+Seat 2 is the button
+Seat 2: SexyAAKK (286.49).
+Seat 3: kkLLAAd (1081.41).
+Player SexyAAKK has small blind (2)
+Player kkLLAAd has big blind (4)
+Player kkLLAAd received a card.
+Player kkLLAAd received a card.
+Player SexyAAKK received a card.
+Player SexyAAKK received a card.
+Player SexyAAKK raises (6)
+Player kkLLAAd calls (4)
+*** FLOP ***: [Kh 9s 5d]
+Player kkLLAAd checks
+Player SexyAAKK checks
+*** TURN ***: [Kh 9s 5d] [9d]
+Player kkLLAAd bets (10.13)
+Player SexyAAKK calls (10.13)
+*** RIVER ***: [Kh 9s 5d 9d] [2h]
+Player kkLLAAd checks
+Player SexyAAKK checks
+------ Summary ------
+Pot: 35.26. Rake 1
+Board: [Kh 9s 5d 9d 2h]
+*Player SexyAAKK shows: One pair of 9s (kicker A) [As 6c]. Bets: 18.13. Collects: 35.26. Wins: 17.13.
+Player kkLLAAd shows: One pair of 9s [6h 7s]. Bets: 18.13. Collects: 0. Loses: 18.13.
+Game ended at: 2014/3/9 12:36:42

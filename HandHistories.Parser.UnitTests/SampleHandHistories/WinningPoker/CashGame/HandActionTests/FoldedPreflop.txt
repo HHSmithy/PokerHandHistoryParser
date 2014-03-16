@@ -1,0 +1,39 @@
+﻿Game started at: 2014/3/9 16:56:43
+Game ID: 261641952 0.10/0.25 Tantalite   (JP) (Hold'em)
+Seat 2 is the button
+Seat 1: Shipologist (44.52).
+Seat 2: borjilius79 (19.62).
+Seat 3: LadyStack (29.94).
+Seat 4: FetusMunch (37.04).
+Seat 5: xXxAudiA5xXx (12.85).
+Seat 6: johna52801 (26.61).
+Player LadyStack has small blind (0.10)
+Player FetusMunch has big blind (0.25)
+Player LadyStack received a card.
+Player LadyStack received a card.
+Player FetusMunch received a card.
+Player FetusMunch received a card.
+Player xXxAudiA5xXx received a card.
+Player xXxAudiA5xXx received a card.
+Player johna52801 received a card.
+Player johna52801 received a card.
+Player Shipologist received a card.
+Player Shipologist received a card.
+Player borjilius79 received a card.
+Player borjilius79 received a card.
+Player xXxAudiA5xXx folds
+Player johna52801 folds
+Player Shipologist folds
+Player borjilius79 folds
+Player LadyStack raises (0.70)
+Player FetusMunch folds
+Uncalled bet (0.55) returned to LadyStack
+------ Summary ------
+Pot: 0.50. Rake 0
+Player Shipologist does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player borjilius79 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player LadyStack shows: High card K [Jc Kd]. Bets: 0.25. Collects: 0.50. Wins: 0.25.
+Player FetusMunch does not show cards.Bets: 0.25. Collects: 0. Loses: 0.25.
+Player xXxAudiA5xXx does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player johna52801 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 16:57:15
