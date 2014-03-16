@@ -73,6 +73,62 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             TestFullHandHistorySummary(expectedSummary, "PlayerWithColon");
         }
 
+        // Problem w/ Cancelled Hands
+        // Issue #7: https://github.com/KBelbina/PokerHandHistoryParser/issues/7
+        [Test]
+        public void CancelledHand_Summary()
+        {
+            HandHistorySummary expectedSummary = new HandHistorySummary()
+            {
+                Cancelled = true,
+                GameDescription = new GameDescriptor()
+                {
+                    PokerFormat = PokerFormat.CashGame,
+                    GameType = GameType.PotLimitOmaha,
+                    Limit = Limit.FromSmallBlindBigBlind(5m, 10m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
+                    Site = SiteName.PokerStars,
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),                    
+                },
+                DateOfHandUtc = new DateTime(2014, 1, 16, 12, 17, 20),
+                DealerButtonPosition = 6,
+                HandId = 110222853693,
+                NumPlayersSeated = 1,
+                TableName = "Idelsonia III"
+            };
+
+            TestFullHandHistorySummary(expectedSummary, "CancelledHand");
+        }
+
+        // Problem w/ Cancelled Hands
+        // Issue #7: https://github.com/KBelbina/PokerHandHistoryParser/issues/7
+        [Test]
+        public void CancelledHand_FullParse()
+        {
+            HandHistory expectedHand = new HandHistory()
+            {
+                Cancelled = true,
+                GameDescription = new GameDescriptor()
+                {
+                    PokerFormat = PokerFormat.CashGame,
+                    GameType = GameType.PotLimitOmaha,
+                    Limit = Limit.FromSmallBlindBigBlind(5m, 10m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
+                    Site = SiteName.PokerStars,
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Regular),
+                },
+                DateOfHandUtc = new DateTime(2014, 1, 16, 12, 17, 20),
+                DealerButtonPosition = 6,
+                HandId = 110222853693,
+                NumPlayersSeated = 1,
+                TableName = "Idelsonia III"
+            };
+
+            HandHistory actualHand = TestFullHandHistory(expectedHand, "CancelledHand");
+
+            Assert.AreEqual(string.Empty, actualHand.Players["lautie"].HoleCards.ToString());
+        }
+
         // Issue with date parsing during daylight savings
         [Test]
         public void DateIssue1()

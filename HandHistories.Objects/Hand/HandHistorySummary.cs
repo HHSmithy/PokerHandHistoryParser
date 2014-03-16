@@ -11,7 +11,7 @@ namespace HandHistories.Objects.Hand
     {
         public HandHistorySummary()
         {           
-            GameDescription = new GameDescriptor();
+            GameDescription = new GameDescriptor();            
         }
 
         public DateTime DateOfHandUtc { get; set; }
@@ -23,6 +23,8 @@ namespace HandHistories.Objects.Hand
         public string TableName { get; set; }
 
         public GameDescriptor GameDescription { get; set; }
+
+        public bool Cancelled { get; set; }
 
         public int NumPlayersSeated { get; set; }
 

@@ -96,6 +96,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         protected override void ParseExtraHandInformation(string[] handLines, Objects.Hand.HandHistorySummary handHistorySummary)
         {
+            if (handHistorySummary.Cancelled)
+            {
+                return;                
+            }
+
             for (int i = handLines.Length - 1; i >= 0; i--)
             {
                 string handLine = handLines[i];
@@ -270,6 +275,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         
         public override bool IsValidHand(string[] handLines)
         {
+            bool isCancelled; // in this case eat it
+            return IsValidOrCancelledHand(handLines, out isCancelled);
+        }
+
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
             for (int i = handLines.Length - 1; i >= 0; i--)
             {
                 string handLine = handLines[i];
@@ -281,13 +292,17 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     string previousLine = handLines[i - 1];
 
                     // lines before summary are collection lines so shouldn't be able to start w/ a H and end w/ a d
-                    bool result = (previousLine[0] != 'H' || previousLine[previousLine.Length - 1] != 'd') ||
-                           previousLine.EndsWith("doesn't show hand");
-                    return result;
+                    bool cancelled = (previousLine[0] == 'H' && previousLine[previousLine.Length - 1] == 'd');
+                    //bool completeHand = previousLine.EndsWith("doesn't show hand");
+
+                    isCancelled = cancelled;
+
+                    return true;// || completeHand;
                 }
             }
 
             // doesn't contain a summary line
+            isCancelled = false;
             return false;
         }
 

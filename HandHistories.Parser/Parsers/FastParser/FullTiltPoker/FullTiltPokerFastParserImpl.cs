@@ -244,6 +244,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return (handLines[1].StartsWith("Seat "));
         }
 
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handLines);
+        }
+
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             // TODO: implement

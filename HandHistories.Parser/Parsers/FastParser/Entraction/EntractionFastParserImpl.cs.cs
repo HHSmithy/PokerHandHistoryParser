@@ -144,6 +144,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
             return handLines[handLines.Length - 1].StartsWith("Game ended ");
         }
 
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handLines);
+        }
+
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             List<HandAction> handActions = new List<HandAction>();

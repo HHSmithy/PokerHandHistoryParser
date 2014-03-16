@@ -78,6 +78,12 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
             return (handText.Contains(" wins ")) && (handText.Contains("Connection Lost due to some reason") == false);
         }
 
+        public override bool IsValidOrCancelledHand(string handText, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handText);
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             rawHandHistories = rawHandHistories.Replace("\r\n\r\n", "~");

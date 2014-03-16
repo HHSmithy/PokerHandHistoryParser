@@ -311,6 +311,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\CancelledHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -980,6 +983,7 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table6.txt" />
     <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\InValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
