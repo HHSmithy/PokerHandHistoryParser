@@ -53,6 +53,7 @@
     <Compile Include="Actions\WinningsAction.cs" />
     <Compile Include="Cards\BoardCards.cs" />
     <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\Card.Enums.cs" />
     <Compile Include="Cards\CardGroup.cs" />
     <Compile Include="GameDescription\Currency.cs" />
     <Compile Include="GameDescription\GameDescriptor.cs" />

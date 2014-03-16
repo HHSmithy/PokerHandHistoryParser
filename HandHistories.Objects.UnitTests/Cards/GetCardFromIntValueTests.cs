@@ -23,9 +23,9 @@ namespace HandHistories.Objects.UnitTests.Cards
         public void TestCard_FromIntValue_Invalid()
         {
             var card = Card.GetCardFromIntValue(-1);
-            Assert.IsNull(card);
+            Assert.IsTrue(card.isEmpty);
             card = Card.GetCardFromIntValue(52);
-            Assert.IsNull(card);
+            Assert.IsTrue(card.isEmpty);
         }
     }
 }

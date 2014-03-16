@@ -43,6 +43,15 @@ namespace HandHistories.Objects.UnitTests.Cards
         }
 
         [Test]
+        public void NewCard_As_FromIntValue()
+        {
+            Card card = Card.GetCardFromIntValue(51);
+
+            Assert.AreEqual("As", card.CardStringValue);
+            Assert.AreEqual(51, card.CardIntValue);
+        }
+
+        [Test]
         public void NewCard_aS_CorrectsCapitalization()
         {
             Card card = new Card("a", "S");
