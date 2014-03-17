@@ -15,9 +15,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
     [TestFixture("FullTilt")]
     [TestFixture("MicroGaming")]
     [TestFixture("Winamax")]
-    internal class PerformanceTest : HandHistoryParserBaseTests
+    internal class HandParserPerformanceTest : HandHistoryParserBaseTests
     {
-        public PerformanceTest(string site)
+        public HandParserPerformanceTest(string site)
             : base(site)
         {
         }
