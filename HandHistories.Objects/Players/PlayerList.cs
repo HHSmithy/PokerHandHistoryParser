@@ -21,18 +21,33 @@ namespace HandHistories.Objects.Players
             AddRange(players);
         }
 
+        class PlayerSorter : IComparer<Player>
+        {
+            public static readonly PlayerSorter Default = new PlayerSorter();
+
+            private PlayerSorter()
+            {
+            }
+
+            public int Compare(Player x, Player y)
+            {
+                return x.SeatNumber.CompareTo(y.SeatNumber);
+            }
+        }
+
         public void Add(Player player)
         {
-            _players.Add(player);
-
-            SortList();
+            int newIndex = Math.Abs(_players.BinarySearch(player, PlayerSorter.Default)) - 1;
+            _players.Insert(newIndex, player);
         }
 
         public void AddRange(IEnumerable<Player> players)
         {
-            _players.AddRange(players);
-
-            SortList();
+            foreach (var item in players)
+            {
+                int newIndex = Math.Abs(_players.BinarySearch(item, PlayerSorter.Default)) - 1;
+                _players.Insert(newIndex, item);
+            }
         }
 
         public void SortList()

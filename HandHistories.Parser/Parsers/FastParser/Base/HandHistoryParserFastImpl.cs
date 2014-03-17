@@ -46,13 +46,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual string [] SplitHandsLines(string handText)
         {
-            string[] text = handText.Trim().Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text = handText.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < text.Length; i++)
 			{
                 text[i] = text[i].Trim();
 			}
             return text;
-            //return LineSplitRegex.Split(handText.Trim('\r', '\n')).Select(s => s.Trim(' ', '\r', '\n')).Where(l => string.IsNullOrWhiteSpace(l) == false).ToArray();           
         }
 
         public HandHistorySummary ParseFullHandSummary(string handText, bool rethrowExceptions = false)

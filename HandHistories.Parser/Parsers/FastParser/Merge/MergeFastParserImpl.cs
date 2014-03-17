@@ -480,6 +480,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 if (playerCardElement != null)
                 {
                     string cardString = playerCardElement.Attribute("cards").Value;
+                    player.HoleCards = HoleCards.NoHolecards();
                     player.HoleCards.AddCards(BoardCards.Parse(cardString));
                 }
 

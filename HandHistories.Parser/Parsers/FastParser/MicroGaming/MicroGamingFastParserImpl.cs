@@ -418,7 +418,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             
             foreach (Player player in playerList)
             {
-                if (player.HoleCards.Count > 0)
+                if (player.hasHoleCards)
                 {
                     HandAction showCardsAction = new HandAction(player.PlayerName, HandActionType.SHOW, 0, Street.Showdown, actionNumber++);    
                     winningAndShowCardActions.Add(showCardsAction);

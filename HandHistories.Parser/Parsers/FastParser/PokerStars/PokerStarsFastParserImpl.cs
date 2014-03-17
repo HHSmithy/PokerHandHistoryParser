@@ -13,6 +13,7 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
@@ -54,10 +55,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int startIndex = handLines[1].LastIndexOf('#') + 1;
 
-            string button = handLines[1].Substring(startIndex, 2);
-            button = button.TrimEnd(' ');
-
-            return int.Parse(button);
+            return FastInt.Parse(handLines[1], startIndex);
         }
 
         protected override DateTime ParseDateUtc(string[] handLines)
@@ -152,8 +150,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             int secondDash = handLines[1].LastIndexOf('\'');
 
             // 2-max, 6-max or 9-max
-            string num = handLines[1][secondDash + 2].ToString();
-            int maxPlayers = int.Parse(num);
+            int maxPlayers = FastInt.Parse(handLines[1][secondDash + 2]);
 
             // can't have 1max so must be 10max
             if (maxPlayers == 1)
@@ -174,10 +171,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             int startIndex = (handLines[0][colonIndex + 2] == ' ') ? colonIndex + 3 : colonIndex + 2;
             int endIndex = handLines[0].IndexOf('(') - 2;
 
-            string gameTypeString = handLines[0].Substring(startIndex, endIndex - startIndex + 1);
+            int gameTypeLength = endIndex - startIndex + 1;
+            
 
             // Faster to check the length vs doing an equality comparison
-            switch (gameTypeString.Length)
+            switch (gameTypeLength)
             {
                 case 16:
                     return GameType.NoLimitHoldem;
@@ -186,6 +184,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 13:
                     return GameType.FixedLimitHoldem;
                 case 17:
+                    string gameTypeString = handLines[0].Substring(startIndex, gameTypeLength);
                     if (gameTypeString[0] == 'O')
                     {
                         return GameType.FixedLimitOmahaHiLo;
@@ -198,7 +197,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 11:
                     return GameType.FixedLimitOmaha;
                 default:
-                    throw new UnrecognizedGameTypeException(handLines[0], "Unrecognized game-type: " + gameTypeString);
+                    string errorGameTypeString = handLines[0].Substring(startIndex, gameTypeLength);
+                    throw new UnrecognizedGameTypeException(handLines[0], "Unrecognized game-type: " + errorGameTypeString);
             }
         }
 
@@ -341,14 +341,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 return false;
             }
 
-            if (currentStreet == Street.Preflop &&
-                line.StartsWith("Dealt to"))
-            {
-                // todo: parse the player hand from this line instead of ignoring it
-                return false;
-            }
+            char firstChar = line[0];
 
-            if (line[0] == '*') // lines with a * are either board cards, hole cards or summary info
+            if (firstChar == '*') // lines with a * are either board cards, hole cards or summary info
             {
                 char typeOfEventChar = line[4];
 
@@ -422,13 +417,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 //}
             }
 
-            //Duplicate ChatLine Check removed
-            //// throw away chat lines. can contain : and anything else so check before we proceed.
-            //// allpokerjon said, "33 :-)"
-            //if (line[line.Length - 1] == '\"')
-            //{
-            //    return false;
-            //}
+            if (currentStreet == Street.Preflop &&
+                line.StartsWith("Dealt to"))
+            {
+                // todo: parse the player hand from this line instead of ignoring it
+                return false;
+            }
 
             int colonIndex = line.LastIndexOf(':'); // do backwards as players can have : in their name
 
@@ -444,7 +438,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             if (currentStreet == Street.Showdown ||
                 colonIndex == -1)
             {
-                if (line[line.Length - 1] == 't' ||
+                if (lastChar == 't' ||
                      line[line.Length - 2] == '-')
                 {
                     // woezelenpip collected $7.50 from pot
@@ -465,28 +459,28 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
                 // line such as
                 //    2As88 will be allowed to play after the button
-                else if (line[line.Length - 1] == 'n')
+                else if (lastChar == 'n')
                 {
                     return false;
                 }
                 // line such as:
                 //    Mr Sturmer is disconnected 
                 // Ensure that is ed ending otherwise false positive with hand
-                else if (line[line.Length - 1] == 'd' &&
+                else if (lastChar == 'd' &&
                          line[line.Length - 2] == 'e')
                 {
                     return false;
                 }
 
                 //zeranex88 joins the table at seat #5 
-                if (line[line.Length - 1] == '#' || line[line.Length - 2] == '#')
+                if (lastChar == '#' || line[line.Length - 2] == '#')
                 {
                     // joins action
                     // don't bother parsing it or adding it
                     return false;
                 }
                 //MS13ZEN leaves the table
-                else if (line[line.Length - 1] == 'e')
+                else if (lastChar == 'e')
                 {
                     // leaves action
                     // don't bother parsing or adding it
@@ -752,7 +746,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int lastLineRead = -1;
 
-            List<Player> newPlayers = new List<Player>(10);
             // We start on line index 2 as first 2 lines are table and limit info.
             for (int lineNumber = 2; lineNumber < handLines.Length - 1; lineNumber++)
             {
@@ -761,28 +754,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 char startChar = line[0];
                 char endChar = line[line.Length - 1];
 
+                //Seat 1: thaiJhonny ($16.08 in chips)
                 if (endChar != ')')
                 {
-                    
                     lastLineRead = lineNumber;
                     break;
                 }
-#if DEBUG
-                else
-                {
-                    if (!line.StartsWith(@"Seat "))
-                    {
-                        throw new ArgumentException("Did not find \"Seat \"");
-                    }
-                }
-#endif
 
                 // seat info expected in format: 
                 //Seat 1: thaiJhonny ($16.08 in chips)
                 const int seatNumberStartIndex = 4;
                 int spaceIndex = line.IndexOf(' ', seatNumberStartIndex);
                 int colonIndex = line.IndexOf(':', spaceIndex + 1);
-                int seatNumber = int.Parse(line.Substring(spaceIndex + 1, colonIndex - (spaceIndex + 1)));
+                int seatNumber = FastInt.Parse(line, spaceIndex + 1);
 
                 // we need to find the ( before the number. players can have ( in their name so we need to go backwards and skip the last one
                 int openParenIndex = line.LastIndexOf('(');
@@ -793,10 +777,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 string stackString = line.Substring(openParenIndex + 2, spaceAfterOpenParen - (openParenIndex + 2));
                 decimal stack = decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
 
-                newPlayers.Add(new Player(playerName, stack, seatNumber));
+                playerList.Add(new Player(playerName, stack, seatNumber));
             }
-
-            playerList.AddRange(newPlayers);
 
             if (lastLineRead == -1)
             {
@@ -870,12 +852,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         {
             for (int i = lastLineRead; i < summaryIndex; i++)
             {
-                if (handLines[i][0] == '*')
+                if (handLines[i][0] == '*' && handLines[i][4] == 'S' && handLines[i][5] == 'H')//handLines[i].StartsWith("*** SH"))
                 {
-                    if (handLines[i].StartsWith("*** SH"))
-                    {
-                        return i;
-                    }
+                    return i;
                 }
             }
             return -1;

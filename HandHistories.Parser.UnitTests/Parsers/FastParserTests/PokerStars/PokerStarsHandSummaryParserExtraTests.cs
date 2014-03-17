@@ -169,7 +169,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "ShowsDownSingleCard");
 
-            Assert.AreEqual(string.Empty, actualHand.Players["Zaza5573"].HoleCards.ToString());
+            Assert.IsFalse(actualHand.Players["Zaza5573"].hasHoleCards);
         }
 
         [Test]

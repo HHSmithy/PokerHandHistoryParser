@@ -16,7 +16,7 @@ namespace HandHistories.Objects.Cards
         {
             Cards = cards.ToList();
 
-            if (Cards.Select(c => c.CardIntValue).Distinct().Count() != cards.Length)
+            if (Cards.Distinct().Count() != cards.Length)
             {
                 throw new ArgumentException("Hole cards must be unique cards.");
             }

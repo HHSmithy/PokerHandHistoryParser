@@ -3,41 +3,41 @@ using System.Runtime.Serialization;
 namespace HandHistories.Objects.GameDescription
 {
     [DataContract]    
-    public enum TableTypeDescription : byte 
+    public enum TableTypeDescription : uint
     {
-        [EnumMember] 
+        [EnumMember]
         Unknown = 0,
-        [EnumMember] 
-        Regular = 1,
-        [EnumMember] 
-        Anonymous = 2,
-        [EnumMember] 
-        SuperSpeed = 3,
-        [EnumMember] 
-        Deep = 4,
-        [EnumMember] 
-        Ante = 5,
-        [EnumMember] 
-        Cap = 6,
-        [EnumMember] 
-        Speed = 7,
-        [EnumMember] 
-        Jackpot = 8,
-        [EnumMember] 
-        SevenDeuceGame = 9,
-        [EnumMember] 
-        FiftyBigBlindsMin = 10,
-        [EnumMember] 
-        Shallow = 11,
-        [EnumMember] 
-        PushFold = 12,
-        [EnumMember] 
-        Zoom = 13,
-        [EnumMember] 
-        Strobe = 14,
         [EnumMember]
-        Any = 30,
+        Regular = 0x1 << 0,
         [EnumMember]
-        All = 31,
+        Anonymous = 0x1 << 1,
+        [EnumMember]
+        SuperSpeed = 0x1 << 2,
+        [EnumMember]
+        Deep = 0x1 << 3,
+        [EnumMember]
+        Ante = 0x1 << 4,
+        [EnumMember]
+        Cap = 0x1 << 5,
+        [EnumMember]
+        Speed = 0x1 << 6,
+        [EnumMember]
+        Jackpot = 0x1 << 7,
+        [EnumMember]
+        SevenDeuceGame = 0x1 << 8,
+        [EnumMember]
+        FiftyBigBlindsMin = 0x1 << 9,
+        [EnumMember]
+        Shallow = 0x1 << 10,
+        [EnumMember]
+        PushFold = 0x1 << 11,
+        [EnumMember]
+        Zoom = 0x1 << 12,
+        [EnumMember]
+        Strobe = 0x1 << 13,
+        [EnumMember]
+        Any = 0x1 << 32,
+        [EnumMember]
+        All = 0xFFFFFFFF,
     }
 }

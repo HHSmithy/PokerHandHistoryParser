@@ -509,7 +509,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             foreach (Player player in playerList)
             {
-                if (player.HoleCards.Count > 0)
+                if (player.hasHoleCards)
                 {
                     HandAction showCardsAction = new HandAction(player.PlayerName, HandActionType.SHOW, 0, Street.Showdown, actionNumber++);    
                     winningAndShowCardActions.Add(showCardsAction);
@@ -704,11 +704,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 string playerCardString = handLine.Substring(playerCardsStartIndex,
                                                         playerCardsEndIndex - playerCardsStartIndex + 1);
                 string[] cards = playerCardString.Split(' ');
-
-                foreach (string card in cards)
+                if (cards.Length > 0)
                 {
-                    //Suit and rank are reversed in these strings, so we flip them around before adding
-                    player.HoleCards.AddCard(new Card(card[1], card[0]));
+                    player.HoleCards = HoleCards.NoHolecards(player.PlayerName);
+                    foreach (string card in cards)
+                    {
+                        //Suit and rank are reversed in these strings, so we flip them around before adding
+                        player.HoleCards.AddCard(new Card(card[1], card[0]));
+                    }
                 }
             }
 
