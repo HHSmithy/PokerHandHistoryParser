@@ -46,7 +46,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual string [] SplitHandsLines(string handText)
         {
-            string[] text = handText.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text = handText.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < text.Length; i++)
 			{
                 text[i] = text[i].Trim();

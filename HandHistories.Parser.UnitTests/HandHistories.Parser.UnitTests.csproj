@@ -102,7 +102,7 @@
     <Compile Include="Parsers\HandSummaryParserTests\SplitUpMultipleHandsTests\HandParserSplitUpMultipleHandsTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
-    <Compile Include="Parsers\perf.cs" />
+    <Compile Include="Parsers\PerformanceTests\HandParserPerformanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
