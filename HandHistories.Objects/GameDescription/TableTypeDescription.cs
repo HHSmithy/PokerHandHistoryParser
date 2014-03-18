@@ -33,8 +33,16 @@ namespace HandHistories.Objects.GameDescription
         PushFold = 12,
         [EnumMember] 
         Zoom = 13,
-        [EnumMember] 
+        [EnumMember]
         Strobe = 14,
+        [EnumMember]
+        Rush = 15,
+        [EnumMember]
+        Snap = 16,
+        [EnumMember]
+        SpeedPoker = 17,
+        [EnumMember]
+        FastForward = 18,
         [EnumMember]
         Any = 30,
         [EnumMember]

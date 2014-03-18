@@ -81,6 +81,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 case SiteName.Merge:
                 case SiteName.IPoker:
                 case SiteName.Pacific:
+                case SiteName.WinningPoker:
                     Assert.Ignore("No Hi-Lo examples for " + Site);
                     break;
             }

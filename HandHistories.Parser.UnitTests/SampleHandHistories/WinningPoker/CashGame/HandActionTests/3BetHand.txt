@@ -1,0 +1,36 @@
+﻿Game started at: 2014/3/8 22:22:29
+Game ID: 261409590 2/4 Braunite (Omaha)
+Seat 4 is the button
+Seat 1: STOPCRYINGB79 (188.60).
+Seat 4: digbick30 (360.40).
+Player digbick30 has small blind (2)
+Player STOPCRYINGB79 has big blind (4)
+Player STOPCRYINGB79 received a card.
+Player STOPCRYINGB79 received a card.
+Player STOPCRYINGB79 received a card.
+Player STOPCRYINGB79 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 raises (6)
+Player STOPCRYINGB79 raises (20)
+Player digbick30 calls (16)
+*** FLOP ***: [9c 10d 8d]
+Player STOPCRYINGB79 checks
+Player digbick30 checks
+*** TURN ***: [9c 10d 8d] [Qd]
+Player STOPCRYINGB79 checks
+Player digbick30 checks
+*** RIVER ***: [9c 10d 8d Qd] [6d]
+Player STOPCRYINGB79 checks
+Player digbick30 bets (15.66)
+Player STOPCRYINGB79 folds
+Uncalled bet (15.66) returned to digbick30
+Player digbick30 mucks cards
+------ Summary ------
+Pot: 47. Rake 1
+Board: [9c 10d 8d Qd 6d]
+Player STOPCRYINGB79 does not show cards.Bets: 24. Collects: 0. Loses: 24.
+*Player digbick30 mucks (does not show cards). Bets: 24. Collects: 47. Wins: 23.
+Game ended at: 2014/3/8 22:23:16

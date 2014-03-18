@@ -1,0 +1,62 @@
+﻿Game started at: 2014/3/9 19:37:22
+Game ID: 261679750 2/4 Braunite ( Beast ) (Omaha)
+Seat 5 is the button
+Seat 1: ap1104 (173.82).
+Seat 3: Pokergodacolyte (386.70).
+Seat 4: cuzimwhite (377.18).
+Seat 5: primume (262.17).
+Seat 6: HanSoloDolo (400).
+Player HanSoloDolo has small blind (2)
+Player ap1104 has big blind (4)
+Player HanSoloDolo received a card.
+Player HanSoloDolo received a card.
+Player HanSoloDolo received a card.
+Player HanSoloDolo received a card.
+Player ap1104 received a card.
+Player ap1104 received a card.
+Player ap1104 received a card.
+Player ap1104 received a card.
+Player Pokergodacolyte received a card.
+Player Pokergodacolyte received a card.
+Player Pokergodacolyte received a card.
+Player Pokergodacolyte received a card.
+Player cuzimwhite received a card.
+Player cuzimwhite received a card.
+Player cuzimwhite received a card.
+Player cuzimwhite received a card.
+Player primume received a card.
+Player primume received a card.
+Player primume received a card.
+Player primume received a card.
+Player Pokergodacolyte raises (12)
+Player cuzimwhite calls (12)
+Player primume folds
+Player HanSoloDolo calls (10)
+Player ap1104 calls (8)
+*** FLOP ***: [Qd 4d 7d]
+Player HanSoloDolo checks
+Player ap1104 checks
+Player Pokergodacolyte checks
+Player cuzimwhite checks
+*** TURN ***: [Qd 4d 7d] [Jc]
+Player HanSoloDolo checks
+Player ap1104 checks
+Player Pokergodacolyte checks
+Player cuzimwhite checks
+*** RIVER ***: [Qd 4d 7d Jc] [10d]
+Player HanSoloDolo checks
+Player ap1104 checks
+Player Pokergodacolyte checks
+Player cuzimwhite checks
+Player ap1104 mucks cards
+Player Pokergodacolyte mucks cards
+Player cuzimwhite mucks cards
+------ Summary ------
+Pot: 45.75. Rake 2
+Board: [Qd 4d 7d Jc 10d]
+Player ap1104 mucks (does not show cards). Bets: 12. Collects: 0. Loses: 12.
+Player Pokergodacolyte mucks (does not show cards). Bets: 12. Collects: 0. Loses: 12.
+Player cuzimwhite mucks (does not show cards). Bets: 12. Collects: 0. Loses: 12.
+Player primume does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player HanSoloDolo shows: Three Of Kind of 10s [10h Js 10c 5c]. Bets: 12. Collects: 45.75. Wins: 33.75.
+Game ended at: 2014/3/9 19:38:54

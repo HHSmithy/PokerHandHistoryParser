@@ -1,0 +1,23 @@
+﻿Game started at: 2014/3/10 17:7:31
+Game ID: 262003062 0.50/1 Alforsite (Omaha)
+Seat 1 is the button
+Seat 1: Hurricane27 (31.33).
+Seat 2: FatBeats (112.62).
+Player Hurricane27 has small blind (0.50)
+Player FatBeats has big blind (1)
+Player FatBeats received a card.
+Player FatBeats received a card.
+Player FatBeats received a card.
+Player FatBeats received a card.
+Player Hurricane27 received a card.
+Player Hurricane27 received a card.
+Player Hurricane27 received a card.
+Player Hurricane27 received a card.
+Player Hurricane27 folds
+Uncalled bet (0.50) returned to FatBeats
+Player FatBeats mucks cards
+------ Summary ------
+Pot: 1. Rake 0
+Player Hurricane27 does not show cards.Bets: 0.50. Collects: 0. Loses: 0.50.
+*Player FatBeats mucks (does not show cards). Bets: 0.50. Collects: 1. Wins: 0.50.
+Game ended at: 2014/3/10 17:7:38

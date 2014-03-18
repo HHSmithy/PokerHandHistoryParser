@@ -156,7 +156,8 @@ namespace HandHistories.Objects.GameDescription
                 return Limit.AllLimit();
             }
 
-            string[] split = limitString.Replace("Ante", "").Replace("L", "").Replace("c", "").Split('-');
+            if (limitString[0] == 'L' || limitString[0] == 'l') limitString = limitString.Substring(1);
+            string[] split = limitString.Replace("Ante", "").Replace("ante", "").Replace("L", "").Replace("c", "").Split('-');
 
             decimal smallBlind = Int32.Parse(split[0])/100.0m;
             decimal bigBlind = Int32.Parse(split[1]) / 100.0m;
@@ -164,7 +165,7 @@ namespace HandHistories.Objects.GameDescription
             decimal ante = (split.Length == 4) ? Int32.Parse(split[2])/100.0m : 0;
 
             string currencyString = (split.Length == 4) ? split[3] : split[2];
-            Currency currency = (Currency) Enum.Parse(typeof (Currency), currencyString);
+            Currency currency = (Currency) Enum.Parse(typeof (Currency), currencyString, true);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, currency, ante != 0, ante);
         }

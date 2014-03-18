@@ -1,0 +1,30 @@
+﻿Game started at: 2014/3/8 22:1:43
+Game ID: 261402571 2/4 Braunite (Omaha)
+Seat 1 is the button
+Seat 1: do not-call (330).
+Seat 4: digbick30 (305).
+Seat 6: aloof23 (311).
+Player digbick30 has small blind (2)
+Player aloof23 has big blind (4)
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player aloof23 received a card.
+Player aloof23 received a card.
+Player aloof23 received a card.
+Player aloof23 received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call folds
+Player digbick30 folds
+Uncalled bet (2) returned to aloof23
+Player aloof23 mucks cards
+------ Summary ------
+Pot: 4. Rake 0
+Player do not-call does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player digbick30 does not show cards.Bets: 2. Collects: 0. Loses: 2.
+*Player aloof23 mucks (does not show cards). Bets: 2. Collects: 4. Wins: 2.
+Game ended at: 2014/3/8 22:1:51

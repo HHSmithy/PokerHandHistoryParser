@@ -1,0 +1,27 @@
+﻿Game started at: 2014/3/10 17:5:22
+Game ID: 262002768 0.25/0.50 Maghemite  (Fast) (Hold'em)
+Seat 2 is the button
+Seat 1: DenDaZen (22.60).
+Seat 2: Kaj Kunnas (50).
+Player Kaj Kunnas has small blind (0.25)
+Player DenDaZen has big blind (0.50)
+Player DenDaZen received a card.
+Player DenDaZen received a card.
+Player Kaj Kunnas received a card.
+Player Kaj Kunnas received a card.
+Player Kaj Kunnas raises (1.25)
+Player DenDaZen calls (1)
+*** FLOP ***: [Jc Kd Qd]
+Player DenDaZen checks
+Player Kaj Kunnas checks
+*** TURN ***: [Jc Kd Qd] [8s]
+Player DenDaZen bets (1.42)
+Player Kaj Kunnas folds
+Uncalled bet (1.42) returned to DenDaZen
+Player DenDaZen mucks cards
+------ Summary ------
+Pot: 2.85. Rake 0.15
+Board: [Jc Kd Qd 8s]
+*Player DenDaZen mucks (does not show cards). Bets: 1.50. Collects: 2.85. Wins: 1.35.
+Player Kaj Kunnas does not show cards.Bets: 1.50. Collects: 0. Loses: 1.50.
+Game ended at: 2014/3/10 17:6:2

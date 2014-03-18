@@ -258,6 +258,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             return handLines[handLines.Length - 1].Contains("</game>");
         }
 
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handLines);
+        }
+
         protected Street GetStreetFromRoundElement(XElement roundElement)
         {
             string roundId = roundElement.Attribute("id").Value;

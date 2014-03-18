@@ -1,0 +1,48 @@
+﻿Game started at: 2014/3/9 16:53:43
+Game ID: 261641541 0.10/0.25 Tantalite   (JP) (Hold'em)
+Seat 5 is the button
+Seat 1: Shipologist (44.87).
+Seat 2: borjilius79 (19.97).
+Seat 3: LadyStack (34.26).
+Seat 4: FetusMunch (34.70).
+Seat 5: xXxAudiA5xXx (12.85).
+Seat 6: johna52801 (25.10).
+Player johna52801 has small blind (0.10)
+Player Shipologist has big blind (0.25)
+Player johna52801 received a card.
+Player johna52801 received a card.
+Player Shipologist received a card.
+Player Shipologist received a card.
+Player borjilius79 received a card.
+Player borjilius79 received a card.
+Player LadyStack received a card.
+Player LadyStack received a card.
+Player FetusMunch received a card.
+Player FetusMunch received a card.
+Player xXxAudiA5xXx received a card.
+Player xXxAudiA5xXx received a card.
+Player borjilius79 folds
+Player LadyStack raises (0.80)
+Player FetusMunch folds
+Player xXxAudiA5xXx folds
+Player johna52801 calls (0.70)
+Player Shipologist folds
+*** FLOP ***: [3h 4c 2c]
+Player johna52801 bets (1)
+Player LadyStack calls (1)
+*** TURN ***: [3h 4c 2c] [6h]
+Player johna52801 bets (2.27)
+Player LadyStack calls (2.27)
+*** RIVER ***: [3h 4c 2c 6h] [Qh]
+Player johna52801 checks
+Player LadyStack checks
+------ Summary ------
+Pot: 7.73. Rake 0.41
+Board: [3h 4c 2c 6h Qh]
+Player Shipologist does not show cards.Bets: 0.25. Collects: 0. Loses: 0.25.
+Player borjilius79 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player LadyStack shows: One pair of 9s [9s 9c]. Bets: 4.07. Collects: 0. Loses: 4.07.
+Player FetusMunch does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player xXxAudiA5xXx does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player johna52801 shows: One pair of Js [Jd Js]. Bets: 4.07. Collects: 7.73. Wins: 3.66.
+Game ended at: 2014/3/9 16:54:45

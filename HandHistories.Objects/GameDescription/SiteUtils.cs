@@ -122,7 +122,7 @@ namespace HandHistories.Objects.GameDescription
                     return SiteName.Winamax;
                 default:
                     string match = Enum.GetNames(typeof (SiteName)).FirstOrDefault(s => s.ToLower().Equals(site.ToLower()));
-                    return match == null ? SiteName.Unknown : (SiteName) Enum.Parse(typeof (SiteName), match);
+                    return match == null ? SiteName.Unknown : (SiteName) Enum.Parse(typeof (SiteName), match,true);
             }
         }
     }

@@ -23,7 +23,7 @@ namespace HandHistories.Objects.GameDescription
 
             string gameTypeString = limitGamePair.Split('_')[1];
 
-            GameType gameType = (GameType) Enum.Parse(typeof (GameType), gameTypeString);
+            GameType gameType = (GameType) Enum.Parse(typeof (GameType), gameTypeString,true);
 
             Limit limit = Limit.ParseDbSafeString(limitString);
 

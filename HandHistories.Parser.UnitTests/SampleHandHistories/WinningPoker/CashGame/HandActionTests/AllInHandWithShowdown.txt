@@ -1,0 +1,30 @@
+﻿Game started at: 2014/3/8 22:0:24
+Game ID: 261402183 2/4 Braunite (Omaha)
+Seat 1 is the button
+Seat 1: do not-call (160).
+Seat 4: digbick30 (297).
+Player do not-call has small blind (2)
+Player digbick30 has big blind (4)
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player digbick30 received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call received a card.
+Player do not-call raises (10)
+Player digbick30 raises (32)
+Player do not-call calls (24)
+*** FLOP ***: [9h 10d 7c]
+Player digbick30 bets (71)
+Player do not-call allin (124)
+Player digbick30 calls (53)
+*** TURN ***: [9h 10d 7c] [Ah]
+*** RIVER ***: [9h 10d 7c Ah] [3s]
+------ Summary ------
+Pot: 319. Rake 1
+Board: [9h 10d 7c Ah 3s]
+*Player do not-call shows: Straight to 10 [3c 6h 7d 8c]. Bets: 160. Collects: 319. Wins: 159.
+Player digbick30 shows: One pair of Ks [Qh Kc Ks 4d]. Bets: 160. Collects: 0. Loses: 160.
+Game ended at: 2014/3/8 22:0:57

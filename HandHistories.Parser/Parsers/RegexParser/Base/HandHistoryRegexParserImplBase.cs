@@ -158,6 +158,8 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
 
         public abstract bool IsValidHand(string handText);
 
+        public abstract bool IsValidOrCancelledHand(string handText, out bool isCancelled);
+
         public long ParseHandId(string handText)
         {
             try

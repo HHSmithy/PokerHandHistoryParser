@@ -47,9 +47,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\3rd Party\NLog 2.0\NLog.dll</HintPath>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -79,6 +78,7 @@
     <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
     <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
     <Compile Include="Parsers\RegexParser\Base\IHandHistoryActionParser.cs" />
     <Compile Include="Parsers\RegexParser\PartyPoker\ActionTypeRegexPair.cs" />
@@ -117,7 +117,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HandHistories.Objects\HandHistories.Objects.csproj">
       <Project>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</Project>

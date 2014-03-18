@@ -154,6 +154,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             // - there is at least one player with exactly 5bb
             // - the average stack is < 17.5bb 
             // - at least two players have < 10bb
+            // - there is no player with > 20bb
 
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
@@ -162,14 +163,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             var tableStack = 0m;
             var playersBelow10bb = 0;
+            var playersAbove20bb = 0;
             foreach (Player player in playerList)
             {
                 tableStack += player.StartingStack;
                 if (player.StartingStack / limit.BigBlind == 5m) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
                 if (player.StartingStack / limit.BigBlind <= 10m) playersBelow10bb++;
+                if (player.StartingStack / limit.BigBlind > 29m) playersAbove20bb++;
 
                 if (playersBelow10bb > 1) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
             }
+
+            if (playersAbove20bb == 0) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
 
             if (tableStack / limit.BigBlind / playerList.Count <= 17.5m)
             {
@@ -194,6 +199,12 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         public override bool IsValidHand(string[] handLines)
         {
             return handLines[handLines.Length - 1].Contains(" collected ");
+        }
+
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handLines);
         }
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)

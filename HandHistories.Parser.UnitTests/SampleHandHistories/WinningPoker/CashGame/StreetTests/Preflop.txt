@@ -1,0 +1,30 @@
+﻿Game started at: 2014/2/28 15:50:2
+Game ID: 258591887 2/4 Gabilite (JP) - CAP - Max - 2 (Hold'em)
+Seat 4 is the button
+Seat 1: xx59704 (211.76).
+Seat 2: WizoWizo (81.35).
+Seat 4: Xavier2500 (100.05).
+Seat 6: Carlos Danger (533).
+Player Carlos Danger has small blind (2)
+Player xx59704 has big blind (4)
+Player Carlos Danger received a card.
+Player Carlos Danger received a card.
+Player xx59704 received a card.
+Player xx59704 received a card.
+Player WizoWizo received a card.
+Player WizoWizo received a card.
+Player Xavier2500 received a card.
+Player Xavier2500 received a card.
+Player WizoWizo raises (8)
+Player Xavier2500 folds
+Player Carlos Danger folds
+Player xx59704 folds
+Uncalled bet (4) returned to WizoWizo
+Player WizoWizo mucks cards
+------ Summary ------
+Pot: 10. Rake 0
+Player xx59704 does not show cards.Bets: 4. Collects: 0. Loses: 4.
+*Player WizoWizo mucks (does not show cards). Bets: 4. Collects: 10. Wins: 6.
+Player Xavier2500 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Carlos Danger does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Game ended at: 2014/2/28 15:50:13
