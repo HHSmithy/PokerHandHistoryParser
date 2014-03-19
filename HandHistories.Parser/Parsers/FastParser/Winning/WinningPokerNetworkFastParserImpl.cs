@@ -395,8 +395,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 int SeatNumber = int.Parse(playerLine.Substring(seatNumberStart, colonIndex - seatNumberStart));
 
                 //Parsing playerName
+                //PlayerName can contain '(' & ')'
                 int NameStartIndex = colonIndex + 2;
-                int NameEndIndex = playerLine.IndexOf(" (");
+                int NameEndIndex = playerLine.LastIndexOf(" (");
                 string playerName = playerLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
 
                 int stackSizeStartIndex = NameEndIndex + 2;
