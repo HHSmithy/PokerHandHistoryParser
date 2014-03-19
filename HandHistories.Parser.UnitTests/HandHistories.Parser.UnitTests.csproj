@@ -66,6 +66,7 @@
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
     <Compile Include="Parsers\HandParserTests\CommunityCardTests\HandParserCommunityCardTests.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsBossMedia.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsFullTiltImpl.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsEntractionImpl.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests888Impl.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsMicroGamingImpl.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsWinamaxImpl.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsWinningPoker.cs" />
+    <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsBossMedia.cs" />
     <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsFullTiltImpl.cs" />
     <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTests.cs" />
     <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTests888Impl.cs" />
@@ -103,6 +105,78 @@
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\FixedLimitHoldem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\PotLimitOmaha.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\3BetHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\BasicHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\FoldedPreflop.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\OmahaHiLo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Limits\Limit1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Limits\Limit2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Limits\Limit3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\MultipleHandsTests\10MultipleHands.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\PlayerTests\WithShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\StreetTests\Flop.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\StreetTests\Preflop.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\StreetTests\River.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\StreetTests\Turn.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Tables\Table1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Tables\Table2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

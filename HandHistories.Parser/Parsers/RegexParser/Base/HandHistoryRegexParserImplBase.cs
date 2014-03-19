@@ -261,7 +261,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
                 
                 throw new UnrecognizedGameTypeException(handText, "Game type not recognized: " + gameType);
             }
-            catch (Exception exception)
+            catch
             {
                 throw;
             }     
@@ -384,7 +384,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
 
                 return players;
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }
