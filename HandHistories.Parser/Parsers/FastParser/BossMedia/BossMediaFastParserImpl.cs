@@ -32,7 +32,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         {
             for (int i = 0; i < 10; i++)
             {
-                //<PLAYER NAME="fatima1975" SEAT="6" AMOUNT="4.27"></PLAYER>
+                //<PLAYER NAME="fatima1975" SEAT="6" AMOUNT="4.27" DEALER="Y"></PLAYER>
                 string Line = handLines[i + 1];
                 if (Line[1] != 'P')
                 {
