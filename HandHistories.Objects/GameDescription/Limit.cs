@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.GameDescription
@@ -177,26 +178,26 @@ namespace HandHistories.Objects.GameDescription
 
         public override string ToString()
         {
-            return ToString(false, false);
+            return ToString(CultureInfo.CurrentCulture, false, false);
         }
 
-        public string ToString(bool ignoreCurrencyStrings = false, bool ignoreAntes = false, string seperatorCharacter = "-")
+        public string ToString(IFormatProvider format, bool ignoreCurrencyStrings = false, bool ignoreAntes = false, string seperatorCharacter = "-")
         {
-            string currencySymbol = (ignoreCurrencyStrings ? string.Empty :GetCurrencySymbol());
+            string currencySymbol = (ignoreCurrencyStrings ? string.Empty : GetCurrencySymbol());
 
-            return GetLimitString(currencySymbol, seperatorCharacter, ignoreAntes);
+            return GetLimitString(currencySymbol, seperatorCharacter, ignoreAntes, format);
         }        
 
-        private string GetLimitString(string currencySymbol, string seperatorCharacter, bool ignoreAntes)
+        private string GetLimitString(string currencySymbol, string seperatorCharacter, bool ignoreAntes, IFormatProvider format)
         {
-            string smallBlindString = (SmallBlind != Math.Round(SmallBlind)) ? SmallBlind.ToString("N2") : SmallBlind.ToString("N0");
-            string bigBlindString = (BigBlind != Math.Round(BigBlind)) ? BigBlind.ToString("N2") : BigBlind.ToString("N0");
+            string smallBlindString = (SmallBlind != Math.Round(SmallBlind)) ? SmallBlind.ToString("N2", format) : SmallBlind.ToString("N0", format);
+            string bigBlindString = (BigBlind != Math.Round(BigBlind)) ? BigBlind.ToString("N2", format) : BigBlind.ToString("N0", format);
 
             string limit = string.Format("{0}{1}{3}{0}{2}", currencySymbol, smallBlindString, bigBlindString, seperatorCharacter);
 
             if (IsAnteTable && ignoreAntes == false)
             {
-                limit = limit + "-Ante-" + currencySymbol + ((Ante < 1) ? Ante.ToString("N2") : Ante.ToString("N0"));
+                limit = limit + "-Ante-" + currencySymbol + ((Ante < 1) ? Ante.ToString("N2", format) : Ante.ToString("N0", format));
             }
 
             return limit;
