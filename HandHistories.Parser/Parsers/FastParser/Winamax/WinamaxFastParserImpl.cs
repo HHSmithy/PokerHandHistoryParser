@@ -333,7 +333,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                     var amountStartIndex = handLine.LastIndexOf(" ", StringComparison.Ordinal);
 
-                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 2));
+                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 2), CultureInfo.InvariantCulture);
                    
                     if(smallBlindIndex > -1)
                     {
