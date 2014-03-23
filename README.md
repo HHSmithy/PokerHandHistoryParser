@@ -23,6 +23,7 @@ The poker hand-history parser currently supports the following sites:
  * Microgaming
  * Winimax
  * Winning Poker
+ * Boss Media
  * Entraction (deprecated)
 
 Format Support
