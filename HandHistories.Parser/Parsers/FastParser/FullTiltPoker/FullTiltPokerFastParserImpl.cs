@@ -156,7 +156,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 case " NL Hold'em ":
                 case " No Limit Hold'em ":
                     return GameType.NoLimitHoldem;
-                case " Cap PL Omaha Hi ":
+                case " CAP PL Omaha Hi ":
                 case " Cap Pot Limit Omaha Hi ":
                 case " PL Omaha Hi ":
                 case " Pot Limit Omaha Hi ":
