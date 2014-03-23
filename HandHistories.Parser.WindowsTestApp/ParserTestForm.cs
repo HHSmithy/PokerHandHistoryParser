@@ -16,7 +16,8 @@ namespace HandHistories.Parser.WindowsTestApp
         public ParserTestForm()
         {
             InitializeComponent();
-            
+
+            listBoxSite.Items.Add(SiteName.BossMedia);
             listBoxSite.Items.Add(SiteName.PokerStars);
             listBoxSite.Items.Add(SiteName.PokerStarsFr);
             listBoxSite.Items.Add(SiteName.PokerStarsIt);

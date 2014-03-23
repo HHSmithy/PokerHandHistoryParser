@@ -92,7 +92,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             {                
                 ParseExtraHandInformation(handLines, handHistorySummary);
             }
-            catch (Exception ex)
+            catch
             {
                 throw new ExtraHandParsingAction(handLines[0]);
             }            
