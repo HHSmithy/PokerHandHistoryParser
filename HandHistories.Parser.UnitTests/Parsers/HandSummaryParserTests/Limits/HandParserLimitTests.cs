@@ -17,6 +17,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
     [TestFixture("MicroGaming", "e0.01-e0.02", "e0.50-e1", "e1-e2")]
     [TestFixture("Winamax", "e0.05-e0.10", "e0.50-e1", "e5-e10")]
     [TestFixture("WinningPoker", "$2-$4", "$2-$4", "$0.10-$0.25")]
+    [TestFixture("BossMedia", "$100-$200", "$5-$10", "$0.02-$0.04")]
     class HandParserLimitTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedLimits;
@@ -73,6 +74,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Entraction:
                 case SiteName.Winamax:
                 case SiteName.WinningPoker:
+                case SiteName.BossMedia:
                     Assert.Ignore(Site.ToString() + " doesn't have ante tables.");
                     break;               
                 

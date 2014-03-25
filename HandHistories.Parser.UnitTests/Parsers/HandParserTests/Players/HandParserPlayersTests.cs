@@ -52,6 +52,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 case SiteName.Entraction:
                 case SiteName.PartyPoker:
                 case SiteName.PokerStars:
+                case SiteName.BossMedia:
                     Assert.Ignore("No sitting out examples for " + Site);
                     break;
             }
@@ -82,6 +83,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 case SiteName.IPoker:
                 case SiteName.Pacific:
                 case SiteName.WinningPoker:
+                case SiteName.BossMedia:
                     Assert.Ignore("No Hi-Lo examples for " + Site);
                     break;
             }
