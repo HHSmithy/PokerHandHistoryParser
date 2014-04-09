@@ -161,3 +161,9 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+*.xml
+*.dll
+*.exe
+*.config
+*.nupkg
+packages/NUnit.2.6.3/license.txt

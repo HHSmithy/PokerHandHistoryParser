@@ -6,80 +6,115 @@ namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
     [DataContract]
-    public class SeatType
+    public struct SeatType
     {
-        [DataMember]
-        private int _maxPlayers;
-
-        private SeatType()
+        enum SeatTypeEnum : byte
         {
-            
+            Unknown = 0,
+            All = 1,
+            HeadsUp = 2,
+            _3Handed = 3,
+            _4Max = 4,
+            _5Handed = 5,
+            _6Max = 6, 
+            _7Handed = 7, 
+            _8Handed = 8,
+            _FullRing_9Handed = 9,
+            _FullRing_10Handed = 10,
         }
+
+        [DataMember]
+        private SeatTypeEnum seatType;
 
         private SeatType(int maxPlayers, bool realTypes=false)
         {            
-            if (maxPlayers > 10)
-            {
-                throw new ArgumentException("SeatType: Max players can't be more than 10. It is " + maxPlayers);
-            }
-            if (maxPlayers == 1)
-            {
-                throw new ArgumentException("SeatType: Max players can't be 1 player. It is " + maxPlayers);
-            }
-
-            _maxPlayers = maxPlayers;
-
             switch (maxPlayers)
             {
                 case -1:
                 case 0:
-                    _seatType = "All";
+                    seatType = SeatTypeEnum.All;
                     break;   
                 case 2:
-                    _seatType = "HeadsUp";
+                    seatType = SeatTypeEnum.HeadsUp;
                     break;
                 case 3:
-                    _seatType = realTypes ? "6 Max" : "3 handed";
+                    seatType = realTypes ? SeatTypeEnum._6Max : SeatTypeEnum._3Handed;
                     break;
                 case 4:
-                    _seatType = realTypes ? "6 Max" : "4 Max";
+                    seatType = realTypes ? SeatTypeEnum._6Max : SeatTypeEnum._4Max;
                     break;
                 case 5:
-                    _seatType = realTypes ? "6 Max" : "5 Handed";
+                    seatType = realTypes ? SeatTypeEnum._6Max : SeatTypeEnum._5Handed;
                     break;
                 case 6:
-                    _seatType = "6 Max";
+                    seatType = SeatTypeEnum._6Max;
                     break;
                 case 7:
-                    _seatType = realTypes ? "Full Ring (9 Handed)" : "7 Handed";
+                    seatType = realTypes ? SeatTypeEnum._FullRing_9Handed : SeatTypeEnum._7Handed;
                     break;
                 case 8:
-                    _seatType = realTypes ? "Full Ring (9 Handed)" : "8 Handed";
+                    seatType = realTypes ? SeatTypeEnum._FullRing_9Handed : SeatTypeEnum._8Handed;
                     break;
                 case 9:
-                    _seatType = "Full Ring (9 Handed)";
+                    seatType = SeatTypeEnum._FullRing_9Handed;
                     break;
                 case 10:
-                    _seatType = "Full Ring (10 Handed)";
+                    seatType = SeatTypeEnum._FullRing_10Handed;
                     break;
                 default:
-                    _seatType = maxPlayers + " Handed";
-                    break;
+                    throw new ArgumentOutOfRangeException("MaxPlayer, Must be between 0 and 10");
             }
         }
 
-        [DataMember]
-        private string _seatType;
-       
+        public bool isEmpty
+        {
+            get
+            {
+                return seatType == SeatTypeEnum.Unknown; 
+            }
+        }
+
         public int MaxPlayers
         {
-            get { return _maxPlayers; }
-            set { _maxPlayers = value; }
+            get 
+            {
+                if (seatType == SeatTypeEnum.All)
+                {
+                    throw new ArgumentException("MaxPlayers All does not represent a SeatType");
+                }
+                return (int)seatType; 
+            }
         }
 
         public override string ToString()
         {
-            return _seatType;
+            switch (seatType)
+            {
+                case SeatTypeEnum.Unknown:
+                    return "Unknown";
+                case SeatTypeEnum.All:
+                    return "All";
+                case SeatTypeEnum.HeadsUp:
+                    return "HeadsUp";
+                case SeatTypeEnum._3Handed:
+                    return "3 handed";
+                case SeatTypeEnum._4Max:
+                    return "4 Max";
+                case SeatTypeEnum._5Handed:
+                    return "5 handed";
+                case SeatTypeEnum._6Max:
+                    return "6 Max";
+                case SeatTypeEnum._7Handed:
+                    return "7 handed";
+                case SeatTypeEnum._8Handed:
+                    return "8 handed";
+                case SeatTypeEnum._FullRing_9Handed:
+                    return "Full Ring (9 handed)";
+                case SeatTypeEnum._FullRing_10Handed:
+                    return "Full Ring (10 Handed)";
+                default:
+                    throw new ArgumentOutOfRangeException("seatType");
+            }
         }
 
         public static SeatType AllSeatType()
@@ -197,7 +232,7 @@ namespace HandHistories.Objects.GameDescription
 
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            return seatType.GetHashCode();
         }
     }
 }

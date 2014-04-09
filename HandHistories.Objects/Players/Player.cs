@@ -18,6 +18,10 @@ namespace HandHistories.Objects.Players
         [DataMember]
         public int SeatNumber { get; private set; }
 
+        /// <summary>
+        /// Hole cards will be null when there are no cards,
+        /// use "hasHoleCards" to find out if there are any cards
+        /// </summary>
         [DataMember]
         public HoleCards HoleCards { get; set; }
 
@@ -31,7 +35,15 @@ namespace HandHistories.Objects.Players
             PlayerName = playerName;
             StartingStack = startingStack;
             SeatNumber = seatNumber;
-            HoleCards = HoleCards.NoHolecards(playerName);
+            HoleCards = null;
+        }
+
+        public bool hasHoleCards
+        {
+            get
+            {
+                return HoleCards != null && HoleCards.Count > 0;
+            }
         }
 
         public override int GetHashCode()
@@ -47,7 +59,7 @@ namespace HandHistories.Objects.Players
 
         public override string ToString()
         {
-            string s = string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), HoleCards.ToString());
+            string s = string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), (hasHoleCards ? HoleCards.ToString() : ""));
 
             if (IsSittingOut)
             {
