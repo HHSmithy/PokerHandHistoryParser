@@ -98,6 +98,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.FullTilt:
                 case SiteName.Winamax:
                 case SiteName.WinningPoker:
+                case SiteName.BossMedia:
                     Assert.Ignore("Site doesn't have euro tables ( example ).");
                     break;
                 case SiteName.Entraction:
@@ -124,6 +125,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Winamax:
                 case SiteName.PokerStars:
                 case SiteName.WinningPoker:
+                case SiteName.BossMedia:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
                 default:

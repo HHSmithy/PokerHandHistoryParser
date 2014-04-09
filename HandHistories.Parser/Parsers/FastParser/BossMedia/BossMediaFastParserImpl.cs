@@ -499,7 +499,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
                     Player player = plist[playerName];
 
-                    if (player.HoleCards.Count == 0)
+                    if (!player.hasHoleCards)
                     {
                         for (int cardIndex = i + 1; cardIndex <= i + 4 && cardIndex < handLines.Length; cardIndex++)
                         {
@@ -512,6 +512,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                             Card parsedCard = ParseCard(cardLine);
                             if (!parsedCard.isEmpty)
                             {
+                                if (player.HoleCards == null)
+                                {
+                                    player.HoleCards = HoleCards.NoHolecards();
+                                }
                                 player.HoleCards.AddCard(parsedCard);
                             }
                         }
@@ -540,6 +544,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 Card parsedCard = ParseCard(Line);
                 if (!parsedCard.isEmpty)
                 {
+                    if (player.HoleCards == null)
+                    {
+                        player.HoleCards = HoleCards.NoHolecards();
+                    }
                     player.HoleCards.AddCard(parsedCard);
                 }
             }

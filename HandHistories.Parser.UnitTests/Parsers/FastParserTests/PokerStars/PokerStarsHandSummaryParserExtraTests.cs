@@ -126,7 +126,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "CancelledHand");
 
-            Assert.AreEqual(string.Empty, actualHand.Players["lautie"].HoleCards.ToString());
+            Assert.IsFalse(actualHand.Players["lautie"].hasHoleCards);
+            Assert.IsTrue(actualHand.Cancelled);
         }
 
         // Issue with date parsing during daylight savings

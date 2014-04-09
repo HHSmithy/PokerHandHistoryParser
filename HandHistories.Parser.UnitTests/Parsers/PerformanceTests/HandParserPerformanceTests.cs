@@ -5,7 +5,6 @@ using System;
 
 namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
 {
-    [TestFixture("PartyPoker")]
     [TestFixture("PokerStars")]
     [TestFixture("OnGame")]
     [TestFixture("IPoker")]
