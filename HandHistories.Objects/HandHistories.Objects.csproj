@@ -84,6 +84,9 @@
   <ItemGroup>
     <None Include="HandHistories.Objects.Key.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
