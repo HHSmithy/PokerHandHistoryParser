@@ -113,6 +113,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOf(" w") + 7;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
+            if (stackString == "")
+            {
+                return 0;
+            }
             return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
         }
 
@@ -607,9 +611,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 4:                 
                     actionType = HandActionType.CHECK;
                     break;
-                case 5:                 
+                case 5:
                     actionType = HandActionType.BET;
                     break;
+                case 6://Both are all-ins but don't know the difference between them
                 case 7:
                     return new AllInAction(actionPlayerName, value, street, false, actionNumber);
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
