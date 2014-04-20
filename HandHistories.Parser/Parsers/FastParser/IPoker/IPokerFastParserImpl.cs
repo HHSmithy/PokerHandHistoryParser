@@ -113,6 +113,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOf(" w") + 7;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
+            if (stackString == "")
+            {
+                return 0;
+            }
             return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
         }
 
@@ -287,7 +291,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
               </players>             
              */
 
-            int offset = 23;
+
+            int offset = GetFirstPlayerIndex(handLines);
             List<string> playerLines = new List<string>();
 
             string line = handLines[offset];
@@ -305,6 +310,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return playerLines.ToArray();
+        }
+
+        private int GetFirstPlayerIndex(string[] handLines)
+        {
+            for (int i = 18; i < handLines.Length; i++)
+            {
+                if (handLines[i][1] == 'p')
+                {
+                    return i + 1;
+                }
+            }
+            throw new IndexOutOfRangeException("Did not find first player");
         }
 
         protected string[] GetCardLinesFromHandLines(string[] handLines)
@@ -381,7 +398,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected override Limit ParseLimit(string[] handLines)
         {
-            //GameType line = <gametype>Holdem NL $0.02/$0.04</gametype>
+            //Limit line format:
+            //<gametype>Holdem NL $0.02/$0.04</gametype>
+            //Alternative1:
+            //<gametype>Holdem NL 0.02/0.04</gametype>
+            //<currency>USD</currency>
             string gameTypeLine = GetGameTypeLineFromHandLines(handLines);
             int limitStringBeginIndex = gameTypeLine.LastIndexOf(' ') + 1;
             int limitStringEndIndex = gameTypeLine.LastIndexOf('<') - 1;
@@ -395,27 +416,62 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 case '$':
                     currency = Currency.USD;
+                    limitString = limitString.Substring(1);
                     break;
                 case '€':
                     currency = Currency.EURO;
+                    limitString = limitString.Substring(1);
                     break;
                 case '£':
                     currency = Currency.GBP;
+                    limitString = limitString.Substring(1);
                     break;
                 default:
-                    throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
+                    string tagValue = GetCurrencyTagValue(handLines);
+                    switch (tagValue)
+                    {
+                        case "USD":
+                            currency = Currency.USD;
+                            break;
+                        case "GBP":
+                            currency = Currency.GBP;
+                            break;
+                        case "EUR":
+                            currency = Currency.EURO;
+                            break;
+                        default:
+                            throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
+                    }
+                    break;
             }
 
             int slashIndex = limitString.IndexOf('/');
 
-            string smallString = limitString.Substring(1, slashIndex - 1);
+            string smallString = limitString.Remove(slashIndex);
             decimal small = decimal.Parse(smallString, System.Globalization.CultureInfo.InvariantCulture);
-
  
-            string bigString = limitString.Substring(slashIndex + 2, limitString.Length - (slashIndex + 2));
+            string bigString = limitString.Substring(slashIndex + 1);
+            if (bigString[0] == '£' || bigString[0] == '$' || bigString[0] == '€')
+            {
+                bigString = bigString.Substring(1);
+            }
             decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
+        }
+
+        private string GetCurrencyTagValue(string[] handLines)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                string handline = handLines[i];
+                if (handline[1] == 'c' && handline[2] == 'u')
+                {
+                    int endIndex = handline.IndexOf('<', 10);
+                    return handline.Substring(10, endIndex - 10);
+                }
+            }
+            return "";
         }
 
         public override bool IsValidHand(string[] handLines)
@@ -423,12 +479,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             //Check 1 - Are we in a Session Tag
             if (handLines[0].StartsWith("<session") == false ||
                 handLines[handLines.Length - 1].StartsWith("</session") == false)
-            {
-                return false;
-            }
-
-            //Check 2 - Do we have a Game Tag
-            if (handLines[19].StartsWith("<game") == false && handLines[20].StartsWith("<game") == false)
             {
                 return false;
             }
@@ -456,7 +506,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             string[] playerLines = GetPlayerLinesFromHandLines(handLines);
             //The 2nd line after the </player> line is the beginning of the <round> rows
-
 
             int offset =  23;
 
@@ -562,9 +611,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 4:                 
                     actionType = HandActionType.CHECK;
                     break;
-                case 5:                 
+                case 5:
                     actionType = HandActionType.BET;
                     break;
+                case 6://Both are all-ins but don't know the difference between them
                 case 7:
                     return new AllInAction(actionPlayerName, value, street, false, actionNumber);
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
@@ -628,6 +678,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             /*
                 <player seat="3" name="RodriDiaz3" chips="$2.25" dealer="0" win="$0" bet="$0.08" rebuy="0" addon="0" />
                 <player seat="8" name="Kristi48ru" chips="$6.43" dealer="1" win="$0.23" bet="$0.16" rebuy="0" addon="0" />
+                or
+                <player seat="5" name="player5" chips="$100000" dealer="0" win="$0" bet="$0" />
              */
 
             string[] playerLines = GetPlayerLinesFromHandLines(handLines);
@@ -692,8 +744,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     continue;
                 }
 
-                //When players fold, we see a line: <cards type="Pocket" player="pepealas5">X X</cards>, we should skip these lines
-                if (handLine[handLine.Length - 9] == 'X')
+                //When players fold, we see a line: 
+                //<cards type="Pocket" player="pepealas5">X X</cards>
+                //or:
+                //<cards type="Pocket" player="playername"></cards>
+                //We skip these lines
+                if (handLine[handLine.Length - 9] == 'X' || handLine[handLine.Length - 9] == '>')
                 {
                     continue;
                 }
@@ -710,7 +766,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 string playerCardString = handLine.Substring(playerCardsStartIndex,
                                                         playerCardsEndIndex - playerCardsStartIndex + 1);
                 string[] cards = playerCardString.Split(' ');
-                if (cards.Length > 0)
+                if (cards.Length > 1)
                 {
                     player.HoleCards = HoleCards.NoHolecards(player.PlayerName);
                     foreach (string card in cards)

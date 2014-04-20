@@ -1,0 +1,56 @@
+﻿<session sessioncode="123456">
+<general>
+<mode>real</mode>
+<gametype>Holdem NL 5/10</gametype>
+<tablename>Andreapol__No_DP_</tablename>
+<duration>N/A</duration>
+<gamecount>N/A</gamecount>
+<startdate>2014-01-01 22:50:13</startdate>
+<currency>USD</currency>
+<nickname>N/A</nickname>
+<bets>N/A</bets>
+<wins>N/A</wins>
+<chipsin>N/A</chipsin>
+<chipsout>N/A</chipsout>
+<ipoints>N/A</ipoints>
+</general>
+<game gamecode="987654">
+<general>
+<startdate>2014-01-01 22:50:13</startdate>
+<players>
+<player seat="5" name="ch4atsftw" chips="$100000" dealer="0" win="$0" bet="$0" />
+<player seat="4" name="Marlene79" chips="$100000" dealer="0" win="$0" bet="$0" />
+<player seat="3" name="Shostak0vich" chips="$100000" dealer="0" win="$0" bet="$20" />
+<player seat="2" name="Betraktaren" chips="$100000" dealer="0" win="$0" bet="$5" />
+<player seat="1" name="a3uu" chips="$100000" dealer="1" win="$42.75" bet="$20" />
+</players>
+</general>
+<round no="0">
+<action no="1" player="Betraktaren" type="1" sum="$5"/>
+<action no="2" player="Shostak0vich" type="2" sum="$10"/>
+</round>
+<round no="1">
+<cards type="Pocket" player="a3uu"></cards>
+<action no="3" player="Marlene79" type="0" sum="$0"/>
+<action no="4" player="ch4atsftw" type="0" sum="$0"/>
+<action no="5" player="a3uu" type="23" sum="$20"/>
+<action no="6" player="Betraktaren" type="0" sum="$0"/>
+<action no="7" player="Shostak0vich" type="3" sum="$10"/>
+</round>
+<round no="2">
+<cards type="Flop" player="">c10 hK s5</cards>
+<action no="8" player="Shostak0vich" type="4" sum="$0"/>
+<action no="9" player="a3uu" type="4" sum="$0"/>
+</round>
+<round no="3">
+<cards type="Turn" player="">h3</cards>
+<action no="10" player="Shostak0vich" type="4" sum="$0"/>
+<action no="11" player="a3uu" type="4" sum="$0"/>
+</round>
+<round no="4">
+<cards type="River" player="">dJ</cards>
+<action no="12" player="Shostak0vich" type="4" sum="$0"/>
+<action no="13" player="a3uu" type="4" sum="$0"/>
+</round>
+</game>
+</session>
