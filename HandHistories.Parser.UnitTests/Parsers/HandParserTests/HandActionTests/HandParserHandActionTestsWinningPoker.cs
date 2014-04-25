@@ -14,6 +14,80 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
+        public void Straddle_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("L6U11C2K1Y3", HandActionType.SMALL_BLIND, 0.10m, Street.Preflop),
+                    new HandAction("rds44sdr", HandActionType.BIG_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("D3SISION", HandActionType.POSTS, 0.50m, Street.Preflop),
+
+                    new HandAction("ButtonSmasher", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Cellar door", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("bbone", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("L6U11C2K1Y3", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("rds44sdr", HandActionType.CALL, 0.25m, Street.Preflop),
+                    new HandAction("D3SISION", HandActionType.CHECK, 0m, Street.Preflop),
+
+                    new HandAction("rds44sdr", HandActionType.CHECK, 0m, Street.Flop),
+                    new HandAction("D3SISION", HandActionType.BET, 0.50m, Street.Flop),
+                    new HandAction("rds44sdr", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("D3SISION", HandActionType.UNCALLED_BET, 0.50m, Street.Flop),
+                    new WinningsAction("D3SISION", HandActionType.WINS, 0.30m, 0)
+                };
+
+            TestParseActions("Straddle", expectedActions);
+        }
+
+        [Test]
+        public void Posting_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("bbone", HandActionType.SMALL_BLIND, 0.10m, Street.Preflop),
+                    new HandAction("ButtonSmasher", HandActionType.BIG_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("kenzielee", HandActionType.POSTS, 0.25m, Street.Preflop),
+
+                    new HandAction("kenzielee", HandActionType.RAISE, 0.25m, Street.Preflop),
+                    new HandAction("Cellar door", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("4ofakind7", HandActionType.CALL, 0.50m, Street.Preflop),
+                    new HandAction("Garzvorgh", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("bbone", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("ButtonSmasher", HandActionType.FOLD, 0m, Street.Preflop),
+
+                    new HandAction("kenzielee", HandActionType.BET, 0.52m, Street.Flop),
+                    new HandAction("4ofakind7", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("kenzielee", HandActionType.UNCALLED_BET, 0.52m, Street.Flop),
+                    new WinningsAction("kenzielee", HandActionType.WINS, 0.54m, 0)
+                };
+
+            TestParseActions("Post", expectedActions);
+        }
+
+        [Test]
+        public void PostingDead_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                                    {
+                                        new HandAction("choptop", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                                        new HandAction("Venvellator", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                                        new HandAction("TheKunttzz", HandActionType.POSTS, 0.75m, Street.Preflop),
+
+                                        new HandAction("TheKunttzz", HandActionType.CHECK, 0, Street.Preflop),
+                                        new HandAction("tonyaces", HandActionType.RAISE, 1.50m, Street.Preflop),
+                                        new HandAction("Cellar door", HandActionType.FOLD, 0, Street.Preflop),
+                                        new HandAction("ConverseX", HandActionType.FOLD, 0, Street.Preflop),
+                                        new HandAction("choptop", HandActionType.FOLD, 0, Street.Preflop),
+                                        new HandAction("Venvellator", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("TheKunttzz", HandActionType.FOLD, 0, Street.Preflop),
+                                        new HandAction("tonyaces", HandActionType.UNCALLED_BET, 1m, Street.Preflop),
+                                        new WinningsAction("tonyaces", HandActionType.WINS, 1.5m, 0)
+                                    };
+
+            TestParseActions("PostingDead", expectedActions);
+        }
+
+        [Test]
         public void StrangePlayerNames_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()

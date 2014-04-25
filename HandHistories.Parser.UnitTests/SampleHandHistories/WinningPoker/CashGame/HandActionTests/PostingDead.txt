@@ -1,0 +1,43 @@
+﻿Game started at: 2014/3/26 21:50:57
+Game ID: 267244548 0.25/0.50 Magnetite   (JP) - 5 (Hold'em)
+Seat 2 is the button
+Seat 1: Cellar door (28.03).
+Seat 2: ConverseX (50).
+Seat 3: choptop (20.25).
+Seat 4: Venvellator (78.16).
+Seat 5: TheKunttzz (38.79).
+Seat 6: tonyaces (28.71).
+Player choptop has small blind (0.25)
+Player Venvellator has big blind (0.50)
+Player TheKunttzz posts (0.25) as a dead bet
+Player TheKunttzz posts (0.50)
+Player choptop received a card.
+Player choptop received a card.
+Player Venvellator received a card.
+Player Venvellator received a card.
+Player TheKunttzz received a card.
+Player TheKunttzz received a card.
+Player tonyaces received a card.
+Player tonyaces received a card.
+Player Cellar door received a card.
+Player Cellar door received a card.
+Player ConverseX received a card.
+Player ConverseX received a card.
+Player TheKunttzz checks
+Player tonyaces raises (1.50)
+Player Cellar door folds
+Player ConverseX folds
+Player choptop folds
+Player Venvellator folds
+Player TheKunttzz folds
+Uncalled bet (1) returned to tonyaces
+Player tonyaces mucks cards
+------ Summary ------
+Pot: 2. Rake 0
+Player Cellar door does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player ConverseX does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player choptop does not show cards.Bets: 0.25. Collects: 0. Loses: 0.25.
+Player Venvellator does not show cards.Bets: 0.50. Collects: 0. Loses: 0.50.
+Player TheKunttzz does not show cards.Bets: 0.75. Collects: 0. Loses: 0.75.
+*Player tonyaces mucks (does not show cards). Bets: 0.50. Collects: 2. Wins: 1.50.
+Game ended at: 2014/3/26 21:51:43
