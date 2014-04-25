@@ -272,7 +272,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = ActionsStart; i < handLines.Length; i++)
             {
                 string actionLine = handLines[i];
-                if (actionLine.EndsWith("."))
+                //Player bubblebubble wait BB
+                if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
                 {
                     return i;
                 }
@@ -284,7 +285,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 decimal Amount = ParseActionAmount(actionLine);
 
                 string actionLine2 = handLines[++i];
-                if (actionLine2.EndsWith("."))
+                //Player bubblebubble wait BB
+                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B"))
                 {
                     actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
                     return i;
@@ -454,10 +456,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Seat 1: xx59704 (159.21).
             //Seat 4: Xavier2500 (110.40).
             //...
-            //Player NoahSDsDad has small blind (2)
-            //Player xx45809 sitting out
-            //Player megadouche sitting out
-            //...
             PlayerList playerList = new PlayerList();
             int CurrentLineIndex = 3;
 
@@ -483,18 +481,56 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 playerList.Add(new Player(playerName, decimal.Parse(stack, System.Globalization.CultureInfo.InvariantCulture), SeatNumber));
             }
 
+            //...
+            //Player NoahSDsDad has small blind (2)
+            //Player xx45809 sitting out
+            //Player megadouche sitting out
+            //Player xx59704 wait BB
             CurrentLineIndex++;
-            for (int i = 0; i < playerList.Count; i++)
+            for (int i = 0; i < handLines.Length; i++)
             {
+                const int NameStartIndex = 7;
                 string sitOutLine = handLines[CurrentLineIndex + i];
-                if (sitOutLine.EndsWith(")"))
+
+                bool receivingCards = false;
+                int NameEndIndex;
+                string playerName;
+                switch (sitOutLine[sitOutLine.Length - 1])
+                {
+                    case '.':
+                        //Player bubblebubble is timed out.
+                        if (sitOutLine[sitOutLine.Length - 2] == 't')
+                        {
+                            continue;
+                        }
+                        receivingCards = true;
+                        break;
+                    case ')':
+                        continue;
+                    case 'B':
+                        //Player bubblebubble wait BB
+                        NameEndIndex = sitOutLine.Length - 8;//" wait BB".Length
+                        playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                        playerList[playerName].IsSittingOut = true;
+                        break;
+                    case 't':
+                        //Player xx45809 sitting out
+                        if (sitOutLine[sitOutLine.Length - 2] == 'u')
+                        {
+                            NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
+                            playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                            playerList[playerName].IsSittingOut = true;
+                            break;
+                        }
+                        //Player TheKunttzz posts (0.25) as a dead bet
+                        else continue;
+                    default:
+                        throw new ArgumentException("Unhandled Line: " + sitOutLine);
+                }
+                if (receivingCards)
                 {
                     break;
                 }
-                const int NameStartIndex = 7;
-                int NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
-                string playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
-                playerList[playerName].IsSittingOut = true;
             }
 
             //Expected End

@@ -13,6 +13,34 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
         }
 
+        [Test]
+        public void ParsePlayers_WaitingBB()
+        {
+            //Seat 1: Garzvorgh (12.79).
+            //Seat 2: Cellar door (16.60).
+            //Seat 3: Tr0m (25.35).
+            //Seat 4: bubblebubble (25.80).
+            //Seat 5: Dutch1066 (10.52).
+            //Seat 6: ButtonSmasher (10.14).
+            //Player ButtonSmasher has small blind (0.10)
+            //Player Garzvorgh has big blind (0.25)
+            //Player bubblebubble is timed out.
+            //Player bubblebubble wait BB
+            PlayerList players = new PlayerList()
+                           {
+                               new Player("Garzvorgh", 12.79m, 1),
+                               new Player("Cellar door", 16.60m, 2),
+                               new Player("Tr0m", 25.35m, 3),
+                               new Player("bubblebubble", 25.80m, 4)
+                               {
+                                   IsSittingOut = true
+                               },
+                               new Player("Dutch1066", 10.52m, 5),
+                               new Player("ButtonSmasher", 10.14m, 6)
+                           };
+            TestParsePlayers("WaitingBB", players);
+        }
+
         protected override PlayerList ExpectedNoHoleCardsPlayers
         {
             get

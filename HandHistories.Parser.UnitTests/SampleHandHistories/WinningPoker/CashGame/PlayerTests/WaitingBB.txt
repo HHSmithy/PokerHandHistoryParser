@@ -1,0 +1,39 @@
+﻿Game started at: 2014/3/25 19:36:57
+Game ID: 266886148 0.10/0.25 Tantalite   (JP) - 7 (Hold'em)
+Seat 5 is the button
+Seat 1: Garzvorgh (12.79).
+Seat 2: Cellar door (16.60).
+Seat 3: Tr0m (25.35).
+Seat 4: bubblebubble (25.80).
+Seat 5: Dutch1066 (10.52).
+Seat 6: ButtonSmasher (10.14).
+Player ButtonSmasher has small blind (0.10)
+Player Garzvorgh has big blind (0.25)
+Player bubblebubble is timed out.
+Player bubblebubble wait BB
+Player ButtonSmasher received a card.
+Player ButtonSmasher received a card.
+Player Garzvorgh received a card.
+Player Garzvorgh received a card.
+Player Cellar door received a card.
+Player Cellar door received a card.
+Player Tr0m received a card.
+Player Tr0m received a card.
+Player Dutch1066 received a card.
+Player Dutch1066 received a card.
+Player Cellar door folds
+Player Tr0m folds
+Player Dutch1066 folds
+Player ButtonSmasher raises (0.40)
+Player Garzvorgh folds
+Uncalled bet (0.25) returned to ButtonSmasher
+Player ButtonSmasher mucks cards
+------ Summary ------
+Pot: 0.50. Rake 0
+Player Garzvorgh does not show cards.Bets: 0.25. Collects: 0. Loses: 0.25.
+Player Cellar door does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Tr0m does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player bubblebubble does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Dutch1066 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player ButtonSmasher mucks (does not show cards). Bets: 0.25. Collects: 0.50. Wins: 0.25.
+Game ended at: 2014/3/25 19:37:34

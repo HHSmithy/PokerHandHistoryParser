@@ -1288,6 +1288,9 @@
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\OmahaShowdown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\WaitingBB.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
