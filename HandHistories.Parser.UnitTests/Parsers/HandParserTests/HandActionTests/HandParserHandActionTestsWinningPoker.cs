@@ -14,6 +14,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
+        public void Straddle_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("L6U11C2K1Y3", HandActionType.SMALL_BLIND, 0.10m, Street.Preflop),
+                    new HandAction("rds44sdr", HandActionType.BIG_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("D3SISION", HandActionType.POSTS, 0.50m, Street.Preflop),
+
+                    new HandAction("ButtonSmasher", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Cellar door", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("bbone", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("L6U11C2K1Y3", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("rds44sdr", HandActionType.CALL, 0.25m, Street.Preflop),
+                    new HandAction("D3SISION", HandActionType.CHECK, 0m, Street.Preflop),
+
+                    new HandAction("rds44sdr", HandActionType.CHECK, 0m, Street.Flop),
+                    new HandAction("D3SISION", HandActionType.BET, 0.50m, Street.Flop),
+                    new HandAction("rds44sdr", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("D3SISION", HandActionType.UNCALLED_BET, 0.50m, Street.Flop),
+                    new WinningsAction("D3SISION", HandActionType.WINS, 0.30m, 0)
+                };
+
+            TestParseActions("Straddle", expectedActions);
+        }
+
+        [Test]
         public void Posting_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()

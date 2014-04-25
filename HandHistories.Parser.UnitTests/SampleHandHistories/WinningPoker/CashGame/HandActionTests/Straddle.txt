@@ -1,0 +1,46 @@
+﻿Game started at: 2014/3/25 20:35:20
+Game ID: 266899075 0.10/0.25 Cristalite (JP) - CAP - 6-Max (Hold'em)
+Seat 5 is the button
+Seat 1: rds44sdr (3.02).
+Seat 2: D3SISION (28.17).
+Seat 3: ButtonSmasher (0.83).
+Seat 4: Cellar door (17.69).
+Seat 5: bbone (7.92).
+Seat 6: L6U11C2K1Y3 (4.46).
+Player L6U11C2K1Y3 has small blind (0.10)
+Player rds44sdr has big blind (0.25)
+Player D3SISION straddle (0.50)
+Player L6U11C2K1Y3 received a card.
+Player L6U11C2K1Y3 received a card.
+Player rds44sdr received a card.
+Player rds44sdr received a card.
+Player D3SISION received a card.
+Player D3SISION received a card.
+Player ButtonSmasher received a card.
+Player ButtonSmasher received a card.
+Player Cellar door received a card.
+Player Cellar door received a card.
+Player bbone received a card.
+Player bbone received a card.
+Player ButtonSmasher folds
+Player Cellar door folds
+Player bbone folds
+Player L6U11C2K1Y3 folds
+Player rds44sdr calls (0.25)
+Player D3SISION checks
+*** FLOP ***: [3d 9d 6c]
+Player rds44sdr checks
+Player D3SISION bets (0.50)
+Player rds44sdr folds
+Uncalled bet (0.50) returned to D3SISION
+Player D3SISION mucks cards
+------ Summary ------
+Pot: 0.80. Rake 0.05
+Board: [3d 9d 6c]
+Player rds44sdr does not show cards.Bets: 0.50. Collects: 0. Loses: 0.50.
+*Player D3SISION mucks (does not show cards). Bets: 0.50. Collects: 0.80. Wins: 0.30.
+Player ButtonSmasher does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Cellar door does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player bbone does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player L6U11C2K1Y3 does not show cards.Bets: 0.10. Collects: 0. Loses: 0.10.
+Game ended at: 2014/3/25 20:36:3

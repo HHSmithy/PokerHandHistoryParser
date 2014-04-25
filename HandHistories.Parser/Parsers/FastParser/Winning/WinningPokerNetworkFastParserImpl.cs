@@ -160,12 +160,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Parsing Fixed Actions
             if (PlayerWithSpaces)
             {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
                 ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
             }
             else
             {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseSmallBlind(handLines[ActionsStart++]));
                 ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlind(handLines[ActionsStart++]));
@@ -271,6 +273,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         {
             for (int i = ActionsStart; i < handLines.Length; i++)
             {
+                const int PlayerNameStartindex = 7;//"Player ".Length
                 string actionLine = handLines[i];
                 //Player bubblebubble wait BB
                 if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
@@ -278,10 +281,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     return i;
                 }
 
-                const int PlayerNameStartindex = 7;
                 int playerNameEndIndex = actionLine.IndexOf(" posts (");
-                string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+                if (playerNameEndIndex == -1)
+                {
+                    playerNameEndIndex = actionLine.IndexOf(" straddle (");
+                }
 
+                string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
                 decimal Amount = ParseActionAmount(actionLine);
 
                 string actionLine2 = handLines[++i];
@@ -303,7 +309,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 //Player TheKunttzz posts (0.50)
                 //or
                 //Player TheKunttzz posts (0.50)
-                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount , Street.Preflop, actionNumber++));
+                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
             }
             throw new Exception("Did not find start of Dealing of cards");
         }
@@ -387,10 +393,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = ActionsStart; i < handLines.Length; i++)
             {
                 //Player LadyStack received a card.
-                int length = handLines[i].Length;
-                if (handLines[i][length - 1] != '.')
+                string Line = handLines[i];
+                switch (handLines[i][Line.Length - 1])
                 {
-                    return i;
+                    case 'B':
+                    case '.':
+                        continue;
+                    default:
+                        return i;
                 }
             }
             throw new ArgumentOutOfRangeException("handlines");

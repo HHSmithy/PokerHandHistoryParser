@@ -1264,6 +1264,9 @@
     <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\PostingDead.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\Straddle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\StrangePlayerNames.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
