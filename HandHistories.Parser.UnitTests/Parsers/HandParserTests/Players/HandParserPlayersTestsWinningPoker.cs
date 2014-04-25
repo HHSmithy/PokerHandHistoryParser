@@ -47,8 +47,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         protected override PlayerList ExpectedWithSittingOutPlayers
         {
             get {
-                Assert.Ignore("Hand Actions not implemented");
-                throw new NotImplementedException(); 
+                return new PlayerList()
+                {
+                    new Player("Ra1syDa1sy", 182.22m, 1),
+                    new Player("sweetdough", 738.20m, 2),
+                    new Player("NoahSDsDad", 427.75m, 3),
+                    new Player("xx45809", 445.54m, 4)
+                    {
+                        IsSittingOut = true
+                    },
+                    new Player("megadouche", 397.56m, 5)
+                    {
+                        IsSittingOut = true
+                    },
+                    new Player("KiWiKaKi", 844.29m, 6),
+                };
             }
         }
 

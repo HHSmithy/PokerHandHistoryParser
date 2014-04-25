@@ -33,6 +33,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             _siteName = Objects.GameDescription.SiteName.WinningPoker;
         }
 
+        private static readonly Regex HandSplitRegex = new Regex("Game started at: ", RegexOptions.Compiled);
+
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            return HandSplitRegex.Split(rawHandHistories)
+                            .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
+                            .Select(s => "Game started at: " + s.Trim('\r', '\n'));
+        }
+
         protected override int ParseDealerPosition(string[] handLines)
         {
             //Seat 1 is the button
@@ -385,16 +394,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Seat 4 is the button
             //Seat 1: xx59704 (159.21).
             //Seat 4: Xavier2500 (110.40).
+            //...
+            //Player NoahSDsDad has small blind (2)
+            //Player xx45809 sitting out
+            //Player megadouche sitting out
+            //...
             PlayerList playerList = new PlayerList();
+            int CurrentLineIndex = 3;
 
-            for (int i = 3; i < handLines.Length; i++)
+            //The first line after the player list always starts with "Player "
+            while (handLines[CurrentLineIndex][0] == 'S')
             {
-                string playerLine = handLines[i];
-                //The first line after the player list always starts with "player "
-                if (playerLine[0] != 'S')
-                {
-                    break;
-                }
+                string playerLine = handLines[CurrentLineIndex++];
 
                 const int seatNumberStart = 5;
                 int colonIndex = playerLine.IndexOf(':', seatNumberStart + 1);
@@ -411,6 +422,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string stack = playerLine.Substring(stackSizeStartIndex, stackSizeEndIndex - stackSizeStartIndex);
                 //string playerName = playerLine.Substring(NameStartIndex, stackSizeStartIndex - NameStartIndex - 2);
                 playerList.Add(new Player(playerName, decimal.Parse(stack, System.Globalization.CultureInfo.InvariantCulture), SeatNumber));
+            }
+
+            CurrentLineIndex++;
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                string sitOutLine = handLines[CurrentLineIndex + i];
+                if (sitOutLine.EndsWith(")"))
+                {
+                    break;
+                }
+                const int NameStartIndex = 7;
+                int NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
+                string playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                playerList[playerName].IsSittingOut = true;
             }
 
             //Expected End
