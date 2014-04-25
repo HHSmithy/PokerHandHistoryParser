@@ -161,14 +161,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             if (PlayerWithSpaces)
             {
                 actions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
             }
             else
             {
                 actions.Add(ParseSmallBlind(handLines[ActionsStart++]));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlind(handLines[ActionsStart++]));
             }
-            
+
+            ActionsStart = ParsePosts(handLines, actions, ActionsStart, ref actionNumber);
+
             //Skipping all "received a card."
             ActionsStart = SkipDealer(handLines, ActionsStart);
 
@@ -218,6 +222,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         case 'm':
                             //Player PersnicketyBeagle mucks cards
                             break;
+                        case 'i':
+                            //Player ECU7184 is timed out.
+                            break;
                         default:
                             throw new NotImplementedException("HandActionType: " + actionLine);
                     }
@@ -258,6 +265,58 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
             }
             return actions;
+        }
+
+        private int ParsePosts(string[] handLines, List<HandAction> actions, int ActionsStart, ref int actionNumber)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                string actionLine = handLines[i];
+                if (actionLine.EndsWith("."))
+                {
+                    return i;
+                }
+
+                const int PlayerNameStartindex = 7;
+                int playerNameEndIndex = actionLine.IndexOf(" posts (");
+                string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+
+                decimal Amount = ParseActionAmount(actionLine);
+
+                string actionLine2 = handLines[++i];
+                if (actionLine2.EndsWith("."))
+                {
+                    actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
+                    return i;
+                }
+
+                playerNameEndIndex = actionLine2.IndexOf(" posts (");
+                string playerName2 = actionLine2.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+
+                if (playerName2 == playerName)
+                {
+                    Amount += ParseActionAmount(actionLine2);
+                }
+                //Player TheKunttzz posts (0.25) as a dead bet
+                //Player TheKunttzz posts (0.50)
+                //or
+                //Player TheKunttzz posts (0.50)
+                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount , Street.Preflop, actionNumber++));
+            }
+            throw new Exception("Did not find start of Dealing of cards");
+        }
+
+        private int SkipSitOutLines(string[] handLines, int ActionsStart)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[line.Length - 1] == ')')
+                {
+                    return i;
+                }
+            }
+            throw new Exception("Did not find end of Sitout Lines");
         }
 
         private static Street ParseNextStreet(string actionLine)
@@ -493,7 +552,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 const int firstSquareBracketEnd = 8;
                 int lastSquareBracket = line.Length - 1;
 
-                return BoardCards.FromCards(line.Substring(firstSquareBracketEnd, lastSquareBracket - firstSquareBracketEnd));
+                return BoardCards.FromCards(line.Substring(firstSquareBracketEnd, lastSquareBracket - firstSquareBracketEnd).Replace("10", "T"));
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
