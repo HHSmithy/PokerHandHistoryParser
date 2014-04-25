@@ -158,6 +158,8 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
 
         public abstract bool IsValidHand(string handText);
 
+        public abstract bool IsValidOrCancelledHand(string handText, out bool isCancelled);
+
         public long ParseHandId(string handText)
         {
             try
@@ -259,7 +261,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
                 
                 throw new UnrecognizedGameTypeException(handText, "Game type not recognized: " + gameType);
             }
-            catch (Exception exception)
+            catch
             {
                 throw;
             }     
@@ -382,7 +384,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
 
                 return players;
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }

@@ -211,6 +211,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             return (isWinamax && hasBlindsPosted && hasSummary);
         }
 
+        public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
+        {
+            isCancelled = false;
+            return IsValidHand(handLines);
+        }
+
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             int startOfActionsIndex = -1;
@@ -327,7 +333,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                     var amountStartIndex = handLine.LastIndexOf(" ", StringComparison.Ordinal);
 
-                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 2));
+                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 2), CultureInfo.InvariantCulture);
                    
                     if(smallBlindIndex > -1)
                     {

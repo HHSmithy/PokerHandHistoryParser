@@ -16,7 +16,7 @@ namespace HandHistories.Objects.Cards
         {
             Cards = cards.ToList();
 
-            if (Cards.Select(c => c.CardIntValue).Distinct().Count() != cards.Length)
+            if (Cards.Distinct().Count() != cards.Length)
             {
                 throw new ArgumentException("Hole cards must be unique cards.");
             }
@@ -29,14 +29,16 @@ namespace HandHistories.Objects.Cards
                 return new Card[] {};
             }
 
-            cards = cards.Replace(" ", ""); // strip white space
-            cards = cards.Replace(",", ""); // strip commas
-
-            List<Card> cardsList = new List<Card>();
-            for (int i = 0; i < cards.Length; i += 2)
+            List<Card> cardsList = new List<Card>(2);
+            for (int i = 0; i < cards.Length; i++)
             {
-                cardsList.Add(Card.Parse(cards.Substring(i, 2)));
+                if (cards[i] == ' ' || cards[i] == ',')
+                {
+                    continue;
+                }
+                cardsList.Add(new Card(cards[i++], cards[i]));
             }
+
             return cardsList.ToArray();
         }        
 

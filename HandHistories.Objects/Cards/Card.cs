@@ -3,14 +3,118 @@ using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
+    //When Card is a struct it only allocates 1 byte on the stack instead of 4 Reference bytes and two strings on the heap
+    //Combined with lookup tables and using enums we get a 20x speedup of parsing cards
     [DataContract]
-    public class Card
+    public partial struct Card
     {
+        const int SuitCardMask = 0xF0;
+        const int RankCardMask = 0x0F;
+
+        #region Properties
+        private SuitEnum suit
+        {
+            get
+            {
+                return (SuitEnum)((int)_card & SuitCardMask);
+            }
+        }
+
+        private CardValueEnum rank
+        {
+            get
+            {
+                return (CardValueEnum)((int)_card & RankCardMask);
+            }
+        }
+
+        public string Rank
+        {
+            get
+            {
+                int rank = (int)_card & RankCardMask;
+                return ((CardValueEnum)rank).ToString().Substring(1);
+            }
+        }
+
+        public int RankNumericValue
+        {
+            get
+            {
+                return (int)_card & RankCardMask;
+            }
+        }
+
+        public string Suit
+        {
+            get
+            {
+                int suit = (int)_card & SuitCardMask;
+                return ((SuitEnum)suit).ToString().Remove(1).ToLower();
+            }
+        }
+
+        public string CardStringValue
+        {
+            get { return _card.ToString().Substring(1); }
+        }
+
+        public bool isEmpty
+        {
+            get
+            {
+                return _card == CardEnum.Unknown;
+            }
+        }
+        #endregion
+
         [DataMember]
-        private readonly string _rank;
-        
-        [DataMember]
-        private readonly string _suit;
+        private CardEnum _card;
+
+        #region Constructors
+        public Card(char rank, char suit)
+        {
+            CardValueEnum _rank = rankParseLookup[rank];
+
+            SuitEnum _suit = suitParseLookup[suit];
+
+            _card = (CardEnum)((int)_suit + (int)_rank);
+            if (_suit == SuitEnum.Unknown || _rank == CardValueEnum.Unknown)
+            {
+                throw new ArgumentException("Hand is not correctly formatted. Value: " + rank + " Suit: " + suit);
+            }
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="rank">Rank should be 2-9,T,J,Q,K,A.</param>
+        /// <param name="suit">Suit should be c,d,h,s.</param>
+        public Card(string rank, string suit) : this(rank[0], suit[0])
+        {
+        }
+
+        private Card(SuitEnum suit, CardValueEnum rank)
+        {
+            _card = (CardEnum)((int)suit + (int)rank);
+        }
+        #endregion
+
+        #region Operators
+        public static bool operator ==(Card c1, Card c2)
+        {
+            return c1._card == c2._card;
+        }
+
+        public static bool operator !=(Card c1, Card c2)
+        {
+            return c1._card != c2._card;
+        }
+
+        public static explicit operator Card(string card)
+        {
+            return Card.Parse(card);
+        }
+        #endregion
 
         public static string [] PossibleRanksHighCardFirst
         {
@@ -31,245 +135,29 @@ namespace HandHistories.Objects.Cards
                            "4",
                            "3",
                            "2"
-                       };    
+                       };
             }            
         }
 
         public static Card GetCardFromIntValue(int value)
         {
+            //Sanity check
+            if (value >= 52 || value <= -1)
+            {
+                //Because card is a struct we cant return null, 
+                //however there is a property isEmpty that is true when this method fails
+                return new Card();
+            }
+
             var suit = (int) (value/13);
             var rank = value % 13;
-            string suitString = null, rankString = null;
-            switch (suit)
-            {
-                case 0:
-                    suitString = "c";
-                    break;
-                case 1:
-                    suitString = "d";
-                    break;
-                case 2:
-                    suitString = "h";
-                    break;
-                case 3:
-                    suitString = "s";
-                    break;
-                default:
-                    break;
-            }
 
-            switch (rank)
-            {
-                case 0:
-                    rankString = "2";
-                    break;
-                case 1:
-                    rankString = "3";
-                    break;
-                case 2:
-                    rankString = "4";
-                    break;
-                case 3:
-                    rankString = "5";
-                    break;
-                case 4:
-                    rankString = "6";
-                    break;
-                case 5:
-                    rankString = "7";
-                    break;
-                case 6:
-                    rankString = "8";
-                    break;
-                case 7:
-                    rankString = "9";
-                    break;
-                case 8:
-                    rankString = "T";
-                    break;
-                case 9:
-                    rankString = "J";
-                    break;
-                case 10:
-                    rankString = "Q";
-                    break;
-                case 11:
-                    rankString = "K";
-                    break;
-                case 12:
-                    rankString = "A";
-                    break;
-                default:
-                    break;
-            }
+            //suit starts at zero and SuitEnum starts at 1
+            SuitEnum suitValue = (SuitEnum)((suit + 1) << 4);
 
-            if (rankString != null && suitString != null)
-            {
-                return new Card(rankString, suitString);                
-            }
-            return null;
-        }
-
-        public Card(char rank, char suit) : this(rank.ToString(), suit.ToString()) { }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rank">Rank should be 2-9,T,J,Q,K,A.</param>
-        /// <param name="suit">Suit should be c,d,h,s.</param>
-        public Card(string rank, string suit)
-        {
-            suit = suit.ToLower();
-            rank = rank.ToUpper();
-
-            if (!IsValidSuit(suit))
-                throw new ArgumentException("Suit is not correctly formatted. Should be c, d, h or s.");
-
-            if (!IsValidRank(rank))
-                throw new ArgumentException("Rank is not correctly formatted. Should be 2-9, T, J, Q, K or A.");
-
-            _rank = rank;
-            _suit = suit;            
-        }
-
-        public String Rank
-        {
-            get { return _rank; }
-        }
-
-        public int RankNumericValue
-        {
-            get
-            {
-                return GetRankNumericValue(_rank);
-            }
-        }
-
-        public static string GetRankFromNumericValue(int rank)
-        {
-            switch (rank)
-            {
-                case 10:
-                    return "T";
-                case 11:
-                    return "J";
-                case 12:
-                    return "Q";
-                case 13:
-                    return "K";
-                case 14:
-                    return "A";
-                default:
-                    return rank.ToString();
-            }
-        }
-
-        public static int GetRankNumericValue(string rank)
-        {
-            switch (rank)
-            {
-                case "A":
-                    return 14;
-                case "K":
-                    return 13;
-                case "Q":
-                    return 12;
-                case "J":
-                    return 11;
-                case "T":
-                    return 10;
-                default:
-                    return Int32.Parse(rank);
-            }
-        }
-
-        public String Suit
-        {
-            get { return _suit; }
-        }
-
-        public String CardStringValue
-        {
-            get  { return _rank + _suit; }
-        }       
-       
-        /// <summary>
-        /// 2c = 0, 3c = 1, ..., Ac = 12, ..., As = 51. Returns -1 if there was an error with the rank or suit values.
-        /// </summary>
-        public int CardIntValue
-        {
-            get
-            {
-                int rankValue;
-
-                switch (_rank)
-                {
-                    case "2":
-                        rankValue = 1;
-                        break;
-                    case "3":
-                        rankValue = 2;
-                        break;
-                    case "4":
-                        rankValue = 3;
-                        break;
-                    case "5":
-                        rankValue = 4;
-                        break;
-                    case "6":
-                        rankValue = 5;
-                        break;
-                    case "7":
-                        rankValue = 6;
-                        break;
-                    case "8":
-                        rankValue = 7;
-                        break;
-                    case "9":
-                        rankValue = 8;
-                        break;
-                    case "T":
-                        rankValue = 9;
-                        break;
-                    case "J":
-                        rankValue = 10;
-                        break;
-                    case "Q":
-                        rankValue = 11;
-                        break;
-                    case "K":
-                        rankValue = 12;
-                        break;
-                    case "A":
-                        rankValue = 13;
-                        break;
-                    default:
-                        return -1;
-                }
-
-                int suitValue;
-
-                switch (_suit)
-                {
-                    case "c":
-                        suitValue = 0;
-                        break;
-                    case "d":
-                        suitValue = 1;
-                        break;
-                    case "h":
-                        suitValue = 2;
-                        break;
-                    case "s":
-                        suitValue = 3;
-                        break;
-                    default:
-                        return -1;
-                }
-
-                // note minus 1 is so we can index by 0
-                return (suitValue*13) + rankValue - 1;
-            }
+            //rank starts at zero and CardValueEnum starts at 2
+            CardValueEnum rankValue = (CardValueEnum)rank + 2;
+            return new Card(suitValue, rankValue);                
         }
 
         public static Card Parse(string card)
@@ -279,34 +167,20 @@ namespace HandHistories.Objects.Cards
 
             return new Card(card[0], card[1]);
         }
-        
-        private static bool IsValidRank(string rank)
+       
+        /// <summary>
+        /// 2c = 0, 3c = 1, ..., Ac = 12, ..., As = 51. Returns -1 if there was an error with the rank or suit values.
+        /// </summary>
+        public int CardIntValue
         {
-            rank = rank.ToUpper();
+            get
+            {
+                int rankValue = (int)rank;
+                int suitValue = ((int)suit >> 4) - 1;
 
-            return (rank.Equals("2") ||
-                    rank.Equals("3") ||
-                    rank.Equals("4") ||
-                    rank.Equals("5") ||
-                    rank.Equals("6") ||
-                    rank.Equals("7") ||
-                    rank.Equals("8") ||
-                    rank.Equals("9") ||
-                    rank.Equals("T") ||
-                    rank.Equals("J") ||
-                    rank.Equals("Q") ||
-                    rank.Equals("K") ||
-                    rank.Equals("A"));
-        }
-
-        private static bool IsValidSuit(string suit)
-        {
-            suit = suit.ToLower();
-
-            return (suit.Equals("c") || 
-                    suit.Equals("d") || 
-                    suit.Equals("h") || 
-                    suit.Equals("s"));
+                // note minus 1 is so we can index by 0
+                return (suitValue*13) + rankValue - 2;
+            }
         }
 
         public static string GetMaximumRank(string rank1, string rank2)
@@ -317,6 +191,11 @@ namespace HandHistories.Objects.Cards
         public static string GetMinimumRank(string rank1, string rank2)
         {
             return GetRankNumericValue(rank1) < GetRankNumericValue(rank2) ? rank1 : rank2;
+        }
+
+        public static int GetRankNumericValue(string rank1)
+        {
+            return (int)rankParseLookup[rank1[0]];
         }
 
         public override string ToString()
@@ -336,7 +215,7 @@ namespace HandHistories.Objects.Cards
 
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            return _card.GetHashCode();
         }
     }
 }

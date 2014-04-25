@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandHistories.Parser", "HandHistories.Parser\HandHistories.Parser.csproj", "{0F131DB6-4891-4A24-A529-87F4816B9923}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandHistories.Parser.UnitTests", "HandHistories.Parser.UnitTests\HandHistories.Parser.UnitTests.csproj", "{D9E3BA37-E416-48E9-964A-590C236BDA4A}"

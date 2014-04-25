@@ -45,7 +45,7 @@ namespace HandHistories.Objects.GameDescription
                     return GameType.NoLimitOmahaHiLo;     
                 default:
                     string match = Enum.GetNames(typeof(GameType)).FirstOrDefault(g => g.ToLower().Equals(gameString.ToLower()));
-                    return match == null ? GameType.Unknown : (GameType)Enum.Parse(typeof(GameType), match);
+                    return match == null ? GameType.Unknown : (GameType)Enum.Parse(typeof(GameType), match,true);
             }
         }
        

@@ -1,0 +1,36 @@
+﻿PokerStars Game #109706737260:  Hold'em No Limit ($0.50/$1.00 - $20 Cap -  USD) - 2014/01/06 16:00:56 ET
+Table 'Antiphos IV CAP,20-50 bb' 6-max Seat #1 is the button
+Seat 1: jammyd0dger7 ($20 in chips) 
+Seat 2: ekologe ($48.75 in chips) 
+Seat 3: PANTER555 ($18.74 in chips) 
+Seat 4: KASSIR8485 ($30.93 in chips) 
+Seat 5: GuOlIg ($20 in chips) 
+Seat 6: martin070 ($60.22 in chips) 
+ekologe: posts small blind $0.50
+PANTER555: posts big blind $1
+*** HOLE CARDS ***
+KASSIR8485: calls $1
+GuOlIg: folds 
+martin070: calls $1
+jammyd0dger7: folds 
+ekologe: raises $19 to $20 and has reached the $20 cap
+PANTER555: calls $17.74 and is all-in
+KASSIR8485: folds 
+martin070: folds 
+Uncalled bet ($1.26) returned to ekologe
+*** FLOP *** [Qd 3s 9c]
+*** TURN *** [Qd 3s 9c] [9s]
+*** RIVER *** [Qd 3s 9c 9s] [As]
+*** SHOW DOWN ***
+ekologe: shows [Ad Kd] (two pair, Aces and Nines)
+PANTER555: shows [Jd Ah] (two pair, Aces and Nines - lower kicker)
+ekologe collected $37.70 from pot
+*** SUMMARY ***
+Total pot $39.48 | Rake $1.78 
+Board [Qd 3s 9c 9s As]
+Seat 1: jammyd0dger7 (button) folded before Flop (didn't bet)
+Seat 2: ekologe (small blind) showed [Ad Kd] and won ($37.70) with two pair, Aces and Nines
+Seat 3: PANTER555 (big blind) showed [Jd Ah] and lost with two pair, Aces and Nines
+Seat 4: KASSIR8485 folded before Flop
+Seat 5: GuOlIg folded before Flop (didn't bet)
+Seat 6: martin070 folded before Flop
