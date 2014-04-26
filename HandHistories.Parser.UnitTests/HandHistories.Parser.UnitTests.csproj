@@ -1258,6 +1258,15 @@
     <Content Include="SampleHandHistories\WinningPoker\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\Post.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\PostingDead.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\Straddle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\StrangePlayerNames.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1280,6 +1289,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\OmahaShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\WaitingBB.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\WithShowdown.txt">

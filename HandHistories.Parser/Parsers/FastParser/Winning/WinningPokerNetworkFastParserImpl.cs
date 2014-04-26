@@ -33,6 +33,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             _siteName = Objects.GameDescription.SiteName.WinningPoker;
         }
 
+        private static readonly Regex HandSplitRegex = new Regex("Game started at: ", RegexOptions.Compiled);
+
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            return HandSplitRegex.Split(rawHandHistories)
+                            .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
+                            .Select(s => "Game started at: " + s.Trim('\r', '\n'));
+        }
+
         protected override int ParseDealerPosition(string[] handLines)
         {
             //Seat 1 is the button
@@ -151,15 +160,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Parsing Fixed Actions
             if (PlayerWithSpaces)
             {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
             }
             else
             {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseSmallBlind(handLines[ActionsStart++]));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
                 actions.Add(ParseBigBlind(handLines[ActionsStart++]));
             }
-            
+
+            ActionsStart = ParsePosts(handLines, actions, ActionsStart, ref actionNumber);
+
             //Skipping all "received a card."
             ActionsStart = SkipDealer(handLines, ActionsStart);
 
@@ -209,6 +224,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         case 'm':
                             //Player PersnicketyBeagle mucks cards
                             break;
+                        case 'i':
+                            //Player ECU7184 is timed out.
+                            break;
                         default:
                             throw new NotImplementedException("HandActionType: " + actionLine);
                     }
@@ -249,6 +267,64 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
             }
             return actions;
+        }
+
+        private int ParsePosts(string[] handLines, List<HandAction> actions, int ActionsStart, ref int actionNumber)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                const int PlayerNameStartindex = 7;//"Player ".Length
+                string actionLine = handLines[i];
+                //Player bubblebubble wait BB
+                if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
+                {
+                    return i;
+                }
+
+                int playerNameEndIndex = actionLine.IndexOf(" posts (");
+                if (playerNameEndIndex == -1)
+                {
+                    playerNameEndIndex = actionLine.IndexOf(" straddle (");
+                }
+
+                string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+                decimal Amount = ParseActionAmount(actionLine);
+
+                string actionLine2 = handLines[++i];
+                //Player bubblebubble wait BB
+                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B"))
+                {
+                    actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
+                    return i;
+                }
+
+                playerNameEndIndex = actionLine2.IndexOf(" posts (");
+                string playerName2 = actionLine2.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+
+                if (playerName2 == playerName)
+                {
+                    Amount += ParseActionAmount(actionLine2);
+                }
+                //Player TheKunttzz posts (0.25) as a dead bet
+                //Player TheKunttzz posts (0.50)
+                //or
+                //Player TheKunttzz posts (0.50)
+                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
+            }
+            throw new Exception("Did not find start of Dealing of cards");
+        }
+
+        private int SkipSitOutLines(string[] handLines, int ActionsStart)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[line.Length - 1] == ')')
+                {
+                    return i;
+                }
+            }
+            throw new Exception("Did not find end of Sitout Lines");
         }
 
         private static Street ParseNextStreet(string actionLine)
@@ -317,10 +393,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = ActionsStart; i < handLines.Length; i++)
             {
                 //Player LadyStack received a card.
-                int length = handLines[i].Length;
-                if (handLines[i][length - 1] != '.')
+                string Line = handLines[i];
+                switch (handLines[i][Line.Length - 1])
                 {
-                    return i;
+                    case 'B':
+                    case '.':
+                        continue;
+                    default:
+                        return i;
                 }
             }
             throw new ArgumentOutOfRangeException("handlines");
@@ -385,16 +465,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Seat 4 is the button
             //Seat 1: xx59704 (159.21).
             //Seat 4: Xavier2500 (110.40).
+            //...
             PlayerList playerList = new PlayerList();
+            int CurrentLineIndex = 3;
 
-            for (int i = 3; i < handLines.Length; i++)
+            //The first line after the player list always starts with "Player "
+            while (handLines[CurrentLineIndex][0] == 'S')
             {
-                string playerLine = handLines[i];
-                //The first line after the player list always starts with "player "
-                if (playerLine[0] != 'S')
-                {
-                    break;
-                }
+                string playerLine = handLines[CurrentLineIndex++];
 
                 const int seatNumberStart = 5;
                 int colonIndex = playerLine.IndexOf(':', seatNumberStart + 1);
@@ -411,6 +489,58 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string stack = playerLine.Substring(stackSizeStartIndex, stackSizeEndIndex - stackSizeStartIndex);
                 //string playerName = playerLine.Substring(NameStartIndex, stackSizeStartIndex - NameStartIndex - 2);
                 playerList.Add(new Player(playerName, decimal.Parse(stack, System.Globalization.CultureInfo.InvariantCulture), SeatNumber));
+            }
+
+            //...
+            //Player NoahSDsDad has small blind (2)
+            //Player xx45809 sitting out
+            //Player megadouche sitting out
+            //Player xx59704 wait BB
+            CurrentLineIndex++;
+            for (int i = 0; i < handLines.Length; i++)
+            {
+                const int NameStartIndex = 7;
+                string sitOutLine = handLines[CurrentLineIndex + i];
+
+                bool receivingCards = false;
+                int NameEndIndex;
+                string playerName;
+                switch (sitOutLine[sitOutLine.Length - 1])
+                {
+                    case '.':
+                        //Player bubblebubble is timed out.
+                        if (sitOutLine[sitOutLine.Length - 2] == 't')
+                        {
+                            continue;
+                        }
+                        receivingCards = true;
+                        break;
+                    case ')':
+                        continue;
+                    case 'B':
+                        //Player bubblebubble wait BB
+                        NameEndIndex = sitOutLine.Length - 8;//" wait BB".Length
+                        playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                        playerList[playerName].IsSittingOut = true;
+                        break;
+                    case 't':
+                        //Player xx45809 sitting out
+                        if (sitOutLine[sitOutLine.Length - 2] == 'u')
+                        {
+                            NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
+                            playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                            playerList[playerName].IsSittingOut = true;
+                            break;
+                        }
+                        //Player TheKunttzz posts (0.25) as a dead bet
+                        else continue;
+                    default:
+                        throw new ArgumentException("Unhandled Line: " + sitOutLine);
+                }
+                if (receivingCards)
+                {
+                    break;
+                }
             }
 
             //Expected End
@@ -468,7 +598,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 const int firstSquareBracketEnd = 8;
                 int lastSquareBracket = line.Length - 1;
 
-                return BoardCards.FromCards(line.Substring(firstSquareBracketEnd, lastSquareBracket - firstSquareBracketEnd));
+                return BoardCards.FromCards(line.Substring(firstSquareBracketEnd, lastSquareBracket - firstSquareBracketEnd).Replace("10", "T"));
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
