@@ -507,6 +507,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string playerName;
                 switch (sitOutLine[sitOutLine.Length - 1])
                 {
+                    //Player bubblebubble received card: [2h]
+                    case ']':
+                        //TODO: Parse cards here
+                        break;
                     case '.':
                         //Player bubblebubble is timed out.
                         if (sitOutLine[sitOutLine.Length - 2] == 't')
@@ -565,9 +569,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     int pocketStartIndex = summaryLine.IndexOf('[', playerNameEndIndex) + 1;
                     int pocketEndIndex = summaryLine.IndexOf(']', pocketStartIndex);
 
-                    string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
-                    cards = cards.Replace("10", "T");
-                    playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    Player showdownPlayer = playerList[playerName];
+                    if (!showdownPlayer.hasHoleCards)
+                    {
+                         string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
+                        cards = cards.Replace("10", "T");
+                        showdownPlayer.HoleCards = HoleCards.FromCards(cards);
+                    }
+                   
                 }
             }
 
