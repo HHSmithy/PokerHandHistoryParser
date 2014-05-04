@@ -276,7 +276,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 const int PlayerNameStartindex = 7;//"Player ".Length
                 string actionLine = handLines[i];
                 //Player bubblebubble wait BB
-                if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
+                char endChar = actionLine[actionLine.Length - 1];
+                if (endChar == '.' || endChar == 'B' || endChar == ']')
                 {
                     return i;
                 }
@@ -292,7 +293,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                 string actionLine2 = handLines[++i];
                 //Player bubblebubble wait BB
-                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B"))
+                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B") || actionLine2.EndsWith("]"))
                 {
                     actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
                     return i;
@@ -398,6 +399,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     case 'B':
                     case '.':
+                    case ']'://Player {playername} received card: [2h]
                         continue;
                     default:
                         return i;
