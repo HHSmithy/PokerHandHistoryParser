@@ -95,6 +95,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     return GameType.NoLimitHoldem;
                 case "(Omaha)":
                     return GameType.PotLimitOmaha;
+                case "(Omaha HiLow)":
+                    return GameType.PotLimitOmahaHiLo;
                 default:
                     throw new NotImplementedException("GameType: " + game);
             }

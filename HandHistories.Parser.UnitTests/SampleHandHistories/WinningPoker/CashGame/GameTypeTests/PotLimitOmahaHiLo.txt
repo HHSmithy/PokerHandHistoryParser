@@ -1,0 +1,39 @@
+﻿Game started at: 2014/3/28 19:46:23
+Game ID: 267848899 2/4 Brushite Hi/Lo (Short) (Omaha HiLow)
+Seat 1 is the button
+Seat 1: HazeKnows (275.70).
+Seat 4: putter49 (160.32).
+Seat 7: KenyanTrackStar (1102.50).
+Seat 9: stoned lion (218.35).
+Player putter49 has small blind (2)
+Player KenyanTrackStar has big blind (4)
+Player putter49 received a card.
+Player putter49 received a card.
+Player putter49 received a card.
+Player putter49 received a card.
+Player KenyanTrackStar received a card.
+Player KenyanTrackStar received a card.
+Player KenyanTrackStar received a card.
+Player KenyanTrackStar received a card.
+Player stoned lion received a card.
+Player stoned lion received a card.
+Player stoned lion received a card.
+Player stoned lion received a card.
+Player HazeKnows received a card.
+Player HazeKnows received a card.
+Player HazeKnows received a card.
+Player HazeKnows received a card.
+Player stoned lion folds
+Player HazeKnows folds
+Player putter49 raises (6)
+Player KenyanTrackStar folds
+Uncalled bet (4) returned to putter49
+Player putter49 is timed out.
+Player putter49 mucks cards
+------ Summary ------
+Pot: 8. Rake 0
+Player HazeKnows does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player putter49 mucks (does not show cards). Bets: 4. Collects: 8. Wins: 4.
+Player KenyanTrackStar does not show cards.Bets: 4. Collects: 0. Loses: 4.
+Player stoned lion does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/28 19:46:45
