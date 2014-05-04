@@ -535,6 +535,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         {
                             NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
                             playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                            if (playerName == "")//"Player  sitting out"
+                            {
+                                continue;
+                            }
                             playerList[playerName].IsSittingOut = true;
                             break;
                         }

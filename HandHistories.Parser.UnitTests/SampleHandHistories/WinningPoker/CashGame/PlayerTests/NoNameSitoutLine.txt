@@ -1,0 +1,32 @@
+﻿Game started at: 2014/3/15 21:46:0
+Game ID: 263627777 2/4 Barstowite   (Short, JP) - 2 (Hold'em)
+Seat 3 is the button
+Seat 2: Hunt3rGath3r3r (210).
+Seat 3: Leatherass9 (273.82).
+Seat 4: AintNoLimit (202).
+Seat 5: LowardHederer (218).
+Seat 1: Xavier2500 (266.52).
+Player AintNoLimit has small blind (2)
+Player LowardHederer sitting out
+Player  is timed out.
+Player  sitting out
+Player Hunt3rGath3r3r has big blind (4)
+Player AintNoLimit received a card.
+Player AintNoLimit received a card.
+Player Hunt3rGath3r3r received a card.
+Player Hunt3rGath3r3r received a card.
+Player Leatherass9 received a card.
+Player Leatherass9 received a card.
+Player Leatherass9 raises (8)
+Player AintNoLimit folds
+Player Hunt3rGath3r3r folds
+Uncalled bet (4) returned to Leatherass9
+Player Leatherass9 mucks cards
+------ Summary ------
+Pot: 10. Rake 0
+Player Hunt3rGath3r3r does not show cards.Bets: 4. Collects: 0. Loses: 4.
+*Player Leatherass9 mucks (does not show cards). Bets: 4. Collects: 10. Wins: 6.
+Player AintNoLimit does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Player LowardHederer does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player  does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/15 21:46:16
