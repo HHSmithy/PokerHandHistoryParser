@@ -95,6 +95,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     return GameType.NoLimitHoldem;
                 case "(Omaha)":
                     return GameType.PotLimitOmaha;
+                case "(Omaha HiLow)":
+                    return GameType.PotLimitOmahaHiLo;
                 default:
                     throw new NotImplementedException("GameType: " + game);
             }
@@ -276,7 +278,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 const int PlayerNameStartindex = 7;//"Player ".Length
                 string actionLine = handLines[i];
                 //Player bubblebubble wait BB
-                if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
+                char endChar = actionLine[actionLine.Length - 1];
+                if (endChar == '.' || endChar == 'B' || endChar == ']')
                 {
                     return i;
                 }
@@ -292,7 +295,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                 string actionLine2 = handLines[++i];
                 //Player bubblebubble wait BB
-                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B"))
+                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B") || actionLine2.EndsWith("]"))
                 {
                     actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
                     return i;
@@ -398,6 +401,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     case 'B':
                     case '.':
+                    case ']'://Player {playername} received card: [2h]
                         continue;
                     default:
                         return i;
@@ -507,6 +511,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string playerName;
                 switch (sitOutLine[sitOutLine.Length - 1])
                 {
+                    //Player bubblebubble received card: [2h]
+                    case ']':
+                        //TODO: Parse cards here
+                        break;
                     case '.':
                         //Player bubblebubble is timed out.
                         if (sitOutLine[sitOutLine.Length - 2] == 't')
@@ -529,6 +537,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         {
                             NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
                             playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                            if (playerName == "")//"Player  sitting out"
+                            {
+                                continue;
+                            }
                             playerList[playerName].IsSittingOut = true;
                             break;
                         }
@@ -565,9 +577,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     int pocketStartIndex = summaryLine.IndexOf('[', playerNameEndIndex) + 1;
                     int pocketEndIndex = summaryLine.IndexOf(']', pocketStartIndex);
 
-                    string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
-                    cards = cards.Replace("10", "T");
-                    playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    Player showdownPlayer = playerList[playerName];
+                    if (!showdownPlayer.hasHoleCards)
+                    {
+                         string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
+                        cards = cards.Replace("10", "T");
+                        showdownPlayer.HoleCards = HoleCards.FromCards(cards);
+                    }
+                   
                 }
             }
 

@@ -168,9 +168,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.Winamax:
                     Assert.Ignore(Site + " currently doesn't have Pot Limit Omaha HiLo example.");
                     break;
-                case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
-                    return;
             }
 
             TestGameType(GameType.PotLimitOmahaHiLo);
