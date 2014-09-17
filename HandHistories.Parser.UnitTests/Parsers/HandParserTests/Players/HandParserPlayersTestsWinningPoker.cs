@@ -14,6 +14,27 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
+        public void ParsePlayers_EmptySitOut()
+        {
+            //Player LowardHederer sitting out
+            //Player  is timed out.
+            //Player  sitting out
+            //Player Hunt3rGath3r3r has big blind (4)
+            PlayerList players = new PlayerList()
+                           {
+                               new Player("Xavier2500", 266.52m, 1),
+                               new Player("Hunt3rGath3r3r", 210m, 2),
+                               new Player("Leatherass9", 273.82m, 3),
+                               new Player("AintNoLimit", 202m, 4),
+                               new Player("LowardHederer", 218m, 5)
+                               {
+                                   IsSittingOut = true
+                               },
+                           };
+            TestParsePlayers("NoNameSitoutLine", players);
+        }
+
+        [Test]
         public void ParsePlayers_WaitingBB()
         {
             //Seat 1: Garzvorgh (12.79).
