@@ -224,7 +224,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             //<tablename>Ambia, 98575671</tablename>
             string tableNameLine = GetTableNameLineFromHandLines(handLines);
             int tableNameStartIndex = tableNameLine.IndexOf('>') + 1;
-            int tableNameEndIndex = tableNameLine.LastIndexOf(", ");
+            int tableNameEndIndex = tableNameLine.LastIndexOf('<') - 1;
 
             string tableName = tableNameLine.Substring(tableNameStartIndex, tableNameEndIndex - tableNameStartIndex + 1);
 
