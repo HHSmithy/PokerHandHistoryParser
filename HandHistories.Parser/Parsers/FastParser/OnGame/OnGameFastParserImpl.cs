@@ -32,9 +32,18 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             // Line 4 is:
             //  Button: seat 8
 
-            int indexOfLastSpace = handLines[3].LastIndexOf(' ');
+            //When Hero is playing there is one extra line
+            //User: ONG_Hero
+            //Button: seat 9
+            //Players in round: 4 (6)
+            //Seat 1: Opponent1 ($200)
+            //Seat 2: ONG_Hero ($200)
 
-            return Int32.Parse(handLines[3].Substring(indexOfLastSpace + 1, handLines[3].Length - indexOfLastSpace - 1));                
+            string line = handLines[3][0] == 'U' ? handLines[4] : handLines[3];
+
+            int indexOfLastSpace = line.LastIndexOf(' ');
+
+            return Int32.Parse(line.Substring(indexOfLastSpace + 1, line.Length - indexOfLastSpace - 1));                
         }
 
         protected override DateTime ParseDateUtc(string[] handLines)
@@ -94,6 +103,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             return handLines[2].Substring(7, firstParenIndex - 8);
         }
 
+        static readonly int SeatTypeStartIndex = "Players in round: ".Length;
+
         protected override SeatType ParseSeatType(string[] handLines)
         {
             // Line 5 onward is:
@@ -102,8 +113,14 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             //  Seat 9: EvilJihnny99 ($24.73) 
             //  Seat 10: huda22 ($21.50) 
 
-            int firstColon = handLines[4].LastIndexOf(':');
-            int numPlayers = Int32.Parse(handLines[4].Substring(firstColon + 1, handLines[4].Length - firstColon - 1));
+            //When Hero is playing there is one extra line
+            //User: ONG_Hero
+            //Button: seat 9
+            //Players in round: 4 (6)
+            //Seat 1: Opponent1 ($200)
+            //Seat 2: ONG_Hero ($200)
+
+            int numPlayers = ParseNumberOfPlayers(handLines);
 
             if (numPlayers <= 2)
             {
@@ -119,6 +136,33 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             }
             
             return SeatType.FromMaxPlayers(10);            
+        }
+
+        private static bool isHeroHandhistory(string[] handLines)
+        {
+            return handLines[3][0] == 'U';
+        }
+
+        private static int ParseNumberOfPlayers(string[] handLines)
+        {
+            // Line 5 onward is:
+            //  Players in round: 3
+            //  Seat 8: Max Power s ($8.96) 
+            //  Seat 9: EvilJihnny99 ($24.73) 
+            //  Seat 10: huda22 ($21.50) 
+
+            //When Hero is playing there is one extra line
+            //User: ONG_Hero
+            //Button: seat 9
+            //Players in round: 4 (6)
+            //Seat 1: Opponent1 ($200)
+            //Seat 2: ONG_Hero ($200)
+            string line = isHeroHandhistory(handLines) ? handLines[5] : handLines[4];
+
+            int SeatTypeEndIndex = line.EndsWith(")") ? line.IndexOf('(', SeatTypeStartIndex) : line.Length;
+
+            int numPlayers = Int32.Parse(line.Substring(SeatTypeStartIndex, SeatTypeEndIndex - SeatTypeStartIndex));
+            return numPlayers;
         }
 
         protected override GameType ParseGameType(string[] handLines)
@@ -273,8 +317,10 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     }                                                            
                 }
 
+                //Dealing line may be "Dealing pocket cards"
+                //or "Dealing to {PlayerName}: [ Xy, Xy ]"
                 if (currentStreet == Street.Preflop &&
-                    handLine.Equals("Dealing pocket cards"))
+                    handLine.StartsWith("Dealing"))
                 {
                     continue;
                 }
@@ -356,19 +402,29 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 }
                 else
                 {
+                    //Old format
+                    //{playername} calls $18.00
+
+                    //New format 
+                    //{playername} calls $13
+
                     int dollarIndex = handLine.IndexOf('$');
                     if (dollarIndex == -1)
                     {
                         dollarIndex = handLine.IndexOf('€');
                     }
-                    int decimalIndex = handLine.IndexOf('.', dollarIndex + 1);
+                    int valueEndIndex = handLine.IndexOf(' ', dollarIndex + 1);
+                    if (valueEndIndex == -1)
+                    {
+                        valueEndIndex = handLine.Length;
+                    }
 
                     char actionIdentifier = handLine[dollarIndex - 3];
 
                     bool isAllIn = handLine.EndsWith("all in]");
                     
                     string playerName;
-                    decimal amount = decimal.Parse(handLine.Substring(dollarIndex + 1, decimalIndex + 2 - dollarIndex), System.Globalization.CultureInfo.InvariantCulture);
+                    decimal amount = decimal.Parse(handLine.Substring(dollarIndex + 1, valueEndIndex - dollarIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
                     switch (actionIdentifier)
                     {
                         case 'l': // calls
@@ -423,14 +479,15 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             //  Seat 9: EvilJihnny99 ($24.73) 
             //  Seat 10: huda22 ($21.50) 
 
-            int firstColon = handLines[4].LastIndexOf(':');
-            int numPlayers = Int32.Parse(handLines[4].Substring(firstColon + 1, handLines[4].Length - firstColon - 1));
+            int numPlayers = ParseNumberOfPlayers(handLines);
 
             PlayerList playerList = new PlayerList();
 
+            int StartLine = isHeroHandhistory(handLines) ? 6 : 5;
+
             for (int i = 0; i < numPlayers; i++)
             {
-                string handLine = handLines[5 + i];
+                string handLine = handLines[StartLine + i];
                 
                 int colonIndex = handLine.IndexOf(':');
                 int parenIndex = handLine.IndexOf('(');
@@ -497,6 +554,17 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             }
 
             return BoardCards.FromCards(boardCards.Replace(" ", "").Replace(",", ""));
+        }
+
+        static readonly int HeroNameStartIndex = "User: ".Length;
+        protected override string ParseHeroName(string[] handlines)
+        {
+            string line = handlines[3];
+            if (line[0] == 'U')
+            {
+                return line.Substring(HeroNameStartIndex);
+            }
+            return null;
         }
     }
 }

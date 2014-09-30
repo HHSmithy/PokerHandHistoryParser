@@ -1,0 +1,39 @@
+﻿***** History for hand R5-98754621-43 *****
+Start hand: Wed Apr 02 15:15:45 CEST 2013
+Table: Lubbock [98765421] (NO_LIMIT TEXAS_HOLDEM $1/$2, Real money)
+User: ONG_Hero
+Button: seat 9
+Players in round: 4 (6)
+Seat 1: Opponent1 ($200)
+Seat 2: ONG_Hero ($200)
+Seat 8: Opponent2 ($180.47)
+Seat 9: Opponent3 ($204.40)
+Opponent1 posts small blind ($1)
+ONG_Hero posts big blind ($2)
+---
+Dealing pocket cards
+Dealing to ONG_Hero: [8h, 3c]
+Opponent2 calls $2
+Opponent3 raises $8 to $8
+Opponent1 folds
+ONG_Hero folds
+Opponent2 calls $6
+--- Dealing flop [7c, Qh, 3d]
+Opponent2 checks
+Opponent3 bets $13
+Opponent2 calls $13
+--- Dealing turn [7d]
+Opponent2 checks
+Opponent3 checks
+--- Dealing river [4s]
+Opponent2 checks
+Opponent3 checks
+---
+Summary:
+Main pot: $45 won by Opponent2 ($43)
+Rake taken: $2
+Seat 1: Opponent1 ($199), net: -$1
+Seat 2: ONG_Hero ($198), net: -$2
+Seat 8: Opponent2 ($202.47), net: +$22, [5s, 5h] (TWO_PAIR SEVEN, FIVE)
+Seat 9: Opponent3 ($183.40), net: -$21
+***** End of hand R5-376725495-43 *****

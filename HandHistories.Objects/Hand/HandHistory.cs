@@ -30,6 +30,8 @@ namespace HandHistories.Objects.Hand
 
         public PlayerList Players { get; set; }
 
+        public Player Hero { get; set; }
+
         public int NumPlayersActive
         {
             get { return Players.Count(p => p.IsSittingOut == false); }

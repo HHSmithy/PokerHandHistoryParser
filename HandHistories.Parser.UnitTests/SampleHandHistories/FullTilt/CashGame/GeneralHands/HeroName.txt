@@ -1,0 +1,41 @@
+﻿Full Tilt Poker Game #98765421548: Table Kid (6 max) - NL Hold'em - $2/$4 - 12:52:55 CET - 2013/01/01 [12:52:55 ET - 2013/01/01]
+Seat 1: Opponent1 ($400), is sitting out
+Seat 2: FT_Hero ($400)
+Seat 3: Opponent2 ($400.00)
+Seat 4: Opponent3 ($148)
+Seat 5: Opponent4 ($400)
+Seat 6: Opponent5 ($400)
+Opponent5 posts the small blind of $2
+FT_Hero posts the big blind of $4
+The button is in seat #5
+*** HOLE CARDS ***
+Dealt to FT_Hero [Qh 5c]
+Opponent2 folds
+Opponent3 raises to $8.05
+Opponent4 folds
+Opponent5 raises to $22
+FT_Hero folds
+Opponent3 has 15 seconds left to act
+Opponent3 has requested TIME
+Opponent3 calls $13.95
+*** FLOP *** [Ks Jc 9c] (Total Pot: $48, 2 Players)
+Opponent5 checks
+Opponent3 checks
+*** TURN *** [Ks Jc 9c] [2c] (Total Pot: $48, 2 Players)
+Opponent5 bets $28.80
+Opponent3 has 15 seconds left to act
+Opponent3 has requested TIME
+Opponent3 folds
+Opponent3 adds $14
+Uncalled bet of $28.80 returned to Opponent5
+Opponent5 mucks
+Opponent5 wins the pot ($45.60)
+*** SUMMARY ***
+Total pot $48 | Rake $2.40
+Board: [Ks Jc 9c 2c]
+Seat 1: Opponent1 is sitting out
+Seat 2: FT_Hero (big blind) folded before the Flop
+Seat 3: Opponent2 didn't bet (folded)
+Seat 4: Opponent3 folded on the Turn
+Seat 5: Opponent4 (button) didn't bet (folded)
+Seat 6: Opponent5 (small blind) collected ($45.60), mucked

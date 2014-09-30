@@ -276,7 +276,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 const int PlayerNameStartindex = 7;//"Player ".Length
                 string actionLine = handLines[i];
                 //Player bubblebubble wait BB
-                if (actionLine.EndsWith(".") || actionLine.EndsWith("B"))
+                char endChar = actionLine[actionLine.Length - 1];
+                if (endChar == '.' || endChar == 'B' || endChar == ']')
                 {
                     return i;
                 }
@@ -292,7 +293,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                 string actionLine2 = handLines[++i];
                 //Player bubblebubble wait BB
-                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B"))
+                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B") || actionLine2.EndsWith("]"))
                 {
                     actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
                     return i;
@@ -398,6 +399,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     case 'B':
                     case '.':
+                    case ']'://Player {playername} received card: [2h]
                         continue;
                     default:
                         return i;
@@ -507,6 +509,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string playerName;
                 switch (sitOutLine[sitOutLine.Length - 1])
                 {
+                    //Player bubblebubble received card: [2h]
+                    case ']':
+                        //TODO: Parse cards here
+                        break;
                     case '.':
                         //Player bubblebubble is timed out.
                         if (sitOutLine[sitOutLine.Length - 2] == 't')
@@ -529,6 +535,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         {
                             NameEndIndex = sitOutLine.Length - 12;//" sitting out".Length
                             playerName = sitOutLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                            if (playerName == "")//"Player  sitting out"
+                            {
+                                continue;
+                            }
                             playerList[playerName].IsSittingOut = true;
                             break;
                         }
@@ -565,9 +575,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     int pocketStartIndex = summaryLine.IndexOf('[', playerNameEndIndex) + 1;
                     int pocketEndIndex = summaryLine.IndexOf(']', pocketStartIndex);
 
-                    string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
-                    cards = cards.Replace("10", "T");
-                    playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    Player showdownPlayer = playerList[playerName];
+                    if (!showdownPlayer.hasHoleCards)
+                    {
+                         string cards = summaryLine.Substring(pocketStartIndex, pocketEndIndex - pocketStartIndex);
+                        cards = cards.Replace("10", "T");
+                        showdownPlayer.HoleCards = HoleCards.FromCards(cards);
+                    }
+                   
                 }
             }
 
@@ -602,6 +617,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
+        }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                string line = handlines[i];
+                if (line[0] == 'P' && line.EndsWith("]"))
+                {
+                    const int NameStartIndex = 7;
+                    int NameEndIndex = line.LastIndexOf(" r");
+                    return line.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                }
+            }
+            return null;
         }
     }
 }

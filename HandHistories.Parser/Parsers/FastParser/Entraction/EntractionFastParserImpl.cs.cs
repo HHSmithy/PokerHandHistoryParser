@@ -391,5 +391,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
 
             return BoardCards.ForPreflop();
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            return null;
+        }
     }
 }

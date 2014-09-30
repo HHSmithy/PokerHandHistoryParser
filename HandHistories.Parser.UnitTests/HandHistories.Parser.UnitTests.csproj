@@ -102,6 +102,7 @@
     <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\HeroNameTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Seats\HandParserSeatTypeTests.cs" />
@@ -123,6 +124,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\BossMedia\CashGame\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\3BetHand.txt">
@@ -204,6 +208,9 @@
     </Content>
     <Content Include="SampleHandHistories\FullTilt\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\FullTilt\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\FullTilt\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -295,6 +302,9 @@
     <Content Include="SampleHandHistories\IPoker\CashGame\ExtraHands\DataMinerHandIssue1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AnteAction.txt" />
     <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\MinerFormat.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -314,6 +324,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\GeneralHands\GeneralHand.txt">
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -392,6 +405,15 @@
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\CancelledHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -954,6 +976,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\SidePot.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1162,6 +1187,9 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1243,6 +1271,9 @@
     <Content Include="SampleHandHistories\WinningPoker\CashGame\GameTypeTests\PotLimitOmaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\GeneralHands\HeroName.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1286,6 +1317,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\NoHoleCards.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\NoNameSitoutLine.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\PlayerTests\OmahaShowdown.txt">

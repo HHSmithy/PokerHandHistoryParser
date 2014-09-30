@@ -423,5 +423,22 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
             throw new Exception("Couldn't find sumamry line.");
         }
+
+        const string DealtTo = "Dealt to ";
+        static readonly int HeroNameStartIndex = DealtTo.Length;
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                string line = handlines[i];
+                if (line[0] == 'D' && line.StartsWith(DealtTo))
+                {
+                    int HeroNameEndIndex = line.LastIndexOf('[') - 1;
+                    return line.Substring(HeroNameStartIndex, HeroNameEndIndex - HeroNameStartIndex);
+                }
+            }
+            return null;
+        }
     }
 }
