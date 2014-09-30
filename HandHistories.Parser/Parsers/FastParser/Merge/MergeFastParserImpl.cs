@@ -517,7 +517,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
         protected override string ParseHeroName(string[] handlines)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }
