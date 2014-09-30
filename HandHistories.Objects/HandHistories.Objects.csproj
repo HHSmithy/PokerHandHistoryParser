@@ -80,13 +80,12 @@
     <Compile Include="GameDescription\SiteNames.cs" />
     <Compile Include="Cards\Street.cs" />
     <Compile Include="GameDescription\TableType.cs" />
+    <Compile Include="Utils\HandAction.StreetExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HandHistories.Objects.Key.snk" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
