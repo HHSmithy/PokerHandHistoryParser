@@ -636,5 +636,23 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
             return BoardCards.FromCards(boardCards);
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            string line = handlines[0];
+            const string playerSeat = "playerseat=\"";
+            int PlayerSeatStartIndex = line.IndexOf(playerSeat) + playerSeat.Length;
+            int PlayerSeatEndIndex = line.IndexOf("\"", PlayerSeatStartIndex);
+            string SeatString = line.Substring(PlayerSeatStartIndex, PlayerSeatEndIndex - PlayerSeatStartIndex);
+            int HeroSeatNumber = int.Parse(SeatString);
+            
+            var player = ParsePlayers(handlines).FirstOrDefault(p => p.SeatNumber == HeroSeatNumber);
+
+            if (player != null)
+            {
+                return player.PlayerName;
+            }
+            return null;
+        }
     }
 }

@@ -822,5 +822,21 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             return BoardCards.FromCards(boardCards);
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            const string tag = "<nickname>";
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                if (handlines[i][1] == 'n' && handlines[i].StartsWith(tag))
+                {
+                    string line = handlines[i];
+                    int startindex = tag.Length;
+                    int endindex = line.IndexOf('<', startindex);
+                    return line.Substring(startindex, endindex - startindex);
+                }
+            }
+            return null;
+        }
     }
 }

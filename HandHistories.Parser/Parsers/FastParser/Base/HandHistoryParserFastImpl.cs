@@ -136,6 +136,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 handHistory.Players = ParsePlayers(handLines);
                 handHistory.NumPlayersSeated = handHistory.Players.Count;
 
+                string HeroName = ParseHeroName(handLines);
+                handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == HeroName);
+
                 if (handHistory.Cancelled)
                 {
                     return handHistory;
@@ -191,6 +194,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             }        
         }
 
+        protected abstract string ParseHeroName(string[] handlines);
+
+        public string ParseHeroName(string handText)
+        {
+            return ParseHeroName(SplitHandsLines(handText));
+        }
 
         public int ParseDealerPosition(string handText)
         {

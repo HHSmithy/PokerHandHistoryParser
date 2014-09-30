@@ -673,5 +673,24 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             int endIndex = Line.IndexOf('\"', startIndex);
             return Line.Substring(startIndex, endIndex - startIndex);
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            //Known card
+            //<CARD LINK="2"></CARD>
+            //Unkwown card
+            //<CARD LINK="b"></CARD>
+
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                string line = handlines[i];
+                if (line[1] == 'C' && line[12] != 'b')
+                {
+                    string HeroNameLine = handlines[i - 1];
+                    return GetXMLAttributeValue(HeroNameLine, "PLAYER");
+                }
+            }
+            return null;
+        }
     }
 }

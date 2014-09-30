@@ -514,5 +514,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
             return BoardCards.FromCards(boardCards);
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,57 @@
+﻿<Game hhversion="4" id="48976532125" date="2013-04-11 02:07:22" unicodetablename="SwBhAHIAbAAgAC0AIACsIDIAMAAwACAATQBhAHgA" tablename="Karl - €200 Max" stakes="3|6" betlimit="PL" tabletype="Cash Game" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="4" betamount="2400" istournament="0" totalplayers="5" tablesize="6" badbeat="false" rake="300">
+   <Seats>
+      <Seat num="1" alias="Opponent1" unicodealias="QgBvAG8AbQBQAGkAawBhAEIAbwBvAG0A" balance="200.00" endbalance="200.00"/>
+      <Seat num="3" alias="Opponent2" unicodealias="YwBvAG4AcwBjAGkAbwB1AHMA" balance="57.68" endbalance="0.00"/>
+      <Seat num="4" alias="MGN_Hero" unicodealias="SgB1AGwAawBsAGEAcABwAGUAbgA=" balance="200.00" endbalance="176.00"/>
+      <Seat num="5" alias="Opponent3" unicodealias="UABTAGUAYwB0AA==" balance="333.50" endbalance="333.50"/>
+      <Seat num="6" alias="Opponent4" unicodealias="RABvAHIAYQBNAGEAYQByAA==" balance="347.12" endbalance="425.80" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="3" value="1.00"/>
+      <Action seq="2" type="BigBlind" seat="4" value="2.00"/>
+      <Action seq="3" type="DealCards" seat="4">
+         <Card value="A" suit="h" id="39"/>
+         <Card value="Q" suit="s" id="11"/>
+         <Card value="K" suit="s" id="12"/>
+         <Card value="8" suit="c" id="20"/>
+      </Action>
+      <Action seq="4" type="Fold" seat="5"/>
+      <Action seq="5" type="Raise" seat="6" value="6.00"/>
+      <Action seq="6" type="Call" seat="3" value="5.00"/>
+      <Action seq="7" type="Raise" seat="4" value="22.00"/>
+      <Action seq="8" type="Call" seat="6" value="18.00"/>
+      <Action seq="9" type="Call" seat="3" value="18.00"/>
+      <Action seq="10" type="DealFlop">
+         <Card value="2" suit="h" id="40"/>
+         <Card value="4" suit="c" id="16"/>
+         <Card value="J" suit="d" id="36"/>
+      </Action>
+      <Action seq="11" type="Check" seat="3"/>
+      <Action seq="12" type="Check" seat="4"/>
+      <Action seq="13" type="Bet" seat="6" value="72.00"/>
+      <Action seq="14" type="AllIn" seat="3" value="33.68"/>
+      <Action seq="15" type="Fold" seat="4"/>
+      <Action seq="16" type="MoneyReturned" seat="6" value="38.32"/>
+      <Action seq="17" type="ShowCards" seat="3">
+         <Card value="7" suit="d" id="32"/>
+         <Card value="8" suit="h" id="46"/>
+         <Card value="4" suit="s" id="3"/>
+         <Card value="7" suit="h" id="45"/>
+      </Action>
+      <Action seq="18" type="ShowCards" seat="6">
+         <Card value="K" suit="d" id="38"/>
+         <Card value="2" suit="c" id="14"/>
+         <Card value="3" suit="d" id="28"/>
+         <Card value="K" suit="c" id="25"/>
+      </Action>
+      <Action seq="19" type="DealTurn">
+         <Card value="5" suit="h" id="43"/>
+      </Action>
+      <Action seq="20" type="DealRiver">
+         <Card value="A" suit="c" id="13"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="6" amount="136.36" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

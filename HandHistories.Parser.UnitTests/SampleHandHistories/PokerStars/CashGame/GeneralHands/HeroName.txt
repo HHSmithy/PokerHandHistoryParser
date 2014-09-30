@@ -1,0 +1,44 @@
+﻿PokerStars Hand #1846552153:  Hold'em No Limit (€1/€2 EUR) - 2013/03/08 18:14:22 CET [2013/03/08 18:14:22 ET]
+Table 'Brunk V' 6-max Seat #1 is the button
+Seat 1: Player1 (€289.57 in chips) 
+Seat 2: PS_Hero (€198 in chips) 
+Seat 3: Player3 (€222.59 in chips) 
+Seat 4: Player4 (€200 in chips) 
+Seat 5: Player5 (€208.02 in chips) 
+Seat 6: Player6 (€258.54 in chips) 
+PS_Hero: posts small blind €1
+Player3: posts big blind €2
+*** HOLE CARDS ***
+Dealt to PS_Hero [4s 7h]
+Player4: folds 
+Player5: folds 
+Player6: raises €4 to €6
+Player1: calls €6
+PS_Hero: folds 
+Player3: folds 
+*** FLOP *** [6d 7c 6h]
+Player3 leaves the table
+Player6: bets €11
+xadina joins the table at seat #3 
+xadina leaves the table
+Player1: calls €11
+*** TURN *** [6d 7c 6h] [2s]
+Player6: checks 
+Player1: checks 
+*** RIVER *** [6d 7c 6h 2s] [Qc]
+Crocodeeeal joins the table at seat #3 
+Player6: checks 
+Player1: checks 
+*** SHOW DOWN ***
+Player6: shows [As 9d] (a pair of Sixes)
+Player1: shows [Ah Jh] (a pair of Sixes - Ace+Queen+Jack kicker)
+Player1 collected €34.60 from pot
+*** SUMMARY ***
+Total pot €37 | Rake €2.40 
+Board [6d 7c 6h 2s Qc]
+Seat 1: Player1 (button) showed [Ah Jh] and won (€34.60) with a pair of Sixes
+Seat 2: PS_Hero (small blind) folded before Flop
+Seat 3: Player3 (big blind) folded before Flop
+Seat 4: Player4 folded before Flop (didn't bet)
+Seat 5: Player5 folded before Flop (didn't bet)
+Seat 6: Player6 showed [As 9d] and lost with a pair of Sixes

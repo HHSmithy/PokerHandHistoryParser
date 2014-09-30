@@ -922,5 +922,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                if (handlines[i][0] == 'D' && handlines[i].StartsWith("Dealt to "))
+                {
+                    string line = handlines[i];
+                    int endIndex = line.LastIndexOf('[');
+                    return line.Substring(9, endIndex - 9 - 1);
+                }
+            }
+            return null;
+        }
     }
 }
