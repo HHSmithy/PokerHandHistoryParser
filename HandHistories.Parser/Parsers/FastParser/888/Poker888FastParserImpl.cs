@@ -217,10 +217,16 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             {
                 string handLine = handLines[i];
 
-                if (currentStreet == Street.Preflop &&
-                    handLine.IndexOf(':') != -1)
+                if (currentStreet == Street.Preflop)
                 {
-                    continue;
+                    if (handLine.IndexOf(':') != -1)
+                    {
+                        continue;
+                    }
+                    else if (handLine[0] == 'D' && handLine.StartsWith("Dealt "))
+                    {
+                        continue;
+                    }
                 }
 
                 if (handLine[0] == '*')
@@ -332,8 +338,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     }
                     
                 }
-
-                if (handLine.EndsWith("folds"))
+                else if (handLine.EndsWith("folds"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 6);
                     handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet));
@@ -441,6 +446,22 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             }
 
             return BoardCards.FromCards(boardCards);
+        }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            const string DealText = "Dealt to ";
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                if (handlines[i][0] == 'D' && handlines[i].StartsWith(DealText))
+                {
+                    string line = handlines[i];
+                    int startindex = DealText.Length;
+                    int endindex = line.LastIndexOf('[') - 1;
+                    return line.Substring(startindex, endindex - startindex);
+                }
+            }
+            return null;
         }
     }
 }

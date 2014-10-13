@@ -1,0 +1,22 @@
+﻿#Game No : 5512058461
+***** LuckyAcePoker.com Hand History for Game 5512058461 *****
+$2/$4 Blinds No Limit Holdem - *** 13 08 2013 17:22:18
+Table Gent 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: Player1 ( $400 )
+Seat 2: Player2 ( $412 )
+Seat 4: Player3 ( $400 )
+Seat 7: Player4 ( $400 )
+Seat 9: PAC_Hero ( $400 )
+PAC_Hero posts small blind [$2]
+Player1 posts big blind [$4]
+** Dealing down cards **
+Dealt to PAC_Hero [ 3d, Jc ]
+Player2 folds
+Player3 folds
+Player4 raises [$14]
+PAC_Hero folds
+Player1 folds
+** Summary **
+Player4 collected [ $10 ]

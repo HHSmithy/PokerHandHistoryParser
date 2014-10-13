@@ -618,5 +618,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
         }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                string line = handlines[i];
+                if (line[0] == 'P' && line.EndsWith("]"))
+                {
+                    const int NameStartIndex = 7;
+                    int NameEndIndex = line.LastIndexOf(" r");
+                    return line.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
+                }
+            }
+            return null;
+        }
     }
 }

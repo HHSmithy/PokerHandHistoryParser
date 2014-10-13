@@ -1,0 +1,25 @@
+﻿Game started at: 2014/6/4 21:7:41
+Game ID: 287501854 5/10 Lanthanite   (Short, PRR) (Hold'em)
+Seat 6 is the button
+Seat 3: Opponent1 (234).
+Seat 4: WP_Hero (500).
+Seat 6: Opponent2 (505).
+Player Opponent1 has small blind (5)
+Player WP_Hero has big blind (10)
+Player Opponent1 received a card.
+Player Opponent1 received a card.
+Player WP_Hero received card: [6d]
+Player WP_Hero received card: [Ks]
+Player Opponent2 received a card.
+Player Opponent2 received a card.
+Player Opponent2 folds
+Player Opponent1 raises (15)
+Player WP_Hero folds
+Uncalled bet (10) returned to Opponent1
+Player Opponent1 mucks cards
+------ Summary ------
+Pot: 20. Rake 0
+*Player Opponent1 mucks (does not show cards). Bets: 10. Collects: 20. Wins: 10.
+Player WP_Hero does not show cards.Bets: 10. Collects: 0. Loses: 10.
+Player Opponent2 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/6/4 21:7:51

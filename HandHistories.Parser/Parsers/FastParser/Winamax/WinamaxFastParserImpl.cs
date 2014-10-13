@@ -328,6 +328,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 // Blind posting
                 if(currentStreet.Equals(Street.Null))
                 {
+                    if (handLine.StartsWith("Dealt to "))
+                    {
+                        continue;
+                    }
+
                     var smallBlindIndex = handLine.IndexOf("posts small blind", StringComparison.Ordinal);
                     var bigBlindIndex = handLine.IndexOf("posts big blind", StringComparison.Ordinal);
 
@@ -580,6 +585,22 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             string name = handLine.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
 
             return name;
+        }
+
+        protected override string ParseHeroName(string[] handlines)
+        {
+            const string DealtTo = "Dealt to ";
+
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                string line = handlines[i];
+                if (line[0] == 'D' && line.StartsWith(DealtTo))
+                {
+                    int HeroNameEndIndex = line.LastIndexOf('[') - 1;
+                    return line.Substring(DealtTo.Length, HeroNameEndIndex - DealtTo.Length);
+                }
+            }
+            return null;
         }
     }
 }

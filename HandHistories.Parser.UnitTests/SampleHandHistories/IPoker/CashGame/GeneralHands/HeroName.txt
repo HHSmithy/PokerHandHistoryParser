@@ -1,0 +1,39 @@
+﻿<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem L $5/$10</gametype>
+    <tablename>Grimsby, 51069081</tablename>
+    <tablecurrency>USD</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2014-01-06 14:43:15</startdate>
+    <currency></currency>
+    <nickname>IPK_Hero</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+  </general>
+  <game gamecode="5383708755">
+    <general>
+      <startdate>2014-01-06 14:44:37</startdate>
+      <players>
+        <player seat="5" name="IPK_Hero" chips="$326.20" dealer="0" win="$7.50" bet="$5" rebuy="0" addon="0" reg_code="-" />
+        <player seat="6" name="Opponent1" chips="$200" dealer="1" win="$0" bet="$2.50" rebuy="0" addon="0" reg_code="-" />
+        <player seat="8" name="Opponent2" chips="$0" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="2" player="IPK_Hero" type="2" sum="$5" cards="[cards]" />
+      <action no="1" player="Opponent1" type="1" sum="$2.50" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="IPK_Hero">X X</cards>
+      <cards type="Pocket" player="Opponent1">X X</cards>
+      <action no="3" player="Opponent1" type="0" sum="$0" cards="" />
+    </round>
+  </game>
+</session>
