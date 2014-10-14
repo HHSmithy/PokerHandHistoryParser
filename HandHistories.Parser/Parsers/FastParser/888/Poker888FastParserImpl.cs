@@ -12,6 +12,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
@@ -29,40 +30,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            rawHandHistories = rawHandHistories.Replace("\r\n\r\n", "▄");
+            rawHandHistories = rawHandHistories.Replace("\r", "");
 
             //This was causing an OOM exception so used LazyStringSplit
             //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
             //return splitUpHands.Where(s => s.Equals("\r\n") == false);
 
-            return LazyStringSplit(rawHandHistories, '▄').Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
-        }
-
-        // Based on: http://stackoverflow.com/questions/568968/does-any-one-know-of-a-faster-method-to-do-string-split
-        public static IEnumerable<string> LazyStringSplit(string s, char c)
-        {
-            int l = s.Length;
-            int i = 0, j = s.IndexOf(c, 0, l);
-            if (j == -1) // No such substring
-            {
-                yield return s; // Return original and break
-                yield break;
-            }
-
-            while (j != -1)
-            {
-                if (j - i > 0) // Non empty? 
-                {
-                    yield return s.Substring(i, j - i); // Return non-empty match
-                }
-                i = j + 1;
-                j = s.IndexOf(c, i, l - i);
-            }
-
-            if (i < l) // Has remainder?
-            {
-                yield return s.Substring(i, l - i); // Return remaining trail
-            }
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
         }
 
         private static readonly Regex DealerPositionRegex = new Regex(@"(?<=Seat )\d+", RegexOptions.Compiled);
