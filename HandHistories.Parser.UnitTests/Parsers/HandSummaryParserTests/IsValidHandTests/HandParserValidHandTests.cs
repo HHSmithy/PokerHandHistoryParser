@@ -3,6 +3,8 @@ using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidHandTests
 {
@@ -65,6 +67,47 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
 
             Assert.Throws<InvalidHandException>(() => GetParser().ParseFullHandHistory(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
+        }
+
+        List<IHandHistoryParser> GetAllParsers()
+        {
+            var factory = new HandHistories.Parser.Parsers.Factory.HandHistoryParserFactoryImpl();
+            return new List<IHandHistoryParser>()
+            {
+                factory.GetFullHandHistoryParser(SiteName.Entraction),
+                factory.GetFullHandHistoryParser(SiteName.FullTilt),
+                factory.GetFullHandHistoryParser(SiteName.Pacific),
+                factory.GetFullHandHistoryParser(SiteName.PartyPoker),
+                factory.GetFullHandHistoryParser(SiteName.PokerStars),
+                factory.GetFullHandHistoryParser(SiteName.OnGame),
+                factory.GetFullHandHistoryParser(SiteName.Merge),
+                factory.GetFullHandHistoryParser(SiteName.MicroGaming),
+                factory.GetFullHandHistoryParser(SiteName.IPoker),
+                factory.GetFullHandHistoryParser(SiteName.Winamax),
+                factory.GetFullHandHistoryParser(SiteName.WinningPoker),
+            };
+        }
+
+        [Test]
+        public void IsValidHand_Unique()
+        {
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, true);
+
+            var handParser = GetParser();
+            Assert.AreEqual(true, handParser.IsValidHand(handText), "IHandHistoryParser: IsValidHand");
+
+            foreach (var otherParser in GetAllParsers()
+                .Where(p => p.SiteName != handParser.SiteName))
+            {
+                try
+                {
+                    Assert.IsFalse(otherParser.IsValidHand(handText), "IHandHistoryParser: Should be invalid hand");
+                }
+                catch
+                {
+                    continue;//When the parser throws that indicates that it is an invalid hand
+                }
+            }
         }
     }
 }
