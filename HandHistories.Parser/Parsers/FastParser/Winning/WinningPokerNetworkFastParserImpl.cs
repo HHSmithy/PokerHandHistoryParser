@@ -71,11 +71,24 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override string ParseTableName(string[] handLines)
         {
             //Game ID: 258592747 2/4 Gabilite (JP) - CAP - Max - 2 (Hold'em)
-            int StartIndex = handLines[1].IndexOf(' ', GameIDStartIndex);
-            StartIndex = handLines[1].IndexOf(' ', StartIndex + 1);
+            int StartIndex = handLines[1].IndexOf('/', GameIDStartIndex) + 3;
             string tableName = handLines[1].Substring(StartIndex);
-            tableName = tableName.Remove(tableName.IndexOf(" ("));
-            return tableName.Trim();
+
+            int numberStartIndex = tableName.LastIndexOf(" - ");
+            if (numberStartIndex != -1)
+            {
+                numberStartIndex += 3;
+                int numberEndIndex = tableName.IndexOf(" (", numberStartIndex);
+                string number = tableName.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
+                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
+                tableName += " " + number;
+            }
+            else
+            {
+                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
+            }
+            
+            return tableName;
         }
 
         protected override SeatType ParseSeatType(string[] handLines)
