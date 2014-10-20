@@ -322,6 +322,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 case "rCA=":
                     currency = Currency.EURO;
                     break;
+                case "":
+                    currency = Currency.PlayMoney;
+                    break;
                 default:
                     throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencyString);
             }

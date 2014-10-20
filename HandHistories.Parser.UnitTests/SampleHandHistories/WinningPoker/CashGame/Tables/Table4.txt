@@ -1,0 +1,31 @@
+﻿Game started at: 2014/2/19 23:34:58
+Game ID: 255722012 5/10 Oalitite   (JP) (Hold'em)
+Seat 5 is the button
+Seat 1: m0ney2Blow (1015).
+Seat 4: AfroBlue (1148.25).
+Seat 5: Swedish Fish (2018.50).
+Seat 6: FlyingCentaur (1000).
+Player FlyingCentaur has small blind (5)
+Player m0ney2Blow has big blind (10)
+Player FlyingCentaur received a card.
+Player FlyingCentaur received a card.
+Player m0ney2Blow received a card.
+Player m0ney2Blow received a card.
+Player AfroBlue received a card.
+Player AfroBlue received a card.
+Player Swedish Fish received card: [Qh]
+Player Swedish Fish received card: [Ks]
+Player AfroBlue raises (30)
+Player Swedish Fish raises (100)
+Player FlyingCentaur folds
+Player m0ney2Blow folds
+Player AfroBlue folds
+Uncalled bet (70) returned to Swedish Fish
+Player Swedish Fish mucks cards
+------ Summary ------
+Pot: 75. Rake 0
+Player m0ney2Blow does not show cards.Bets: 10. Collects: 0. Loses: 10.
+Player AfroBlue does not show cards.Bets: 30. Collects: 0. Loses: 30.
+*Player Swedish Fish mucks (does not show cards). Bets: 30. Collects: 75. Wins: 45.
+Player FlyingCentaur does not show cards.Bets: 5. Collects: 0. Loses: 5.
+Game ended at: 2014/2/19 23:35:57
