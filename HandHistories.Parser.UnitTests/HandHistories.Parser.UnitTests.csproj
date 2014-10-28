@@ -415,9 +415,6 @@
     <Content Include="SampleHandHistories\PartyPoker\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\CancelledHand.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1091,6 +1088,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\Tables\Table6.txt" />
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\CancelledHand.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\InValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1356,6 +1356,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\Tables\Table3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\CancelledHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\InValidHand.txt">

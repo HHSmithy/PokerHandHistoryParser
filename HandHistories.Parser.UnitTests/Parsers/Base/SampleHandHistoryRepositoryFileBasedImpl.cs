@@ -13,6 +13,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             _fileReader = fileReader;
         }
 
+        public string GetCancelledHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName)
+        {
+            return GetHandText(pokerFormat, siteName, "ValidHandTests", "CancelledHand");
+        }
+
         public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid)
         {
             return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid) ? "ValidHand" : "InvalidHand");

@@ -152,8 +152,24 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
-            isCancelled = false;
+            isCancelled = IsCancelledHand(handLines);
             return IsValidHand(handLines);
+        }
+
+        private bool IsCancelledHand(string[] handLines)
+        {
+            int start = GetActionStart(handLines);
+
+            for (int i = start; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line.IndexOf(" has big blind (") != -1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
