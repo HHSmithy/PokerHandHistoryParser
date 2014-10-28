@@ -1,0 +1,13 @@
+﻿Game started at: 2014/10/28 22:1:11
+Game ID: 328556048 1/2 Wichita Falls 1/2 - 2 (Hold'em)
+Seat 4 is the button
+Seat 4: Player1 (92.25).
+Seat 5: Player2 (67.25).
+Player Player1 has small blind (1)
+Player Player2 sitting out
+Uncalled bet (1) returned to Player1
+------ Summary ------
+Pot: 0. Rake 0
+Player Player1 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Player2 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/10/28 22:1:12
