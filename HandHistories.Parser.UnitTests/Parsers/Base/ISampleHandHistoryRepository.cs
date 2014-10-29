@@ -9,6 +9,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
 {
     internal interface ISampleHandHistoryRepository
     {
+        string GetCancelledHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName);
+
         string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid);
 
         string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType);

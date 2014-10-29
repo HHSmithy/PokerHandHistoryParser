@@ -69,6 +69,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
             Assert.Throws<InvalidHandException>(() => GetParser().ParseFullHandHistory(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
 
+        [Test]
+        public void IsHandCancelled_Works()
+        {
+            switch (Site)
+            {
+                case SiteName.PartyPoker:
+                case SiteName.FullTilt:
+                case SiteName.IPoker:
+                case SiteName.OnGame:
+                case SiteName.MicroGaming:
+                case SiteName.BossMedia:
+                case SiteName.Ladbrokes:
+                case SiteName.Pacific:
+                case SiteName.Winamax:
+                case SiteName.Merge:
+                case SiteName.Entraction:
+                    Assert.Ignore("Site do not produce cancelled handhistories: " + Site);
+                    break;
+            }
+
+            string cancelledHandText = SampleHandHistoryRepository.GetCancelledHandHandHistoryText(PokerFormat.CashGame, Site);
+            bool isCancelled;
+            Assert.IsTrue(GetSummmaryParser().IsValidOrCancelledHand(cancelledHandText, out isCancelled), "IHandHistorySummaryParser: IsCancelledHand");
+            Assert.IsTrue(isCancelled, "IHandHistoryParser: IsCancelledHand");
+        }
+
         List<IHandHistoryParser> GetAllParsers()
         {
             var factory = new HandHistories.Parser.Parsers.Factory.HandHistoryParserFactoryImpl();
