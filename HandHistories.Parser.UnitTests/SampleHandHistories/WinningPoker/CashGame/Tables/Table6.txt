@@ -1,0 +1,56 @@
+﻿Game started at: 2014/10/29 17:34:4
+Game ID: 328782447 10/20 Hialeah - 6 (Hold'em)
+Seat 2 is the button
+Seat 1: batman12345 (4819.17).
+Seat 2: lakeside4 (2512).
+Seat 3: freebyrd78 (1493.04).
+Seat 4: uhjsyyygakrue (800).
+Seat 5: Rudy-13 (1723).
+Seat 6: Jimbo56 (2186).
+Player freebyrd78 has small blind (10)
+Player uhjsyyygakrue has big blind (20)
+Player freebyrd78 received a card.
+Player freebyrd78 received a card.
+Player uhjsyyygakrue received card: [9h]
+Player uhjsyyygakrue received card: [8h]
+Player Rudy-13 received a card.
+Player Rudy-13 received a card.
+Player Jimbo56 received a card.
+Player Jimbo56 received a card.
+Player batman12345 received a card.
+Player batman12345 received a card.
+Player lakeside4 received a card.
+Player lakeside4 received a card.
+Player Rudy-13 raises (60)
+Player Jimbo56 calls (60)
+Player batman12345 folds
+Player lakeside4 calls (60)
+Player freebyrd78 calls (50)
+Player uhjsyyygakrue calls (40)
+*** FLOP ***: [Js 10c 2c]
+Player freebyrd78 checks
+Player uhjsyyygakrue checks
+Player Rudy-13 bets (125)
+Player Jimbo56 calls (125)
+Player lakeside4 folds
+Player freebyrd78 folds
+Player uhjsyyygakrue calls (125)
+*** TURN ***: [Js 10c 2c] [Qh]
+Player uhjsyyygakrue checks
+Player Rudy-13 checks
+Player Jimbo56 checks
+*** RIVER ***: [Js 10c 2c Qh] [Kd]
+Player uhjsyyygakrue checks
+Player Rudy-13 bets (450)
+Player Jimbo56 folds
+Player uhjsyyygakrue calls (450)
+------ Summary ------
+Pot: 1572. Rake 3
+Board: [Js 10c 2c Qh Kd]
+Player batman12345 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player lakeside4 does not show cards.Bets: 60. Collects: 0. Loses: 60.
+Player freebyrd78 does not show cards.Bets: 60. Collects: 0. Loses: 60.
+*Player uhjsyyygakrue shows: Straight to K [9h 8h]. Bets: 635. Collects: 1572. Wins: 937.
+Player Rudy-13 shows: One pair of Ks [8c Ks]. Bets: 635. Collects: 0. Loses: 635.
+Player Jimbo56 does not show cards.Bets: 185. Collects: 0. Loses: 185.
+Game ended at: 2014/10/29 17:35:19

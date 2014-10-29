@@ -70,25 +70,68 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override string ParseTableName(string[] handLines)
         {
+            //Real money format:
+            //Game ID: 261409536 2/4 Braunite (Omaha)
             //Game ID: 258592747 2/4 Gabilite (JP) - CAP - Max - 2 (Hold'em)
-            int StartIndex = handLines[1].IndexOf('/', GameIDStartIndex) + 3;
-            string tableName = handLines[1].Substring(StartIndex);
+            //Play money format:
+            //Game ID: 261409536 1/2 Wichita Falls (Omaha)
+            //Game ID: 328766507 1/2 Wichita Falls 1/2 - 3 (Hold'em)
+            string tablenameLine = handLines[1];
+            int StartIndex = tablenameLine.IndexOf('/', GameIDStartIndex) + 2;
+            StartIndex = tablenameLine.IndexOf(' ', StartIndex) + 1;
+            string tableName = tablenameLine.Substring(StartIndex);
+
+            bool isPlayMoney = tableName.Contains('/');
+            if (isPlayMoney)
+            {
+                return ParseTableName_PlayMoney_Numbered(tableName);
+            }
 
             int numberStartIndex = tableName.LastIndexOf(" - ");
             if (numberStartIndex != -1)
             {
                 numberStartIndex += 3;
-                int numberEndIndex = tableName.IndexOf(" (", numberStartIndex);
+                int numberEndIndex = tableName.IndexOf(" ", numberStartIndex);
                 string number = tableName.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
-                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
+                tableName = TrimTableName(tableName);
                 tableName += " " + number;
             }
             else
             {
-                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
+                tableName = TrimTableName(tableName);
             }
             
-            return tableName;
+            return tableName.Trim();
+        }
+
+        private string TrimTableName(string tableName)
+        {
+            int endIndex = tableName.IndexOf(" - ");
+            if (endIndex != -1)
+            {
+                tableName = tableName.Remove(endIndex);
+            }
+            endIndex = tableName.IndexOf(" (");
+            if (endIndex != -1)
+            {
+                tableName = tableName.Remove(endIndex);
+            }
+            return tableName.Trim();
+        }
+
+        private string ParseTableName_PlayMoney_Numbered(string tableNameParameter)
+        {
+            int tableNameEndIndex = tableNameParameter.IndexOf('/');
+            tableNameEndIndex = tableNameParameter.LastIndexOf(' ', tableNameEndIndex);
+
+            string tableName = tableNameParameter.Remove(tableNameEndIndex);
+
+            int numberStartIndex = tableNameParameter.IndexOf('-', tableNameEndIndex) + 2;
+            int numberEndIndex = tableNameParameter.IndexOf(' ', numberStartIndex);
+
+            string number = tableNameParameter.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
+
+            return tableName + " " + number;
         }
 
         protected override SeatType ParseSeatType(string[] handLines)
