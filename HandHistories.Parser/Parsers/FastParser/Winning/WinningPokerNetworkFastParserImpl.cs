@@ -81,57 +81,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             StartIndex = tablenameLine.IndexOf(' ', StartIndex) + 1;
             string tableName = tablenameLine.Substring(StartIndex);
 
-            bool isPlayMoney = tableName.Contains('/');
-            if (isPlayMoney)
-            {
-                return ParseTableName_PlayMoney_Numbered(tableName);
-            }
+            int GameTypeStartIndex = tableName.LastIndexOf("(");
 
-            int numberStartIndex = tableName.LastIndexOf(" - ");
-            if (numberStartIndex != -1)
-            {
-                numberStartIndex += 3;
-                int numberEndIndex = tableName.IndexOf(" ", numberStartIndex);
-                string number = tableName.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
-                tableName = TrimTableName(tableName);
-                tableName += " " + number;
-            }
-            else
-            {
-                tableName = TrimTableName(tableName);
-            }
-            
-            return tableName.Trim();
-        }
-
-        private string TrimTableName(string tableName)
-        {
-            int endIndex = tableName.IndexOf(" - ");
-            if (endIndex != -1)
-            {
-                tableName = tableName.Remove(endIndex);
-            }
-            endIndex = tableName.IndexOf(" (");
-            if (endIndex != -1)
-            {
-                tableName = tableName.Remove(endIndex);
-            }
-            return tableName.Trim();
-        }
-
-        private string ParseTableName_PlayMoney_Numbered(string tableNameParameter)
-        {
-            int tableNameEndIndex = tableNameParameter.IndexOf('/');
-            tableNameEndIndex = tableNameParameter.LastIndexOf(' ', tableNameEndIndex);
-
-            string tableName = tableNameParameter.Remove(tableNameEndIndex);
-
-            int numberStartIndex = tableNameParameter.IndexOf('-', tableNameEndIndex) + 2;
-            int numberEndIndex = tableNameParameter.IndexOf(' ', numberStartIndex);
-
-            string number = tableNameParameter.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
-
-            return tableName + " " + number;
+            return tableName.Remove(GameTypeStartIndex).Trim();
         }
 
         protected override SeatType ParseSeatType(string[] handLines)
@@ -163,7 +115,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             {
                 descriptions.Add(TableTypeDescription.Jackpot);
             }
-            if (handLines[1].Contains("CAP"))
+            if (handLines[1].Contains(" CAP "))
             {
                 descriptions.Add(TableTypeDescription.Cap);
             }
