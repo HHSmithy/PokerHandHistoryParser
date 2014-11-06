@@ -13,7 +13,7 @@ using HandHistories.Parser.Utils.Time;
 
 namespace HandHistories.Parser.Parsers.FastParser.Entraction
 {
-    class EntractionFastParserImpl : HandHistoryParserFastImpl
+    sealed class EntractionFastParserImpl : HandHistoryParserFastImpl
     {
         public override SiteName SiteName
         {

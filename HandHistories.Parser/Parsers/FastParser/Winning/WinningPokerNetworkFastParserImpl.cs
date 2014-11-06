@@ -16,7 +16,7 @@ using System.Runtime.CompilerServices;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
-    public class WinningPokerNetworkFastParserImpl : HandHistoryParserFastImpl
+    public sealed class WinningPokerNetworkFastParserImpl : HandHistoryParserFastImpl
     {
         const int GameIDStartIndex = 9;
         const int actionPlayerNameStartIndex = 7;

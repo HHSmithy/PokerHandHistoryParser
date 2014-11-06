@@ -14,7 +14,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 {
-    internal class MicroGamingFastParserImpl : HandHistoryParserFastImpl
+    internal sealed class MicroGamingFastParserImpl : HandHistoryParserFastImpl
     {
         private static readonly Regex HandSplitRegex = new Regex("(<Game hhversion)", RegexOptions.Compiled);
 
