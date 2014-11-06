@@ -15,7 +15,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.Merge
 {
-    public class MergeFastParserImpl : HandHistoryParserFastImpl
+    public sealed class MergeFastParserImpl : HandHistoryParserFastImpl
     {
         public override SiteName SiteName
         {

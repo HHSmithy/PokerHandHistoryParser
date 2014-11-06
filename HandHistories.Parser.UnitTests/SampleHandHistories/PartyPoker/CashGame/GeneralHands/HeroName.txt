@@ -3,12 +3,12 @@ $0.01/$0.02 USD NL Texas Hold'em - Sunday, June 01, 18:19:22 EDT 2013
 Table Rochdale (Real Money)
 Seat 3 is the button
 Total number of players : 2/6 
-Seat 4: PPHero ( $2 USD )
-Seat 3: PPOpponent1 ( $2 USD )
-PPOpponent1 posts small blind [$0.01 USD].
-PPHero posts big blind [$0.02 USD].
+Seat 4: PP_Hero ( $2 USD )
+Seat 3: PP_Opponent1 ( $2 USD )
+PP_Opponent1 posts small blind [$0.01 USD].
+PP_Hero posts big blind [$0.02 USD].
 ** Dealing down cards **
-Dealt to PPHero [  Jc Kd ]
-PPOpponent1 folds
-PPHero does not show cards.
-PPHero wins $0.03 USD
+Dealt to PP_Hero [  Jc Kd ]
+PP_Opponent1 folds
+PP_Hero does not show cards.
+PP_Hero wins $0.03 USD
