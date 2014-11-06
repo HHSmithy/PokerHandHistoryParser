@@ -124,42 +124,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case "December":
                     return 12;
                 default:
-                    throw new ArgumentException("Month");
-            }
-        }
-
-        protected override void ParseExtraHandInformation(string[] handLines, Objects.Hand.HandHistorySummary handHistorySummary)
-        {
-            if (handHistorySummary.Cancelled)
-            {
-                return;                
-            }
-
-            for (int i = handLines.Length - 1; i >= 0; i--)
-            {
-                string handLine = handLines[i];
-
-                // Check for summary line:
-                //  *** SUMMARY ***
-                if (handLine[0] == '*' && handLine[4] == 'S')
-                {
-                    // Line after summary line is:
-                    //  Total pot $13.12 | Rake $0.59 
-                    // or
-                    //  Total pot $62.63 Main pot $54.75. Side pot $5.38. | Rake $2.50 
-                    string totalLine = handLines[i + 1];
-
-                    int lastSpaceIndex = totalLine.LastIndexOf(" ");
-                    int spaceAfterFirstNumber = totalLine.IndexOf(" ", 11);
-
-                    handHistorySummary.Rake =
-                        decimal.Parse(totalLine.Substring(lastSpaceIndex + 2, totalLine.Length - lastSpaceIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
-
-                    handHistorySummary.TotalPot =
-                        decimal.Parse(totalLine.Substring(11, spaceAfterFirstNumber - 11), System.Globalization.CultureInfo.InvariantCulture);
-
-                    break;
-                }
+                    throw new ArgumentException("Month: " + month);
             }
         }
 
@@ -260,20 +225,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         protected override TableType ParseTableType(string[] handLines)
         {
-            // Stars does not right out things such as speed/shallow/fast to hands right now.
-
-            if (handLines[1].Contains(" Zoom "))
-            {
-                return TableType.FromTableTypeDescriptions(TableTypeDescription.Zoom);
-            }
-
-            // older hand history files have the cap mark in the first line
-            if (handLines[1].LastIndexOf(" CAP", StringComparison.Ordinal) != -1 ||
-               handLines[0].LastIndexOf(" Cap ", StringComparison.Ordinal) != -1)
-            {
-                return TableType.FromTableTypeDescriptions(TableTypeDescription.Cap);
-            }
-
             return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
         }
 
@@ -361,6 +312,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         static Limit ParseNormalLimit(string limitSubstring, Currency currency)
         {
+            //Expected limitSubstring format:
+            //0.05/$0.10
             int splitIndex = limitSubstring.IndexOf('/');
             string SB = limitSubstring.Remove(splitIndex);
             string BB = limitSubstring.Substring(splitIndex + 2);
