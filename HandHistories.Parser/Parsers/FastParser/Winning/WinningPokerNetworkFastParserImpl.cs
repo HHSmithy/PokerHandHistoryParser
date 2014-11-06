@@ -70,25 +70,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override string ParseTableName(string[] handLines)
         {
+            //Real money format:
+            //Game ID: 261409536 2/4 Braunite (Omaha)
             //Game ID: 258592747 2/4 Gabilite (JP) - CAP - Max - 2 (Hold'em)
-            int StartIndex = handLines[1].IndexOf('/', GameIDStartIndex) + 3;
-            string tableName = handLines[1].Substring(StartIndex);
+            //Play money format:
+            //Game ID: 261409536 1/2 Wichita Falls (Omaha)
+            //Game ID: 328766507 1/2 Wichita Falls 1/2 - 3 (Hold'em)
+            string tablenameLine = handLines[1];
+            int StartIndex = tablenameLine.IndexOf('/', GameIDStartIndex) + 2;
+            StartIndex = tablenameLine.IndexOf(' ', StartIndex) + 1;
+            string tableName = tablenameLine.Substring(StartIndex);
 
-            int numberStartIndex = tableName.LastIndexOf(" - ");
-            if (numberStartIndex != -1)
-            {
-                numberStartIndex += 3;
-                int numberEndIndex = tableName.IndexOf(" (", numberStartIndex);
-                string number = tableName.Substring(numberStartIndex, numberEndIndex - numberStartIndex);
-                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
-                tableName += " " + number;
-            }
-            else
-            {
-                tableName = tableName.Remove(tableName.IndexOf(" (")).Trim();
-            }
-            
-            return tableName;
+            int GameTypeStartIndex = tableName.LastIndexOf("(");
+
+            return tableName.Remove(GameTypeStartIndex).Trim();
         }
 
         protected override SeatType ParseSeatType(string[] handLines)
@@ -120,7 +115,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             {
                 descriptions.Add(TableTypeDescription.Jackpot);
             }
-            if (handLines[1].Contains("CAP"))
+            if (handLines[1].Contains(" CAP "))
             {
                 descriptions.Add(TableTypeDescription.Cap);
             }
