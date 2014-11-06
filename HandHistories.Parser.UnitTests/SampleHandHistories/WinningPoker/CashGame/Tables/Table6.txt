@@ -1,0 +1,47 @@
+﻿Game started at: 2014/11/2 18:31:42
+Game ID: 329934237 1/2 Wichita Falls 1/2 (Hold'em)
+Seat 6 is the button
+Seat 1: jetmia (677).
+Seat 3: uhjsyyygakrue (200).
+Seat 5: My Honey (773.47).
+Seat 6: Milton (269.50).
+Player jetmia has small blind (1)
+Player uhjsyyygakrue has big blind (2)
+Player jetmia received a card.
+Player jetmia received a card.
+Player uhjsyyygakrue received card: [10d]
+Player uhjsyyygakrue received card: [3s]
+Player My Honey received a card.
+Player My Honey received a card.
+Player Milton received a card.
+Player Milton received a card.
+Player My Honey calls (2)
+Player Milton calls (2)
+Player jetmia calls (1)
+Player uhjsyyygakrue checks
+*** FLOP ***: [Qh Jc Qs]
+Player jetmia checks
+Player uhjsyyygakrue checks
+Player My Honey checks
+Player Milton checks
+*** TURN ***: [Qh Jc Qs] [7d]
+Player jetmia checks
+Player uhjsyyygakrue checks
+Player My Honey checks
+Player Milton checks
+*** RIVER ***: [Qh Jc Qs 7d] [4s]
+Player jetmia checks
+Player uhjsyyygakrue checks
+Player My Honey checks
+Player Milton checks
+Player jetmia mucks cards
+Player uhjsyyygakrue mucks cards
+Player Milton mucks cards
+------ Summary ------
+Pot: 7.60. Rake 0.40
+Board: [Qh Jc Qs 7d 4s]
+Player jetmia mucks (does not show cards). Bets: 2. Collects: 0. Loses: 2.
+Player uhjsyyygakrue mucks (does not show: [10d 3s]). Bets: 2. Collects: 0. Loses: 2.
+*Player My Honey shows: Two pairs. Qs and 7s [7c 5c]. Bets: 2. Collects: 7.60. Wins: 5.60.
+Player Milton mucks (does not show cards). Bets: 2. Collects: 0. Loses: 2.
+Game ended at: 2014/11/2 18:32:30

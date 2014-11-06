@@ -1,0 +1,49 @@
+﻿Game started at: 2014/10/29 15:33:25
+Game ID: 328766507 1/2 Wichita Falls 1/2 - 3 (Hold'em)
+Seat 4 is the button
+Seat 1: Namu0124 (224.12).
+Seat 2: dode (31.55).
+Seat 3: 10speed (167.75).
+Seat 4: Big_Bad_Billy (250.65).
+Seat 5: uhjsyyygakrue (222.96).
+Seat 6: pkrbabe22 (22.40).
+Player uhjsyyygakrue has small blind (1)
+Player pkrbabe22 has big blind (2)
+Player uhjsyyygakrue received card: [3c]
+Player uhjsyyygakrue received card: [4h]
+Player pkrbabe22 received a card.
+Player pkrbabe22 received a card.
+Player Namu0124 received a card.
+Player Namu0124 received a card.
+Player dode received a card.
+Player dode received a card.
+Player 10speed received a card.
+Player 10speed received a card.
+Player Big_Bad_Billy received a card.
+Player Big_Bad_Billy received a card.
+Player Namu0124 raises (8)
+Player dode folds
+Player 10speed calls (8)
+Player Big_Bad_Billy calls (8)
+Player uhjsyyygakrue folds
+Player pkrbabe22 calls (6)
+*** FLOP ***: [7c Qd Kd]
+Player pkrbabe22 checks
+Player Namu0124 bets (15.67)
+Player 10speed raises (31.34)
+Player Big_Bad_Billy folds
+Player pkrbabe22 allin (14.40)
+Player Namu0124 folds
+Uncalled bet (15.67) returned to 10speed
+*** TURN ***: [7c Qd Kd] [Ad]
+*** RIVER ***: [7c Qd Kd Ad] [Js]
+------ Summary ------
+Pot: 75.74. Rake 3
+Board: [7c Qd Kd Ad Js]
+Player Namu0124 does not show cards.Bets: 23.67. Collects: 0. Loses: 23.67.
+Player dode does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player 10speed shows: Flush, A high [10d 3d]. Bets: 23.67. Collects: 75.74. Wins: 52.07.
+Player Big_Bad_Billy does not show cards.Bets: 8. Collects: 0. Loses: 8.
+Player uhjsyyygakrue does not show cards.Bets: 1. Collects: 0. Loses: 1.
+Player pkrbabe22 shows: One pair of 7s [3h 7h]. Bets: 22.40. Collects: 0. Loses: 22.40.
+Game ended at: 2014/10/29 15:34:58
