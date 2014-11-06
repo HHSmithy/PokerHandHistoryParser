@@ -391,10 +391,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 //player posts big blind [$10 USD].
                 case '.':
                     action = ParseDotAction(line, currentStreet);
-                    if (action == null)
-                    {
-                        return true;
-                    }
                     break;
                 case ']':
                     char firstChar = line[0];
@@ -540,6 +536,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             int playerNameIndex = 0;
             if (line.EndsWith("this hand."))
+            {
+                return null;
+            }
+            else if (line.EndsWith(" has left the table."))
+            {
+                return null;
+            }
+            else if (line.EndsWith(" has joined the table."))
             {
                 return null;
             }

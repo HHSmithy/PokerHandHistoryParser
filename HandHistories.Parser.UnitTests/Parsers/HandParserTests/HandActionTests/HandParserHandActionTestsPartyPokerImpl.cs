@@ -12,6 +12,38 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+        [Test]
+        public void PlayerLeavingTable_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                                    {
+                                        new HandAction("Player5", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+
+                                        new HandAction("Player6", HandActionType.FOLD, 0, Street.Preflop),
+                                        new HandAction("Player3", HandActionType.CALL, 0.02m, Street.Preflop),
+                                        new HandAction("Player4", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("Player5", HandActionType.CALL, 0.01m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.CHECK, 0, Street.Preflop),
+
+                                        new HandAction("Player5", HandActionType.CHECK, 0m, Street.Flop),
+                                        new HandAction("Player1", HandActionType.BET, 0.06m, Street.Flop),
+                                        new HandAction("Player3", HandActionType.CALL, 0.06m, Street.Flop),
+                                        new HandAction("Player5", HandActionType.FOLD, 0m, Street.Flop),
+
+                                        new HandAction("Player1", HandActionType.BET, 0.18m, Street.Turn),
+                                        new HandAction("Player3", HandActionType.CALL, 0.18m, Street.Turn),
+
+                                        new HandAction("Player1", HandActionType.BET, 0.26m, Street.River),
+                                        new HandAction("Player3", HandActionType.FOLD, 0m, Street.River),
+                                        
+                                        new HandAction("Player1", HandActionType.MUCKS, 0m, Street.River),
+                                        new WinningsAction("Player1", HandActionType.WINS, 0.78m, 0),
+                                    };
+
+            TestParseActions("PlayerLeavingTable", expectedActions);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get

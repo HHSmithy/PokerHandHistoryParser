@@ -1,0 +1,36 @@
+﻿***** Hand History for Game 1420500000 *****
+$2 USD PL Omaha - Monday, November 1, 08:40:12 CET 2013
+Table Berlin (Real Money)
+Seat 6 is the button
+Total number of players : 6/6 
+Seat 2: Player1 ( $2 USD )
+Seat 3: Player2 ( $0 USD )
+Seat 5: Player3 ( $1.94 USD )
+Seat 6: Player4 ( $1.78 USD )
+Seat 1: Player5 ( $4.35 USD )
+Seat 4: Player6 ( $6.42 USD )
+Player5 posts small blind [$0.01 USD].
+Player2 has left the table.
+Player1 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Player1 [  Kh 4c 9c 8c ]
+Player6 folds
+Player3 calls [$0.02 USD]
+Player4 folds
+Player5 calls [$0.01 USD]
+Player1 checks
+** Dealing Flop ** [ Kc, 9s, Jd ]
+Player5 checks
+Player1 bets [$0.06 USD]
+Player3 calls [$0.06 USD]
+Player5 folds
+** Dealing Turn ** [ 5s ]
+poom88 has joined the table.
+Player1 bets [$0.18 USD]
+Player3 calls [$0.18 USD]
+** Dealing River ** [ 4h ]
+Player1 bets [$0.26 USD]
+Player3 folds
+Player1 does not show cards.
+Player1 wins $0.78 USD
+Player5 has left the table.
