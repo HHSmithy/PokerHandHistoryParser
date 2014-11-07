@@ -48,6 +48,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 .Select(str => splitStr + str.Trim('\r'));
         }
 
+        protected override string[] SplitHandsLines(string handText)
+        {
+            return base.SplitHandsLines(handText)
+                .TakeWhile(p => !p.StartsWith("Game #") && !p.EndsWith(" starts."))
+                .ToArray();
+        }
+
         protected override int ParseDealerPosition(string[] handLines)
         {
             // Expect the 6th line to look like this:
@@ -531,19 +538,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         playerName = line.Remove(amountStartIndex - smallBlindWidth);
                         return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, street);
 
-                    //#Game No : 14165268470 
-                    case '0':
-                    case '1':
-                    case '2':
-                    case '3':
-                    case '4': 
-                    case '5': 
-                    case '6':
-                    case '7':
-                    case '8':
-                    case '9':
-                        return null;
-
                     default:
                         throw new ArgumentException("Unkown posting Action: " + line);
                 }
@@ -559,10 +553,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return null;
             }
             else if (line.EndsWith(" has joined the table."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" starts."))//"Game #14164971349 starts."
             {
                 return null;
             }
