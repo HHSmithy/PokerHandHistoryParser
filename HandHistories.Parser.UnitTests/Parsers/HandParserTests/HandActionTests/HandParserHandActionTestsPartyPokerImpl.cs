@@ -44,6 +44,33 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             TestParseActions("PlayerLeavingTable", expectedActions);
         }
 
+        [Test]
+        public void PlayerSittingOut_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                                    {
+                                        new HandAction("Player3", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                                        new HandAction("Player2", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+
+                                        new HandAction("Player5", HandActionType.CALL, 0.02m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.RAISE, 0.04m, Street.Preflop),
+                                        new HandAction("Player3", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("Player2", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("Player5", HandActionType.CALL, 0.02m, Street.Preflop),
+
+                                        new HandAction("Player5", HandActionType.CHECK, 0m, Street.Flop),
+                                        new HandAction("Player1", HandActionType.CHECK, 0m, Street.Flop),
+
+                                        new HandAction("Player5", HandActionType.BET, 0.10m, Street.Turn),
+                                        new HandAction("Player1", HandActionType.FOLD, 0m, Street.Turn),
+
+                                        new HandAction("Player5", HandActionType.MUCKS, 0m, Street.Turn),
+                                        new WinningsAction("Player5", HandActionType.WINS, 0.21m, 0),
+                                    };
+
+            TestParseActions("SittingOut", expectedActions);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get

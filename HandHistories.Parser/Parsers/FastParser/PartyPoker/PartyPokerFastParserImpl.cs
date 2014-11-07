@@ -428,6 +428,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case 'D':
                     action = ParseWinsAction(line);
                     break;
+
+                //Player4 is sitting out
+                case 't':
+                    return false;
+
                 default:
                     throw new ArgumentException("Unknown lastchar: '" + lastChar + "'");
             }
