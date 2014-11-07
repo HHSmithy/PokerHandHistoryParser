@@ -13,6 +13,28 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
+        public void ParseTimeBank_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+            {
+                new HandAction("Player2", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                new HandAction("Player1", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+
+                new HandAction("Player2", HandActionType.CALL, 0.01m, Street.Preflop),
+                new HandAction("Player1", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("Player1", HandActionType.BET, 0.04m, Street.Flop),
+                new HandAction("Player2", HandActionType.RAISE, 0.16m, Street.Flop),
+                new HandAction("Player1", HandActionType.FOLD, 0m, Street.Flop),
+
+                new HandAction("Player2", HandActionType.MUCKS, 0m, Street.Flop),
+                new WinningsAction("Player2", HandActionType.WINS, 0.24m, 0),
+            };
+
+            TestParseActions("TimeBank", expectedActions);
+        }
+
+        [Test]
         public void PlayerLeavingTable_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()

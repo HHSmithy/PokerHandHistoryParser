@@ -557,6 +557,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 return null;
             }
+            //Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+            else if (line.EndsWith(" please act now."))
+            {
+                return null;
+            }
             else if (line.Contains(" shows"))
             {
                 if (isWinType(line, " shows [", ref playerNameIndex))
