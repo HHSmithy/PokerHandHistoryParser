@@ -38,11 +38,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            const string splitStr = "Game #";
+            const string splitStr = "***** Hand Hi";
+            //May contain: 
+            //"Game #14164971349 starts."
+            //and
+            //"#Game No : 14164971349 "
 
             return rawHandHistories.LazyStringSplit(splitStr)
-                .SkipWhile(p => !p.StartsWith("***** Hand H"))
-                .Where(str => string.IsNullOrWhiteSpace(str) == false && str.Length > 30)
                 .Select(str => splitStr + str.Trim('\r'));
         }
 
@@ -529,6 +531,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         playerName = line.Remove(amountStartIndex - smallBlindWidth);
                         return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, street);
 
+                    //#Game No : 14165268470 
+                    case '0':
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4': 
+                    case '5': 
+                    case '6':
+                    case '7':
+                    case '8':
+                    case '9':
+                        return null;
+
                     default:
                         throw new ArgumentException("Unkown posting Action: " + line);
                 }
@@ -544,6 +559,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return null;
             }
             else if (line.EndsWith(" has joined the table."))
+            {
+                return null;
+            }
+            else if (line.EndsWith(" starts."))//"Game #14164971349 starts."
             {
                 return null;
             }

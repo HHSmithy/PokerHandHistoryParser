@@ -72,7 +72,7 @@ namespace HandHistories.Parser.Parsers.Factory
             switch (siteName)
             {
                 case SiteName.PartyPoker:
-                    return new PartyHandHistoryRegexParserImpl();
+                    return new PartyPokerFastParserImpl();
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
