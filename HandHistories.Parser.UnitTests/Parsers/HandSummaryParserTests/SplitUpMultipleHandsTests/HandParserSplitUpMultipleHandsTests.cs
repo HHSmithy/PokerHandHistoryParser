@@ -47,6 +47,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
             TestSplittingUpHands(expectedCount);
         }
 
+        [TestCase(5)]
+        public void SplitUpMultipleHands_ExtraLines_ReturnsCorrectNumberOfHands(int expectedCount)
+        {
+            if (Site != SiteName.PartyPoker)
+            {
+                Assert.Ignore("No example for site " + Site);
+            }
+            TestSplittingUpHands(expectedCount);
+        }
+
         [TestCase(58)]
         public void SplitUpMultipleHands_NoSpace_ReturnsCorrectNumberOfHands(int expectedCount)
         {
