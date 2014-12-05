@@ -1,0 +1,20 @@
+﻿***** Hand History for Game 14209876541 *****
+$2 USD PL Omaha - Thursday, January 21, 11:28:12 CET 2013
+Table Riyadh (Real Money)
+Seat 3 is the button
+Total number of players : 2/6 
+Seat 4: Player1 ( $2 USD )
+Seat 3: Player2 ( $2 USD )
+Player2 posts small blind [$0.01 USD].
+Player1 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Player1 [  5d Ah Kh 2h ]
+Player2 calls [$0.01 USD]
+Player1 checks
+** Dealing Flop ** [ 8h, Th, 6s ]
+Player1 bets [$0.04 USD]
+Player2 raises [$0.16 USD]
+Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+Player1 folds
+Player2 does not show cards.
+Player2 wins $0.24 USD

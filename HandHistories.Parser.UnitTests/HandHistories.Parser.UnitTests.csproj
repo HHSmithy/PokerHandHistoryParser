@@ -418,6 +418,12 @@
     <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\PlayerLeavingTable.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\SittingOut.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\TimeBank.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\MultipleHandsTests\5MultipleHands.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -428,6 +428,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case 'D':
                     action = ParseWinsAction(line);
                     break;
+
+                //Player4 is sitting out
+                case 't':
+                    return false;
+
                 default:
                     throw new ArgumentException("Unknown lastchar: '" + lastChar + "'");
             }
@@ -549,6 +554,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return null;
             }
             else if (line.EndsWith(" has joined the table."))
+            {
+                return null;
+            }
+            //Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
+            else if (line.EndsWith(" please act now."))
             {
                 return null;
             }
