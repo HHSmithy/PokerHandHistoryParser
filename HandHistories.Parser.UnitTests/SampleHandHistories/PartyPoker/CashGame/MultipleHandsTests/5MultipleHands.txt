@@ -1,0 +1,174 @@
+﻿Game #1458965856 starts.
+
+#Game No : 1458965856
+***** Hand History for Game 1458965856 *****
+$4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
+Table New Orleans (Real Money)
+Seat 4 is the button
+Total number of players : 5/6 
+Seat 6: Player1 ( $4 USD )
+Seat 4: Player5 ( $4.07 USD )
+Seat 5: Player4 ( $2.87 USD )
+Seat 3: Player3 ( $5.47 USD )
+Seat 2: Player2 ( $1.54 USD )
+Player4 posts small blind [$0.02 USD].
+Player1 posts big blind [$0.04 USD].
+** Dealing down cards **
+Dealt to Player1 [  Ah 4d 5d Qc ]
+Player2 folds
+Player3 calls [$0.04 USD]
+Player5 folds
+Player4 calls [$0.02 USD]
+Player1 checks
+** Dealing Flop ** [ Qd, As, 4c ]
+Player4 checks
+Player1 bets [$0.12 USD]
+Player3 folds
+Player4 folds
+Player1 does not show cards.
+Player1 wins $0.24 USD
+Game #1458965857 starts.
+
+#Game No : 1458965857 
+***** Hand History for Game 1458965857 *****
+$4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
+Table New Orleans (Real Money)
+Seat 5 is the button
+Total number of players : 5/6 
+Seat 6: Player1 ( $4.08 USD )
+Seat 4: Player5 ( $4.07 USD )
+Seat 5: Player4 ( $2.83 USD )
+Seat 3: Player3 ( $5.43 USD )
+Seat 2: Player2 ( $1.54 USD )
+Player1 posts small blind [$0.02 USD].
+Player2 posts big blind [$0.04 USD].
+** Dealing down cards **
+Dealt to Player1 [  Jd Jh 2h 6s ]
+Player3 folds
+Player5 folds
+Player4 folds
+Player1 folds
+Player2 does not show cards.
+Player2 wins $0.06 USD
+Game #1458965856 starts.
+
+#Game No : 1458965856 
+***** Hand History for Game 1458965856 *****
+$4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
+Table New Orleans (Real Money)
+Seat 6 is the button
+Total number of players : 5/6 
+Seat 6: Player1 ( $4.06 USD )
+Seat 4: Player5 ( $4.07 USD )
+Seat 5: Player4 ( $2.83 USD )
+Seat 3: Player3 ( $5.43 USD )
+Seat 2: Player2 ( $1.56 USD )
+Player2 posts small blind [$0.02 USD].
+Player3 posts big blind [$0.04 USD].
+** Dealing down cards **
+Dealt to Player1 [  5d Kc 2c 8s ]
+Player5 folds
+Player4 folds
+Player8 has joined the table.
+Player1 folds
+Player2 calls [$0.02 USD]
+Player3 checks
+** Dealing Flop ** [ 6d, 7c, Qh ]
+Player2 checks
+Player3 checks
+** Dealing Turn ** [ 6c ]
+Player2 checks
+Player3 checks
+** Dealing River ** [ Ad ]
+Player2 checks
+Player3 checks
+Player2 shows [ Th, 7d, Jd, 4h ]two pairs, Sevens and Sixes.
+Player3 shows [ Jh, Ts, 4c, Qc ]two pairs, Queens and Sixes.
+Player3 wins $0.08 USD from the main pot with two pairs, Queens and Sixes.
+Game #1458965856 starts.
+
+#Game No : 1458965856 
+***** Hand History for Game 1458965856 *****
+$4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
+Table New Orleans (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 6: Player1 ( $4.06 USD )
+Seat 4: Player5 ( $4.07 USD )
+Seat 1: Player8 ( $2 USD )
+Seat 5: Player4 ( $2.83 USD )
+Seat 3: Player3 ( $5.47 USD )
+Seat 2: Player2 ( $1.52 USD )
+Player3 posts small blind [$0.02 USD].
+Player5 posts big blind [$0.04 USD].
+Player8 posts big blind [$0.04 USD].
+** Dealing down cards **
+Dealt to Player1 [  6c 6h Qd 9d ]
+Player4 calls [$0.04 USD]
+Player1 folds
+Player8 checks
+Player2 folds
+Player3 calls [$0.02 USD]
+Player5 raises [$0.16 USD]
+Player4 folds
+Player8 calls [$0.16 USD]
+Player3 calls [$0.16 USD]
+** Dealing Flop ** [ 2c, As, 5d ]
+Player3 checks
+Player5 checks
+Player8 checks
+** Dealing Turn ** [ 4c ]
+Player3 bets [$0.16 USD]
+Player5 calls [$0.16 USD]
+Player8 folds
+** Dealing River ** [ 3h ]
+Player3 bets [$0.40 USD]
+Player5 folds
+Player3 does not show cards.
+Player3 wins $1.32 USD
+Player4 has left the table.
+Game #14206671881 starts.
+
+#Game No : 1458965856 
+***** Hand History for Game 1458965856 *****
+$4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
+Table New Orleans (Real Money)
+Seat 4 is the button
+Total number of players : 6/6 
+Seat 6: Player1 ( $4.06 USD )
+Seat 4: Player5 ( $4 USD )
+Seat 1: Player8 ( $1.50 USD )
+Seat 5: Player7 ( $3.96 USD )
+Seat 3: Player3 ( $5.76 USD )
+Seat 2: Player2 ( $3.31 USD )
+Player7 posts small blind [$0.02 USD].
+Player1 posts big blind [$0.04 USD].
+** Dealing down cards **
+Dealt to Player1 [  Ac Td 7d As ]
+Player8 raises [$0.14 USD]
+Player2 calls [$0.14 USD]
+Player3 calls [$0.14 USD]
+Player5 folds
+Player7 calls [$0.12 USD]
+Player1 calls [$0.10 USD]
+** Dealing Flop ** [ 2d, 9s, 4d ]
+Player7 checks
+Player1 checks
+Player8 bets [$0.67 USD]
+Player2 folds
+Player3 folds
+Player7 raises [$2.68 USD]
+Player1 is all-In  [$3.92 USD]
+Player8 is all-In  [$0.69 USD]
+Player7 is all-In  [$1.14 USD]
+** Dealing Turn ** [ 6d ]
+** Dealing River ** [ 4h ]
+Player7 shows [ 9c, Jh, 5d, 9h ]a full house, Nines full of Fours.
+Player1 shows [ Ac, Td, 7d, As ]a flush, Ten high.
+Player8 doesn't show [ Ah, Ad, 8d, 8h ]a flush, Ace high.
+Player1 wins $0.10 USD from the side pot 2 with a flush, Ten high.
+Player7 wins $4.67 USD from the side pot 1 with a full house, Nines full of Fours.
+Player7 wins $4.55 USD from the main pot with a full house, Nines full of Fours.
+Game #1458965856 starts.
+
+#Game No : 1458965856 

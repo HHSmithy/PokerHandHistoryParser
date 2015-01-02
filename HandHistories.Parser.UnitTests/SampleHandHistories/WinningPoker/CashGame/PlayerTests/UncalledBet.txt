@@ -1,0 +1,13 @@
+﻿Game started at: 2015/1/2 16:32:12
+Game ID: 351651317 2/4 Tioinaite - CAP - 6-Max (Hold'em)
+Seat 3 is the button
+Seat 1: uhjsyyygakrue (397.36).
+Seat 3: zz7 (485.70).
+Player zz7 has small blind (2)
+Player uhjsyyygakrue sitting out
+Uncalled bet (2) returned to zz7
+------ Summary ------
+Pot: 0. Rake 0
+Player uhjsyyygakrue does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player zz7 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2015/1/2 16:32:13

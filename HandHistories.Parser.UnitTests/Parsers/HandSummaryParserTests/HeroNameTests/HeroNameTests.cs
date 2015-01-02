@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {
-    //[TestFixture("PartyPoker", "PP_hero")]
+    [TestFixture("PartyPoker", "PP_Hero")]
     [TestFixture("PokerStars", "PS_Hero")]
     [TestFixture("OnGame", "ONG_Hero")]
     [TestFixture("IPoker", "IPK_Hero")]

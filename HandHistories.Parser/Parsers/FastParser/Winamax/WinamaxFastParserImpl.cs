@@ -13,7 +13,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winamax
 {
-    public class WinamaxFastParserImpl : HandHistoryParserFastImpl
+    public sealed class WinamaxFastParserImpl : HandHistoryParserFastImpl
     {
         private static readonly Regex HandSplitRegex = new Regex("(Winamax Poker - )", RegexOptions.Compiled);
 

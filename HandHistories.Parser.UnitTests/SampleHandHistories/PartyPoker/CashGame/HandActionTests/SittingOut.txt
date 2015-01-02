@@ -1,0 +1,29 @@
+﻿***** Hand History for Game 142098466546 *****
+$2 USD PL Omaha - Thursday, November 13, 11:24:19 CET 2013
+Table São Paulo (Real Money)
+Seat 3 is the button
+Total number of players : 5/6 
+Seat 3: Player1 ( $5.06 USD )
+Seat 6: Player2 ( $2 USD )
+Seat 4: Player3 ( $1.72 USD )
+Seat 5: Player4 ( $0.77 USD )
+Seat 1: Player5 ( $2.57 USD )
+Player3 posts small blind [$0.01 USD].
+Player4 is sitting out
+Player2 posts big blind [$0.02 USD].
+** Dealing down cards **
+Dealt to Player2 [  6s 2d 5d 3c ]
+Player5 calls [$0.02 USD]
+Player1 raises [$0.04 USD]
+xxLudwig59xx has joined the table.
+Player3 folds
+Player2 folds
+Player5 calls [$0.02 USD]
+** Dealing Flop ** [ Qc, 9c, 4c ]
+Player5 checks
+Player1 checks
+** Dealing Turn ** [ Qd ]
+Player5 bets [$0.10 USD]
+Player1 folds
+Player5 does not show cards.
+Player5 wins $0.21 USD

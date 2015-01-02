@@ -23,8 +23,8 @@ namespace HandHistories.Parser.Utils.Extensions
                 {
                     yield return str.Substring(i, j - i); // Return non-empty match
                 }
-                i = j + 1;
-                j = str.IndexOf(splitter, i, l - i);
+                i = j;
+                j = str.IndexOf(splitter, i + 1, l - i - 1);
             }
 
             if (i < l) // Has remainder?

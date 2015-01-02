@@ -15,6 +15,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
     [TestFixture("MicroGaming")]
     [TestFixture("Winamax")]
     [TestFixture("BossMedia")]
+    [TestFixture("PartyPoker")]
     internal class HandParserPerformanceTest : HandHistoryParserBaseTests
     {
         public HandParserPerformanceTest(string site)
@@ -27,6 +28,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
         {
             const int handsCount = 1000;
             string handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, "GeneralHand");
+
+            //Warmup
+            GetParser().ParseFullHandHistory(handText);
 
             System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
             timer.Start();

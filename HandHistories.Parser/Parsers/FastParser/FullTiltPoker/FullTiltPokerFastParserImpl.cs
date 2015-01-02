@@ -13,7 +13,7 @@ using HandHistories.Parser.Utils.Strings;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
-    public class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl
     {
         public override SiteName SiteName
         {

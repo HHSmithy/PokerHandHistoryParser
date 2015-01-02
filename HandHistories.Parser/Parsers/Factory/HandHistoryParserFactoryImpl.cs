@@ -14,6 +14,7 @@ using HandHistories.Parser.Parsers.FastParser._888;
 using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Parsers.FastParser.BossMedia;
+using HandHistories.Parser.Parsers.FastParser.PartyPoker;
 
 namespace HandHistories.Parser.Parsers.Factory
 {
@@ -29,7 +30,7 @@ namespace HandHistories.Parser.Parsers.Factory
             switch (siteName)
             {
                 case SiteName.PartyPoker:
-                    return new PartyHandHistoryRegexParserImpl();
+                    return new PartyPokerFastParserImpl();
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
@@ -71,7 +72,7 @@ namespace HandHistories.Parser.Parsers.Factory
             switch (siteName)
             {
                 case SiteName.PartyPoker:
-                    return new PartyHandHistoryRegexParserImpl();
+                    return new PartyPokerFastParserImpl();
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
