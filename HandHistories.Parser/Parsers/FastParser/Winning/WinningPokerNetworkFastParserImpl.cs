@@ -531,6 +531,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 bool receivingCards = false;
                 int NameEndIndex;
                 string playerName;
+
+                //Uncalled bet (20) returned to zz7
+                if (sitOutLine[0] == 'U')
+                {
+                    break;
+                }
+
                 switch (sitOutLine[sitOutLine.Length - 1])
                 {
                     //Player bubblebubble received card: [2h]

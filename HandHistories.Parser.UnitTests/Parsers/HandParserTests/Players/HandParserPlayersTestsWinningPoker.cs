@@ -20,8 +20,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             //Seat 4: uhjsyyygakrue (77).
             PlayerList players = new PlayerList()
                            {
-                               new Player("gummyjan", 82.80m, 1),
-                               new Player("uhjsyyygakrue", 77m, 4),
+                               new Player("uhjsyyygakrue", 397.36m, 1)
+                               {
+                                   IsSittingOut = true
+                               },
+                               new Player("zz7", 485.70m, 3),
                            };
             TestParsePlayers("UncalledBet", players);
         }
