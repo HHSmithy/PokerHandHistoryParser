@@ -15,7 +15,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
-    public class IPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed class IPokerFastParserImpl : HandHistoryParserFastImpl
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 

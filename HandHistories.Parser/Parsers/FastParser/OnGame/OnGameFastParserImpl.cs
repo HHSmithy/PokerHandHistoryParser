@@ -12,7 +12,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.OnGame
 {
-    public class OnGameFastParserImpl : HandHistoryParserFastImpl
+    public sealed class OnGameFastParserImpl : HandHistoryParserFastImpl
     {
         private readonly SiteName _siteName;
 

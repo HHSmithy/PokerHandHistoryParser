@@ -16,7 +16,7 @@ using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
-    class BossMediaFastParserImpl : HandHistoryParserFastImpl
+    sealed class BossMediaFastParserImpl : HandHistoryParserFastImpl
     {
         public override SiteName SiteName
         {
