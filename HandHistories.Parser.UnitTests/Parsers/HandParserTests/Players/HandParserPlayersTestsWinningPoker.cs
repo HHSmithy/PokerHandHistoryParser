@@ -14,6 +14,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
+        public void ParsePlayers_UncalledBet()
+        {
+            //Seat 1: gummyjan (82.80).
+            //Seat 4: uhjsyyygakrue (77).
+            PlayerList players = new PlayerList()
+                           {
+                               new Player("gummyjan", 82.80m, 1),
+                               new Player("uhjsyyygakrue", 77m, 4),
+                           };
+            TestParsePlayers("UncalledBet", players);
+        }
+
+        [Test]
         public void ParsePlayers_EmptySitOut()
         {
             //Player LowardHederer sitting out

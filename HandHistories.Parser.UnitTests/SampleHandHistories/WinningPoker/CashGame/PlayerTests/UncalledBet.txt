@@ -1,0 +1,21 @@
+﻿Game started at: 2015/1/2 16:44:54
+Game ID: 351653062 1/2 Wichita Falls 1/2 - 2 (Hold'em)
+Seat 1 is the button
+Seat 1: gummyjan (82.80).
+Seat 4: uhjsyyygakrue (77).
+Player gummyjan has small blind (1)
+Player uhjsyyygakrue has big blind (2)
+Player uhjsyyygakrue received card: [8h]
+Player uhjsyyygakrue received card: [8d]
+Player gummyjan received a card.
+Player gummyjan received a card.
+Player gummyjan calls (1)
+Player uhjsyyygakrue raises (4)
+Player gummyjan folds
+Uncalled bet (4) returned to uhjsyyygakrue
+Player uhjsyyygakrue mucks cards
+------ Summary ------
+Pot: 4. Rake 0
+Player gummyjan does not show cards.Bets: 2. Collects: 0. Loses: 2.
+*Player uhjsyyygakrue mucks (does not show cards). Bets: 2. Collects: 4. Wins: 2.
+Game ended at: 2015/1/2 16:45:10
