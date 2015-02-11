@@ -1,0 +1,55 @@
+﻿Game started at: 2014/3/9 20:3:37
+Game ID: 261686404 2/4 Bornite   (Short) (Omaha)
+Seat 2 is the button
+Seat 1: 888game888 (200).
+Seat 2: Commons (200).
+Seat 3: Aquasces1 (1011.15).
+Seat 4: COMON-JOE-JUG (200).
+Seat 5: JonM. (80).
+Player Aquasces1 has small blind (2)
+Player COMON-JOE-JUG has big blind (4)
+Player JonM. wait BB
+Player 888game888 posts (2)
+Player Aquasces1 received a card.
+Player Aquasces1 received a card.
+Player Aquasces1 received a card.
+Player Aquasces1 received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player COMON-JOE-JUG received a card.
+Player 888game888 received a card.
+Player 888game888 received a card.
+Player 888game888 received a card.
+Player 888game888 received a card.
+Player Commons received a card.
+Player Commons received a card.
+Player Commons received a card.
+Player Commons received a card.
+Player 888game888 calls (2)
+Player Commons folds
+Player Aquasces1 raises (14)
+Player COMON-JOE-JUG calls (12)
+Player 888game888 calls (12)
+*** FLOP ***: [6c 5c 10s]
+Player Aquasces1 checks
+Player COMON-JOE-JUG checks
+Player 888game888 checks
+*** TURN ***: [6c 5c 10s] [8d]
+Player Aquasces1 checks
+Player COMON-JOE-JUG checks
+Player 888game888 bets (46)
+Player Aquasces1 folds
+Player COMON-JOE-JUG folds
+Uncalled bet (46) returned to 888game888
+Player 888game888 mucks cards
+------ Summary ------
+Pot: 46. Rake 2
+Board: [6c 5c 10s 8d]
+*Player 888game888 mucks (does not show cards). Bets: 16. Collects: 46. Wins: 30.
+Player Commons does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Aquasces1 does not show cards.Bets: 16. Collects: 0. Loses: 16.
+Player COMON-JOE-JUG does not show cards.Bets: 16. Collects: 0. Loses: 16.
+Player JonM. does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/9 20:4:44
+
