@@ -1,0 +1,31 @@
+﻿Game started at: 2014/3/9 21:37:30
+Game ID: 261721281 2/4 Barstowite   (Short, JP) - 2 (Hold'em)
+Seat 2 is the button
+Seat 1: ((((??????!!!!!!)))) (243.65).
+Seat 2: brokejew (258.36).
+Seat 4: VanishingFlames (184.55).
+Seat 6: cscwildcat1 (117.07).
+Player VanishingFlames has small blind (2)
+Player cscwildcat1 has big blind (4)
+Player VanishingFlames received a card.
+Player VanishingFlames received a card.
+Player cscwildcat1 received a card.
+Player cscwildcat1 received a card.
+Player ((((??????!!!!!!)))) received a card.
+Player ((((??????!!!!!!)))) received a card.
+Player brokejew received a card.
+Player brokejew received a card.
+Player ((((??????!!!!!!)))) raises (8)
+Player brokejew folds
+Player VanishingFlames folds
+Player cscwildcat1 folds
+Uncalled bet (4) returned to ((((??????!!!!!!))))
+Player ((((??????!!!!!!)))) mucks cards
+------ Summary ------
+Pot: 10. Rake 0
+*Player ((((??????!!!!!!)))) mucks (does not show cards). Bets: 4. Collects: 10. Wins: 6.
+Player brokejew does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player VanishingFlames does not show cards.Bets: 2. Collects: 0. Loses: 2.
+Player cscwildcat1 does not show cards.Bets: 4. Collects: 0. Loses: 4.
+Game ended at: 2014/3/9 21:37:52
+
