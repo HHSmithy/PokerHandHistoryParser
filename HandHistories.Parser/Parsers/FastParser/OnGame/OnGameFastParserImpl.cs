@@ -76,6 +76,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     return date.AddHours(-1);
                 case "PST":
                     return date.AddHours(8);
+                case "PDT":
+                    return date.AddHours(7);//http://www.timeanddate.com/time/zones/pdt
                 default:
                     throw new ParseHandDateException(timeZone, "Unrecognized time-zone");
             }            
