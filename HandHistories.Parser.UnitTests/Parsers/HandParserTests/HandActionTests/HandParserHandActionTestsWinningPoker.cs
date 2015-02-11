@@ -145,6 +145,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
+        public void PlayerNameWithParanthesis_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("VanishingFlames", HandActionType.SMALL_BLIND, 2m, Street.Preflop),
+                    new HandAction("cscwildcat1", HandActionType.BIG_BLIND, 4m, Street.Preflop),
+
+                    new HandAction("((((??????!!!!!!))))", HandActionType.RAISE, 8m, Street.Preflop),
+                    new HandAction("brokejew", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("VanishingFlames", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("cscwildcat1", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("((((??????!!!!!!))))", HandActionType.UNCALLED_BET, 4m, Street.Preflop),
+                    new WinningsAction("((((??????!!!!!!))))", HandActionType.WINS, 6m, 0)
+                };
+
+            TestParseActions("PlayerNameWithParanthesis", expectedActions);
+        }
+
+        [Test]
         public void UncalledBet_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()
