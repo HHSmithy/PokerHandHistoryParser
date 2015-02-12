@@ -213,7 +213,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         GetPlayerNameWithoutSpaces(actionLine);
                         
                     int actionIDIndex = actionPlayerNameStartIndex + PlayerName.Length + 1;
-                    switch (actionLine[actionIDIndex])
+                    char actionID = actionLine[actionIDIndex];
+                    switch (actionID)
                     {
                         //Player PersnicketyBeagle folds
                         case 'f':
@@ -299,11 +300,38 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             {
                 const int PlayerNameStartindex = 7;//"Player ".Length
                 string actionLine = handLines[i];
-                //Player bubblebubble wait BB
+                
                 char endChar = actionLine[actionLine.Length - 1];
-                if (endChar == '.' || endChar == 'B' || endChar == ']')
+                bool deadBet = false;
+
+                switch (endChar)
                 {
-                    return i;
+                    //Player bubblebubble wait BB
+                    case 'B':
+                        continue;//More posts can still occur
+
+                    //Player Aquasces1 received a card.
+                    case '.':
+                    //Player WP_Hero received card: [6d]
+                    case ']': 
+                        //No more posts can occur when players start reciving cards
+                        return i;
+
+                    //Player TheKunttzz posts (0.25) as a dead bet
+                    //Player TheKunttzz posts (0.50)
+                    case 't':   
+                        deadBet = true;
+                        break;
+
+                    //Player Aquasces1 has small blind (2)
+                    //Player COMON-JOE-JUG has big blind (4)
+                    //Player TheKunttzz posts (0.25)
+                    //Player TheKunttzz straddles (0.50)
+                    case ')':
+                        break;
+
+                    default:
+                        throw new HandActionException(actionLine, "Unrecognized endChar \"" + endChar + "\"");
                 }
 
                 int playerNameEndIndex = actionLine.IndexOf(" posts (");
@@ -315,25 +343,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
                 decimal Amount = ParseActionAmount(actionLine);
 
-                string actionLine2 = handLines[++i];
-                //Player bubblebubble wait BB
-                if (actionLine2.EndsWith(".") || actionLine2.EndsWith("B") || actionLine2.EndsWith("]"))
+                if (deadBet)
                 {
-                    actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
-                    return i;
+                    Amount += ParseActionAmount(handLines[++i]);
                 }
 
-                playerNameEndIndex = actionLine2.IndexOf(" posts (");
-                string playerName2 = actionLine2.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
-
-                if (playerName2 == playerName)
-                {
-                    Amount += ParseActionAmount(actionLine2);
-                }
-                //Player TheKunttzz posts (0.25) as a dead bet
-                //Player TheKunttzz posts (0.50)
-                //or
-                //Player TheKunttzz posts (0.50)
                 actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop, actionNumber++));
             }
             throw new Exception("Did not find start of Dealing of cards");
@@ -531,6 +545,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 bool receivingCards = false;
                 int NameEndIndex;
                 string playerName;
+
+                //Uncalled bet (20) returned to zz7
+                if (sitOutLine[0] == 'U')
+                {
+                    break;
+                }
+
                 switch (sitOutLine[sitOutLine.Length - 1])
                 {
                     //Player bubblebubble received card: [2h]
