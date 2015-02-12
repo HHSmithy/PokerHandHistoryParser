@@ -387,49 +387,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     default:
                         throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
                 }
-                ////*** HOLE CARDS ***
-                //if (typeOfEventChar == 'H')
-                //{
-                //    currentStreet = Street.Preflop;
-                //    return false;
-                //}
-                ////*** FLOP *** [6d 4h Jc]
-                //else if (typeOfEventChar == 'F')
-                //{
-                //    currentStreet = Street.Flop;
-                //    return false;
-                //}
-                ////*** TURN *** [6d 4h Jc] [5s]
-                //else if (typeOfEventChar == 'T')
-                //{
-                //    currentStreet = Street.Turn;
-                //    return false;
-                //}
-                ////*** RIVER *** [6d 4h Jc 5s] [6h]
-                //else if (typeOfEventChar == 'R')
-                //{
-                //    currentStreet = Street.River;
-                //    return false;
-                //}
-                ////*** SHOW DOWN ***
-                ////*** SUMMARY ***
-                //else if (typeOfEventChar == 'S')
-                //{
-                //    if (line[5] == 'H')
-                //    {
-                //        currentStreet = Street.Showdown;
-                //        return false;
-                //    }
-                //    else
-                //    {
-                //        // we are done at the summary line
-                //        return true;
-                //    }
-                //}
-                //else
-                //{
-                //    throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
-                //}
             }
 
             if (currentStreet == Street.Preflop &&
@@ -509,8 +466,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case Street.Null:
                     // Can have non posting action lines:
                     //    Craftyspirit: is sitting out                   
-                    if (lastChar == 't' || // sitting out line
-                        lastChar == 'n') // play after button line
+                    if (lastChar == 't' || // sitting out
+                        lastChar == 'n') // play after button
                     {
                         return false;
                     }

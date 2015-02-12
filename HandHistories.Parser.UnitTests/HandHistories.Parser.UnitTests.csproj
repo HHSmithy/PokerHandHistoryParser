@@ -1006,6 +1006,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\BigBlindOptionRaisesOption.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\LeavesTableMidHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\StrangePlayerNames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
