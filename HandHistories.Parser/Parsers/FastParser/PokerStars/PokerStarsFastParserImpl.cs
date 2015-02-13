@@ -305,12 +305,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
 
-            int firstActionIndex = GetFirstActionIndex(handLines);
+            int actionIndex = GetFirstActionIndex(handLines);
 
-            List<HandAction> handActions = new List<HandAction>(handLines.Length - firstActionIndex);
-            Street currentStreet = Street.Null;
+            List<HandAction> handActions = new List<HandAction>(handLines.Length - actionIndex);
 
-            for (int lineNumber = firstActionIndex; lineNumber < handLines.Length; lineNumber++)
+            actionIndex = ParseBlindActions(handLines, actionIndex, handActions);
+
+            Street currentStreet = Street.Preflop;
+
+            for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
             {
                 string handLine = handLines[lineNumber];
 
@@ -320,6 +323,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                     if (isFinished)
                     {
+                        actionIndex = lineNumber + 1;
                         break;
                     }
                 }
@@ -329,11 +333,96 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
             }
 
+            if (currentStreet == Street.Showdown)
+            {
+                ParseShowDown(handLines, actionIndex, ref handActions, gameType);
+            }
+            
             return handActions;
         }
 
+        private int ParseBlindActions(string[] handLines, int firstActionIndex, List<HandAction> handActions)
+        {
+            for (int i = firstActionIndex; i < handLines.Length; i++)
+            {
+                var line = handLines[i];
+
+                var lastChar = line[line.Length - 1];
+
+                switch (lastChar)
+                {
+                    //*** FLOP *** [6d 7c 6h]
+                    //*** TURN *** [6d 7c 6h] [2s]
+                    //*** RIVER *** [6d 7c 6h 2s] [Qc]
+                    case ']':
+                        throw new HandActionException(string.Join(Environment.NewLine, handLines), "Unexpected Line: " + line);
+                    //*** HOLE CARDS ***
+                    case'*':
+                        return i + 1;
+                    //JLlama: sits out
+                    //Craftyspirit: is sitting out
+                    case 't':
+                    //2As88 will be allowed to play after the button
+                    case 'n':
+                        continue;
+                }
+
+                int colonIndex = line.LastIndexOf(':');
+
+                var action = ParsePostingActionLine(line, colonIndex);
+                handActions.Add(action);
+            }
+            throw new HandActionException(string.Join(Environment.NewLine, handLines), "No end of posting actions");
+        }
+
+        private void ParseShowDown(string[] handLines, int actionIndex, ref List<HandAction> handActions, GameType gameType)
+        {
+            for (int i = actionIndex; i < handLines.Length; i++)
+            {
+                var line = handLines[i];
+
+                var lastChar = line[line.Length - 1];
+
+                switch (lastChar)
+                {
+                    // woezelenpip collected $7.50 from pot
+                    case 't':
+                    // templargio collected €6.08 from side pot-2
+                    case '0':
+                    case '1':
+                    case '2':
+                    case '3':
+                    case '4':
+                    case '5':
+                    case '6':
+                    case '7':
+                    case '8':
+                    case '9':
+                        handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                        continue;
+
+                    //*** SUMMARY ***
+                    case '*':
+                        return;
+
+                    //No low hand qualified
+                    //EASSA: mucks hand
+                    case 'd':
+                        if (line.EndsWith("hand"))
+                        {
+                            break;
+                        }
+                        continue;
+                }
+
+                int colonIndex = line.LastIndexOf(':'); // do backwards as players can have : in their name
+
+                var action = ParseMiscShowdownLine(line, colonIndex, gameType);
+                handActions.Add(action);
+            }
+        }
+
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="line"></param>
         /// <param name="currentStreet"></param>
@@ -360,122 +449,79 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             if (firstChar == '*') // lines with a * are either board cards, hole cards or summary info
             {
-                char typeOfEventChar = line[4];
+                char typeOfEventChar = line[7];
 
-                // we don't use a switch as we need to be able to break
-                switch (line[4])
+                switch (typeOfEventChar)
                 {
-                    case 'H':
-                        currentStreet = Street.Preflop;
-                        return false;
-                    case 'F':
+                    case 'P':
                         currentStreet = Street.Flop;
                         return false;
-                    case 'T':
+                    case 'N':
                         currentStreet = Street.Turn;
                         return false;
-                    case 'R':
+                    case 'E':
                         currentStreet = Street.River;
                         return false;
-                    case 'S':
-                        if (line[5] == 'H')
-                        {
-                            currentStreet = Street.Showdown;
-                            return false;
-                        }
+                    case 'W':
+                        currentStreet = Street.Showdown;
+                        return true;
+                    case 'M':
                         return true;
                     default:
                         throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
                 }
             }
 
-            if (currentStreet == Street.Preflop &&
-                line.StartsWith("Dealt to"))
+            // Uncalled bet lines look like:
+            // Uncalled bet ($6) returned to woezelenpip
+            if (line.Length > 29 && line[13] == '(')
             {
-                // todo: parse the player hand from this line instead of ignoring it
+                handActions.Add(ParseUncalledBetLine(line, currentStreet));
+                currentStreet = Street.Showdown;
+                return true;
+            }
+
+            switch (lastChar)
+            {
+                //golfiarzp has timed out
+                case 't':
+                //MS13ZEN leaves the table
+                case 'e':
+                //Mr Sturmer is disconnected
+                case 'd':
+                    return false;
+
+                //2As88 will be allowed to play after the button
+                //matze1987: raises $8.94 to $10.94 and is all-in
+                case 'n':
+                    if (line.EndsWith("on"))
+                    {
+                        return false;
+                    }
+                    break;
+
+                //Dealt to PS_Hero [4s 7h]
+                case ']':
+                    return false;
+            }
+
+            //zeranex88 joins the table at seat #5 
+            if (lastChar == '#' || line[line.Length - 2] == '#')
+            {
+                // joins action
+                // don't bother parsing it or adding it
                 return false;
             }
 
             int colonIndex = line.LastIndexOf(':'); // do backwards as players can have : in their name
 
-            // Uncalled bet lines look like:
-            // Uncalled bet ($6) returned to woezelenpip
-            if (line.Length > 14 && line[13] == '(' && currentStreet != Street.Showdown)
-            {
-                handActions.Add(ParseUncalledBetLine(line, currentStreet));
-                currentStreet = Street.Showdown;
-                return false;
-            }
-
-            if (currentStreet == Street.Showdown ||
-                colonIndex == -1)
-            {
-                if (lastChar == 't' ||
-                     line[line.Length - 2] == '-')
-                {
-                    // woezelenpip collected $7.50 from pot
-                    // templargio collected €6.08 from side pot-2 
-                    if (line[line.Length - 3] == 'p' ||
-                        line[line.Length - 2] == '-')
-                    {
-                        currentStreet = Street.Showdown;
-                        handActions.Add(ParseCollectedLine(line, currentStreet));
-                        return false;
-                    }
-                    // golfiarzp has timed out
-                    else if (line[line.Length - 3] == 'o')
-                    {
-                        // timed out line. don't bother with it
-                        return false;
-                    }
-                }
-                // line such as
-                //    2As88 will be allowed to play after the button
-                else if (lastChar == 'n')
-                {
-                    return false;
-                }
-                // line such as:
-                //    Mr Sturmer is disconnected 
-                // Ensure that is ed ending otherwise false positive with hand
-                else if (lastChar == 'd' &&
-                         line[line.Length - 2] == 'e')
-                {
-                    return false;
-                }
-
-                //zeranex88 joins the table at seat #5 
-                if (lastChar == '#' || line[line.Length - 2] == '#')
-                {
-                    // joins action
-                    // don't bother parsing it or adding it
-                    return false;
-                }
-                //MS13ZEN leaves the table
-                else if (lastChar == 'e')
-                {
-                    // leaves action
-                    // don't bother parsing or adding it
-                    return false;
-                }
-            }
-
             HandAction handAction;
             switch (currentStreet)
             {
-                case Street.Null:
-                    // Can have non posting action lines:
-                    //    Craftyspirit: is sitting out                   
-                    if (lastChar == 't' || // sitting out
-                        lastChar == 'n') // play after button
-                    {
-                        return false;
-                    }
-                    handAction = ParsePostingActionLine(line, colonIndex);
-                    break;
                 case Street.Showdown:
-                    handAction = ParseMiscShowdownLine(line, colonIndex, gameType);
-                    break;
+                case Street.Null:
+                    throw new HandActionException("", "Invalid State: Street");
+
                 default:
                     handAction = ParseRegularActionLine(line, colonIndex, currentStreet);
                     break;

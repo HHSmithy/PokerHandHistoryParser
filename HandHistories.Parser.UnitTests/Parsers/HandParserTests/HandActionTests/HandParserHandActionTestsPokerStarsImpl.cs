@@ -21,7 +21,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Plz3betMe", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
                     new HandAction("Luxuswasser", HandActionType.BIG_BLIND, 1m, Street.Preflop),
 
-                    new HandAction("JJScvbnm", HandActionType.RAISE, 2, Street.Preflop),
+                    new HandAction("JJScvbnm", HandActionType.RAISE, 3, Street.Preflop),
                     new HandAction("Mark_999dk", HandActionType.FOLD, 0m, Street.Preflop),
                     new HandAction("BSTUSim", HandActionType.FOLD, 0m, Street.Preflop),
                     new HandAction("nanotehn77", HandActionType.FOLD, 0, Street.Preflop),
