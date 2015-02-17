@@ -1,0 +1,39 @@
+﻿PokerStars Game #109698736646:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 13:50:24 ET
+Table 'Imperatrix III 40-100 bb' 9-max Seat #6 is the button
+Seat 1: ralfindus ($9.35 in chips) 
+Seat 2: Quks ($10.15 in chips) 
+Seat 3: drplayhard ($15.26 in chips) 
+Seat 5: zeigertier ($15.45 in chips) 
+Seat 6: ChiLam825 ($11.95 in chips) 
+Seat 7: schapu1209 ($10 in chips) 
+Seat 8: liliya.poker ($5.29 in chips) 
+Seat 9: joe3pistoale ($9.85 in chips) 
+schapu1209: posts small blind $0.05
+liliya.poker: posts big blind $0.10
+jwsando: sits out 
+*** HOLE CARDS ***
+joe3pistoale: folds 
+ralfindus: folds 
+Quks: folds 
+drplayhard: raises $0.20 to $0.30
+zeigertier: folds 
+ChiLam825: folds 
+schapu1209: raises $0.60 to $0.90
+liliya.poker: folds 
+drplayhard: calls $0.60
+*** FLOP *** [4d Kd Jd]
+schapu1209: bets $0.90
+drplayhard: folds 
+Uncalled bet ($0.90) returned to schapu1209
+schapu1209 collected $1.81 from pot
+*** SUMMARY ***
+Total pot $1.90 | Rake $0.09 
+Board [4d Kd Jd]
+Seat 1: ralfindus folded before Flop (didn't bet)
+Seat 2: Quks folded before Flop (didn't bet)
+Seat 3: drplayhard folded on the Flop
+Seat 5: zeigertier folded before Flop (didn't bet)
+Seat 6: ChiLam825 (button) folded before Flop (didn't bet)
+Seat 7: schapu1209 (small blind) collected ($1.81)
+Seat 8: liliya.poker (big blind) folded before Flop
+Seat 9: joe3pistoale folded before Flop (didn't bet)

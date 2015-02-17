@@ -1,0 +1,51 @@
+﻿PokerStars Game #109690806574:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 11:19:47 ET
+Table 'Skat III 100-250 bb, Ante' 6-max Seat #5 is the button
+Seat 1: Shupstix ($10.58 in chips) 
+Seat 2: lold.lold ($11.12 in chips) 
+Seat 3: T_Leroy ($25.96 in chips) 
+Seat 4: SW_KaiZâ‚¬R ($15.80 in chips) 
+Seat 5: pak87 ($25.60 in chips) 
+Seat 6: ilya44rus ($14.57 in chips) 
+ilya44rus: posts small blind $0.05
+Shupstix: posts big blind $0.10
+Shupstix: posts the ante $0.02
+lold.lold: posts the ante $0.02
+T_Leroy: posts the ante $0.02
+SW_KaiZâ‚¬R: posts the ante $0.02
+pak87: posts the ante $0.02
+ilya44rus: posts the ante $0.02
+*** HOLE CARDS ***
+lold.lold: folds 
+lold.lold leaves the table
+T_Leroy: raises $0.10 to $0.20
+SW_KaiZâ‚¬R: folds 
+pak87: folds 
+NastiKate joins the table at seat #2 
+ilya44rus: raises $0.70 to $0.90
+Shupstix: calls $0.80
+T_Leroy: raises $1.20 to $2.10
+ilya44rus: calls $1.20
+Shupstix: calls $1.20
+*** FLOP *** [8c 6c 9s]
+ilya44rus: bets $3.10
+Shupstix: raises $5.36 to $8.46 and is all-in
+T_Leroy: calls $8.46
+ilya44rus: raises $3.99 to $12.45 and is all-in
+T_Leroy: calls $3.99
+*** TURN *** [8c 6c 9s] [7h]
+*** RIVER *** [8c 6c 9s 7h] [3c]
+*** SHOW DOWN ***
+ilya44rus: shows [Qd Qc] (a pair of Queens)
+T_Leroy: shows [Kc Ks] (a pair of Kings)
+T_Leroy collected $7.91 from side pot
+Shupstix: mucks hand 
+T_Leroy collected $30.37 from main pot
+*** SUMMARY ***
+Total pot $39.78 Main pot $30.37. Side pot $7.91. | Rake $1.50 
+Board [8c 6c 9s 7h 3c]
+Seat 1: Shupstix (big blind) mucked
+Seat 2: lold.lold folded before Flop (didn't bet)
+Seat 3: T_Leroy showed [Kc Ks] and won ($38.28) with a pair of Kings
+Seat 4: SW_KaiZâ‚¬R folded before Flop (didn't bet)
+Seat 5: pak87 (button) folded before Flop (didn't bet)
+Seat 6: ilya44rus (small blind) showed [Qd Qc] and lost with a pair of Queens

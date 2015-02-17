@@ -1,0 +1,30 @@
+﻿PokerStars Game #109701341216:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 14:35:04 ET
+Table 'Alathfar IV 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 3: HETnpyxuu ($256.92 in chips) 
+Seat 6: JohnyB@nanas ($556.66 in chips) 
+JohnyB@nanas: posts small blind $0.50
+HETnpyxuu: posts big blind $1
+HETnpyxuu: posts the ante $0.20
+JohnyB@nanas: posts the ante $0.20
+*** HOLE CARDS ***
+JohnyB@nanas: raises $1 to $2
+HETnpyxuu: raises $8 to $10
+JohnyB@nanas: calls $8
+*** FLOP *** [9d Js Jc]
+HETnpyxuu: bets $13.50
+JohnyB@nanas: calls $13.50
+*** TURN *** [9d Js Jc] [Td]
+HETnpyxuu: checks 
+JohnyB@nanas: checks 
+*** RIVER *** [9d Js Jc Td] [Qh]
+HETnpyxuu: checks 
+JohnyB@nanas: checks 
+*** SHOW DOWN ***
+HETnpyxuu: shows [8d 8h] (a straight, Eight to Queen)
+JohnyB@nanas: mucks hand 
+HETnpyxuu collected $46.90 from pot
+*** SUMMARY ***
+Total pot $47.40 | Rake $0.50 
+Board [9d Js Jc Td Qh]
+Seat 3: HETnpyxuu (big blind) showed [8d 8h] and won ($46.90) with a straight, Eight to Queen
+Seat 6: JohnyB@nanas (button) (small blind) mucked

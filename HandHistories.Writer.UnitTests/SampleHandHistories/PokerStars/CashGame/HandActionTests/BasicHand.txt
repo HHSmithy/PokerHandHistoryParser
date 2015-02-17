@@ -1,0 +1,46 @@
+﻿PokerStars Game #109681344065:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 7:22:02 ET
+Table 'Skat III 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 1: Player_L ($47.26 in chips) 
+Seat 2: H6U5r ($25 in chips) 
+Seat 3: LovID ($27.29 in chips) 
+Seat 4: Tunks2 ($20 in chips) 
+Seat 5: Nightfox82 ($26.08 in chips) 
+Seat 6: Asaki1 ($9.10 in chips) 
+Player_L: posts small blind $0.05
+H6U5r: posts big blind $0.10
+Player_L: posts the ante $0.02
+H6U5r: posts the ante $0.02
+LovID: posts the ante $0.02
+Tunks2: posts the ante $0.02
+Nightfox82: posts the ante $0.02
+Asaki1: posts the ante $0.02
+*** HOLE CARDS ***
+LovID: folds 
+Tunks2: folds 
+Nightfox82: raises $0.22 to $0.32
+Asaki1: folds 
+Player_L: folds 
+H6U5r: calls $0.22
+*** FLOP *** [Th Kh Ac]
+H6U5r: checks 
+Nightfox82: checks 
+*** TURN *** [Th Kh Ac] [9d]
+H6U5r: checks 
+Nightfox82: bets $0.54
+H6U5r: calls $0.54
+*** RIVER *** [Th Kh Ac 9d] [8h]
+H6U5r: checks 
+Nightfox82: checks 
+*** SHOW DOWN ***
+H6U5r: shows [Js Jd] (a pair of Jacks)
+Nightfox82: shows [Ad 7d] (a pair of Jacks)
+Nightfox82 collected $1.81 from pot
+*** SUMMARY ***
+Total pot $1.89 | Rake $0.08 
+Board [Th Kh Ac 9d 8h]
+Seat 1: Player_L (small blind) folded before Flop
+Seat 2: H6U5r (big blind) showed [Js Jd] and lost with a pair of Jacks
+Seat 3: LovID folded before Flop (didn't bet)
+Seat 4: Tunks2 folded before Flop (didn't bet)
+Seat 5: Nightfox82 showed [Ad 7d] and won ($1.81) with a pair of Jacks
+Seat 6: Asaki1 (button) folded before Flop (didn't bet)

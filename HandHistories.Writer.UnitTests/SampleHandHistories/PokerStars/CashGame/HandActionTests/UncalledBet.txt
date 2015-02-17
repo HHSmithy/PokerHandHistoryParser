@@ -1,0 +1,25 @@
+﻿PokerStars Game #109716666902:  Omaha Hi/Lo Pot Limit ($0.50/$1.00 USD) - 2014/01/06 18:50:08 ET
+Table 'Rosalind IV 40-100 bb' 6-max Seat #3 is the button
+Seat 1: Beeethoven87 ($123.54 in chips) 
+Seat 3: Jon9ball ($100.96 in chips) 
+Seat 4: here_we_gizo ($28.69 in chips) 
+Seat 5: PAARTYPAN ($211.44 in chips) 
+Seat 6: liscla223 ($50.05 in chips) 
+here_we_gizo: posts small blind $0.50
+PAARTYPAN: posts big blind $1
+*** HOLE CARDS ***
+liscla223: folds 
+Beeethoven87: raises $2 to $3
+Jon9ball: folds 
+here_we_gizo: folds 
+PAARTYPAN: folds 
+Uncalled bet ($2) returned to Beeethoven87
+Beeethoven87 collected $2.50 from pot
+Beeethoven87: doesn't show hand 
+*** SUMMARY ***
+Total pot $2.50 | Rake $0 
+Seat 1: Beeethoven87 collected ($2.50)
+Seat 3: Jon9ball (button) folded before Flop (didn't bet)
+Seat 4: here_we_gizo (small blind) folded before Flop
+Seat 5: PAARTYPAN (big blind) folded before Flop
+Seat 6: liscla223 folded before Flop (didn't bet)

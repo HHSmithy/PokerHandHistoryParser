@@ -1,0 +1,58 @@
+﻿PokerStars Game #85998509763:  Hold'em No Limit (€0.05/€0.10 EUR) - 2012/09/10 19:43:58 ET
+Table 'Rarahu IV Fast,40-100 bb' 9-max Seat #9 is the button
+Seat 1: mofdis (€7.18 in chips) 
+Seat 2: metra1977 (€8.45 in chips) 
+Seat 3: CrSilva.11 (€1.38 in chips) 
+Seat 4: danystorm (€12.30 in chips) 
+Seat 5: Lenorina (€4 in chips) 
+Seat 7: soplak (€20.85 in chips) 
+Seat 8: VodkinFirst (€4.10 in chips) 
+Seat 9: templargio (€38.94 in chips) 
+mofdis: posts small blind €0.05
+metra1977: posts big blind €0.10
+Skyhand: sits out 
+*** HOLE CARDS ***
+CrSilva.11: raises €0.10 to €0.20
+danystorm: folds 
+Lenorina: raises €0.40 to €0.60
+soplak: folds 
+VodkinFirst: folds 
+templargio: calls €0.60
+mofdis: calls €0.55
+metra1977: folds 
+CrSilva.11: raises €0.78 to €1.38 and is all-in
+Lenorina: calls €0.78
+templargio: calls €0.78
+mofdis: calls €0.78
+*** FLOP *** [8s Qh Ks]
+mofdis: checks 
+Lenorina: bets €2.62 and is all-in
+templargio: calls €2.62
+mofdis: calls €2.62
+*** TURN *** [8s Qh Ks] [9s]
+mofdis: checks 
+templargio: checks 
+*** RIVER *** [8s Qh Ks 9s] [Tc]
+mofdis: checks 
+templargio: bets €12.87
+mofdis: calls €3.18 and is all-in
+Uncalled bet (€9.69) returned to templargio
+*** SHOW DOWN ***
+templargio: shows [9d Jd] (a straight, Nine to King)
+mofdis: shows [As Kd] (a pair of Kings)
+templargio collected €6.08 from side pot-2 
+Lenorina: shows [Qc Qd] (three of a kind, Queens)
+templargio collected €7.50 from side pot-1 
+CrSilva.11: shows [Jh Ad] (a straight, Ten to Ace)
+CrSilva.11 collected €5.37 from main pot
+*** SUMMARY ***
+Total pot €19.84 Main pot €5.37. Side pot-1 €7.50. Side pot-2 €6.08. | Rake €0.89 
+Board [8s Qh Ks 9s Tc]
+Seat 1: mofdis (small blind) showed [As Kd] and lost with a pair of Kings
+Seat 2: metra1977 (big blind) folded before Flop
+Seat 3: CrSilva.11 showed [Jh Ad] and won (€5.37) with a straight, Ten to Ace
+Seat 4: danystorm folded before Flop (didn't bet)
+Seat 5: Lenorina showed [Qc Qd] and lost with three of a kind, Queens
+Seat 7: soplak folded before Flop (didn't bet)
+Seat 8: VodkinFirst folded before Flop (didn't bet)
+Seat 9: templargio (button) showed [9d Jd] and won (€13.58) with a straight, Nine to King

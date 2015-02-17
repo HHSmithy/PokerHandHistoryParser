@@ -1,0 +1,23 @@
+﻿PokerStars Game #109680643860:  Hold'em Pot Limit ($0.50/$1.00 USD) - 2014/01/06 6:59:26 ET
+Table 'Liriope III 40-100 bb' 9-max Seat #9 is the button
+Seat 1: /7cuxBY ($100 in chips) 
+Seat 9: NeoCore44 ($40 in chips) 
+NeoCore44: posts small blind $0.50
+/7cuxBY: posts big blind $1
+*** HOLE CARDS ***
+NeoCore44: calls $0.50
+/7cuxBY: raises $1 to $2
+NeoCore44: calls $1
+*** FLOP *** [Ts 6d 3c]
+/7cuxBY: checks 
+NeoCore44: bets $3
+/7cuxBY: folds 
+Uncalled bet ($3) returned to NeoCore44
+Tocmihail joins the table at seat #2 
+NeoCore44 collected $3.82 from pot
+NeoCore44: doesn't show hand 
+*** SUMMARY ***
+Total pot $4 | Rake $0.18 
+Board [Ts 6d 3c]
+Seat 1: /7cuxBY (big blind) folded on the Flop
+Seat 9: NeoCore44 (button) (small blind) collected ($3.82)

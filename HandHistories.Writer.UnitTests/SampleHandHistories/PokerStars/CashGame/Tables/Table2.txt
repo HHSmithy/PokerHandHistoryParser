@@ -1,0 +1,14 @@
+﻿PokerStars Game #109706457016:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 15:55:06 ET
+Table 'Alterf II 40-100 bb' 2-max Seat #2 is the button
+Seat 1: Freddekungen ($120.37 in chips) 
+Seat 2: JordanPAA ($76.50 in chips) 
+JordanPAA: posts small blind $0.50
+Freddekungen: posts big blind $1
+*** HOLE CARDS ***
+JordanPAA: folds 
+Uncalled bet ($0.50) returned to Freddekungen
+Freddekungen collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: Freddekungen (big blind) collected ($1)
+Seat 2: JordanPAA (button) (small blind) folded before Flop

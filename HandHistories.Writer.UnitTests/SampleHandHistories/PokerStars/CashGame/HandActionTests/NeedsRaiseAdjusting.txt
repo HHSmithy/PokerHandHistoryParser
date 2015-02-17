@@ -1,0 +1,59 @@
+﻿PokerStars Game #109713978619:  Omaha Hi/Lo Limit ($300/$600 USD) - 2014/01/06 17:58:02 ET
+Table 'Binomi V 40-100 bb' 10-max Seat #6 is the button
+Seat 2: Ravenswood13 ($31586.25 in chips) 
+Seat 3: Crazy Elior ($1282.50 in chips) 
+Seat 4: joiso ($20030 in chips) 
+Seat 5: Ilari FIN ($18715.95 in chips) 
+Seat 6: LewisFriend ($15076.25 in chips) 
+Seat 7: BiatchPeople ($21433.75 in chips) 
+Seat 9: Bluf_To_Much ($12538.75 in chips) 
+BiatchPeople: posts small blind $150
+Bluf_To_Much: posts big blind $300
+JLlama: sits out 
+*** HOLE CARDS ***
+Ravenswood13: folds 
+Crazy Elior: raises $300 to $600
+joiso: raises $300 to $900
+Ilari FIN: folds 
+LewisFriend: calls $900
+BiatchPeople: folds 
+Bluf_To_Much: calls $600
+Crazy Elior: calls $300
+*** FLOP *** [9h Ts 8d]
+Bluf_To_Much: checks 
+Crazy Elior: checks 
+joiso: bets $300
+LewisFriend: calls $300
+Bluf_To_Much: calls $300
+Crazy Elior: raises $82.50 to $382.50 and is all-in
+joiso: calls $82.50
+LewisFriend: calls $82.50
+Bluf_To_Much: calls $82.50
+*** TURN *** [9h Ts 8d] [5h]
+Bluf_To_Much: checks 
+joiso: bets $600
+LewisFriend: calls $600
+Bluf_To_Much: calls $600
+*** RIVER *** [9h Ts 8d 5h] [4h]
+Bluf_To_Much: bets $600
+joiso: folds 
+LewisFriend: raises $600 to $1200
+Bluf_To_Much: calls $600
+*** SHOW DOWN ***
+LewisFriend: shows [9c 5c 2d Ah] (HI: two pair, Nines and Fives; LO: 8,5,4,2,A)
+Bluf_To_Much: shows [Qs 6h 6s 8h] (HI: a flush, Nine high)
+Bluf_To_Much collected $2100 from side pot
+LewisFriend collected $2100 from side pot
+Crazy Elior: shows [3c Th 2c Qh] (HI: a flush, Queen high; LO: 8,5,4,3,2)
+Crazy Elior collected $2637.50 from main pot
+LewisFriend collected $2637.50 from main pot
+*** SUMMARY ***
+Total pot $9480 Main pot $5275. Side pot $4200. | Rake $5 
+Board [9h Ts 8d 5h 4h]
+Seat 2: Ravenswood13 folded before Flop (didn't bet)
+Seat 3: Crazy Elior showed [3c Th 2c Qh] and won ($2637.50) with HI: a flush, Queen high; LO: 8,5,4,3,2
+Seat 4: joiso folded on the River
+Seat 5: Ilari FIN folded before Flop (didn't bet)
+Seat 6: LewisFriend (button) showed [9c 5c 2d Ah] and won ($4737.50) with HI: two pair, Nines and Fives; LO: 8,5,4,2,A
+Seat 7: BiatchPeople (small blind) folded before Flop
+Seat 9: Bluf_To_Much (big blind) showed [Qs 6h 6s 8h] and won ($2100) with HI: a flush, Nine high

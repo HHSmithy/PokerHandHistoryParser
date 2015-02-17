@@ -1,0 +1,37 @@
+﻿PokerStars Game #109685169023:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 9:10:28 ET
+Table 'Wilkens II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: SGrifon ($857 in chips) 
+Seat 2: MrChiffo ($832 in chips) 
+Seat 3: BoomDoon ($975 in chips) 
+Seat 4: fodevich ($1000 in chips) 
+Seat 5: DÃ¼ss2411 ($383 in chips) 
+Seat 6: TimStone ($1015 in chips) 
+Seat 7: floriiiiider ($1065.40 in chips) 
+Seat 8: PeVu24 ($1038.50 in chips) 
+Seat 9: cipple444 ($1046 in chips) 
+PeVu24: posts small blind $5
+cipple444: posts big blind $10
+*** HOLE CARDS ***
+SGrifon: raises $11.10 to $21.10
+MrChiffo: folds 
+BoomDoon: folds 
+fodevich: folds 
+DÃ¼ss2411: folds 
+TimStone: folds 
+floriiiiider: folds 
+PeVu24: folds 
+cipple444: folds 
+Uncalled bet ($11.10) returned to SGrifon
+SGrifon collected $25 from pot
+SGrifon: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: SGrifon collected ($25)
+Seat 2: MrChiffo folded before Flop (didn't bet)
+Seat 3: BoomDoon folded before Flop (didn't bet)
+Seat 4: fodevich folded before Flop (didn't bet)
+Seat 5: DÃ¼ss2411 folded before Flop (didn't bet)
+Seat 6: TimStone folded before Flop (didn't bet)
+Seat 7: floriiiiider (button) folded before Flop (didn't bet)
+Seat 8: PeVu24 (small blind) folded before Flop
+Seat 9: cipple444 (big blind) folded before Flop

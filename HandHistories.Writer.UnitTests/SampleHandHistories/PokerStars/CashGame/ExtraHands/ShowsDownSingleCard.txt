@@ -1,0 +1,44 @@
+﻿PokerStars Game #86005187865:  Hold'em Limit ($1/$2 USD) - 2012/09/11 0:15:11 ET
+Table 'Stavropolis III 40-100 bb' 6-max Seat #1 is the button
+Seat 1: MightyScrot ($139.16 in chips) 
+Seat 2: Wadsulator ($20 in chips) 
+Seat 3: Adnromeda ($67.83 in chips) 
+Seat 4: anggie137 ($15.84 in chips) 
+Seat 5: fingies7 ($23.07 in chips) 
+Seat 6: Zaza5573 ($12.86 in chips) 
+Wadsulator: posts small blind $0.50
+Adnromeda: posts big blind $1
+*** HOLE CARDS ***
+anggie137: calls $1
+fingies7: raises $1 to $2
+Zaza5573: raises $1 to $3
+MightyScrot: folds 
+Wadsulator: folds 
+Adnromeda: folds 
+anggie137: calls $2
+fingies7: calls $1
+*** FLOP *** [Qs Js 3h]
+anggie137: checks 
+fingies7: checks 
+Zaza5573: bets $1
+anggie137: folds 
+fingies7: calls $1
+*** TURN *** [Qs Js 3h] [Ah]
+fingies7: checks 
+Zaza5573: checks 
+*** RIVER *** [Qs Js 3h Ah] [4c]
+fingies7: bets $2
+Zaza5573: calls $2
+*** SHOW DOWN ***
+fingies7: shows [Ad Td] (a pair of Aces)
+Zaza5573: shows [Qc]
+fingies7 collected $15.84 from pot
+*** SUMMARY ***
+Total pot $16.50 | Rake $0.66 
+Board [Qs Js 3h Ah 4c]
+Seat 1: MightyScrot (button) folded before Flop (didn't bet)
+Seat 2: Wadsulator (small blind) folded before Flop
+Seat 3: Adnromeda (big blind) folded before Flop
+Seat 4: anggie137 folded on the Flop
+Seat 5: fingies7 showed [Ad Td] and won ($15.84) with a pair of Aces
+Seat 6: Zaza5573 mucked [Qc]

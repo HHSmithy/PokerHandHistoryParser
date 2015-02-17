@@ -1,0 +1,22 @@
+﻿PokerStars Game #109688539582:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 10:30:13 ET
+Table 'Sisyphus III 40-100 bb' 2-max Seat #1 is the button
+Seat 1: Fishmax3 ($177.22 in chips) 
+Seat 2: yatga ($175.85 in chips) 
+Fishmax3: posts small blind $0.50
+yatga: posts big blind $1
+*** HOLE CARDS ***
+Fishmax3: raises $1 to $2
+yatga: calls $1
+*** FLOP *** [Td 9s Ks]
+yatga: checks 
+Fishmax3: checks 
+*** TURN *** [Td 9s Ks] [7h]
+yatga: bets $1
+Fishmax3: folds 
+Uncalled bet ($1) returned to yatga
+yatga collected $3.82 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0.18 
+Board [Td 9s Ks 7h]
+Seat 1: Fishmax3 (button) (small blind) folded on the Turn
+Seat 2: yatga (big blind) collected ($3.82)

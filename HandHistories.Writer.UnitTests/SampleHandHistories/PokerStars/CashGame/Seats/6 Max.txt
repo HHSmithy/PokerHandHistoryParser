@@ -1,0 +1,40 @@
+﻿PokerStars Game #109707013172:  Omaha Hi/Lo Pot Limit ($0.05/$0.10 USD) - 2014/01/06 16:05:07 ET
+Table 'Rastaban V 40-100 bb' 6-max Seat #2 is the button
+Seat 1: besteffect+ ($7.06 in chips) 
+Seat 2: soma-ruse ($41.16 in chips) 
+Seat 3: topspud ($10.05 in chips) 
+Seat 5: HELVER4728 ($9.65 in chips) 
+Seat 6: immo 1000 ($8.86 in chips) 
+topspud: posts small blind $0.05
+HELVER4728: posts big blind $0.10
+*** HOLE CARDS ***
+immo 1000: calls $0.10
+besteffect+: folds 
+soma-ruse: folds 
+topspud: calls $0.05
+HELVER4728: checks 
+*** FLOP *** [Jh Td 8c]
+topspud: checks 
+HELVER4728: bets $0.29
+immo 1000: raises $0.87 to $1.16
+topspud: folds 
+HELVER4728: raises $2.61 to $3.77
+immo 1000: calls $2.61
+*** TURN *** [Jh Td 8c] [9c]
+HELVER4728: bets $5.78 and is all-in
+immo 1000: calls $4.99 and is all-in
+Uncalled bet ($0.79) returned to HELVER4728
+*** RIVER *** [Jh Td 8c 9c] [3h]
+*** SHOW DOWN ***
+HELVER4728: shows [3s 9d Kd Qs] (HI: a straight, Nine to King)
+immo 1000: shows [Qc Qh 9h Ts] (HI: a straight, Eight to Queen)
+HELVER4728 collected $17.06 from pot
+No low hand qualified
+*** SUMMARY ***
+Total pot $17.82 | Rake $0.76 
+Board [Jh Td 8c 9c 3h]
+Seat 1: besteffect+ folded before Flop (didn't bet)
+Seat 2: soma-ruse (button) folded before Flop (didn't bet)
+Seat 3: topspud (small blind) folded on the Flop
+Seat 5: HELVER4728 (big blind) showed [3s 9d Kd Qs] and won ($17.06) with HI: a straight, Nine to King
+Seat 6: immo 1000 showed [Qc Qh 9h Ts] and lost with HI: a straight, Eight to Queen

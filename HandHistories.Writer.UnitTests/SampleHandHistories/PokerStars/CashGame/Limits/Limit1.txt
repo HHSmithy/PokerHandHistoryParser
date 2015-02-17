@@ -1,0 +1,45 @@
+﻿PokerStars Game #109676049949:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 3:56:02 ET
+Table 'Skuld III 40-100 bb' 9-max Seat #5 is the button
+Seat 2: sanek-54440 ($7.85 in chips) 
+Seat 4: morajk ($8 in chips) 
+Seat 5: anteklaus ($6.04 in chips) 
+sanek-54440: posts small blind $0.05
+morajk: posts big blind $0.10
+*** HOLE CARDS ***
+anteklaus: calls $0.10
+sanek-54440: calls $0.05
+Pokerrabe482 is disconnected 
+Scorp29R joins the table at seat #7 
+beko260 joins the table at seat #3 
+morajk has timed out
+morajk: checks 
+*** FLOP *** [2c 4c 8d]
+sanek-54440: checks 
+ustin777 joins the table at seat #8 
+marop54 joins the table at seat #9 
+morajk has timed out
+morajk: checks 
+anteklaus: checks 
+*** TURN *** [2c 4c 8d] [7d]
+sanek-54440 is disconnected 
+sanek-54440 has timed out while disconnected
+sanek-54440: checks 
+morajk has timed out
+morajk: checks 
+anteklaus: bets $0.30
+sanek-54440 has timed out while disconnected
+sanek-54440: folds 
+morajk: calls $0.30
+*** RIVER *** [2c 4c 8d 7d] [8h]
+morajk: checks 
+anteklaus: checks 
+*** SHOW DOWN ***
+morajk: shows [3s 3c] (two pair, Eights and Threes)
+anteklaus: mucks hand 
+morajk collected $0.86 from pot
+*** SUMMARY ***
+Total pot $0.90 | Rake $0.04 
+Board [2c 4c 8d 7d 8h]
+Seat 2: sanek-54440 (small blind) folded on the Turn
+Seat 4: morajk (big blind) showed [3s 3c] and won ($0.86) with two pair, Eights and Threes
+Seat 5: anteklaus (button) mucked

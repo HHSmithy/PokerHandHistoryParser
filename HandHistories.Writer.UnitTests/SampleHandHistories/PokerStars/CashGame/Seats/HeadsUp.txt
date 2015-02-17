@@ -1,0 +1,14 @@
+﻿PokerStars Game #109675943364:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 3:50:00 ET
+Table 'Gotha 40-100 bb' 2-max Seat #1 is the button
+Seat 1: A.Kmicic ($118.94 in chips) 
+Seat 2: Kel138 ($207.80 in chips) 
+A.Kmicic: posts small blind $0.50
+Kel138: posts big blind $1
+*** HOLE CARDS ***
+A.Kmicic: folds 
+Uncalled bet ($0.50) returned to Kel138
+Kel138 collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: A.Kmicic (button) (small blind) folded before Flop
+Seat 2: Kel138 (big blind) collected ($1)

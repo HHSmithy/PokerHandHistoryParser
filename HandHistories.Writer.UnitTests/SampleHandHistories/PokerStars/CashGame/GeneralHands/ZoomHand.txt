@@ -1,0 +1,28 @@
+﻿PokerStars Game #109664415396:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/05 19:22:42 ET
+Table 'Triangulum Zoom 40-100 bb' 6-max Seat #1 is the button
+Seat 1: chukimarios ($49.57 in chips) 
+Seat 2: M.Moliere ($153.67 in chips) 
+Seat 3: NikolaSRBin ($78.60 in chips) 
+Seat 4: 9124-3 ($36.85 in chips) 
+Seat 5: JoeBlack_MS ($101 in chips) 
+Seat 6: SumerianHaze ($138.16 in chips) 
+M.Moliere: posts small blind $0.50
+NikolaSRBin: posts big blind $1
+*** HOLE CARDS ***
+9124-3: folds 
+JoeBlack_MS: folds 
+SumerianHaze: raises $2 to $3
+chukimarios: folds 
+M.Moliere: folds 
+NikolaSRBin: folds 
+Uncalled bet ($2) returned to SumerianHaze
+SumerianHaze collected $2.50 from pot
+SumerianHaze: doesn't show hand 
+*** SUMMARY ***
+Total pot $2.50 | Rake $0 
+Seat 1: chukimarios (button) folded before Flop (didn't bet)
+Seat 2: M.Moliere (small blind) folded before Flop
+Seat 3: NikolaSRBin (big blind) folded before Flop
+Seat 4: 9124-3 folded before Flop (didn't bet)
+Seat 5: JoeBlack_MS folded before Flop (didn't bet)
+Seat 6: SumerianHaze collected ($2.50)

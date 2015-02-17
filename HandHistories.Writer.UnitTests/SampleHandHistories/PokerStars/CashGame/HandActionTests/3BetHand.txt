@@ -1,0 +1,35 @@
+﻿PokerStars Game #109681406367:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 7:23:59 ET
+Table 'Skat III 100-250 bb, Ante' 6-max Seat #3 is the button
+Seat 1: Player_L ($47.15 in chips) 
+Seat 2: H6U5r ($25 in chips) 
+Seat 3: LovID ($27.08 in chips) 
+Seat 4: Tunks2 ($20.42 in chips) 
+Seat 5: Nightfox82 ($26.97 in chips) 
+Seat 6: Asaki1 ($9.31 in chips) 
+Tunks2: posts small blind $0.05
+Nightfox82: posts big blind $0.10
+Player_L: posts the ante $0.02
+H6U5r: posts the ante $0.02
+LovID: posts the ante $0.02
+Tunks2: posts the ante $0.02
+Nightfox82: posts the ante $0.02
+Asaki1: posts the ante $0.02
+*** HOLE CARDS ***
+Asaki1: folds 
+Player_L: folds 
+H6U5r: raises $0.20 to $0.30
+LovID: raises $0.60 to $0.90
+Tunks2: folds 
+Nightfox82: folds 
+H6U5r: folds 
+Uncalled bet ($0.60) returned to LovID
+LovID collected $0.87 from pot
+LovID: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.87 | Rake $0 
+Seat 1: Player_L folded before Flop (didn't bet)
+Seat 2: H6U5r folded before Flop
+Seat 3: LovID (button) collected ($0.87)
+Seat 4: Tunks2 (small blind) folded before Flop
+Seat 5: Nightfox82 (big blind) folded before Flop
+Seat 6: Asaki1 folded before Flop (didn't bet)

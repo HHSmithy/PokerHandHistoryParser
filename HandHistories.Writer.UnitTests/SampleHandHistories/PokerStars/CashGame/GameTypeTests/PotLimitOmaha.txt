@@ -1,0 +1,23 @@
+﻿PokerStars Game #109663597247:  Omaha Pot Limit ($0.05/$0.10 USD) - 2014/01/05 19:05:34 ET
+Table 'Alisary IV 100-250 bb, Ante' 9-max Seat #5 is the button
+Seat 1: Zubasa89 ($28.91 in chips) 
+Seat 5: pendle45 ($56.17 in chips) 
+pendle45: posts small blind $0.05
+Zubasa89: posts big blind $0.10
+Zubasa89: posts the ante $0.02
+pendle45: posts the ante $0.02
+*** HOLE CARDS ***
+pendle45: raises $0.24 to $0.34
+Zubasa89: calls $0.24
+*** FLOP *** [6c Jc Ah]
+Zubasa89: checks 
+pendle45: bets $0.55
+Zubasa89: folds 
+Uncalled bet ($0.55) returned to pendle45
+pendle45 collected $0.69 from pot
+pendle45: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.72 | Rake $0.03 
+Board [6c Jc Ah]
+Seat 1: Zubasa89 (big blind) folded on the Flop
+Seat 5: pendle45 (button) (small blind) collected ($0.69)

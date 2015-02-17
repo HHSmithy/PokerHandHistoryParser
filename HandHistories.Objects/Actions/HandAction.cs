@@ -22,7 +22,7 @@ namespace HandHistories.Objects.Actions
         public Street Street { get; private set; }
 
         [DataMember]
-        public int ActionNumber { get; private set; }
+        public int ActionNumber { get; set; }
         
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
@@ -166,10 +166,32 @@ namespace HandHistories.Objects.Actions
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
-                       HandActionType == HandActionType.POSTS;
+                       HandActionType == HandActionType.ANTE;
             }
         }
-       
-        
+
+        public bool IsPlayerAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.PlayerAction) != 0;
+            }
+        }
+
+        public bool IsGameAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.GameAction) != 0;
+            }
+        }
+
+        public bool IsShowdownAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.ShowDown) != 0;
+            }
+        }
     }
 }

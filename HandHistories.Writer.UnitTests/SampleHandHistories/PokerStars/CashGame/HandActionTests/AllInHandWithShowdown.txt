@@ -1,0 +1,39 @@
+﻿PokerStars Game #109688230087:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 10:23:24 ET
+Table 'Skat III 100-250 bb, Ante' 6-max Seat #3 is the button
+Seat 2: Captain2323 ($15 in chips) 
+Seat 3: matze1987 ($12.26 in chips) 
+Seat 4: numbush ($38.74 in chips) 
+Seat 5: DonKingKong ($21.06 in chips) 
+Seat 6: Gaben13 ($10.21 in chips) 
+numbush: posts small blind $0.05
+DonKingKong: posts big blind $0.10
+Captain2323: posts the ante $0.02
+matze1987: posts the ante $0.02
+numbush: posts the ante $0.02
+DonKingKong: posts the ante $0.02
+Gaben13: posts the ante $0.02
+*** HOLE CARDS ***
+Gaben13: folds 
+Captain2323: folds 
+matze1987: raises $0.20 to $0.30
+numbush: raises $1 to $1.30
+DonKingKong: folds 
+matze1987: calls $1
+*** FLOP *** [5c 4c 4h]
+numbush: bets $2
+matze1987: raises $8.94 to $10.94 and is all-in
+numbush: calls $8.94
+*** TURN *** [5c 4c 4h] [Qs]
+*** RIVER *** [5c 4c 4h Qs] [Kc]
+*** SHOW DOWN ***
+numbush: shows [Ah Ks] (two pair, Kings and Fours)
+matze1987: shows [8h 8c] (two pair, Eights and Fours)
+numbush collected $23.57 from pot
+*** SUMMARY ***
+Total pot $24.68 | Rake $1.11 
+Board [5c 4c 4h Qs Kc]
+Seat 2: Captain2323 folded before Flop (didn't bet)
+Seat 3: matze1987 (button) showed [8h 8c] and lost with two pair, Eights and Fours
+Seat 4: numbush (small blind) showed [Ah Ks] and won ($23.57) with two pair, Kings and Fours
+Seat 5: DonKingKong (big blind) folded before Flop
+Seat 6: Gaben13 folded before Flop (didn't bet)

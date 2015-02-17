@@ -1,0 +1,20 @@
+﻿PokerStars Game #109680936246:  Hold'em No Limit ($0.50/$1.00 - $20 Cap -  USD) - 2014/01/06 7:09:08 ET
+Table 'Ascanios II CAP,20-50 bb' 6-max Seat #1 is the button
+Seat 1: SirCedric ($40.14 in chips) 
+Seat 3: V_Koning ($26.91 in chips) 
+Seat 4: Giovanni1983 ($100 in chips) 
+V_Koning: posts small blind $0.50
+Giovanni1983: posts big blind $1
+asekk: sits out 
+*** HOLE CARDS ***
+SirCedric: folds 
+V_Koning: folds 
+Uncalled bet ($0.50) returned to Giovanni1983
+Giovanni1983 collected $1 from pot
+SirCedric leaves the table
+Giovanni1983: doesn't show hand 
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: SirCedric (button) folded before Flop (didn't bet)
+Seat 3: V_Koning (small blind) folded before Flop
+Seat 4: Giovanni1983 (big blind) collected ($1)
