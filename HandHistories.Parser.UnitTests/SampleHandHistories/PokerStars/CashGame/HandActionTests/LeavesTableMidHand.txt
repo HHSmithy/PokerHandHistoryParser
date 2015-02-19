@@ -1,0 +1,32 @@
+﻿PokerStars Game #113004443741:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/03/09 11:32:57 ET
+Table 'Charon III 40-100 bb' 9-max Seat #8 is the button
+Seat 3: Luxuswasser ($117.41 in chips) 
+Seat 4: JJScvbnm ($108.73 in chips) 
+Seat 5: Mark_999dk ($50.97 in chips) 
+Seat 7: BSTUSim ($220.31 in chips) 
+Seat 8: nanotehn77 ($39 in chips) 
+Seat 9: Plz3betMe ($37.81 in chips) 
+Plz3betMe: posts small blind $0.50
+Kuca :P: is sitting out 
+Luxuswasser: posts big blind $1
+*** HOLE CARDS ***
+Kuca :P leaves the table
+JJScvbnm: raises $2 to $3
+Mark_999dk: folds 
+BSTUSim: folds 
+nanotehn77: folds 
+Plz3betMe: folds 
+Luxuswasser: folds 
+Uncalled bet ($2) returned to JJScvbnm
+JJScvbnm collected $2.50 from pot
+JJScvbnm: doesn't show hand 
+*** SUMMARY ***
+Total pot $2.50 | Rake $0 
+Seat 3: Luxuswasser (big blind) folded before Flop
+Seat 4: JJScvbnm collected ($2.50)
+Seat 5: Mark_999dk folded before Flop (didn't bet)
+Seat 7: BSTUSim folded before Flop (didn't bet)
+Seat 8: nanotehn77 (button) folded before Flop (didn't bet)
+Seat 9: Plz3betMe (small blind) folded before Flop
+
+

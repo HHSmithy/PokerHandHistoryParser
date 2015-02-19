@@ -12,6 +12,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+
+        [Test]
+        public void PlayerLeavesTableMidHand_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("Plz3betMe", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
+                    new HandAction("Luxuswasser", HandActionType.BIG_BLIND, 1m, Street.Preflop),
+
+                    new HandAction("JJScvbnm", HandActionType.RAISE, 3, Street.Preflop),
+                    new HandAction("Mark_999dk", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("BSTUSim", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("nanotehn77", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("Plz3betMe", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("Luxuswasser", HandActionType.FOLD, 0, Street.Preflop),
+
+                    new HandAction("JJScvbnm", HandActionType.UNCALLED_BET, 2, Street.Preflop),
+                    new WinningsAction("JJScvbnm", HandActionType.WINS, 2.50m, 0),
+                    new HandAction("JJScvbnm", HandActionType.MUCKS,0, Street.Showdown)
+                };
+
+            TestParseActions("LeavesTableMidHand", expectedActions);
+        }
+
         [Test]
         public void StrangePlayerNames_Works()
         {
