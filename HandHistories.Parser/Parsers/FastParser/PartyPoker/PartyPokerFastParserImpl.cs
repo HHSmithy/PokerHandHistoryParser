@@ -30,6 +30,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             get { return _siteName; }
         }
 
+        public override bool RequiresTotalPotCalculation
+        {
+            get { return true; }
+        }
+
         // So the same parser can be used for It and Fr variations
         public PartyPokerFastParserImpl(SiteName siteName = SiteName.PartyPoker)
         {
