@@ -37,5 +37,32 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
 
             TestPotCalculator(0.4m, hand);
         }
+
+        [TestCase]
+        public void PotCalculatorTest_2()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 0.1m, Objects.Cards.Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 0.2m, Objects.Cards.Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 0.1m, Objects.Cards.Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.Flop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.Flop),
+
+                new HandAction("P1", HandActionType.BET, 0.2m, Objects.Cards.Street.Turn),
+                new HandAction("P2", HandActionType.CALL, 0.2m, Objects.Cards.Street.Turn),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
+                new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
+
+                new WinningsAction("P1", HandActionType.WINS, 0.8m, 0),
+            };
+
+            TestPotCalculator(0.8m, hand);
+        }
     }
 }

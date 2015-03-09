@@ -30,6 +30,9 @@ namespace HandHistories.Objects.Hand
 
         public string FullHandHistoryText { get; set; }
 
+        /// <summary>
+        /// The sum of all bets and blinds excluding uncalled bets
+        /// </summary>
         public decimal? TotalPot { get; set; }
 
         public decimal? Rake { get; set; }

@@ -8,7 +8,7 @@ using HandHistories.Objects.Players;
 
 namespace HandHistories.Objects.Hand
 {
-    public class HandHistory : HandHistorySummary
+    public sealed class HandHistory : HandHistorySummary
     {
         public HandHistory(GameDescriptor gameDescription) : base()
         {
