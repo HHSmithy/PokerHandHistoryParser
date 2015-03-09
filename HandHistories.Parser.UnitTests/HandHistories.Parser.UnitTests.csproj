@@ -111,6 +111,7 @@
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
     <Compile Include="Parsers\PerformanceTests\HandParserPerformanceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Pot\PotCalculatorTests.cs" />
     <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\FixedLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

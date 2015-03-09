@@ -28,6 +28,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             get { return true; }
         }
 
+        public override bool RequiresTotalPotCalculation
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             rawHandHistories = rawHandHistories.Replace("\r", "");

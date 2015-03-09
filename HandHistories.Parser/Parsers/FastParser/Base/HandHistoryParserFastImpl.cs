@@ -10,6 +10,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Utils.Pot;
 
 namespace HandHistories.Parser.Parsers.FastParser.Base
 {
@@ -33,6 +34,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public virtual bool RequiresAllInDetection
+        {
+            get { return false; }
+        }
+
+        public virtual bool RequiresTotalPotCalculation
         {
             get { return false; }
         }
@@ -162,6 +168,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 if (RequiresAllInDetection)
                 {
                     handHistory.HandActions = IdentifyAllInActions(handLines, handHistory.HandActions);
+                }
+                if (RequiresTotalPotCalculation)
+                {
+                    handHistory.TotalPot = PotCalculator.CalculateTotalPot(handHistory);
+                    handHistory.Rake = PotCalculator.CalculateRake(handHistory);
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);

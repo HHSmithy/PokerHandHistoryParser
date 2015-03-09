@@ -27,6 +27,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             get { return true; }
         }
 
+        public override bool RequiresTotalPotCalculation
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         protected XDocument GetXDocumentFromLines(string[] handLines)
         {
             string handString = string.Join("", handLines);
