@@ -220,15 +220,17 @@ namespace HandHistories.Writer.Writer.PokerStars
                 }
             }
 
-            bool foldedBeforeFlop = playerActionsPF
+            bool folded = playerActions
                 .FirstOrDefault(p => p.HandActionType == HandActionType.FOLD) != null;
 
-            if (foldedBeforeFlop)
+            if (folded)
             {
                 bool didBet = playerActionsPF
                     .FirstOrDefault(p => p.IsAggressiveAction || p.HandActionType == HandActionType.BIG_BLIND || p.HandActionType == HandActionType.SMALL_BLIND) != null;
 
-                return seat + position + "folded before Flop" + (didBet ? "" : " (didn't bet)");
+                string FoldStreet = GetFoldStreet(playerActions.FirstOrDefault(p => p.HandActionType == HandActionType.FOLD).Street);
+
+                return seat + position + "folded " + FoldStreet + (didBet ? "" : " (didn't bet)");
             }
             else
             {
@@ -257,12 +259,29 @@ namespace HandHistories.Writer.Writer.PokerStars
                 else
                 {
                     return string.Format("{0}{1}showed [{2}] and lost with {3}",
-                        seat,
-                        position,
-                        string.Join(" ", player.HoleCards.Select(p => p.ToString())),
-                        "a pair of Jacks");
+                    seat,
+                    position,
+                    string.Join(" ", player.HoleCards.Select(p => p.ToString())),
+                    "a pair of Jacks");
                 }
             }                   
+        }
+
+        private string GetFoldStreet(Street Street)
+        {
+            switch (Street)
+            {
+                case Street.Preflop:
+                    return "before Flop";
+                case Street.Flop:
+                    return "Flop";
+                case Street.Turn:
+                    return "Turn";
+                case Street.River:
+                    return "River";
+                default:
+                    throw new ArgumentException("Invalid Street");
+            }
         }
 
         static string WriteGameActionLine(HandAction action, HandHistory hand)
