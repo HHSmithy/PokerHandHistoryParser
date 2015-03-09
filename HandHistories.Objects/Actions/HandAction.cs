@@ -169,7 +169,22 @@ namespace HandHistories.Objects.Actions
                        HandActionType == HandActionType.POSTS;
             }
         }
-       
-        
+
+        public bool IsGameAction
+        {
+            get
+            {
+                return HandActionType == Actions.HandActionType.SMALL_BLIND ||
+                    HandActionType == Actions.HandActionType.BIG_BLIND ||
+                    HandActionType == Actions.HandActionType.ANTE ||
+                    HandActionType == Actions.HandActionType.POSTS ||
+                    HandActionType == Actions.HandActionType.BET ||
+                    HandActionType == Actions.HandActionType.CHECK ||
+                    HandActionType == Actions.HandActionType.FOLD ||
+                    HandActionType == Actions.HandActionType.ALL_IN ||
+                    HandActionType == Actions.HandActionType.CALL ||
+                    HandActionType == Actions.HandActionType.RAISE;
+            }
+        }
     }
 }
