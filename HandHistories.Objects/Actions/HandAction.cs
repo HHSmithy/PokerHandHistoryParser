@@ -13,7 +13,7 @@ namespace HandHistories.Objects.Actions
         public string PlayerName { get; private set; }
 
         [DataMember]
-        public HandActionType HandActionType { get; private set; }
+        public HandActionType HandActionType { get; protected set; }
 
         [DataMember]
         public decimal Amount { get; private set; }
