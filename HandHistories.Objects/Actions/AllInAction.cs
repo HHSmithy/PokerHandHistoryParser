@@ -14,7 +14,7 @@ namespace HandHistories.Objects.Actions
                            Street street,
                            bool isRaiseAllIn,
                            int actionNumber = 0)
-            : base(playerName, HandActionType.ALL_IN, amount, street, actionNumber)
+            : base(playerName, HandActionType.ALL_IN, amount, street, true, actionNumber)
         {
             IsRaiseAllIn = isRaiseAllIn;
         }
