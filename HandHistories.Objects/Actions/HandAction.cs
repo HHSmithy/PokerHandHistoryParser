@@ -13,7 +13,7 @@ namespace HandHistories.Objects.Actions
         public string PlayerName { get; private set; }
 
         [DataMember]
-        public HandActionType HandActionType { get; private set; }
+        public HandActionType HandActionType { get; protected set; }
 
         [DataMember]
         public decimal Amount { get; private set; }
@@ -23,11 +23,24 @@ namespace HandHistories.Objects.Actions
 
         [DataMember]
         public int ActionNumber { get; set; }
-        
+
+        [DataMember]
+        public bool IsAllIn { get; private set; }
+
+        public HandAction(string playerName,
+            HandActionType handActionType,
+            decimal amount,
+            Street street,
+            int actionNumber)
+            : this(playerName, handActionType, amount, street, false, actionNumber)
+        {
+        }
+
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
                           decimal amount,
-                          Street street, 
+                          Street street,
+                          bool AllInAction = false,
                           int actionNumber = 0)
         {
             Street = street;
@@ -35,6 +48,7 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
+            IsAllIn = false;
         }
 
         public override int GetHashCode()
@@ -52,7 +66,14 @@ namespace HandHistories.Objects.Actions
 
         public override string ToString()
         {
-            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "";
+            string format = "{0} does {1} for {2} on street {3}{4}";
+
+            return string.Format(format,
+                PlayerName,
+                HandActionType,
+                Amount.ToString("N2"),
+                Street,
+                IsAllIn ? " and is All-In" : "");
         }
 
         public void DecreaseAmount(decimal value)

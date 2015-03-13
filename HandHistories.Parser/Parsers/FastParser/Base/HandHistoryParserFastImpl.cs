@@ -426,7 +426,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
 
                 //Skip actions which have already been identified
-                if (action is AllInAction)
+                if (action.IsAllIn)
                 {
                     identifiedActions.Add(action);       
                     continue;
@@ -437,8 +437,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (playerStackRemaining[action.PlayerName] == 0)
                 {
-                    //This was a bet/raise/call for our remaining chips - we are all in
-                    AllInAction allInAction = new AllInAction(action.PlayerName, action.Amount, action.Street, true);
+                    HandAction allInAction = new HandAction(action.PlayerName, action.HandActionType, action.Amount, action.Street, true);
                     identifiedActions.Add(allInAction);
                 }
                 else
@@ -489,9 +488,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     HandAction currentAction = actions[i];
                     AllInAction allInAction = currentAction as AllInAction;
 
-                    if (currentAction.HandActionType != HandActionType.RAISE &&
-                        (allInAction == null ||
-                        allInAction.IsRaiseAllIn == false))
+                    if (currentAction.HandActionType != HandActionType.RAISE)
                     {
                         continue;
                     }
