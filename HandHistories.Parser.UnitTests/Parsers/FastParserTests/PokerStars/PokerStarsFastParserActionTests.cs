@@ -78,7 +78,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             HandAction handAction =
                  GetPokerStarsFastParser().ParseRegularActionLine(@"Fjell_konge: calls $7.56 and is all-in", 11, Street.Flop);
 
-            Assert.AreEqual(new AllInAction("Fjell_konge", 7.56m, Street.Flop, false), handAction);
+            Assert.AreEqual(new HandAction("Fjell_konge", HandActionType.CALL, 7.56m, Street.Flop, true), handAction);
         }
 
         [Test]

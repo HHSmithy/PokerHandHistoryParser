@@ -131,7 +131,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("SSfullHH", HandActionType.BET, 2.40m, Street.Turn),
                                         new HandAction("bf324846", HandActionType.CALL, 2.40m, Street.Turn),
 
-                                        new AllInAction("SSfullHH", 1.37m, Street.River,true),     
+                                        new HandAction("SSfullHH", HandActionType.BET, 1.37m, Street.River, true),     
                                         new HandAction("bf324846", HandActionType.CALL, 1.37m, Street.River), 
 
                                         new HandAction("bf324846", HandActionType.SHOW, 0, Street.Showdown),
