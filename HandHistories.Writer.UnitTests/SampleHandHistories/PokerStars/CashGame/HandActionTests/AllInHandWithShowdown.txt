@@ -26,14 +26,14 @@ numbush: calls $8.94
 *** TURN *** [5c 4c 4h] [Qs]
 *** RIVER *** [5c 4c 4h Qs] [Kc]
 *** SHOW DOWN ***
-numbush: shows [Ah Ks] (two pair, Kings and Fours)
-matze1987: shows [8h 8c] (two pair, Eights and Fours)
+numbush: shows [Ah Ks] (a pair of Jacks)
+matze1987: shows [8h 8c] (a pair of Jacks)
 numbush collected $23.57 from pot
 *** SUMMARY ***
 Total pot $24.68 | Rake $1.11 
 Board [5c 4c 4h Qs Kc]
 Seat 2: Captain2323 folded before Flop (didn't bet)
-Seat 3: matze1987 (button) showed [8h 8c] and lost with two pair, Eights and Fours
-Seat 4: numbush (small blind) showed [Ah Ks] and won ($23.57) with two pair, Kings and Fours
+Seat 3: matze1987 (button) showed [8h 8c] and lost with a pair of Jacks
+Seat 4: numbush (small blind) showed [Ah Ks] and won ($23.57) with a pair of Jacks
 Seat 5: DonKingKong (big blind) folded before Flop
 Seat 6: Gaben13 folded before Flop (didn't bet)

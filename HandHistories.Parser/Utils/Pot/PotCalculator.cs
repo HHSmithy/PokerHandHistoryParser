@@ -22,16 +22,28 @@ namespace HandHistories.Parser.Utils.Pot
                 .Player(lastAction.PlayerName)
                 .Sum(p => p.Amount);
 
-            Dictionary<string, decimal> amounts = new Dictionary<string, decimal>();
+            Dictionary<string, decimal> amounts = hand.Players
+                .ToDictionary(p => p.PlayerName, p => 0m);
 
-            foreach (var action in gameActions
-                .Street(lastAction.Street))
+            decimal amountToCall = 0;
+
+            foreach (var action in gameActions)
             {
-                if (!amounts.ContainsKey(action.PlayerName))
+                if (action.HandActionType == HandActionType.BIG_BLIND)
                 {
-                    amounts.Add(action.PlayerName, action.Amount);
+                    amountToCall = action.Amount;
                 }
-                else
+                if (action.IsBlinds || 
+                    action.HandActionType == HandActionType.POSTS)
+                {
+                    amounts[action.PlayerName] += action.Amount;
+                }
+                if (action.IsAggressiveAction)
+                {
+                    amountToCall += action.Amount;
+                    amounts[action.PlayerName] = amountToCall;
+                }
+                else if (action.HandActionType == HandActionType.CALL)
                 {
                     amounts[action.PlayerName] += action.Amount;
                 }
@@ -43,17 +55,17 @@ namespace HandHistories.Parser.Utils.Pot
             var maxCount = amounts
                 .Count(p => p.Value == maxValue);
 
-            var Pot = gameActions
-                .Sum(p => p.Amount);
+            var Pot = amounts
+                .Sum(p => p.Value);
 
             if (maxCount == 1)
             {
-                var LastBetPotContribution = amounts
-                    .Where(p => p.Value != maxValue)
-                    .Min(p => p.Value);
+                var nextValue = amounts.OrderBy(p => p.Value)
+                    .Skip(1)
+                    .First()
+                    .Value;
 
-                Pot -= maxValue;
-                Pot += LastBetPotContribution;
+                Pot -= maxValue - nextValue;
             }
 
             return Math.Abs(Pot);

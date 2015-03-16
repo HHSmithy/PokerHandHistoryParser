@@ -48,7 +48,7 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
-            IsAllIn = false;
+            IsAllIn = AllInAction;
         }
 
         public override int GetHashCode()
@@ -140,8 +140,7 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -150,7 +149,7 @@ namespace HandHistories.Objects.Actions
             get
             {
                 return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
+                       HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -176,8 +175,7 @@ namespace HandHistories.Objects.Actions
             get
             {
                 return HandActionType == HandActionType.RAISE ||                       
-                       HandActionType == HandActionType.BET ||
-                       IsAllInAction;
+                       HandActionType == HandActionType.BET;
             }
         }
 

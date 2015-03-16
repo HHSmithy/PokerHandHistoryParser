@@ -17,11 +17,12 @@ namespace HandHistories.Writer.UnitTests.Writers.PokerStars
         {
         }
 
-        [TestCase(@"ExtraHands\DateIssue1")]
-        [TestCase(@"ExtraHands\DateIssue2")]
         [TestCase(@"HandActionTests\3BetHand")]
+        [TestCase(@"HandActionTests\AllInHandWithShowdown")]
         [TestCase(@"HandActionTests\BasicHand")]
+        [TestCase(@"HandActionTests\BigBlindOptionRaisesOption")]
         [TestCase(@"HandActionTests\FoldedPreflop")]
+        [TestCase(@"HandActionTests\StrangePlayerNames")]
         public void TestFile(string path)
         {
             base.TestHand(path);

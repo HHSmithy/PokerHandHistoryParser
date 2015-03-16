@@ -55,6 +55,7 @@ namespace HandHistories.Writer.Writer.PokerStars
 
         private string WriteHandActions(HandHistory hand)
         {
+            Street previousStreet = Street.Null;
             Street currentStreet = Street.Preflop;
             var lines = new List<string>();
 
@@ -63,6 +64,7 @@ namespace HandHistories.Writer.Writer.PokerStars
             {
                 if (action.Street != currentStreet)
                 {
+                    previousStreet = currentStreet;
                     currentStreet = action.Street;
 
                     var line = GetStreetLine(currentStreet, hand.ComumnityCards);
@@ -76,8 +78,28 @@ namespace HandHistories.Writer.Writer.PokerStars
                             .Where(p => p.IsGameAction)
                             .LastOrDefault();
 
-                        if (lastAction.HandActionType == HandActionType.CALL)
+                        if (lastAction.HandActionType == HandActionType.CALL || 
+                            lastAction.HandActionType == HandActionType.CHECK)
                         {
+                            if (lastAction.Street == Street.Preflop)
+                            {
+                                //All in hand
+                                lines.Add(GetStreetLine(Street.Flop, hand.ComumnityCards));
+                                lines.Add(GetStreetLine(Street.Turn, hand.ComumnityCards));
+                                lines.Add(GetStreetLine(Street.River, hand.ComumnityCards));
+                            }
+                            else if (lastAction.Street == Street.Flop)
+                            {
+                                //All in hand
+                                lines.Add(GetStreetLine(Street.Turn, hand.ComumnityCards));
+                                lines.Add(GetStreetLine(Street.River, hand.ComumnityCards));
+                            }
+                            else if (lastAction.Street == Street.Turn)
+                            {
+                                //All in hand
+                                lines.Add(GetStreetLine(Street.River, hand.ComumnityCards));
+                            }
+
                             lines.Add("*** SHOW DOWN ***");
                         }
                     }
@@ -102,12 +124,40 @@ namespace HandHistories.Writer.Writer.PokerStars
             switch (action.HandActionType)
             {
                 case HandActionType.MUCKS:
-                    format = "{0}: doesn't show hand ";
+                    var playerShowDownActions = hand.HandActions
+                        .Street(Street.Showdown)
+                        .Player(action.PlayerName);
+
+                    bool playerWins = playerShowDownActions
+                        .FirstOrDefault(p => p.IsWinningsAction) != null;
+
+                    if (playerWins)
+                    {
+                        format = "{0}: doesn't show hand ";
+                    }
+                    else
+                    {
+                        format = "{0}: mucks hand ";
+                    }
                     break;
                 case HandActionType.SHOW:
                     return GetShowLine(action, hand);
                 case HandActionType.WINS:
-                    format = "{0} collected ${1} from pot";
+                    bool sidePotExist = hand.HandActions
+                        .FirstOrDefault(p => p.HandActionType == HandActionType.WINS_SIDE_POT ||
+                        p.HandActionType == HandActionType.TIES_SIDE_POT) != null;
+
+                    if (sidePotExist)
+                    {
+                        format = "{0} collected ${1} from main pot";
+                    }
+                    else
+                    {
+                        format = "{0} collected ${1} from pot";
+                    }
+                    break;
+                case HandActionType.WINS_SIDE_POT:
+                    format = "{0} collected ${1} from side pot";
                     break;
                 default:
                     throw new NotImplementedException("No support for action: " + action.HandActionType);
@@ -258,11 +308,20 @@ namespace HandHistories.Writer.Writer.PokerStars
                 }
                 else
                 {
-                    return string.Format("{0}{1}showed [{2}] and lost with {3}",
-                    seat,
-                    position,
-                    string.Join(" ", player.HoleCards.Select(p => p.ToString())),
-                    "a pair of Jacks");
+                    if (showsHand != null)
+                    {
+                        return string.Format("{0}{1}showed [{2}] and lost with {3}",
+                        seat,
+                        position,
+                        string.Join(" ", player.HoleCards.Select(p => p.ToString())),
+                        "a pair of Jacks");
+                    }
+                    else
+                    {
+                        return string.Format("{0}{1} mucked",
+                        seat,
+                        position);
+                    }
                 }
             }                   
         }
@@ -274,11 +333,11 @@ namespace HandHistories.Writer.Writer.PokerStars
                 case Street.Preflop:
                     return "before Flop";
                 case Street.Flop:
-                    return "Flop";
+                    return "on the Flop";
                 case Street.Turn:
-                    return "Turn";
+                    return "on the Turn";
                 case Street.River:
-                    return "River";
+                    return "on the River";
                 default:
                     throw new ArgumentException("Invalid Street");
             }
@@ -302,8 +361,8 @@ namespace HandHistories.Writer.Writer.PokerStars
                     format = "{0}: posts the ante ${1}";
                     break;
                 case HandActionType.RAISE:
-                    decimal raiseAmount = GetRaiseAmount(action, hand);
-                    format = "{0}: raises ${1} to $" + raiseAmount.ToString(NumberCulture);
+                    decimal raiseToAmount = GetRaiseToAmount(action, hand);
+                    format = "{0}: raises ${1} to $" + raiseToAmount.ToString(NumberCulture);
                     break;
                 case HandActionType.BET:
                     format = "{0}: bets ${1}";
@@ -320,24 +379,24 @@ namespace HandHistories.Writer.Writer.PokerStars
                 case HandActionType.POSTS:
                     format = "{0}: posts small blind ${1}";
                     break;
-                case HandActionType.ALL_IN:
-                    format = "{0}: raises $0.0 to ${1} and is all-in";
-                    break;
                 default:
                     throw new NotImplementedException("No support for action: " + action.HandActionType);
             }
-            return string.Format(format, 
+            return string.Format(format + (action.IsAllIn ? " and is all-in" : ""), 
                 action.PlayerName, 
                 Math.Abs(action.Amount).ToString(NumberCulture));
         }
 
-        private static decimal GetRaiseAmount(HandAction action, HandHistory hand)
+        private static decimal GetRaiseToAmount(HandAction action, HandHistory hand)
         {
+            var streetActions = hand.HandActions
+                .Street(action.Street);
+
             var bets = hand.HandActions.Street(action.Street)
+                .Where(p => p.ActionNumber < action.ActionNumber)
                 .Where(p => p.IsAggressiveAction || p.HandActionType == HandActionType.BIG_BLIND);
 
-            var amount = bets
-                .Last(p => p.ActionNumber < action.ActionNumber).Amount;
+            var amount = bets.Sum(p => p.Amount);
 
             return Math.Abs(action.Amount + amount);
         }

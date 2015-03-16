@@ -16,11 +16,9 @@ pak87: posts the ante $0.02
 ilya44rus: posts the ante $0.02
 *** HOLE CARDS ***
 lold.lold: folds 
-lold.lold leaves the table
 T_Leroy: raises $0.10 to $0.20
 SW_KaiZâ‚¬R: folds 
 pak87: folds 
-NastiKate joins the table at seat #2 
 ilya44rus: raises $0.70 to $0.90
 Shupstix: calls $0.80
 T_Leroy: raises $1.20 to $2.10
@@ -35,8 +33,8 @@ T_Leroy: calls $3.99
 *** TURN *** [8c 6c 9s] [7h]
 *** RIVER *** [8c 6c 9s 7h] [3c]
 *** SHOW DOWN ***
-ilya44rus: shows [Qd Qc] (a pair of Queens)
-T_Leroy: shows [Kc Ks] (a pair of Kings)
+ilya44rus: shows [Qd Qc] (a pair of Jacks)
+T_Leroy: shows [Kc Ks] (a pair of Jacks)
 T_Leroy collected $7.91 from side pot
 Shupstix: mucks hand 
 T_Leroy collected $30.37 from main pot
@@ -45,7 +43,7 @@ Total pot $39.78 Main pot $30.37. Side pot $7.91. | Rake $1.50
 Board [8c 6c 9s 7h 3c]
 Seat 1: Shupstix (big blind) mucked
 Seat 2: lold.lold folded before Flop (didn't bet)
-Seat 3: T_Leroy showed [Kc Ks] and won ($38.28) with a pair of Kings
+Seat 3: T_Leroy showed [Kc Ks] and won ($38.28) with a pair of Jacks
 Seat 4: SW_KaiZâ‚¬R folded before Flop (didn't bet)
 Seat 5: pak87 (button) folded before Flop (didn't bet)
-Seat 6: ilya44rus (small blind) showed [Qd Qc] and lost with a pair of Queens
+Seat 6: ilya44rus (small blind) showed [Qd Qc] and lost with a pair of Jacks

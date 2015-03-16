@@ -137,9 +137,6 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\FoldedPreflop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\LeavesTableMidHand.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\HandActionTests\NeedsRaiseAdjusting.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
