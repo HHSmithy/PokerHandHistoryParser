@@ -1,0 +1,24 @@
+﻿#Game No : 539448454
+***** 888poker Hand History for Game 539448454 *****
+$5/$10 Blinds No Limit Holdem - *** 06 01 2014 18:29:37
+Table Petrolina 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 4: heldurrrr ( $515 )
+Seat 6: promiga_pro ( $1,000 )
+Seat 7: GabeKaplan ( $1,000 )
+Seat 9: Lizzie_19 ( $1,000 )
+Lizzie_19 posts small blind [$5]
+heldurrrr posts big blind [$10]
+** Dealing down cards **
+promiga_pro folds
+GabeKaplan raises [$20]
+Lizzie_19 folds
+heldurrrr calls [$10]
+** Dealing flop ** [ 4d, 2s, 4c ]
+heldurrrr checks
+GabeKaplan bets [$30]
+heldurrrr raises [$80]
+GabeKaplan folds
+** Summary **
+heldurrrr collected [ $102.50 ]

@@ -1,0 +1,24 @@
+﻿***** History for hand R5-362053496-2 *****
+Start hand: Mon Jan 06 23:28:00 CET 2014
+Table: Bukarest [362053496] (NO_LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
+Button: seat 2
+Players in round: 2
+Seat 2: klista ($3.50) 
+Seat 5: Robin_Hood5 ($10.00) 
+klista posts small blind ($0.05)
+Robin_Hood5 posts big blind ($0.10)
+---
+Dealing pocket cards
+klista calls $0.05
+Robin_Hood5 checks
+--- Dealing flop [3h, Jd, 5c]
+Robin_Hood5 checks
+klista bets $0.10
+Robin_Hood5 folds
+---
+Summary:
+Main pot: $0.20 won by klista ($0.19)
+Rake taken: $0.01
+Seat 2: klista ($3.59), net: +$0.09
+Seat 5: Robin_Hood5 ($9.90), net: -$0.10
+***** End of hand R5-362053496-2 *****

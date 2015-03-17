@@ -1,0 +1,20 @@
+﻿***** History for hand R5-361875219-2 *****
+Start hand: Mon Jan 06 08:53:00 CET 2014
+Table: Hospitalet [361875219] (POT_LIMIT OMAHA_HI_LO $5/$5, Real money)
+Button: seat 2
+Players in round: 2
+Seat 1: alikator21 ($370.00) 
+Seat 2: McCall901 ($500.00) 
+McCall901 posts small blind ($5)
+alikator21 posts big blind ($5)
+---
+Dealing pocket cards
+McCall901 raises $5.00 to $10.00
+alikator21 folds
+---
+Summary:
+Main pot: $10.00 won by McCall901 ($10.00)
+Rake taken: $0.00
+Seat 1: alikator21 ($365.00), net: -$5.00
+Seat 2: McCall901 ($505.00), net: +$5.00
+***** End of hand R5-361875219-2 *****

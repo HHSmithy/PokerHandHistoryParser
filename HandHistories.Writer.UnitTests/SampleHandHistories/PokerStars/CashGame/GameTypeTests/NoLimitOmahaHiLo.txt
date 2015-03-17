@@ -1,0 +1,53 @@
+﻿PokerStars Game #109680525613:  Omaha Hi/Lo No Limit ($0.50/$1.00 USD) - 2014/01/06 6:54:48 ET
+Table 'Demodokus IV 40-100 bb' 9-max Seat #1 is the button
+Seat 1: Jon9ball ($63.09 in chips) 
+Seat 3: Aphily8 ($98.73 in chips) 
+Seat 4: manf21 ($118.04 in chips) 
+Seat 6: Mindster ($166.16 in chips) 
+Seat 7: imre ($92.19 in chips) 
+Seat 8: AdyDixon1985 ($60 in chips) 
+deweymex will be allowed to play after the button
+Aphily8: posts small blind $0.50
+manf21: posts big blind $1
+*** HOLE CARDS ***
+KnG1 leaves the table
+Mindster: calls $1
+imre: folds 
+AdyDixon1985: calls $1
+Jon9ball: folds 
+Aphily8: calls $0.50
+manf21: checks 
+*** FLOP *** [5s Kc 6d]
+Aphily8: checks 
+manf21: checks 
+Mindster: checks 
+JWSee joins the table at seat #5 
+AdyDixon1985: checks 
+*** TURN *** [5s Kc 6d] [Tc]
+Aphily8: checks 
+manf21: checks 
+Mindster: checks 
+AdyDixon1985: bets $2
+Aphily8: calls $2
+manf21: folds 
+Mindster: calls $2
+*** RIVER *** [5s Kc 6d Tc] [7c]
+Aphily8: checks 
+Mindster: bets $5
+AdyDixon1985: folds 
+Aphily8: calls $5
+*** SHOW DOWN ***
+Mindster: shows [Ad 3s 9c 5c] (HI: a flush, King high; LO: 7,6,5,3,A)
+Aphily8: shows [4s As 4d 3h] (HI: a straight, Three to Seven; LO: 7,6,5,3,A)
+Mindster collected $9.55 from pot
+Aphily8 collected $4.78 from pot
+Mindster collected $4.77 from pot
+*** SUMMARY ***
+Total pot $20 | Rake $0.90 
+Board [5s Kc 6d Tc 7c]
+Seat 1: Jon9ball (button) folded before Flop (didn't bet)
+Seat 3: Aphily8 (small blind) showed [4s As 4d 3h] and won ($4.78) with HI: a straight, Three to Seven; LO: 7,6,5,3,A
+Seat 4: manf21 (big blind) folded on the Turn
+Seat 6: Mindster showed [Ad 3s 9c 5c] and won ($14.32) with HI: a flush, King high; LO: 7,6,5,3,A
+Seat 7: imre folded before Flop (didn't bet)
+Seat 8: AdyDixon1985 folded on the River

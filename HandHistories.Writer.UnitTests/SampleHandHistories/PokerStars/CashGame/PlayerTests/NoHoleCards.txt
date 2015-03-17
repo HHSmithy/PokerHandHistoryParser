@@ -1,0 +1,32 @@
+﻿PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)

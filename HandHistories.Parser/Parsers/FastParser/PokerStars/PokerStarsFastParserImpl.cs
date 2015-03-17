@@ -629,7 +629,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             char actionIdentifier = actionLine[colonIndex + 2];
 
             HandActionType actionType;
-            bool isRaise = false;
             decimal amount;
             int firstDigitIndex;
 
@@ -648,30 +647,27 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     //MECO-LEO: calls $1.23
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.CALL;
+                    actionType = HandActionType.CALL;
                     break;
 
                 //MS13ZEN: bets $1.76
                 case 'b':
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.BET;
+                    actionType = HandActionType.BET;
                     break;
 
                 //Zypherin: raises $6400 to $8300              
                 case 'r':
-                    isRaise = true;
                     firstDigitIndex = actionLine.LastIndexOf(' ') + 2;
                     amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), System.Globalization.CultureInfo.InvariantCulture);
-                    actionType = (isAllIn) ? HandActionType.ALL_IN : HandActionType.RAISE;
+                    actionType = HandActionType.RAISE;
                     break;
                 default:
                     throw new HandActionException(actionLine, "ParseRegularActionLine: Unrecognized line:" + actionLine);
             }
 
-            return isAllIn
-                       ? new AllInAction(playerName, amount, currentStreet, isRaise)
-                       : new HandAction(playerName, actionType, amount, currentStreet);
+            return new HandAction(playerName, actionType, amount, currentStreet, isAllIn);
         }
 
         public HandAction ParseCollectedLine(string actionLine, Street currentStreet)

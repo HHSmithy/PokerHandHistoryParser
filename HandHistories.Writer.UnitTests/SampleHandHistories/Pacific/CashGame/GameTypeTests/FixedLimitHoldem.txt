@@ -1,0 +1,22 @@
+#Game No : 280096744
+***** 888poker Hand History for Game 280096744 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 06 01 2014 14:52:42
+Table Arapiraca 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 4: SharkBruce ( $83.90 )
+Seat 6: jou888369jou ( $1.90 )
+Seat 9: DieZizi10 ( $10 )
+jou888369jou posts small blind [$0.50]
+DieZizi10 posts big blind [$1]
+** Dealing down cards **
+SharkBruce folds
+jou888369jou raises [$1.40]
+DieZizi10 calls [$0.90]
+** Dealing flop ** [ 8h, Ks, 9c ]
+** Dealing turn ** [ Jd ]
+** Dealing river ** [ 5d ]
+** Summary **
+jou888369jou shows [ Ad, 4c ]
+DieZizi10 shows [ 2h, 7h ]
+jou888369jou collected [ $3.61 ]

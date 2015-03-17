@@ -1,0 +1,35 @@
+﻿PokerStars Game #86015904171:  Hold'em No Limit ($0.25/$0.50 - $10 Cap -  USD) - 2012/09/11 8:39:12 ET
+Table 'Acamar IV CAP, Fast,20-50 bb' 6-max Seat #3 is the button
+Seat 1: Catharina111 ($14.38 in chips) 
+Seat 3: Willo2319 ($21.09 in chips) 
+Seat 4: vitinja ($10 in chips) 
+Seat 5: /\ntiHer[] ($40.02 in chips) 
+vitinja: posts small blind $0.25
+/\ntiHer[]: posts big blind $0.50
+l3xan: sits out 
+*** HOLE CARDS ***
+Catharina111: calls $0.50
+Willo2319: calls $0.50
+vitinja: folds 
+/\ntiHer[]: checks 
+*** FLOP *** [Qc 8c 8d]
+/\ntiHer[]: bets $1
+Catharina111: folds 
+Willo2319: calls $1
+*** TURN *** [Qc 8c 8d] [8h]
+/\ntiHer[]: bets $1.50
+Willo2319: calls $1.50
+*** RIVER *** [Qc 8c 8d 8h] [5h]
+/\ntiHer[]: checks 
+Willo2319: checks 
+*** SHOW DOWN ***
+/\ntiHer[]: shows [4s 6s] (three of a kind, Eights)
+Willo2319: shows [9c 9h] (a full house, Eights full of Nines)
+Willo2319 collected $6.45 from pot
+*** SUMMARY ***
+Total pot $6.75 | Rake $0.30 
+Board [Qc 8c 8d 8h 5h]
+Seat 1: Catharina111 folded on the Flop
+Seat 3: Willo2319 (button) showed [9c 9h] and won ($6.45) with a full house, Eights full of Nines
+Seat 4: vitinja (small blind) folded before Flop
+Seat 5: /\ntiHer[] (big blind) showed [4s 6s] and lost with three of a kind, Eights

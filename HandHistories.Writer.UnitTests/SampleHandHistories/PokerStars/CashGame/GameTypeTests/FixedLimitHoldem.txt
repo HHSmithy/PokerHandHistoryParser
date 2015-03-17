@@ -1,0 +1,38 @@
+﻿PokerStars Game #109679365424:  Hold'em Limit ($0.50/$1.00 USD) - 2014/01/06 6:15:36 ET
+Table 'Melpomene II 40-100 bb' 10-max Seat #10 is the button
+Seat 1: AMSH78 ($16.85 in chips) 
+Seat 2: serrulit ($6 in chips) 
+Seat 3: crvbig ($22.85 in chips) 
+Seat 5: maverik_t ($14.50 in chips) 
+Seat 6: vital580 ($40.48 in chips) 
+Seat 7: clammyclam ($28.52 in chips) 
+Seat 8: thewirds ($13.51 in chips) 
+Seat 9: patanu1990 ($12.66 in chips) 
+Seat 10: garycute ($2.30 in chips) 
+AMSH78: posts small blind $0.25
+serrulit: posts big blind $0.50
+thewirds said, "yah session"
+yamofra: sits out 
+*** HOLE CARDS ***
+crvbig: folds 
+maverik_t: folds 
+vital580: folds 
+clammyclam: folds 
+thewirds: folds 
+patanu1990: folds 
+garycute: folds 
+AMSH78: raises $0.50 to $1
+serrulit: folds 
+Uncalled bet ($0.50) returned to AMSH78
+AMSH78 collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: AMSH78 (small blind) collected ($1)
+Seat 2: serrulit (big blind) folded before Flop
+Seat 3: crvbig folded before Flop (didn't bet)
+Seat 5: maverik_t folded before Flop (didn't bet)
+Seat 6: vital580 folded before Flop (didn't bet)
+Seat 7: clammyclam folded before Flop (didn't bet)
+Seat 8: thewirds folded before Flop (didn't bet)
+Seat 9: patanu1990 folded before Flop (didn't bet)
+Seat 10: garycute (button) folded before Flop (didn't bet)

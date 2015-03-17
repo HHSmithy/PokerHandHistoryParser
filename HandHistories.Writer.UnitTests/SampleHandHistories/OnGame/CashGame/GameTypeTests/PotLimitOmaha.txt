@@ -1,0 +1,31 @@
+﻿***** History for hand R5-361878619-322 *****
+Start hand: Mon Jan 06 03:00:00 CET 2014
+Table: Curitiba [361878619] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
+Button: seat 2
+Players in round: 2
+Seat 2: Tiresias. ($27.94) 
+Seat 4: souha7374 ($27.08) 
+Tiresias. posts small blind ($0.25)
+souha7374 posts big blind ($0.25)
+---
+Dealing pocket cards
+Tiresias. checks
+souha7374 raises $0.50 to $0.75
+Tiresias. calls $0.50
+--- Dealing flop [2h, 7d, 7c]
+souha7374 bets $1.50
+Tiresias. calls $1.50
+--- Dealing turn [5h]
+souha7374 checks
+Tiresias. bets $1.75
+souha7374 calls $1.75
+--- Dealing river [Tc]
+souha7374 checks
+Tiresias. checks
+---
+Summary:
+Main pot: $8.00 won by Tiresias. ($7.60)
+Rake taken: $0.40
+Seat 2: Tiresias. ($31.54), net: +$3.60, [8h, Kh, 4h, 8d]
+Seat 4: souha7374 ($23.08), net: -$4.00, [Js, 9h, 6s, 8c]
+***** End of hand R5-361878619-322 *****

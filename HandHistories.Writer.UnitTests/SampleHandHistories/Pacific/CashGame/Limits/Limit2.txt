@@ -1,0 +1,24 @@
+﻿#Game No : 539304505
+***** 888poker Hand History for Game 539304505 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 00:00:16
+Table Alacant 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: johnsen10 ( $104.97 )
+Seat 2: Mathrak ( $34.73 )
+Seat 4: Cupcake737 ( $93.25 )
+Seat 6: Brosway ( $100 )
+Mathrak posts small blind [$0.50]
+Cupcake737 posts big blind [$1]
+** Dealing down cards **
+Brosway folds
+johnsen10 raises [$2]
+Mathrak calls [$1.50]
+Cupcake737 raises [$5.25]
+johnsen10 calls [$4.25]
+Mathrak folds
+** Dealing flop ** [ 4h, 9d, 9c ]
+Cupcake737 bets [$10.87]
+johnsen10 folds
+** Summary **
+Cupcake737 collected [ $13.78 ]

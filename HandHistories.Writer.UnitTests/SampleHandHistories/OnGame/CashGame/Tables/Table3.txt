@@ -1,0 +1,39 @@
+﻿***** History for hand R5-361882901-144 *****
+Start hand: Mon Jan 06 00:54:00 CET 2014
+Table: Kirkuk [361882901] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 1
+Players in round: 6
+Seat 1: iPeeOnNits ($157.16) 
+Seat 3: BlackH0L3 ($137.73) 
+Seat 5: bil3176 ($194.34) 
+Seat 6: fyabcf ($100.00) 
+Seat 9: Cockatrice ($101.78) 
+Seat 10: needluck89 ($100.00) 
+BlackH0L3 posts small blind ($0.50)
+bil3176 posts big blind ($1)
+---
+Dealing pocket cards
+fyabcf raises $3.00 to $3.00
+Cockatrice folds
+needluck89 folds
+iPeeOnNits folds
+BlackH0L3 folds
+bil3176 calls $2.00
+--- Dealing flop [2c, 2d, Ad]
+bil3176 checks
+fyabcf checks
+--- Dealing turn [6s]
+bil3176 checks
+fyabcf bets $3.50
+bil3176 folds
+---
+Summary:
+Main pot: $6.50 won by fyabcf ($6.18)
+Rake taken: $0.32
+Seat 1: iPeeOnNits ($157.16), net: -$0.00
+Seat 3: BlackH0L3 ($137.23), net: -$0.50
+Seat 5: bil3176 ($191.34), net: -$3.00
+Seat 6: fyabcf ($103.18), net: +$3.18
+Seat 9: Cockatrice ($101.78), net: -$0.00
+Seat 10: needluck89 ($100.00), net: -$0.00
+***** End of hand R5-361882901-144 *****

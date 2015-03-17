@@ -1,0 +1,32 @@
+﻿***** History for hand R5-361920831-111 *****
+Start hand: Mon Jan 06 09:05:00 CET 2014
+Table: Bagdad [361920831] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
+Players in round: 3
+Seat 2: kattiza ($107.38) 
+Seat 3: spir12. ($35.73) 
+Seat 8: adamsin1 ($102.00) 
+adamsin1 posts small blind ($0.50)
+kattiza posts big blind ($1)
+---
+Dealing pocket cards
+spir12. folds
+adamsin1 raises $2.50 to $3.00
+kattiza calls $2.00
+--- Dealing flop [Jd, 7c, Kc]
+adamsin1 checks
+kattiza checks
+--- Dealing turn [5h]
+adamsin1 checks
+kattiza checks
+--- Dealing river [As]
+adamsin1 bets $4.50
+kattiza calls $4.50
+---
+Summary:
+Main pot: $15.00 won by kattiza ($14.25)
+Rake taken: $0.75
+Seat 2: kattiza ($114.13), net: +$6.75, [Ad, 9c]
+Seat 3: spir12. ($35.73), net: -$0.00
+Seat 8: adamsin1 ($94.50), net: -$7.50, [Ah, 8s]
+***** End of hand R5-361920831-111 *****

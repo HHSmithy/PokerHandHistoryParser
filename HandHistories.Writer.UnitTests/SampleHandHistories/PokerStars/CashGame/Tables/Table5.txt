@@ -1,0 +1,28 @@
+﻿PokerStars Game #109682903125:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 8:09:21 ET
+Table 'Klinkenberg Zoom 40-100 bb' 6-max Seat #1 is the button
+Seat 1: Coo1fish ($3.21 in chips) 
+Seat 2: Bluemi72 ($15.75 in chips) 
+Seat 3: STORM221221 ($10.64 in chips) 
+Seat 4: ciuchcik ($10.15 in chips) 
+Seat 5: skylookx ($10 in chips) 
+Seat 6: Parshenix ($20.08 in chips) 
+Bluemi72: posts small blind $0.05
+STORM221221: posts big blind $0.10
+*** HOLE CARDS ***
+ciuchcik: folds 
+skylookx: raises $0.20 to $0.30
+Parshenix: folds 
+Coo1fish: folds 
+Bluemi72: folds 
+STORM221221: folds 
+Uncalled bet ($0.20) returned to skylookx
+skylookx collected $0.25 from pot
+skylookx: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.25 | Rake $0 
+Seat 1: Coo1fish (button) folded before Flop (didn't bet)
+Seat 2: Bluemi72 (small blind) folded before Flop
+Seat 3: STORM221221 (big blind) folded before Flop
+Seat 4: ciuchcik folded before Flop (didn't bet)
+Seat 5: skylookx collected ($0.25)
+Seat 6: Parshenix folded before Flop (didn't bet)

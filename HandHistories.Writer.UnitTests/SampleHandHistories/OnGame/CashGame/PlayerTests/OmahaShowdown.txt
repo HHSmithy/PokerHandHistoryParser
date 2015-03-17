@@ -1,0 +1,40 @@
+﻿***** History for hand R5-361991211-178 *****
+Start hand: Mon Jan 06 18:35:00 CET 2014
+Table: Southampton [361991211] (POT_LIMIT OMAHA_HI $5/$5, Real money)
+Button: seat 5
+Players in round: 5
+Seat 3: Cockie ($454.05) 
+Seat 4: zoo0ega ($1666.40) 
+Seat 5: Ronstorm ($498.00) 
+Seat 6: LagTard_x ($742.05) 
+Seat 8: the_mino ($129.50) 
+LagTard_x posts small blind ($5)
+the_mino posts big blind ($5)
+---
+Dealing pocket cards
+Cockie raises $15.00 to $15.00
+zoo0ega folds
+Ronstorm folds
+LagTard_x folds
+the_mino calls $10.00
+--- Dealing flop [Tc, Th, 4s]
+the_mino checks
+Cockie checks
+--- Dealing turn [Kh]
+the_mino checks
+Cockie bets $25.00
+the_mino calls $25.00
+--- Dealing river [Jh]
+the_mino checks
+Cockie bets $65.00
+the_mino calls $65.00
+---
+Summary:
+Main pot: $215.00 won by Cockie ($212.00)
+Rake taken: $3
+Seat 3: Cockie ($561.05), net: +$107.00, [Jd, Ts, Td, Kd]
+Seat 4: zoo0ega ($1666.40), net: -$0.00
+Seat 5: Ronstorm ($498.00), net: -$0.00
+Seat 6: LagTard_x ($737.05), net: -$5.00
+Seat 8: the_mino ($24.50), net: -$105.00, [Ad, 4c, 4d, Jc]
+***** End of hand R5-361991211-178 *****

@@ -1,0 +1,16 @@
+﻿#Game No : 539304533
+***** 888poker Hand History for Game 539304533 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 06 01 2014 00:00:25
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: alexhind1980 ( $6 )
+Seat 2: expos299 ( $64.84 )
+Seat 9: FLopDonkey ( $55.40 )
+expos299 posts small blind [$0.50]
+FLopDonkey posts big blind [$1]
+** Dealing down cards **
+alexhind1980 folds
+expos299 folds
+** Summary **
+FLopDonkey collected [ $1.50 ]

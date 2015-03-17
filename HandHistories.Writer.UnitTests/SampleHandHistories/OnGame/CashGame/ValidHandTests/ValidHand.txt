@@ -1,0 +1,40 @@
+﻿***** History for hand R5-361956504-51 *****
+Start hand: Mon Jan 06 13:59:00 CET 2014
+Table: Macao [361956504] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 10
+Players in round: 6
+Seat 2: Nazgul_mrpl ($114.72) 
+Seat 3: spir12. ($35.00) 
+Seat 7: klok54321 ($33.34) 
+Seat 8: adamsin1 ($136.87) 
+Seat 9: K-S-N4 ($62.83) 
+Seat 10: Klaboem ($98.50) 
+Nazgul_mrpl posts small blind ($0.50)
+spir12. posts big blind ($1)
+---
+Dealing pocket cards
+klok54321 folds
+adamsin1 folds
+K-S-N4 folds
+Klaboem raises $2.00 to $2.00
+Nazgul_mrpl calls $1.50
+spir12. calls $1.00
+--- Dealing flop [3d, Kc, Qc]
+Nazgul_mrpl checks
+spir12. checks
+Klaboem checks
+--- Dealing turn [Ad]
+Nazgul_mrpl bets $6.00
+spir12. folds
+Klaboem folds
+---
+Summary:
+Main pot: $6.00 won by Nazgul_mrpl ($5.70)
+Rake taken: $0.30
+Seat 2: Nazgul_mrpl ($118.42), net: +$3.70
+Seat 3: spir12. ($33.00), net: -$2.00
+Seat 7: klok54321 ($33.34), net: -$0.00
+Seat 8: adamsin1 ($136.87), net: -$0.00
+Seat 9: K-S-N4 ($62.83), net: -$0.00
+Seat 10: Klaboem ($96.50), net: -$2.00
+***** End of hand R5-361956504-51 *****

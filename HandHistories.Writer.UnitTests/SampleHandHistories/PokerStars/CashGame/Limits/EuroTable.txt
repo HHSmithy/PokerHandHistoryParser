@@ -1,0 +1,61 @@
+﻿PokerStars Game #109666157973:  Hold'em No Limit (€0.50/€1.00 EUR) - 2014/01/05 20:05:11 ET
+
+Table 'Menkent IV 40-100 bb' 6-max Seat #5 is the button
+
+Seat 1: fullringrind (€233.46 in chips) 
+
+Seat 2: richbackbone (€100 in chips) 
+
+Seat 4: BorissKGB (€111.33 in chips) 
+
+Seat 5: koridallara (€26.24 in chips) 
+
+Seat 6: emilton1 (€243.44 in chips) 
+
+emilton1: posts small blind €0.50
+
+fullringrind: posts big blind €1
+
+*** HOLE CARDS ***
+
+richbackbone: raises €2 to €3
+
+BorissKGB: folds
+ 
+koridallara: calls €3
+
+emilton1: folds 
+
+fullringrind: folds 
+
+*** FLOP *** [Jh 5s 6d]
+
+richbackbone: checks 
+
+koridallara: bets €3
+
+richbackbone: raises €5 to €8
+
+koridallara: folds 
+
+Uncalled bet (€5) returned to richbackbone
+
+richbackbone collected €12.89 from pot
+
+richbackbone: doesn't show hand 
+
+*** SUMMARY ***
+
+Total pot €13.50 | Rake €0.61 
+
+Board [Jh 5s 6d]
+
+Seat 1: fullringrind (big blind) folded before Flop
+
+Seat 2: richbackbone collected (€12.89)
+
+Seat 4: BorissKGB folded before Flop (didn't bet)
+
+Seat 5: koridallara (button) folded on the Flop
+
+Seat 6: emilton1 (small blind) folded before Flop

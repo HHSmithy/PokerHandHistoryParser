@@ -1,0 +1,22 @@
+﻿#Game No : 349695084
+***** 888poker Hand History for Game 349695084 *****
+$0.50/$1 Blinds Fix Limit Holdem - *** 06 01 2014 19:08:11
+Table Syktyvkar 2 Max (Real Money)
+Seat 9 is the button
+Total number of players : 2
+Seat 4: SharkBruce ( $81.30 )
+Seat 9: Zeleboba ( $53 )
+Zeleboba posts small blind [$0.50]
+SharkBruce posts big blind [$1]
+** Dealing down cards **
+Zeleboba raises [$1.50]
+SharkBruce calls [$1]
+** Dealing flop ** [ Ts, 6d, 7c ]
+SharkBruce checks
+Zeleboba checks
+** Dealing turn ** [ 9c ]
+SharkBruce bets [$2]
+Zeleboba folds
+** Summary **
+SharkBruce did not show his hand
+SharkBruce collected [ $3.80 ]

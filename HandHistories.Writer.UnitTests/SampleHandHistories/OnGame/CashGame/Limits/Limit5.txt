@@ -1,0 +1,27 @@
+﻿***** History for hand R5-362055755-3 *****
+Start hand: Mon Jan 06 23:18:00 CET 2014
+Table: Torrance [362055755] (POT_LIMIT OMAHA_HI $5/$5, Real money)
+Button: seat 8
+Players in round: 3
+Seat 3: the_mino ($447.00) 
+Seat 6: LagTard_x ($360.00) 
+Seat 8: yakitaki ($141.00) 
+the_mino posts small blind ($5)
+LagTard_x posts big blind ($5)
+---
+Dealing pocket cards
+yakitaki raises $10.00 to $10.00
+the_mino calls $5.00
+LagTard_x folds
+--- Dealing flop [8c, Ks, Jc]
+the_mino checks
+yakitaki bets $25.00
+the_mino folds
+---
+Summary:
+Main pot: $25.00 won by yakitaki ($23.75)
+Rake taken: $1.25
+Seat 3: the_mino ($437.00), net: -$10.00
+Seat 6: LagTard_x ($355.00), net: -$5.00
+Seat 8: yakitaki ($154.75), net: +$13.75
+***** End of hand R5-362055755-3 *****

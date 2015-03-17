@@ -1,0 +1,29 @@
+﻿***** History for hand R5-361926621-2 *****
+Start hand: Mon Jan 06 08:42:00 CET 2014
+Table: Monrovia [361926621] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
+Button: seat 8
+Players in round: 2
+Seat 3: Rippezi ($25.00) 
+Seat 8: ERICROSA ($25.00) 
+ERICROSA posts small blind ($0.25)
+Rippezi posts big blind ($0.25)
+---
+Dealing pocket cards
+ERICROSA checks
+Rippezi raises $0.50 to $0.75
+ERICROSA raises $2.00 to $2.25
+Rippezi raises $6.00 to $6.75
+ERICROSA calls $4.50
+--- Dealing flop [Qc, Ah, Ks]
+Rippezi bets $13.50
+ERICROSA raises $18.25 to $18.25 [all in] 
+Rippezi calls $4.75 [all in] 
+--- Dealing turn [5s]
+--- Dealing river [Qh]
+---
+Summary:
+Main pot: $50.00 won by Rippezi ($49.00)
+Rake taken: $1
+Seat 3: Rippezi ($49.00), net: +$24.00, [Kd, Js, 5d, 5c]
+Seat 8: ERICROSA ($0.00), net: -$25.00, [6h, Ad, 6d, Kh]
+***** End of hand R5-361926621-2 *****

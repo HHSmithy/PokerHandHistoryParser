@@ -1,0 +1,42 @@
+﻿PokerStars Game #86008517721:  Omaha Hi/Lo Pot Limit ($0.05/$0.10 USD) - 2012/09/11 3:51:48 ET
+Table 'Muscida V 40-100 bb' 6-max Seat #4 is the button
+Seat 1: neivian ($6.36 in chips) 
+Seat 2: Lazac ($11.97 in chips) 
+Seat 3: kreator16 ($6.58 in chips) 
+Seat 4: Meelek ($0.55 in chips) 
+Seat 5: boysDcrye ($11.70 in chips) 
+Seat 6: PhillyBoyke ($9.72 in chips) 
+boysDcrye: posts small blind $0.05
+PhillyBoyke: posts big blind $0.10
+*** HOLE CARDS ***
+neivian: raises $0.25 to $0.35
+Lazac: folds 
+kreator16: folds 
+Meelek: raises $0.20 to $0.55 and is all-in
+boysDcrye: calls $0.50
+PhillyBoyke: folds 
+neivian: calls $0.20
+*** FLOP *** [Qd 7d Ad]
+boysDcrye: checks 
+neivian: checks 
+*** TURN *** [Qd 7d Ad] [7s]
+boysDcrye: checks 
+neivian: checks 
+*** RIVER *** [Qd 7d Ad 7s] [Ah]
+boysDcrye: checks 
+neivian: checks 
+*** SHOW DOWN ***
+boysDcrye: shows [As 2c 6s 5c] (HI: three of a kind, Aces)
+neivian: mucks hand 
+Meelek: shows [Qs]
+boysDcrye collected $1.67 from pot
+No low hand qualified
+*** SUMMARY ***
+Total pot $1.75 | Rake $0.08 
+Board [Qd 7d Ad 7s Ah]
+Seat 1: neivian mucked
+Seat 2: Lazac folded before Flop (didn't bet)
+Seat 3: kreator16 folded before Flop (didn't bet)
+Seat 4: Meelek (button) mucked [Qs]
+Seat 5: boysDcrye (small blind) showed [As 2c 6s 5c] and won ($1.67) with HI: three of a kind, Aces
+Seat 6: PhillyBoyke (big blind) folded before Flop

@@ -1,0 +1,19 @@
+﻿***** History for hand R5-361709806-1 *****
+Start hand: Sun Jan 05 21:32:00 CET 2014
+Table: [SPEED] Tanga [361709806] (LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 2
+Seat 5: zbocivilexx4 ($10.00) 
+Seat 8: staatbankrot ($50.00) 
+staatbankrot posts small blind ($0.25)
+zbocivilexx4 posts big blind ($0.50)
+---
+Dealing pocket cards
+staatbankrot folds
+---
+Summary:
+Main pot: $0.50 won by zbocivilexx4 ($0.50)
+Rake taken: $0.00
+Seat 5: zbocivilexx4 ($10.25), net: +$0.25
+Seat 8: staatbankrot ($49.75), net: -$0.25
+***** End of hand R5-361709806-1 *****

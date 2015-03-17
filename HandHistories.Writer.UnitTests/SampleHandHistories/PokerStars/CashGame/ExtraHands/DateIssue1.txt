@@ -1,0 +1,24 @@
+﻿PokerStars Game #61777648755:  Hold'em No Limit ($0.50/$1.00 USD) - 2011/05/06 20:51:38 PT [2011/05/06 23:51:38 ET]
+Table 'Tezcatlipoca III' 6-max Seat #4 is the button
+Seat 2: ratitoBR ($122.95 in chips)
+Seat 3: Mohamedali13 ($202.20 in chips)
+Seat 4: distelmeyer ($276.15 in chips)
+Seat 5: pokerdaqing ($110.15 in chips)
+pokerdaqing: posts small blind $0.50
+hiphoppanda: is sitting out
+ratitoBR: posts big blind $1
+*** HOLE CARDS ***
+Mohamedali13: raises $2.50 to $3.50
+distelmeyer: folds
+pokerdaqing: folds
+hiphoppanda leaves the table
+ratitoBR: folds
+Chocololo joins the table at seat #6
+Mohamedali13 collected $2.50 from pot
+Mohamedali13: doesn't show hand
+*** SUMMARY ***
+Total pot $2.50 | Rake $0
+Seat 2: ratitoBR (big blind) folded before Flop
+Seat 3: Mohamedali13 collected ($2.50)
+Seat 4: distelmeyer (button) folded before Flop (didn't bet)
+Seat 5: pokerdaqing (small blind) folded before Flop

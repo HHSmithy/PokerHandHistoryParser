@@ -1,0 +1,42 @@
+﻿PokerStars Game #109671666937:  Hold'em No Limit ($100/$200 USD) - 2014/01/05 23:18:12 ET
+Table 'Pels II 100-250 bb' 6-max Seat #3 is the button
+Seat 1: OtB_RedBaron ($27343.80 in chips) 
+Seat 2: muha84 ($20595 in chips) 
+Seat 3: LhhmMaoly ($12484.45 in chips) 
+Seat 4: forhayley ($25598 in chips) 
+Seat 5: fish2013 ($32127.57 in chips) 
+Seat 6: sat1337en ($19961.38 in chips) 
+forhayley: posts small blind $100
+fish2013: posts big blind $200
+*** HOLE CARDS ***
+sat1337en: raises $249.40 to $449.40
+OtB_RedBaron: folds 
+muha84: folds 
+LhhmMaoly: calls $449.40
+forhayley: folds 
+fish2013: calls $249.40
+*** FLOP *** [Kh 6h 9d]
+fish2013: checks 
+sat1337en: checks 
+LhhmMaoly: checks 
+*** TURN *** [Kh 6h 9d] [9h]
+fish2013: checks 
+sat1337en: bets $736.03
+LhhmMaoly: calls $736.03
+fish2013: folds 
+*** RIVER *** [Kh 6h 9d 9h] [Kd]
+sat1337en: checks 
+LhhmMaoly: checks 
+*** SHOW DOWN ***
+sat1337en: shows [Qd Qc] (two pair, Kings and Queens)
+LhhmMaoly: mucks hand 
+sat1337en collected $2915.26 from pot
+*** SUMMARY ***
+Total pot $2920.26 | Rake $5 
+Board [Kh 6h 9d 9h Kd]
+Seat 1: OtB_RedBaron folded before Flop (didn't bet)
+Seat 2: muha84 folded before Flop (didn't bet)
+Seat 3: LhhmMaoly (button) mucked
+Seat 4: forhayley (small blind) folded before Flop
+Seat 5: fish2013 (big blind) folded on the Turn
+Seat 6: sat1337en showed [Qd Qc] and won ($2915.26) with two pair, Kings and Queens

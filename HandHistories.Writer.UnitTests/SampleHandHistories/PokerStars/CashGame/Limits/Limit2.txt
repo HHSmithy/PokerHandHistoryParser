@@ -1,0 +1,43 @@
+﻿PokerStars Game #109685968004:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 9:30:07 ET
+Table 'Alya IV 40-100 bb' 9-max Seat #5 is the button
+Seat 1: Slawa15 ($41.21 in chips) 
+Seat 3: Z71avalanche ($100 in chips) 
+Seat 4: matiko09 ($100 in chips) 
+Seat 5: Poszi ($136.60 in chips) 
+Seat 6: mycka86 ($104.50 in chips) 
+Seat 7: BenaBadBeat ($139.95 in chips) 
+Seat 8: djammusic ($40 in chips) 
+Seat 9: al_pacino808 ($17.50 in chips) 
+mycka86: posts small blind $0.50
+BenaBadBeat: posts big blind $1
+Dâ€ est7oyeâ€ R: sits out 
+*** HOLE CARDS ***
+djammusic: folds 
+al_pacino808: raises $1 to $2
+Slawa15: folds 
+Z71avalanche: folds 
+matiko09: folds 
+Poszi: raises $6 to $8
+mycka86: folds 
+BenaBadBeat: folds 
+al_pacino808: calls $6
+*** FLOP *** [8c 3s 2d]
+al_pacino808: bets $9.50 and is all-in
+Poszi: calls $9.50
+*** TURN *** [8c 3s 2d] [3h]
+*** RIVER *** [8c 3s 2d 3h] [4c]
+*** SHOW DOWN ***
+al_pacino808: shows [Ac Tc] (a pair of Threes)
+Poszi: shows [Ad Kd] (a pair of Threes - Ace+King kicker)
+Poszi collected $34.86 from pot
+*** SUMMARY ***
+Total pot $36.50 | Rake $1.64 
+Board [8c 3s 2d 3h 4c]
+Seat 1: Slawa15 folded before Flop (didn't bet)
+Seat 3: Z71avalanche folded before Flop (didn't bet)
+Seat 4: matiko09 folded before Flop (didn't bet)
+Seat 5: Poszi (button) showed [Ad Kd] and won ($34.86) with a pair of Threes
+Seat 6: mycka86 (small blind) folded before Flop
+Seat 7: BenaBadBeat (big blind) folded before Flop
+Seat 8: djammusic folded before Flop (didn't bet)
+Seat 9: al_pacino808 showed [Ac Tc] and lost with a pair of Threes

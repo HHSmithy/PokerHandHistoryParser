@@ -1,0 +1,44 @@
+﻿***** History for hand R5-362019465-110 *****
+Start hand: Mon Jan 06 20:53:00 CET 2014
+Table: Barquisimeto [362019465] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 6
+Players in round: 6
+Seat 3: julejeipen ($54.56) 
+Seat 4: xxGibaxx ($56.75) 
+Seat 5: TrickyRojer ($108.28) 
+Seat 6: BlackH0L3 ($97.55) 
+Seat 7: trunaldini ($131.61) 
+Seat 9: Iamreadless ($161.91) 
+trunaldini posts small blind ($0.50)
+Iamreadless posts big blind ($1)
+---
+Dealing pocket cards
+julejeipen calls $1.00
+xxGibaxx calls $1.00
+TrickyRojer folds
+BlackH0L3 calls $1.00
+trunaldini folds
+Iamreadless checks
+--- Dealing flop [Qc, 6d, 8c]
+Iamreadless checks
+julejeipen checks
+xxGibaxx checks
+BlackH0L3 checks
+--- Dealing turn [Js]
+Iamreadless checks
+julejeipen bets $1.00
+xxGibaxx raises $4.00 to $4.00
+BlackH0L3 folds
+Iamreadless folds
+julejeipen folds
+---
+Summary:
+Main pot: $6.50 won by xxGibaxx ($6.18)
+Rake taken: $0.32
+Seat 3: julejeipen ($52.56), net: -$2.00
+Seat 4: xxGibaxx ($60.93), net: +$4.18
+Seat 5: TrickyRojer ($108.28), net: -$0.00
+Seat 6: BlackH0L3 ($96.55), net: -$1.00
+Seat 7: trunaldini ($131.11), net: -$0.50
+Seat 9: Iamreadless ($160.91), net: -$1.00
+***** End of hand R5-362019465-110 *****

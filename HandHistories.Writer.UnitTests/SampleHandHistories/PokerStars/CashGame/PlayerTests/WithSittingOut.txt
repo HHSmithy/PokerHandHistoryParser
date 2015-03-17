@@ -1,0 +1,23 @@
+﻿PokerStars Hand #78407803350:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 4:02:16 ET
+Table 'Berenike' 6-max Seat #1 is the button
+Seat 1: neverJa(1)ger ($22.07 in chips) 
+Seat 2: s1N91 ($16.56 in chips) 
+Seat 4: Blahdi:42eblah ($22.99 in chips) 
+Seat 6: antol34 ($16 in chips) 
+s1N91: posts small blind $0.08
+Blahdieblah: posts big blind $0.16
+xPastorcitox: sits out 
+*** HOLE CARDS ***
+bamsebimse22 joins the table at seat #3 
+antol34: folds 
+neverJager: folds 
+s1N91: folds 
+Uncalled bet ($0.08) returned to Blahdieblah
+Blahdieblah collected $0.16 from pot
+Blahdieblah: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.16 | Rake $0 
+Seat 1: neverJager (button) folded before Flop (didn't bet)
+Seat 2: s1N91 (small blind) folded before Flop
+Seat 4: Blahdieblah (big blind) collected ($0.16)
+Seat 6: antol34 folded before Flop (didn't bet)

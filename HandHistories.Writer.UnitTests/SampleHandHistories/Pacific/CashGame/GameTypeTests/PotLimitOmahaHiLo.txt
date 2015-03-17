@@ -1,0 +1,30 @@
+#Game No : 441698247
+***** 888poker Hand History for Game 441698247 *****
+$0.50/$1 Blinds Pot Limit OmahaHL - *** 06 01 2014 23:15:35
+Table Fortaleza 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 5: hank1967 ( $51.43 )
+Seat 6: vallemos50 ( $17.74 )
+Seat 7: selkoe ( $35.99 )
+vallemos50 posts small blind [$0.50]
+selkoe posts big blind [$1]
+** Dealing down cards **
+hank1967 raises [$2]
+vallemos50 folds
+selkoe calls [$1]
+** Dealing flop ** [ Ks, Js, 6s ]
+selkoe checks
+hank1967 bets [$2]
+selkoe calls [$2]
+** Dealing turn ** [ 8h ]
+selkoe checks
+hank1967 checks
+** Dealing river ** [ As ]
+selkoe checks
+hank1967 checks
+** Summary **
+selkoe shows [ Jc, Qd, Jh, Ad ]
+(Hi: Jc, Jh, Js, Ks, As)
+hank1967 shows [ Ah, 6d, 2d, 9s ]
+selkoe collected [ $8.08 ]

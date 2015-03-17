@@ -1,0 +1,15 @@
+﻿PokerStars Game #62279382715:  Omaha Pot Limit ($25/$50 USD) - 2011/05/18 20:41:04 ET
+Table 'Isildur's PLO 50' 2-max Seat #1 is the button
+Seat 1: TNDynamite ($9999.50 in chips) 
+Seat 2: gavz101 ($12500 in chips) 
+TNDynamite: posts small blind $25
+gavz101: posts big blind $50
+*** HOLE CARDS ***
+TNDynamite: folds 
+Uncalled bet ($25) returned to gavz101
+gavz101 collected $50 from pot
+gavz101: doesn't show hand 
+*** SUMMARY ***
+Total pot $50 | Rake $0 
+Seat 1: TNDynamite (button) (small blind) folded before Flop
+Seat 2: gavz101 (big blind) collected ($50)

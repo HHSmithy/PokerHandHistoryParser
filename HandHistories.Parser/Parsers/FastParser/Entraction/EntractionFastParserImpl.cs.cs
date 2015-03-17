@@ -20,6 +20,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
             get { return SiteName.Entraction; }
         }
 
+        public override bool RequiresTotalPotCalculation
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             //Single Hand Identification Regex = Game #.*?Game.*?\w\w\w(\+|-)(\d+\:\d+)

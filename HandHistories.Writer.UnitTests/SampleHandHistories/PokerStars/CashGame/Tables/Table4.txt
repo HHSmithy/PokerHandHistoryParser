@@ -1,0 +1,14 @@
+﻿PokerStars Game #109707358395:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 16:10:11 ET
+Table 'Kythera III 40-100 bb' 2-max Seat #2 is the button
+Seat 1: NikolayBibov ($175.97 in chips) 
+Seat 2: JordanPAA ($129.43 in chips) 
+JordanPAA: posts small blind $0.50
+NikolayBibov: posts big blind $1
+*** HOLE CARDS ***
+JordanPAA: folds 
+Uncalled bet ($0.50) returned to NikolayBibov
+NikolayBibov collected $1 from pot
+*** SUMMARY ***
+Total pot $1 | Rake $0 
+Seat 1: NikolayBibov (big blind) collected ($1)
+Seat 2: JordanPAA (button) (small blind) folded before Flop

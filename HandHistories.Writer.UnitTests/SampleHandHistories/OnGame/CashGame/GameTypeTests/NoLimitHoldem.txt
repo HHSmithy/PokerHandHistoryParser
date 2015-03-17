@@ -1,0 +1,20 @@
+﻿***** History for hand R5-362012167-85 *****
+Start hand: Mon Jan 06 19:34:00 CET 2014
+Table: [SPEED] Baguio [362012167] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
+Players in round: 2
+Seat 3: -ShottaZ- ($64.46) 
+Seat 8: Catchup_ ($146.00) 
+-ShottaZ- posts small blind ($0.50)
+Catchup_ posts big blind ($1)
+---
+Dealing pocket cards
+-ShottaZ- raises $2.50 to $3.00
+Catchup_ folds
+---
+Summary:
+Main pot: $2.00 won by -ShottaZ- ($2.00)
+Rake taken: $0.00
+Seat 3: -ShottaZ- ($65.46), net: +$1.00
+Seat 8: Catchup_ ($145.00), net: -$1.00
+***** End of hand R5-362012167-85 *****

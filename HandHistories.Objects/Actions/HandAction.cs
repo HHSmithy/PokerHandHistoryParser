@@ -13,7 +13,7 @@ namespace HandHistories.Objects.Actions
         public string PlayerName { get; private set; }
 
         [DataMember]
-        public HandActionType HandActionType { get; private set; }
+        public HandActionType HandActionType { get; protected set; }
 
         [DataMember]
         public decimal Amount { get; private set; }
@@ -22,12 +22,25 @@ namespace HandHistories.Objects.Actions
         public Street Street { get; private set; }
 
         [DataMember]
-        public int ActionNumber { get; private set; }
-        
+        public int ActionNumber { get; set; }
+
+        [DataMember]
+        public bool IsAllIn { get; private set; }
+
+        public HandAction(string playerName,
+            HandActionType handActionType,
+            decimal amount,
+            Street street,
+            int actionNumber)
+            : this(playerName, handActionType, amount, street, false, actionNumber)
+        {
+        }
+
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
                           decimal amount,
-                          Street street, 
+                          Street street,
+                          bool AllInAction = false,
                           int actionNumber = 0)
         {
             Street = street;
@@ -35,6 +48,7 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
+            IsAllIn = AllInAction;
         }
 
         public override int GetHashCode()
@@ -52,7 +66,14 @@ namespace HandHistories.Objects.Actions
 
         public override string ToString()
         {
-            return GetType().Name + ": " + PlayerName + " does " + HandActionType + " for " + Amount.ToString("N2") + " on street " + Street + "";
+            string format = "{0} does {1} for {2} on street {3}{4}";
+
+            return string.Format(format,
+                PlayerName,
+                HandActionType,
+                Amount.ToString("N2"),
+                Street,
+                IsAllIn ? " and is All-In" : "");
         }
 
         public void DecreaseAmount(decimal value)
@@ -119,8 +140,7 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -129,7 +149,7 @@ namespace HandHistories.Objects.Actions
             get
             {
                 return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
+                       HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -155,8 +175,7 @@ namespace HandHistories.Objects.Actions
             get
             {
                 return HandActionType == HandActionType.RAISE ||                       
-                       HandActionType == HandActionType.BET ||
-                       IsAllInAction;
+                       HandActionType == HandActionType.BET;
             }
         }
 
@@ -166,10 +185,32 @@ namespace HandHistories.Objects.Actions
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
-                       HandActionType == HandActionType.POSTS;
+                       HandActionType == HandActionType.ANTE;
             }
         }
-       
-        
+
+        public bool IsPlayerAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.PlayerAction) != 0;
+            }
+        }
+
+        public bool IsGameAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.GameAction) != 0;
+            }
+        }
+
+        public bool IsShowdownAction
+        {
+            get
+            {
+                return ((int)HandActionType & (int)ActionTypeFlags.ShowDown) != 0;
+            }
+        }
     }
 }

@@ -1,0 +1,2258 @@
+﻿PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop
+PokerStars Game #109673602306:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:00 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #9 is the button
+Seat 1: redskruf7 ($1141.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+redskruf7: posts small blind $5
+BoomDoon: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: raises $15 to $25
+filushh: calls $25
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+*** FLOP *** [2s Js 4c]
+jimmyhoo: bets $40
+filushh: folds 
+Uncalled bet ($40) returned to jimmyhoo
+jimmyhoo collected $62.08 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $2.92 
+Board [2s Js 4c]
+Seat 1: redskruf7 (small blind) folded before Flop
+Seat 2: BoomDoon (big blind) folded before Flop
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo collected ($62.08)
+Seat 8: filushh folded on the Flop
+Seat 9: mecha0117 (button) folded before Flop (didn't bet)
+PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop
+PokerStars Game #109673602306:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:00 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #9 is the button
+Seat 1: redskruf7 ($1141.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+redskruf7: posts small blind $5
+BoomDoon: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: raises $15 to $25
+filushh: calls $25
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+*** FLOP *** [2s Js 4c]
+jimmyhoo: bets $40
+filushh: folds 
+Uncalled bet ($40) returned to jimmyhoo
+jimmyhoo collected $62.08 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $2.92 
+Board [2s Js 4c]
+Seat 1: redskruf7 (small blind) folded before Flop
+Seat 2: BoomDoon (big blind) folded before Flop
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo collected ($62.08)
+Seat 8: filushh folded on the Flop
+Seat 9: mecha0117 (button) folded before Flop (didn't bet)
+PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop
+PokerStars Game #109673602306:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:00 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #9 is the button
+Seat 1: redskruf7 ($1141.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+redskruf7: posts small blind $5
+BoomDoon: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: raises $15 to $25
+filushh: calls $25
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+*** FLOP *** [2s Js 4c]
+jimmyhoo: bets $40
+filushh: folds 
+Uncalled bet ($40) returned to jimmyhoo
+jimmyhoo collected $62.08 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $2.92 
+Board [2s Js 4c]
+Seat 1: redskruf7 (small blind) folded before Flop
+Seat 2: BoomDoon (big blind) folded before Flop
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo collected ($62.08)
+Seat 8: filushh folded on the Flop
+Seat 9: mecha0117 (button) folded before Flop (didn't bet)
+PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop
+PokerStars Game #109673602306:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:00 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #9 is the button
+Seat 1: redskruf7 ($1141.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+redskruf7: posts small blind $5
+BoomDoon: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: raises $15 to $25
+filushh: calls $25
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+*** FLOP *** [2s Js 4c]
+jimmyhoo: bets $40
+filushh: folds 
+Uncalled bet ($40) returned to jimmyhoo
+jimmyhoo collected $62.08 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $2.92 
+Board [2s Js 4c]
+Seat 1: redskruf7 (small blind) folded before Flop
+Seat 2: BoomDoon (big blind) folded before Flop
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo collected ($62.08)
+Seat 8: filushh folded on the Flop
+Seat 9: mecha0117 (button) folded before Flop (didn't bet)
+PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop
+PokerStars Game #109673602306:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:00 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #9 is the button
+Seat 1: redskruf7 ($1141.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+redskruf7: posts small blind $5
+BoomDoon: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: raises $15 to $25
+filushh: calls $25
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+*** FLOP *** [2s Js 4c]
+jimmyhoo: bets $40
+filushh: folds 
+Uncalled bet ($40) returned to jimmyhoo
+jimmyhoo collected $62.08 from pot
+*** SUMMARY ***
+Total pot $65 | Rake $2.92 
+Board [2s Js 4c]
+Seat 1: redskruf7 (small blind) folded before Flop
+Seat 2: BoomDoon (big blind) folded before Flop
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo collected ($62.08)
+Seat 8: filushh folded on the Flop
+Seat 9: mecha0117 (button) folded before Flop (didn't bet)
+PokerStars Game #109673610680:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:16:34 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1136.30 in chips) 
+Seat 2: BoomDoon ($1685 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2100 in chips) 
+Seat 8: filushh ($907 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+BoomDoon: posts small blind $5
+Carster: is sitting out 
+Zockermicha: posts big blind $10
+friendzdrt: sits out 
+*** HOLE CARDS ***
+postler812: raises $20 to $30
+jimmyhoo: folds 
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Zockermicha: folds 
+Uncalled bet ($20) returned to postler812
+postler812 collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: Zockermicha (big blind) folded before Flop
+Seat 5: postler812 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673992001:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:42:52 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #1 is the button
+Seat 1: redskruf7 ($1241 in chips) 
+Seat 2: BoomDoon ($1983 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1000 in chips) 
+Seat 6: jimmyhoo ($1831.49 in chips) 
+Seat 7: fodevich ($1000 in chips) 
+Seat 8: Zockermicha ($1613.51 in chips) 
+BoomDoon: posts small blind $5
+ValueH: posts big blind $10
+*** HOLE CARDS ***
+ADZ124: raises $16 to $26
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: folds 
+Uncalled bet ($16) returned to ADZ124
+ADZ124 collected $25 from pot
+ADZ124: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (button) folded before Flop (didn't bet)
+Seat 2: BoomDoon (small blind) folded before Flop
+Seat 4: ValueH (big blind) folded before Flop
+Seat 5: ADZ124 collected ($25)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674128046:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:52:24 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #2 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($2140 in chips) 
+Seat 4: ValueH ($1000 in chips) 
+Seat 5: ADZ124 ($1015 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+YurNas will be allowed to play after the button
+ValueH: posts small blind $5
+ADZ124: posts big blind $10
+*** HOLE CARDS ***
+jimmyhoo: folds 
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: raises $15 to $25
+ValueH: raises $60 to $85
+ADZ124: folds 
+BoomDoon: calls $60
+*** FLOP *** [Qs 8h 7d]
+ValueH: checks 
+BoomDoon: checks 
+*** TURN *** [Qs 8h 7d] [9d]
+ValueH: checks 
+BoomDoon: bets $90
+ValueH: calls $90
+*** RIVER *** [Qs 8h 7d 9d] [2c]
+ValueH: checks 
+BoomDoon: checks 
+*** SHOW DOWN ***
+ValueH: shows [8s Ts] (a pair of Eights)
+BoomDoon: mucks hand 
+ValueH collected $357 from pot
+*** SUMMARY ***
+Total pot $360 | Rake $3 
+Board [Qs 8h 7d 9d 2c]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon (button) mucked
+Seat 4: ValueH (small blind) showed [8s Ts] and won ($357) with a pair of Eights
+Seat 5: ADZ124 (big blind) folded before Flop
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109674148786:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:53:51 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1083 in chips) 
+Seat 2: BoomDoon ($1965 in chips) 
+Seat 4: ValueH ($1182 in chips) 
+Seat 5: ADZ124 ($1005 in chips) 
+Seat 6: jimmyhoo ($1920.57 in chips) 
+Seat 7: fodevich ($1015 in chips) 
+Seat 8: Zockermicha ($1583.51 in chips) 
+ADZ124: posts small blind $5
+jimmyhoo: posts big blind $10
+YurNas: sits out 
+*** HOLE CARDS ***
+fodevich: folds 
+Zockermicha: folds 
+redskruf7: folds 
+BoomDoon: folds 
+ValueH: raises $10 to $20
+ADZ124: folds 
+jimmyhoo: calls $10
+*** FLOP *** [3h As Ts]
+jimmyhoo: checks 
+ValueH: checks 
+*** TURN *** [3h As Ts] [Qc]
+jimmyhoo: bets $30
+ValueH: folds 
+Uncalled bet ($30) returned to jimmyhoo
+jimmyhoo collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [3h As Ts Qc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 4: ValueH (button) folded on the Turn
+Seat 5: ADZ124 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) collected ($42.98)
+Seat 7: fodevich folded before Flop (didn't bet)
+Seat 8: Zockermicha folded before Flop (didn't bet)
+PokerStars Game #109673533027:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:11:20 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #4 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($620.40 in chips) 
+Seat 6: jimmyhoo ($1693.92 in chips) 
+Seat 7: EASSA ($719.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+postler812: posts small blind $5
+jimmyhoo: posts big blind $10
+*** HOLE CARDS ***
+EASSA: raises $20 to $30
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: calls $20
+*** FLOP *** [5c 7c 7d]
+jimmyhoo: checks 
+EASSA: bets $50
+jimmyhoo: raises $50 to $100
+EASSA: calls $50
+*** TURN *** [5c 7c 7d] [Jd]
+jimmyhoo: bets $150
+EASSA: calls $150
+*** RIVER *** [5c 7c 7d Jd] [Jc]
+jimmyhoo: checks 
+EASSA: checks 
+*** SHOW DOWN ***
+jimmyhoo: shows [7h 6h] (a full house, Sevens full of Jacks)
+EASSA: mucks hand 
+jimmyhoo collected $562 from pot
+*** SUMMARY ***
+Total pot $565 | Rake $3 
+Board [5c 7c 7d Jd Jc]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha (button) folded before Flop (didn't bet)
+Seat 5: postler812 (small blind) folded before Flop
+Seat 6: jimmyhoo (big blind) showed [7h 6h] and won ($562) with a full house, Sevens full of Jacks
+Seat 7: EASSA mucked
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673554313:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:12:46 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #5 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1975.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+jimmyhoo: posts small blind $5
+EASSA: posts big blind $10
+*** HOLE CARDS ***
+filushh: folds 
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+Uncalled bet ($5) returned to EASSA
+EASSA collected $10 from pot
+*** SUMMARY ***
+Total pot $10 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 (button) folded before Flop (didn't bet)
+Seat 6: jimmyhoo (small blind) folded before Flop
+Seat 7: EASSA (big blind) collected ($10)
+Seat 8: filushh folded before Flop (didn't bet)
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673561342:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:14 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #6 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1642 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($444.36 in chips) 
+Seat 8: filushh ($932 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+EASSA: posts small blind $5
+filushh: posts big blind $10
+*** HOLE CARDS ***
+mecha0117: folds 
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: raises $20 to $30
+postler812: folds 
+jimmyhoo: folds 
+EASSA: folds 
+filushh: folds 
+Uncalled bet ($20) returned to Zockermicha
+Zockermicha collected $25 from pot
+Zockermicha: doesn't show hand 
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha collected ($25)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo (button) folded before Flop (didn't bet)
+Seat 7: EASSA (small blind) folded before Flop
+Seat 8: filushh (big blind) folded before Flop
+Seat 9: mecha0117 folded before Flop (didn't bet)
+PokerStars Game #109673572373:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:13:59 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #7 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($615.40 in chips) 
+Seat 6: jimmyhoo ($1970.92 in chips) 
+Seat 7: EASSA ($439.36 in chips) 
+Seat 8: filushh ($922 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+filushh: posts small blind $5
+mecha0117: posts big blind $10
+*** HOLE CARDS ***
+redskruf7: folds 
+BoomDoon: folds 
+Carster: folds 
+Zockermicha: folds 
+postler812: raises $20 to $30
+jimmyhoo: calls $30
+EASSA: folds 
+filushh: folds 
+mecha0117: folds 
+*** FLOP *** [Qs 2s 6s]
+postler812: bets $50
+jimmyhoo: calls $50
+*** TURN *** [Qs 2s 6s] [2h]
+EASSA leaves the table
+postler812: checks 
+jimmyhoo: checks 
+*** RIVER *** [Qs 2s 6s 2h] [4s]
+postler812: checks 
+jimmyhoo: bets $70
+postler812: folds 
+Uncalled bet ($70) returned to jimmyhoo
+jimmyhoo collected $172 from pot
+*** SUMMARY ***
+Total pot $175 | Rake $3 
+Board [Qs 2s 6s 2h 4s]
+Seat 1: redskruf7 folded before Flop (didn't bet)
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded on the River
+Seat 6: jimmyhoo collected ($172)
+Seat 7: EASSA (button) folded before Flop (didn't bet)
+Seat 8: filushh (small blind) folded before Flop
+Seat 9: mecha0117 (big blind) folded before Flop
+PokerStars Game #109673589735:  Hold'em No Limit ($5/$10 USD) - 2014/01/06 1:15:09 ET
+Table 'Hveen II 40-100 bb' 9-max Seat #8 is the button
+Seat 1: redskruf7 ($1151.30 in chips) 
+Seat 2: BoomDoon ($1695 in chips) 
+Seat 3: Carster ($1048.82 in chips) 
+Seat 4: Zockermicha ($1657 in chips) 
+Seat 5: postler812 ($535.40 in chips) 
+Seat 6: jimmyhoo ($2062.92 in chips) 
+Seat 8: filushh ($917 in chips) 
+Seat 9: mecha0117 ($1000 in chips) 
+mecha0117: posts small blind $5
+redskruf7: posts big blind $10
+*** HOLE CARDS ***
+BoomDoon: folds 
+friendzdrt joins the table at seat #7 
+Carster: folds 
+Zockermicha: folds 
+postler812: folds 
+jimmyhoo: folds 
+filushh: raises $10 to $20
+mecha0117: folds 
+redskruf7: folds 
+Uncalled bet ($10) returned to filushh
+filushh collected $25 from pot
+*** SUMMARY ***
+Total pot $25 | Rake $0 
+Seat 1: redskruf7 (big blind) folded before Flop
+Seat 2: BoomDoon folded before Flop (didn't bet)
+Seat 3: Carster folded before Flop (didn't bet)
+Seat 4: Zockermicha folded before Flop (didn't bet)
+Seat 5: postler812 folded before Flop (didn't bet)
+Seat 6: jimmyhoo folded before Flop (didn't bet)
+Seat 8: filushh (button) collected ($25)
+Seat 9: mecha0117 (small blind) folded before Flop

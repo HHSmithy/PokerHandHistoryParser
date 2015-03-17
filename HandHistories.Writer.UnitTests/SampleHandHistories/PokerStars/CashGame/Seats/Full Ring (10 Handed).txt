@@ -1,0 +1,47 @@
+﻿PokerStars Game #109681442821:  Hold'em Limit ($0.50/$1.00 USD) - 2014/01/06 7:25:07 ET
+Table 'Iris III 40-100 bb' 10-max Seat #4 is the button
+Seat 3: Aximas77 ($24.10 in chips) 
+Seat 4: okie609 ($14.35 in chips) 
+Seat 5: heuristicz ($6.08 in chips) 
+Seat 6: vital580 ($16.19 in chips) 
+Seat 7: vesnoplyas ($18.33 in chips) 
+Seat 8: Bernard31 ($15.41 in chips) 
+Seat 9: thewirds ($20.35 in chips) 
+Seat 10: OlegKharkov ($12 in chips) 
+heuristicz: posts small blind $0.25
+vital580: posts big blind $0.50
+Locik11: sits out 
+Eisnova: sits out 
+*** HOLE CARDS ***
+vesnoplyas: folds 
+Bernard31: calls $0.50
+thewirds: folds 
+OlegKharkov: folds 
+Aximas77: calls $0.50
+okie609: calls $0.50
+heuristicz: calls $0.25
+vital580: checks 
+*** FLOP *** [5d 8h 3c]
+heuristicz: checks 
+vital580: bets $0.50
+Bernard31: folds 
+Aximas77: folds 
+okie609: folds 
+heuristicz: calls $0.50
+*** TURN *** [5d 8h 3c] [Js]
+heuristicz: checks 
+vital580: bets $1
+heuristicz: folds 
+Uncalled bet ($1) returned to vital580
+vital580 collected $3.34 from pot
+*** SUMMARY ***
+Total pot $3.50 | Rake $0.16 
+Board [5d 8h 3c Js]
+Seat 3: Aximas77 folded on the Flop
+Seat 4: okie609 (button) folded on the Flop
+Seat 5: heuristicz (small blind) folded on the Turn
+Seat 6: vital580 (big blind) collected ($3.34)
+Seat 7: vesnoplyas folded before Flop (didn't bet)
+Seat 8: Bernard31 folded on the Flop
+Seat 9: thewirds folded before Flop (didn't bet)
+Seat 10: OlegKharkov folded before Flop (didn't bet)

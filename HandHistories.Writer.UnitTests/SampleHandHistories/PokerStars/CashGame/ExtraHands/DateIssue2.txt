@@ -1,0 +1,32 @@
+﻿PokerStars Game #61910233643:  Hold'em No Limit ($1/$2 - $40 Cap -  USD) - 2011/05/10 4:27:21 PT [2011/05/10 7:27:21 ET]
+Table 'Toutatis III' 9-max Seat #1 is the button
+Seat 1: Kenomir ($43.45 in chips)
+Seat 2: K.Smirnov ($62.50 in chips)
+Seat 3: DarkEvilus ($58.90 in chips)
+Seat 4: SavioSavy ($104.55 in chips)
+Seat 5: nezlee ($43 in chips)
+Seat 7: Cuzco ($173.10 in chips)
+Seat 9: chuckk ($59.15 in chips)
+K.Smirnov: posts small blind $1
+DarkEvilus: posts big blind $2
+archy lvl1: sits out
+*** HOLE CARDS ***
+SavioSavy: folds
+nezlee: folds
+Cuzco: folds
+chuckk: folds
+Kenomir: raises $2 to $4
+K.Smirnov: folds
+DarkEvilus: raises $36 to $40 and has reached the $40 cap
+Kenomir: folds
+DarkEvilus collected $9 from pot
+DarkEvilus: doesn't show hand
+*** SUMMARY ***
+Total pot $9 | Rake $0
+Seat 1: Kenomir (button) folded before Flop
+Seat 2: K.Smirnov (small blind) folded before Flop
+Seat 3: DarkEvilus (big blind) collected ($9)
+Seat 4: SavioSavy folded before Flop (didn't bet)
+Seat 5: nezlee folded before Flop (didn't bet)
+Seat 7: Cuzco folded before Flop (didn't bet)
+Seat 9: chuckk folded before Flop (didn't bet)

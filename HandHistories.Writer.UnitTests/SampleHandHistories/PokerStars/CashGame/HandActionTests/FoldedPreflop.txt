@@ -1,0 +1,17 @@
+﻿PokerStars Game #109676236486:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/01/06 4:06:31 ET
+Table 'Omicron Capricorni 40-100 bb' 2-max Seat #1 is the button
+Seat 1: idirabotai ($47.60 in chips) 
+Seat 2: jweeke ($106.60 in chips) 
+idirabotai: posts small blind $0.50
+jweeke: posts big blind $1.00
+*** HOLE CARDS ***
+idirabotai: calls $0.50
+jweeke: raises $2.00 to $3.00
+idirabotai: folds 
+Uncalled bet ($2.00) returned to jweeke
+jweeke collected $2.00 from pot
+jweeke: doesn't show hand 
+*** SUMMARY ***
+Total pot $2.00 | Rake $0 
+Seat 1: idirabotai (button) (small blind) folded before Flop
+Seat 2: jweeke (big blind) collected ($2.00)
