@@ -1,0 +1,347 @@
+﻿***** History for hand R5-362037295-54 *****
+Start hand: Mon Jan 06 21:16:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 3: kalibas20055 ($98.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($154.01) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($104.28) 
+Seat 10: BlackH0L3 ($111.01) 
+BlackH0L3 posts small blind ($0.50)
+kalibas20055 posts big blind ($1)
+---
+Dealing pocket cards
+IMBASICK folds
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 raises $2.00 to $2.00
+BlackH0L3 folds
+kalibas20055 folds
+---
+Summary:
+Main pot: $2.50 won by Maesttroy1 ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($97.70), net: -$1.00
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($154.01), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: +$1.50
+Seat 10: BlackH0L3 ($110.51), net: -$0.50
+***** End of hand R5-362037295-54 *****
+
+***** History for hand R5-362037295-55 *****
+Start hand: Mon Jan 06 21:16:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 10
+Players in round: 6
+Seat 3: kalibas20055 ($97.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($154.01) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+kalibas20055 posts small blind ($0.50)
+IMBASICK posts big blind ($1)
+---
+Dealing pocket cards
+INKASSOdoc raises $3.00 to $3.00
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK folds
+---
+Summary:
+Main pot: $2.50 won by INKASSOdoc ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($97.20), net: -$0.50
+Seat 4: IMBASICK ($100.50), net: -$1.00
+Seat 6: INKASSOdoc ($155.51), net: +$1.50
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-55 *****
+
+***** History for hand R5-362037295-56 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
+Players in round: 6
+Seat 3: kalibas20055 ($97.20) 
+Seat 4: IMBASICK ($100.50) 
+Seat 6: INKASSOdoc ($155.51) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+IMBASICK posts small blind ($0.50)
+INKASSOdoc posts big blind ($1)
+---
+Dealing pocket cards
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 raises $2.50 to $2.50
+IMBASICK folds
+INKASSOdoc calls $1.50
+--- Dealing flop [Ts, 9s, 9d]
+INKASSOdoc checks
+kalibas20055 bets $4.00
+INKASSOdoc raises $12.00 to $12.00
+kalibas20055 folds
+---
+Summary:
+Main pot: $13.50 won by INKASSOdoc ($12.83)
+Rake taken: $0.67
+Seat 3: kalibas20055 ($90.70), net: -$6.50
+Seat 4: IMBASICK ($100.00), net: -$0.50
+Seat 6: INKASSOdoc ($161.84), net: +$6.33
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-56 *****
+
+***** History for hand R5-362037295-57 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 4
+Players in round: 6
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($100.00) 
+Seat 6: INKASSOdoc ($161.84) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+INKASSOdoc posts small blind ($0.50)
+RedSalamandr posts big blind ($1)
+---
+Dealing pocket cards
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK folds
+INKASSOdoc folds
+---
+Summary:
+Main pot: $1.00 won by RedSalamandr ($1.00)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($100.00), net: -$0.00
+Seat 6: INKASSOdoc ($161.34), net: -$0.50
+Seat 8: RedSalamandr ($114.11), net: +$0.50
+Seat 9: Maesttroy1 ($105.78), net: -$0.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-57 *****
+
+***** History for hand R5-362037295-58 *****
+Start hand: Mon Jan 06 21:17:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 6
+Players in round: 6
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($100.00) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($114.11) 
+Seat 9: Maesttroy1 ($105.78) 
+Seat 10: BlackH0L3 ($110.51) 
+RedSalamandr posts small blind ($0.50)
+Maesttroy1 posts big blind ($1)
+---
+Dealing pocket cards
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $3.00 to $3.00
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 folds
+---
+Summary:
+Main pot: $2.50 won by IMBASICK ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($101.50), net: +$1.50
+Seat 6: INKASSOdoc ($161.34), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.50
+Seat 9: Maesttroy1 ($104.78), net: -$1.00
+Seat 10: BlackH0L3 ($110.51), net: -$0.00
+***** End of hand R5-362037295-58 *****
+
+***** History for hand R5-362037295-59 *****
+Start hand: Mon Jan 06 21:18:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($104.78) 
+Seat 10: BlackH0L3 ($110.51) 
+Maesttroy1 posts small blind ($0.50)
+BlackH0L3 posts big blind ($1)
+---
+Dealing pocket cards
+kalibas20055 folds
+IMBASICK folds
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 raises $2.50 to $3.00
+BlackH0L3 raises $7.00 to $8.00
+Maesttroy1 folds
+---
+Summary:
+Main pot: $6.00 won by BlackH0L3 ($6.00)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($90.70), net: -$0.00
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($161.34), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($101.78), net: -$3.00
+Seat 10: BlackH0L3 ($113.51), net: +$3.00
+***** End of hand R5-362037295-59 *****
+
+***** History for hand R5-362037295-60 *****
+Start hand: Mon Jan 06 21:19:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 3: kalibas20055 ($90.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($161.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($101.78) 
+Seat 10: BlackH0L3 ($113.51) 
+BlackH0L3 posts small blind ($0.50)
+kalibas20055 posts big blind ($1)
+---
+Dealing pocket cards
+IMBASICK folds
+INKASSOdoc raises $3.00 to $3.00
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 calls $2.00
+--- Dealing flop [9s, 6s, Jc]
+kalibas20055 checks
+INKASSOdoc checks
+--- Dealing turn [2s]
+kalibas20055 bets $4.50
+INKASSOdoc folds
+---
+Summary:
+Main pot: $6.50 won by kalibas20055 ($6.18)
+Rake taken: $0.32
+Seat 3: kalibas20055 ($93.88), net: +$3.18
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($158.34), net: -$3.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($101.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.50
+***** End of hand R5-362037295-60 *****
+
+***** History for hand R5-362037295-61 *****
+Start hand: Mon Jan 06 21:20:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 10
+Players in round: 6
+Seat 3: kalibas20055 ($100.00) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($158.34) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($101.78) 
+Seat 10: BlackH0L3 ($113.01) 
+kalibas20055 posts small blind ($0.50)
+IMBASICK posts big blind ($1)
+---
+Dealing pocket cards
+INKASSOdoc folds
+RedSalamandr raises $3.00 to $3.00
+Maesttroy1 calls $3.00
+BlackH0L3 folds
+kalibas20055 calls $2.50
+IMBASICK raises $12.00 to $13.00
+RedSalamandr folds
+Maesttroy1 folds
+kalibas20055 calls $10.00
+--- Dealing flop [6s, 8s, 2s]
+kalibas20055 checks
+IMBASICK bets $12.00
+kalibas20055 folds
+---
+Summary:
+Main pot: $32.00 won by IMBASICK ($30.40)
+Rake taken: $1.60
+Seat 3: kalibas20055 ($87.00), net: -$13.00
+Seat 4: IMBASICK ($118.90), net: +$17.40
+Seat 6: INKASSOdoc ($158.34), net: -$0.00
+Seat 8: RedSalamandr ($110.61), net: -$3.00
+Seat 9: Maesttroy1 ($98.78), net: -$3.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-61 *****
+
+***** History for hand R5-362037295-62 *****
+Start hand: Mon Jan 06 21:21:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 3
+Players in round: 6
+Seat 3: kalibas20055 ($87.00) 
+Seat 4: IMBASICK ($118.90) 
+Seat 6: INKASSOdoc ($158.34) 
+Seat 8: RedSalamandr ($110.61) 
+Seat 9: Maesttroy1 ($98.78) 
+Seat 10: BlackH0L3 ($113.01) 
+IMBASICK posts small blind ($0.50)
+INKASSOdoc posts big blind ($1)
+---
+Dealing pocket cards
+RedSalamandr folds
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $2.50 to $3.00
+INKASSOdoc folds
+---
+Summary:
+Main pot: $2.00 won by IMBASICK ($2.00)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($87.00), net: -$0.00
+Seat 4: IMBASICK ($119.90), net: +$1.00
+Seat 6: INKASSOdoc ($157.34), net: -$1.00
+Seat 8: RedSalamandr ($110.61), net: -$0.00
+Seat 9: Maesttroy1 ($98.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-62 *****
+
+***** History for hand R5-362037295-63 *****
+Start hand: Mon Jan 06 21:21:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 4
+Players in round: 6
+Seat 3: kalibas20055 ($87.00) 
+Seat 4: IMBASICK ($119.90) 
+Seat 6: INKASSOdoc ($157.34) 
+Seat 8: RedSalamandr ($110.61) 
+Seat 9: Maesttroy1 ($98.78) 
+Seat 10: BlackH0L3 ($113.01) 
+INKASSOdoc posts small blind ($0.50)
+RedSalamandr posts big blind ($1)
+---
+Dealing pocket cards
+Maesttroy1 folds
+BlackH0L3 folds
+kalibas20055 folds
+IMBASICK raises $2.00 to $2.00
+INKASSOdoc folds
+RedSalamandr folds
+---
+Summary:
+Main pot: $2.50 won by IMBASICK ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($87.00), net: -$0.00
+Seat 4: IMBASICK ($121.40), net: +$1.50
+Seat 6: INKASSOdoc ($156.84), net: -$0.50
+Seat 8: RedSalamandr ($109.61), net: -$1.00
+Seat 9: Maesttroy1 ($98.78), net: -$0.00
+Seat 10: BlackH0L3 ($113.01), net: -$0.00
+***** End of hand R5-362037295-63 *****

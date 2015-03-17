@@ -1,0 +1,32 @@
+﻿***** History for hand R5-361717011-54 *****
+Start hand: Sun Jan 05 09:13:00 CET 2014
+Table: [SPEED] Dallas [361717011] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 5
+Players in round: 3
+Seat 3: bil3176 ($106.05) 
+Seat 5: -mr-poker- ($95.00) 
+Seat 8: dosmou1 ($77.60) 
+dosmou1 posts small blind ($0.50)
+bil3176 posts big blind ($1)
+---
+Dealing pocket cards
+-mr-poker- folds
+dosmou1 calls $0.50
+bil3176 checks
+--- Dealing flop [5d, Ks, 7c]
+dosmou1 bets $4.00
+bil3176 calls $4.00
+--- Dealing turn [Jc]
+dosmou1 bets $7.00
+bil3176 calls $7.00
+--- Dealing river [7d]
+dosmou1 bets $7.00
+bil3176 calls $7.00
+---
+Summary:
+Main pot: $38.00 won by dosmou1 ($36.10)
+Rake taken: $1.90
+Seat 3: bil3176 ($87.05), net: -$19.00, [8c, 9c]
+Seat 5: -mr-poker- ($95.00), net: -$0.00
+Seat 8: dosmou1 ($94.70), net: +$17.10, [6h, Qc]
+***** End of hand R5-361717011-54 *****

@@ -1,0 +1,33 @@
+﻿***** History for hand R5-361726027-6 *****
+Start hand: Mon Jan 06 01:45:00 CET 2014
+Table: [SPEED] Homs [361726027] (NO_LIMIT TEXAS_HOLDEM $5/$10, Real money)
+Button: seat 4
+Players in round: 3
+Seat 4: emtypoket ($709.00) 
+Seat 5: Exquisite.. ($645.00) 
+Seat 6: the_road ($1000.00) 
+Exquisite.. posts small blind ($5)
+the_road posts big blind ($10)
+---
+Dealing pocket cards
+emtypoket raises $20.00 to $20.00
+Exquisite.. folds
+the_road calls $10.00
+--- Dealing flop [6h, Qh, 4h]
+the_road checks
+emtypoket bets $20.00
+the_road calls $20.00
+--- Dealing turn [Qs]
+the_road checks
+emtypoket checks
+--- Dealing river [Ac]
+the_road bets $70.00
+emtypoket calls $70.00
+---
+Summary:
+Main pot: $225.00 won by the_road ($223.00)
+Rake taken: $2
+Seat 4: emtypoket ($599.00), net: -$110.00, [Ks, Ah]
+Seat 5: Exquisite.. ($640.00), net: -$5.00
+Seat 6: the_road ($1113.00), net: +$113.00, [8s, Qd]
+***** End of hand R5-361726027-6 *****

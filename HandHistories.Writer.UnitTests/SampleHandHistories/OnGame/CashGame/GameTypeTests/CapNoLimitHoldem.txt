@@ -1,0 +1,27 @@
+﻿PokerStars Hand #78456396653:  Hold'em No Limit ($10/$20 - $400 Cap -  USD) - 2012/04/06 22:51:18 ET
+Table 'Clavel II' 6-max Seat #6 is the button
+Seat 3: mypokerf ($750 in chips) 
+Seat 6: nanonoko ($1259 in chips) 
+nanonoko: posts small blind $10
+mypokerf: posts big blind $20
+*** HOLE CARDS ***
+nanonoko: raises $20 to $40
+mypokerf: calls $20
+*** FLOP *** [Ts 2c 7c]
+mypokerf: checks 
+nanonoko: checks 
+*** TURN *** [Ts 2c 7c] [9c]
+mypokerf: checks 
+nanonoko: checks 
+*** RIVER *** [Ts 2c 7c 9c] [9s]
+mypokerf: checks 
+nanonoko: checks 
+*** SHOW DOWN ***
+mypokerf: shows [Qh 8d] (a pair of Nines)
+nanonoko: shows [6s Ad] (a pair of Nines - Ace kicker)
+nanonoko collected $79.50 from pot
+*** SUMMARY ***
+Total pot $80 | Rake $0.50 
+Board [Ts 2c 7c 9c 9s]
+Seat 3: mypokerf (big blind) showed [Qh 8d] and lost with a pair of Nines
+Seat 6: nanonoko (button) (small blind) showed [6s Ad] and won ($79.50) with a pair of Nines

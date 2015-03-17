@@ -1,0 +1,31 @@
+﻿#Game No : 349568376
+***** 888poker Hand History for Game 349568376 *****
+$0.05/$0.10 Blinds No Limit Holdem - *** 06 01 2014 00:02:01
+Table Carson 9 Max (Real Money)
+Seat 10 is the button
+Total number of players : 7
+Seat 1: hchcnona ( $10.25 )
+Seat 2: laeufergott ( $7.71 )
+Seat 3: Georgik2008 ( $10 )
+Seat 4: N_MIKAEL ( $5.15 )
+Seat 6: losgenie ( $10.18 )
+Seat 9: Raiseman13 ( $10.84 )
+Seat 10: kultexx ( $9.50 )
+hchcnona posts small blind [$0.05]
+laeufergott posts big blind [$0.10]
+Georgik2008 posts big blind [$0.10]
+** Dealing down cards **
+Georgik2008 checks
+N_MIKAEL folds
+losgenie folds
+Raiseman13 raises [$0.45]
+kultexx folds
+hchcnona raises [$1.35]
+laeufergott folds
+Georgik2008 folds
+Raiseman13 calls [$0.95]
+** Dealing flop ** [ 7d, Ks, 6s ]
+hchcnona bets [$2.25]
+Raiseman13 folds
+** Summary **
+hchcnona collected [ $2.85 ]

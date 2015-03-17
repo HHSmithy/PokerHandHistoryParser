@@ -16,7 +16,7 @@ namespace HandHistories.Writer.Writer.PokerStars
     {
         const string NEWLINE = "\r\n";
 
-        static readonly CultureInfo NumberCulture = CultureInfo.InvariantCulture;
+        static readonly CultureInfo InvariantCulture = CultureInfo.InvariantCulture;
 
         public SiteName SiteName
         {
@@ -165,7 +165,7 @@ namespace HandHistories.Writer.Writer.PokerStars
 
             return string.Format(format,
                 action.PlayerName,
-                Math.Abs(action.Amount).ToString(NumberCulture));
+                Math.Abs(action.Amount).ToString(InvariantCulture));
         }
 
         private string GetShowLine(HandAction action, HandHistory hand)
@@ -213,8 +213,8 @@ namespace HandHistories.Writer.Writer.PokerStars
             lines.Add("*** SUMMARY ***");
 
             var potLine = string.Format("Total pot ${0} | Rake ${1} ",
-                hand.TotalPot.Value.ToString(NumberCulture),
-                hand.Rake.Value.ToString(NumberCulture));
+                hand.TotalPot.Value.ToString(InvariantCulture),
+                hand.Rake.Value.ToString(InvariantCulture));
 
             lines.Add(potLine);
 
@@ -298,12 +298,12 @@ namespace HandHistories.Writer.Writer.PokerStars
                         seat,
                         position,
                         string.Join(" ", player.HoleCards.Select(p => p.ToString())),
-                        winAction.Amount.ToString(NumberCulture),
+                        winAction.Amount.ToString(InvariantCulture),
                         "a pair of Jacks");
                     }
                     else
                     {
-                        return seat + position + string.Format("collected (${0})", winAction.Amount.ToString(NumberCulture));
+                        return seat + position + string.Format("collected (${0})", winAction.Amount.ToString(InvariantCulture));
                     }
                 }
                 else
@@ -361,8 +361,7 @@ namespace HandHistories.Writer.Writer.PokerStars
                     format = "{0}: posts the ante ${1}";
                     break;
                 case HandActionType.RAISE:
-                    decimal raiseToAmount = GetRaiseToAmount(action, hand);
-                    format = "{0}: raises ${1} to $" + raiseToAmount.ToString(NumberCulture);
+                    format = GetRaiseFormatString(action, hand);
                     break;
                 case HandActionType.BET:
                     format = "{0}: bets ${1}";
@@ -376,27 +375,70 @@ namespace HandHistories.Writer.Writer.PokerStars
                 case HandActionType.UNCALLED_BET:
                     format = "Uncalled bet (${1}) returned to {0}";
                     break;
-                case HandActionType.POSTS:
-                    format = "{0}: posts small blind ${1}";
-                    break;
+                //case HandActionType.POSTS:
+                //    format = "{0}: posts small blind ${1}";
+                //    break;
                 default:
                     throw new NotImplementedException("No support for action: " + action.HandActionType);
             }
             return string.Format(format + (action.IsAllIn ? " and is all-in" : ""), 
                 action.PlayerName, 
-                Math.Abs(action.Amount).ToString(NumberCulture));
+                Math.Abs(action.Amount).ToString(InvariantCulture));
+        }
+
+        private static string GetRaiseFormatString(HandAction action, HandHistory hand)
+        {
+            var raise = GetRaiseAmount(action, hand);
+
+            var raiseToAmount = GetRaiseToAmount(action, hand);
+
+            return string.Format("{0}: raises ${1} to ${2}",
+                "{0}",
+                raise.ToString(InvariantCulture),
+                raiseToAmount.ToString(InvariantCulture));
+        }
+
+        private static decimal GetRaiseAmount(HandAction action, HandHistory hand)
+        {
+            var streetActions = hand.HandActions
+                .Street(action.Street);
+
+            var playerPutInPot = streetActions
+                .Player(action)
+                .Where(p => p.ActionNumber < action.ActionNumber)
+                .Sum(p => p.Amount);
+
+            var playerWagers = new Dictionary<string, decimal>();
+
+            foreach (var item in streetActions
+                .Where(p => p.ActionNumber < action.ActionNumber))
+            {
+                if (!playerWagers.ContainsKey(item.PlayerName))
+                {
+                    playerWagers.Add(item.PlayerName, item.Amount);
+                }
+                else
+                {
+                    playerWagers[item.PlayerName] += item.Amount;
+                }
+            }
+
+            var amountToCall = playerWagers.Min(p => p.Value);
+
+            var raiseTo = action.Amount + playerPutInPot;
+
+            return Math.Abs(raiseTo - amountToCall);
         }
 
         private static decimal GetRaiseToAmount(HandAction action, HandHistory hand)
         {
             var streetActions = hand.HandActions
-                .Street(action.Street);
+                .Street(action)
+                .Player(action);
 
-            var bets = hand.HandActions.Street(action.Street)
-                .Where(p => p.ActionNumber < action.ActionNumber)
-                .Where(p => p.IsAggressiveAction || p.HandActionType == HandActionType.BIG_BLIND);
-
-            var amount = bets.Sum(p => p.Amount);
+            var amount = streetActions
+                .Where(p => p.ActionNumber < action.ActionNumber && p.HandActionType != HandActionType.ANTE)
+                .Sum(p => p.Amount);
 
             return Math.Abs(action.Amount + amount);
         }
@@ -416,7 +458,7 @@ namespace HandHistories.Writer.Writer.PokerStars
             return string.Format("Seat {0}: {1} (${2} in chips) ",
                 player.SeatNumber,
                 player.PlayerName,
-                player.StartingStack.ToString(NumberCulture));
+                player.StartingStack.ToString(InvariantCulture));
         }
 
         private string WritePlayerList(HandHistory hand)
@@ -435,9 +477,9 @@ namespace HandHistories.Writer.Writer.PokerStars
             var line1 = string.Format("PokerStars Game #{0}:  {1} (${2}/${3} USD) - {4} ET",
                 hand.HandId,
                 GetGameTypeString(hand.GameDescription.GameType),
-                hand.GameDescription.Limit.SmallBlind.ToString(NumberCulture),
-                hand.GameDescription.Limit.BigBlind.ToString(NumberCulture),
-                EasternTimeDate.ToString("yyyy\\/MM\\/dd H:mm:ss", NumberCulture));
+                hand.GameDescription.Limit.SmallBlind.ToString(InvariantCulture),
+                hand.GameDescription.Limit.BigBlind.ToString(InvariantCulture),
+                EasternTimeDate.ToString("yyyy\\/MM\\/dd H:mm:ss", InvariantCulture));
 
             var line2 = string.Format("Table '{0}' {1}-max Seat #{2} is the button",
                 hand.TableName,

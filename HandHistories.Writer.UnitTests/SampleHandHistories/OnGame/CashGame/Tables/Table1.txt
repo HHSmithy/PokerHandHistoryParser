@@ -1,0 +1,32 @@
+﻿***** History for hand R5-362037295-54 *****
+Start hand: Mon Jan 06 21:16:00 CET 2014
+Table: Butte [362037295] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 9
+Players in round: 6
+Seat 3: kalibas20055 ($98.70) 
+Seat 4: IMBASICK ($101.50) 
+Seat 6: INKASSOdoc ($154.01) 
+Seat 8: RedSalamandr ($113.61) 
+Seat 9: Maesttroy1 ($104.28) 
+Seat 10: BlackH0L3 ($111.01) 
+BlackH0L3 posts small blind ($0.50)
+kalibas20055 posts big blind ($1)
+---
+Dealing pocket cards
+IMBASICK folds
+INKASSOdoc folds
+RedSalamandr folds
+Maesttroy1 raises $2.00 to $2.00
+BlackH0L3 folds
+kalibas20055 folds
+---
+Summary:
+Main pot: $2.50 won by Maesttroy1 ($2.50)
+Rake taken: $0.00
+Seat 3: kalibas20055 ($97.70), net: -$1.00
+Seat 4: IMBASICK ($101.50), net: -$0.00
+Seat 6: INKASSOdoc ($154.01), net: -$0.00
+Seat 8: RedSalamandr ($113.61), net: -$0.00
+Seat 9: Maesttroy1 ($105.78), net: +$1.50
+Seat 10: BlackH0L3 ($110.51), net: -$0.50
+***** End of hand R5-362037295-54 *****

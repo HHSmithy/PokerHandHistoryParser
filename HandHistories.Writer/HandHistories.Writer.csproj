@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Writer\IHandWriter.cs" />
+    <Compile Include="Writer\OnGame\OnGameHandWriter.cs" />
+    <Compile Include="Writer\Pacific\PacificHandWriter.cs" />
     <Compile Include="Writer\PokerStars\PokerStarsHandWriter.cs" />
   </ItemGroup>
   <ItemGroup>

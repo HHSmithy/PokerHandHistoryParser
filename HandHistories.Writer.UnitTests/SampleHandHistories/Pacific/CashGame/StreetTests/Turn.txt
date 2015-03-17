@@ -1,0 +1,25 @@
+﻿#Game No : 301541060
+***** 888poker Hand History for Game 301541060 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 12:29:36
+Table Bath 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: Luka57 ( $96 )
+Seat 4: JonnyRiver69 ( $98.40 )
+Seat 6: JazzuJun ( $100 )
+JonnyRiver69 posts small blind [$0.50]
+JazzuJun posts big blind [$1]
+** Dealing down cards **
+Luka57 raises [$2]
+JonnyRiver69 folds
+JazzuJun calls [$1]
+** Dealing flop ** [ Kc, Ah, 7c ]
+JazzuJun checks
+Luka57 bets [$3.37]
+JazzuJun calls [$3.37]
+** Dealing turn ** [ 3d ]
+JazzuJun checks
+Luka57 bets [$8.43]
+JazzuJun folds
+** Summary **
+Luka57 collected [ $10.68 ]

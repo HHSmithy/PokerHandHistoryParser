@@ -1,0 +1,26 @@
+﻿#Game No : 280009830
+***** 888poker Hand History for Game 280009830 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 02:31:23
+Table Acapulco 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 2: ManakaReg ( $128.38 )
+Seat 6: Akisto ( $267.90 )
+Akisto posts small blind [$0.50]
+ManakaReg posts big blind [$1]
+** Dealing down cards **
+Akisto raises [$2.50]
+ManakaReg calls [$2]
+** Dealing flop ** [ 6d, Js, Ks ]
+ManakaReg checks
+Akisto checks
+** Dealing turn ** [ 3d ]
+ManakaReg checks
+Akisto checks
+** Dealing river ** [ Jc ]
+ManakaReg bets [$3]
+Akisto calls [$3]
+** Summary **
+ManakaReg shows [ 7s, 8c ]
+Akisto shows [ Ac, Tc ]
+Akisto collected [ $11.40 ]

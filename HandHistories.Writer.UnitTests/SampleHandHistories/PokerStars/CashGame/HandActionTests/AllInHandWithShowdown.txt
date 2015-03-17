@@ -16,11 +16,11 @@ Gaben13: posts the ante $0.02
 Gaben13: folds 
 Captain2323: folds 
 matze1987: raises $0.20 to $0.30
-numbush: raises $1 to $1.30
+numbush: raises $1.00 to $1.30
 DonKingKong: folds 
-matze1987: calls $1
+matze1987: calls $1.00
 *** FLOP *** [5c 4c 4h]
-numbush: bets $2
+numbush: bets $2.00
 matze1987: raises $8.94 to $10.94 and is all-in
 numbush: calls $8.94
 *** TURN *** [5c 4c 4h] [Qs]

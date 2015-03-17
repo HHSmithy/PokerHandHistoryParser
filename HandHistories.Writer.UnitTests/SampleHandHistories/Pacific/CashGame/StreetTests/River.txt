@@ -1,0 +1,28 @@
+﻿#Game No : 539478640
+***** 888poker Hand History for Game 539478640 *****
+$0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 20:46:21
+Table Birkenhead 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: MomWasRight ( $100.50 )
+Seat 6: LIDL_Earth ( $76.84 )
+Seat 9: Jack3bet ( $108.24 )
+LIDL_Earth posts small blind [$0.50]
+Jack3bet posts big blind [$1]
+** Dealing down cards **
+MomWasRight raises [$2]
+LIDL_Earth folds
+Jack3bet calls [$1]
+** Dealing flop ** [ 5d, Ks, 7c ]
+Jack3bet checks
+MomWasRight checks
+** Dealing turn ** [ Jc ]
+Jack3bet checks
+MomWasRight checks
+** Dealing river ** [ 7d ]
+Jack3bet checks
+MomWasRight checks
+** Summary **
+Jack3bet shows [ Ah, 6d ]
+MomWasRight mucks [ 4s, 4c ]
+Jack3bet collected [ $4.28 ]

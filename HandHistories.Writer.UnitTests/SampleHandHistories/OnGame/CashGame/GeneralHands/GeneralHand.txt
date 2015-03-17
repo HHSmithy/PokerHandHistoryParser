@@ -1,0 +1,31 @@
+﻿***** History for hand R5-361850810-464 *****
+Start hand: Mon Jan 06 01:00:00 CET 2014
+Table: Bonn [361850810] (NO_LIMIT TEXAS_HOLDEM $0.50/$1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 1: BlackH0L3 ($113.97) 
+Seat 2: Cockatrice ($97.84) 
+Seat 7: BONUS 1OOO ($135.01) 
+Seat 8: fyabcf ($238.65) 
+Seat 9: kliketiklok ($101.28) 
+Seat 10: Dbcee89 ($100.00) 
+kliketiklok posts small blind ($0.50)
+Dbcee89 posts big blind ($1)
+---
+Dealing pocket cards
+BlackH0L3 folds
+Cockatrice folds
+BONUS 1OOO folds
+fyabcf folds
+kliketiklok folds
+---
+Summary:
+Main pot: $1.00 won by Dbcee89 ($1.00)
+Rake taken: $0.00
+Seat 1: BlackH0L3 ($113.97), net: -$0.00
+Seat 2: Cockatrice ($97.84), net: -$0.00
+Seat 7: BONUS 1OOO ($135.01), net: -$0.00
+Seat 8: fyabcf ($238.65), net: -$0.00
+Seat 9: kliketiklok ($100.78), net: -$0.50
+Seat 10: Dbcee89 ($100.50), net: +$0.50
+***** End of hand R5-361850810-464 *****

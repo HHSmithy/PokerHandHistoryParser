@@ -9,66 +9,78 @@ namespace HandHistories.Parser.Utils.Pot
 {
     public static class PotCalculator
     {
+        static bool EndsWithUncalledBet(List<HandAction> actions)
+        {
+            for (int i = actions.Count - 1; i > 0; i--)
+            {
+                var action = actions[i];
+
+                switch (action.HandActionType)
+                {
+                    case HandActionType.CALL:
+                    case HandActionType.CHECK:
+                    case HandActionType.BIG_BLIND:
+                        return false;
+                    case HandActionType.RAISE:
+                    case HandActionType.BET:
+                        return true;
+
+                    //This a cancelled hand
+                    case HandActionType.SMALL_BLIND:
+                        return false;
+                }
+            }
+            throw new ArgumentException("Incomplete Hand: NO CALL/CHECK/BET/RAISE/BB Found");
+        }
+
         public static decimal CalculateTotalPot(HandHistory hand)
         {
             var gameActions = hand.HandActions
                 .Where(p => p.IsGameAction)
                 .ToList();
 
-            var lastAction = gameActions[gameActions.Count - 1];
-
-            var playerPutInPotOnLastStreet = gameActions
-                .Street(lastAction.Street)
-                .Player(lastAction.PlayerName)
-                .Sum(p => p.Amount);
-
-            Dictionary<string, decimal> amounts = hand.Players
-                .ToDictionary(p => p.PlayerName, p => 0m);
+            var playerWagers = hand.Players.ToDictionary(p => p.PlayerName, p => 0m);
 
             decimal amountToCall = 0;
+            decimal lastBetAmount = 0;
 
-            foreach (var action in gameActions)
+            foreach (var action in hand.HandActions)
             {
-                if (action.HandActionType == HandActionType.BIG_BLIND)
+                switch (action.HandActionType)
                 {
-                    amountToCall = action.Amount;
-                }
-                if (action.IsBlinds || 
-                    action.HandActionType == HandActionType.POSTS)
-                {
-                    amounts[action.PlayerName] += action.Amount;
-                }
-                if (action.IsAggressiveAction)
-                {
-                    amountToCall += action.Amount;
-                    amounts[action.PlayerName] = amountToCall;
-                }
-                else if (action.HandActionType == HandActionType.CALL)
-                {
-                    amounts[action.PlayerName] += action.Amount;
+                    case HandActionType.CALL:
+                        amountToCall = 0;
+                        playerWagers[action.PlayerName] += action.Amount;
+                        break;
+                    case HandActionType.RAISE:
+                        playerWagers[action.PlayerName] += action.Amount;
+                        lastBetAmount = playerWagers[action.PlayerName] - amountToCall;
+                        amountToCall = playerWagers[action.PlayerName];
+                        break;
+                    case HandActionType.BET:
+                        lastBetAmount = action.Amount;
+                        playerWagers[action.PlayerName] += action.Amount;
+                        amountToCall = playerWagers[action.PlayerName];
+                        break;
+                    case HandActionType.SMALL_BLIND:
+                    case HandActionType.BIG_BLIND:
+                    case HandActionType.ANTE:
+                    case HandActionType.POSTS:
+                        amountToCall = action.Amount;
+                        playerWagers[action.PlayerName] += action.Amount;
+                        break;
                 }
             }
 
-            var maxValue = amounts
-                .Min(p => p.Value);
-
-            var maxCount = amounts
-                .Count(p => p.Value == maxValue);
-
-            var Pot = amounts
+            decimal TotalPot = playerWagers
                 .Sum(p => p.Value);
 
-            if (maxCount == 1)
+            if (EndsWithUncalledBet(hand.HandActions))
             {
-                var nextValue = amounts.OrderBy(p => p.Value)
-                    .Skip(1)
-                    .First()
-                    .Value;
-
-                Pot -= maxValue - nextValue;
+                TotalPot -= lastBetAmount;
             }
 
-            return Math.Abs(Pot);
+            return Math.Abs(TotalPot);
         }
 
         public static decimal CalculateRake(HandHistory hand)

@@ -1,0 +1,38 @@
+﻿***** History for hand R5-361851798-349 *****
+Start hand: Mon Jan 06 00:17:00 CET 2014
+Table: Bristol [361851798] (NO_LIMIT TEXAS_HOLDEM $0.05/$0.10, Real money)
+Button: seat 7
+Players in round: 6
+Seat 2: checcol ($17.88) 
+Seat 3: Houdini9918 ($11.00) 
+Seat 5: paratrixa40 ($11.35) 
+Seat 7: VoilanXuMuK ($9.30) 
+Seat 8: heroins ($7.41) 
+Seat 9: redwinnerrr ($14.07) 
+heroins posts small blind ($0.05)
+redwinnerrr posts big blind ($0.10)
+---
+Dealing pocket cards
+checcol calls $0.10
+Houdini9918 folds
+paratrixa40 folds
+VoilanXuMuK calls $0.10
+heroins calls $0.05
+redwinnerrr checks
+--- Dealing flop [Kd, Td, 8s]
+heroins bets $0.10
+redwinnerrr raises $0.50 to $0.50
+checcol folds
+VoilanXuMuK folds
+heroins folds
+---
+Summary:
+Main pot: $0.60 won by redwinnerrr ($0.56)
+Rake taken: $0.04
+Seat 2: checcol ($17.78), net: -$0.10
+Seat 3: Houdini9918 ($11.00), net: -$0.00
+Seat 5: paratrixa40 ($11.35), net: -$0.00
+Seat 7: VoilanXuMuK ($9.20), net: -$0.10
+Seat 8: heroins ($7.21), net: -$0.20
+Seat 9: redwinnerrr ($14.43), net: +$0.36
+***** End of hand R5-361851798-349 *****

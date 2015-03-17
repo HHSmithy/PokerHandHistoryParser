@@ -63,16 +63,16 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P2", HandActionType.CALL, 0.2m, Objects.Cards.Street.Flop),
 
                 new HandAction("P1", HandActionType.BET, 0.4m, Objects.Cards.Street.Turn),
-                new HandAction("P2", HandActionType.RAISE, 1.2m, Objects.Cards.Street.Turn),
-                new HandAction("P1", HandActionType.CALL, 1.6m, Objects.Cards.Street.Turn),
+                new HandAction("P2", HandActionType.RAISE, 2.4m, Objects.Cards.Street.Turn),
+                new HandAction("P1", HandActionType.CALL, 2.0m, Objects.Cards.Street.Turn),
 
                 new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
                 new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
 
-                new WinningsAction("P1", HandActionType.WINS, 4m, 0),
+                new WinningsAction("P1", HandActionType.WINS, 5.6m, 0),
             };
 
-            TestPotCalculator(4m, hand);
+            TestPotCalculator(5.6m, hand);
         }
     }
 }

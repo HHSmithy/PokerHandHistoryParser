@@ -1,0 +1,29 @@
+﻿#Game No : 280043556
+***** 888poker Hand History for Game 280043556 *****
+$0.05/$0.10 Blinds Pot Limit OmahaHL - *** 06 01 2014 09:01:04
+Table Coslada 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 2
+Seat 5: clarefrush ( $2.46 )
+Seat 6: IbetIgotYou ( $1.50 )
+clarefrush posts small blind [$0.05]
+IbetIgotYou posts big blind [$0.10]
+** Dealing down cards **
+clarefrush calls [$0.05]
+IbetIgotYou checks
+** Dealing flop ** [ 3h, Ac, 8c ]
+IbetIgotYou checks
+clarefrush checks
+** Dealing turn ** [ 3c ]
+IbetIgotYou bets [$0.10]
+clarefrush calls [$0.10]
+** Dealing river ** [ Qs ]
+IbetIgotYou bets [$0.20]
+clarefrush calls [$0.20]
+** Summary **
+IbetIgotYou shows [ 4h, Th, 6d, Qc ]
+(Hi: Qc, Qs, 3h, 3c, Th)
+(Lo: 3c, 4h, 6d, 8c, Ac)
+clarefrush mucks [ 6s, 6h, Kc, 7h ]
+IbetIgotYou collected [ $0.38 ]
+IbetIgotYou collected [ $0.38 ]
