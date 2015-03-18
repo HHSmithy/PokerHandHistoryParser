@@ -14,15 +14,13 @@ namespace HandHistories.Objects.Actions
                            Street street,
                            bool isRaiseAllIn,
                            int actionNumber = 0)
-            : base(playerName, HandActionType.ALL_IN, amount, street, actionNumber)
+            : base(playerName, HandActionType.RAISE, amount, street, true, actionNumber)
         {
             IsRaiseAllIn = isRaiseAllIn;
+            if (!isRaiseAllIn)
+            {
+                HandActionType = Actions.HandActionType.BET;
+            }
         }
-
-        public override string ToString()
-        {
-            return base.ToString() + "-RaiseAllIn=" + IsRaiseAllIn;
-        }
-
     }
 }
