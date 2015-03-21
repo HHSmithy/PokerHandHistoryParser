@@ -31,6 +31,8 @@ namespace HandHistories.Objects.GameDescription
         PokerStarsZoom = 26,
         Winamax = 27,
         WinningPoker = 28,
+        PartyPokerNJ = 29,
+        PartyPokerEs = 30,
         All = 63 // note: can't go higher than 63 due to bit value optimizations
     }
 }

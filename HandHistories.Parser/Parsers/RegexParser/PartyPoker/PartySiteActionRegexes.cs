@@ -18,17 +18,17 @@ namespace HandHistories.Parser.Parsers.PartyPoker
 
         protected override string WinsSidePotRegex
         {
-            get { return @"^.* wins \$[0-9,.]+ USD from the side pot [0-9]+ with .*$"; }
+            get { return @"^.* wins (\$|€|£)[0-9,.]+ (USD|GBP|EUR) from the side pot [0-9]+ with .*$"; }
         }
 
         protected override string WinsPotRegex
         {
-            get { return @"(^.* wins \$[0-9,.]+ USD$)|(^.* wins \$[0-9,.]+ USD from the main pot with .*$)"; }
+            get { return @"(^.* wins (\$|€|£)[0-9,.]+ (USD|GBP|EUR)$)|(^.* wins \$[0-9,.]+ (USD|GBP|EUR) from the main pot with .*$)"; }
         }
 
         protected override string WinsTheLowRegex
         {
-            get { return @"^.* wins Lo \(\$[0-9,.]+ USD\) from the main pot with .*$"; }
+            get { return @"^.* wins Lo \((\$|€|£)[0-9,.]+ (USD|GBP|EUR)\) from the main pot with .*$"; }
         }
 
         protected override string UncalledBetRegex
@@ -61,12 +61,12 @@ namespace HandHistories.Parser.Parsers.PartyPoker
 
         protected override string PostsSmallBlindRegex
         {
-            get { return @"^.* posts small blind \[\$[0-9.,]+ USD\]\.$"; }
+            get { return @"^.* posts small blind \[(\$|€|£)[0-9.,]+ (USD|GBP|EUR)\]\.$"; }
         }
 
         protected override string PostsBigBlindRegex
         {
-            get { return @"^.* posts big blind \[\$[0-9.,]+ USD\]\.$"; }
+            get { return @"^.* posts big blind \[(\$|€|£)[0-9.,]+ (USD|GBP|EUR)\]\.$"; }
         }
 
         protected override string SittingOutRegex
@@ -97,17 +97,17 @@ namespace HandHistories.Parser.Parsers.PartyPoker
 
         protected override string RaiseToRegex
         {
-            get { return @"^.* raises \[\$[0-9,.]+ USD\]$"; }
+            get { return @"^.* raises \[(\$|€|£)[0-9,.]+ (USD|GBP|EUR)\]$"; }
         }
 
         protected override string PostsRegex
-        {            
-            get { return @"^.* posts big blind \+ dead \[\$[0-9.,]+\]\.$"; }
+        {
+            get { return @"^.* posts big blind \+ dead \[(\$|€|£)[0-9.,]+\]\.$"; }
         }
 
         protected override string AllInRegex
         {
-            get { return @"^.* is all-In[ ]+[\$[0-9,.]+ USD\]$"; }
+            get { return @"^.* is all-In[ ]+[(\$|€|£)[0-9,.]+ (USD|GBP|EUR)\]$"; }
         }
 
         protected override string HasReturnedRegex
@@ -134,12 +134,12 @@ namespace HandHistories.Parser.Parsers.PartyPoker
 
         protected override string BetsRegex
         {
-            get { return @"^.* bets \[\$[0-9.,]+ USD\]$"; }
+            get { return @"^.* bets \[(\$|€|£)[0-9.,]+ (USD|GBP|EUR)\]$"; }
         }
 
         protected override string CallsRegex
         {
-            get { return @"^.* calls [\$[0-9,.]+ USD\]$"; }
+            get { return @"^.* calls [(\$|€|£)[0-9,.]+ (USD|GBP|EUR)\]$"; }
         }
 
         protected override string ChatRegex
@@ -170,7 +170,7 @@ namespace HandHistories.Parser.Parsers.PartyPoker
 
         public override string AmountRegex
         {
-            get { return @"(?<=\$)[0-9.,]+(?= USD)"; }
+            get { return @"(?<=(\$|€|£))[0-9.,]+(?= (USD|GBP|EUR))"; }
         }
     }
 }
