@@ -30,6 +30,7 @@ namespace HandHistories.Objects.GameDescription
                 case "fl hold'em":
                 case "fixed holdem":
                 case "fixed hold'em":
+                case "limit hold'em":
                     return GameType.FixedLimitHoldem;
                 case "pl omaha":
                 case "plo":
@@ -42,7 +43,18 @@ namespace HandHistories.Objects.GameDescription
                 case "plo hi-lo":
                     return GameType.PotLimitOmahaHiLo;
                 case "omaha hi-lo no limit":
+                case "no limit omaha hi-lo":
                     return GameType.NoLimitOmahaHiLo;     
+                case "fl omaha hi-lo":
+                    return GameType.FixedLimitOmahaHiLo;
+                case "fixed limit omaha":
+                    return GameType.FixedLimitOmaha;
+                case "no limit omaha":
+                    return GameType.NoLimitOmaha;
+                case "pot limit five card omaha hi-lo":
+                    return GameType.FiveCardPotLimitOmahaHiLo;
+                case "pot limit five card omaha":
+                    return GameType.FiveCardPotLimitOmaha;
                 default:
                     string match = Enum.GetNames(typeof(GameType)).FirstOrDefault(g => g.ToLower().Equals(gameString.ToLower()));
                     return match == null ? GameType.Unknown : (GameType)Enum.Parse(typeof(GameType), match,true);

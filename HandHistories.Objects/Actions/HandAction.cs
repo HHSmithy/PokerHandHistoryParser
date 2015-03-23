@@ -48,7 +48,7 @@ namespace HandHistories.Objects.Actions
             PlayerName = playerName;
             Amount = GetAdjustedAmount(amount, handActionType);
             ActionNumber = actionNumber;
-            IsAllIn = false;
+            IsAllIn = AllInAction;
         }
 
         public override int GetHashCode()

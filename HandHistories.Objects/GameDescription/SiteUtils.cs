@@ -21,6 +21,10 @@ namespace HandHistories.Objects.GameDescription
                     return "Poker Stars Fr";
                 case SiteName.PokerStarsEs:
                     return "Poker Stars Es";
+                case SiteName.IPoker:
+                    return "iPoker";
+                case SiteName.IPoker2:
+                    return "iPoker - Low";
                 default:
                     return siteName.ToString();
             }                        
@@ -51,6 +55,9 @@ namespace HandHistories.Objects.GameDescription
                 case "pty":
                 case "pp":
                     return SiteName.PartyPoker;
+                case "ipoker1":
+                case "ipoker-top":
+                case "ipoker - top":
                 case "ipoker":
                 case "titanpoker":
                 case "titan":
@@ -64,6 +71,7 @@ namespace HandHistories.Objects.GameDescription
                     return SiteName.Cereus;
                 case "ongame":
                 case "on game":
+                case "bestpoker":
                     return SiteName.OnGame;
                 case "bodog":
                     return SiteName.Bodog;
@@ -101,6 +109,12 @@ namespace HandHistories.Objects.GameDescription
                 case "partyit":
                 case "partypokerit":
                     return SiteName.PartyPokerIt;
+                case "partynj":
+                case "partypokernj":
+                    return SiteName.PartyPokerNJ;
+                case "partyes":
+                case "partypokeres":
+                    return SiteName.PartyPokerEs;
                 case "ongameit":
                     return SiteName.OnGameIt;
                 case "ongamefr":
@@ -110,6 +124,8 @@ namespace HandHistories.Objects.GameDescription
                 case "ipokerfr":
                     return SiteName.IPokerFr;
                 case "ipoker2":
+                case "ipoker - low":
+                case "ipoker-low":
                 case "betmost":
                     return SiteName.IPoker2;
                 case "888":

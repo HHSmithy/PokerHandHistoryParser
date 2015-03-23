@@ -43,9 +43,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
+            var start = rawHandHistories[16] == '#' ? "PokerStars Game #" : "PokerStars Zoom Hand #";
+
             return HandSplitRegex.Split(rawHandHistories)
                             .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
-                            .Select(s => "PokerStars Game #" + s.Trim('\r', 'n'));
+                            .Select(s => start + s.Trim('\r', 'n'));
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -210,12 +212,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         protected override TableType ParseTableType(string[] handLines)
         {
             // Stars does not right out things such as speed/shallow/fast to hands right now.
-
-            if (handLines[1].Contains(" Zoom "))
+            if (handLines[1].Contains(" Zoom") || handLines[0].Contains(" Zoom"))
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Zoom);
             }
 
+            if (handLines[1].Contains("100-250 bb"))
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Deep);
+            }
+            
             // older hand history files have the cap mark in the first line
             if (handLines[1].LastIndexOf(" CAP", StringComparison.Ordinal) != -1 ||
                handLines[0].LastIndexOf(" Cap ", StringComparison.Ordinal) != -1)

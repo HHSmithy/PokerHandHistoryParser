@@ -18,5 +18,32 @@ namespace HandHistories.Objects.GameDescription
                     return pokerFormat.ToString();
             }
         }
+
+        public static PokerFormat ParseFormatName(string pokerformat)
+        {
+            switch (pokerformat.ToLower())
+            {
+                case "cash game":
+                case "cashgame":
+                case "cg":
+                case "cash":
+                    return PokerFormat.CashGame;
+
+                case "sng":
+                case "sitandgo":
+                case "sit and go":
+                case "sitngo":
+                case "sit&go":
+                    return PokerFormat.SitAndGo;
+
+                case "mtt":
+                case "multitabletournament":
+                case "multi table tournament":
+                    return PokerFormat.MultiTableTournament;
+
+            }
+
+            return PokerFormat.Unknown;
+        }
     }
 }

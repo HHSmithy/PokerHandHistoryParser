@@ -44,10 +44,10 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
         protected abstract string SitsDownRegex { get; }        
         protected abstract string SittingOutRegex { get; }
         protected abstract string ReconnectedRegex { get; }
-        protected abstract string HasReturnedRegex { get; }                  
-        
-        public virtual string AmountRegex { get { return @"(?<=\$)[0-9.,]+(?= USD)"; } }
-        public virtual string PostAmountRegex { get { return @"(?<=\$)[0-9.,]+(?=].)"; } }
+        protected abstract string HasReturnedRegex { get; }
+
+        public virtual string AmountRegex { get { return @"(?<=(\$|€|£))[0-9.,]+(?= (USD|GBP|EUR))"; } }
+        public virtual string PostAmountRegex { get { return @"(?<=(\$|€|£))[0-9.,]+(?=].)"; } }
 
         // Note: This is FTP only.
         protected virtual string IsFeelingRegex { get { return null; } }

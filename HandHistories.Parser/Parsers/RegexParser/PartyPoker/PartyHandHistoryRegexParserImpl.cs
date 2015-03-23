@@ -13,13 +13,20 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
     {                                
         // Mantis Bug 92 - a possible speed optimization is converting these into constants
         // foreach site so compiler can do its magic but how would we do overrides? and would this increase speed?
+        private readonly SiteName _siteName;
 
-        public PartyHandHistoryRegexParserImpl() 
-            : base()
+        public override SiteName SiteName
         {
+            get { return _siteName; }
         }
 
-        public override SiteName SiteName { get { return SiteName.PartyPoker; } }
+        public PartyHandHistoryRegexParserImpl(SiteName site = SiteName.PartyPoker) 
+            : base()
+        {
+            _siteName = site;
+
+        }
+
 
         public override string TableNameRegex { get { return @"(?<=Table ).*(?= \(Real)"; } }
 
@@ -30,9 +37,9 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
 
         public override string GameNumberRegex { get { return @"(?<=Hand History for Game )\#{0,1}[0-9]*"; } }
 
-        public override string GameLimitRegex { get {  return @"(?<=\n)\$[0-9,]*(\.[0-9]{2}){0,1}"; } }
+        public override string GameLimitRegex { get { return @"(?<=\n)(\$|€|£)[0-9,]*(\.[0-9]{2}){0,1}"; } }
 
-        public override string GameLimitRegexWithSlash { get { return @"(?<=\n)\$[0-9,]*(\.[0-9]{2}){0,1}/\$[0-9,]*(\.[0-9]{2}){0,1}"; } }
+        public override string GameLimitRegexWithSlash { get { return @"(?<=\n)(\$|€|£)[0-9,]*(\.[0-9]{2}){0,1}/(\$|€|£)[0-9,]*(\.[0-9]{2}){0,1}"; } }
 
         public override string GameDateRegex { get { return @"(?<= - ).*, [012][0-9]:[0-5][0-9]:[0-5][0-9] [A-Za-z]{0,5} [0-9]{4}";} } 
 
@@ -56,12 +63,12 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
             const string regex = @"((?<={playerName} doesn't show \[ )([0-9TJKQAcdhs, ])+)|((?<={playerName} shows \[ )([0-9TJKQAcdhs, ])+)";
             return regex.Replace("{playerName}", playerName).Replace("{Card}", cardHoleCard);
         }
-        
-        public override string SeatInfoRegex { get { return @"Seat [0-9]+: " + PlayerNameRegex + @" \( \$[0-9,.]+ USD \)"; } }
+
+        public override string SeatInfoRegex { get { return @"Seat [0-9]+: " + PlayerNameRegex + @" \( (\$|€|£)[0-9,.]+ (USD|GBP|EUR) \)"; } }
 
         public override string SeatInfoPlayerNameRegex { get { return @"((?<=Seat [1-9]: )|(?<=Seat 10: )).*(?= \()"; } }
 
-        public override string SeatInfoStartingStackRegex { get { return @"(?<=\( \$).*(?= USD \))"; } }
+        public override string SeatInfoStartingStackRegex { get { return @"(?<=\( (\$|€|£)).*(?= (USD|GBP|EUR) \))"; } }
 
         public override string SeatInfoSeatNumberRegex { get { return @"(?<=Seat )[0-9]+(?=:)"; } }
 
@@ -110,8 +117,8 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
                 var gameLimitNoSlash = Regex.Match(handText, GameLimitRegex).Value;
                 var gameLimitWithSlash = Regex.Match(handText, GameLimitRegexWithSlash).Value;
 
-                gameLimitNoSlash = gameLimitNoSlash.Replace("$", "").Replace("*", "").Replace(",", "");
-                gameLimitWithSlash = gameLimitWithSlash.Replace("$", "").Replace("*", "").Replace(",", "");
+                gameLimitNoSlash = gameLimitNoSlash.Replace("€", "").Replace("$", "").Replace("*", "").Replace(",", "");
+                gameLimitWithSlash = gameLimitWithSlash.Replace("€", "").Replace("$", "").Replace("*", "").Replace(",", "");
 
                 // Handle 20BB tables, due to Party putting the limit up as 40% of the actual
                 // limit. So for instance 20BB party $100NL the limit is displayed as $40NL.

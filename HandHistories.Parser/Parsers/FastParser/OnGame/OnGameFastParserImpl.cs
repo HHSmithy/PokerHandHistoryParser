@@ -70,8 +70,11 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
             switch (timeZone)
             {
+                case "GMT":
+                    return date;
                 case "CEST": // Central European Summer Time
                     return date.AddHours(-2);
+                case "BST": // British Summer TIme
                 case "CET":
                     return date.AddHours(-1);
                 case "PST":
