@@ -63,6 +63,7 @@
     <Compile Include="Compression\HandHistoryGZipCompressorImpl.cs" />
     <Compile Include="Compression\HandHistoryTinyFormatCompressorImpl.cs" />
     <Compile Include="Compression\IHandHistoryCompressor.cs" />
+    <Compile Include="Parsers\Base\IThreeStateParser.cs" />
     <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\BossMedia\BossMediaFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
