@@ -131,12 +131,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             //   PokerStars Hand #78453197174:  Hold'em No Limit ($0.08/$0.16 USD) - 2012/04/06 20:56:40 ET
             // or
             //   PokerStars Game #PokerStars Zoom Hand #84414134468:  Omaha Pot Limit ($0.05/$0.10 USD) - 2012/08/07 14:40:01 ET            
+            // Zoom format   
+            // PokerStars Zoom Hand #132630000000:
+            const int ZoomHandIDStartIndex = 22;//"PokerStars Zoom Hand #".Length
+            const int NormalHandIDStartIndex = 17;
 
-            // Zoom format           
-            int firstDigitIndex = handLines[0][38] == '#' ? 39 : 17;
-            int lastDigitIndex = handLines[0].IndexOf(':') - 1;
+            string line = handLines[0];
 
-            string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex + 1);
+            int firstDigitIndex;// = handLines[0][38] == '#' ? 39 : 17;
+
+            char handIDchar = line[11];
+            switch (handIDchar)
+            {
+                case 'Z':
+                    firstDigitIndex = ZoomHandIDStartIndex;
+                    break;
+                case 'H':
+                    firstDigitIndex = NormalHandIDStartIndex;
+                    break;
+                default:
+                    firstDigitIndex = line.LastIndexOf('#') + 1;
+                    break;
+            }
+
+            int lastDigitIndex = line.IndexOf(':');
+
+            string handId = line.Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
         }
 
@@ -261,10 +281,18 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
 
             int slashIndex = limitSubstring.IndexOf('/');
-            int firstSpace = limitSubstring.IndexOf(' ');
 
             decimal small = decimal.Parse(limitSubstring.Substring(1, slashIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
-            decimal big = decimal.Parse(limitSubstring.Substring(slashIndex + 2, firstSpace - (slashIndex + 2) + 1), System.Globalization.CultureInfo.InvariantCulture);
+
+            int bbStartIndex = slashIndex + 2;
+            int bbEndIndex = limitSubstring.IndexOf(' ');
+
+            if (bbEndIndex == -1)
+            {
+                bbEndIndex = limitSubstring.Length;
+            }
+
+            decimal big = decimal.Parse(limitSubstring.Substring(bbStartIndex, bbEndIndex - bbStartIndex), System.Globalization.CultureInfo.InvariantCulture);
 
 
             // If it is an ante table we expect to see an ante line after the big blind
