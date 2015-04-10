@@ -879,6 +879,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\ZoomHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\NoLimitOmahaHiLo.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

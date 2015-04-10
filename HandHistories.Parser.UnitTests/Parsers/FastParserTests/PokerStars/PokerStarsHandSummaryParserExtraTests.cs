@@ -48,6 +48,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             return actualSummary;
         }
 
+        [Test]
+        public void ZoomHand()
+        {
+            HandHistorySummary expectedSummary = new HandHistorySummary()
+            {
+                GameDescription = new GameDescriptor()
+                {
+                    PokerFormat = PokerFormat.CashGame,
+                    GameType = GameType.PotLimitOmaha,
+                    Limit = Limit.FromSmallBlindBigBlind(1m, 2m, Currency.USD),
+                    SeatType = SeatType.FromMaxPlayers(6),
+                    Site = SiteName.PokerStars,
+                    TableType = TableType.FromTableTypeDescriptions(TableTypeDescription.Zoom)
+                },
+                DateOfHandUtc = new DateTime(2014, 2, 21, 17, 45, 8),
+                DealerButtonPosition = 1,
+                HandId = 132630000000,
+                NumPlayersSeated = 6,
+                TableName = "Diotima"
+            };
+
+            TestFullHandHistorySummary(expectedSummary, "ZoomHand");
+        }
+
         // Issue with names with colons in
         [Test]
         public void PlayerWithColon()
