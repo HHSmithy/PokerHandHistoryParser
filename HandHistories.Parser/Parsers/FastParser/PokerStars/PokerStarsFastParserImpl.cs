@@ -15,6 +15,7 @@ using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
 using HandHistories.Parser.Utils.FastParsing;
 using System.Runtime.CompilerServices;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
@@ -51,6 +52,27 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return HandSplitRegex.Split(rawHandHistories)
                             .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
                             .Select(s => start + s.Trim('\r', 'n'));
+        }
+
+        public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
+        {
+            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', jump: 10, jumpAfter: 2);
+
+            List<string> handLines = new List<string>(50);
+
+            foreach (var item in allLines)
+            {
+                if (string.IsNullOrEmpty(item))
+                {
+                    if (handLines.Count > 0)
+                    {
+                        yield return handLines.ToArray();
+                        handLines = new List<string>(50);
+                    }
+                    continue;
+                }
+                handLines.Add(item.TrimEnd('\r', ' '));
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)

@@ -53,22 +53,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         public virtual IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
         {
-            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', jump: 10, jumpAfter: 2);
-
-            List<string> handLines = new List<string>(50);
-
-            foreach (var item in allLines)
+            foreach (var hand in SplitUpMultipleHands(rawHandHistories))
             {
-                if (string.IsNullOrEmpty(item))
-                {
-                    if (handLines.Count > 0)
-                    {
-                        yield return handLines.ToArray();
-                        handLines = new List<string>(50);
-                    }
-                    continue;
-                }
-                handLines.Add(item.Trim());
+                yield return SplitHandsLines(hand);
             }
         }
 
