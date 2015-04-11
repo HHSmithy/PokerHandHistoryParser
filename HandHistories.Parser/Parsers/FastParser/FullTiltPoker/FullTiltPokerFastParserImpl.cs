@@ -11,10 +11,11 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Parsers.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
-    public sealed class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl, IThreeStateParser
     {
         public override SiteName SiteName
         {
@@ -547,11 +548,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             throw new Exception("No check or fold in line: " + line);
         }
 
-        static int ParseBlindActions(string[] handLines, ref List<HandAction> actions, int startIndex)
+        public int ParseBlindActions(string[] handLines, ref List<HandAction> actions, int startIndex)
         {
             for (int i = startIndex; i < handLines.Length; i++)
             {
                 var line = handLines[i];
+
                 var lastChar = line[line.Length - 1];
 
                 switch (lastChar)
@@ -581,7 +583,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 }
 
                 int idIndex = line.LastIndexOf(' ');
-                char idChar = line[idIndex - 10];
+                char idChar = line[idIndex - 1];
 
                 string playerName;
                 decimal amount = ParseAmount(line, idIndex + 2);
@@ -589,17 +591,41 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
                 switch (idChar)
                 {
-                        //Rene Lacoste posts the small blind of $5
-                    case 'l':
-                        actionType = HandActionType.SMALL_BLIND;
-                        playerName = line.Remove(idIndex - 25);//" posts the small blind of".Length
+                    //Rene Lacoste posts the small blind of $5
+                    //Rene Lacoste posts the big blind of $5
+                    case 'f':
+                        char blindType = line[idIndex - 10];
+
+                        switch (blindType)
+                        {
+                            //Rene Lacoste posts the small blind of $5
+                            case 'l':
+                                actionType = HandActionType.SMALL_BLIND;
+                                playerName = line.Remove(idIndex - 25);
+                                break;
+
+                            //Rene Lacoste posts the big blind of $5
+                            case 'g':
+                                actionType = HandActionType.BIG_BLIND;
+                                playerName = line.Remove(idIndex - 23);
+                                break;
+                            default:
+                                throw new ArgumentException(string.Format("Unhandled blindType: '{0}' Line: {1}",
+                                                blindType,
+                                                line));
+                        }
                         break;
-                    case 'g':
-                        actionType = HandActionType.BIG_BLIND;
-                        playerName = line.Remove(idIndex - 23);//" posts the big blind of".Length
-                        break;
-                    case 'i':
+
+                    //The button is in seat #3
+                    case 't':
                         continue;
+
+                    //iason07 antes $0.30
+                    case 's':
+                        actionType = HandActionType.ANTE;
+                        playerName = line.Remove(idIndex - 6);
+                        break;
+
                     default:
                         throw new ArgumentException(string.Format("Unhandled idChar: '{0}' Line: {1}",
                             idChar,

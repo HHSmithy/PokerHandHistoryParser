@@ -1,0 +1,41 @@
+﻿PokerStars Zoom Hand #132630000000:  Omaha Pot Limit ($1/$2) - 2014/02/21 12:45:08 WET [2014/02/21 12:45:08 ET]
+Table 'Diotima' 6-max Seat #1 is the button
+Seat 1: Player1 ($196.40 in chips) 
+Seat 2: Player2 ($1457.52 in chips) 
+Seat 3: Player3 ($714.53 in chips) 
+Seat 4: Player4 ($303.48 in chips) 
+Seat 5: Player5 ($201.49 in chips) 
+Seat 6: Player6 ($946.41 in chips) 
+Player2: posts small blind $1
+Player3: posts big blind $2
+*** HOLE CARDS ***
+Dealt to Player1 [3d 5s 4h 2c]
+Player4: raises $4 to $6
+Player5: folds 
+Player6: raises $15 to $21
+Player1: folds 
+Player2: folds 
+Player3: folds 
+Player4: calls $15
+*** FLOP *** [8c 7c As]
+Player4: checks 
+Player6: checks 
+*** TURN *** [8c 7c As] [9c]
+Player4: checks 
+Player6: checks 
+*** RIVER *** [8c 7c As 9c] [Kd]
+Player4: checks 
+Player6: checks 
+*** SHOW DOWN ***
+Player4: shows [8h 4s Qh 7s] (two pair, Eights and Sevens)
+Player6: shows [Th Ad Jd Jh] (a straight, Seven to Jack)
+Player6 collected $42.98 from pot
+*** SUMMARY ***
+Total pot $45 | Rake $2.02 
+Board [8c 7c As 9c Kd]
+Seat 1: Player1 (button) folded before Flop (didn't bet)
+Seat 2: Player2 (small blind) folded before Flop
+Seat 3: Player3 (big blind) folded before Flop
+Seat 4: Player4 showed [8h 4s Qh 7s] and lost with two pair, Eights and Sevens
+Seat 5: Player5 folded before Flop (didn't bet)
+Seat 6: Player6 showed [Th Ad Jd Jh] and won ($42.98) with a straight, Seven to Jack

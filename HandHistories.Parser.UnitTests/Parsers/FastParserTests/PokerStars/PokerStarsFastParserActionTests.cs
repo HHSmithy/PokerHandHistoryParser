@@ -7,12 +7,18 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using NUnit.Framework;
+using HandHistories.Parser.UnitTests.Parsers.Base;
 
 namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 {
     [TestFixture]
-    class PokerStarsFastParserActionTests
+    class PokerStarsFastParserActionTests : HandHistoryParserBaseTests 
     {
+        public PokerStarsFastParserActionTests()
+            : base("PokerStars")
+        {
+        }
+
         protected PokerStarsFastParserImpl GetPokerStarsFastParser()
         {
             return new PokerStarsFastParserImpl();
