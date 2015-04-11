@@ -11,10 +11,11 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Parsers.Base;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
-    public sealed class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed class FullTiltPokerFastParserImpl : HandHistoryParserFastImpl, IThreeStateParser
     {
         public override SiteName SiteName
         {
@@ -547,7 +548,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             throw new Exception("No check or fold in line: " + line);
         }
 
-        public static int ParseBlindActions(string[] handLines, ref List<HandAction> actions, int startIndex)
+        public int ParseBlindActions(string[] handLines, ref List<HandAction> actions, int startIndex)
         {
             for (int i = startIndex; i < handLines.Length; i++)
             {

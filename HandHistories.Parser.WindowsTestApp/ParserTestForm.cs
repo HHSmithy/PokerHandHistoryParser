@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Factory;
+using System.Diagnostics;
+using HandHistories.Parser.Parsers.FastParser.Base;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -47,13 +49,24 @@ namespace HandHistories.Parser.WindowsTestApp
 
             try
             {
-                var hands = handParser.SplitUpMultipleHands(richTextBoxHandText.Text).ToList();
+                string text = richTextBoxHandText.Text;
+
+                int parsedHands = 0;
+                Stopwatch SW = new Stopwatch();
+                SW.Start();
+
+                HandHistoryParserFastImpl fastParser = handParser as HandHistoryParserFastImpl;
+
+                var hands = fastParser.SplitUpMultipleHandsToLines(text);
                 foreach (var hand in hands)
                 {
-                    var parsedHand = handParser.ParseFullHandHistory(hand, true);    
+                    var parsedHand = fastParser.ParseFullHandHistory(hand, true);
+                    parsedHands++;
                 }
+
+                SW.Stop();
                 
-                MessageBox.Show(this, "Parsed " + hands.Count + " hands.");
+                MessageBox.Show(this, "Parsed " + parsedHands + " hands." + Math.Round(SW.Elapsed.TotalMilliseconds, 2) + "ms");
             }
             catch (Exception ex)
             {

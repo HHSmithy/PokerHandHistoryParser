@@ -1,0 +1,6 @@
+﻿Player2 antes $0.50
+Player3 antes $0.50
+Player2 posts the small blind of $1
+Player3 posts the big blind of $2
+The button is in seat #3
+*** HOLE CARDS ***

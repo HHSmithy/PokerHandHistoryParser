@@ -1,0 +1,5 @@
+﻿Player2: posts the ante $0.50
+Player3: posts the ante $0.50
+Player2: posts small blind $1
+Player3: posts big blind $2
+*** HOLE CARDS ***

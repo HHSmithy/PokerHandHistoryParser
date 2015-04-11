@@ -43,10 +43,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            const string splitStr = "***** Hand Hi";
+            const string splitStr = "***** Hand ";
 
             return rawHandHistories.LazyStringSplit(splitStr)
-                .Where(hand => hand != null && hand.StartsWith(splitStr));
+                .Where(hand => hand.StartsWith("History", StringComparison.Ordinal));
         }
 
         protected override string[] SplitHandsLines(string handText)
