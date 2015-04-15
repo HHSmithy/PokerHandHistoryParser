@@ -277,6 +277,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             {
                 var line = handLines[i];
 
+                if (isChatLine(line))
+                {
+                    continue;
+                }
+
                 if (isUncalledBetLine(line))
                 {
                     actions.Add(ParseUncalledBet(line, currentStreet));
@@ -349,6 +354,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             }
 
             return actions;
+        }
+
+        private bool isChatLine(string line)
+        {
+            return line.IndexOf(": ", StringComparison.Ordinal) != -1;
         }
 
         private void ParseShowdown(string[] handLines, ref List<HandAction> actions, int lineIndex)
@@ -573,7 +583,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 }
 
                 //Check if its a chat line
-                if (line.IndexOf(": ", StringComparison.Ordinal) != -1)
+                if (isChatLine(line))
                 {
                     continue;
                 }
