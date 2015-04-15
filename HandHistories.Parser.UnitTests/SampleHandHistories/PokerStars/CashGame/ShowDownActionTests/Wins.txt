@@ -1,0 +1,4 @@
+﻿numbush: shows [Ah Ks] (two pair, Kings and Fours)
+matze1987: shows [8h 8c] (two pair, Eights and Fours)
+numbush collected $23.57 from pot
+*** SUMMARY ***

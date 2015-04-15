@@ -41,7 +41,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         protected void TestShowDownActions(string fileName, List<HandAction> expectedActions)
         {
             List<HandAction> actions = new List<HandAction>();
-            parser.ParseBlindActions(GetBlindTest(fileName), ref actions, 0);
+            parser.ParseShowDown(GetShowDownTest(fileName), ref actions, 0, GameType.Unknown);
 
             Assert.AreEqual(expectedActions, actions);
         }
@@ -56,6 +56,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         protected virtual bool BlindIgnoreActionsTestable { get { return true; } }
         protected virtual bool BlindChatEndingWithNumberTestable { get { return false; } }
 
+        protected abstract List<HandAction> ExpectedShowDownActions_Wins { get; }
         protected virtual bool ShowDownIgnoreActionsTestable { get { return true; } }
 
         [Test]
@@ -90,8 +91,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             TestBlindActions("ChatNumber", new List<HandAction>());
         }
 
+        [Test]
+        public void ParseShowDownActions_Wins()
+        {
+            if (!ShowDownIgnoreActionsTestable)
+            {
+                Assert.Ignore();
+            }
+            TestShowDownActions("Wins", ExpectedShowDownActions_Wins);
+        }
+
         /// <summary>
-        /// This tests for all actions that the parser should skip during blinds
+        /// This tests for all actions that the parser should skip during showdown
         /// </summary>
         [Test]
         public void ParseShowDownActions_SkipActions()
