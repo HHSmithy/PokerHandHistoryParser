@@ -356,7 +356,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return actions;
         }
 
-        private bool isChatLine(string line)
+        static bool isChatLine(string line)
         {
             return line.IndexOf(": ", StringComparison.Ordinal) != -1;
         }
