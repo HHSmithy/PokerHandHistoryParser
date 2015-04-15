@@ -30,13 +30,33 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
 
         string[] GetBlindTest(string name)
         {
-            return SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "BlindActionTests", name)
+            return GetTest("BlindActionTests", name);
+        }
+
+        string[] GetShowDownTest(string name)
+        {
+            return GetTest("ShowDownActionTests", name);
+        }
+
+        protected void TestShowDownActions(string fileName, List<HandAction> expectedActions)
+        {
+            List<HandAction> actions = new List<HandAction>();
+            parser.ParseBlindActions(GetBlindTest(fileName), ref actions, 0);
+
+            Assert.AreEqual(expectedActions, actions);
+        }
+
+        string[] GetTest(string test, string name)
+        {
+            return SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, test, name)
                 .Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         protected abstract List<HandAction> ExpectedHandActionsAnte { get; }
         protected virtual bool BlindIgnoreActionsTestable { get { return true; } }
         protected virtual bool BlindChatEndingWithNumberTestable { get { return false; } }
+
+        protected virtual bool ShowDownIgnoreActionsTestable { get { return true; } }
 
         [Test]
         public void ParseBlindActions_Ante()
@@ -68,6 +88,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                 Assert.Ignore();
             }
             TestBlindActions("ChatNumber", new List<HandAction>());
+        }
+
+        /// <summary>
+        /// This tests for all actions that the parser should skip during blinds
+        /// </summary>
+        [Test]
+        public void ParseShowDownActions_SkipActions()
+        {
+            if (!ShowDownIgnoreActionsTestable)
+            {
+                Assert.Ignore();
+            }
+            TestShowDownActions("Ignore", new List<HandAction>());
         }
     }
 }

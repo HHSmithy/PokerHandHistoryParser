@@ -282,6 +282,9 @@
     <Content Include="SampleHandHistories\FullTilt\CashGame\Seats\HeadsUp.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\FullTilt\CashGame\ShowDownActionTests\Ignore.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\FullTilt\CashGame\StreetTests\Flop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1096,6 +1099,9 @@
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\HeadsUp.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ShowDownActionTests\Ignore.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\StreetTests\Flop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
