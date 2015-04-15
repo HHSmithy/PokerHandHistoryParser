@@ -662,6 +662,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     return true;
                 case 'M':
                     return true;
+                case 'S':
+                    throw new RunItTwiceHandException();
                 default:
                     throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
             }
