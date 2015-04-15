@@ -195,6 +195,9 @@
     </Content>
     <Compile Include="Utils\IO\IFileReader.cs" />
     <Compile Include="Utils\IO\WindowsFileReaderImpl.cs" />
+    <Content Include="SampleHandHistories\FullTilt\CashGame\BlindActionTests\Ignore.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\FullTilt\CashGame\GameTypeTests\FixedLimitHoldem.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -437,7 +440,7 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\BlindActionTests\Ante.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\BlindActionTests\SitOut.txt">
+    <Content Include="SampleHandHistories\PokerStars\CashGame\BlindActionTests\Ignore.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\DateIssue1.txt">

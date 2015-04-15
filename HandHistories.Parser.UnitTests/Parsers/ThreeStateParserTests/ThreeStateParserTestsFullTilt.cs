@@ -27,13 +27,5 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                     };
             }
         }
-
-        protected override bool SitOutActionsTestable
-        {
-            get
-            {
-                return false;
-            }
-        }
     }
 }
