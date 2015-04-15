@@ -572,6 +572,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         continue;
                 }
 
+                //Check if its a chat line
+                if (line.IndexOf(": ", StringComparison.Ordinal) != -1)
+                {
+                    continue;
+                }
+
                 int idIndex = line.LastIndexOf(' ');
                 char idChar = line[idIndex - 1];
 

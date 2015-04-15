@@ -27,5 +27,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                     };
             }
         }
+
+        protected override bool BlindChatEndingWithNumberTestable
+        {
+            get
+            {
+                return true;
+            }
+        }
     }
 }
