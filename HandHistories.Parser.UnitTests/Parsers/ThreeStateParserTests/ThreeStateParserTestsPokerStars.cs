@@ -1,5 +1,7 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using HandHistories.Parser.Parsers.Exceptions;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +41,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                         new WinningsAction("numbush", HandActionType.WINS, 23.57m, 0),
                     };
             }
+        }
+
+        [Test]
+        public void TestRunItTwice()
+        {
+
+            Assert.Throws<RunItTwiceHandException>(RunItTwiceTest);
+        }
+
+        void RunItTwiceTest()
+        {
+            var hand = GetShowDownTest("RunItTwice");
+
+             List<HandAction> actions = new List<HandAction>();
+            parser.ParseShowDown(hand, ref actions, 0, Objects.GameDescription.GameType.Unknown);
         }
     }
 }

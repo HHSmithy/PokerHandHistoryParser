@@ -552,6 +552,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                     //*** SUMMARY ***
                     case '*':
+                        //*** FIRST SHOW DOWN ***
+                        if (line[4] == 'F')
+                        {
+                            throw new RunItTwiceHandException();
+                        }
                         return;
 
                     //No low hand qualified

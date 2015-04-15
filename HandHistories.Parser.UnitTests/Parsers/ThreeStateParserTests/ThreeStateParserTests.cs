@@ -12,7 +12,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
 {
     abstract internal class ThreeStateParserTests : HandHistoryParserBaseTests
     {
-        IThreeStateParser parser;
+        protected IThreeStateParser parser;
 
         protected ThreeStateParserTests(string site)
             : base(site)
@@ -28,12 +28,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             Assert.AreEqual(expectedActions, actions);
         }
 
-        string[] GetBlindTest(string name)
+        protected string[] GetBlindTest(string name)
         {
             return GetTest("BlindActionTests", name);
         }
 
-        string[] GetShowDownTest(string name)
+        protected string[] GetShowDownTest(string name)
         {
             return GetTest("ShowDownActionTests", name);
         }

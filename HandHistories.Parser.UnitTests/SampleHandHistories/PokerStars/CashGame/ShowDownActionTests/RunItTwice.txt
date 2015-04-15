@@ -1,0 +1,15 @@
+﻿*** FIRST FLOP *** [2d 7d 6c]
+*** FIRST TURN *** [2d 7d 6c] [Tc]
+*** FIRST RIVER *** [2d 7d 6c Tc] [5h]
+*** SECOND FLOP *** [Jc 4c Td]
+*** SECOND TURN *** [Jc 4c Td] [Th]
+*** SECOND RIVER *** [Jc 4c Td Th] [6d]
+*** FIRST SHOW DOWN ***
+ridziarz: shows [Ah 5c 6h As] (two pair, Sixes and Fives)
+nFruit: shows [Qc 5d Qh Ac] (a pair of Queens)
+ridziarz collected $203.60 from pot
+*** SECOND SHOW DOWN ***
+ridziarz: shows [Ah 5c 6h As] (two pair, Aces and Tens)
+nFruit: shows [Qc 5d Qh Ac] (two pair, Queens and Tens)
+ridziarz collected $203.60 from pot
+*** SUMMARY ***
