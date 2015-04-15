@@ -411,7 +411,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             if (currentStreet == Street.Showdown)
             {
-                ParseShowDown(handLines, actionIndex, ref handActions, gameType);
+                ParseShowDown(handLines, ref handActions, actionIndex, gameType);
             }
             
             return handActions;
@@ -469,7 +469,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No end of posting actions");
         }
 
-        private void ParseShowDown(string[] handLines, int actionIndex, ref List<HandAction> handActions, GameType gameType)
+        public void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int actionIndex, GameType gameType)
         {
             for (int i = actionIndex; i < handLines.Length; i++)
             {
@@ -512,6 +512,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         {
                             break;
                         }
+                        continue;
+
+                    //Player1: shows [6d Ad] (a pair of Sixes)
+                    case ')':
+                        break;
+
+                    //skip unidentified actions such as
+                    //leaves table
+                    //stands up
+                    default:
                         continue;
                 }
 
