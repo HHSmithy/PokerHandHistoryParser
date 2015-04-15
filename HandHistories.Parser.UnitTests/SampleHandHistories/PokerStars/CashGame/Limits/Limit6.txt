@@ -1,0 +1,17 @@
+﻿PokerStars Hand #133011454421:  Hold'em No Limit (�1/�2 USD) - 2015/04/01 6:58:17 ET
+Table 'Diphda III' 6-max Seat #4 is the button
+Seat 1: N3tBraker (�207.22 in chips) 
+Seat 4: Cyberraver (�431.64 in chips) 
+Cyberraver: posts small blind �1
+N3tBraker: posts big blind �2
+*** HOLE CARDS ***
+Cyberraver: raises �2 to �4
+N3tBraker: raises �11 to �15
+Cyberraver: folds 
+Uncalled bet (�11) returned to N3tBraker
+N3tBraker collected �8 from pot
+N3tBraker: doesn't show hand 
+*** SUMMARY ***
+Total pot �8 | Rake �0 
+Seat 1: N3tBraker (big blind) collected (�8)
+Seat 4: Cyberraver (button) (small blind) folded before Flop
