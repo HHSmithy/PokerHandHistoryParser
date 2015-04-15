@@ -358,7 +358,20 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
         static bool isChatLine(string line)
         {
-            return line.IndexOf(": ", StringComparison.Ordinal) != -1;
+            //Example chat line
+            //Player2: 1o21
+
+            if (line.IndexOf(": ", StringComparison.Ordinal) == -1)
+            {
+                return false;
+            }
+
+            //*** FLOP *** [As Kc 2d] (Total Pot: $58.50, 2 Players)
+            if (line[0] == '*' && line[line.Length - 1] == ')')
+            {
+                return false;
+            }
+            return true;
         }
 
         private void ParseShowdown(string[] handLines, ref List<HandAction> actions, int lineIndex)
