@@ -417,6 +417,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return handActions;
         }
 
+        static bool isJoinTableLine(string line)
+        {
+            int length = line.Length;
+            return line[length - 2] == '#' || line[length - 3] == '#';
+        }
+
         /// <summary>
         /// Parse all blind actions from the specified index, returns the index where HandActions will start
         /// </summary>
@@ -434,7 +440,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 switch (lastChar)
                 {
-                    //only blind actions(BB, SB ANTE) may end in a number during the blinds
+                    //blind actions(BB, SB ANTE) may end in a number during the blinds
+                    //reto27 joins the table at seat #3
                     case '0':
                     case '1':
                     case '2':
@@ -445,6 +452,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     case '7':
                     case '8':
                     case '9':
+                        if(isJoinTableLine(line))
+                        {
+                            continue;
+                        }
                         break;
 
                     //*** HOLE CARDS ***
