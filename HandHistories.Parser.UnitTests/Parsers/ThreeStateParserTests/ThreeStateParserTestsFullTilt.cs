@@ -28,11 +28,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             }
         }
 
-        protected override bool SitOutActionsTestable
+        protected override bool BlindChatEndingWithNumberTestable
         {
             get
             {
-                return false;
+                return true;
             }
         }
     }

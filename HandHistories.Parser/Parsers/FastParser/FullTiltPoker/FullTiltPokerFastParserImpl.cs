@@ -12,6 +12,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
 using HandHistories.Parser.Parsers.Base;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
@@ -73,13 +74,13 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             string timeString = split[3]; // ' 16:07:17 ET '
             string dateString = split[4];//  ' 2010/12/31 '
 
-            int year = Int32.Parse(dateString.Substring(1, 4));
-            int month = Int32.Parse(dateString.Substring(6, 2));
-            int day = Int32.Parse(dateString.Substring(9, 2));
+            int year = FastInt.Parse(dateString.Substring(1, 4));
+            int month = FastInt.Parse(dateString.Substring(6, 2));
+            int day = FastInt.Parse(dateString.Substring(9, 2));
 
-            int hour = Int32.Parse(timeString.Substring(1, 2));
-            int minute = Int32.Parse(timeString.Substring(4, 2));
-            int second = Int32.Parse(timeString.Substring(7, 2));
+            int hour = FastInt.Parse(timeString.Substring(1, 2));
+            int minute = FastInt.Parse(timeString.Substring(4, 2));
+            int second = FastInt.Parse(timeString.Substring(7, 2));
 
             DateTime dateTime = new DateTime(year, month, day, hour, minute, second);
             DateTime converted = TimeZoneInfo.ConvertTimeToUtc(dateTime, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
@@ -91,12 +92,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         {
             // Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:09:19 ET - 2010/12/31
 
-            string handLine = handLines[0];
+            string line = handLines[0];
 
             int hashIndex = 21;
-            int colonIndex = handLine.IndexOf(':', hashIndex);
+            int colonIndex = line.IndexOf(':', hashIndex);
 
-            string handNumber = handLine.Substring(hashIndex + 1, colonIndex - hashIndex - 1);
+            string handNumber = line.Substring(hashIndex + 1, colonIndex - hashIndex - 1);
             return long.Parse(handNumber);
         }
 
@@ -276,6 +277,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             {
                 var line = handLines[i];
 
+                if (isChatLine(line))
+                {
+                    continue;
+                }
+
                 if (isUncalledBetLine(line))
                 {
                     actions.Add(ParseUncalledBet(line, currentStreet));
@@ -340,21 +346,32 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         return actions;
 
                     //Opponent3 has requested TIME
-                    case 'E':
                     //jobetzu has 15 seconds left to act
-                    case 't':
                     //Dealt to FT_Hero [Qh 5c]
-                    case ']':
-                        continue;
-
                     default:
-                        throw new ArgumentException(string.Format("Unhandled LastChar: '{0}' Line: {1}",
-                            lastChar,
-                            line));
+                        continue;
                 }
             }
 
             return actions;
+        }
+
+        static bool isChatLine(string line)
+        {
+            //Example chat line
+            //Player2: 1o21
+
+            if (line.IndexOf(": ", StringComparison.Ordinal) == -1)
+            {
+                return false;
+            }
+
+            //*** FLOP *** [As Kc 2d] (Total Pot: $58.50, 2 Players)
+            if (line[0] == '*' && line[line.Length - 1] == ')')
+            {
+                return false;
+            }
+            return true;
         }
 
         private void ParseShowdown(string[] handLines, ref List<HandAction> actions, int lineIndex)
@@ -574,12 +591,14 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     case '*':
                         return i + 1;
 
-                    //goSuckout has 5 seconds left to act
-                    case 't':
-                        continue;
-
                     default:
-                        throw new ArgumentException("Unhandled line: " + line);
+                        continue;
+                }
+
+                //Check if its a chat line
+                if (isChatLine(line))
+                {
+                    continue;
                 }
 
                 int idIndex = line.LastIndexOf(' ');

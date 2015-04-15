@@ -35,7 +35,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         }
 
         protected abstract List<HandAction> ExpectedHandActionsAnte { get; }
-        protected virtual bool SitOutActionsTestable { get { return true; } }
+        protected virtual bool BlindIgnoreActionsTestable { get { return true; } }
+        protected virtual bool BlindChatEndingWithNumberTestable { get { return false; } }
 
         [Test]
         public void ParseBlindActions_Ante()
@@ -43,14 +44,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             TestBlindActions("Ante", ExpectedHandActionsAnte);
         }
 
+        /// <summary>
+        /// This tests for all actions that the parser should skip during blinds
+        /// </summary>
         [Test]
-        public void ParseBlindActions_SitOut()
+        public void ParseBlindActions_SkipActions()
         {
-            if (!SitOutActionsTestable)
+            if (!BlindIgnoreActionsTestable)
             {
                 Assert.Ignore();
             }
-            TestBlindActions("SitOut", new List<HandAction>());
+            TestBlindActions("Ignore", new List<HandAction>());
+        }
+
+        /// <summary>
+        /// This tests for all actions that the parser should skip during blinds
+        /// </summary>
+        [Test]
+        public void ParseBlindActions_ChatEndingWithNumber()
+        {
+            if (!BlindChatEndingWithNumberTestable)
+            {
+                Assert.Ignore();
+            }
+            TestBlindActions("ChatNumber", new List<HandAction>());
         }
     }
 }
