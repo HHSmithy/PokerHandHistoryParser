@@ -44,7 +44,6 @@ Game Type Support
 Future Upgrades
 ---------------
  * Single and multi-table tournament support
- * Speed improvements for Poker Stars
  * Ongoing support
 
 Documentation
