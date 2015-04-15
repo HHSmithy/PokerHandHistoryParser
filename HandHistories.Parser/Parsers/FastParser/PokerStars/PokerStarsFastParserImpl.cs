@@ -480,7 +480,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 switch (lastChar)
                 {
                     // woezelenpip collected $7.50 from pot
+                    // kiljka: sits out 
                     case 't':
+                        if (line.EndsWith("pot", StringComparison.Ordinal))
+                        {
+                            handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                        }
+                        continue;
                     // templargio collected €6.08 from side pot-2
                     case '0':
                     case '1':
@@ -492,7 +498,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     case '7':
                     case '8':
                     case '9':
-                        handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                        if (line[line.Length - 2] == '-')
+                        {
+                            handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                        }
                         continue;
 
                     //*** FLOP *** [6d 7c 6h]
