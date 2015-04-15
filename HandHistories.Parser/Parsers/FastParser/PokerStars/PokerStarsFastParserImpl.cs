@@ -403,6 +403,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         break;
                     }
                 }
+                catch (RunItTwiceHandException)
+                {
+                    throw;
+                }
                 catch (Exception ex)
                 {
                     throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
