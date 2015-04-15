@@ -16,7 +16,7 @@ using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
-    sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
+    public sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
     {
         public override SiteName SiteName
         {
