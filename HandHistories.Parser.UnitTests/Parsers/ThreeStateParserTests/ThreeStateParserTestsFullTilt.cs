@@ -35,5 +35,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                 return true;
             }
         }
+
+        protected override List<HandAction> ExpectedShowDownActions_Wins
+        {
+            get
+            {
+                return new List<HandAction>()
+                    {
+                        new HandAction("jobetzu", HandActionType.SHOW, Street.Showdown),
+                        new HandAction("theking881", HandActionType.MUCKS, Street.Showdown),
+                        new WinningsAction("jobetzu", HandActionType.WINS, 615.5m, 0),
+                    };
+            }
+        }
     }
 }

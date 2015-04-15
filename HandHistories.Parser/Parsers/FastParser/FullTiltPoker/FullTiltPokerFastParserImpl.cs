@@ -341,7 +341,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         bool isShowDown = line[5] == 'H';
                         if (isShowDown)
                         {
-                            ParseShowdown(handLines, ref actions, i);
+                            ParseShowDown(handLines, ref actions, i, GameType.Unknown);
                         }
                         return actions;
 
@@ -374,7 +374,8 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return true;
         }
 
-        private void ParseShowdown(string[] handLines, ref List<HandAction> actions, int lineIndex)
+
+        public void ParseShowDown(string[] handLines, ref List<HandAction> actions, int lineIndex, GameType gametype)
         {
             for (int i = lineIndex; i < handLines.Length; i++)
             {
