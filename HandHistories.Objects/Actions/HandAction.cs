@@ -36,6 +36,20 @@ namespace HandHistories.Objects.Actions
         {
         }
 
+        public HandAction(string playerName,
+                          HandActionType handActionType,
+                          Street street,
+                          bool AllInAction = false,
+                          int actionNumber = 0)
+        {
+            Street = street;
+            HandActionType = handActionType;
+            PlayerName = playerName;
+            Amount = 0m;
+            ActionNumber = actionNumber;
+            IsAllIn = AllInAction;
+        }
+
         public HandAction(string playerName, 
                           HandActionType handActionType,                           
                           decimal amount,

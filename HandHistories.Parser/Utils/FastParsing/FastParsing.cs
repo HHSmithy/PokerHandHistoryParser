@@ -16,7 +16,7 @@ namespace HandHistories.Parser.Utils.FastParsing
             while (currentChar >= 0x30 && currentChar <= 0x39)
             {
                 Value = (Value * 10) + currentChar - 0x30;
-                if (startindex > text.Length)
+                if (startindex >= text.Length)
                 {
                     break;
                 }

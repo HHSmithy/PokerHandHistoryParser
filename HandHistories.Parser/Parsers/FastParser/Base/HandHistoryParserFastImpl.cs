@@ -11,6 +11,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Pot;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Base
 {
@@ -50,9 +51,17 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                             .Select(s => s.Trim('\r', 'n'));
         }
 
+        public virtual IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
+        {
+            foreach (var hand in SplitUpMultipleHands(rawHandHistories))
+            {
+                yield return SplitHandsLines(hand);
+            }
+        }
+
         protected virtual string [] SplitHandsLines(string handText)
         {
-            string[] text = handText.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text = handText.Split(new char[] { '\n' , '\r' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < text.Length; i++)
 			{
                 text[i] = text[i].Trim();
@@ -118,27 +127,50 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         public HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false)
         {
+            string[] handLines;
+
             try
             {
-                string[] handLines = SplitHandsLines(handText);
+               handLines = SplitHandsLines(handText);
+            }
+            catch (Exception ex)
+            {
+                if (rethrowExceptions)
+                {
+                    throw;
+                }
 
+                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message, ex.StackTrace);
+                return null;
+            }    
+
+            return ParseFullHandHistory(handLines, rethrowExceptions);
+        }
+
+        public HandHistory ParseFullHandHistory(string[] handLines, bool rethrowExceptions = false)
+        {
+            try
+            {
                 bool isCancelled;
                 if (IsValidOrCancelledHand(handLines, out isCancelled) == false)
                 {
-                    throw new InvalidHandException(handText ?? "NULL");                    
+                    throw new InvalidHandException(string.Join("\r\n", handLines) ?? "NULL");                    
                 }
 
                 //Set members outside of the constructor for easier performance analysis
                 HandHistory handHistory = new HandHistory();
+
+#if DEBUG
+                handHistory.FullHandHistoryText = string.Join("\r\n", handLines);
+#endif
+
                 handHistory.DateOfHandUtc = ParseDateUtc(handLines);
                 handHistory.GameDescription = ParseGameDescriptor(handLines);
                 handHistory.HandId = ParseHandId(handLines);
                 handHistory.TableName = ParseTableName(handLines);
                 handHistory.DealerButtonPosition = ParseDealerPosition(handLines);
-                handHistory.FullHandHistoryText = string.Join("\r\n", handLines);
                 handHistory.ComumnityCards = ParseCommunityCards(handLines);
                 handHistory.Cancelled = isCancelled;
-
                 handHistory.Players = ParsePlayers(handLines);
                 handHistory.NumPlayersSeated = handHistory.Players.Count;
 
@@ -152,7 +184,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (handHistory.Players.Count(p => p.IsSittingOut == false) <= 1)
                 {
-                    throw new PlayersException(handText, "Only found " + handHistory.Players.Count + " players with actions.");
+                    throw new PlayersException(string.Join("\r\n", handLines), "Only found " + handHistory.Players.Count + " players with actions.");
                 }
 
                 handHistory.HandActions = ParseHandActions(handLines, handHistory.GameDescription.GameType);
@@ -200,7 +232,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw;
                 }
 
-                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message, ex.StackTrace);
+                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", string.Join("\r\n", handLines), ex.Message, ex.StackTrace);
                 return null;
             }        
         }
