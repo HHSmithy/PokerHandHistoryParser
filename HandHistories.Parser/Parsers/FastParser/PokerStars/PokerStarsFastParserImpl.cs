@@ -999,6 +999,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             //DOT19 collected $24.45 from pot
             //No low hand qualified
             //*** SUMMARY ***
+            //or
+            //*** FIRST SHOW DOWN ***
 
             int summaryIndex = GetSummaryStartIndex(handLines, lastLineRead);
             int showDownIndex = GetShowDownStartIndex(handLines, lastLineRead, summaryIndex);
@@ -1014,6 +1016,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     //Skip when player mucks and collects
                     //EASSA: mucks hand 
                     char lastChar = line[line.Length - 1];
+
+                    if (lastChar == '*')
+                    {
+                        break;
+                    }
+
                     if (lastChar == 'd' || lastChar == 't')
                     {
                         continue;
@@ -1061,7 +1069,21 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             {
                 string line = handLines[i];
 
-                if (line[0] == '*' && line[4] == 'S' && line[5] == 'H')//handLines[i].StartsWith("*** SH"))
+                char lastChar = line[line.Length - 1];
+
+                if (lastChar != '*')
+                {
+                    continue;
+                }
+
+                //*** SHOW DOWN ***
+                if (line.StartsWith("*** SHOW", StringComparison.Ordinal))//handLines[i].StartsWith("*** SH"))
+                {
+                    return i;
+                }
+
+                //*** FIRST SHOW DOWN ***
+                if (line.StartsWith("*** FIRST", StringComparison.Ordinal))
                 {
                     return i;
                 }

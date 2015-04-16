@@ -2,6 +2,7 @@ using System;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 {
@@ -10,6 +11,42 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
     {
         public HandParserPlayersTestsPokerStarsImpl() : base("PokerStars")
         {
+        }
+
+        [Test]
+        public void ParsePlayers_NoHoleCards()
+        {
+            //Seat 1: jedimaster82 ($1000 in chips) 
+            //Seat 2: OneMoreSpin ($1859.80 in chips) 
+            //Seat 3: FLATC@T ($2000 in chips) 
+            //Seat 4: KENZA_MILOU ($1000 in chips) 
+            //Seat 5: Legheliel ($2000 in chips) 
+            //Seat 6: danfiu ($2000 in chips) 
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("jedimaster82", 1000, 1),
+                new Player("OneMoreSpin", 1859.80m, 2),
+                new Player("FLATC@T", 2000m, 3)
+                {
+                    HoleCards = HoleCards.ForOmaha(
+                    new Card('J', 'd'), 
+                    new Card('T', 's'),
+                    new Card('Q', 'd'),
+                    new Card('Q', 's'))
+                },
+                new Player("KENZA_MILOU", 1000m, 4)
+                {
+                    HoleCards = HoleCards.ForOmaha(
+                    new Card('7', 's'), 
+                    new Card('9', 's'),
+                    new Card('7', 'h'),
+                    new Card('J', 'h'))
+                },
+                new Player("Legheliel", 2000m, 5),
+                new Player("danfiu", 2000m, 6),
+            });
+
+            TestParsePlayers("RunItTwice", expected);
         }
 
         protected override PlayerList ExpectedNoHoleCardsPlayers

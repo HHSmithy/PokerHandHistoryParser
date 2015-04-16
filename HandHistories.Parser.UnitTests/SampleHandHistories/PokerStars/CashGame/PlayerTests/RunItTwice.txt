@@ -1,0 +1,54 @@
+﻿PokerStars Hand #124689908714:  Omaha Pot Limit ($10/$20 USD) - 2014/11/08 0:40:18 WET [2014/11/07 19:40:18 ET]
+Table 'Pomona III' 6-max Seat #1 is the button
+Seat 1: jedimaster82 ($1000 in chips) 
+Seat 2: OneMoreSpin ($1859.80 in chips) 
+Seat 3: FLATC@T ($2000 in chips) 
+Seat 4: KENZA_MILOU ($1000 in chips) 
+Seat 5: Legheliel ($2000 in chips) 
+Seat 6: danfiu ($2000 in chips) 
+OneMoreSpin: posts small blind $10
+FLATC@T: posts big blind $20
+*** HOLE CARDS ***
+Dealt to OneMoreSpin [Qh 3c Ks 7c]
+KENZA_MILOU: raises $40 to $60
+Legheliel: calls $60
+danfiu: folds 
+jedimaster82: folds 
+OneMoreSpin: folds 
+FLATC@T: raises $190 to $250
+KENZA_MILOU: calls $190
+Legheliel: raises $760 to $1010
+FLATC@T said, "hehe"
+FLATC@T: calls $760
+KENZA_MILOU: calls $750 and is all-in
+*** FLOP *** [3d Kd 9h]
+FLATC@T: checks 
+Legheliel: checks 
+*** TURN *** [3d Kd 9h] [8h]
+FLATC@T: bets $990 and is all-in
+Legheliel said, "hero-fold"
+Legheliel: folds 
+Uncalled bet ($990) returned to FLATC@T
+*** FIRST RIVER *** [3d Kd 9h 8h] [4s]
+*** SECOND RIVER *** [3d Kd 9h 8h] [Kc]
+*** FIRST SHOW DOWN ***
+FLATC@T: shows [Jd Ts Qd Qs] (a pair of Queens)
+FLATC@T collected $10 from side pot
+KENZA_MILOU: shows [7s 9s 7h Jh] (a pair of Nines)
+FLATC@T collected $1503.50 from main pot
+*** SECOND SHOW DOWN ***
+FLATC@T: shows [Jd Ts Qd Qs] (two pair, Kings and Queens)
+FLATC@T collected $10 from side pot
+KENZA_MILOU: shows [7s 9s 7h Jh] (two pair, Kings and Nines)
+FLATC@T collected $1503.50 from main pot
+*** SUMMARY ***
+Total pot $3030 Main pot $3007. Side pot $20. | Rake $3 
+Hand was run twice
+FIRST Board [3d Kd 9h 8h 4s]
+SECOND Board [3d Kd 9h 8h Kc]
+Seat 1: jedimaster82 (button) folded before Flop (didn't bet)
+Seat 2: OneMoreSpin (small blind) folded before Flop
+Seat 3: FLATC@T (big blind) showed [Jd Ts Qd Qs] and won ($1513.50) with a pair of Queens, and won ($1513.50) with two pair, Kings and Queens
+Seat 4: KENZA_MILOU showed [7s 9s 7h Jh] and lost with a pair of Nines, and lost with two pair, Kings and Nines
+Seat 5: Legheliel folded on the Turn
+Seat 6: danfiu folded before Flop (didn't bet)
