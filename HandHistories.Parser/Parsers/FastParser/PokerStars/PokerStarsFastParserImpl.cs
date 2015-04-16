@@ -522,7 +522,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         continue;
 
                     //*** SUMMARY ***
+                    //*** SHOW DOWN ***
                     case '*':
+                        if (line[5] == 'H')
+                        {
+                            continue;
+                        }
                         return;
 
                     //No low hand qualified
