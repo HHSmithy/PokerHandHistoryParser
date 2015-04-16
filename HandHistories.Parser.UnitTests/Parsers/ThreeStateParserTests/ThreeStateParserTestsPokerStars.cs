@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using HandHistories.Parser.Parsers.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         }
 
         [Test]
-        public void  ExpectedShowDownActions_AllInFlop()
+        public void ExpectedShowDownActions_AllInFlop()
         {
             var actions = new List<HandAction>()
                     {
@@ -52,6 +53,20 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                         new WinningsAction("danfiu", HandActionType.WINS, 1097.32m, 0),
                     };
             TestShowDownActions("AllinFlop", actions);
+        }
+
+        public void TestRunItTwice()
+        {
+
+            Assert.Throws<RunItTwiceHandException>(RunItTwiceTest);
+        }
+
+        void RunItTwiceTest()
+        {
+            var hand = GetShowDownTest("RunItTwice");
+
+             List<HandAction> actions = new List<HandAction>();
+            parser.ParseShowDown(hand, ref actions, 0, Objects.GameDescription.GameType.Unknown);
         }
     }
 }

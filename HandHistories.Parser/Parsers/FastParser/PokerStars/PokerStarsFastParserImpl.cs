@@ -319,7 +319,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     currency = Currency.GBP;
                     break;
                 default:
-                    throw new LimitException(line, "Unrecognized currency symbol " + currencySymbol);
+                    if (!parseCurrencyFromText(limitSubstring, out currency))
+                    {
+                        throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
+                    }
+                    break;
             }
 
             int slashIndex = limitSubstring.IndexOf('/');
@@ -342,6 +346,27 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             bool isAnte = false;
 
             return Limit.FromSmallBlindBigBlind(small, big, currency, isAnte, ante);
+        }
+
+        static bool parseCurrencyFromText(string limitSubstring, out Currency currency)
+        {
+            string currencyString = limitSubstring.Substring(limitSubstring.LastIndexOf(' ') + 1);
+
+            switch (currencyString)
+            {
+                case "USD":
+                    currency = Currency.USD;
+                    return true;
+                case "GBP":
+                    currency = Currency.GBP;
+                    return true;
+                case "EUR":
+                    currency = Currency.EURO;
+                    return true;
+                default:
+                    currency = Currency.All;
+                    return false;
+            }
         }
 
         public override bool IsValidHand(string[] handLines)
@@ -402,6 +427,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         actionIndex = lineNumber + 1;
                         break;
                     }
+                }
+                catch (RunItTwiceHandException)
+                {
+                    throw;
                 }
                 catch (Exception ex)
                 {
@@ -527,6 +556,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         if (line[5] == 'H')
                         {
                             continue;
+                        }
+                        //*** FIRST SHOW DOWN ***
+                        if (line[4] == 'F')
+                        {
+                            throw new RunItTwiceHandException();
                         }
                         return;
 
@@ -667,6 +701,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     return true;
                 case 'M':
                     return true;
+                case 'S':
+                    throw new RunItTwiceHandException();
                 default:
                     throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
             }

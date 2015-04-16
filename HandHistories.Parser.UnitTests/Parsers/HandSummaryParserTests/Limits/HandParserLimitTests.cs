@@ -7,7 +7,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 {
     [TestFixture("PartyPoker", "$0.05-$0.10", "$0.50-$1", "$5-$10")]
     [TestFixture("OnGame", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$0.25-$0.25", "$5-$5")]
-    [TestFixture("PokerStars", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$100-$200", "$200-$400")]
+    [TestFixture("PokerStars", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$100-$200", "$200-$400", "$1-$2")]
     [TestFixture("IPoker", "e0.05-e0.10", "£0.50-£1", "$5-$10")]
     [TestFixture("Pacific", "$0.05-$0.10", "$0.50-$1", "$100-$200", "$5-$10")]
     [TestFixture("Merge", "$0.05-$0.10", "$0.50-$1", "$1-$2", "$5-$10", "$10-$20")]
