@@ -551,7 +551,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         continue;
 
                     //*** SUMMARY ***
+                    //*** SHOW DOWN ***
                     case '*':
+                        if (line[5] == 'H')
+                        {
+                            continue;
+                        }
                         //*** FIRST SHOW DOWN ***
                         if (line[4] == 'F')
                         {

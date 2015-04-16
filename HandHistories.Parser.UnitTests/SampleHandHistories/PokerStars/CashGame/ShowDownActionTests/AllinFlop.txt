@@ -1,0 +1,7 @@
+﻿*** TURN *** [Ad 2d 3c] [5d]
+*** RIVER *** [Ad 2d 3c 5d] [Jh]
+*** SHOW DOWN ***
+danfiu: shows [5h Kh Ah Ks] (two pair, Aces and Fives)
+KENZA_MILOU: shows [8c Th 8s 3d] (a pair of Eights)
+danfiu collected $1097.32 from pot
+*** SUMMARY ***
