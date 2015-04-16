@@ -1,5 +1,6 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using System;
 using System.Collections.Generic;
 using System.Linq;

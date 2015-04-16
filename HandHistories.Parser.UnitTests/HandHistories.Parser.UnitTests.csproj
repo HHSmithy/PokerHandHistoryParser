@@ -69,6 +69,7 @@
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsRunItTwiceTests.cs" />
     <Compile Include="Parsers\HandParserTests\CommunityCardTests\HandParserCommunityCardTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsBossMedia.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsFullTiltImpl.cs" />
@@ -1093,6 +1094,9 @@
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\RunItTwiceTests\RunItTwice1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\Seats\6 Max.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

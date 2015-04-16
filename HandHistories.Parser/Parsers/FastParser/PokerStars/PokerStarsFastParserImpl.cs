@@ -16,6 +16,7 @@ using System.Globalization;
 using HandHistories.Parser.Utils.FastParsing;
 using System.Runtime.CompilerServices;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
@@ -26,6 +27,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         const int gameIDStartIndex = 17;
 
         public override bool RequresAdjustedRaiseSizes
+        {
+            get { return true; }
+        }
+
+        public override bool SupportRunItTwice
         {
             get { return true; }
         }
@@ -552,17 +558,29 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                     //*** SUMMARY ***
                     //*** SHOW DOWN ***
+                    //*** FIRST SHOW DOWN ***
+                    //*** SECOND SHOW DOWN ***
                     case '*':
-                        if (line[5] == 'H')
+                        char starID = line[5];
+
+                        switch (starID)
                         {
-                            continue;
+                            //*** SHOW DOWN ***
+                            //*** FIRST SHOW DOWN ***
+                            case 'H':
+                            case 'I':
+                                continue;
+
+                            //*** SUMMARY ***
+                            case 'U':
+                            //Skipping Second showdown, that is parsed with ParseRunItTwice
+                            //*** SECOND SHOW DOWN ***
+                            case 'E':
+                                return;
+
+                            default:
+                                throw new ArgumentException("Unhandled line: " + line);
                         }
-                        //*** FIRST SHOW DOWN ***
-                        if (line[4] == 'F')
-                        {
-                            throw new RunItTwiceHandException();
-                        }
-                        return;
 
                     //No low hand qualified
                     //EASSA: mucks hand
@@ -1081,24 +1099,36 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             for (int lineNumber = handLines.Length - 2; lineNumber >= 0; lineNumber--)
             {
                 string line = handLines[lineNumber];
+
                 if (line[0] == '*')
                 {
                     return boardCards;
                 }
 
-                if (line[0] != 'B')
+                if (line[0] == 'B')
                 {
-                    continue;
+                    int firstSquareBracket = 7;
+                    int lastSquareBracket = line.Length - 1;
+
+                    return ParseBoard(line, firstSquareBracket, lastSquareBracket);
                 }
 
-                int firstSquareBracket = 6;
-                int lastSquareBracket = line.Length - 1;
+                if (line[0] == 'F')
+                {
+                    //FIRST Board [3d Kd 9h 8h 4s]
+                    int firstSquareBracket = 13;
+                    int lastSquareBracket = line.Length - 1;
 
-                return
-                    BoardCards.FromCards(line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1)));
+                    return ParseBoard(line, firstSquareBracket, lastSquareBracket);
+                }
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
+        }
+
+        private static BoardCards ParseBoard(string line, int firstSquareBracket, int lastSquareBracket)
+        {
+            return BoardCards.FromCards(line.Substring(firstSquareBracket, lastSquareBracket - firstSquareBracket));
         }
 
         protected override string ParseHeroName(string[] handlines)
@@ -1114,6 +1144,56 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
             }
             return null;
+        }
+
+        public override RunItTwice ParseRunItTwice(string[] handLines)
+        {
+            RunItTwice RIT = null;
+            bool isRunItTwiceHand = false;
+            int SecondShowDownIndex = 0;
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                string line = handLines[i];
+
+                switch (line[1])
+                {
+                    //*** SUMMARY ***
+                    case '*':
+                        if (isRunItTwiceHand)
+                        {
+                            SecondShowDownIndex = i - 1;
+                            i = 0;
+                            break;
+                        }
+                        //no run it twice hand
+                        return null;
+
+                    //SECOND Board [3d Kd 9h 8h Kc]
+                    //run it twice hand found
+                    case 'E':
+                        isRunItTwiceHand = true;
+                        RIT = new RunItTwice();
+                        RIT.Board = ParseBoard(line, 14, line.Length - 1);
+                        break;
+                    default:
+                        continue;
+                }
+            }
+
+            for (int i = SecondShowDownIndex; i > 0; i--)
+            {
+                string line = handLines[i];
+                //*** SECOND SHOW DOWN ***
+                if (line[0] == '*' && line[line.Length - 1] == '*')
+                {
+                    SecondShowDownIndex = i + 1;
+                    break;
+                }
+            }
+
+            ParseShowDown(handLines, ref RIT.Actions, SecondShowDownIndex, GameType.Unknown);
+
+            return RIT;
         }
     }
 }
