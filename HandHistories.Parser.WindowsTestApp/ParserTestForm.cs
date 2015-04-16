@@ -10,6 +10,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Factory;
 using System.Diagnostics;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Parsers.Exceptions;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -65,8 +66,11 @@ namespace HandHistories.Parser.WindowsTestApp
                 }
 
                 SW.Stop();
-                
+
                 MessageBox.Show(this, "Parsed " + parsedHands + " hands." + Math.Round(SW.Elapsed.TotalMilliseconds, 2) + "ms");
+            }
+            catch (RunItTwiceHandException ex)
+            {
             }
             catch (Exception ex)
             {

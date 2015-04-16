@@ -43,6 +43,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             get { return false; }
         }
+
+        public virtual bool SupportRunItTwice
+        {
+            get { return false; }
+        }
      
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
@@ -177,6 +182,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 string HeroName = ParseHeroName(handLines);
                 handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == HeroName);
 
+                if (SupportRunItTwice)
+                {
+                    handHistory.RunItTwiceData = ParseRunItTwice(handLines);
+                }
+                
                 if (handHistory.Cancelled)
                 {
                     return handHistory;
@@ -580,5 +590,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         protected abstract BoardCards ParseCommunityCards(string[] handLines);
+
+        public virtual RunItTwice ParseRunItTwice(string[] handLines)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

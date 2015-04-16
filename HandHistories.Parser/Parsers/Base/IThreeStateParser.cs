@@ -1,4 +1,6 @@
 ﻿using HandHistories.Objects.Actions;
+using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,6 @@ namespace HandHistories.Parser.Parsers.Base
 
         //int ParseHandActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex);
 
-        //void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int firstActionIndex);
+        void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, GameType gameType);
     }
 }

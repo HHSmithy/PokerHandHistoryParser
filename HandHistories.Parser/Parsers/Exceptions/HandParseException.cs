@@ -112,4 +112,12 @@ namespace HandHistories.Parser.Parsers.Exceptions
         {
         }
     }
+
+    public class RunItTwiceHandException : HandParseException
+    {
+        public RunItTwiceHandException()
+            : base("", "Do not currently support Run It Twice")
+        {
+        }
+    }
 }

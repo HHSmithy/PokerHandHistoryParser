@@ -12,7 +12,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
 {
     abstract internal class ThreeStateParserTests : HandHistoryParserBaseTests
     {
-        IThreeStateParser parser;
+        protected IThreeStateParser parser;
 
         protected ThreeStateParserTests(string site)
             : base(site)
@@ -28,14 +28,36 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             Assert.AreEqual(expectedActions, actions);
         }
 
-        string[] GetBlindTest(string name)
+        protected string[] GetBlindTest(string name)
         {
-            return SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "BlindActionTests", name)
+            return GetTest("BlindActionTests", name);
+        }
+
+        protected string[] GetShowDownTest(string name)
+        {
+            return GetTest("ShowDownActionTests", name);
+        }
+
+        protected void TestShowDownActions(string fileName, List<HandAction> expectedActions)
+        {
+            List<HandAction> actions = new List<HandAction>();
+            parser.ParseShowDown(GetShowDownTest(fileName), ref actions, 0, GameType.Unknown);
+
+            Assert.AreEqual(expectedActions, actions);
+        }
+
+        string[] GetTest(string test, string name)
+        {
+            return SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, test, name)
                 .Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         protected abstract List<HandAction> ExpectedHandActionsAnte { get; }
-        protected virtual bool SitOutActionsTestable { get { return true; } }
+        protected virtual bool BlindIgnoreActionsTestable { get { return true; } }
+        protected virtual bool BlindChatEndingWithNumberTestable { get { return false; } }
+
+        protected abstract List<HandAction> ExpectedShowDownActions_Wins { get; }
+        protected virtual bool ShowDownIgnoreActionsTestable { get { return true; } }
 
         [Test]
         public void ParseBlindActions_Ante()
@@ -43,14 +65,53 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             TestBlindActions("Ante", ExpectedHandActionsAnte);
         }
 
+        /// <summary>
+        /// This tests for all actions that the parser should skip during blinds
+        /// </summary>
         [Test]
-        public void ParseBlindActions_SitOut()
+        public void ParseBlindActions_SkipActions()
         {
-            if (!SitOutActionsTestable)
+            if (!BlindIgnoreActionsTestable)
             {
                 Assert.Ignore();
             }
-            TestBlindActions("SitOut", new List<HandAction>());
+            TestBlindActions("Ignore", new List<HandAction>());
+        }
+
+        /// <summary>
+        /// This tests for all actions that the parser should skip during blinds
+        /// </summary>
+        [Test]
+        public void ParseBlindActions_ChatEndingWithNumber()
+        {
+            if (!BlindChatEndingWithNumberTestable)
+            {
+                Assert.Ignore();
+            }
+            TestBlindActions("ChatNumber", new List<HandAction>());
+        }
+
+        [Test]
+        public void ParseShowDownActions_Wins()
+        {
+            if (!ShowDownIgnoreActionsTestable)
+            {
+                Assert.Ignore();
+            }
+            TestShowDownActions("Wins", ExpectedShowDownActions_Wins);
+        }
+
+        /// <summary>
+        /// This tests for all actions that the parser should skip during showdown
+        /// </summary>
+        [Test]
+        public void ParseShowDownActions_SkipActions()
+        {
+            if (!ShowDownIgnoreActionsTestable)
+            {
+                Assert.Ignore();
+            }
+            TestShowDownActions("Ignore", new List<HandAction>());
         }
     }
 }
