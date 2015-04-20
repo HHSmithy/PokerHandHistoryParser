@@ -79,6 +79,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
                 handLines.Add(item.TrimEnd('\r', ' '));
             }
+
+            if (handLines.Count > 0)
+            {
+                yield return handLines.ToArray();
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)
