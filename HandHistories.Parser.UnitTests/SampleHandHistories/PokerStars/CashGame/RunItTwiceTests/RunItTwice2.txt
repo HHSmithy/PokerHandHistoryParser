@@ -1,0 +1,45 @@
+﻿PokerStars Hand #133974380110:  Hold'em No Limit ($2/$4 - $80 Cap -  USD) - 2015/04/19 11:46:35 ET
+Table 'Gemma II' 6-max Seat #2 is the button
+Seat 1: willybeer22 ($385.96 in chips) 
+Seat 2: fede_carita ($78.98 in chips) 
+Seat 3: Gamz11 ($433.06 in chips) 
+Seat 4: bobloblaw87 ($102.94 in chips) 
+Seat 5: nobre13 ($150 in chips) 
+Seat 6: Garnerus ($156.39 in chips) 
+Gamz11: posts small blind $2
+bobloblaw87: posts big blind $4
+*** HOLE CARDS ***
+nobre13: folds 
+Garnerus: raises $4 to $8
+willybeer22: folds 
+fede_carita: folds 
+Gamz11: raises $72 to $80 and has reached the $80 cap
+bobloblaw87: folds 
+Garnerus: calls $72 and has reached the $80 cap
+*** FIRST FLOP *** [Qd Qs 4h]
+*** FIRST TURN *** [Qd Qs 4h] [Ts]
+*** FIRST RIVER *** [Qd Qs 4h Ts] [7s]
+*** SECOND FLOP *** [6s 8h 6h]
+*** SECOND TURN *** [6s 8h 6h] [Td]
+*** SECOND RIVER *** [6s 8h 6h Td] [6c]
+*** FIRST SHOW DOWN ***
+Gamz11: shows [Ad Ks] (a pair of Queens)
+Garnerus: shows [Kh Ac] (a pair of Queens)
+Gamz11 collected $40.30 from pot
+Garnerus collected $40.30 from pot
+*** SECOND SHOW DOWN ***
+Gamz11: shows [Ad Ks] (three of a kind, Sixes)
+Garnerus: shows [Kh Ac] (three of a kind, Sixes)
+Gamz11 collected $40.30 from pot
+Garnerus collected $40.30 from pot
+*** SUMMARY ***
+Total pot $164 | Rake $2.80 
+Hand was run twice
+FIRST Board [Qd Qs 4h Ts 7s]
+SECOND Board [6s 8h 6h Td 6c]
+Seat 1: willybeer22 folded before Flop (didn't bet)
+Seat 2: fede_carita (button) folded before Flop (didn't bet)
+Seat 3: Gamz11 (small blind) showed [Ad Ks] and won ($40.30) with a pair of Queens, and won ($40.30) with three of a kind, Sixes
+Seat 4: bobloblaw87 (big blind) folded before Flop
+Seat 5: nobre13 folded before Flop (didn't bet)
+Seat 6: Garnerus showed [Kh Ac] and won ($40.30) with a pair of Queens, and won ($40.30) with three of a kind, Sixes

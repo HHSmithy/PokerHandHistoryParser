@@ -44,5 +44,22 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             RunItTwiceTest(RIT, "RunItTwice1");
         }
+
+        [Test]
+        public void RunItTwiceTest_2()
+        {
+            RunItTwice RIT = new RunItTwice();
+            RIT.Board = BoardCards.FromCards("6s 8h 6h Td 6c");
+            RIT.Actions = new List<HandAction>()
+            {
+                new HandAction("Gamz11", HandActionType.SHOW,Street.Showdown),
+                new HandAction("Garnerus", HandActionType.SHOW,Street.Showdown),
+                new WinningsAction("Gamz11", HandActionType.WINS, 40.30m, 0),
+
+                new WinningsAction("Garnerus", HandActionType.WINS, 40.30m, 0),
+            };
+
+            RunItTwiceTest(RIT, "RunItTwice2");
+        }
     }
 }
