@@ -1,0 +1,35 @@
+﻿#Game No : 359567819
+***** 888poker Hand History for Game 359567819 *****
+$1/$2 Blinds No Limit Holdem - *** 14 04 2015 03:11:08
+Table Arezzo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Mr.Pesto ( $284.58 )
+Seat 2: GYAMEPRO ( $70 )
+Seat 4: Suic1deKing ( $221.75 )
+Seat 6: gaokaipoker ( $310.86 )
+Seat 7: icebbberg ( $220.01 )
+Seat 9: whoisdrew ( $100.89 )
+icebbberg posts small blind [$1]
+whoisdrew posts big blind [$2]
+GYAMEPRO posts dead blind [$1 + $2]
+** Dealing down cards **
+Mr.Pesto folds
+GYAMEPRO checks
+Suic1deKing folds
+gaokaipoker folds
+icebbberg folds
+whoisdrew checks
+** Dealing flop ** [ Ks, Jc, Ac ]
+whoisdrew checks
+GYAMEPRO checks
+** Dealing turn ** [ 2s ]
+whoisdrew checks
+GYAMEPRO checks
+** Dealing river ** [ 4d ]
+whoisdrew checks
+GYAMEPRO checks
+** Summary **
+whoisdrew shows [ 5c, 7s ]
+GYAMEPRO shows [ Js, 7d ]
+GYAMEPRO collected [ $5.70 ]

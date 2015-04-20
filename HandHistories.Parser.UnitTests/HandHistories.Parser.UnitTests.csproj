@@ -432,6 +432,9 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\PostingDead.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
