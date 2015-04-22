@@ -13,6 +13,7 @@ using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
@@ -24,6 +25,14 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         }
 
         public override bool RequresAdjustedRaiseSizes
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override bool SupportRunItTwice
         {
             get
             {
@@ -345,9 +354,18 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         }
                         return actions;
 
+                    //Dealt to FT_Hero [Qh 5c]
+                    //Postrail shows [Qs Ah]
+                    case ']':
+                        if (line.IndexOf(" shows [", StringComparison.Ordinal) != -1)
+                        {
+                            ParseShowDown(handLines, ref actions, i, GameType.Unknown);
+                            return actions;
+                        }
+                        continue;
+
                     //Opponent3 has requested TIME
                     //jobetzu has 15 seconds left to act
-                    //Dealt to FT_Hero [Qh 5c]
                     default:
                         continue;
                 }
@@ -389,9 +407,20 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 {
                     actions.Add(new HandAction(line.Remove(line.Length - 6), HandActionType.MUCKS, 0m, Street.Showdown));
                 }
-                else if (line.Contains(" wins the pot ("))
+                else if (line.Contains(" wins "))
                 {
-                    int nameEndIndex = line.IndexOf(" wins the pot (");
+                    int nameEndIndex = -1;
+                    nameEndIndex = line.IndexOf(" wins the pot (", StringComparison.Ordinal);
+                    if (nameEndIndex == -1)
+                    {
+                        nameEndIndex = line.IndexOf(" wins pot 1 (", StringComparison.Ordinal);
+                    }
+
+                    if (nameEndIndex == -1)
+                    {
+                        continue;
+                    }
+
                     string playerName = line.Remove(nameEndIndex);
 
                     int amountStartIndex = line.IndexOf('(', nameEndIndex) + 2;
@@ -420,7 +449,10 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
             switch (IdChar)
             {
+                //*** FLOP *** [Ad 5d 5c] (Total Pot: $165, 2 Players)
                 case 's':
+                //*** FLOP *** [Ad 5d 5c] (Total Pot: $165, 2 Players, 2 All-In)
+                case 'n':
                     currentStreet = ParseStreet(line);
                     return null;
 
@@ -789,13 +821,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             Seat 5: Naturalblow (small blind) folded before the Flop
             Seat 6: BeerMySole (big blind) folded before the Flop*/
 
-            BoardCards boardCards = BoardCards.ForPreflop();
             for (int lineNumber = handLines.Length - 2; lineNumber >= 0; lineNumber--)
             {
                 string line = handLines[lineNumber];
                 if (line[0] == '*')
                 {
-                    return boardCards;
+                    return BoardCards.ForPreflop();
                 }
 
                 if (line[0] != 'B')
@@ -803,14 +834,19 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     continue;
                 }
 
-                int firstSquareBracket = 7;
-                int lastSquareBracket = line.Length - 1;
-
-                string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
-                return BoardCards.FromCards(cards);
+                return ParseBoard(line);
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
+        }
+
+        private static BoardCards ParseBoard(string line)
+        {
+            int firstSquareBracket = 7;
+            int lastSquareBracket = line.Length - 1;
+
+            string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
+            return BoardCards.FromCards(cards);
         }
 
         protected override void ParseExtraHandInformation(string[] handLines, Objects.Hand.HandHistorySummary handHistorySummary)
@@ -858,6 +894,82 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 }
             }
             return null;
+        }
+
+        public override RunItTwice ParseRunItTwice(string[] handLines)
+        {
+            bool isRunItTwiceHand = false;
+            int RITScanIndex = -1;
+
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                string line = handLines[i];
+
+                if (line[0] != '*' )
+                {
+                    continue;
+                }
+
+                if (line == "*** SUMMARY 2 ***")
+                {
+                    RITScanIndex = i;
+                    break;
+                }
+                else
+                {
+                    //this is not a run it twice hand
+                    return null;
+                }
+            }
+
+            RunItTwice RIT = new RunItTwice();
+            //Parsing run it twice board
+            for (int i = RITScanIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                if (line[0] == 'B')
+                {
+                    RIT.Board = ParseBoard(line);
+                    break;
+                }
+            }
+
+            //Parsing run it twice showdown actions
+            for (int i = RITScanIndex; i > 0; i--)
+            {
+                string line = handLines[i];
+
+                if (line == "*** SHOW DOWN 2 ***")
+                {
+                    RITScanIndex = i;
+                }
+            }
+
+            for (int i = RITScanIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                if (line == "*** SUMMARY ***")
+                {
+                    break;
+                }
+                int nameEndIndex = line.IndexOf(" wins pot 2 (", StringComparison.Ordinal);
+                if (nameEndIndex != -1)
+                {
+                    string playerName = line.Remove(nameEndIndex);
+
+                    int amountStartIndex = line.IndexOf('(', nameEndIndex) + 2;
+                    int amountEndString = line.IndexOf(')', amountStartIndex);
+
+                    string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
+                    decimal amount = decimal.Parse(amountString, NumberCulture);
+
+                    RIT.Actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                }
+            }
+
+            return RIT;
         }
     }
 }
