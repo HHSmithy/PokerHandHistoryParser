@@ -47,7 +47,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new WinningsAction("GYAMEPRO", HandActionType.WINS, 5.70m, 0),   
              };
 
-             TestParseActions("PostingDead", ExpectedHandActionsAllInHand);
+             TestParseActions("PostingDead", expected);
          }
 
          protected override List<HandAction> ExpectedHandActionsBasicHand
