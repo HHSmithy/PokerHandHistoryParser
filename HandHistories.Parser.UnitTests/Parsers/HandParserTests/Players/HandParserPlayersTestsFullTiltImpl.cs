@@ -13,6 +13,31 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
         }
 
+        [Test]
+        public void ParsePlayers_AllInOnFlop()
+        {
+            var expected = new PlayerList(new List<Player>() 
+            { 
+                new Player("zekulya", 300, 1)
+                {
+                    IsSittingOut = true
+                },
+                new Player("ginalisa18", 300, 2)
+                {
+                    HoleCards = HoleCards.ForHoldem(new Card('J', 'c'), new Card('J', 's'))
+                },
+                new Player("Mashulya", 300, 3),
+                new Player("1mperial", 763.25m, 4),
+                new Player("Postrail", 300, 5)
+                {
+                    HoleCards = HoleCards.ForHoldem(new Card('Q', 's'), new Card('A', 'h'))
+                },
+                new Player("Darkking_pt", 329, 6),
+            });
+
+            TestParsePlayers("AllInOnFlop", expected);
+        }
+
         protected override PlayerList ExpectedNoHoleCardsPlayers
         {
             get

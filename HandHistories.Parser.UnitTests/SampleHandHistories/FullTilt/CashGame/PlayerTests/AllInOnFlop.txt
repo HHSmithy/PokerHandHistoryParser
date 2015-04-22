@@ -1,0 +1,38 @@
+﻿Full Tilt Poker Game #35456793815: Table Myron (6 max) - CAP NL Hold'em - $5/$10 - 04:49:01 ET - 2015/04/08
+Seat 1: zekulya ($300), is sitting out
+Seat 2: ginalisa18 ($300)
+Seat 3: Mashulya ($300)
+Seat 4: 1mperial ($763.25)
+Seat 5: Postrail ($300)
+Seat 6: Darkking_pt ($329)
+1mperial posts the small blind of $5
+Postrail posts the big blind of $10
+The button is in seat #2
+*** HOLE CARDS ***
+Darkking_pt folds
+ginalisa18 calls $10
+1mperial folds
+Postrail raises to $40
+ginalisa18 raises to $80
+Postrail calls $40
+*** FLOP *** [Ad 5d 5c] (Total Pot: $165, 2 Players)
+Postrail checks
+ginalisa18 bets $120
+Postrail raises to $220, and is all in
+ginalisa18 calls $100, and is all in
+Postrail shows [Qs Ah]
+ginalisa18 shows [Jc Js]
+*** TURN *** [Ad 5d 5c] [2d] (Total Pot: $605, 2 Players, 2 All-In)
+*** RIVER *** [Ad 5d 5c 2d] [4d] (Total Pot: $605, 2 Players, 2 All-In)
+Postrail shows two pair, Aces and Fives
+ginalisa18 shows two pair, Jacks and Fives
+Postrail wins the pot ($603) with two pair, Aces and Fives
+*** SUMMARY ***
+Total pot $605 | Rake $2
+Board: [Ad 5d 5c 2d 4d]
+Seat 1: zekulya is sitting out
+Seat 2: ginalisa18 (button) showed [Jc Js] and lost with two pair, Jacks and Fives
+Seat 3: Mashulya is sitting out
+Seat 4: 1mperial (small blind) folded before the Flop
+Seat 5: Postrail (big blind) showed [Qs Ah] and won ($603) with two pair, Aces and Fives
+Seat 6: Darkking_pt didn't bet (folded)

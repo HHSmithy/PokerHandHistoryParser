@@ -744,71 +744,81 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 decimal amount = decimal.Parse(stackSizeString, NumberCulture);
 
                 playerList.Add(new Player(name, amount, seat)
-                                   {
-                                       IsSittingOut = sittingOut
-                                   });
-
+                    {
+                        IsSittingOut = sittingOut
+                    });
             }
 
             // OmahaHiLo has a different way of storing the hands at showdown, so we need to separate
-            bool inCorrectBlock = false;
             bool isOmahaHiLo = ParseGameType(handLines).Equals(GameType.PotLimitOmahaHiLo);
-            for (int lineNumber = 13; lineNumber < handLines.Length; lineNumber++)
+
+            int ShowStartIndex = -1;
+
+            const int FirstPossibleShowActionIndex = 13; 
+            for (int i = FirstPossibleShowActionIndex; i < handLines.Length; i++)
             {
-                string line = handLines[lineNumber];
-
-                if (line.StartsWith(@"*** SUM") && isOmahaHiLo)
+                string line = handLines[i];
+                if (line[line.Length - 1] == ']' && line.Contains(" shows ["))
                 {
-                    lineNumber = lineNumber + 2;
-                    inCorrectBlock = true;
+                    ShowStartIndex = i;
+                    break;
                 }
-                else if(line.StartsWith(@"*** SH") && !isOmahaHiLo)
+                if (line.StartsWith(@"*** SUM", StringComparison.Ordinal) && isOmahaHiLo)
                 {
-                    inCorrectBlock = true;
+                    ShowStartIndex = i;
+                    break;
                 }
-
-                if (inCorrectBlock == false)
+                else if (line.StartsWith(@"*** SH", StringComparison.Ordinal) && !isOmahaHiLo)
                 {
-                    continue;
+                    ShowStartIndex = i;
+                    break;
                 }
+            }
 
-                int firstSquareBracket = line.LastIndexOf('[');
-
-                if (firstSquareBracket == -1)
+            if (ShowStartIndex != -1)
+            {
+                for (int lineNumber = ShowStartIndex; lineNumber < handLines.Length; lineNumber++)
                 {
-                    continue;
-                }
+                    string line = handLines[lineNumber];
 
-                // can show single cards
-                if (line[firstSquareBracket + 3] == ']')
-                {
-                    continue;
-                }
+                    int firstSquareBracket = line.LastIndexOf('[');
 
-                int lastSquareBracket = line.LastIndexLoopsBackward(']', line.Length - 1);
-                int colonIndex = line.LastIndexLoopsBackward(':', lastSquareBracket);
+                    if (firstSquareBracket == -1)
+                    {
+                        continue;
+                    }
 
-                string seat;
-                string playerName;
-                if (isOmahaHiLo)
-                {
-                    seat = line.Substring(5, colonIndex-5);
-                    playerName = playerList.First(p => p.SeatNumber.Equals(Convert.ToInt32(seat))).PlayerName;
-                }
-                else
-                {
+                    // can show single cards
+                    if (line[firstSquareBracket + 3] == ']')
+                    {
+                        continue;
+                    }
+
+                    int lastSquareBracket = line.LastIndexLoopsBackward(']', line.Length - 1);
+                    int colonIndex = line.LastIndexLoopsBackward(':', lastSquareBracket);
+
+                    string playerName;
+                    //if (isOmahaHiLo)
+                    //{
+                    //    seat = line.Substring(5, colonIndex - 5);
+                    //    playerName = playerList.First(p => p.SeatNumber.Equals(Convert.ToInt32(seat))).PlayerName;
+                    //}
+                    //else
+                    //{
                     int playerNameEndIndex = line.IndexOf(" shows", StringComparison.Ordinal);
                     if (playerNameEndIndex == -1)
                         break;
 
                     playerName = line.Substring(0, playerNameEndIndex);
+                    //}
+
+                    string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
+
+
+                    playerList[playerName].HoleCards = HoleCards.FromCards(cards);
                 }
-                
-                string cards = line.Substring(firstSquareBracket + 1, lastSquareBracket - (firstSquareBracket + 1));
-
-
-                playerList[playerName].HoleCards = HoleCards.FromCards(cards);
             }
+
             return playerList;
         }
 
