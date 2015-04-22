@@ -16,6 +16,40 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+         [Test]
+         public void ParseHandActions_PostingDead()
+         {
+             var expected = new List<HandAction>()
+             {
+                new HandAction("icebbberg", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("whoisdrew", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("GYAMEPRO", HandActionType.POSTS, 3m, Street.Preflop),
+                new HandAction("Mr.Pesto", HandActionType.FOLD, Street.Preflop),
+                new HandAction("GYAMEPRO", HandActionType.CHECK, Street.Preflop),
+                new HandAction("Suic1deKing", HandActionType.FOLD, Street.Preflop),
+                new HandAction("gaokaipoker", HandActionType.FOLD, Street.Preflop),
+                new HandAction("icebbberg", HandActionType.FOLD, Street.Preflop),
+                new HandAction("whoisdrew", HandActionType.CHECK, Street.Preflop),
+
+
+                new HandAction("whoisdrew", HandActionType.CHECK, Street.Flop),
+                new HandAction("GYAMEPRO", HandActionType.CHECK, Street.Flop),
+
+                new HandAction("whoisdrew", HandActionType.CHECK, Street.Turn),
+                new HandAction("GYAMEPRO", HandActionType.CHECK, Street.Turn),
+
+                new HandAction("whoisdrew", HandActionType.CHECK, Street.River),
+                new HandAction("GYAMEPRO", HandActionType.CHECK, Street.River),
+
+                new HandAction("whoisdrew", HandActionType.SHOW, Street.Showdown),
+                new HandAction("GYAMEPRO", HandActionType.SHOW, Street.Showdown),
+
+                new WinningsAction("GYAMEPRO", HandActionType.WINS, 5.70m, 0),   
+             };
+
+             TestParseActions("PostingDead", expected);
+         }
+
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get

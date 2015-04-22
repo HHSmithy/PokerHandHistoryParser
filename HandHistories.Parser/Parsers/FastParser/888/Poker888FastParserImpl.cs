@@ -13,11 +13,15 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.Strings;
+using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
     public sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
     {
+        static readonly CultureInfo invariant = CultureInfo.InvariantCulture;
+
         public override SiteName SiteName
         {
             get { return SiteName.Pacific; }
@@ -280,25 +284,41 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 {
                     int openSquareIndex = handLine.LastIndexOf('[');
                     string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
-                    decimal amount = decimal.Parse(amountString.Replace("$", "").Replace(" ", "").Replace(",", ""), System.Globalization.CultureInfo.InvariantCulture);
+                    amountString = amountString
+                        .Replace("$", "")
+                        .Replace(" ", "")
+                        .Replace(",", "");
+
+                    decimal amount;
 
                     string action = handLine.Substring(openSquareIndex - 8, 7);
 
                     if (currentStreet == Street.Preflop)
                     {
-                        if (action.Equals("l blind")) // small blind
+                        if (action.Equals("l blind", StringComparison.Ordinal)) // small blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 19);
+                            amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
                             handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet));
                             continue;
                         }
-                        else if (action.Equals("g blind")) // big blind
+                        else if (action.Equals("g blind", StringComparison.Ordinal)) // big blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 17);
+                            amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
                             handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet));
                             continue;
                         }
+                        else if(action.Equals("d blind", StringComparison.Ordinal))//dead blind
+                        {
+                            string playerName = handLine.Substring(0, openSquareIndex - 18);
+                            amount = ParseDeadBlindAmount(amountString);
+                            handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet));
+                            continue;
+                        }
                     }
+
+                    amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
                     
                     if (action.EndsWith("raises"))
                     {
@@ -320,16 +340,16 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     }
                     
                 }
-                else if (handLine.EndsWith("folds"))
+                else if (handLine.FastEndsWith("folds"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 6);
-                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, currentStreet));
                     continue;
                 }
                 else if (handLine.EndsWith("checks"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 7);
-                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, 0, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, currentStreet));
                     continue;
                 }                
 
@@ -337,6 +357,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             }
 
             return handActions;
+        }
+
+        static decimal ParseDeadBlindAmount(string amountString)
+        {
+            int plusIndex = amountString.IndexOf('+');
+            string amountStr1 = amountString.Remove(plusIndex);
+            string amountStr2 = amountString.Substring(plusIndex + 1);
+
+            decimal amount1 = decimal.Parse(amountStr1, invariant);
+            decimal amount2 = decimal.Parse(amountStr2, invariant);
+
+            return amount1 + amount2;
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)

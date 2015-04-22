@@ -20,5 +20,10 @@ namespace HandHistories.Parser.Utils.Strings
 
             return -1;
         }
+
+        public static bool FastEndsWith(this string str, string end)
+        {
+            return str.EndsWith(end, StringComparison.Ordinal);
+        }
     }
 }
