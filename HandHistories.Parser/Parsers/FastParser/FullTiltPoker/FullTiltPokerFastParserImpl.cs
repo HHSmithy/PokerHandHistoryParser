@@ -321,11 +321,15 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         continue;
 
                     //theking881 calls $138, and is all in
+                    //draggstar sits down
                     case 'n':
-                        action = ParseActionWithAmount(line.Remove(line.Length - 15), currentStreet, true);//", and is all in".Length
-                        if (action != null)
+                        if (line.FastEndsWith("and is all in"))
                         {
-                            actions.Add(action);
+                            action = ParseActionWithAmount(line.Remove(line.Length - 15), currentStreet, true);//", and is all in".Length
+                            if (action != null)
+                            {
+                                actions.Add(action);
+                            }
                         }
                         continue;
 
