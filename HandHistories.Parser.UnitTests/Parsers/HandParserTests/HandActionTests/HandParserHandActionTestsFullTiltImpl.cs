@@ -14,6 +14,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+        [Test]
+        public void ParseHandActions_AllInOnFlop()
+        {
+            var expected = new List<HandAction>()
+            {
+                new HandAction("1mperial", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
+                new HandAction("Postrail", HandActionType.BIG_BLIND, 10m, Street.Preflop),
+                new HandAction("Darkking_pt", HandActionType.FOLD, Street.Preflop),
+                new HandAction("ginalisa18", HandActionType.CALL, 10m, Street.Preflop),
+                new HandAction("1mperial", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Postrail", HandActionType.RAISE, 30m, Street.Preflop),
+                new HandAction("ginalisa18", HandActionType.RAISE, 70m, Street.Preflop),
+                new HandAction("Postrail", HandActionType.CALL, 40m, Street.Preflop),
+
+                new HandAction("Postrail", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("ginalisa18", HandActionType.BET, 120m, Street.Flop),
+                new HandAction("Postrail", HandActionType.RAISE, 220m, Street.Flop, true),
+                new HandAction("ginalisa18", HandActionType.CALL, 100m, Street.Flop, true),
+                new HandAction("Postrail", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("ginalisa18", HandActionType.SHOW, 0m, Street.Showdown),
+                new WinningsAction("Postrail", HandActionType.WINS, 603m, 0),
+            };
+
+            TestParseActions("AllInOnFlop", expected);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get
