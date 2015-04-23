@@ -1,0 +1,38 @@
+﻿PokerStars Game #134109689886:  Omaha Pot Limit ($2/$4 USD) - 2015/04/21 19:48:33 ET
+Table 'Hydra III' 6-max Seat #2 is the button
+Seat 1: TheHoboKing ($187.76 in chips)
+Seat 2: gio_pot7 ($1312.61 in chips)
+Seat 3: princepemega ($237.45 in chips)
+Seat 4: Chip-phage ($400 in chips)
+Seat 5: YoungAKGun ($657.14 in chips)
+Seat 6: Zsipali ($432.12 in chips)
+princepemega: posts small blind $2
+Chip-phage: posts big blind $4
+*** HOLE CARDS ***
+YoungAKGun: folds
+Zsipali: folds
+TheHoboKing: folds
+gio_pot7: raises $10 to $14
+princepemega: folds
+Chip-phage: calls $10
+*** FLOP *** [7h 5d 4h]
+Chip-phage: checks
+gio_pot7: checks
+*** TURN *** [7h 5d 4h] [Ah]
+Chip-phage: bets $27.79
+gio_pot7: calls $27.79
+*** RIVER *** [7h 5d 4h Ah] [Kh]
+Chip-phage: bets $80.29
+gio_pot7: folds
+Uncalled bet ($80.29) returned to Chip-phage
+Chip-phage collected $82.78 from pot
+Chip-phage: shows [2c 7d 8c Qh] (a pair of Sevens)
+*** SUMMARY ***
+Total pot $85.58 | Rake $2.80
+Board [7h 5d 4h Ah Kh]
+Seat 1: TheHoboKing folded before Flop (didn't bet)
+Seat 2: gio_pot7 (button) folded on the River
+Seat 3: princepemega (small blind) folded before Flop
+Seat 4: Chip-phage (big blind) collected ($82.78)
+Seat 5: YoungAKGun folded before Flop (didn't bet)
+Seat 6: Zsipali folded before Flop (didn't bet)
