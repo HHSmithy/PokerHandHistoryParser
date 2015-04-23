@@ -54,7 +54,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Rene Lacoste", HandActionType.BET, 20m, Street.Flop),
                     new HandAction("ElkY", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("Rene Lacoste", HandActionType.UNCALLED_BET, 20m, Street.Flop),
-                    new HandAction("Rene Lacoste", HandActionType.MUCKS, 0m, Street.Flop),
+                    new HandAction("Rene Lacoste", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("Rene Lacoste", HandActionType.WINS, 39.50m, 0),
                 };
 
@@ -72,7 +72,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("goSuckout", HandActionType.BIG_BLIND, 10m, Street.Preflop),
                     new HandAction("gosuoposum1", HandActionType.FOLD, 0m, Street.Preflop),
                     new HandAction("goSuckout", HandActionType.UNCALLED_BET, 5m, Street.Preflop),
-                    new HandAction("goSuckout", HandActionType.MUCKS, 0m, Street.Preflop),
+                    new HandAction("goSuckout", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("goSuckout", HandActionType.WINS, 10m, 0),
                 };
 
@@ -95,7 +95,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("theking881", HandActionType.BET, 30m, Street.Flop),
                     new HandAction("jobetzu", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("theking881", HandActionType.UNCALLED_BET, 30m, Street.Flop),
-                    new HandAction("theking881", HandActionType.MUCKS, 0m, Street.Flop),
+                    new HandAction("theking881", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("theking881", HandActionType.WINS, 99.50m, 0),
                 };
 
