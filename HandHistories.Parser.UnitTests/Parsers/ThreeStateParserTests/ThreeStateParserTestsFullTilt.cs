@@ -1,5 +1,6 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,20 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         public ThreeStateParserTestsFullTilt()
             : base("FullTilt")
         {
+        }
+
+        [Test]
+        public void ParseBlindActions_POST()
+        {
+            var expected = new List<HandAction>()
+            {
+                new HandAction("Player1", HandActionType.SMALL_BLIND, 10, Street.Preflop),
+                new HandAction("Player2", HandActionType.BIG_BLIND, 20, Street.Preflop),
+                new HandAction("Player3", HandActionType.POSTS, 10, Street.Preflop),
+                new HandAction("Player3", HandActionType.POSTS, 20, Street.Preflop)
+            };
+
+            TestBlindActions("Posting", expected);
         }
 
         protected override List<HandAction> ExpectedHandActionsAnte

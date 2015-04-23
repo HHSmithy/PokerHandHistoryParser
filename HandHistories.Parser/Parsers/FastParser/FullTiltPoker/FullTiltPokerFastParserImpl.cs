@@ -656,9 +656,27 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         switch (blindType)
                         {
                             //Rene Lacoste posts the small blind of $5
+                            //Player3 posts a dead small blind of $10
                             case 'l':
-                                actionType = HandActionType.SMALL_BLIND;
-                                playerName = line.Remove(idIndex - 25);
+                                char SBType = line[idIndex - 16];
+
+                                switch (SBType)
+                                {
+                                    case 'e':
+                                        actionType = HandActionType.SMALL_BLIND;
+                                        playerName = line.Remove(idIndex - 25);
+                                        break;
+
+                                    case 'd':
+                                        actionType = HandActionType.POSTS;
+                                        playerName = line.Remove(idIndex - 28);
+                                        break;
+
+                                    default:
+                                        throw new ArgumentException(string.Format("Unhandled SBType: '{0}' Line: {1}",
+                                                                            blindType,
+                                                                            line));
+                                }
                                 break;
 
                             //Rene Lacoste posts the big blind of $5
@@ -666,6 +684,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                                 actionType = HandActionType.BIG_BLIND;
                                 playerName = line.Remove(idIndex - 23);
                                 break;
+
                             default:
                                 throw new ArgumentException(string.Format("Unhandled blindType: '{0}' Line: {1}",
                                                 blindType,
@@ -679,14 +698,25 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
                     //iason07 antes $0.30
                     //Player1 adds $2,000
+                    //Player3 posts $20
                     case 's':
-                        if (line[idIndex - 2] != 'e')
-                        {
-                            continue;
-                        }
+                        string actionString = line.Substring(idIndex - 5, 5);
 
-                        actionType = HandActionType.ANTE;
-                        playerName = line.Remove(idIndex - 6);
+                        switch (actionString)
+                        {
+                            case "antes":
+                                actionType = HandActionType.ANTE;
+                                playerName = line.Remove(idIndex - 6);
+                                break;
+
+                            case "posts":
+                                actionType = HandActionType.POSTS;
+                                playerName = line.Remove(idIndex - 6);
+                                break;
+
+                            default:
+                                continue;
+                        }
                         break;
 
                     default:

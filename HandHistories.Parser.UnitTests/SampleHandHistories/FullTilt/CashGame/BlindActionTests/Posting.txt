@@ -1,0 +1,6 @@
+﻿Player1 posts the small blind of $10
+Player2 posts the big blind of $20
+Player3 posts a dead small blind of $10
+Player3 posts $20
+The button is in seat #3
+*** HOLE CARDS ***
