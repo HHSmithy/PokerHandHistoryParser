@@ -294,7 +294,8 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 if (isUncalledBetLine(line))
                 {
                     actions.Add(ParseUncalledBet(line, currentStreet));
-                    continue;
+                    ParseShowDown(handLines, ref actions, i + 1, gameType);
+                    return actions;
                 }
 
                 var lastChar = line[line.Length - 1];
@@ -677,7 +678,13 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         continue;
 
                     //iason07 antes $0.30
+                    //Player1 adds $2,000
                     case 's':
+                        if (line[idIndex - 2] != 'e')
+                        {
+                            continue;
+                        }
+
                         actionType = HandActionType.ANTE;
                         playerName = line.Remove(idIndex - 6);
                         break;
