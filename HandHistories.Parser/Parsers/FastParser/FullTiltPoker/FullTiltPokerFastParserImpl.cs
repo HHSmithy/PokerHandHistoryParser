@@ -874,24 +874,24 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         {
             for (int i = handLines.Length - 1; i >= 0; i--)
             {
-                string handLine = handLines[i];
-                if (handLine[0] == '*')
+                string line = handLines[i];
+                if (line.StartsWith("*** SUMMARY ***", StringComparison.Ordinal))
                 {
                     return;
                 }
 
                 // Total pot $42.90 | Rake $2.10            
-                if (handLine[0] == 'T')
+                if (line[0] == 'T')
                 {
 
-                    int lastSpaceIndex = handLine.LastIndexOf(" ", System.StringComparison.Ordinal);
-                    int spaceAfterFirstNumber = handLine.IndexOf(" ", 11, System.StringComparison.Ordinal);
+                    int lastSpaceIndex = line.LastIndexOf(" ", System.StringComparison.Ordinal);
+                    int spaceAfterFirstNumber = line.IndexOf(" ", 11, System.StringComparison.Ordinal);
 
                     handHistorySummary.Rake =
-                        decimal.Parse(handLine.Substring(lastSpaceIndex + 2, handLine.Length - lastSpaceIndex - 2), NumberCulture);
+                        decimal.Parse(line.Substring(lastSpaceIndex + 2, line.Length - lastSpaceIndex - 2), NumberCulture);
 
                     handHistorySummary.TotalPot =
-                        decimal.Parse(handLine.Substring(11, spaceAfterFirstNumber - 11), NumberCulture);
+                        decimal.Parse(line.Substring(11, spaceAfterFirstNumber - 11), NumberCulture);
 
                     return;
                 }
