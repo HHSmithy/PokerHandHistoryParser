@@ -12,7 +12,10 @@ namespace HandHistories.Parser.Utils.Pot
         public static decimal CalculateTotalPot(HandHistory hand)
         {
             var gameActions = hand.HandActions
-                .Where(p => p.IsGameAction)
+                .Where(p => p.IsGameAction || 
+                    p.IsBlinds || 
+                    p.HandActionType == HandActionType.ANTE || 
+                    p.HandActionType == HandActionType.POSTS)
                 .ToList();
 
             var lastAction = gameActions[gameActions.Count - 1];
@@ -24,8 +27,7 @@ namespace HandHistories.Parser.Utils.Pot
 
             Dictionary<string, decimal> amounts = new Dictionary<string, decimal>();
 
-            foreach (var action in gameActions
-                .Street(lastAction.Street))
+            foreach (var action in gameActions)
             {
                 if (!amounts.ContainsKey(action.PlayerName))
                 {
@@ -43,17 +45,19 @@ namespace HandHistories.Parser.Utils.Pot
             var maxCount = amounts
                 .Count(p => p.Value == maxValue);
 
-            var Pot = gameActions
-                .Sum(p => p.Amount);
+            var Pot = amounts
+                .Sum(p => p.Value);
 
             if (maxCount == 1)
             {
-                var LastBetPotContribution = amounts
-                    .Where(p => p.Value != maxValue)
-                    .Min(p => p.Value);
+                var values = amounts
+                    .Select(p => p.Value)
+                    .OrderBy(p => p)
+                    .ToList();
 
-                Pot -= maxValue;
-                Pot += LastBetPotContribution;
+                var uncalledBet = values[0] - values[1];
+
+                Pot -= uncalledBet;
             }
 
             return Math.Abs(Pot);
