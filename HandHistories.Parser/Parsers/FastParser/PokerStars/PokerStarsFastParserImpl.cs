@@ -1064,6 +1064,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     playerList[playerName].HoleCards = HoleCards.FromCards(cards);
                 }
             }
+            else
+            {
+                //Check for player shows
+                for (int i = summaryIndex - 1; i > 0; i--)
+                {
+                    string line = handLines[i];
+
+                    if (line.EndsWith(")") && line.Contains(": shows ["))
+                    {
+                        int nameEndIndex = line.IndexOf(": shows [", StringComparison.Ordinal);
+
+                        string playerName = line.Remove(nameEndIndex);
+
+                        int cardsStartIndex = nameEndIndex + 9;
+                        int cardsEndIndex = line.IndexOf(']', cardsStartIndex);
+
+                        string cards = line.Substring(cardsStartIndex, cardsEndIndex - cardsStartIndex);
+
+                        playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
 
             return playerList;
         }

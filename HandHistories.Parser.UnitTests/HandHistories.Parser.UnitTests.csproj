@@ -1112,6 +1112,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\RunItTwice.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\ShowWithoutShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
