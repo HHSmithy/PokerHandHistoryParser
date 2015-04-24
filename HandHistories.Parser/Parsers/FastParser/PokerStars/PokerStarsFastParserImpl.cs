@@ -79,6 +79,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
                 handLines.Add(item.TrimEnd('\r', ' '));
             }
+
+            if (handLines.Count > 0)
+            {
+                yield return handLines.ToArray();
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -720,7 +725,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 'M':
                     return true;
                 case 'S':
-                    throw new RunItTwiceHandException();
+                    return true;
                 default:
                     throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
             }

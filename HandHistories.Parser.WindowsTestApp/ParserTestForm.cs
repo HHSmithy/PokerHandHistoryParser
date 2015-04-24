@@ -69,9 +69,6 @@ namespace HandHistories.Parser.WindowsTestApp
 
                 MessageBox.Show(this, "Parsed " + parsedHands + " hands." + Math.Round(SW.Elapsed.TotalMilliseconds, 2) + "ms");
             }
-            catch (RunItTwiceHandException ex)
-            {
-            }
             catch (Exception ex)
             {
                 MessageBox.Show(this, ex.Message + "\r\n" + ex.StackTrace, "Error");
