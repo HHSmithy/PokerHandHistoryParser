@@ -73,9 +73,25 @@ namespace HandHistories.Parser.Parsers.Exceptions
         }
     }
 
+    public class TournamentIdException : HandParseException
+    {
+        public TournamentIdException(string handText, string message)
+            : base(handText, message)
+        {
+        }
+    }
+
     public class TableNameException : HandParseException
     {
         public TableNameException(string handText, string message)
+            : base(handText, message)
+        {
+        }
+    }
+
+    public class PokerFormatException : HandParseException
+    {
+        public PokerFormatException(string handText, string message)
             : base(handText, message)
         {
         }
@@ -100,6 +116,22 @@ namespace HandHistories.Parser.Parsers.Exceptions
     public class LimitException : HandParseException
     {
         public LimitException(string handText, string message)
+            : base(handText, message)
+        {
+        }
+    }
+
+    public class BuyinException : HandParseException
+    {
+        public BuyinException(string handText, string message)
+            : base(handText, message)
+        {
+        }
+    }
+
+    public class CurrencyException : HandParseException
+    {
+        public CurrencyException(string handText, string message)
             : base(handText, message)
         {
         }

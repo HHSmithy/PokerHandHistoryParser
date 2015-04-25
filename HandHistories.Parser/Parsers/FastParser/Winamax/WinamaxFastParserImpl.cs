@@ -30,7 +30,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         }
 
         // TODO: CHECK
-        public override bool RequresAdjustedRaiseSizes
+        public override bool RequiresAdjustedRaiseSizes
         {
             get { return false; }
         }
@@ -92,6 +92,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             }
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Line 1 is:
@@ -106,6 +111,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             string handNumber = handLines[0].Substring(indexOfHandIdStart, indexOfHandIdEnd - indexOfHandIdStart);
 
             return long.Parse(handNumber.Replace("-", ""));
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -193,6 +203,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             decimal bigBlind = decimal.Parse(lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 4), CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, Currency.EURO);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

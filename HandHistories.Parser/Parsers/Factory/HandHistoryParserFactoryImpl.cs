@@ -29,8 +29,12 @@ namespace HandHistories.Parser.Parsers.Factory
         {
             switch (siteName)
             {
+                case SiteName.PartyPokerEs:
+                case SiteName.PartyPokerFr:
+                case SiteName.PartyPokerNJ:
+                case SiteName.PartyPokerIt:
                 case SiteName.PartyPoker:
-                    return new PartyPokerFastParserImpl();
+                    return new PartyPokerFastParserImpl(siteName);
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
@@ -71,8 +75,12 @@ namespace HandHistories.Parser.Parsers.Factory
         {
             switch (siteName)
             {
+                case SiteName.PartyPokerEs:
+                case SiteName.PartyPokerFr:
+                case SiteName.PartyPokerNJ:
+                case SiteName.PartyPokerIt:
                 case SiteName.PartyPoker:
-                    return new PartyPokerFastParserImpl();
+                    return new PartyPokerFastParserImpl(siteName);
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:

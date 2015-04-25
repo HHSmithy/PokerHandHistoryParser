@@ -23,7 +23,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             get { return SiteName.FullTilt; }
         }
 
-        public override bool RequresAdjustedRaiseSizes
+        public override bool RequiresAdjustedRaiseSizes
         {
             get
             {
@@ -88,6 +88,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return converted;
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Full Tilt Poker Game #26862468195: Table Adornment (6 max, shallow) - $0.50/$1 - No Limit Hold'em - 16:09:19 ET - 2010/12/31
@@ -99,6 +104,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
             string handNumber = line.Substring(hashIndex + 1, colonIndex - hashIndex - 1);
             return long.Parse(handNumber);
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -250,6 +260,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             bool isAnte = false;
 
             return Limit.FromSmallBlindBigBlind(small, big, currency, isAnte, ante);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

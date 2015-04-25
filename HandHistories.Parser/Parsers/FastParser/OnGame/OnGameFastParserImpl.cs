@@ -86,6 +86,11 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             }            
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // 1st line is:
@@ -96,6 +101,11 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             string handNumber = handLines[0].Substring(indexOfR + 1, handLines[0].Length - indexOfR - 1 - 6);
 
             return long.Parse(handNumber.Replace("-", ""));
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -247,6 +257,11 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 2, commaIndex - slashIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, handLines[2][currencyIndex] == '$' ? Currency.USD : Currency.EURO);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

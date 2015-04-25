@@ -59,12 +59,22 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
             return time;
         }
+        
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
 
         protected override long ParseHandId(string[] handLines)
         {
             string ID = GetXMLAttributeValue(handLines[0], "ID");
 
             return long.Parse(ID);
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -136,6 +146,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
             Limit limit = Limit.FromSmallBlindBigBlind(decimal.Parse(smallBlind, CultureInfo.InvariantCulture), decimal.Parse(bigBlind, CultureInfo.InvariantCulture), Currency.USD);
             return limit;
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

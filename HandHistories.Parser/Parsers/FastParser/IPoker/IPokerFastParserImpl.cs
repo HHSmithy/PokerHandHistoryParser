@@ -31,7 +31,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             get { return (_isIpoker2) ? SiteName.IPoker2 : SiteName.IPoker; }
         }
 
-        public override bool  RequresAdjustedRaiseSizes
+        public override bool  RequiresAdjustedRaiseSizes
         {
 	        get 
 	        { 
@@ -207,6 +207,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }                
             }
         }
+        
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
 
         // For now (4/17/2012) only need Game # in Miner and using Regexes. Will convert to faster mechanism soon.
         private static readonly Regex HandIdRegex = new Regex("(?<=gamecode=\")\\d+", RegexOptions.Compiled);
@@ -222,6 +227,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             throw new HandIdException(handLines[1], "Couldn't find handid");
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -463,6 +473,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         private string GetCurrencyTagValue(string[] handLines)

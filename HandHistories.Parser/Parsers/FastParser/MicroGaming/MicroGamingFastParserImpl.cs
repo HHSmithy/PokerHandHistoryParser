@@ -31,7 +31,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         }
 
         // TODO: CHECK
-        public override bool RequresAdjustedRaiseSizes
+        public override bool RequiresAdjustedRaiseSizes
         {
             get { return false; }
         }
@@ -165,6 +165,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             string handIdLine = handLines[0];
@@ -175,6 +180,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             long handId = long.Parse(handLines[0].Substring(startPos, endPos - startPos + 1));
 
             return handId;
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -345,6 +355,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

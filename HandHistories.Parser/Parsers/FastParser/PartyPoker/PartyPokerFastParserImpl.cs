@@ -41,21 +41,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             _siteName = siteName;
         }
 
-        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
-        {
-            const string splitStr = "***** Hand ";
-
-            return rawHandHistories.LazyStringSplit(splitStr)
-                .Where(hand => hand.StartsWith("History", StringComparison.Ordinal));
-        }
-
-        protected override string[] SplitHandsLines(string handText)
-        {
-            return base.SplitHandsLines(handText)
-                .TakeWhile(p => !p.StartsWith("Game #") && !p.EndsWith(" starts."))
-                .ToArray();
-        }
-
         protected override int ParseDealerPosition(string[] handLines)
         {
             // Expect the 6th line to look like this:
@@ -138,6 +123,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Expect the first line to look like this: 
@@ -147,6 +137,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -276,6 +271,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
 
             return ParseBuyInLimit(limitSubstring, currency);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         static Limit Parse20BBLimit(string limitSubstring, Currency currency)
@@ -704,13 +704,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 string line = handLines[lineNumber];
 
-                char startChar = line[0];
                 char endChar = line[line.Length - 1];
 
                 //Seat 4: thaiJhonny ( $1,404 USD )
                 if (endChar != ')')
                 {
-                    lastLineRead = lineNumber;
                     break;
                 }
 
@@ -729,11 +727,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 decimal stack = ParseDecimal(line, openParenIndex + 3);
 
                 playerList.Add(new Player(playerName, stack, seatNumber));
-            }
-
-            if (lastLineRead == -1)
-            {
-                throw new PlayersException(string.Empty, "Didn't break out of the seat reading block.");
             }
 
             // Looking for the showdown info which looks like this
