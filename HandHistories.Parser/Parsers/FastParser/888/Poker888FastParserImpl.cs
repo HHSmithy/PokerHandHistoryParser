@@ -118,6 +118,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             switch (gameTypeString)
             {
                 case "No Limit Holdem":
+                case "No Limit Holdem Jackpot table":
                     return GameType.NoLimitHoldem;
                 case "Fix Limit Holdem":
                     return GameType.FixedLimitHoldem;
@@ -144,6 +145,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
+            bool isjackPotTable = handLines[2].Contains(" Jackpot table");
+           
             var playerList = ParsePlayers(handLines);
             var limit = ParseLimit(handLines);
 
@@ -164,9 +167,20 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             if (tableStack / limit.BigBlind / playerList.Count <= 17.5m)
             {
+                if (isjackPotTable)
+                {
+                    return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold, TableTypeDescription.Jackpot);
+                }
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
             }
-            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+            if (isjackPotTable)
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
+            }
+            else
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+            }
         }
 
         private static readonly Regex LowLimitRegex = new Regex(@"([\d,]+|[\d,]+\.\d+)(?=/)", RegexOptions.Compiled);
