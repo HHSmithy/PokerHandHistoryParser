@@ -46,7 +46,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             const string splitStr = "***** Hand ";
 
             return rawHandHistories.LazyStringSplit(splitStr)
-                .Where(hand => hand.StartsWith("History", StringComparison.Ordinal));
+                .Where(hand => hand.StartsWith("History", StringComparison.Ordinal))
+                .Select(p => splitStr + p);
         }
 
         protected override string[] SplitHandsLines(string handText)
@@ -143,7 +144,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // Expect the first line to look like this: 
             // "***** Hand History for Game 13550493674 *****"
             const int firstDigitIndex = 28;  //= "***** Hand History for Game ".Length
-            int lastDigitIndex = handLines[0].IndexOf(' ', firstDigitIndex);
+
+            string line = handLines[0];
+            int lastDigitIndex = line.IndexOf(' ', firstDigitIndex);
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
