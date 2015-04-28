@@ -53,7 +53,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         protected override string[] SplitHandsLines(string handText)
         {
             return base.SplitHandsLines(handText)
-                .TakeWhile(p => !p.StartsWith("Game #") && !p.EndsWith(" starts."))
+                .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
                 .ToArray();
         }
 
