@@ -1022,5 +1022,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
             return RIT;
         }
+
+
+        public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street street)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

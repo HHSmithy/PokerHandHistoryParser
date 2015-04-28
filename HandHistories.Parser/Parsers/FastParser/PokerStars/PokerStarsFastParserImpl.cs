@@ -423,31 +423,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
 
-            Street currentStreet = Street.Preflop;
+            Street currentStreet;
 
-            for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
-            {
-                string handLine = handLines[lineNumber];
-
-                try
-                {
-                    bool isFinished = ParseLine(handLine, gameType, ref currentStreet, ref handActions);
-
-                    if (isFinished)
-                    {
-                        actionIndex = lineNumber + 1;
-                        break;
-                    }
-                }
-                catch (RunItTwiceHandException)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
-                }
-            }
+            actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out currentStreet);
 
             if (currentStreet == Street.Showdown)
             {
@@ -1247,6 +1225,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             ParseShowDown(handLines, ref RIT.Actions, SecondShowDownIndex, GameType.Unknown);
 
             return RIT;
+        }
+
+
+        public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street currentStreet)
+        {
+            currentStreet = Street.Preflop;
+
+            for (int lineNumber = firstActionIndex; lineNumber < handLines.Length; lineNumber++)
+            {
+                string handLine = handLines[lineNumber];
+
+                try
+                {
+                    bool isFinished = ParseLine(handLine, GameType.Unknown, ref currentStreet, ref handActions);
+
+                    if (isFinished)
+                    {
+                        return lineNumber + 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
+                }
+            }
+            throw new InvalidHandException(string.Join(Environment.NewLine, handLines));
         }
     }
 }
