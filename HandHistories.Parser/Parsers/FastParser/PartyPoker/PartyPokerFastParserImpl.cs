@@ -348,7 +348,17 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             //"Player wins $102 USD from the main pot with a flush, Ace high."
 
             isCancelled = false;
-            return handLines[handLines.Length - 1].Contains(" wins ");
+
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                string line = handLines[i];
+                if (line.Contains(" wins "))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
