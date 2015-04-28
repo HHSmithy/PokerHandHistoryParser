@@ -459,6 +459,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return false;
         }
 
+        static bool isChatLine(string line)
         {
             return line.Contains(": ");
         }
