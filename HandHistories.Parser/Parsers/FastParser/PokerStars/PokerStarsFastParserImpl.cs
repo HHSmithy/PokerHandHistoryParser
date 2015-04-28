@@ -512,7 +512,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
-            for (int i = handLines.Length - 1; i >= 0; i--)
+            for (int i = handLines.Length - 1; i > 0; i--)
             {
                 string line = handLines[i];
 
@@ -523,7 +523,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     string previousLine = handLines[i - 1];
 
                     // lines before summary are collection lines so shouldn't be able to start w/ a H and end w/ a d
-                    bool cancelled = (previousLine[0] == 'H' && previousLine[previousLine.Length - 1] == 'd');
+                    bool cancelled = (previousLine[0] == 'H' && previousLine[previousLine.Length - 1] == 'd' && previousLine[previousLine.Length - 2] != 'n' && previousLine[previousLine.Length - 2] != 'e');
                     //bool completeHand = previousLine.EndsWith("doesn't show hand");
 
                     isCancelled = cancelled;
@@ -596,6 +596,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         /// <returns>Inde xwhere HandActions will Start</returns>
         public int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex)
         {
+            // required for distinction between smallblind/bigblind/posts 
+            var smallBlind = false;
+            var bigBlind = false;
+
             for (int i = firstActionIndex; i < handLines.Length; i++)
             {
                 var line = handLines[i];
@@ -622,6 +626,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         }
                         break;
 
+                    case 'n':
+                        // Gaby66916: posts big blind $0.25 and is all-in <--- this is okay
+                        if (line[line.Length - 2] == 'o')
+                            continue;
+                        break;
+
                     //*** HOLE CARDS ***
                     case '*':
                         return i + 1;
@@ -638,8 +648,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 int colonIndex = line.LastIndexOf(':');
 
-                var action = ParsePostingActionLine(line, colonIndex);
-                handActions.Add(action);
+                if (colonIndex > -1)
+                {
+                    var action = ParsePostingActionLine(line, colonIndex, smallBlind, bigBlind);
+
+                    if (action != null)
+                    {
+                        if (action.HandActionType == HandActionType.SMALL_BLIND) smallBlind = true;
+                        if (action.HandActionType == HandActionType.BIG_BLIND) bigBlind = true;
+
+                        handActions.Add(action);
+                    }
+
+                }
             }
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No end of posting actions");
         }
@@ -673,6 +694,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     case '7':
                     case '8':
                     case '9':
+
+                        // skip lines like
+                        // Hudison747 was removed from the table for failing to post
+                        if (line[line.Length - 1] == 't' && line[line.Length - 2] == 's')
+                            continue;
+                        
                         if (line[line.Length - 2] == '-')
                         {
                             handActions.Add(ParseCollectedLine(line, Street.Showdown));
@@ -702,10 +729,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                             //*** SUMMARY ***
                             case 'U':
+                                return;
                             //Skipping Second showdown, that is parsed with ParseRunItTwice
                             //*** SECOND SHOW DOWN ***
                             case 'E':
-                                return;
+                                continue;
 
                             default:
                                 throw new ArgumentException("Unhandled line: " + line);
@@ -772,6 +800,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case '8':
                 case '9':
                 case 's':
+                    if (IsJoinTableLine(line))
+                        return false;
+
                     break;
 
                 //2As88 will be allowed to play after the button
@@ -782,6 +813,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         return false;
                     }
                     break;
+
+                // golfiarzp has timed out
+                // Hudison747 was removed from the table for failing to post
+                case 't':
+                    if (line[line.Length - 2] == 'u' || line[line.Length-2] == 's')
+                        return false;
+                    break;
+
 
                 //*** SUMMARY ***
                 //*** SHOW DOWN ***
@@ -796,6 +835,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         return ParseCurrentStreet(line, ref currentStreet);
                     }
                     return false;
+               
+                // molotork65: raises $2.50 to $6.50 and has reached the $10 cap
+                case 'p':
+                    break;
 
                 default:
                     return false;
@@ -819,7 +862,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     throw new HandActionException("", "Invalid State: Street");
 
                 default:
-                    handAction = ParseRegularActionLine(line, colonIndex, currentStreet);
+                    if (colonIndex > -1)
+                        handAction = ParseRegularActionLine(line, colonIndex, currentStreet);
+                    else
+                        handAction = ParseCollectedLine(line, Street.Showdown);
+
                     break;
             }
 
@@ -831,6 +878,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         private static bool ParseCurrentStreet(string line, ref Street currentStreet)
         {
             char typeOfEventChar = line[7];
+
+            // this way we implement the collected lines in the regular showdown for the hand
+            // both showdowns will be included in the regular hand actions, so the regular hand actions can be used for betting/pot/rake verification
+            // might be readjusted so that only the first one is the regular handactions, and the second one goes to runittwice
+             
+            // *** FIRST FLOP
+            // *** FIRST TURN
+            if (typeOfEventChar == 'S')
+                typeOfEventChar = line[13];
+
+            // *** SECOND FLOP
+            // *** SECOND TURN
+            if (typeOfEventChar == 'O')
+                typeOfEventChar = line[14];
 
             switch (typeOfEventChar)
             {
@@ -847,8 +908,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     currentStreet = Street.Showdown;
                     return true;
                 case 'M':
-                    return true;
-                case 'S':
                     return true;
                 default:
                     throw new HandActionException(line, "Unrecognized line w/ a *:" + line);
@@ -884,9 +943,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
         }
 
-        public HandAction ParsePostingActionLine(string actionLine, int colonIndex)
+        public HandAction ParsePostingActionLine(string actionLine, int colonIndex, bool smallBlindPosted, bool bigBlindPosted)
         {
             string playerName = actionLine.Substring(0, colonIndex);
+            bool isAllIn = false;
 
             // Expect lines to look like one of these:
 
@@ -897,36 +957,51 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             // the column w/ the & is a unique identifier
             char identifierChar = actionLine[colonIndex + 14];
+            char lastChar = actionLine[actionLine.Length - 1];
 
-            int blindIndex;
+            // Gaby66916: posts big blind $0.25 and is all-in
+            if (lastChar == 'n')
+            {
+                isAllIn = true;
+                actionLine = actionLine.Substring(0, actionLine.Length - 14);
+            }
+
+            //Mi$iek_PL :D is connected 
+            if (lastChar == 'd')
+                return null;
+
+            int firstDigitIndex;
             HandActionType handActionType;
+
+
 
             switch (identifierChar)
             {
+                // this is important, because we need to adjust the raise sizes accordingly
                 case 'b':
-                    blindIndex = colonIndex + 20;
-                    handActionType = HandActionType.SMALL_BLIND;
+                    firstDigitIndex = colonIndex + 20;
+                    handActionType = smallBlindPosted ? HandActionType.POSTS : HandActionType.SMALL_BLIND;
                     break;
                 case 'i':
-                    blindIndex = colonIndex + 18;
-                    handActionType = HandActionType.BIG_BLIND;
+                    firstDigitIndex = colonIndex + 18;
+                    handActionType = bigBlindPosted ? HandActionType.POSTS : HandActionType.BIG_BLIND;
                     break;
+                
                 case 't':
-                    blindIndex = colonIndex + 17;
+                    firstDigitIndex = colonIndex + 17;
                     handActionType = HandActionType.ANTE;
                     break;
+
                 case '&':
-                    blindIndex = colonIndex + 27;
+                    firstDigitIndex = colonIndex + 27;
                     handActionType = HandActionType.POSTS;
                     break;
                 default:
                     throw new HandActionException(actionLine, "ParsePostingActionLine: Unregonized lined " + actionLine);
             }
 
-            string amountString = actionLine.Substring(blindIndex, actionLine.Length - blindIndex);
-
-            decimal amount = decimal.Parse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
-            return new HandAction(playerName, handActionType, amount, Street.Preflop);
+            decimal amount = decimal.Parse(actionLine.Substring(firstDigitIndex, actionLine.Length - firstDigitIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            return new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn);
         }
 
         public HandAction ParseRegularActionLine(string actionLine, int colonIndex, Street currentStreet)
@@ -1038,7 +1113,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             decimal amount = decimal.Parse(actionLine.Substring(firstAmountDigit, actionLine.Length - firstAmountDigit), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
             // 12 characters from first digit to the space infront of collected
-            string playerName = actionLine.Substring(0, firstAmountDigit - 12);
+            string playerName = actionLine.Substring(0, firstAmountDigit - 11);
 
 
             return new WinningsAction(playerName, handActionType, amount, potNumber);

@@ -604,11 +604,31 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                                 continue;                                
                             }
 
+                            // a POSTS SB is always dead money
+                            // a POSTS BB needs to be deducted completely
+                            // a POSTS SB+BB only the BB needs to be deducted
+                            if (actions[j].HandActionType == HandActionType.POSTS)
+                            {
+                                // we use <= due to the negative numbers
+                                if (actions[j].Amount <= actions.First(a => a.HandActionType == HandActionType.BIG_BLIND).Amount)
+                                {
+                                    currentAction.DecreaseAmount(actions.First(a => a.HandActionType == HandActionType.BIG_BLIND).Amount);    
+                                }
+                                continue;
+                            }
+
                             // If the player previously called any future raise will be the entire amount
                             if (actions[j].HandActionType == HandActionType.CALL)
                             {
                                 currentAction.DecreaseAmount(actions[j].Amount);
                                 continue;                                
+                            }
+
+
+                            // Player who posted SB/BB/SB+BB can check on their first action
+                            if (actions[j].HandActionType == HandActionType.CHECK)
+                            {
+                                continue;
                             }
 
                             currentAction.DecreaseAmount(actions[j].Amount);
