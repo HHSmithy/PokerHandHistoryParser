@@ -410,6 +410,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             char lastChar = line[line.Length - 1];
             HandAction action = null;
 
+            if (isChatLine(line))
+            {
+                return false;
+            }
+
             switch (lastChar)
             {
                 //Expected formats:
@@ -452,6 +457,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 		        handActions.Add(action);
             }
             return false;
+        }
+
+        {
+            return line.Contains(": ");
         }
 
         static HandAction ParseWinsAction(string line, int potID = 0)
