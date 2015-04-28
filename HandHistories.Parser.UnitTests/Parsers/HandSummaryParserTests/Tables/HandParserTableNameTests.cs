@@ -9,7 +9,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
     [TestFixture("PartyPoker", "Avatele", "Barnsley", "Caracas", "Karlsruhe")]
     [TestFixture("OnGame", "Butte [362037295]", "Hallein [361993106]", "Kirkuk [361882901]", "[SPEED] Homs [361726027]")]
     [TestFixture("IPoker", "Abengibre, 817034516", "Akcakent, 817034504", "Canton, 754721371", "(Shallow) Haalderen, 755803691")]
-    [TestFixture("Pacific", "Aberdeen", "Bottrop", "Carson", "Santarem")]
+    [TestFixture("Pacific", "Aberdeen", "Bottrop", "Carson", "Santarem", "Linz")]
     [TestFixture("Merge", "Baja (56067014)", "Bad Beat - Rue St Catherine (56116487)", "Deal It Twice - Mississippi (56196868)", "Ming Tombs (56176485)")]
     [TestFixture("Entraction", "Zaragoza", "Zaragoza", "Saravane", "Waco")]
     [TestFixture("FullTilt", "Lynn", "Dega", "Oveja", "Link")]

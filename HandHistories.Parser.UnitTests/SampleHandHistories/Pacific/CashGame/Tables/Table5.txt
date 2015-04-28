@@ -1,0 +1,21 @@
+﻿#Game No : 699656316
+***** 888poker Hand History for Game 699656316 *****
+$1/$2 Blinds No Limit Holdem Jackpot table - *** 22 04 2015 07:03:01
+Table Linz 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 1: pokerdeva ( $130.36 )
+Seat 6: AfonasiyBomj ( $200 )
+AfonasiyBomj posts small blind [$1]
+pokerdeva posts big blind [$2]
+** Dealing down cards **
+AfonasiyBomj raises [$3]
+pokerdeva calls [$2]
+** Dealing flop ** [ 6h, 2h, 3d ]
+pokerdeva checks
+AfonasiyBomj checks
+** Dealing turn ** [ 6d ]
+pokerdeva bets [$4]
+AfonasiyBomj folds
+** Summary **
+pokerdeva collected [ $7.60 ]
