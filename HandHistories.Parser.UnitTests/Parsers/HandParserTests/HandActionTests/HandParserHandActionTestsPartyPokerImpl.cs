@@ -13,6 +13,38 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
+        public void ParsePosting_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+            {
+                new HandAction("StreetsAhead", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("peace_da_ball", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("Peacli", HandActionType.POSTS, 3m, Street.Preflop),
+
+                new HandAction("oONUKAo", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Peacli", HandActionType.RAISE, 2m, Street.Preflop),
+                new HandAction("LoudAndFast", HandActionType.FOLD, Street.Preflop),
+                new HandAction("StreetsAhead", HandActionType.FOLD, Street.Preflop),
+                new HandAction("peace_da_ball", HandActionType.CALL, 2m, Street.Preflop),
+
+                new HandAction("peace_da_ball", HandActionType.BET, 7.12m, Street.Flop),
+                new HandAction("Peacli", HandActionType.CALL, 7.12m, Street.Flop),
+
+                new HandAction("peace_da_ball", HandActionType.BET, 14m, Street.Turn),
+                new HandAction("Peacli", HandActionType.CALL, 14m, Street.Turn),
+
+                new HandAction("peace_da_ball", HandActionType.CHECK, Street.River),
+                new HandAction("Peacli", HandActionType.CHECK, Street.River),
+
+                new HandAction("peace_da_ball", HandActionType.SHOW, 0m, Street.River),
+                new HandAction("Peacli", HandActionType.SHOW, 0m, Street.River),
+                new WinningsAction("peace_da_ball", HandActionType.WINS, 49.63m, 0),
+            };
+
+            TestParseActions("Posting", expectedActions);
+        }
+
+        [Test]
         public void ParseTimeBank_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()
