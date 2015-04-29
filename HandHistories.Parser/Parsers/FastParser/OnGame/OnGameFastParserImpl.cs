@@ -6,6 +6,7 @@ using System.Text;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
@@ -21,10 +22,33 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             get { return _siteName; }
         }
 
+        private readonly NumberFormatInfo _numberFormatInfo;
+        private readonly Currency _currency;
         // So the same parser can be used for It and Fr variations
         public OnGameFastParserImpl(SiteName siteName = SiteName.OnGame)
         {
             _siteName = siteName;
+            
+            _numberFormatInfo = new NumberFormatInfo
+            {
+                NegativeSign = "-",
+                CurrencyDecimalSeparator = ".",
+                CurrencyGroupSeparator = ",",
+            };
+
+            switch (siteName)
+            {
+                case SiteName.OnGameIt:
+                case SiteName.OnGameFr:
+                    _numberFormatInfo.CurrencySymbol = "€";
+                    _currency = Currency.EURO;
+                    break;
+                default:
+                    _numberFormatInfo.CurrencySymbol = "$";
+                    _currency = Currency.USD;
+                    break;
+
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -84,6 +108,40 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 default:
                     throw new ParseHandDateException(timeZone, "Unrecognized time-zone");
             }            
+        }
+
+        protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistory)
+        {
+            handHistory.Rake = 0m;
+            handHistory.TotalPot = 0m;
+            for (int i = handLines.Length - 1; i >= 0; i--)
+            {
+                string handLine = handLines[i];
+
+                //Rake taken: $0.12
+                if (handLine[0] == 'R')
+                {
+                    handHistory.Rake = decimal.Parse(handLine.Substring(12), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                }
+
+                //Main pot: $1.28 won by cristimanea ($1.20)
+                //Side pot 1: $0.70 won by cristimanea ($0.66)
+                else if (handLine[1] == 'i' || handLine[0] == 'M')
+                {
+                    int colonIndex = handLine.IndexOf(':');
+                    int wonIndex = handLine.IndexOf(" won by", colonIndex, StringComparison.Ordinal);
+
+                    handHistory.TotalPot += decimal.Parse(handLine.Substring(colonIndex + 2, wonIndex - colonIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                }
+
+                // we hit the summary line
+                else if (handLine[1] == 'u')
+                {
+                    return;
+                }
+            }
+
+            throw new InvalidHandException("Couldn't find sumamry line.");
         }
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
@@ -244,19 +302,16 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             // Line 3 is:
             //  Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
 
-            int currencyIndex = handLines[2].IndexOf('$');
-            if (currencyIndex == -1)
-            {
-                currencyIndex = handLines[2].IndexOf('€');
-            }
+            int currencyIndex = handLines[2].IndexOf(_numberFormatInfo.CurrencySymbol, StringComparison.Ordinal);
 
             int slashIndex = handLines[2].IndexOf('/', currencyIndex + 1);
             int commaIndex = handLines[2].IndexOf(',', slashIndex + 1);
+            var sbstring = handLines[2].Substring(currencyIndex, slashIndex - currencyIndex);
 
-            decimal smallBlind = decimal.Parse(handLines[2].Substring(currencyIndex + 1, slashIndex - currencyIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
-            decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 2, commaIndex - slashIndex - 2), System.Globalization.CultureInfo.InvariantCulture);
+            decimal smallBlind = decimal.Parse(sbstring, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 1, commaIndex - slashIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
-            return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, handLines[2][currencyIndex] == '$' ? Currency.USD : Currency.EURO);
+            return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, _currency);
         }
 
         protected override Buyin ParseBuyin(string[] handLines)
@@ -278,6 +333,10 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
+            // this is needed for future uncalledbet fixes
+            var handHistory = new HandHistory();
+            ParseExtraHandInformation(handLines, handHistory);
+
             int startOfActionsIndex = -1;
             for (int i = 6; i < handLines.Length; i++)
             {
@@ -305,7 +364,13 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 if (handLine.StartsWith("Seat ")) // done with actions once we reach the seat line again
                 {
                     break;
-                }                
+                }
+
+                bool isAllIn = handLine.EndsWith("all in]");
+                if (isAllIn)
+                {
+                    handLine = handLine.Substring(0, handLine.Length - 9); 
+                }
 
                 if (handLine[0] == '-')
                 {
@@ -356,18 +421,36 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     // Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
                     if (handLine.StartsWith("Main pot:"))
                     {
-                        var splitted = handLine.Split(',');
-                        foreach(var winner in splitted)
+                        var nameStart = handLine.IndexOf(" won by", StringComparison.Ordinal) + 7;
+                        var splitted = handLine.Substring(nameStart).Split(',');
+                        foreach (var winner in splitted)
                         {
                             int openParenIndex = winner.LastIndexOf('(');
-                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 2, winner.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
+                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
-                            int yIndex = winner.IndexOf('y');
+                            string playerName = winner.Substring(1, openParenIndex - 2);
 
-                            string playerName = winner.Substring(yIndex + 2, openParenIndex - yIndex - 3);
-                            
                             handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
                         }
+                    }
+                    // Side pot 1: $12.26 won by iplaymybest ($11.65)
+                    // Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)
+                    if (handLine.StartsWith("Side pot "))
+                    {
+                        var nameStart = handLine.IndexOf(" won by", StringComparison.Ordinal) + 7;
+                        var splitted = handLine.Substring(nameStart).Split(',');
+
+                        var potNumber = Int32.Parse(handLine[9].ToString());
+                        foreach (var winner in splitted)
+                        {
+                            int openParenIndex = winner.LastIndexOf('(');
+                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+
+                            string playerName = winner.Substring(1, openParenIndex - 2);
+
+                            handActions.Add(new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potNumber));
+                        }
+
                     }
 
                     continue;
@@ -378,9 +461,10 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     // small-blind & big-blind lines ex:
                     //  GlassILass posts small blind ($0.25)
                     //  EvilJihnny99 posts big blind ($0.25)
+                    //  19kb72 posts big blind ($6.50) [all in]
 
                     int openParenIndex = handLine.LastIndexOf('(');
-                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3), System.Globalization.CultureInfo.InvariantCulture);
+                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
                     char blindIdentifier = handLine[openParenIndex - 10];
                     if (blindIdentifier == 'b') // big blind
@@ -428,27 +512,23 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     //New format 
                     //{playername} calls $13
 
-                    int dollarIndex = handLine.IndexOf('$');
-                    if (dollarIndex == -1)
-                    {
-                        dollarIndex = handLine.IndexOf('€');
-                    }
-                    int valueEndIndex = handLine.IndexOf(' ', dollarIndex + 1);
+                    int currencyIndex = handLine.IndexOf(_numberFormatInfo.CurrencySymbol, StringComparison.Ordinal);
+
+                    int valueEndIndex = handLine.IndexOf(' ', currencyIndex);
                     if (valueEndIndex == -1)
                     {
                         valueEndIndex = handLine.Length;
                     }
 
-                    char actionIdentifier = handLine[dollarIndex - 3];
+                    char actionIdentifier = handLine[currencyIndex - 3];
 
-                    bool isAllIn = handLine.EndsWith("all in]");
-                    
+                    var amountstr = handLine.Substring(currencyIndex, valueEndIndex - currencyIndex);
                     string playerName;
-                    decimal amount = decimal.Parse(handLine.Substring(dollarIndex + 1, valueEndIndex - dollarIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
+                    decimal amount = decimal.Parse(amountstr, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
                     switch (actionIdentifier)
                     {
                         case 'l': // calls
-                            playerName = handLine.Substring(0, dollarIndex - 7);
+                            playerName = handLine.Substring(0, currencyIndex - 7);
                             if (isAllIn)
                             {
                                 handActions.Add(new AllInAction(playerName, amount, currentStreet, false));   
@@ -460,7 +540,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                             break;
                         case 'e': // raises
                             // ex: zatli74 raises $1.00 to $1.00
-                            playerName = handLine.Substring(0, dollarIndex - 8);
+                            playerName = handLine.Substring(0, currencyIndex - 8);
                             if (isAllIn)
                             {
                                 handActions.Add(new AllInAction(playerName, amount, currentStreet, true));   
@@ -471,7 +551,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                             }
                             break;
                         case 't': // bets
-                            playerName = handLine.Substring(0, dollarIndex - 6);
+                            playerName = handLine.Substring(0, currencyIndex - 6);
                             if (isAllIn)
                             {
                                 handActions.Add(new AllInAction(playerName, amount, currentStreet, false));   
@@ -487,6 +567,52 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                 throw new HandActionException(handLine, "Unknown hand-line: " + handLine);
         }
+
+            return FixUncalledBets(handActions, handHistory.TotalPot, handHistory.Rake);
+        }
+
+        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
+        {
+            // this fix only takes place when the TotalPot - Rake != Winnings
+            if (totalPot != null && rake != null)
+            {
+                var wagered = handActions.Where(a => !a.IsWinningsAction).Sum(a => a.Amount);
+                if (totalPot + wagered == 0m)
+                {
+                    return handActions;
+                }
+
+                // the player we need to return the money, is always the player who invested the most ( exclude ante + post )
+                var playerToReturnTo = handActions.Where(a => a.IsGameAction && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE))
+                    .GroupBy(a => a.PlayerName)
+                    .Select(p => new
+                    {
+                        PlayerName = p.Key,
+                        Invested = p.Sum(x => x.Amount)
+                    }).OrderBy(x => x.Invested).First().PlayerName;
+
+                // take a look at this players last action
+                var lastAction = handActions.Last(a => a.IsGameAction && a.PlayerName.Equals(playerToReturnTo));
+                var playerInvested = handActions.Where(a => a.Street == lastAction.Street
+                                                      && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE) // ignore dead money
+                                                      && a.PlayerName.Equals(playerToReturnTo)).Sum(a => a.Amount);
+
+                // the amount to return is the largest invested amount on the lastaction.street from the other players
+                var returnAmount = playerInvested - handActions.Where(a => a.Street == lastAction.Street
+                    && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE) // make sure to ignore dead money
+                    && !a.PlayerName.Equals(playerToReturnTo)).GroupBy(a => a.PlayerName)
+                    .Select(p => new
+                    {
+                        PlayerName = p.Key,
+                        Invested = p.Sum(x => x.Amount)
+                    }).OrderBy(x => x.Invested).First().Invested;
+
+
+                // if the return amount is bigger than the last betting, the hand is corrupt -> don't fix anything
+                if (Math.Abs(returnAmount) <= Math.Abs(playerInvested) && returnAmount != 0m)
+                    handActions.Add(new HandAction(playerToReturnTo, HandActionType.UNCALLED_BET, returnAmount, Street.Showdown));
+
+            }
 
             return handActions;
         }
@@ -514,9 +640,9 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                 string name = handLine.Substring(colonIndex + 2, parenIndex - 2 - colonIndex - 1);
                 int seatNumber = Int32.Parse(handLine.Substring(5, colonIndex - 5));
-                string amount = (handLine.Substring(parenIndex + 2, handLine.Length - parenIndex - 2 - 1));
+                string amount = (handLine.Substring(parenIndex + 1, handLine.Length - parenIndex - 2));
 
-                playerList.Add(new Player(name, decimal.Parse(amount, System.Globalization.CultureInfo.InvariantCulture), seatNumber));
+                playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
             }
 
             // Parse the player showdown hole-cards
