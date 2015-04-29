@@ -47,6 +47,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             get { return false; }
         }
 
+        public override bool RequiresTotalPotCalculation
+        {
+            get { return true; }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             XDocument handDocument = XDocument.Parse(handText);
@@ -381,6 +386,8 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             var actions = new List<HandAction>();
+
+            PlayerList playerList = ParsePlayers(handLines);
             
             var currentStreet = Street.Preflop;
 
@@ -401,7 +408,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     continue;
                 }
 
-                HandAction action = GetHandActionFromActionLine(handLine, currentStreet); 
+                HandAction action = GetHandActionFromActionLine(handLine, currentStreet, playerList); 
                 
                 if(action != null && !action.HandActionType.Equals(HandActionType.UNKNOWN) && !action.HandActionType.Equals(HandActionType.SHOW))
                 {
@@ -410,18 +417,16 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             }
 
             //Generate the show card + winnings actions
-            actions.AddRange(GetWinningAndShowCardActions(handLines));
+            actions.AddRange(GetWinningAndShowCardActions(handLines, playerList));
            
             return actions;
 
         }
 
-        private List<HandAction> GetWinningAndShowCardActions(string[] handLines)
+        private List<HandAction> GetWinningAndShowCardActions(string[] handLines, PlayerList playerList)
         {
 
             int actionNumber = Int32.MaxValue - 100;
-
-            PlayerList playerList = ParsePlayers(handLines);
 
             var winningAndShowCardActions = new List<HandAction>();
             
@@ -450,11 +455,12 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return winningAndShowCardActions;
         }
 
-        private HandAction GetHandActionFromActionLine(string handLine, Street street)
+        private HandAction GetHandActionFromActionLine(string handLine, Street street, PlayerList playerList)
         {
             
             var actionType = GetActionTypeFromActionLine(handLine);
             string actionPlayerSeat = GetPlayerSeatFromActionLine(handLine);
+            int playerSeat = int.Parse(actionPlayerSeat);
 
             decimal value = GetValueFromActionLine(handLine);
             int actionNumber = GetActionNumberFromActionLine(handLine);
@@ -462,7 +468,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             if (actionNumber == -1)
                 return null;
 
-            return new HandAction(actionPlayerSeat, actionType, value, street, actionNumber);
+            return new HandAction(playerList[playerSeat].PlayerName, actionType, value, street, actionNumber);
 
         }
 
