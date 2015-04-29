@@ -21,14 +21,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              {
                  return new List<HandAction>()
                            {
-                               new HandAction("3", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("5", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("6", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("1", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("3", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("5", HandActionType.BET, 0.12m, Street.Preflop),
-                               new HandAction("3", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("5", HandActionType.MUCKS, 0m, Street.Preflop),
+                               new HandAction("creys", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                               new HandAction("Jeesuslaps", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("DuckGhoul", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("creys", HandActionType.CALL, 0.01m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.BET, 0.12m, Street.Preflop),
+                               new HandAction("creys", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
                                new WinningsAction("_joker_", HandActionType.WINS, 0.02m, 0),                               
                            };
              }
@@ -40,13 +40,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              {
                  return new List<HandAction>()
                            {
-                               new HandAction("1", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("3", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("5", HandActionType.RAISE, 0.05m, Street.Preflop),
-                               new HandAction("6", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("1", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("3", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("5", HandActionType.MUCKS, 0m, Street.Preflop),
+                               new HandAction("DuckGhoul", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                               new HandAction("creys", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.RAISE, 0.05m, Street.Preflop),
+                               new HandAction("Jeesuslaps", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("DuckGhoul", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("creys", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
                                new WinningsAction("_joker_", HandActionType.WINS, 0.03m, 0),                               
                            };
              }
@@ -58,16 +58,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              {
                  return new List<HandAction>()
                            {
-                               new HandAction("1", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("2", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("3", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("4", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("5", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("6", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("1", HandActionType.RAISE, 0.06m, Street.Preflop),
-                               new HandAction("2", HandActionType.RAISE, 0.14m, Street.Preflop),
-                               new HandAction("1", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("2", HandActionType.MUCKS, 0, Street.Preflop),
+                               new HandAction("CrzyVndl", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                               new HandAction("Muszkliii", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                               new HandAction("jugins", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("MrJohnCarter", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("gabrieliso", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("SinjkV", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("CrzyVndl", HandActionType.RAISE, 0.06m, Street.Preflop),
+                               new HandAction("Muszkliii", HandActionType.RAISE, 0.14m, Street.Preflop),
+                               new HandAction("CrzyVndl", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("Muszkliii", HandActionType.MUCKS, 0, Street.Preflop),
                                new WinningsAction("Muszkliii", HandActionType.WINS, 0.07m, 0),                               
                            };
              }
@@ -79,19 +79,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              {
                  return new List<HandAction>()
                            {
-                               new HandAction("3", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("4", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("5", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("6", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("1", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("2", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("3", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("4", HandActionType.BET, 0.12m, Street.Preflop),
-                               new HandAction("3", HandActionType.CALL, 0.12m, Street.Preflop),
-                               new HandAction("3", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("4", HandActionType.ALL_IN, 2.02m, Street.Flop),
-                               new HandAction("3", HandActionType.ALL_IN, 0.42m, Street.Flop),
-                               new HandAction("4", HandActionType.UNCALLED_BET, 1.60m, Street.Flop),
+                               new HandAction("jugins", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                               new HandAction("MrJohnCarter", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                               new HandAction("gabrieliso", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("SinjkV", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("CrzyVndl", HandActionType.FOLD, 0m, Street.Preflop),
+                               new HandAction("Muszkliii", HandActionType.FOLD, 0, Street.Preflop),
+                               new HandAction("jugins", HandActionType.CALL, 0.01m, Street.Preflop),
+                               new HandAction("MrJohnCarter", HandActionType.BET, 0.12m, Street.Preflop),
+                               new HandAction("jugins", HandActionType.CALL, 0.12m, Street.Preflop),
+                               new HandAction("jugins", HandActionType.CHECK, 0m, Street.Flop),
+                               new HandAction("MrJohnCarter", HandActionType.ALL_IN, 2.02m, Street.Flop),
+                               new HandAction("jugins", HandActionType.ALL_IN, 0.42m, Street.Flop),
+                               new HandAction("MrJohnCarter", HandActionType.UNCALLED_BET, 1.60m, Street.Flop),
                                new HandAction("jugins", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("MrJohnCarter", HandActionType.SHOW, 0, Street.Showdown),
                                new WinningsAction("jugins", HandActionType.WINS, 0.46m, 0),                               
@@ -105,27 +105,27 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              {
                  return new List<HandAction>()
                            {
-                               new HandAction("6", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("3", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("4", HandActionType.CALL, 0.02m, Street.Preflop),
-                               new HandAction("5", HandActionType.CALL, 0.02m, Street.Preflop),
-                               new HandAction("6", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("3", HandActionType.CHECK, 0, Street.Preflop),
+                               new HandAction("hoop", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                               new HandAction("makkis__", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                               new HandAction("tigersue", HandActionType.CALL, 0.02m, Street.Preflop),
+                               new HandAction("theweman", HandActionType.CALL, 0.02m, Street.Preflop),
+                               new HandAction("hoop", HandActionType.CALL, 0.01m, Street.Preflop),
+                               new HandAction("makkis__", HandActionType.CHECK, 0, Street.Preflop),
 
-                               new HandAction("6", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("3", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("4", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("5", HandActionType.BET, 0.08m, Street.Flop),
-                               new HandAction("6", HandActionType.RAISE, 0.32m, Street.Flop),
-                               new HandAction("3", HandActionType.FOLD, 0m, Street.Flop),
-                               new HandAction("4", HandActionType.FOLD, 0m, Street.Flop),
-                               new HandAction("5", HandActionType.CALL, 0.24m, Street.Flop),
+                               new HandAction("hoop", HandActionType.CHECK, 0m, Street.Flop),
+                               new HandAction("makkis__", HandActionType.CHECK, 0m, Street.Flop),
+                               new HandAction("tigersue", HandActionType.CHECK, 0m, Street.Flop),
+                               new HandAction("theweman", HandActionType.BET, 0.08m, Street.Flop),
+                               new HandAction("hoop", HandActionType.RAISE, 0.32m, Street.Flop),
+                               new HandAction("makkis__", HandActionType.FOLD, 0m, Street.Flop),
+                               new HandAction("tigersue", HandActionType.FOLD, 0m, Street.Flop),
+                               new HandAction("theweman", HandActionType.CALL, 0.24m, Street.Flop),
 
-                               new HandAction("6", HandActionType.BET, 0.72m, Street.Turn),
-                               new HandAction("5", HandActionType.CALL, 0.72m, Street.Turn),
+                               new HandAction("hoop", HandActionType.BET, 0.72m, Street.Turn),
+                               new HandAction("theweman", HandActionType.CALL, 0.72m, Street.Turn),
                                
-                               new HandAction("6", HandActionType.ALL_IN, 0.70m, Street.River),
-                               new HandAction("5", HandActionType.CALL, 0.70m, Street.River),
+                               new HandAction("hoop", HandActionType.ALL_IN, 0.70m, Street.River),
+                               new HandAction("theweman", HandActionType.CALL, 0.70m, Street.River),
 
                                new HandAction("theweman", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("hoop", HandActionType.SHOW, 0, Street.Showdown)

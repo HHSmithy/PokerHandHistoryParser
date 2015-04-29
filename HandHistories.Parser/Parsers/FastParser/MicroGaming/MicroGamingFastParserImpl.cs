@@ -460,16 +460,16 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             
             var actionType = GetActionTypeFromActionLine(handLine);
             string actionPlayerSeat = GetPlayerSeatFromActionLine(handLine);
-            int playerSeat = int.Parse(actionPlayerSeat);
-
+            
             decimal value = GetValueFromActionLine(handLine);
             int actionNumber = GetActionNumberFromActionLine(handLine);
 
             if (actionNumber == -1)
                 return null;
 
-            return new HandAction(playerList[playerSeat].PlayerName, actionType, value, street, actionNumber);
+            int playerSeat = int.Parse(actionPlayerSeat);
 
+            return new HandAction(playerList.First(p => p.SeatNumber == playerSeat).PlayerName, actionType, value, street, actionNumber);
         }
 
         protected Street GetStreetFromHandLine(string handLine)
