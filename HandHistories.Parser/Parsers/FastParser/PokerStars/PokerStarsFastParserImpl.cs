@@ -512,28 +512,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
+            isCancelled = false;
+
             for (int i = handLines.Length - 1; i > 0; i--)
             {
                 string line = handLines[i];
 
                 if (line.StartsWith("*** SU", StringComparison.Ordinal)) // if its the summary line
                 {
-                    // check if the previous line is 
-                    // Hand cancelled
-                    string previousLine = handLines[i - 1];
+                    // actually 'Hand cancelled' can be in any line between line 2 and i-1
+                    for (int k = i-1; k >= 2; k--)
+                    {
+                        var cancelledLine = handLines[k];
+                        bool cancelled = (cancelledLine[0] == 'H' && cancelledLine[cancelledLine.Length - 1] == 'd' && cancelledLine[cancelledLine.Length - 2] == 'e');
 
-                    // lines before summary are collection lines so shouldn't be able to start w/ a H and end w/ a d
-                    bool cancelled = (previousLine[0] == 'H' && previousLine[previousLine.Length - 1] == 'd' && previousLine[previousLine.Length - 2] != 'n' && previousLine[previousLine.Length - 2] != 'e');
-                    //bool completeHand = previousLine.EndsWith("doesn't show hand");
+                        if (cancelled)
+                        {
+                            isCancelled = true;
+                            break;
+                        }
+                    }
 
-                    isCancelled = cancelled;
-
-                    return true;// || completeHand;
+                    return true;
                 }
             }
 
             // doesn't contain a summary line
-            isCancelled = false;
             return false;
         }
 
@@ -1223,7 +1227,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     //EASSA: mucks hand 
                     //jimmyhoo collected $562 from pot
                     string line = handLines[lineNumber];
-                    //Skip when player mucks and collects
+                    //Skip when player mucks, collects or says sth.
                     //EASSA: mucks hand 
                     char lastChar = line[line.Length - 1];
 
@@ -1232,7 +1236,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         break;
                     }
 
-                    if (lastChar == 'd' || lastChar == 't')
+                    if (lastChar == 'd' || lastChar == 't' || lastChar == '"')
                     {
                         continue;
                     }
