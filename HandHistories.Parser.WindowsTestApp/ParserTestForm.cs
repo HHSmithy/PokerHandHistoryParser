@@ -35,6 +35,7 @@ namespace HandHistories.Parser.WindowsTestApp
             listBoxSite.Items.Add(SiteName.Entraction);
             listBoxSite.Items.Add(SiteName.Merge);
             listBoxSite.Items.Add(SiteName.WinningPoker);
+            listBoxSite.Items.Add(SiteName.MicroGaming);
         }
 
         private void buttonParse_Click(object sender, EventArgs e)
