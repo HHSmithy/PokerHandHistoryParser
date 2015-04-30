@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Interfaces;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
@@ -30,10 +27,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         public override bool RequiresTotalPotCalculation
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
@@ -134,7 +128,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 case "Pot Limit OmahaHL":
                     return GameType.PotLimitOmahaHiLo;
                 default:                    
-                    throw new NotImplementedException("Unrecognized game type " + gameTypeString ?? "NULL");
+                    throw new NotImplementedException("Unrecognized game type " + gameTypeString);
             }
         }
 
@@ -351,7 +345,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 throw new HandActionException(handLine, "Unknown handline.");
             }
 
-            return handActions;
+            return FixUncalledBets(handActions, null, null);
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)
@@ -459,6 +453,72 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 }
             }
             return null;
+        }
+
+        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
+        {
+            // Pacific does not correctly return uncalled bets, sometimes declaring them as winnings
+            // as we calculate the rake manually, we need to make sure uncalledbets are declared correctly
+
+            // this fix only takes place when the TotalPot - Rake != Winnings
+            if (totalPot != null && rake != null)
+            {
+                if (totalPot - rake == handActions.Where(a => a.IsWinningsAction).Sum(a => a.Amount))
+                    return handActions;
+            }
+
+            if (handActions.Sum(a => a.Amount) == 0m)
+                return handActions;
+
+
+            var playerActions = handActions.Where(a => !a.IsWinningsAction
+                                                  && !a.HandActionType.Equals(HandActionType.SHOW)
+                                                  && !a.HandActionType.Equals(HandActionType.MUCKS))
+                                         .GroupBy(p => p.PlayerName)
+                                         .Select(s => s.Select(a => a).ToList());
+
+            HandAction handActionToAdd = null;
+            foreach (var actions in playerActions)
+            {
+                var lastAction = actions[actions.Count - 1];
+
+                if (lastAction.HandActionType == HandActionType.BET || lastAction.HandActionType == HandActionType.RAISE)
+                {
+                    var totalInvestedAmount = handActions.Where(a => a.PlayerName.Equals(lastAction.PlayerName) && !a.IsWinningsAction).Sum(a => a.Amount);
+
+                    var totalInvestedAmountOtherPlayer = handActions.Where(a => a.PlayerName != lastAction.PlayerName && !a.IsWinningsAction)
+                                                                    .GroupBy(a => a.PlayerName)
+                                                                    .Select(p => new
+                                                                    {
+                                                                        PlayerName = p.Key,
+                                                                        Invested = p.Sum(x => x.Amount)
+                                                                    }).Min(x => x.Invested); // it's a negative value
+
+
+                    if (totalInvestedAmountOtherPlayer > totalInvestedAmount)
+                    {
+                        var uncalledBet = Math.Abs(totalInvestedAmount - totalInvestedAmountOtherPlayer);
+
+                        // only add this if we don't have a similar WIN line
+                        var winAction = handActions.FirstOrDefault(h => h.PlayerName == lastAction.PlayerName
+                                                                     && h.HandActionType == HandActionType.WINS
+                                                                     && h.Amount == uncalledBet);
+
+                        if (winAction != null && handActions.Count(h => h.IsWinningsAction) > 1)
+                        {
+                            handActions.Remove(winAction);
+                        }
+
+                        handActionToAdd = (new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, uncalledBet, Street.Showdown));
+                    }
+                }
+            }
+
+            // only add the uncalled bet if we had a caller
+            if (handActionToAdd != null)
+                handActions.Add(handActionToAdd);
+
+            return handActions;
         }
     }
 }
