@@ -204,6 +204,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             //   PokerStars Zoom Hand #132630000000:
             // Sng 
             //   PokerStars Hand #121732531381: Tournament #974085159, $5.20+$1.30+$0.50 USD Hold'em No Limit - Level IV (50/100) - 2014/09/18 16:58:15 ET
+            //   PokerStars Game #121732531381: Tournament #974085159, $5.20+$1.30+$0.50 USD Hold'em No Limit - Level IV (50/100) - 2014/09/18 16:58:15 ET
             const int zoomHandIdStartIndex = 22;//"PokerStars Zoom Hand #".Length
 
             string line = handLines[0];
@@ -220,7 +221,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     firstDigitIndex = GameIdStartIndex;
                     break;
                 default:
-                    firstDigitIndex = line.LastIndexOf('#') + 1;
+                    if (line[TournamentIdStartindex - 1] == '#')
+                    {
+                        firstDigitIndex = line.IndexOf('#') + 1;
+                    }
+                    else
+                    {
+                        firstDigitIndex = line.LastIndexOf('#') + 1;
+                    }
                     break;
             }
 
