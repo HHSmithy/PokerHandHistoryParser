@@ -29,7 +29,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("_joker_", HandActionType.BET, 0.12m, Street.Preflop),
                                new HandAction("creys", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
-                               new WinningsAction("_joker_", HandActionType.WINS, 0.02m, 0),                               
+                               new WinningsAction("_joker_", HandActionType.WINS, 0.16m, 0),                               
                            };
              }
          }
@@ -47,7 +47,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("DuckGhoul", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("creys", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
-                               new WinningsAction("_joker_", HandActionType.WINS, 0.03m, 0),                               
+                               new WinningsAction("_joker_", HandActionType.WINS, 0.08m, 0),                               
                            };
              }
          }
@@ -68,7 +68,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Muszkliii", HandActionType.RAISE, 0.14m, Street.Preflop),
                                new HandAction("CrzyVndl", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("Muszkliii", HandActionType.MUCKS, 0, Street.Preflop),
-                               new WinningsAction("Muszkliii", HandActionType.WINS, 0.07m, 0),                               
+                               new WinningsAction("Muszkliii", HandActionType.WINS, 0.23m, 0),                               
                            };
              }
          }
@@ -94,7 +94,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("MrJohnCarter", HandActionType.UNCALLED_BET, 1.60m, Street.Flop),
                                new HandAction("jugins", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("MrJohnCarter", HandActionType.SHOW, 0, Street.Showdown),
-                               new WinningsAction("jugins", HandActionType.WINS, 0.46m, 0),                               
+                               new WinningsAction("jugins", HandActionType.WINS, 1.02m, 0),                               
                            };
              }
          }
@@ -128,7 +128,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("theweman", HandActionType.CALL, 0.70m, Street.River),
 
                                new HandAction("theweman", HandActionType.SHOW, 0, Street.Showdown),
-                               new HandAction("hoop", HandActionType.SHOW, 0, Street.Showdown)
+                               new HandAction("hoop", HandActionType.SHOW, 0, Street.Showdown),
+
+                               new WinningsAction("theweman", HandActionType.WINS, 1.73m, 0),
+                               new WinningsAction("hoop", HandActionType.WINS, 1.73m, 0)
                            };
              }
          }
