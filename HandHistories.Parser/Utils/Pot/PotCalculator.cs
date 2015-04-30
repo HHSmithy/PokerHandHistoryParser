@@ -11,6 +11,11 @@ namespace HandHistories.Parser.Utils.Pot
     {
         public static decimal CalculateTotalPot(HandHistory hand)
         {
+            var sum = hand.HandActions.Where(p => !p.IsWinningsAction).Sum(a => a.Amount);
+
+            return Math.Abs(sum);
+
+            /*
             var gameActions = hand.HandActions
                 .Where(p => p.IsGameAction)
                 .ToList();
@@ -56,16 +61,16 @@ namespace HandHistories.Parser.Utils.Pot
                 Pot += LastBetPotContribution;
             }
 
-            return Math.Abs(Pot);
+            return Math.Abs(Pot);*/
         }
 
         public static decimal CalculateRake(HandHistory hand)
         {
-            var TotalCollected = hand.HandActions
+            var totalCollected = hand.HandActions
                 .Where(p => p.IsWinningsAction)
                 .Sum(p => p.Amount);
 
-            return hand.TotalPot.Value - TotalCollected;
+            return hand.TotalPot.Value - totalCollected;
         }
     }
 }
