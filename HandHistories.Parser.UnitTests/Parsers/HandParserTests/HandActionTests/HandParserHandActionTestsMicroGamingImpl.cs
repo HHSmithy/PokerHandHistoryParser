@@ -114,8 +114,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("MrJohnCarter", HandActionType.BET, 0.12m, Street.Preflop),
                                new HandAction("jugins", HandActionType.CALL, 0.12m, Street.Preflop),
                                new HandAction("jugins", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("MrJohnCarter", HandActionType.ALL_IN, 2.02m, Street.Flop),
-                               new HandAction("jugins", HandActionType.ALL_IN, 0.42m, Street.Flop),
+                               new HandAction("MrJohnCarter", HandActionType.BET, 2.02m, Street.Flop, true),
+                               new HandAction("jugins", HandActionType.CALL, 0.42m, Street.Flop, true),
                                new HandAction("MrJohnCarter", HandActionType.UNCALLED_BET, 1.60m, Street.Flop),
                                new HandAction("jugins", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("MrJohnCarter", HandActionType.SHOW, 0, Street.Showdown),
@@ -149,7 +149,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("hoop", HandActionType.BET, 0.72m, Street.Turn),
                                new HandAction("theweman", HandActionType.CALL, 0.72m, Street.Turn),
                                
-                               new HandAction("hoop", HandActionType.ALL_IN, 0.70m, Street.River),
+                               new HandAction("hoop", HandActionType.BET, 0.70m, Street.River, true),
                                new HandAction("theweman", HandActionType.CALL, 0.70m, Street.River),
 
                                new HandAction("theweman", HandActionType.SHOW, 0, Street.Showdown),
