@@ -68,7 +68,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             foreach (var item in allLines)
             {
-                if (string.IsNullOrEmpty(item))
+                string line = item.TrimEnd('\r', ' ');
+
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     if (handLines.Count > 0)
                     {
@@ -77,7 +79,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     }
                     continue;
                 }
-                handLines.Add(item.TrimEnd('\r', ' '));
+                handLines.Add(line);
             }
 
             if (handLines.Count > 0)
