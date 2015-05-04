@@ -129,35 +129,35 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              get
              {
                  return new List<HandAction>()
-                           {
-                               new HandAction("hoop", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
-                               new HandAction("makkis__", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
-                               new HandAction("tigersue", HandActionType.CALL, 0.02m, Street.Preflop),
-                               new HandAction("theweman", HandActionType.CALL, 0.02m, Street.Preflop),
-                               new HandAction("hoop", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("makkis__", HandActionType.CHECK, 0, Street.Preflop),
+                    {
+                        new HandAction("hoop", HandActionType.SMALL_BLIND, 0.01m, Street.Preflop),
+                        new HandAction("makkis__", HandActionType.BIG_BLIND, 0.02m, Street.Preflop),
+                        new HandAction("tigersue", HandActionType.CALL, 0.02m, Street.Preflop),
+                        new HandAction("theweman", HandActionType.CALL, 0.02m, Street.Preflop),
+                        new HandAction("hoop", HandActionType.CALL, 0.01m, Street.Preflop),
+                        new HandAction("makkis__", HandActionType.CHECK, 0, Street.Preflop),
 
-                               new HandAction("hoop", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("makkis__", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("tigersue", HandActionType.CHECK, 0m, Street.Flop),
-                               new HandAction("theweman", HandActionType.BET, 0.08m, Street.Flop),
-                               new HandAction("hoop", HandActionType.RAISE, 0.32m, Street.Flop),
-                               new HandAction("makkis__", HandActionType.FOLD, 0m, Street.Flop),
-                               new HandAction("tigersue", HandActionType.FOLD, 0m, Street.Flop),
-                               new HandAction("theweman", HandActionType.CALL, 0.24m, Street.Flop),
+                        new HandAction("hoop", HandActionType.CHECK, 0m, Street.Flop),
+                        new HandAction("makkis__", HandActionType.CHECK, 0m, Street.Flop),
+                        new HandAction("tigersue", HandActionType.CHECK, 0m, Street.Flop),
+                        new HandAction("theweman", HandActionType.BET, 0.08m, Street.Flop),
+                        new HandAction("hoop", HandActionType.RAISE, 0.32m, Street.Flop),
+                        new HandAction("makkis__", HandActionType.FOLD, 0m, Street.Flop),
+                        new HandAction("tigersue", HandActionType.FOLD, 0m, Street.Flop),
+                        new HandAction("theweman", HandActionType.CALL, 0.24m, Street.Flop),
 
-                               new HandAction("hoop", HandActionType.BET, 0.72m, Street.Turn),
-                               new HandAction("theweman", HandActionType.CALL, 0.72m, Street.Turn),
+                        new HandAction("hoop", HandActionType.BET, 0.72m, Street.Turn),
+                        new HandAction("theweman", HandActionType.CALL, 0.72m, Street.Turn),
                                
-                               new HandAction("hoop", HandActionType.BET, 0.70m, Street.River, true),
-                               new HandAction("theweman", HandActionType.CALL, 0.70m, Street.River),
+                        new HandAction("hoop", HandActionType.BET, 0.70m, Street.River, true),
+                        new HandAction("theweman", HandActionType.CALL, 0.70m, Street.River),
 
-                               new HandAction("theweman", HandActionType.SHOW, 0, Street.Showdown),
-                               new HandAction("hoop", HandActionType.SHOW, 0, Street.Showdown),
+                        new HandAction("theweman", HandActionType.SHOW, 0, Street.Showdown),
+                        new HandAction("hoop", HandActionType.SHOW, 0, Street.Showdown),
 
-                               new WinningsAction("theweman", HandActionType.WINS, 1.73m, 0),
-                               new WinningsAction("hoop", HandActionType.WINS, 1.73m, 0)
-                           };
+                        new WinningsAction("theweman", HandActionType.WINS, 1.73m, 0),
+                        new WinningsAction("hoop", HandActionType.WINS, 1.73m, 0)
+                    };
              }
          }
     }

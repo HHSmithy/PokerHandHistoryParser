@@ -13,6 +13,7 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using System.Globalization;
 using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Parser.Utils.AllInAction;
 
 namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 {
@@ -369,7 +370,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                         break;
                 }
 
-                HandAction action = GetHandActionFromActionLine(line, currentStreet, playerList); 
+                HandAction action = ParseActionFromActionLine(line, currentStreet, playerList, actions); 
                 
                 if(action != null && !action.HandActionType.Equals(HandActionType.UNKNOWN) && !action.HandActionType.Equals(HandActionType.SHOW))
                 {
@@ -434,10 +435,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             }
         }
 
-        private HandAction GetHandActionFromActionLine(string handLine, Street street, PlayerList playerList)
+        private HandAction ParseActionFromActionLine(string handLine, Street street, PlayerList playerList, List<HandAction> actions)
         {
+            bool AllIn = false;
             var actionType = GetActionTypeFromActionLine(handLine);
-            
+
             decimal value = GetValueFromActionLine(handLine);
             int actionNumber = GetActionNumberFromActionLine(handLine);
 
@@ -445,8 +447,15 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 return null;
 
             int playerSeat = GetPlayerSeatFromActionLine(handLine);
+            string playerName = playerList.First(p => p.SeatNumber == playerSeat).PlayerName;
 
-            return new HandAction(playerList.First(p => p.SeatNumber == playerSeat).PlayerName, actionType, value, street, actionNumber);
+            if (actionType == HandActionType.ALL_IN)
+            {
+                AllIn = true;
+                actionType = AllInActionHelper.GetAllInActionType(playerName, value, street, actions);
+            }
+
+            return new HandAction(playerName, actionType, value, street, AllIn, actionNumber);
         }
 
         static int GetActionNumberFromActionLine(string actionLine)
