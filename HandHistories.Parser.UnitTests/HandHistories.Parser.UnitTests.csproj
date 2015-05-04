@@ -371,6 +371,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\BasicHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\Disconnected.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\FoldedPreflop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

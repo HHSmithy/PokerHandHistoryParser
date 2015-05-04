@@ -15,6 +15,31 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+        [Test]
+        public void TestDisconnectedActions()
+        {
+            var actions = new List<HandAction>()
+            {
+                new HandAction("Giddy_Goat", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("JoakimAF", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.POSTS, 0.02m, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.RAISE, 6, Street.Preflop),
+                new HandAction("CptStupid", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("ConorIsKing", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("Iordanes", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("BigLuigy", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("spidercat", HandActionType.RAISE, 22, Street.Preflop),
+                new HandAction("Giddy_Goat", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("JoakimAF", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.RAISE, 68, Street.Preflop),
+                new HandAction("spidercat", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.MUCKS, 0m, Street.Preflop),
+                new WinningsAction("tuffgong", HandActionType.WINS, 99m, 0),    
+            };
+
+            TestParseActions("Disconnected", actions);
+        }
+
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get

@@ -441,7 +441,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             decimal value = GetValueFromActionLine(handLine);
             int actionNumber = GetActionNumberFromActionLine(handLine);
 
-            if (actionNumber == -1)
+            if (actionNumber == -1 || actionType == HandActionType.UNKNOWN)
                 return null;
 
             int playerSeat = GetPlayerSeatFromActionLine(handLine);
