@@ -13,6 +13,7 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Utils.AllInAction;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
@@ -179,7 +180,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     {
                         //<ACTION TYPE="ACTION_
                         case 'A':
-                            actions.Add(ParseAction(Line, currentStreet));
+                            actions.Add(ParseAction(Line, currentStreet, actions));
                             break;
 
                         //<ACTION TYPE="HAND_
@@ -316,7 +317,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        private HandAction ParseAction(string Line, Street currentStreet)
+        private HandAction ParseAction(string Line, Street currentStreet, List<HandAction> actions)
         {
             const int playerHandActionStartIndex = 21;
             const int fixedAmountDistance = 9;
@@ -331,12 +332,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 case 'A':
                     playerNameStartIndex = playerHandActionStartIndex + 15;
                     playerName = GetActionPlayerName(Line, playerNameStartIndex);
-                    return new AllInAction(
-                        playerName,
-                        GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance),
-                        currentStreet,
-                        false
-                        );
+                    decimal amount = GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance);
+                    HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
+                    
+                    return new HandAction(playerName, allInType, amount, currentStreet, true);
 
                 //<ACTION TYPE="ACTION_BET" PLAYER="ItalyToast" VALUE="600.00"></ACTION>
                 case 'B':

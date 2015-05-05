@@ -55,7 +55,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("ItalyToast", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
                                         new HandAction("ToyBoy66", HandActionType.BIG_BLIND, 200m, Street.Preflop),
 
-                                        new HandAction("ItalyToast", HandActionType.RAISE, 400, Street.Preflop),
+                                        new HandAction("ItalyToast", HandActionType.RAISE, 300, Street.Preflop),
                                         new HandAction("ToyBoy66", HandActionType.FOLD, 0, Street.Preflop),
 
                                         new WinningsAction("ItalyToast", HandActionType.WINS, 400m, 0),  
@@ -75,7 +75,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("ItalyToast", HandActionType.FOLD, 0m, Street.Preflop),
                                         new HandAction("SAMERRRR", HandActionType.FOLD, 0m, Street.Preflop),
                                         new HandAction("Supervic", HandActionType.RAISE, 400m, Street.Preflop),
-                                        new HandAction("Phyre", HandActionType.RAISE, 1400m, Street.Preflop),
+                                        new HandAction("Phyre", HandActionType.RAISE, 1300m, Street.Preflop),
                                         new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
                                         new HandAction("Supervic", HandActionType.CALL, 1000m, Street.Preflop),
 
@@ -102,9 +102,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("Supervic", HandActionType.FOLD, 0m, Street.Preflop),
                                         new HandAction("Phyre", HandActionType.FOLD, 0, Street.Preflop),
                                         new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.RAISE, 5250m, Street.Preflop),
-                                        new AllInAction("SAMERRRR", 15972.51m, Street.Preflop, false),
-                                        new AllInAction("ItalyToast", 8635m, Street.Preflop, false),
+                                        new HandAction("ItalyToast", HandActionType.RAISE, 4800m, Street.Preflop),
+                                        new HandAction("SAMERRRR", HandActionType.RAISE, 14322.51m, Street.Preflop, true),
+                                        new HandAction("ItalyToast", HandActionType.CALL, 8635m, Street.Preflop, true),
 
                                         new WinningsAction("SAMERRRR", HandActionType.WINS, 17555m, 0),  
                                     };
