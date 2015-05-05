@@ -334,7 +334,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     playerName = GetActionPlayerName(Line, playerNameStartIndex);
                     decimal amount = GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance);
                     HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
-                    
+                    if (allInType == HandActionType.CALL)
+                    {
+                        amount = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions.Player(playerName));
+                    }
+
                     return new HandAction(playerName, allInType, amount, currentStreet, true);
 
                 //<ACTION TYPE="ACTION_BET" PLAYER="ItalyToast" VALUE="600.00"></ACTION>

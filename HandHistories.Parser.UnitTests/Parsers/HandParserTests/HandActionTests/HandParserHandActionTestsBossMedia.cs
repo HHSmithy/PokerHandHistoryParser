@@ -104,7 +104,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
                                         new HandAction("ItalyToast", HandActionType.RAISE, 4800m, Street.Preflop),
                                         new HandAction("SAMERRRR", HandActionType.RAISE, 14322.51m, Street.Preflop, true),
-                                        new HandAction("ItalyToast", HandActionType.CALL, 8635m, Street.Preflop, true),
+                                        new HandAction("ItalyToast", HandActionType.CALL, 3385m, Street.Preflop, true),
 
                                         new WinningsAction("SAMERRRR", HandActionType.WINS, 17555m, 0),  
                                     };

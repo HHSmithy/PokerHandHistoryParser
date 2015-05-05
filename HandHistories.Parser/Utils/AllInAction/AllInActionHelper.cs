@@ -7,8 +7,16 @@ using System.Text;
 
 namespace HandHistories.Parser.Utils.AllInAction
 {
-    public class AllInActionHelper
+    public static class AllInActionHelper
     {
+        /// <summary>
+        /// Gets the ActionType for an unadjusted action amount
+        /// </summary>
+        /// <param name="playerName"></param>
+        /// <param name="amount"></param>
+        /// <param name="street"></param>
+        /// <param name="actions"></param>
+        /// <returns></returns>
         public static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
         {
             var streetActions = actions.Street(street);
@@ -18,27 +26,8 @@ namespace HandHistories.Parser.Utils.AllInAction
                 return HandActionType.BET;
             }
 
-            Dictionary<string, decimal> playerWagers = new Dictionary<string, decimal>();
 
-            foreach (var action in streetActions)
-            {
-                if (!playerWagers.ContainsKey(action.PlayerName))
-                {
-                    playerWagers.Add(action.PlayerName, 0);   
-                }
-                playerWagers[action.PlayerName] += action.Amount;
-            }
-
-            decimal biggestWager = Math.Abs(playerWagers.Min(p => p.Value));
-
-            decimal playerWager = amount;
-
-            if (playerWagers.ContainsKey(playerName))
-            {
-                playerWager += Math.Abs(playerWagers[playerName]);
-            }
-
-            if (playerWager <= biggestWager)
+            if (Math.Abs(amount) <= Math.Abs(actions.Min(p => p.Amount)))
             {
                 return HandActionType.CALL;
             }
@@ -46,6 +35,17 @@ namespace HandHistories.Parser.Utils.AllInAction
             {
                 return HandActionType.RAISE;
             }
+        }
+
+        /// <summary>
+        /// Gets the adjusted amount for a Call-AllIn action
+        /// </summary>
+        /// <param name="amount">The Call Action AMount</param>
+        /// <param name="playerActions">The calling players previous actions</param>
+        /// <returns>the adjusted call size</returns>
+        public static decimal GetAdjustedCallAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
+        {
+            return amount - Math.Abs(playerActions.Min(p => p.Amount));
         }
     }
 }

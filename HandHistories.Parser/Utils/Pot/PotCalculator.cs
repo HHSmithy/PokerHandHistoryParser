@@ -18,13 +18,6 @@ namespace HandHistories.Parser.Utils.Pot
                     p.HandActionType == HandActionType.POSTS)
                 .ToList();
 
-            var lastAction = gameActions[gameActions.Count - 1];
-
-            var playerPutInPotOnLastStreet = gameActions
-                .Street(lastAction.Street)
-                .Player(lastAction.PlayerName)
-                .Sum(p => p.Amount);
-
             Dictionary<string, decimal> amounts = new Dictionary<string, decimal>();
 
             foreach (var action in gameActions)
