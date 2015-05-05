@@ -7,13 +7,13 @@ using System.Text;
 
 namespace HandHistories.Parser.Utils.AllInAction
 {
-    class AllInActionHelper
+    public class AllInActionHelper
     {
-        internal static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
+        public static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
         {
             var streetActions = actions.Street(street);
 
-            if (streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET) == null)
+            if (street != Street.Preflop && streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET) == null)
             {
                 return HandActionType.BET;
             }
