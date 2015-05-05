@@ -1,0 +1,32 @@
+﻿<Game hhversion="4" id="5541791811" date="2015-04-25 14:54:20" unicodetablename="QQBuAG4AZQBsAGkAZQAgAC0AIACsIDIAMAAwACAATQBhAHgA" tablename="Annelie - €200 Max" stakes="1|2" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold'em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="8" tablesize="9" badbeat="true" currencyId="26" rake="0">
+<Seats>
+<Seat num="1" alias="ConorIsKing" unicodealias="QwBvAG4AbwByAEkAcwBLAGkAbgBnAA==" balance="233.54" endbalance="233.54" />
+<Seat num="3" alias="Iordanes" unicodealias="SQBvAHIAZABhAG4AZQBzAA==" balance="279.78" endbalance="279.78" />
+<Seat num="4" alias="BigLuigy" unicodealias="QgBpAGcATAB1AGkAZwB5AA==" balance="200.00" endbalance="200.00" />
+<Seat num="5" alias="spidercat" unicodealias="cwBwAGkAZABlAHIAYwBhAHQA" balance="247.00" endbalance="225.00" dealer="true" />
+<Seat num="6" alias="Giddy_Goat" unicodealias="RwBpAGQAZAB5AF8ARwBvAGEAdAA=" balance="430.30" endbalance="429.30" />
+<Seat num="7" alias="JoakimAF" unicodealias="SgBvAGEAawBpAG0AQQBGAA==" balance="136.84" endbalance="134.84" />
+<Seat num="8" alias="tuffgong" unicodealias="dAB1AGYAZgBnAG8AbgBnAA==" balance="200.00" endbalance="224.98" />
+<Seat num="9" alias="CptStupid" unicodealias="QwBwAHQAUwB0AHUAcABpAGQA" balance="445.46" endbalance="445.46" />
+</Seats>
+<Gameplay>
+<Action seq="1" type="SmallBlind" seat="6" value="1.00" />
+<Action seq="2" type="BigBlind" seat="7" value="2.00" />
+<Action seq="3" type="BadBeatContribution" seat="8" value="0.02" />
+<Action seq="4" type="Raise" seat="8" value="6.00" />
+<Action seq="5" type="Fold" seat="9" />
+<Action seq="6" type="Fold" seat="1" />
+<Action seq="7" type="Disconnect" seat="3" value="30000" />
+<Action seq="8" type="Fold" seat="3" />
+<Action seq="9" type="Fold" seat="4" />
+<Action seq="10" type="Raise" seat="5" value="22.00" />
+<Action seq="11" type="Fold" seat="6" />
+<Action seq="12" type="Fold" seat="7" />
+<Action seq="13" type="Raise" seat="8" value="68.00" />
+<Action seq="14" type="Fold" seat="5" />
+<Action seq="15" type="MuckCards" seat="8" />
+<Action type="Win">
+<Seat num="8" amount="99.00" pot="0" type="" lowhandwin="0" />
+</Action>
+</Gameplay>
+</Game>

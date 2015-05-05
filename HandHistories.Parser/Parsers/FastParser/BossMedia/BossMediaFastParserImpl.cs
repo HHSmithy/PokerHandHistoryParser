@@ -13,19 +13,27 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Utils.AllInAction;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
     sealed class BossMediaFastParserImpl : HandHistoryParserFastImpl
     {
+        static readonly CultureInfo provider = CultureInfo.InvariantCulture;
+
         public override SiteName SiteName
         {
             get { return Objects.GameDescription.SiteName.BossMedia; }
         }
 
+        public override bool RequresAdjustedRaiseSizes
+        {
+            get { return true; }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None).Where(p => p[1] != '?');
+            return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None).Where(p => p.Length > 2 && p[1] != '?');
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -134,7 +142,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             string smallBlind = limitStr.Substring(0, splitIndex);
             string bigBlind = limitStr.Substring(splitIndex + 1);
 
-            Limit limit = Limit.FromSmallBlindBigBlind(decimal.Parse(smallBlind, CultureInfo.InvariantCulture), decimal.Parse(bigBlind, CultureInfo.InvariantCulture), Currency.USD);
+            Limit limit = Limit.FromSmallBlindBigBlind(decimal.Parse(smallBlind, provider), decimal.Parse(bigBlind, provider), Currency.USD);
             return limit;
         }
 
@@ -172,7 +180,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     {
                         //<ACTION TYPE="ACTION_
                         case 'A':
-                            actions.Add(ParseAction(Line, currentStreet));
+                            actions.Add(ParseAction(Line, currentStreet, actions));
                             break;
 
                         //<ACTION TYPE="HAND_
@@ -294,7 +302,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             int amountStartIndex = playerNameEndIndex + 24;
             int amountEndIndex = Line.IndexOf('\"', amountStartIndex);
             string amountStr = Line.Substring(amountStartIndex, amountEndIndex - amountStartIndex);
-            decimal amount = decimal.Parse(amountStr, CultureInfo.InvariantCulture);
+            decimal amount = decimal.Parse(amountStr, provider);
 
             int blindTypeIDIndex = playerNameEndIndex + 13;
             char blindType = Line[blindTypeIDIndex];
@@ -309,7 +317,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        private HandAction ParseAction(string Line, Street currentStreet)
+        private HandAction ParseAction(string Line, Street currentStreet, List<HandAction> actions)
         {
             const int playerHandActionStartIndex = 21;
             const int fixedAmountDistance = 9;
@@ -324,12 +332,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 case 'A':
                     playerNameStartIndex = playerHandActionStartIndex + 15;
                     playerName = GetActionPlayerName(Line, playerNameStartIndex);
-                    return new AllInAction(
-                        playerName,
-                        GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance),
-                        currentStreet,
-                        false
-                        );
+                    decimal amount = GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance);
+                    HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
+                    
+                    return new HandAction(playerName, allInType, amount, currentStreet, true);
 
                 //<ACTION TYPE="ACTION_BET" PLAYER="ItalyToast" VALUE="600.00"></ACTION>
                 case 'B':
@@ -399,7 +405,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         {
             int endIndex = Line.IndexOf('\"', startIndex);
             string amountString = Line.Substring(startIndex, endIndex - startIndex);
-            return decimal.Parse(amountString, CultureInfo.InvariantCulture);
+            return decimal.Parse(amountString, provider);
         }
 
         string GetActionPlayerName(string Line, int startIndex)
@@ -451,7 +457,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
                 int stackStartIndex = seatEndIndex + 10;
                 int stackEndIndex = Line.IndexOf('\"', stackStartIndex);
-                decimal stack = decimal.Parse(Line.Substring(stackStartIndex, stackEndIndex - stackStartIndex), CultureInfo.InvariantCulture);
+                decimal stack = decimal.Parse(Line.Substring(stackStartIndex, stackEndIndex - stackStartIndex), provider);
 
                 plist.Add(new Player(playerName, stack, seatNumber));
             }
@@ -672,6 +678,24 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             int startIndex = Line.IndexOf(search) + search.Length;
             int endIndex = Line.IndexOf('\"', startIndex);
             return Line.Substring(startIndex, endIndex - startIndex);
+        }
+
+        protected override void ParseExtraHandInformation(string[] handLines, Objects.Hand.HandHistorySummary handHistorySummary)
+        {
+            //Expected Line: <SHOWDOWN NAME="HAND_SHOWDOWN" POT="3.64" RAKE="0.40">
+
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                string line = handLines[i];
+                if (line.StartsWith("<SHOWDOWN", StringComparison.Ordinal))
+                {
+                    var TotalPot = GetXMLAttributeValue(line, "POT");
+                    var Rake = GetXMLAttributeValue(line, "RAKE");
+
+                    handHistorySummary.TotalPot = decimal.Parse(TotalPot, provider);
+                    handHistorySummary.Rake = decimal.Parse(Rake, provider);
+                }
+            }
         }
 
         protected override string ParseHeroName(string[] handlines)
