@@ -10,25 +10,26 @@ using System.Text;
 namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
 {
     [TestFixture]
-    public class AllInActionHelperTests
+    public partial class AllInActionHelperTests
     {
-        void TestAllInActionHelper(string playerName, decimal amount, Street street, List<HandAction> actions, HandActionType expectedAllInActionType)
+        void TestAdjustedCallAllInAmount(decimal amount, List<HandAction> actions, decimal expectedAmount)
         {
-            var result = AllInActionHelper.GetAllInActionType(playerName, amount, street, actions);
+            var result = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions);
 
-            Assert.AreEqual(expectedAllInActionType, result);
+            Assert.AreEqual(expectedAmount, result);
         }
 
         [Test]
-        public void AllInPreflop()
+        public void AdjustedCall_AllInPreflop()
         {
             List<HandAction> actions = new List<HandAction>()
             {
                 new HandAction("P1", HandActionType.SMALL_BLIND, 10, Street.Preflop),
                 new HandAction("P2", HandActionType.BIG_BLIND, 20, Street.Preflop),
+                new HandAction("P1", HandActionType.RAISE, 100, Street.Preflop),
             };
 
-            TestAllInActionHelper("P1", 100, Street.Preflop, actions, HandActionType.RAISE);
+            TestAdjustedCallAllInAmount(40, actions.Player("P2").ToList(), 20);
         }
     }
 }
