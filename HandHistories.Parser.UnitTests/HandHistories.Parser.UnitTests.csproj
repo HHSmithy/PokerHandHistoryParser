@@ -129,7 +129,8 @@
     <Content Include="SampleHandHistories\FullTilt\CashGame\RunItTwiceTests\RunItTwice1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Utils\AllInActionHelperTests\AllInActionHelperTests.cs" />
+    <Compile Include="Utils\AllInActionHelperTests\AllInActionHelperTests.AllInActionType.cs" />
+    <Compile Include="Utils\AllInActionHelperTests\AllInActionHelperTests.AdjustedCallAllIn.cs" />
     <Compile Include="Utils\Pot\PotCalculatorTests.cs" />
     <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\FixedLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
