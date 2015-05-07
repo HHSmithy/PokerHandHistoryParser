@@ -145,6 +145,8 @@ namespace HandHistories.Objects.Actions
                     return 0.0M; // when someone adds to their stack it doesnt effect their winnings in the hand
                 case HandActionType.CHAT:
                     return 0.0M; // overwrite any $ talk in the chat
+                case HandActionType.JACKPOTCONTRIBUTION:
+                    return 0.0M; // does not affect pot, as it goes to a jackpot
             }
 
             throw new ArgumentException("GetAdjustedAmount: Uknown action " + type + " to have amount " + amount);
