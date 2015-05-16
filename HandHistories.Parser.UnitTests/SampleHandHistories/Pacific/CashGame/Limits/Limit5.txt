@@ -10,33 +10,20 @@ Seat 4: kdesaram ( $102.67 )
 Seat 5: stan031 ( $102.64 )
 Seat 6: Daikatana7 ( $35.50 )
 Seat 7: tezloz ( $134.05 )
-Seat 8: dix.xie ( $98 )
-Seat 9: FoldOrBeBust ( $110.41 )
-Seat 10: ChkMyNutOuts ( $100 )
-FoldOrBeBust posts small blind [$0.50]
-ChkMyNutOuts posts big blind [$1]
-** Dealing down cards **
-Hanno32 calls [$1]
-bystry1989 folds
-kdesaram folds
-stan031 folds
-Daikatana7 folds
-tezloz calls [$1]
-dix.xie folds
-FoldOrBeBust folds
-ChkMyNutOuts checks
-** Dealing flop ** [ Jh, 4s, 7d ]
-ChkMyNutOuts checks
-Hanno32 bets [$1]
-tezloz calls [$1]
-ChkMyNutOuts folds
-** Dealing turn ** [ 2h ]
-Hanno32 bets [$1]
-tezloz calls [$1]
-** Dealing river ** [ 8s ]
-Hanno32 bets [$1]
-tezloz calls [$1]
+#Game No : 409714750
+***** 888poker Hand History for Game 409714750 *****
+25 $/50 $ Blinds Pot Limit Omaha - *** 30 04 2015 09:13:22
+Table Coruna 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: FFSim2rich ( 3Â 023,50 $ )
+Seat 4: myhometown ( 15Â 552,50 $ )
+Seat 7: SolidManiac ( 4Â 925 $ )
+Seat 9: 7Lucky7Guy7 ( 7Â 167 $ )
+myhometown posts small blind [25 $]
+SolidManiac folds
+7Lucky7Guy7 folds
+FFSim2rich folds
 ** Summary **
-Hanno32 shows [ Ah, 9h ]
-tezloz mucks [ 5c, Td ]
-Hanno32 collected [ $9.03 ]
+myhometown did not show his hand
+myhometown collected [ 25 $ ]
