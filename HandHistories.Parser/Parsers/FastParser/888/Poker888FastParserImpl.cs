@@ -183,12 +183,20 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             }
         }
 
-        private static readonly Regex LowLimitRegex = new Regex(@"([\d,]+|[\d,]+\.\d+)(?=/)", RegexOptions.Compiled);
-        private static readonly Regex HighLimitRegex = new Regex(@"(?<=/.)([\d,]+)(\.\d+){0,1}", RegexOptions.Compiled);
         protected override Limit ParseLimit(string[] handLines)
         {
-            string lowLimitString = LowLimitRegex.Match(handLines[2]).Value;
-            string highLimitString = HighLimitRegex.Match(handLines[2]).Value;
+            string line = handLines[2];
+
+            int LimitEndIndex = line.IndexOf(" Blinds", StringComparison.Ordinal);
+            string limitString = line.Remove(LimitEndIndex)
+                .Replace(" ", "")
+                .Replace("$", "")
+                ;
+
+            int splitIndex = limitString.IndexOf('/');
+
+            string lowLimitString = limitString.Remove(splitIndex);
+            string highLimitString = limitString.Substring(splitIndex + 1);
 
             decimal lowLimit = decimal.Parse(lowLimitString, System.Globalization.CultureInfo.InvariantCulture);
             decimal highLimit = decimal.Parse(highLimitString, System.Globalization.CultureInfo.InvariantCulture);
