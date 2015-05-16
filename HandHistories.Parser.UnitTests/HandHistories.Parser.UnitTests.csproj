@@ -454,6 +454,9 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\PostingDead.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table5.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
