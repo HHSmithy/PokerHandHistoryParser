@@ -136,7 +136,7 @@ namespace HandHistories.Objects.Actions
                 case HandActionType.UNCALLED_BET:
                     return amount;
                 case HandActionType.POSTS:
-                    return amount*-1;
+                    return amount * -1;
                 case HandActionType.ANTE:
                     return amount * -1;
                 case HandActionType.WINS_THE_LOW:

@@ -176,9 +176,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 string heroName = ParseHeroName(handLines);
                 handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == heroName);
 
-                if (SupportRunItTwice)
+                // TODO: HandAction Parser will be merged for SNGs with upcoming releases
+                if (handHistory.GameDescription.PokerFormat.Equals(PokerFormat.SitAndGo)
+                    || handHistory.GameDescription.PokerFormat.Equals(PokerFormat.MultiTableTournament))
                 {
-                    handHistory.RunItTwiceData = ParseRunItTwice(handLines);
+                    return handHistory;
                 }
                 
                 if (handHistory.Cancelled)
@@ -191,13 +193,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw new PlayersException(string.Join("\r\n", handLines), "Only found " + handHistory.Players.Count + " players with actions.");
                 }
 
-                // TODO: HandAction Parser will be merged for SNGs with upcoming releases
-                if (handHistory.GameDescription.PokerFormat.Equals(PokerFormat.SitAndGo)
-                    || handHistory.GameDescription.PokerFormat.Equals(PokerFormat.MultiTableTournament))
+                if (SupportRunItTwice)
                 {
-                    return handHistory;
+                    handHistory.RunItTwiceData = ParseRunItTwice(handLines);
                 }
-                
+
                 handHistory.HandActions = ParseHandActions(handLines, handHistory.GameDescription.GameType);
 
                 if (RequiresActionSorting)
