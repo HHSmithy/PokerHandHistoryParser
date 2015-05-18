@@ -322,7 +322,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
         public override bool IsValidHand(string[] handLines)
         {
             return handLines[handLines.Length - 1].StartsWith("***** End of hand ") &&
-                   handLines[0].StartsWith("***** History for hand");
+                   handLines[0].StartsWith("***** History for hand") &&
+                   handLines.Count() > 7;
         }
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
