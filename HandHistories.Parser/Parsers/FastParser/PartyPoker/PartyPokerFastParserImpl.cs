@@ -359,7 +359,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             //Expected one of the last lines to look like:
             //"Player wins $102 USD from the main pot with a flush, Ace high."
-
+            
             isCancelled = false;
 
             for (int i = handLines.Length - 1; i >= handLines.Length - 10; i--)
@@ -386,6 +386,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             for (int lineNumber = firstActionIndex; lineNumber < handLines.Length; lineNumber++)
             {
                 string handLine = handLines[lineNumber];
+
+                if (IsConnectionLost(handLine))
+                {
+                    throw new HandActionException(handLine, "Lost connection during HH saving, unable to parse file");
+                }
 
                 try
                 {
@@ -420,6 +425,21 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
 
             return handActions;
+        }
+
+        private bool IsConnectionLost(string line)
+        {
+            // if we find the following line in the HH, it is corrupt in most cases
+            // Connection Lost due to some reason
+            // ^         ^^                    ^^
+            if (line[0] == 'C' 
+                && line[line.Length - 1] == 'n' && line[line.Length -2] == 'o'
+                && line[10] == ' ' && line[11] == 'L')
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
