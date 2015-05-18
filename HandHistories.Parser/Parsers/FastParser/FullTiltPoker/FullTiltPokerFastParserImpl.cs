@@ -279,6 +279,18 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
+            for (int i = handLines.Length - 1; i > 2; i--)
+            {
+                var line = handLines[i];
+
+                // we search for 
+                // Hand #35550557071 has been canceled
+                if (line[0] == 'H' && line[5] == '#' && line[line.Length - 1] == 'd')
+                {
+                    isCancelled = true;
+                    break;
+                }
+            }
             return IsValidHand(handLines);
         }
 
