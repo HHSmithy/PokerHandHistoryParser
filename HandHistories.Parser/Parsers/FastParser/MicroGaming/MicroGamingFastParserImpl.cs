@@ -471,6 +471,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         {
             
             var actionType = GetActionTypeFromActionLine(handLine);
+            if (actionType.Equals(HandActionType.UNKNOWN))
+                return null;
+
             var actionPlayerSeat = GetPlayerSeatFromActionLine(handLine);
 
             decimal value = GetValueFromActionLine(handLine);
@@ -609,6 +612,8 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     actionType = HandActionType.JACKPOTCONTRIBUTION;
                     break;
                 // at the moment we do not need to parse the following types
+                case "disconnect":
+                case "reconnect":
                 case "dealflop":
                 case "dealturn":
                 case "dealriver":
