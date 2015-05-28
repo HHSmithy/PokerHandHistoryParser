@@ -460,7 +460,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 var actionPlayerSeat = GetPlayerSeatFromActionLine(handLines[k]);
                 var amountString = handLines[k].Substring(22, handLines[k].IndexOf('"', 22) - 22);
 
-                winningAndShowCardActions.Add(new HandAction(GetPlayerNameFromSeatNumber(actionPlayerSeat, playerList),HandActionType.WINS, decimal.Parse(amountString), Street.Showdown, actionNumber++));
+                winningAndShowCardActions.Add(new WinningsAction(GetPlayerNameFromSeatNumber(actionPlayerSeat, playerList),HandActionType.WINS, decimal.Parse(amountString), 0, actionNumber++));
             }
            
 

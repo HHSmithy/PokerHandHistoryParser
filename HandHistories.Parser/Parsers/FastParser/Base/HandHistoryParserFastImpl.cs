@@ -176,13 +176,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 string heroName = ParseHeroName(handLines);
                 handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == heroName);
 
-                // TODO: HandAction Parser will be merged for SNGs with upcoming releases
-                if (handHistory.GameDescription.PokerFormat.Equals(PokerFormat.SitAndGo)
-                    || handHistory.GameDescription.PokerFormat.Equals(PokerFormat.MultiTableTournament))
-                {
-                    return handHistory;
-                }
-                
                 if (handHistory.Cancelled)
                 {
                     return handHistory;
@@ -219,7 +212,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
-                if (anteAction != null)
+                if (anteAction != null && handHistory.GameDescription.PokerFormat.Equals(PokerFormat.CashGame))
                 {
                     handHistory.GameDescription.Limit.IsAnteTable = true;
                     handHistory.GameDescription.Limit.Ante = Math.Abs(anteAction.Amount);

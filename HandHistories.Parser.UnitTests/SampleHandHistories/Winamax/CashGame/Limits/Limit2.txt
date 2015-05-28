@@ -1,29 +1,17 @@
-Winamax Poker - CashGame - HandId: #5281577-471-1382586707 - Holdem no limit (0.50€/1€) - 2013/10/24 03:51:47 UTC
-Table: 'Gold Coast-Tweed 13' 2-max (real money) Seat #2 is the button
-Seat 1: Barthez91 (138.61€)
-Seat 2: titi63000 (116.40€)
+ï»¿Winamax Poker - CashGame - HandId: #7334932-77-1427241614 - Holdem no limit (0.50â‚¬/1â‚¬) - 2015/03/25 00:00:14 UTC
+Table: 'Albuquerque 03' 5-max (real money) Seat #1 is the button
+Seat 1: 9574561 (74.66â‚¬)
+Seat 3: Woodshipper1 (103.11â‚¬)
+Seat 4: Kool Shen (118.71â‚¬)
+Seat 5: 7 7 7 (43.54â‚¬)
 *** ANTE/BLINDS ***
-titi63000 posts small blind 0.50€
-Barthez91 posts big blind 1€
+Woodshipper1 posts small blind 0.50â‚¬
+Kool Shen posts big blind 1â‚¬
 *** PRE-FLOP *** 
-titi63000 raises 1.50€ to 2.50€
-Barthez91 raises 5€ to 7.50€
-titi63000 calls 5€
-*** FLOP *** [3c 7d 2s]
-Barthez91 checks
-titi63000 checks
-*** TURN *** [3c 7d 2s] [3h]
-Barthez91 checks
-titi63000 checks
-*** RIVER *** [3c 7d 2s 3h] [4c]
-Barthez91 checks
-titi63000 checks
-*** SHOW DOWN ***
-Barthez91 shows [8s Td] (One pair : 3)
-titi63000 shows [8d Jd] (One pair : 3)
-titi63000 collected 14.02€ from pot
+7 7 7 folds
+9574561 folds
+Woodshipper1 folds
+Kool Shen collected 1.50â‚¬ from pot
 *** SUMMARY ***
-Total pot 14.02€ | Rake 0.98€
-Board: [3c 7d 2s 3h 4c]
-Seat 1: Barthez91 (big blind) mucked
-Seat 2: titi63000 (small blind) (button) showed [8d Jd] and won 14.02€ with One pair : 3
+Total pot 1.50â‚¬ | No rake
+Seat 4: Kool Shen (big blind) won 1.50â‚¬

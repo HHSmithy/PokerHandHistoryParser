@@ -440,12 +440,6 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             {
                 var line = handLines[i];
 
-                if (IsUncalledBetLine(line))
-                {
-                    actions.Add(ParseUncalledBet(line, Street.Showdown));
-                    continue;
-                }
-
                 if (line.EndsWith(" mucks"))
                 {
                     actions.Add(new HandAction(line.Remove(line.Length - 6), HandActionType.MUCKS, 0m, Street.Showdown));
@@ -555,7 +549,6 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 case '7':
                 case '8':
                 case '9':
-                    return null;
                     return ParseWinAction(line);
 
                 default:

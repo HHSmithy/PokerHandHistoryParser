@@ -33,6 +33,7 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.Flop),
                 new HandAction("P2", HandActionType.BET, 0.1m, Objects.Cards.Street.Flop),
                 new HandAction("P1", HandActionType.FOLD, 0m, Objects.Cards.Street.Flop),
+                new HandAction("P2", HandActionType.UNCALLED_BET, 0.1m, Objects.Cards.Street.Flop),
             };
 
             TestPotCalculator(0.4m, hand);

@@ -21,7 +21,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly bool _isIpoker2;
-
+        private static int CurrencyParsingErrors;
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",
@@ -119,7 +119,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOf(" c") + 8;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-            return decimal.Parse(stackString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            return ParseDecimal(stackString);
         }
 
         protected decimal GetWinningsFromPlayerLine(string playerLine)
@@ -131,7 +131,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 return 0;
             }
-            return decimal.Parse(stackString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            return ParseDecimal(stackString);
         }
 
         protected string GetNameFromPlayerLine(string playerLine)
@@ -475,10 +475,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int slashIndex = limitString.IndexOf('/');
 
             string smallString = limitString.Remove(slashIndex);
-            decimal small = decimal.Parse(smallString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            decimal small = ParseDecimal(smallString);
  
             string bigString = limitString.Substring(slashIndex + 1);
-            decimal big = decimal.Parse(bigString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            decimal big = ParseDecimal(bigString);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
@@ -719,7 +719,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int startPos = actionLine.IndexOf(" s") + 6;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
             string value = actionLine.Substring(startPos, endPos - startPos + 1);
-            return decimal.Parse(value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            return ParseDecimal(value);
         }
 
         protected int GetActionTypeFromActionLine(string actionLine)
@@ -878,6 +878,36 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return BoardCards.FromCards(boardCards);
+        }
+
+        static decimal ParseDecimal(string amountString)
+        {
+            decimal amount;
+            while (!decimal.TryParse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out amount))
+            {
+                CurrencyParsingErrors++;
+                LoopCurrency();
+                if (CurrencyParsingErrors > 3)
+                    throw new Exception("Unable to parse Amount " + amountString);
+            }
+            CurrencyParsingErrors = 0;
+            return amount;
+        }
+
+        static void LoopCurrency()
+        {
+            if (NumberFormatInfo.CurrencySymbol == "€")
+            {
+                NumberFormatInfo.CurrencySymbol = "£";
+            }
+            else if (NumberFormatInfo.CurrencySymbol == "£")
+            {
+                NumberFormatInfo.CurrencySymbol = "$";
+            }
+            else if (NumberFormatInfo.CurrencySymbol == "$")
+            {
+                NumberFormatInfo.CurrencySymbol = "€";
+            }
         }
 
         protected override string ParseHeroName(string[] handlines)

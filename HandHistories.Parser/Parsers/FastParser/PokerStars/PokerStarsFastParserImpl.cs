@@ -599,6 +599,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return line[length - 2] == '#' || line[length - 3] == '#';
         }
 
+        static bool IsRebuyLine(string line)
+        {
+            // solopercy1 re-buys and receives 1500 chips for $3.19
+            var lastSpaceIndex = line.LastIndexOf(' ');
+
+            return (line[lastSpaceIndex - 1] == 'r' && line[lastSpaceIndex - 4] == ' ' && line[lastSpaceIndex - 5] == 's');
+        }
+
         /// <summary>
         /// Parse all blind actions from the specified index, returns the index where HandActions will start
         /// </summary>
@@ -874,10 +882,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     throw new HandActionException("", "Invalid State: Street");
 
                 default:
-                    if (colonIndex > -1)
+                    if (colonIndex > -1 && line[line.Length-1] != 't')
+                    {
                         handAction = ParseRegularActionLine(line, colonIndex, currentStreet);
+                    }
                     else
+                    {
+                        if (IsRebuyLine(line))
+                        {
+                            return false;
+                        }
+
                         handAction = ParseCollectedLine(line, Street.Showdown);
+                    }
 
                     break;
             }
@@ -1120,7 +1137,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             // Collected bet lines look like:
             // alecc frost collected $1.25 from pot
-
             int firstAmountDigit = actionLine.LastIndexOf(' ') + 1;
             decimal amount = decimal.Parse(actionLine.Substring(firstAmountDigit, actionLine.Length - firstAmountDigit), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
@@ -1136,9 +1152,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // Uncalled bet lines look like:
             // Uncalled bet ($6) returned to woezelenpip
 
-            // position 15 is after the currency symbol
-            int closeParenIndex = actionLine.IndexOf(')', 16);
-            decimal amount = decimal.Parse(actionLine.Substring(15, closeParenIndex - 15), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            // position 14 is after the open paren
+            int closeParenIndex = actionLine.IndexOf(')', 14);
+            decimal amount = decimal.Parse(actionLine.Substring(14, closeParenIndex - 14), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
             int firstLetterOfName = closeParenIndex + 14; // ' returned to ' is length 14
 
@@ -1178,13 +1194,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 if (!foundSeats && !line.StartsWith("Seat ") && line[6] != ':')
                 {
                     continue;
+                } 
+                else if (foundSeats && !line.StartsWith("Seat "))
+                {
+                    lastLineRead = lineNumber;
+                    break;
                 }
                 foundSeats = true;
 
                 char endChar = line[line.Length - 1];
 
                 //Seat 1: thaiJhonny ($16.08 in chips)
-                if (endChar != ')')
+                //Seat 1: thaiJhonny ($16.08 in chips) is sitting out
+                if (endChar != ')' && endChar != 't')
                 {
                     lastLineRead = lineNumber;
                     break;
@@ -1199,6 +1221,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 // we need to find the ( before the number. players can have ( in their name so we need to go backwards and skip the last one
                 int openParenIndex = line.LastIndexOf('(');
+
+                //Seat 2: ZamaskaStars (1660 in chips) out of hand (moved from another table into small blind)
+                if (line[openParenIndex + 1] == 'm')
+                {
+                    line = line.Remove(openParenIndex);
+                    openParenIndex = line.LastIndexOf('(');
+                }
+                
                 int spaceAfterOpenParen = line.IndexOf(' ', openParenIndex);                
 
                 string playerName = line.Substring(colonIndex + 2, (openParenIndex - 1) - (colonIndex + 2));

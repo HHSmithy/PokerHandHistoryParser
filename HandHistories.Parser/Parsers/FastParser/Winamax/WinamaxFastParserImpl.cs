@@ -206,6 +206,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
             int slashIndex = lineSplit[5].IndexOf('/');
 
+            var sbString = lineSplit[5].Substring(parenIndex + 1, slashIndex - parenIndex - 1);
+            var bbString = lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 3);
+
             decimal smallBlind = decimal.Parse(lineSplit[5].Substring(parenIndex + 1, slashIndex - parenIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
             decimal bigBlind = decimal.Parse(lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 3), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
