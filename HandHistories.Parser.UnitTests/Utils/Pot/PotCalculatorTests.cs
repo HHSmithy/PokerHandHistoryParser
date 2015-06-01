@@ -34,6 +34,7 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.Flop),
                 new HandAction("P2", HandActionType.BET, 0.1m, Objects.Cards.Street.Flop),
                 new HandAction("P1", HandActionType.FOLD, 0m, Objects.Cards.Street.Flop),
+                new HandAction("P2", HandActionType.UNCALLED_BET, 0.1m, Objects.Cards.Street.Flop),
             };
 
             TestPotCalculator(0.4m, hand);
@@ -98,6 +99,7 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P1", HandActionType.RAISE, 10m, Street.Preflop),
                 new HandAction("P2", HandActionType.RAISE, 60m, Street.Preflop, true),
                 new HandAction("P1", HandActionType.CALL, 29m, Street.Preflop, true),
+                new HandAction("P2", HandActionType.UNCALLED_BET, 22, Street.Preflop),
 
                 new WinningsAction("P2", HandActionType.WINS, 80m, 0),
             };

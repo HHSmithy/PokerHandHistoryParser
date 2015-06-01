@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Schema;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
@@ -29,13 +30,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             get { return SiteName.Winamax; }
         }
 
-        // TODO: CHECK
-        public override bool RequresAdjustedRaiseSizes
+        public override bool RequiresAdjustedRaiseSizes
         {
-            get { return false; }
+            get { return true; }
         }
 
-        // TODO: CHECK
         public override bool RequiresActionSorting
         {
             get { return false; }
@@ -45,6 +44,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         {
             get { return false; }
         }
+        
+        private readonly NumberFormatInfo _numberFormatInfo = new NumberFormatInfo
+            {
+                NegativeSign = "-",
+                CurrencyDecimalSeparator = ".",
+                CurrencyGroupSeparator = ",",
+                CurrencySymbol = "€"
+            };
 
         protected override int ParseDealerPosition(string[] handLines)
         {
@@ -92,6 +99,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             }
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Line 1 is:
@@ -106,6 +118,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             string handNumber = handLines[0].Substring(indexOfHandIdStart, indexOfHandIdEnd - indexOfHandIdStart);
 
             return long.Parse(handNumber.Replace("-", ""));
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -189,10 +206,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
             int slashIndex = lineSplit[5].IndexOf('/');
 
-            decimal smallBlind = decimal.Parse(lineSplit[5].Substring(parenIndex + 1, slashIndex - parenIndex - 2), CultureInfo.InvariantCulture);
-            decimal bigBlind = decimal.Parse(lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 4), CultureInfo.InvariantCulture);
+            var sbString = lineSplit[5].Substring(parenIndex + 1, slashIndex - parenIndex - 1);
+            var bbString = lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 3);
+
+            decimal smallBlind = decimal.Parse(lineSplit[5].Substring(parenIndex + 1, slashIndex - parenIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            decimal bigBlind = decimal.Parse(lineSplit[5].Substring(slashIndex + 1, lineSplit[5].Length - slashIndex - 3), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
             return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, Currency.EURO);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)
@@ -220,6 +245,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             int startOfActionsIndex = -1;
+
+            // we store this value for future deadmoney detection
+            decimal smallBlindValue = 0.0m;
 
             for (int i = 5; i < handLines.Length; i++)
             {
@@ -287,6 +315,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                     }
                 }
 
+                bool isAllIn = handLine.EndsWith("and is all-in");
+                if (isAllIn)
+                {
+                    handLine = handLine.Substring(0, handLine.Length - 14);
+                }
+
                 if (currentStreet == Street.Showdown)
                 {
                     // lines look like:
@@ -299,9 +333,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                         if (wonIndex != -1)
                         {
-                            int currencyIndex = handLine.IndexOf("€", wonIndex, StringComparison.Ordinal);
+                            int currencyIndex = handLine.IndexOf(_numberFormatInfo.CurrencySymbol, wonIndex, StringComparison.Ordinal);
 
-                            decimal amount = decimal.Parse(handLine.Substring(wonIndex + 5, currencyIndex - wonIndex - 5), CultureInfo.InvariantCulture);
+                            decimal amount = decimal.Parse(handLine.Substring(wonIndex + 5, currencyIndex - wonIndex - 4), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
                             string name = GetPlayerNameFromHandLine(handLine);
 
@@ -333,24 +367,45 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         continue;
                     }
 
+                    // skip
+                    // Nhat60 denies big blind
+                    if (handLine[handLine.Length - 1] == 'd')
+                    {
+                        continue;
+                    }
+
                     var smallBlindIndex = handLine.IndexOf("posts small blind", StringComparison.Ordinal);
                     var bigBlindIndex = handLine.IndexOf("posts big blind", StringComparison.Ordinal);
 
+                    // bkk2015 posts small blind 0.25€ out of position
+                    // bkk2015 posts big blind 0.50€ out of position
+                    var deadMoney = handLine[handLine.Length-1] == 'n';
+                    if (deadMoney)
+                    {
+                        handLine = handLine.Substring(0, handLine.Length - 16);
+                    }
+
                     var amountStartIndex = handLine.LastIndexOf(" ", StringComparison.Ordinal);
 
-                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 2), CultureInfo.InvariantCulture);
+                    var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
                    
                     if(smallBlindIndex > -1)
                     {
+                        var handActionType = deadMoney ? HandActionType.POSTS : HandActionType.SMALL_BLIND;
+
                         var playerName = handLine.Substring(0, smallBlindIndex - 1);
-                        handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, Street.Preflop));
+                        handActions.Add(new HandAction(playerName, handActionType, amount, Street.Preflop,isAllIn));
+
+                        smallBlindValue = amount;
                         continue;
                     }
 
                     if(bigBlindIndex > -1)
                     {
+                        var handActionType = deadMoney ? HandActionType.POSTS : HandActionType.BIG_BLIND;
+
                         var playerName = handLine.Substring(0, bigBlindIndex - 1);
-                        handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop));
+                        handActions.Add(new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn));
                         continue;
                     }
 
@@ -374,9 +429,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 }
                 else
                 {
-                    
-                    bool isAllIn = handLine.EndsWith("and is all-in");
-
                     // from here on we can skip lines that don't end on the EURO-symbol AND that are not allins
                     if (handLine[handLine.Length - 1] != '€' && !isAllIn)
                     {
@@ -411,13 +463,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                             }
                         }
 
-                        amount = decimal.Parse(
-                            handLine.Substring(lastAmountIndex, lastCurrencyIndex - lastAmountIndex),
-                            CultureInfo.InvariantCulture);
+                        amount = decimal.Parse(handLine.Substring(lastAmountIndex, lastCurrencyIndex - lastAmountIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
                     }
                     else
                     {
-                        amount = decimal.Parse(handLine.Substring(amountIndex, currencyIndex - amountIndex), CultureInfo.InvariantCulture);
+                        amount = decimal.Parse(handLine.Substring(amountIndex, currencyIndex - amountIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
                     }
 
                     char actionIdentifier = handLine[amountIndex - 2];
@@ -439,6 +489,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         case 'e': // raises
                             // ex: r.BAGGIO raises 20€ to 40€
                             playerName = handLine.Substring(0, amountIndex - 7);
+                            
+                            // 30/04/2015: if a player posts dead money (SB), his raise size is too high by the amount of the small blind
+                            //             this can be verified by taking a look at pot and call sizes of other players
+                            if (currentStreet == Street.Preflop)
+                            {
+                                var deadMoneyAction = handActions.Any(h => h.PlayerName.Equals(playerName)
+                                                                           && h.HandActionType.Equals(HandActionType.POSTS)
+                                                                           && Math.Abs(h.Amount).Equals(smallBlindValue));
+
+                                if (deadMoneyAction)
+                                {
+                                    amount -= smallBlindValue;
+                                }    
+                            }
+                           
                             if (isAllIn)
                             {
                                 handActions.Add(new AllInAction(playerName, amount, currentStreet, true));
@@ -487,9 +552,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                 string name = handLines[i].Substring(colonIndex + 2, parenIndex - 2 - colonIndex - 1);
                 int seatNumber = Int32.Parse(handLines[i].Substring(5, colonIndex - 5));
-                string amount = (handLines[i].Substring(parenIndex + 1, handLines[i].Length - parenIndex - 2 - 1));
+                string amount = (handLines[i].Substring(parenIndex + 1, handLines[i].Length - parenIndex - 2));
 
-                playerList.Add(new Player(name, decimal.Parse(amount, CultureInfo.InvariantCulture), seatNumber));
+                playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
             }
 
             for (int i = handLines.Length - 1; i >= 0; i--)
@@ -585,6 +650,53 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             string name = handLine.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
 
             return name;
+        }
+
+        protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
+        {
+            if (handHistorySummary.Cancelled)
+            {
+                return;
+            }
+
+            for (int i = handLines.Length - 1; i >= 0; i--)
+            {
+                string line = handLines[i];
+                
+
+                // Check for summary line:
+                //  *** SUMMARY ***
+                if (line[0] == '*' && line[4] == 'S')
+                {
+                    // Line after summary line is:
+                    //  Total pot 3€ | No rake
+                    // or
+                    //  Total pot 62.50€ | Rake 1.50€
+                    string totalLine = handLines[i + 1];
+
+                    int lastSpaceIndex = totalLine.LastIndexOf(' ');
+                    int spaceAfterFirstNumber = totalLine.IndexOf(' ', 11);
+
+                    string rake = totalLine.Substring(lastSpaceIndex + 1, totalLine.Length - lastSpaceIndex - 1);
+                    try
+                    {
+                        handHistorySummary.Rake = decimal.Parse(rake, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                    }
+                    catch (Exception)
+                    {
+                        // we can't parse "rake" in No rake -> 0.00m rake paid
+                        handHistorySummary.Rake = 0.0m;
+                    }
+                    
+                    string totalPot = totalLine.Substring(10, spaceAfterFirstNumber - 10);
+
+                    handHistorySummary.TotalPot = decimal.Parse(totalPot, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+
+                    // the pot in the hand history already deducted the rake, so we need to readd it
+                    handHistorySummary.TotalPot += handHistorySummary.Rake;
+                    break;
+                }
+            }
         }
 
         protected override string ParseHeroName(string[] handlines)

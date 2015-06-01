@@ -66,7 +66,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("titi250", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
                                new HandAction("sined20", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("fanf4K UR0", HandActionType.RAISE, 1.25m, Street.Preflop),
-                               new HandAction("totti6720", HandActionType.RAISE, 3.25m, Street.Preflop),
+                               new HandAction("totti6720", HandActionType.RAISE, 3.00m, Street.Preflop),
                                new HandAction("titi250", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("fanf4K UR0", HandActionType.CALL, 2, Street.Preflop),
                                new HandAction("totti6720", HandActionType.BET, 4.7m, Street.Flop),

@@ -60,12 +60,22 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return time;
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             //Game ID: 261402571 2/4 Braunite (Omaha)
             int endIndex = handLines[1].IndexOf(' ', GameIDStartIndex);
             long handId = long.Parse(handLines[1].Substring(GameIDStartIndex, endIndex - GameIDStartIndex));
             return handId;
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -134,6 +144,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             decimal bigBlind = decimal.Parse(limitText.Substring(splitIndex + 1), System.Globalization.CultureInfo.InvariantCulture);
             Limit limit = Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, Currency.USD);
             return limit;
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         public override bool IsValidHand(string[] handLines)

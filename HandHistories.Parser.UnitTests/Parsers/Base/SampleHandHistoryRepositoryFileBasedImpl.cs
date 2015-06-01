@@ -1,3 +1,4 @@
+using System.Text;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Utils.IO;
@@ -78,7 +79,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
                 return null;
             }
 
-            return _fileReader.ReadAllText(path);
+            return _fileReader.ReadAllText(path, Encoding.UTF8);
         }
 
         private string GetSampleHandHistoryFolder(PokerFormat pokerFormat, SiteName siteName)

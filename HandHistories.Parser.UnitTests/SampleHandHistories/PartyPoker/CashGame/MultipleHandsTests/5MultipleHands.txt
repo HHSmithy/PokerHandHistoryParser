@@ -1,6 +1,4 @@
-﻿Game #1458965856 starts.
-
-#Game No : 1458965856
+﻿#Game No : 1458965856
 ***** Hand History for Game 1458965856 *****
 $4 USD PL Omaha - Friday, December 03, 23:16:02 CET 2013
 Table New Orleans (Real Money)
@@ -169,6 +167,3 @@ Player8 doesn't show [ Ah, Ad, 8d, 8h ]a flush, Ace high.
 Player1 wins $0.10 USD from the side pot 2 with a flush, Ten high.
 Player7 wins $4.67 USD from the side pot 1 with a full house, Nines full of Fours.
 Player7 wins $4.55 USD from the main pot with a full house, Nines full of Fours.
-Game #1458965856 starts.
-
-#Game No : 1458965856 
