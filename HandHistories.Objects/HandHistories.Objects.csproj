@@ -12,6 +12,21 @@
     <AssemblyName>HandHistories.Objects</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +70,7 @@
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\Card.Enums.cs" />
     <Compile Include="Cards\CardGroup.cs" />
+    <Compile Include="GameDescription\Buyin.cs" />
     <Compile Include="GameDescription\Currency.cs" />
     <Compile Include="GameDescription\GameDescriptor.cs" />
     <Compile Include="GameDescription\GameTypeUtils.cs" />
@@ -63,7 +79,9 @@
     <Compile Include="GameDescription\LimitEnum.cs" />
     <Compile Include="GameDescription\LimitGameTypePair.cs" />
     <Compile Include="GameDescription\PokerFormatUtils.cs" />
+    <Compile Include="GameDescription\SitAndGoTriple.cs" />
     <Compile Include="GameDescription\TableTypeDescription.cs" />
+    <Compile Include="GameDescription\TableTypeUtils.cs" />
     <Compile Include="Hand\HandParseError.cs" />
     <Compile Include="Hand\HandHistory.cs" />
     <Compile Include="Hand\HandHistorySummary.cs" />
@@ -86,7 +104,28 @@
   <ItemGroup>
     <None Include="HandHistories.Objects.Key.snk" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

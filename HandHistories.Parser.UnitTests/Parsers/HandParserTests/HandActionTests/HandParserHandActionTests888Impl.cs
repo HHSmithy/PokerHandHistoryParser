@@ -16,6 +16,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+<<<<<<< HEAD
          [Test]
          public void ParseHandActions_PostingDead()
          {
@@ -50,6 +51,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              TestParseActions("PostingDead", expected);
          }
 
+=======
+         // due to our uncalledbetfix, we have an action that is not visible in the handhistories
+         // uncalled bets are always on the showdown by our parser
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get
@@ -63,7 +68,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("silas_tomkyn", HandActionType.CHECK, 0m, Street.Flop),
                                new HandAction("FCSM_1935", HandActionType.BET, 0.1m, Street.Flop),
                                new HandAction("silas_tomkyn", HandActionType.FOLD, 0m, Street.Flop),
-                               new WinningsAction("FCSM_1935", HandActionType.WINS, 0.19m, 0),                               
+                               new WinningsAction("FCSM_1935", HandActionType.WINS, 0.19m, 0),             
+                               new HandAction("FCSM_1935", HandActionType.UNCALLED_BET, 0.1m, Street.Showdown),                  
                            };
              }
          }
@@ -80,7 +86,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("dbhbrb", HandActionType.RAISE, 2m, Street.Preflop),
                                new HandAction("Lesnik444", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("Griini", HandActionType.FOLD, 0m, Street.Preflop),
-                               new WinningsAction("dbhbrb", HandActionType.WINS, 2.50m, 0),                               
+                               new WinningsAction("dbhbrb", HandActionType.WINS, 2.50m, 0),          
+                               new HandAction("dbhbrb", HandActionType.UNCALLED_BET, 1m, Street.Showdown), // 2 - 1  ( BB ) 
                            };
              }
          }
@@ -108,7 +115,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Jack3bet", HandActionType.CHECK, 0m, Street.Turn),
                                new HandAction("cashgamer15", HandActionType.BET, 36.10m, Street.River),
                                new HandAction("Jack3bet", HandActionType.FOLD, 0m, Street.River),
-                               new WinningsAction("cashgamer15", HandActionType.WINS, 34.30m, 0),                               
+                               new WinningsAction("cashgamer15", HandActionType.WINS, 34.30m, 0),     
+                               new HandAction("cashgamer15", HandActionType.UNCALLED_BET, 36.10m, Street.Showdown),                          
                            };
              }
          }
@@ -138,7 +146,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("kiss014", HandActionType.CALL, 89.83m, Street.River,true),
                                new HandAction("qprcuz", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("kiss014", HandActionType.SHOW, 0, Street.Showdown),
-                               new WinningsAction("qprcuz", HandActionType.WINS, 197.50m, 0),                               
+                               new WinningsAction("qprcuz", HandActionType.WINS, 197.50m, 0),        
+                               new HandAction("qprcuz", HandActionType.UNCALLED_BET, 5.28m, Street.Showdown),  // 101.66 - 6.55 - 79.83               
                            };
              }
          }

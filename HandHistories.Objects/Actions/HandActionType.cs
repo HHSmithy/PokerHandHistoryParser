@@ -39,6 +39,7 @@
         ALL_IN,
         GAME_CANCELLED,
         RABBIT,
+        JACKPOTCONTRIBUTION,
         UNKNOWN
     }
 }

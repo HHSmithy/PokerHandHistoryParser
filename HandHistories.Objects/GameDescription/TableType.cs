@@ -20,7 +20,7 @@ namespace HandHistories.Objects.GameDescription
 
             return new TableType(
                 tableTypeDescriptionStrings
-                    .Select(t => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), t, true))
+                    .Select(TableTypeUtils.ParseTableType)
                     .Distinct()
                     .ToArray()
                 );           
@@ -33,8 +33,8 @@ namespace HandHistories.Objects.GameDescription
         #endregion
 
         [DataMember]
-        private readonly TableTypeDescription _tableTypeDescriptions;
-
+        private TableTypeDescription _tableTypeDescriptions;
+        
         public TableType(params TableTypeDescription[] tableTypeDescriptions)
         {
             _tableTypeDescriptions = TableTypeDescription.Unknown;
@@ -72,7 +72,9 @@ namespace HandHistories.Objects.GameDescription
 
         public override string ToString()
         {
-            return _tableTypeDescriptions.ToString().Replace(", ", "-");
+            var output = GetTableTypeDescriptions().Aggregate("", (current, tableType) => current + "-" + TableTypeUtils.GetDisplayString(tableType));
+
+            return output.Substring(1);
         }
     }
 }

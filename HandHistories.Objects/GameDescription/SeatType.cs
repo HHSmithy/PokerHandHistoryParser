@@ -97,19 +97,19 @@ namespace HandHistories.Objects.GameDescription
                 case SeatTypeEnum.HeadsUp:
                     return "HeadsUp";
                 case SeatTypeEnum._3Handed:
-                    return "3 handed";
+                    return "3 Handed";
                 case SeatTypeEnum._4Max:
                     return "4 Max";
                 case SeatTypeEnum._5Handed:
-                    return "5 handed";
+                    return "5 Handed";
                 case SeatTypeEnum._6Max:
                     return "6 Max";
                 case SeatTypeEnum._7Handed:
-                    return "7 handed";
+                    return "7 Handed";
                 case SeatTypeEnum._8Handed:
-                    return "8 handed";
+                    return "8 Handed";
                 case SeatTypeEnum._FullRing_9Handed:
-                    return "Full Ring (9 handed)";
+                    return "Full Ring (9 Handed)";
                 case SeatTypeEnum._FullRing_10Handed:
                     return "Full Ring (10 Handed)";
                 default:

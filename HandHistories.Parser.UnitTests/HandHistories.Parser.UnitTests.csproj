@@ -445,6 +445,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\OnGameIt\CashGame\Limits\EuroTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\OnGame\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -830,9 +833,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\OnGame\CashGame\HandActionTests\OmahaHiLo.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SampleHandHistories\OnGame\CashGame\Limits\EuroTable.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit1.txt">

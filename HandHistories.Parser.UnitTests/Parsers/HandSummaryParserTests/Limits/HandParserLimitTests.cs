@@ -7,6 +7,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 {
     [TestFixture("PartyPoker", "$0.05-$0.10", "$0.50-$1", "$5-$10")]
     [TestFixture("OnGame", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$0.25-$0.25", "$5-$5")]
+    [TestFixture("OnGameIt")]
     [TestFixture("PokerStars", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$100-$200", "$200-$400", "$1-$2")]
     [TestFixture("IPoker", "e0.05-e0.10", "£0.50-£1", "$5-$10")]
     [TestFixture("Pacific", "$0.05-$0.10", "$0.50-$1", "$100-$200", "$5-$10", "$25-$50")]
@@ -75,6 +76,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Winamax:
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
+                case SiteName.OnGameIt:
                     Assert.Ignore(Site.ToString() + " doesn't have ante tables.");
                     break;               
                 
@@ -99,13 +101,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.Winamax:
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
+                case SiteName.OnGame:
                     Assert.Ignore("Site doesn't have euro tables ( example ).");
                     break;
                 case SiteName.Entraction:
-                    TestTLimit("€2-€4", "EuroTable");
+                    TestTLimit("e2-e4", "EuroTable");
                     break;
                 default:
-                    TestTLimit("€0.50-€1", "EuroTable");
+                    TestTLimit("e0.50-e1", "EuroTable");
                     break;
             }
         }
@@ -126,6 +129,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.PokerStars:
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
+                case SiteName.OnGameIt:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
                 default:

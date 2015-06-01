@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using System.Linq;
 using HandHistories.Parser.Utils.FastParsing;
-using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
     public sealed class PartyPokerFastParserImpl : HandHistoryParserFastImpl
     {
-        const int gameIDStartIndex = 17;
-        static CultureInfo provider = CultureInfo.InvariantCulture;
+        private readonly SiteName _siteName;
 
-        private SiteName _siteName;
+        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
+            {
+                NegativeSign = "-",
+                CurrencyDecimalSeparator = ".",
+                CurrencyGroupSeparator = ",",
+                CurrencySymbol = "$"
+            };
+        private readonly Currency _currency;
 
         public override SiteName SiteName
         {
@@ -39,12 +39,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         public PartyPokerFastParserImpl(SiteName siteName = SiteName.PartyPoker)
         {
             _siteName = siteName;
-        }
 
-        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
-        {
-            const string splitStr = "***** Hand ";
-
+<<<<<<< HEAD
             return rawHandHistories.LazyStringSplit(splitStr)
                 .Where(hand => hand.StartsWith("History", StringComparison.Ordinal))
                 .Select(p => splitStr + p);
@@ -55,6 +51,23 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return base.SplitHandsLines(handText)
                 .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
                 .ToArray();
+=======
+            switch (siteName)
+            {
+                case SiteName.PartyPokerEs:
+                case SiteName.PartyPokerFr:
+                case SiteName.PartyPokerIt:
+                    NumberFormatInfo.CurrencySymbol = "€";
+                    _currency = Currency.EURO;
+                    break;
+                // PartyPoker + PartyPokerNJ
+                default:
+                    NumberFormatInfo.CurrencySymbol = "$";
+                    _currency = Currency.USD;
+                    break;
+
+            }
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -72,7 +85,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // "$600 USD PL Omaha - Thursday, September 25, 01:10:46 EDT 2014"
             string line = handLines[1];
 
-            int splitIndex = line.IndexOf(" - ") + 3;
+            int splitIndex = line.IndexOf(" - ", StringComparison.Ordinal) + 3;
 
             int monthStartIndex = line.IndexOf(',', splitIndex) + 2;
             int monthEndIndex = line.IndexOf(' ', monthStartIndex);
@@ -93,7 +106,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             int year = int.Parse(Year);
 
             
-            TimeSpan time = TimeSpan.Parse(timeStr, provider);
+            TimeSpan time = TimeSpan.Parse(timeStr, CultureInfo.InvariantCulture);
 
             DateTime result = new DateTime(year, GetMonthNumber(month), day, time.Hours, time.Minutes, time.Seconds);
             return ConvertHandDateToUtc(result);
@@ -139,6 +152,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
         }
 
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
+
         protected override long ParseHandId(string[] handLines)
         {
             // Expect the first line to look like this: 
@@ -150,6 +168,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -281,9 +304,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return ParseBuyInLimit(limitSubstring, currency);
         }
 
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
+        }
+
         static Limit Parse20BBLimit(string limitSubstring, Currency currency)
         {
-            decimal bigblind = decimal.Parse(limitSubstring, provider) * 0.4m;
+            decimal bigblind = decimal.Parse(limitSubstring, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo) *0.4m;
 
             return Limit.FromSmallBlindBigBlind(bigblind / 2, bigblind, currency);
         }
@@ -312,7 +340,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         static Limit ParseBuyInLimit(string limitSubstring, Currency currency)
         {
-            decimal buyIn = decimal.Parse(limitSubstring, provider);
+            decimal buyIn = decimal.Parse(limitSubstring, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
             decimal bigBlind = buyIn / 100.0m;
 
             if (bigBlind == 0.25m)
@@ -331,8 +359,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             string SB = limitSubstring.Remove(splitIndex);
             string BB = limitSubstring.Substring(splitIndex + 2);
 
-            decimal small = decimal.Parse(SB, provider);
-            decimal big = decimal.Parse(BB, provider);
+            decimal small = decimal.Parse(SB, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            decimal big = decimal.Parse(BB,NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 
@@ -344,11 +372,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
-            //Expected last line:
+            //Expected one of the last lines to look like:
             //"Player wins $102 USD from the main pot with a flush, Ace high."
-
+            
             isCancelled = false;
 
+<<<<<<< HEAD
             for (int i = handLines.Length - 1; i > 0; i--)
             {
                 string line = handLines[i];
@@ -358,6 +387,17 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 }
             }
 
+=======
+            for (int i = handLines.Length - 1; i >= handLines.Length - 10; i--)
+            {
+                // if the line starts with ** we can definitely leave the loop
+                if (handLines[i][0] == '*' && handLines[i][1] == '*')
+                    break;
+
+                if (handLines[i].Contains(" wins "))
+                    return true;
+            }
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             return false;
         }
 
@@ -377,6 +417,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 string handLine = handLines[lineNumber];
 
+                if (IsConnectionLost(handLine))
+                {
+                    throw new HandActionException(handLine, "Lost connection during HH saving, unable to parse file");
+                }
+
                 try
                 {
                     bool isFinished = ParseLine(handLine, gameType, ref currentStreet, ref handActions);
@@ -388,11 +433,43 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 }
                 catch (Exception ex)
                 {
+                    // in some cases chatlines don't have playername involved, so we ignore every parsing error where no playername is involved 
+                    // AND the line does not start with a star
+                    // !!! THIS SHOULD BE DISABLED FOR DEBUGGING PURPOSES !!!
+                    var players = ParsePlayers(handLines);
+                    if (!players.Select(p => p.PlayerName).Any(handLine.Contains) && handLine[0] != '*')
+                        continue;
+
+                    // skip emoticon lines like
+                    // zehnbube - no skill
+                    // zehnbube - donkey fish
+                    if (players.Select(p => p.PlayerName + " -").Any(handLine.Contains))
+                        continue;
+
+                    // if it's the last line, there can be some weird chat lines that we can ignore
+                    if (lineNumber == handLines.Length - 1)
+                        continue;
+
                     throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
                 }
             }
 
             return handActions;
+        }
+
+        private bool IsConnectionLost(string line)
+        {
+            // if we find the following line in the HH, it is corrupt in most cases
+            // Connection Lost due to some reason
+            // ^         ^^                    ^^
+            if (line[0] == 'C' 
+                && line[line.Length - 1] == 'n' && line[line.Length -2] == 'o'
+                && line[10] == ' ' && line[11] == 'L')
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -410,10 +487,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             char lastChar = line[line.Length - 1];
             HandAction action = null;
 
+<<<<<<< HEAD
             if (isChatLine(line))
             {
                 return false;
             }
+=======
+            // TODO: THIS MIGHT NEED FIXING
+            if (IsChatLine(line)) return false;
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
 
             switch (lastChar)
             {
@@ -450,6 +532,23 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case 'D':
                     action = ParseWinsAction(line);
                     break;
+<<<<<<< HEAD
+=======
+
+                //Player4 is sitting out
+                case 't':
+                    return false;
+
+                //hvill32za could not respond in time.(disconnected)
+                //hvill32za could not respond in time
+                case ')':
+                case 'e':
+                    return false;
+
+                default:
+                    return false;
+                    // throw new ArgumentException("Unknown lastchar: '" + lastChar + "'");
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             }
 
             if (action != null)
@@ -457,6 +556,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 		        handActions.Add(action);
             }
             return false;
+        }
+        
+        private bool IsChatLine(string line)
+        {
+            // TODO: check if there are other possibilities
+            return line.IndexOf(':') > -1;
         }
 
         static bool isChatLine(string line)
@@ -535,8 +640,45 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         static HandAction ParseDotAction(string line, Street street)
         {
+<<<<<<< HEAD
             string playerName;
             char lastChar = line[line.Length - 2];
+=======
+            const int smallBlindWidth = 19;//" posts small blind ".Length
+            const int bigBlindWidth = 17;//" posts big blind ".Length
+            const int deadBigBlindWidth = 24;//" posts big blind + dead ".Length
+
+            string playerName;
+            char lastChar = line[line.Length - 2];
+            if (lastChar == ']')
+            {
+                int amountStartIndex = line.LastIndexOf('[');
+                decimal amount = ParseDecimal(line, amountStartIndex + 2);
+
+                char blindIdentifier = line[amountStartIndex - 8];
+
+                switch (blindIdentifier)
+                {
+                    //"Player posts big blind [$10 USD]."
+                    case 'g':
+                        playerName = line.Remove(amountStartIndex - bigBlindWidth);
+                        return new HandAction(playerName, HandActionType.BIG_BLIND, amount, street);
+
+                    //"Player posts small blind [$5 USD]."
+                    case 'l':
+                        playerName = line.Remove(amountStartIndex - smallBlindWidth);
+                        return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, street);
+
+                    //"Player posts big blind + dead [$0.15].
+                    case ' ':
+                        playerName = line.Remove(amountStartIndex - deadBigBlindWidth);
+                        return new HandAction(playerName, HandActionType.POSTS, amount, street);
+                    default:
+                        throw new ArgumentException("Unkown posting Action: " + line);
+                }
+            }
+
+>>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             int playerNameIndex = 0;
 
             if (line.EndsWith("this hand."))
@@ -548,6 +690,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 return null;
             }
             else if (line.EndsWith(" has joined the table."))
+            {
+                return null;
+            }
+            else if (line.EndsWith(" seconds to respond."))
+            {
+                return null;
+            }
+            // Targuist1974 has been reconnected and has 20 seconds to act.
+            else if (line.EndsWith(" seconds to act."))
+            {
+                return null;
+            }
+            // tomatenqn is disconnected. We will wait for tomatenqn to reconnect for a maximum of 15 seconds.
+            else if (line.Contains(" is disconnected."))
             {
                 return null;
             }
@@ -615,9 +771,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 playerName = line.Remove(playerNameIndex);
                 return new HandAction(playerName, HandActionType.MUCKS, 0m, street);
             }
-            else if (line.Contains(" doesn't show "))
+            else if (line.Contains(" doesn't show"))
             {
-                playerNameIndex = line.IndexOf(" doesn't show ");
+                playerNameIndex = line.IndexOf(" doesn't show");
                 playerName = line.Remove(playerNameIndex);
                 return new HandAction(playerName, HandActionType.SHOW, 0m, street);
             }
@@ -638,8 +794,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         static decimal ParseDecimal(string line, int startIndex)
         {
             int endIndex = line.IndexOf(' ', startIndex);
+            if (endIndex == -1)
+                endIndex = line.IndexOf(']', startIndex);
+
             string text = line.Substring(startIndex, endIndex - startIndex);
-            return decimal.Parse(text, provider);
+            return decimal.Parse(text, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
         }
 
         static HandAction ParseActionWithoutSize(string line, Street street)
@@ -689,41 +848,61 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             // We start on line index 5 as first 5 lines are table and limit info.
             const int playerListStart = 5;
-            const int playerListEnd = playerListStart + 10; //there may at most be 10 players
-            for (int lineNumber = playerListStart; lineNumber < playerListEnd; lineNumber++)
+            for (int lineNumber = playerListStart; lineNumber < handLines.Length; lineNumber++)
             {
                 string line = handLines[lineNumber];
 
-                char startChar = line[0];
-                char endChar = line[line.Length - 1];
+                char lastChar = line[line.Length - 1];
 
-                //Seat 4: thaiJhonny ( $1,404 USD )
-                if (endChar != ')')
+                // leave the loop if we spot a summary/hand start of line
+                if (line.StartsWith("** "))
                 {
-                    lastLineRead = lineNumber;
                     break;
                 }
 
-                // seat info expected in format: 
-                //Seat 4: thaiJhonny ( $1,404 USD )
+                // players can also seat at the table after the seat info, post a big blind and be immediately involved in the hand
                 const int seatNumberStartIndex = 5;
-
-                int seatNumber = FastInt.Parse(line, seatNumberStartIndex);
-
+                
                 int playerNameStartIndex = line.IndexOf(':', seatNumberStartIndex) + 2;
 
-                // we need to find the ( before the number. players can have ( in their name so we need to go backwards and skip the last one
-                int openParenIndex = line.LastIndexOf('(');
+                // seat info expected in format: 
+                // Seat 4: thaiJhonny ( $1,404 USD )
+                if (playerNameStartIndex > 1 && lastChar == ')' && line.StartsWith("Seat "))
+                {
+                    int seatNumber = FastInt.Parse(line, seatNumberStartIndex);
+                 
+                    // we need to find the ( before the number. players can have ( in their name so we need to go backwards and skip the last one
+                    int openParenIndex = line.LastIndexOf('(');
 
-                string playerName = line.Substring(playerNameStartIndex, openParenIndex - playerNameStartIndex - 1);
-                decimal stack = ParseDecimal(line, openParenIndex + 3);
+                    string playerName = line.Substring(playerNameStartIndex, openParenIndex - playerNameStartIndex - 1);
+                    decimal stack = ParseDecimal(line, openParenIndex + 3);
 
-                playerList.Add(new Player(playerName, stack, seatNumber));
-            }
+                    playerList.Add(new Player(playerName, stack, seatNumber));
+                }
 
-            if (lastLineRead == -1)
-            {
-                throw new PlayersException(string.Empty, "Didn't break out of the seat reading block.");
+                // post blind
+                // kpark1996 posts big blind [$1 USD].
+                else if (lastChar == '.')
+                {
+                    // they don't have a known seatNumber
+                    int seatNumber = -1;
+                    decimal stack = 999999.00m; // we make the stacksize very high so bettings can never result in a "negative stack"
+
+                    int nameEndIndex = line.IndexOf(" posts ", StringComparison.Ordinal);
+                    if (nameEndIndex == -1)
+                    {
+                        continue;
+                    }
+
+                    string playerName = line.Substring(0, nameEndIndex);
+
+                    // only add if the player is unknown
+                    if (!playerList.Any(p => p.PlayerName.Equals(playerName)))
+                    {
+                        playerList.Add(new Player(playerName, stack, seatNumber));
+                    }
+                }
+                
             }
 
             // Looking for the showdown info which looks like this
@@ -825,7 +1004,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // "** Dealing River ** [ 4h ]"
 
             string cards = "";
-            BoardCards boardCards = BoardCards.ForPreflop();
+
             for (int lineNumber = 1; lineNumber < handLines.Length; lineNumber++)
             {
                 string line = handLines[lineNumber];
