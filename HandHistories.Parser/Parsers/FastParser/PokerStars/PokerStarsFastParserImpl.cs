@@ -75,13 +75,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             foreach (var item in allLines)
             {
-<<<<<<< HEAD
                 string line = item.TrimEnd('\r', ' ');
 
                 if (string.IsNullOrWhiteSpace(line))
-=======
-                if (string.IsNullOrWhiteSpace(item))
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
                 {
                     if (handLines.Count > 0)
                     {
@@ -567,33 +563,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             Street currentStreet;
 
-<<<<<<< HEAD
             actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out currentStreet);
-=======
-            for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
-            {
-                string handLine = handLines[lineNumber];
-
-                try
-                {
-                    bool isFinished = ParseLine(handLine, ref currentStreet, ref handActions);
-
-                    if (isFinished)
-                    {
-                        actionIndex = lineNumber + 1;
-                        break;
-                    }
-                }
-                catch (RunItTwiceHandException)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
-                }
-            }
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
 
             if (currentStreet == Street.Showdown)
             {
@@ -1519,7 +1489,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 try
                 {
-                    bool isFinished = ParseLine(handLine, GameType.Unknown, ref currentStreet, ref handActions);
+                    bool isFinished = ParseLine(handLine, ref currentStreet, ref handActions);
 
                     if (isFinished)
                     {

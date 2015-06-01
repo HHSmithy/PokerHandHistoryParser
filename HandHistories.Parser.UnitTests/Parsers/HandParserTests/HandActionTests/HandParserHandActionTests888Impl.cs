@@ -16,7 +16,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
-<<<<<<< HEAD
          [Test]
          public void ParseHandActions_PostingDead()
          {
@@ -51,10 +50,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              TestParseActions("PostingDead", expected);
          }
 
-=======
          // due to our uncalledbetfix, we have an action that is not visible in the handhistories
          // uncalled bets are always on the showdown by our parser
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get

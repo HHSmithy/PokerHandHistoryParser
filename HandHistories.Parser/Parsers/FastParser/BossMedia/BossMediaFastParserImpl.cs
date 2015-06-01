@@ -26,7 +26,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             get { return Objects.GameDescription.SiteName.BossMedia; }
         }
 
-        public override bool RequresAdjustedRaiseSizes
+        public override bool RequiresAdjustedRaiseSizes
         {
             get { return true; }
         }

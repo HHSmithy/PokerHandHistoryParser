@@ -13,6 +13,8 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using System.Globalization;
 using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Parser.Utils.AllInAction;
+using System.Xml;
+using System.IO;
 
 namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 {
@@ -48,23 +50,18 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         {
             get { return false; }
         }
-<<<<<<< HEAD
 
         public override bool RequiresTotalPotCalculation
         {
             get { return true; }
         }
 
-=======
-        
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         protected override string[] SplitHandsLines(string handText)
         {
             XDocument handDocument = XDocument.Parse(handText);
             return base.SplitHandsLines(handDocument.ToString());
         }
 
-<<<<<<< HEAD
         XDocument GetXDocumentFromLines(string[] handLines)
         {
 
@@ -91,72 +88,23 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return doc;
         }
 
-        bool GetSittingOutFromPlayerLine(string playerLine)
-=======
         private bool GetSittingOutFromPlayerLine(string playerLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             return playerLine.ToLower().Contains("sittingout");
         }
 
-<<<<<<< HEAD
-        int GetSeatNumberFromLine(string playerLine)
-=======
         private int GetSeatNumberFromPlayerLine(string playerLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             string seatNumberString = GetAttribute(playerLine, " num=\"");
 
             return FastInt.Parse(seatNumberString);
         }
 
-<<<<<<< HEAD
-        bool IsPlayerLineDealer(string playerLine)
-=======
         private bool IsPlayerLineDealer(string playerLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             return playerLine.Contains("dealer");
         }
 
-<<<<<<< HEAD
-=======
-        private decimal GetStackFromPlayerLine(string playerLine)
-        {
-            int startPos = playerLine.IndexOf(@" balance=", StringComparison.Ordinal) + 10;
-            int endPost = playerLine.IndexOf('"', startPos) - 1;
-
-            string stackString = playerLine.Substring(startPos, endPost - startPos + 1);
-
-            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
-        }
-
-        private decimal GetWinningsFromPlayerLine(string playerLine)
-        {
-            if (playerLine.ToLower().Contains("sittingout")) return 0.0m;
-
-            int startPos = playerLine.IndexOf(@" endbalance=", StringComparison.Ordinal) + 13;
-            int endPos = playerLine.IndexOf('"', startPos) - 1;
-
-            string stackString = playerLine.Substring(startPos, endPos - startPos + 1);
-
-            decimal startStack = GetStackFromPlayerLine(playerLine);
-
-            return (decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture) - startStack);
-        }
-
-        private string GetNameFromPlayerLine(string playerLine)
-        {
-            int startPos = playerLine.IndexOf(@" alias=", StringComparison.Ordinal) + 8;
-            int endPos = @playerLine.IndexOf("\"", startPos, StringComparison.Ordinal) - 1;
-
-            string name = playerLine.Substring(startPos, endPos - startPos + 1);
-
-            return name;
-        }
-
-
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         protected override int ParseDealerPosition(string[] handLines)
         {
             string[] playerLines = GetPlayerLinesFromHandLines(handLines);
@@ -166,7 +114,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 string playerLine = playerLines[i];
                 if (IsPlayerLineDealer(playerLine))
                 {
-                    return GetSeatNumberFromLine(playerLine);
+                    return GetSeatNumberFromPlayerLine(playerLine);
                 }
             }
             throw new Exception("Could not locate dealer");
@@ -233,11 +181,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return SeatType.FromMaxPlayers(10);
         }
 
-<<<<<<< HEAD
-        string[] GetPlayerLinesFromHandLines(string[] handLines)
-=======
         private string[] GetPlayerLinesFromHandLines(string[] handLines)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             var playerLines = new List<string>();
 
@@ -255,11 +199,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return playerLines.ToArray();
         }
 
-<<<<<<< HEAD
-        static HoleCards GetPlayerCardsFromHandLines(string[] handLines, int playerSeat, string playerName)
-=======
-        private HoleCards GetPlayerCardsFromHandLines(string[] handLines, int playerSeat, string playerName)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
+        private static HoleCards GetPlayerCardsFromHandLines(string[] handLines, int playerSeat, string playerName)
         {
 
             for(int i = 0; i< handLines.Count(); i++)
@@ -283,11 +223,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return null;
         }
 
-<<<<<<< HEAD
-        static string[] GetCardLinesFromHandLines(string[] handLines)
-=======
-        private string[] GetCardLinesFromHandLines(string[] handLines)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
+        private static string[] GetCardLinesFromHandLines(string[] handLines)
         {
             var cardLines = new List<string>();
             for (int i = 0; i < handLines.Count();i++)
@@ -407,12 +343,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
             var actions = new List<HandAction>();
-<<<<<<< HEAD
 
             PlayerList playerList = ParsePlayers(handLines);
-            
-=======
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
+
             var currentStreet = Street.Preflop;
 
             // we need the player infos for action assignments
@@ -437,7 +370,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     continue;
                 }
 
-<<<<<<< HEAD
                 switch (typeString)
                 {
                     case "showcards":
@@ -455,9 +387,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 }
 
                 HandAction action = ParseActionFromActionLine(line, currentStreet, playerList, actions); 
-=======
-                HandAction action = GetHandActionFromActionLine(handLine, currentStreet, players); 
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
                 
                 if(action != null && !action.HandActionType.Equals(HandActionType.UNKNOWN) && !action.HandActionType.Equals(HandActionType.SHOW))
                 {
@@ -465,7 +394,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 }
             }
 
-<<<<<<< HEAD
             return actions;
 
         }
@@ -484,7 +412,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 }
 
                 var amount = GetAmountFromActionLine(line);
-                int seat = GetSeatNumberFromLine(line);
+                int seat = GetSeatNumberFromPlayerLine(line);
                 string playerName = players.First(p => p.SeatNumber == seat).PlayerName;
 
                 actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
@@ -524,90 +452,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         }
 
         private HandAction ParseActionFromActionLine(string handLine, Street street, PlayerList playerList, List<HandAction> actions)
-=======
-            //Generate the show card + winnings actions
-            actions.AddRange(GetWinningAndShowCardActions(handLines, actions, players));
-           
-            return FixPostedToPlayActions(handLines, actions);
-
-        }
-
-        // rarely it happens that postedToPlay actions have a wrong amount included ( e.g. only the BB although the player posted SB+BB )
-        private List<HandAction> FixPostedToPlayActions(string[] handLines, List<HandAction> actions)
-        {
-            var playersWhoPosted = actions.Where(a => a.HandActionType.Equals(HandActionType.POSTS)).Select(h => h.PlayerName).ToList();
-
-            foreach (var player in playersWhoPosted)
-            {
-                // compare start / end balance with player results and modify the playedToPost accordingly
-                var line = handLines.First(a => a.Contains(player));
-                var parsedPlayerResult = GetWinningsFromPlayerLine(line);
-                var actionResult = actions.Where(a => a.PlayerName.Equals(player)).Sum(a => a.Amount);
-                var difference = actionResult - parsedPlayerResult;
-
-                var sb = Math.Abs(actions.First(a => a.HandActionType.Equals(HandActionType.SMALL_BLIND)).Amount);
-
-                // a player might also contribute to the jackpot, which is not included in our handactions, but in the parsedplayerresult
-                if (difference == sb || difference == sb + 0.02m)
-                {
-                    var oldAction = actions.First(a => a.PlayerName.Equals(player) && a.HandActionType.Equals(HandActionType.POSTS));
-                    var newPostedToPlayAction = new HandAction(player, HandActionType.POSTS, Math.Abs(oldAction.Amount) + sb,Street.Preflop, oldAction.ActionNumber);
-                    actions.Remove(oldAction);
-                    actions.Add(newPostedToPlayAction);
-                }
-            }
-
-            return actions;
-        }
-
-        private List<HandAction> GetWinningAndShowCardActions(string[] handLines, List<HandAction> actions, PlayerList playerList)
-        {
-
-            int actionNumber = actions.Max(a => a.ActionNumber);
-            
-            var winningAndShowCardActions = new List<HandAction>();
-            
-            foreach (Player player in playerList)
-            {
-                if (player.hasHoleCards)
-                {
-                    HandAction showCardsAction = new HandAction(player.PlayerName, HandActionType.SHOW, 0, Street.Showdown, actionNumber++);    
-                    winningAndShowCardActions.Add(showCardsAction);
-                }                
-            }
-
-            int winningsLine = GetWinningsLineNumberFromHandLines(handLines);
-
-            for (int k = winningsLine; k < handLines.Length - 1; k++)
-            {
-                // leave the loop on </Action>
-                if (handLines[k][1] == '/')
-                {
-                    break;
-                }
-
-                var actionPlayerSeat = GetPlayerSeatFromActionLine(handLines[k]);
-                var amountString = handLines[k].Substring(22, handLines[k].IndexOf('"', 22) - 22);
-
-                winningAndShowCardActions.Add(new WinningsAction(GetPlayerNameFromSeatNumber(actionPlayerSeat, playerList),HandActionType.WINS, decimal.Parse(amountString), 0, actionNumber++));
-            }
-           
-
-            return winningAndShowCardActions;
-        }
-
-        private HandAction GetHandActionFromActionLine(string handLine, Street street, PlayerList playerList)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             bool AllIn = false;
             var actionType = GetActionTypeFromActionLine(handLine);
-<<<<<<< HEAD
-=======
-            if (actionType.Equals(HandActionType.UNKNOWN))
-                return null;
-
-            var actionPlayerSeat = GetPlayerSeatFromActionLine(handLine);
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
 
             decimal value = GetValueFromActionLine(handLine);
             
@@ -616,33 +463,10 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             if (actionNumber == -1 || actionType == HandActionType.UNKNOWN)
                 return null;
 
-<<<<<<< HEAD
             int playerSeat = GetPlayerSeatFromActionLine(handLine);
             string playerName = playerList.First(p => p.SeatNumber == playerSeat).PlayerName;
 
             if (actionType == HandActionType.ALL_IN)
-=======
-            return new HandAction(GetPlayerNameFromSeatNumber(actionPlayerSeat, playerList), actionType, value, street, actionNumber);
-        }
-
-        private string GetPlayerNameFromSeatNumber(int seat, PlayerList playerList)
-        {
-            var player = playerList.FirstOrDefault(a => a.SeatNumber == seat);
-            
-            if (player == null || seat == -1)
-                return "UNKNOWN";
-
-            return player.PlayerName;
-        }
-
-        private Street GetStreetFromHandLine(string handLine)
-        {
-            if(handLine.Contains("type=\"DealFlop\""))
-            {
-                return Street.Flop;
-            }
-            if(handLine.Contains("type=\"DealTurn\""))
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             {
                 AllIn = true;
                 actionType = AllInActionHelper.GetAllInActionType(playerName, value, street, actions);
@@ -651,11 +475,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return new HandAction(playerName, actionType, value, street, AllIn, actionNumber);
         }
 
-<<<<<<< HEAD
         static int GetActionNumberFromActionLine(string actionLine)
-=======
-        private int GetActionNumberFromActionLine(string actionLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             if (!actionLine.ToLower().Contains(" seq=")) return -1;
 
@@ -664,7 +484,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return Int32.Parse(actionNumString);
         }
 
-<<<<<<< HEAD
         static int GetPlayerSeatFromActionLine(string actionLine)
         {
             string seat = GetAttribute(actionLine, " seat=\"");
@@ -673,26 +492,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         }
 
         static decimal GetValueFromActionLine(string actionLine)
-=======
-        private int GetPlayerSeatFromActionLine(string actionLine)
-        {
-            if(!actionLine.ToLower().Contains("seat"))
-                return -1;
-
-            int startPos = actionLine.IndexOf(@" seat=",StringComparison.Ordinal) + 7;
-
-            if (startPos == 6) // which means not found ( -1 + 7 )
-                startPos = actionLine.IndexOf(@" num=", StringComparison.Ordinal) + 6;
-
-            int endPos = actionLine.IndexOf('"', startPos) - 1;
-            
-            string seat = actionLine.Substring(startPos, endPos - startPos + 1);
-
-            return Int32.Parse(seat);
-        }
-
-        private decimal GetValueFromActionLine(string actionLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             if (!actionLine.Contains("value"))
                 return 0.0m;
@@ -707,11 +506,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return GetAttribute(line, "type=\"").ToLower();
         }
 
-<<<<<<< HEAD
         static HandActionType GetActionTypeFromActionLine(string actionLine)
-=======
-        private HandActionType GetActionTypeFromActionLine(string actionLine)
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
         {
             if(!actionLine.ToLower().Contains("<action ")) return HandActionType.UNKNOWN;
             
@@ -833,19 +628,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         protected override string ParseHeroName(string[] handlines)
         {
             string line = handlines[0];
-<<<<<<< HEAD
             const string playerSeat = " playerseat=\"";
             string SeatString = GetAttribute(line, playerSeat);
             int HeroSeatNumber = int.Parse(SeatString);
-=======
-            const string playerSeat = "playerseat=\"";
-            int playerSeatStartIndex = line.IndexOf(playerSeat, StringComparison.Ordinal) + playerSeat.Length;
-            int playerSeatEndIndex = line.IndexOf("\"", playerSeatStartIndex, StringComparison.Ordinal);
-            string seatString = line.Substring(playerSeatStartIndex, playerSeatEndIndex - playerSeatStartIndex);
-            int heroSeatNumber = int.Parse(seatString);
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             
-            var player = ParsePlayers(handlines).FirstOrDefault(p => p.SeatNumber == heroSeatNumber);
+            var player = ParsePlayers(handlines).FirstOrDefault(p => p.SeatNumber == HeroSeatNumber);
 
             if (player != null)
             {
@@ -890,7 +677,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     break;
                 }
                 string amountString = handLines[k].Substring(22, handLines[k].IndexOf('"', 22) - 22);
-                handHistory.TotalPot += decimal.Parse(amountString);
+                handHistory.TotalPot += decimal.Parse(amountString, provider);
             }
         }
     }

@@ -40,18 +40,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             _siteName = siteName;
 
-<<<<<<< HEAD
-            return rawHandHistories.LazyStringSplit(splitStr)
-                .Where(hand => hand.StartsWith("History", StringComparison.Ordinal))
-                .Select(p => splitStr + p);
-        }
-
-        protected override string[] SplitHandsLines(string handText)
-        {
-            return base.SplitHandsLines(handText)
-                .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
-                .ToArray();
-=======
             switch (siteName)
             {
                 case SiteName.PartyPokerEs:
@@ -67,7 +55,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     break;
 
             }
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
+        }
+
+        protected override string[] SplitHandsLines(string handText)
+        {
+            return base.SplitHandsLines(handText)
+                .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
+                .ToArray();
         }
 
         protected override int ParseDealerPosition(string[] handLines)
@@ -377,17 +371,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             
             isCancelled = false;
 
-<<<<<<< HEAD
-            for (int i = handLines.Length - 1; i > 0; i--)
-            {
-                string line = handLines[i];
-                if (line.Contains(" wins "))
-                {
-                    return true;
-                }
-            }
-
-=======
             for (int i = handLines.Length - 1; i >= handLines.Length - 10; i--)
             {
                 // if the line starts with ** we can definitely leave the loop
@@ -397,7 +380,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (handLines[i].Contains(" wins "))
                     return true;
             }
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             return false;
         }
 
@@ -487,15 +469,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             char lastChar = line[line.Length - 1];
             HandAction action = null;
 
-<<<<<<< HEAD
             if (isChatLine(line))
             {
                 return false;
             }
-=======
-            // TODO: THIS MIGHT NEED FIXING
-            if (IsChatLine(line)) return false;
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
 
             switch (lastChar)
             {
@@ -532,23 +509,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case 'D':
                     action = ParseWinsAction(line);
                     break;
-<<<<<<< HEAD
-=======
-
-                //Player4 is sitting out
-                case 't':
-                    return false;
-
-                //hvill32za could not respond in time.(disconnected)
-                //hvill32za could not respond in time
-                case ')':
-                case 'e':
-                    return false;
-
-                default:
-                    return false;
-                    // throw new ArgumentException("Unknown lastchar: '" + lastChar + "'");
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
             }
 
             if (action != null)
@@ -640,15 +600,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         static HandAction ParseDotAction(string line, Street street)
         {
-<<<<<<< HEAD
-            string playerName;
-            char lastChar = line[line.Length - 2];
-=======
             const int smallBlindWidth = 19;//" posts small blind ".Length
             const int bigBlindWidth = 17;//" posts big blind ".Length
             const int deadBigBlindWidth = 24;//" posts big blind + dead ".Length
 
             string playerName;
+            int playerNameIndex = 0;
+
             char lastChar = line[line.Length - 2];
             if (lastChar == ']')
             {
@@ -676,41 +634,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     default:
                         throw new ArgumentException("Unkown posting Action: " + line);
                 }
-            }
-
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
-            int playerNameIndex = 0;
-
-            if (line.EndsWith("this hand."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" has left the table."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" has joined the table."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" seconds to respond."))
-            {
-                return null;
-            }
-            // Targuist1974 has been reconnected and has 20 seconds to act.
-            else if (line.EndsWith(" seconds to act."))
-            {
-                return null;
-            }
-            // tomatenqn is disconnected. We will wait for tomatenqn to reconnect for a maximum of 15 seconds.
-            else if (line.Contains(" is disconnected."))
-            {
-                return null;
-            }
-            //Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
-            else if (line.EndsWith(" please act now."))
-            {
-                return null;
             }
             else if (line.Contains(" shows"))
             {
@@ -1077,9 +1000,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                             playerName = line.Remove(amountStartIndex - PostingWidth);
                             action = HandActionType.POSTS;
                             string deadString = line.Substring(amountStartIndex + 2, line.Length - amountStartIndex - 2 - 2);
-                            amount = Decimal.Parse(deadString, provider);
+                            amount = ParseDecimal(line, amountStartIndex + 2);
                             break;
-
 
                         default:
                             throw new ArgumentException("Unknown posting Action: " + line);

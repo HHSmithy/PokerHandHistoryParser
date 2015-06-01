@@ -334,16 +334,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 {
                     int openSquareIndex = handLine.LastIndexOf('[');
                     string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
-<<<<<<< HEAD
-                    amountString = amountString
-                        .Replace("$", "")
-                        .Replace(" ", "")
-                        .Replace(",", "");
 
-                    decimal amount;
-=======
                     decimal amount = ParseAmount(amountString);
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
 
                     string action = handLine.Substring(openSquareIndex - 8, 7);
 
@@ -352,33 +344,27 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         if (action.Equals("l blind", StringComparison.Ordinal)) // small blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 19);
-                            amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
+                            amount = ParseAmount(amountString);
                             handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet));
                             continue;
                         }
                         else if (action.Equals("g blind", StringComparison.Ordinal)) // big blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 17);
-                            amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
+                            amount = ParseAmount(amountString);
                             handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet));
                             continue;
                         }
-<<<<<<< HEAD
                         else if(action.Equals("d blind", StringComparison.Ordinal))//dead blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 18);
                             amount = ParseDeadBlindAmount(amountString);
-=======
-                        else if (action.Equals("d blind")) // dead blind
-                        {
-                            string playerName = handLine.Substring(0, openSquareIndex - 18);
->>>>>>> a8ffc198c21d27d6744a0e8a182f4489fa58078d
                             handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet));
                             continue;
                         }
                     }
 
-                    amount = decimal.Parse(amountString, System.Globalization.CultureInfo.InvariantCulture);
+                    amount = ParseAmount(amountString);
                     
                     if (action.EndsWith("raises"))
                     {
@@ -398,7 +384,6 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet));
                         continue;
                     }
-                    
                 }
                 else if (handLine.FastEndsWith("folds"))
                 {
@@ -419,7 +404,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return FixUncalledBets(handActions, null, null);
         }
 
-        private decimal ParseAmount(string amountString)
+        private static decimal ParseAmount(string amountString)
         {
             // this split helps us parsing dead posts like [$0.10 + $0.05]
             var splittedAmounts = amountString.Split('+');
@@ -439,8 +424,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             string amountStr1 = amountString.Remove(plusIndex);
             string amountStr2 = amountString.Substring(plusIndex + 1);
 
-            decimal amount1 = decimal.Parse(amountStr1, invariant);
-            decimal amount2 = decimal.Parse(amountStr2, invariant);
+            decimal amount1 = ParseAmount(amountStr1);
+            decimal amount2 = ParseAmount(amountStr2);
 
             return amount1 + amount2;
         }
