@@ -22,13 +22,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.PokerFor
     //[TestFixture("Winamax", 5281577471, "GeneralHand")]
     //[TestFixture("WinningPoker", 261641541, "GeneralHand")]
     //[TestFixture("BossMedia", 2076693331L, "GeneralHand")]
-    class HandParserPokerFormatTests_SnG : HandParserPokerFormatTests
-    {
-        public HandParserPokerFormatTests_SnG(string site, 
-                                          long expectedHandId,
-                                          string handFile)
-            : base(PokerFormat.SitAndGo, site, expectedHandId, handFile)
-        {
-        }
-    }
+    //class HandParserPokerFormatTests_SnG : HandParserPokerFormatTests
+    //{
+    //    public HandParserPokerFormatTests_SnG(string site, 
+    //                                      long expectedHandId,
+    //                                      string handFile)
+    //        : base(PokerFormat.SitAndGo, site, expectedHandId, handFile)
+    //    {
+    //    }
+    //}
 }

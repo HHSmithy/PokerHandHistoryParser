@@ -21,7 +21,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.PokerFor
     //[TestFixture("MicroGaming", 5049092010, "GeneralHand")]
     //[TestFixture("Winamax", 5281577471, "GeneralHand")]
     //[TestFixture("WinningPoker", 261641541, "GeneralHand")]
-    //[TestFixture("BossMedia", 2076693331L, "GeneralHand")]
+    [TestFixture("BossMedia", 12341234123L, "GeneralHand")]
     class HandParserPokerFormatTests_MTT : HandParserPokerFormatTests
     {
         public HandParserPokerFormatTests_MTT(string site, 

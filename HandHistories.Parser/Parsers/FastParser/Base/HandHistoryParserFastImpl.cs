@@ -340,28 +340,36 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             var format = ParsePokerFormat(handLines);
 
-            if (format.Equals(PokerFormat.CashGame))
+
+            switch (format)
             {
-                return new GameDescriptor(format,
+                case PokerFormat.CashGame:
+                    return new GameDescriptor(format,
                                          SiteName,
                                          ParseGameType(handLines),
                                          ParseLimit(handLines),
                                          ParseTableType(handLines),
-                                         ParseSeatType(handLines));   
-            }
-            
-            if (format.Equals(PokerFormat.SitAndGo))
-            {
-                return new GameDescriptor(format,
+                                         ParseSeatType(handLines));
+
+                case PokerFormat.SitAndGo:
+                    return new GameDescriptor(format,
                                        SiteName,
                                        ParseGameType(handLines),
                                        ParseBuyin(handLines),
                                        ParseTableType(handLines),
                                        ParseSeatType(handLines)); 
-            }
 
-            throw new PokerFormatException(handLines[0], "Unrecognized PokerFormat for our GameDescriptor:" + format);
-            
+                case PokerFormat.MultiTableTournament:
+                    return new GameDescriptor(format,
+                                        SiteName,
+                                        ParseGameType(handLines),
+                                        ParseBuyin(handLines),
+                                        ParseTableType(handLines),
+                                        ParseSeatType(handLines));
+
+                default:
+                    throw new PokerFormatException(handLines[0], "Unrecognized PokerFormat for our GameDescriptor:" + format);
+            }
         }
 
         public PokerFormat ParsePokerFormat(string handText)

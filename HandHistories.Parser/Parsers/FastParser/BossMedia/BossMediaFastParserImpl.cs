@@ -75,7 +75,20 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            return PokerFormat.CashGame;
+            var format = GetXMLAttributeValue(handLines[0], "GAMEKIND");
+
+            switch (format)
+            {
+                case "GAMEKIND_CASH":
+                    return PokerFormat.CashGame;
+
+                case "GAMEKIND_TOURNAMENT":
+                    return PokerFormat.MultiTableTournament;
+
+                default:
+                    throw new ArgumentOutOfRangeException("Unknown PokerFormat: " + format);
+            }
+
         }
 
         protected override long ParseHandId(string[] handLines)
@@ -163,7 +176,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         protected override Buyin ParseBuyin(string[] handLines)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public override bool IsValidHand(string[] handLines)
