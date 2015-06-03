@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTests
 {
-    [TestFixture("IPoker", 3305969126, 8)]
+    [TestFixture("IPoker", 3305969126, 9)]
     class HandParserHandFormatTests : HandHistoryParserBaseTests 
     {
         private readonly string _unformattedXmlHand;
