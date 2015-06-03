@@ -16,6 +16,11 @@ namespace HandHistories.Parser.Utils.Uncalled
         /// <returns></returns>
         public static List<HandAction> Fix(List<HandAction> handActions)
         {
+            if (handActions.FirstOrDefault(p => p.HandActionType == HandActionType.UNCALLED_BET) != null)
+            {
+                return handActions;
+            }
+
             var realActions = handActions.Where(a => a.IsGameAction && !a.IsWinningsAction && a.HandActionType != HandActionType.FOLD).ToList();
 
             var lastAction = realActions[realActions.Count - 1];
@@ -35,9 +40,41 @@ namespace HandHistories.Parser.Utils.Uncalled
                 case HandActionType.BIG_BLIND:
                     handActions.Add(GetUncalledBigBlind(realActions, lastAction));
                     break;
+
+                case HandActionType.CALL:
+                    if (lastAction.IsAllIn)
+                    {
+                        handActions.Add(GetPartiallyUncalledRaise(realActions, lastAction));
+                    }
+                    break;
             }
 
             return handActions;
+        }
+
+        private static HandAction GetPartiallyUncalledRaise(List<HandAction> realActions, HandAction lastAction)
+        {
+            decimal calledAmount = 0;
+
+            List<HandAction> uncalledRaiseActions = null;
+
+            for (int i = realActions.Count - 1; i > 0; i--)
+            {
+                var action = realActions[i];
+                if (action.IsAggressiveAction)
+                {
+                    uncalledRaiseActions = realActions.Take(i + 1).ToList();
+                    break;
+                }
+
+                calledAmount += action.Amount;
+            }
+
+            var UncalledRaise = GetUncalledRaise(uncalledRaiseActions, uncalledRaiseActions.Last());
+
+            UncalledRaise.DecreaseAmount(calledAmount);
+
+            return UncalledRaise;
         }
 
         /// <summary>

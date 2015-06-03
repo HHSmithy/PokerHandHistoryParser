@@ -24,6 +24,27 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
         }
 
         [TestCase]
+        public void UncalledBetTest_NoFixRequired_1()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 0.2m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.BET, 0.1m, Street.Flop),
+                new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.UNCALLED_BET, 0.1m, Street.Flop),
+            };
+
+            TestUncalledbet("P2", 0.1m, hand);
+        }
+
+        [TestCase]
         public void UncalledBetTest_UncalledBet_1()
         {
             HandHistory hand = new HandHistory();
@@ -76,6 +97,27 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
             };
 
             TestUncalledbet("P1", 0.5m, hand);
+        }
+
+        [TestCase]
+        public void UncalledBetTest_PartiallyUncalledRaise_1()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.BET, 1m, Street.Flop),
+                new HandAction("P1", HandActionType.RAISE, 6m, Street.Flop),
+                new HandAction("P2", HandActionType.CALL, 1m, Street.Flop, true),
+            };
+
+            TestUncalledbet("P1", 4m, hand);
         }
     }
 }
