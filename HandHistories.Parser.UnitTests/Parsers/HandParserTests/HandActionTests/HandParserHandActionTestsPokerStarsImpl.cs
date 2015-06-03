@@ -294,7 +294,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                            {
                                new HandAction("ColFortune81", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
                                new HandAction("Belkiss2", HandActionType.BIG_BLIND, 1m, Street.Preflop),
-                               new HandAction("ribby53", HandActionType.BIG_BLIND, 1m, Street.Preflop),
+                               new HandAction("ribby53", HandActionType.POSTS, 1m, Street.Preflop),
 
                                new HandAction("funkyOne81", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("ribby53", HandActionType.CHECK, 0, Street.Preflop),

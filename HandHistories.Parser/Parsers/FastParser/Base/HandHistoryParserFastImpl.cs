@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -11,7 +10,6 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Pot;
-using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Base
 {
@@ -19,12 +17,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        private static readonly Regex LineSplitRegex = new Regex("\n|\r", RegexOptions.Compiled);
         private static readonly Regex HandSplitRegex = new Regex("\r\n\r\n", RegexOptions.Compiled);
 
         public abstract SiteName SiteName { get; }
 
-        public virtual bool RequresAdjustedRaiseSizes
+        public virtual bool RequiresAdjustedRaiseSizes
         {
             get { return false; }
         }
@@ -66,7 +63,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected virtual string [] SplitHandsLines(string handText)
         {
-            string[] text = handText.Split(new char[] { '\n' , '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text = handText.Split(new [] { '\n' , '\r' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < text.Length; i++)
 			{
                 text[i] = text[i].Trim();
@@ -159,16 +156,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 bool isCancelled;
                 if (IsValidOrCancelledHand(handLines, out isCancelled) == false)
                 {
-                    throw new InvalidHandException(string.Join("\r\n", handLines) ?? "NULL");                    
+                    throw new InvalidHandException(string.Join("\r\n", handLines));                    
                 }
 
                 //Set members outside of the constructor for easier performance analysis
                 HandHistory handHistory = new HandHistory();
 
-#if DEBUG
                 handHistory.FullHandHistoryText = string.Join("\r\n", handLines);
-#endif
-
                 handHistory.DateOfHandUtc = ParseDateUtc(handLines);
                 handHistory.GameDescription = ParseGameDescriptor(handLines);
                 handHistory.HandId = ParseHandId(handLines);
@@ -179,14 +173,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 handHistory.Players = ParsePlayers(handLines);
                 handHistory.NumPlayersSeated = handHistory.Players.Count;
 
-                string HeroName = ParseHeroName(handLines);
-                handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == HeroName);
+                string heroName = ParseHeroName(handLines);
+                handHistory.Hero = handHistory.Players.FirstOrDefault(p => p.PlayerName == heroName);
 
-                if (SupportRunItTwice)
-                {
-                    handHistory.RunItTwiceData = ParseRunItTwice(handLines);
-                }
-                
                 if (handHistory.Cancelled)
                 {
                     return handHistory;
@@ -197,13 +186,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw new PlayersException(string.Join("\r\n", handLines), "Only found " + handHistory.Players.Count + " players with actions.");
                 }
 
+                if (SupportRunItTwice)
+                {
+                    handHistory.RunItTwiceData = ParseRunItTwice(handLines);
+                }
+
                 handHistory.HandActions = ParseHandActions(handLines, handHistory.GameDescription.GameType);
 
                 if (RequiresActionSorting)
                 {
                     handHistory.HandActions = OrderHandActions(handHistory.HandActions);
                 }
-                if (RequresAdjustedRaiseSizes)
+                if (RequiresAdjustedRaiseSizes)
                 {
                    handHistory.HandActions = AdjustRaiseSizes(handHistory.HandActions);                   
                 }
@@ -218,7 +212,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);
-                if (anteAction != null)
+                if (anteAction != null && handHistory.GameDescription.PokerFormat.Equals(PokerFormat.CashGame))
                 {
                     handHistory.GameDescription.Limit.IsAnteTable = true;
                     handHistory.GameDescription.Limit.Ante = Math.Abs(anteAction.Amount);
@@ -295,7 +289,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         protected abstract long ParseHandId(string[] handLines);
-        
+
+        public long ParseTournamentId(string handText)
+        {
+            try
+            {
+                return ParseTournamentId(SplitHandsLines(handText));
+            }
+            catch (Exception ex)
+            {
+                throw new TournamentIdException(handText, "ParseTournamentId: Error:" + ex.Message + " Stack:" + ex.StackTrace);
+            }
+        }
+
+        protected abstract long ParseTournamentId(string[] handLines);
+
         public string ParseTableName(string handText)
         {
             try
@@ -319,13 +327,45 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected GameDescriptor ParseGameDescriptor(string[] handLines)
         {
-            return new GameDescriptor(PokerFormat.CashGame,
-                                      SiteName,
-                                      ParseGameType(handLines),
-                                      ParseLimit(handLines),
-                                      ParseTableType(handLines),
-                                      ParseSeatType(handLines));
+            var format = ParsePokerFormat(handLines);
+
+            if (format.Equals(PokerFormat.CashGame))
+            {
+                return new GameDescriptor(format,
+                                         SiteName,
+                                         ParseGameType(handLines),
+                                         ParseLimit(handLines),
+                                         ParseTableType(handLines),
+                                         ParseSeatType(handLines));   
+            }
+            
+            if (format.Equals(PokerFormat.SitAndGo))
+            {
+                return new GameDescriptor(format,
+                                       SiteName,
+                                       ParseGameType(handLines),
+                                       ParseBuyin(handLines),
+                                       ParseTableType(handLines),
+                                       ParseSeatType(handLines)); 
+            }
+
+            throw new PokerFormatException(handLines[0], "Unrecognized PokerFormat for our GameDescriptor:" + format);
+            
         }
+
+        public PokerFormat ParsePokerFormat(string handText)
+        {
+            try
+            {
+                return ParsePokerFormat(SplitHandsLines(handText));
+            }
+            catch (Exception ex)
+            {
+                throw new PokerFormatException(handText, "ParsePokerFormat: Error:" + ex.Message + " Stack:" + ex.StackTrace);
+            } 
+        }
+
+        protected abstract PokerFormat ParsePokerFormat(string[] handLines);
 
         public SeatType ParseSeatType(string handText)
         {
@@ -383,6 +423,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         protected abstract Limit ParseLimit(string[] handLines);
 
+        public Buyin ParseBuyin(string handText)
+        {
+            try
+            {
+                return ParseBuyin(SplitHandsLines(handText));
+            }
+            catch (Exception ex)
+            {
+                throw new BuyinException(handText, "ParseBuyin: Error:" + ex.Message + " Stack:" + ex.StackTrace);
+            }
+        }
+
+        protected abstract Buyin ParseBuyin(string[] handLines);
+
         public int ParseNumPlayers(string handText)
         {
             try
@@ -421,7 +475,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     handActions = OrderHandActions(handActions);
                 }
-                if (RequresAdjustedRaiseSizes)
+                if (RequiresAdjustedRaiseSizes)
                 {
                     handActions = AdjustRaiseSizes(handActions);
                 }
@@ -520,7 +574,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
             foreach (var actionsByStreet in actionsByStreets)
             {
-                Street street = actionsByStreet.Key;
                 List<HandAction> actions = actionsByStreet.ToList();
 
                 // loop backward through the actions and subtracting the action prior to each raise
@@ -528,7 +581,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 for (int i = actions.Count - 1; i >= 0; i--)
                 {
                     HandAction currentAction = actions[i];
-                    AllInAction allInAction = currentAction as AllInAction;
 
                     if (currentAction.HandActionType != HandActionType.RAISE)
                     {
@@ -545,6 +597,19 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                                 continue;                                
                             }
 
+                            // a POSTS SB is always dead money
+                            // a POSTS BB needs to be deducted completely
+                            // a POSTS SB+BB only the BB needs to be deducted
+                            if (actions[j].HandActionType == HandActionType.POSTS)
+                            {
+                                // we use <= due to the negative numbers
+                                if (actions[j].Amount <= actions.First(a => a.HandActionType == HandActionType.BIG_BLIND).Amount)
+                                {
+                                    currentAction.DecreaseAmount(actions.First(a => a.HandActionType == HandActionType.BIG_BLIND).Amount);    
+                                }
+                                continue;
+                            }
+
                             // If the player previously called any future raise will be the entire amount
                             if (actions[j].HandActionType == HandActionType.CALL)
                             {
@@ -552,11 +617,17 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                                 continue;                                
                             }
 
+
+                            // Player who posted SB/BB/SB+BB can check on their first action
+                            if (actions[j].HandActionType == HandActionType.CHECK)
+                            {
+                                continue;
+                            }
+
                             currentAction.DecreaseAmount(actions[j].Amount);
                             break;
                         }
                     }
-                    
                 }
             }
 

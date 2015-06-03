@@ -22,7 +22,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             {
                 new HandAction("Giddy_Goat", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
                 new HandAction("JoakimAF", HandActionType.BIG_BLIND, 2m, Street.Preflop),
-                new HandAction("tuffgong", HandActionType.POSTS, 0.02m, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.JACKPOTCONTRIBUTION, 0.02m, Street.Preflop),
                 new HandAction("tuffgong", HandActionType.RAISE, 6, Street.Preflop),
                 new HandAction("CptStupid", HandActionType.FOLD, 0, Street.Preflop),
                 new HandAction("ConorIsKing", HandActionType.FOLD, 0, Street.Preflop),

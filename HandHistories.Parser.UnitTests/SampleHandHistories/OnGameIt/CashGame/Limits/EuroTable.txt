@@ -1,0 +1,45 @@
+﻿***** History for hand R5-118630507-219 *****
+Start hand: Mon Jan 06 01:00:00 CET 2014
+Table: Alessandria [118630507] (NO_LIMIT TEXAS_HOLDEM €0.50/€1, Real money)
+Button: seat 8
+Players in round: 6
+Seat 3: danielba (€81.53) 
+Seat 4: pincClaudioc (€35.94) 
+Seat 5: iasekiller (€90.76) 
+Seat 6: DBolognese (€50.23) 
+Seat 8: TrickyChu (€116.61) 
+Seat 9: Alexdurrr (€44.77) 
+Alexdurrr posts small blind (€0.50)
+danielba posts big blind (€1)
+---
+Dealing pocket cards
+pincClaudioc calls €1.00
+iasekiller folds
+DBolognese folds
+TrickyChu folds
+Alexdurrr calls €0.50
+danielba checks
+--- Dealing flop [8c, 3s, 3h]
+Alexdurrr checks
+danielba checks
+pincClaudioc checks
+--- Dealing turn [Qh]
+Alexdurrr checks
+danielba checks
+pincClaudioc bets €4.00
+Alexdurrr calls €4.00
+danielba folds
+--- Dealing river [5s]
+Alexdurrr bets €5.50
+pincClaudioc calls €5.50
+---
+Summary:
+Main pot: €22.00 won by Alexdurrr (€20.78)
+Rake taken: €1.22
+Seat 3: danielba (€80.53), net: -€1.00
+Seat 4: pincClaudioc (€25.44), net: -€10.50, [Kh, 5h]
+Seat 5: iasekiller (€90.76)
+Seat 6: DBolognese (€50.23)
+Seat 8: TrickyChu (€116.61)
+Seat 9: Alexdurrr (€55.05), net: +€10.28, [Qc, 3c]
+***** End of hand R5-118630507-219 *****

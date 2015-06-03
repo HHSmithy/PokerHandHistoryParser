@@ -10,7 +10,7 @@ namespace HandHistories.Objects.GameDescription
         public GameDescriptor() : this(PokerFormat.Unknown, 
                                        SiteName.Unknown,
                                        GameType.Unknown,
-                                       null,
+                                       Limit.AllLimit(),
                                        TableType.FromTableTypeDescriptions(),
                                        SeatType.AllSeatType())         
         {
@@ -25,6 +25,16 @@ namespace HandHistories.Objects.GameDescription
             : this(PokerFormat.CashGame, siteName, gameType, limit, tableType, seatType)         
         {
 
+        }
+
+        public GameDescriptor(SiteName siteName,
+                              GameType gameType,
+                              Buyin buyin,
+                              TableType tableType,
+                              SeatType seatType)
+            : this(PokerFormat.SitAndGo, siteName, gameType, buyin, tableType, seatType)
+        {
+            
         }
 
         public GameDescriptor(PokerFormat pokerFormat,
@@ -42,6 +52,20 @@ namespace HandHistories.Objects.GameDescription
             SeatType = seatType;
         }
 
+        public GameDescriptor(PokerFormat pokerFormat,
+                              SiteName siteName,
+                              GameType gameType,
+                              Buyin buyin,
+                              TableType tableType,
+                              SeatType seatType)
+        {
+            PokerFormat = pokerFormat;
+            Site = siteName;
+            GameType = gameType;
+            Buyin = buyin;
+            TableType = tableType;
+            SeatType = seatType;
+        }
         [DataMember]
         public PokerFormat PokerFormat { get; set; }
 
@@ -54,6 +78,9 @@ namespace HandHistories.Objects.GameDescription
         [DataMember]
         public Limit Limit { get; set; }
 
+        [DataMember]
+        public Buyin Buyin { get; set; }
+ 
         [DataMember]        
         public SeatType SeatType { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         private readonly bool _isIpoker2;
+        private static int CurrencyParsingErrors;
+        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
+        {
+            NegativeSign = "-",
+            CurrencyDecimalSeparator = ".",
+            CurrencyGroupSeparator = ",",
+            CurrencySymbol = "€"
+        };
 
         public IPokerFastParserImpl(bool isIpoker2 = false)
         {
@@ -31,7 +40,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             get { return (_isIpoker2) ? SiteName.IPoker2 : SiteName.IPoker; }
         }
 
-        public override bool  RequresAdjustedRaiseSizes
+        public override bool  RequiresAdjustedRaiseSizes
         {
 	        get 
 	        { 
@@ -107,22 +116,22 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected decimal GetStackFromPlayerLine(string playerLine)
         {
-            int stackStartPos = playerLine.IndexOf(" c") + 9;
+            int stackStartPos = playerLine.IndexOf(" c") + 8;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
+            return ParseDecimal(stackString);
         }
 
         protected decimal GetWinningsFromPlayerLine(string playerLine)
         {
-            int stackStartPos = playerLine.IndexOf(" w") + 7;
+            int stackStartPos = playerLine.IndexOf(" w") + 6;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
             if (stackString == "")
             {
                 return 0;
             }
-            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
+            return ParseDecimal(stackString);
         }
 
         protected string GetNameFromPlayerLine(string playerLine)
@@ -207,6 +216,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }                
             }
         }
+        
+        protected override PokerFormat ParsePokerFormat(string[] handLines)
+        {
+            return PokerFormat.CashGame;
+        }
 
         // For now (4/17/2012) only need Game # in Miner and using Regexes. Will convert to faster mechanism soon.
         private static readonly Regex HandIdRegex = new Regex("(?<=gamecode=\")\\d+", RegexOptions.Compiled);
@@ -222,6 +236,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             throw new HandIdException(handLines[1], "Couldn't find handid");
+        }
+
+        protected override long ParseTournamentId(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -421,15 +440,15 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 case '$':
                     currency = Currency.USD;
-                    limitString = limitString.Substring(1);
+                    NumberFormatInfo.CurrencySymbol = "$";
                     break;
                 case '€':
                     currency = Currency.EURO;
-                    limitString = limitString.Substring(1);
+                    NumberFormatInfo.CurrencySymbol = "€";
                     break;
                 case '£':
                     currency = Currency.GBP;
-                    limitString = limitString.Substring(1);
+                    NumberFormatInfo.CurrencySymbol = "£";
                     break;
                 default:
                     string tagValue = GetCurrencyTagValue(handLines);
@@ -437,12 +456,15 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     {
                         case "USD":
                             currency = Currency.USD;
+                            NumberFormatInfo.CurrencySymbol = "$";
                             break;
                         case "GBP":
                             currency = Currency.GBP;
+                            NumberFormatInfo.CurrencySymbol = "£";
                             break;
                         case "EUR":
                             currency = Currency.EURO;
+                            NumberFormatInfo.CurrencySymbol = "€";
                             break;
                         default:
                             throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
@@ -453,16 +475,17 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int slashIndex = limitString.IndexOf('/');
 
             string smallString = limitString.Remove(slashIndex);
-            decimal small = decimal.Parse(smallString, System.Globalization.CultureInfo.InvariantCulture);
+            decimal small = ParseDecimal(smallString);
  
             string bigString = limitString.Substring(slashIndex + 1);
-            if (bigString[0] == '£' || bigString[0] == '$' || bigString[0] == '€')
-            {
-                bigString = bigString.Substring(1);
-            }
-            decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
+            decimal big = ParseDecimal(bigString);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
+        }
+
+        protected override Buyin ParseBuyin(string[] handLines)
+        {
+            throw new NotImplementedException();
         }
 
         private string GetCurrencyTagValue(string[] handLines)
@@ -517,7 +540,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int startRow = offset + playerLines.Length + 2;
 
             Street currentStreet = Street.Null;
-
+            
             for (int i = startRow; i < handLines.Length - 2; i++)
             {
                 string handLine = handLines[i].TrimStart();
@@ -555,6 +578,35 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             //Generate the show card + winnings actions
             actions.AddRange(GetWinningAndShowCardActions(handLines));
+
+            // we need to fix dead money postings at the end
+            return FixDeadMoneyPosting(actions);
+        }
+
+        private List<HandAction> FixDeadMoneyPosting(List<HandAction> actions)
+        {
+            // sort the actions, because regular SB + BB actions are always the first actions ( although might not be the first in the hand history )
+            actions = actions.OrderBy(t => t.ActionNumber).ToList();
+            var bigBlindValue = 0.0m;
+            var looper = new List<HandAction>(actions);
+            foreach (var action in looper)
+            {
+                if (action.HandActionType.Equals(HandActionType.BIG_BLIND))
+                {
+                    if (bigBlindValue == 0.0m)
+                    {
+                        bigBlindValue = Math.Abs(action.Amount);
+                        continue;
+                    }
+
+                    if (Math.Abs(action.Amount) > bigBlindValue)
+                    {
+                        var newAction = new HandAction(action.PlayerName, HandActionType.POSTS, action.Amount, action.Street, action.ActionNumber);
+                        actions.Remove(action);
+                        actions.Add(newAction);
+                    }
+                }
+            }
 
             return actions;
         }
@@ -607,7 +659,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 1:                 
                     actionType = HandActionType.SMALL_BLIND;
                     break;
-                case 2:                 
+                case 2:
                     actionType = HandActionType.BIG_BLIND;
                     break;
                 case 3:                 
@@ -664,10 +716,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected decimal GetValueFromActionLine(string actionLine)
         {
-            int startPos = actionLine.IndexOf(" s") + 7;
+            int startPos = actionLine.IndexOf(" s") + 6;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
             string value = actionLine.Substring(startPos, endPos - startPos + 1);
-            return decimal.Parse(value, System.Globalization.CultureInfo.InvariantCulture);
+            return ParseDecimal(value);
         }
 
         protected int GetActionTypeFromActionLine(string actionLine)
@@ -826,6 +878,36 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return BoardCards.FromCards(boardCards);
+        }
+
+        static decimal ParseDecimal(string amountString)
+        {
+            decimal amount;
+            while (!decimal.TryParse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out amount))
+            {
+                CurrencyParsingErrors++;
+                LoopCurrency();
+                if (CurrencyParsingErrors > 3)
+                    throw new Exception("Unable to parse Amount " + amountString);
+            }
+            CurrencyParsingErrors = 0;
+            return amount;
+        }
+
+        static void LoopCurrency()
+        {
+            if (NumberFormatInfo.CurrencySymbol == "€")
+            {
+                NumberFormatInfo.CurrencySymbol = "£";
+            }
+            else if (NumberFormatInfo.CurrencySymbol == "£")
+            {
+                NumberFormatInfo.CurrencySymbol = "$";
+            }
+            else if (NumberFormatInfo.CurrencySymbol == "$")
+            {
+                NumberFormatInfo.CurrencySymbol = "€";
+            }
         }
 
         protected override string ParseHeroName(string[] handlines)

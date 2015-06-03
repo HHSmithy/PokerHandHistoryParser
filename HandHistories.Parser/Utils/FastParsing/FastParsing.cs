@@ -32,7 +32,7 @@ namespace HandHistories.Parser.Utils.FastParsing
             {
                 return text - 0x30;
             }
-            throw new ArgumentOutOfRangeException("text");
+            throw new ArgumentOutOfRangeException(text.ToString());
         }
     }
 }
