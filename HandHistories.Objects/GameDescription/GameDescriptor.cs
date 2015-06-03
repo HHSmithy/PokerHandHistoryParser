@@ -63,6 +63,7 @@ namespace HandHistories.Objects.GameDescription
             PokerFormat = pokerFormat;
             Site = siteName;
             GameType = gameType;
+            Limit = limit;
             Buyin = buyin;
             TableType = tableType;
             SeatType = seatType;
