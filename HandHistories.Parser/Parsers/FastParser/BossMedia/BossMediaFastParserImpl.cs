@@ -31,6 +31,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             get { return true; }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None).Where(p => p.Length > 2 && p[1] != '?');

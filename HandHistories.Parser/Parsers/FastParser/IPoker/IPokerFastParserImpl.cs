@@ -63,6 +63,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             get { return true; }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             XDocument handDocument = XDocument.Parse(handText);

@@ -22,6 +22,11 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             get { return _siteName; }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
         private readonly NumberFormatInfo _numberFormatInfo;
         private readonly Currency _currency;
         // So the same parser can be used for It and Fr variations

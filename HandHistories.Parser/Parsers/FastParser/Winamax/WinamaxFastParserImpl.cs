@@ -44,6 +44,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         {
             get { return false; }
         }
+
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
         
         private readonly NumberFormatInfo _numberFormatInfo = new NumberFormatInfo
             {

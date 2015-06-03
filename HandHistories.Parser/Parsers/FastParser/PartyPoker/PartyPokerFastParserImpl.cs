@@ -35,6 +35,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             get { return true; }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
         // So the same parser can be used for It and Fr variations
         public PartyPokerFastParserImpl(SiteName siteName = SiteName.PartyPoker)
         {
