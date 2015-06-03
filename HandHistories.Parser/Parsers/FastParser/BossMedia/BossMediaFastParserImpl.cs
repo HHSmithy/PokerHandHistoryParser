@@ -17,7 +17,7 @@ using HandHistories.Parser.Utils.AllInAction;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
-    sealed class BossMediaFastParserImpl : HandHistoryParserFastImpl
+    public sealed class BossMediaFastParserImpl : HandHistoryParserFastImpl
     {
         static readonly CultureInfo provider = CultureInfo.InvariantCulture;
 
@@ -225,6 +225,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                             //HAND_BOARD
                             //HAND_DEAL
                             //HAND_BLINDS
+                            //HAND_ANTE
                             char handAction = Line[20]; //The 7th character is used for identification
                             switch (handAction)
                             {
@@ -236,6 +237,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                                 //HAND_DEAL - this is dealt with in ParsePlayers
                                 case 'E':
                                     continue;
+
+                                case 'N':
+                                    actions.Add(ParseAnte(Line));
+                                    break;
 
                                 //HAND_BLINDS
                                 case 'L':
@@ -309,7 +314,18 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return actions;
         }
 
-        private Street ParseNextStreet(string Line)
+        static HandAction ParseAnte(string line)
+        {
+            var playerName = GetXMLAttributeValue(line, "PLAYER");
+
+            var amountStr = GetXMLAttributeValue(line, "VALUE");
+
+            var amount = decimal.Parse(amountStr, provider);
+
+            return new HandAction(playerName, HandActionType.ANTE, amount, Street.Preflop);
+        }
+
+        static Street ParseNextStreet(string Line)
         {
             //<ACTION TYPE="HAND_BOARD" VALUE="BOARD_RIVER" POT="29.26" RAKE="0.74" MAINPOT="29.26" LEFTPOT="" RIGHTPOT="">
             const int StreetIdentiFierIndex = 39;
@@ -327,33 +343,33 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        private HandAction ParseBlinds(string Line)
+        public static HandAction ParseBlinds(string Line)
         {
             //<ACTION TYPE="HAND_BLINDS" PLAYER="fatima1975" KIND="HAND_SB" VALUE="0.02"></ACTION>
             //<ACTION TYPE="HAND_BLINDS" PLAYER="gasmandean" KIND="HAND_BB" VALUE="0.04"></ACTION>
             const int playerNameStartIndex = 35;
+
             int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
             string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
 
-            int amountStartIndex = playerNameEndIndex + 24;
-            int amountEndIndex = Line.IndexOf('\"', amountStartIndex);
-            string amountStr = Line.Substring(amountStartIndex, amountEndIndex - amountStartIndex);
+            string amountStr = GetXMLAttributeValue(Line, "VALUE");
             decimal amount = decimal.Parse(amountStr, provider);
 
-            int blindTypeIDIndex = playerNameEndIndex + 13;
-            char blindType = Line[blindTypeIDIndex];
+            char blindType = GetXMLAttributeValue(Line, "KIND")[5];
             switch (blindType)
             {
                 case 'S':
                     return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, Street.Preflop);
                 case 'B':
                     return new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop);
+                case 'D':
+                    return new HandAction(playerName, HandActionType.POSTS, amount, Street.Preflop);
                 default:
                     throw new ArgumentException("Unknown blindType: " + blindType + " - " + Line);
             }
         }
 
-        private HandAction ParseAction(string Line, Street currentStreet, List<HandAction> actions)
+        static HandAction ParseAction(string Line, Street currentStreet, List<HandAction> actions)
         {
             const int playerHandActionStartIndex = 21;
             const int fixedAmountDistance = 9;
@@ -441,14 +457,14 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        decimal GetActionAmount(string Line, int startIndex)
+        static decimal GetActionAmount(string Line, int startIndex)
         {
             int endIndex = Line.IndexOf('\"', startIndex);
             string amountString = Line.Substring(startIndex, endIndex - startIndex);
             return decimal.Parse(amountString, provider);
         }
 
-        string GetActionPlayerName(string Line, int startIndex)
+        static string GetActionPlayerName(string Line, int startIndex)
         {
             int endIndex = Line.IndexOf('\"', startIndex);
             return Line.Substring(startIndex, endIndex - startIndex);
@@ -576,7 +592,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return plist;
         }
 
-        private void ParseDealtHand(string[] handLines, int currentLine, Player player)
+        static void ParseDealtHand(string[] handLines, int currentLine, Player player)
         {
             const int maxCards = 4;
             for (int i = 1; i <= maxCards; i++)
@@ -692,7 +708,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 	        #endregion
         };
 
-        private Card ParseCard(string Line)
+        static Card ParseCard(string Line)
         {
             //<CARD LINK="b"></CARD> is unkown card
             //<CARD LINK="13"></CARD>
@@ -712,7 +728,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return BossCardLookup[cardID];
         }
 
-        string GetXMLAttributeValue(string Line, string Name)
+        static string GetXMLAttributeValue(string Line, string Name)
         {
             string search = " " + Name + "=\"";
             int startIndex = Line.IndexOf(search) + search.Length;

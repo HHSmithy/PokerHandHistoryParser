@@ -71,6 +71,7 @@
     <Compile Include="Compression\HandHistoryGZipCompressorImplTests.cs" />
     <Compile Include="Infrastructure\NinjectKernel.cs" />
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
+    <Compile Include="Parsers\FastParserTests\BossMedia\BossMediaFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
     <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsFullTilt.cs" />
@@ -126,6 +127,9 @@
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsPokerStars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\UncalledBet\UncalledBetFixTests.cs" />
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\Ante.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\BossMedia\MultiTableTournament\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

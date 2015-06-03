@@ -14,6 +14,37 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
         }
 
+        [Test]
+        public void AnteHand_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+            {
+                new HandAction("Player1", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player2", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player3", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player4", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player5", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player6", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player7", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player8", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player1", HandActionType.SMALL_BLIND, 1000m, Street.Preflop),
+                new HandAction("Player2", HandActionType.BIG_BLIND, 2000m, Street.Preflop),
+
+                new HandAction("Player3", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player4", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player5", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player6", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player7", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player8", HandActionType.RAISE, 5000m, Street.Preflop),
+                new HandAction("Player1", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player2", HandActionType.FOLD, Street.Preflop),
+
+                new WinningsAction("Player8", HandActionType.WINS, 5800, 0)
+            };
+
+            TestParseActions("Ante", expectedActions);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get
