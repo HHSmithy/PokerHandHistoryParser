@@ -118,5 +118,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             Assert.AreEqual(_expectedNumberOfPlayers, GetSummmaryParser().ParseNumPlayers(_handText), "IHandHistorySummaryParser: ParseNumPlayers");
             Assert.AreEqual(_expectedNumberOfPlayers, GetParser().ParseNumPlayers(_handText), "IHandHistoryParser: ParseNumPlayers");
         }
+
+        [Test]
+        public void ParsePokerFormat_Works()
+        {
+            Assert.AreEqual(PokerFormat.CashGame, GetSummmaryParser().ParseFullHandSummary(_handText).GameDescription.PokerFormat, "IHandHistorySummaryParser: PokerFormat");
+            Assert.AreEqual(PokerFormat.CashGame, GetParser().ParseFullHandHistory(_handText).GameDescription.PokerFormat, "IHandHistoryParser: PokerFormat");
+        }
     }
 }
