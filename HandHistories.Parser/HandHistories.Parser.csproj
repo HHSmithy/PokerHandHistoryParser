@@ -104,6 +104,7 @@
     <Compile Include="Utils\Pot\PotCalculator.cs" />
     <Compile Include="Utils\Strings\StringExtensions.cs" />
     <Compile Include="Utils\Time\TimeZoneUtil.cs" />
+    <Compile Include="Utils\UncalledBet\UncalledBet.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
