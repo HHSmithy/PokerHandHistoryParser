@@ -45,6 +45,11 @@ namespace HandHistories.Parser.Utils.AllInAction
         /// <returns>the adjusted call size</returns>
         public static decimal GetAdjustedCallAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
         {
+            if (playerActions.Count() == 0)
+            {
+                return amount;
+            }
+
             return amount - Math.Abs(playerActions.Min(p => p.Amount));
         }
     }
