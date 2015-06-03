@@ -34,7 +34,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("fyabcf", HandActionType.FOLD, 0, Street.Flop),
 
                                new WinningsAction("BONUS 1OOO", HandActionType.WINS, 3.80m, 0),
-                               new HandAction("BONUS 1OOO", HandActionType.UNCALLED_BET, 2.5m, Street.Showdown),
                            };
             }
         }
@@ -53,7 +52,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("BONUS 1OOO", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("fyabcf", HandActionType.FOLD, 0m, Street.Preflop),
                                new WinningsAction("kliketiklok", HandActionType.WINS, 1, 0),
-                               new HandAction("kliketiklok", HandActionType.UNCALLED_BET,0.5m, Street.Showdown), // 1 ( BB ) - 0.5 ( SB )
                            };
             }
         }
@@ -73,8 +71,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("BONUS 1OOO", HandActionType.RAISE, 1.50m, Street.Preflop),                              
                                new HandAction("fyabcf", HandActionType.RAISE, 5m, Street.Preflop),                              
                                new HandAction("BONUS 1OOO", HandActionType.FOLD, 0, Street.Preflop),
-                               new WinningsAction("fyabcf", HandActionType.WINS, 4m, 0),                           
-                               new HandAction("fyabcf", HandActionType.UNCALLED_BET, 4m, Street.Showdown), // 5 + 1 (BB) - 1.5 - 0.5(SB)          
+                               new WinningsAction("fyabcf", HandActionType.WINS, 4m, 0),
                            };
             }
         }
@@ -104,7 +101,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new AllInAction("kliketiklok", 50.91m, Street.Flop,false),    
                                
                                new WinningsAction("fyabcf", HandActionType.WINS, 226.82m, 0),
-                               new HandAction("fyabcf", HandActionType.UNCALLED_BET,  123.24m, Street.Showdown), // 18 + 192.15 - 36 - 50.91
                            };
             }
         }
@@ -146,7 +142,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("Dbcee89", HandActionType.FOLD, 0, Street.Preflop),
                                         new HandAction("BlackH0L3", HandActionType.FOLD, 0, Street.Preflop),
                                         new WinningsAction("kliketiklok", HandActionType.WINS, 2.5m, 0),
-                                        new HandAction("kliketiklok", HandActionType.UNCALLED_BET, 1m, Street.Showdown), // 2 - 1 ( BB )
                                     };
 
             TestParseActions("NameWithDashes", expectedActions);
