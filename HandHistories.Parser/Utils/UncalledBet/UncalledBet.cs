@@ -61,7 +61,7 @@ namespace HandHistories.Parser.Utils.Uncalled
                                                             .Min(x => x.Invested); // money invested is negative, so take the "max" negative value
 
 
-            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, Street.Showdown);
+            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, lastAction.Street);
         }
 
         /// <summary>
@@ -81,12 +81,12 @@ namespace HandHistories.Parser.Utils.Uncalled
                 sbAmount = sbAction.Amount;
             }
 
-            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount - sbAmount, Street.Showdown);
+            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount - sbAmount, lastAction.Street);
         }
 
         private static HandAction GetUncalledBet(HandAction lastAction)
         {
-            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount, Street.Showdown);
+            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount, lastAction.Street);
         }
     }
 }
