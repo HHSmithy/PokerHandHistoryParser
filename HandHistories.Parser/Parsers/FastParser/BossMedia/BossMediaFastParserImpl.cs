@@ -82,6 +82,9 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 case "GAMEKIND_CASH":
                     return PokerFormat.CashGame;
 
+                case "GAMEKIND_SITGO":
+                    return PokerFormat.SitAndGo;
+
                 case "GAMEKIND_TOURNAMENT":
                     return PokerFormat.MultiTableTournament;
 

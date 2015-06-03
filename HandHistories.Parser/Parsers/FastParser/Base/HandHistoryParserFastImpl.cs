@@ -355,6 +355,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     return new GameDescriptor(format,
                                        SiteName,
                                        ParseGameType(handLines),
+                                       ParseLimit(handLines),
                                        ParseBuyin(handLines),
                                        ParseTableType(handLines),
                                        ParseSeatType(handLines)); 
@@ -363,6 +364,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     return new GameDescriptor(format,
                                         SiteName,
                                         ParseGameType(handLines),
+                                        ParseLimit(handLines),
                                         ParseBuyin(handLines),
                                         ParseTableType(handLines),
                                         ParseSeatType(handLines));

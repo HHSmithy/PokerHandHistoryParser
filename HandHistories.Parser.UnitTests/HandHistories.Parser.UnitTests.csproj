@@ -129,6 +129,9 @@
     <Content Include="SampleHandHistories\BossMedia\MultiTableTournament\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\BossMedia\SitAndGo\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\FullTilt\CashGame\BlindActionTests\Posting.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
