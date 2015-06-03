@@ -10,11 +10,11 @@ namespace HandHistories.Parser.Utils.Uncalled
     public static class UncalledBet
     {
         /// <summary>
-        /// Adds a Uncalled bet action if there was a raise that was not called at all or only called partially
+        /// Adds a Uncalled bet action if there was a RAISE/BET/BB that was not called at all or only called partially
         /// </summary>
         /// <param name="handActions"></param>
         /// <returns></returns>
-        public static List<HandAction> Fix(List<HandAction> handActions, decimal? totalPot, decimal? rake)
+        public static List<HandAction> Fix(List<HandAction> handActions)
         {
             var realActions = handActions.Where(a => a.IsGameAction && !a.IsWinningsAction && a.HandActionType != HandActionType.FOLD).ToList();
 

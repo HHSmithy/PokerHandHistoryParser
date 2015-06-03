@@ -10,6 +10,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Pot;
+using HandHistories.Parser.Utils.Uncalled;
 
 namespace HandHistories.Parser.Parsers.FastParser.Base
 {
@@ -37,6 +38,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public virtual bool RequiresTotalPotCalculation
+        {
+            get { return false; }
+        }
+
+        public virtual bool RequiresUncalledBetFix
         {
             get { return false; }
         }
@@ -209,6 +215,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     handHistory.TotalPot = PotCalculator.CalculateTotalPot(handHistory);
                     handHistory.Rake = PotCalculator.CalculateRake(handHistory);
+                }
+
+                if (RequiresUncalledBetFix)
+                {
+                    handHistory.HandActions = UncalledBet.Fix(handHistory.HandActions);
                 }
 
                 HandAction anteAction = handHistory.HandActions.FirstOrDefault(a => a.HandActionType == HandActionType.ANTE);

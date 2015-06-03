@@ -14,6 +14,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Objects.Hand;
+using HandHistories.Parser.Utils.Uncalled;
 
 namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 {
@@ -27,7 +28,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         // we adjust the raise sizes on our own during FixUncalledBets
         public override bool RequiresAdjustedRaiseSizes
         {
-            get { return false; }
+            get { return true; }
         }
 
         public override bool SupportRunItTwice
@@ -330,14 +331,14 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 {
                     actions.Add(ParseUncalledBet(line, currentStreet));
                     ParseShowDown(handLines, ref actions, i + 1, gameType);
-                    return FixUncalledBets(actions, handHistory.TotalPot, handHistory.Rake);
+                    return actions;
                 }
 
                 if (line.Contains(" shows ["))
                 {
                     ParseShowDown(handLines, ref actions, i, GameType.Unknown);
 
-                    return FixUncalledBets(actions, handHistory.TotalPot, handHistory.Rake);
+                    return actions;
                 }
 
                 var lastChar = line[line.Length - 1];
@@ -412,7 +413,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     case '*':
                         ParseShowDown(handLines, ref actions, i, GameType.Unknown);
 
-                        return FixUncalledBets(actions, handHistory.TotalPot, handHistory.Rake);
+                        return actions;
 
                     //Dealt to FT_Hero [Qh 5c]
                     //Postrail shows [Qs Ah]
@@ -420,7 +421,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         if (line.IndexOf(" shows [", StringComparison.Ordinal) != -1)
                         {
                             ParseShowDown(handLines, ref actions, i, GameType.Unknown);
-                            return FixUncalledBets(actions, handHistory.TotalPot, handHistory.Rake);
+                            return actions;
                         }
                         continue;
 
@@ -431,7 +432,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 }
             }
 
-            return FixUncalledBets(actions, handHistory.TotalPot, handHistory.Rake);
+            return actions;
         }
 
         static bool IsChatLine(string line)
@@ -1174,70 +1175,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         {
             handActions = AdjustRaiseSizes(handActions);
 
-            // this fix only takes place when the TotalPot - Rake != Winnings
-            if (totalPot != null && rake != null)
-            {
-                var wagered = handActions.Where(a => !a.IsWinningsAction).Sum(a => a.Amount);
-                if (totalPot + wagered == 0m)
-                {
-                    return handActions;
-                }
-
-                var returnAmount = (decimal)(wagered + totalPot);
-                var playerToReturnTo = handActions.Where(a => a.IsGameAction).GroupBy(a => a.PlayerName)
-                                                        .Select(p => new
-                                                        {
-                                                            PlayerName = p.Key,
-                                                            Invested = p.Sum(x => x.Amount)
-                                                        }).OrderBy(x => x.Invested).First().PlayerName;
-
-                handActions.Add(new HandAction(playerToReturnTo, HandActionType.UNCALLED_BET, returnAmount, Street.Showdown));
-
-                return handActions;
-            }
-
-            var realActions = handActions.Where(a => a.IsGameAction && !a.IsWinningsAction && a.HandActionType != HandActionType.FOLD).ToList();
-
-            var lastAction = realActions[realActions.Count - 1];
-
-            // when the last action before summary is a bet, we need to return that bet to the according player
-            if (lastAction.HandActionType == HandActionType.BET)
-            {
-                //if(!handActions.Any(a => a.PlayerName == lastAction.PlayerName && a.HandActionType == HandActionType.UNCALLED_BET && a.Amount == -lastAction.Amount))
-                handActions.Add(new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount, Street.Showdown));
-            }
-
-            // when the last action before summary is a raise, we need to return the correct amount to the player
-            if (lastAction.HandActionType == HandActionType.RAISE)
-            {
-                // amount to return is the amount the raise player invested - the 2nd largest amount invested by a different player
-                var totalInvestedAmount = realActions.Where(a => a.PlayerName.Equals(lastAction.PlayerName)).Sum(a => a.Amount);
-
-                // now we need to get the maximum amount invested by a different player involved in the hand
-                var totalInvestedAmountOtherPlayer = realActions.Where(a => !a.PlayerName.Equals(lastAction.PlayerName)).GroupBy(a => a.PlayerName)
-                                                                .Select(p => new
-                                                                {
-                                                                    PlayerName = p.Key,
-                                                                    Invested = p.Sum(x => x.Amount)
-                                                                })
-                                                                .Min(x => x.Invested); // money invested is negative, so take the "max" negative value
-
-
-                handActions.Add(new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, Street.Showdown));
-            }
-
-            // when the last action before the summary is the big blind, we need to return the difference between BB and SB
-            if (lastAction.HandActionType == HandActionType.BIG_BLIND)
-            {
-                // it can actually happen that there was no SB involved
-                var sbAction = realActions.FirstOrDefault(a => a.HandActionType == HandActionType.SMALL_BLIND);
-                var sbAmount = 0m;
-                if (sbAction != null) sbAmount = sbAction.Amount;
-
-                handActions.Add(new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, lastAction.Amount - sbAmount, Street.Showdown));
-            }
-
-            return handActions;
+            return UncalledBet.Fix(handActions);
         }
     }
 }

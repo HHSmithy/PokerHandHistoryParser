@@ -15,7 +15,7 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
     {
         void TestUncalledbet(string expectedPlayer, decimal expectedAmount, HandHistory hand)
         {
-            var actions = UncalledBet.Fix(hand.HandActions, hand.TotalPot, hand.Rake);
+            var actions = UncalledBet.Fix(hand.HandActions);
 
             var lastAction = actions.Last();
 

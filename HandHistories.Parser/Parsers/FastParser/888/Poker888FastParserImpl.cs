@@ -13,6 +13,7 @@ using HandHistories.Parser.Utils.Time;
 using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
+using HandHistories.Parser.Utils.Uncalled;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
@@ -31,6 +32,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         }
 
         public override bool RequiresTotalPotCalculation
+        {
+            get { return true; }
+        }
+
+        public override bool RequiresUncalledBetFix
         {
             get { return true; }
         }
@@ -401,7 +407,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 throw new HandActionException(handLine, "Unknown handline.");
             }
 
-            return FixUncalledBets(handActions, null, null);
+            return handActions;//FixUncalledBets(handActions, null, null);
         }
 
         private static decimal ParseAmount(string amountString)
@@ -625,7 +631,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             if (handActionToAdd != null)
                 handActions.Add(handActionToAdd);
 
-            return handActions;
+            return UncalledBet.Fix(handActions);
         }
     }
 }
