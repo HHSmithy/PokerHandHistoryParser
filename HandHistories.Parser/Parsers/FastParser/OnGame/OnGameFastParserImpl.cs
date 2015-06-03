@@ -574,52 +574,6 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 throw new HandActionException(handLine, "Unknown hand-line: " + handLine);
         }
 
-            return FixUncalledBets(handActions, handHistory.TotalPot, handHistory.Rake);
-        }
-
-        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
-        {
-            // this fix only takes place when the TotalPot - Rake != Winnings
-            if (totalPot != null && rake != null)
-            {
-                var wagered = handActions.Where(a => !a.IsWinningsAction).Sum(a => a.Amount);
-                if (totalPot + wagered == 0m)
-                {
-                    return handActions;
-                }
-
-                // the player we need to return the money, is always the player who invested the most ( exclude ante + post )
-                var playerToReturnTo = handActions.Where(a => a.IsGameAction && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE))
-                    .GroupBy(a => a.PlayerName)
-                    .Select(p => new
-                    {
-                        PlayerName = p.Key,
-                        Invested = p.Sum(x => x.Amount)
-                    }).OrderBy(x => x.Invested).First().PlayerName;
-
-                // take a look at this players last action
-                var lastAction = handActions.Last(a => a.IsGameAction && a.PlayerName.Equals(playerToReturnTo));
-                var playerInvested = handActions.Where(a => a.Street == lastAction.Street
-                                                      && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE) // ignore dead money
-                                                      && a.PlayerName.Equals(playerToReturnTo)).Sum(a => a.Amount);
-
-                // the amount to return is the largest invested amount on the lastaction.street from the other players
-                var returnAmount = playerInvested - handActions.Where(a => a.Street == lastAction.Street
-                    && !a.HandActionType.Equals(HandActionType.POSTS) && !a.HandActionType.Equals(HandActionType.ANTE) // make sure to ignore dead money
-                    && !a.PlayerName.Equals(playerToReturnTo)).GroupBy(a => a.PlayerName)
-                    .Select(p => new
-                    {
-                        PlayerName = p.Key,
-                        Invested = p.Sum(x => x.Amount)
-                    }).OrderBy(x => x.Invested).First().Invested;
-
-
-                // if the return amount is bigger than the last betting, the hand is corrupt -> don't fix anything
-                if (Math.Abs(returnAmount) <= Math.Abs(playerInvested) && returnAmount != 0m)
-                    handActions.Add(new HandAction(playerToReturnTo, HandActionType.UNCALLED_BET, returnAmount, Street.Showdown));
-
-            }
-
             return handActions;
         }
 

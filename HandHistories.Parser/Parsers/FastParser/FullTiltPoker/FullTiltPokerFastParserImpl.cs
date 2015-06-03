@@ -1170,12 +1170,5 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         {
             throw new NotImplementedException();
         }
-
-        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
-        {
-            handActions = AdjustRaiseSizes(handActions);
-
-            return UncalledBet.Fix(handActions);
-        }
     }
 }
