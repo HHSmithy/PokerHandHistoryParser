@@ -1,0 +1,36 @@
+﻿***** Hand History for Game 14507003662 *****
+$1/$2 USD NL Texas Hold'em - Saturday, April 11, 13:57:03 EDT 2015
+Table Abuja (Real Money)
+Seat 2 is the button
+Total number of players : 6/6 
+Seat 2: LoudAndFast ( $296.69 USD )
+Seat 4: MrBumBumBum ( $169.83 USD )
+Seat 1: Peacli ( $97.37 USD )
+Seat 3: StreetsAhead ( $243.55 USD )
+Seat 6: oONUKAo ( $200 USD )
+Seat 5: peace_da_ball ( $197.58 USD )
+StreetsAhead posts small blind [$1 USD].
+peace_da_ball posts big blind [$2 USD].
+Peacli posts big blind + dead [$3].
+** Dealing down cards **
+oONUKAo folds
+Peacli raises [$2 USD]
+LoudAndFast folds
+StreetsAhead folds
+peace_da_ball will be using their time bank for this hand.
+peace_da_ball calls [$2 USD]
+** Dealing Flop ** [ 4h, 4s, Jh ]
+peace_da_ball will be using their time bank for this hand.
+peace_da_ball bets [$7.12 USD]
+Peacli calls [$7.12 USD]
+** Dealing Turn ** [ 6s ]
+peace_da_ball will be using their time bank for this hand.
+peace_da_ball bets [$14 USD]
+Peacli calls [$14 USD]
+** Dealing River ** [ 5s ]
+peace_da_ball will be using their time bank for this hand.
+peace_da_ball checks
+Peacli checks
+peace_da_ball shows [ Td, Jc ]two pairs, Jacks and Fours.
+Peacli doesn't show [ 6h, Ks ]two pairs, Sixes and Fours.
+peace_da_ball wins $49.63 USD from the main pot with two pairs, Jacks and Fours.

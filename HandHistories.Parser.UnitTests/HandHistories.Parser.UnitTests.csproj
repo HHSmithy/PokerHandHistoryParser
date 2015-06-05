@@ -28,6 +28,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,11 +52,13 @@
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="NLog">
-      <HintPath>..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NLog.3.2.1\lib\net40\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,7 +73,8 @@
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
-    <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsRunItTwiceTests.cs" />
+    <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsFullTilt.cs" />
+    <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsPokerStars.cs" />
     <Compile Include="Parsers\HandParserTests\CommunityCardTests\HandParserCommunityCardTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsBossMedia.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsFullTiltImpl.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsHandSummaryParserExtraTests.cs" />
     <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsWinamaxImpl.cs" />
     <Compile Include="Parsers\HandParserTests\Players\HandParserPlayersTestsWinningPoker.cs" />
+    <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\GameTypes\HandParserGameTypeTests.cs" />
     <Compile Include="Parsers\Base\ISampleHandHistoryRepository.cs" />
     <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
@@ -115,6 +121,20 @@
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsFullTilt.cs" />
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsPokerStars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SampleHandHistories\FullTilt\CashGame\BlindActionTests\Posting.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\FullTilt\CashGame\HandActionTests\AllInOnFlop.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\FullTilt\CashGame\PlayerTests\AllInOnFlop.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\FullTilt\CashGame\RunItTwiceTests\RunItTwice1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Utils\AllInActionHelperTests\AllInActionHelperTests.AllInActionType.cs" />
+    <Compile Include="Utils\AllInActionHelperTests\AllInActionHelperTests.AdjustedCallAllIn.cs" />
     <Compile Include="Utils\Pot\PotCalculatorTests.cs" />
     <Content Include="SampleHandHistories\BossMedia\CashGame\GameTypeTests\FixedLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -357,6 +377,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\BasicHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\Disconnected.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\FoldedPreflop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -435,10 +458,22 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\HandActionTests\PostingDead.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Limits\Limit5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\PlayerLeavingTable.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\Posting.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\SittingOut.txt">
@@ -1095,6 +1130,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\RunItTwice.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\ShowWithoutShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1502,6 +1540,13 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -57,6 +57,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
         }
 
+        protected override string[] SplitHandsLines(string handText)
+        {
+            return base.SplitHandsLines(handText)
+                .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
+                .ToArray();
+        }
+
         protected override int ParseDealerPosition(string[] handLines)
         {
             // Expect the 6th line to look like this:
@@ -149,7 +156,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // Expect the first line to look like this: 
             // "***** Hand History for Game 13550493674 *****"
             const int firstDigitIndex = 28;  //= "***** Hand History for Game ".Length
-            int lastDigitIndex = handLines[0].IndexOf(' ', firstDigitIndex);
+
+            string line = handLines[0];
+            int lastDigitIndex = line.IndexOf(' ', firstDigitIndex);
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
@@ -378,12 +387,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
 
-            int firstActionIndex = GetFirstActionIndex(handLines);
+            int actionIndex = GetFirstActionIndex(handLines);
 
-            List<HandAction> handActions = new List<HandAction>(handLines.Length - firstActionIndex);
+            List<HandAction> handActions = new List<HandAction>(handLines.Length - actionIndex);
+
+            actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
+
             Street currentStreet = Street.Preflop;
 
-            for (int lineNumber = firstActionIndex; lineNumber < handLines.Length; lineNumber++)
+            for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
             {
                 string handLine = handLines[lineNumber];
 
@@ -457,8 +469,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             char lastChar = line[line.Length - 1];
             HandAction action = null;
 
-            // TODO: THIS MIGHT NEED FIXING
-            if (IsChatLine(line)) return false;
+            if (isChatLine(line))
+            {
+                return false;
+            }
 
             switch (lastChar)
             {
@@ -468,6 +482,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case '.':
                     action = ParseDotAction(line, currentStreet);
                     break;
+
                 case ']':
                     char firstChar = line[0];
                     if (firstChar == '*')
@@ -484,35 +499,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                         action = ParseActionWithSize(line, currentStreet);
                     }
                     break;
+
                 case 's':
                     action = ParseActionWithoutSize(line, currentStreet);
                     break;
-
-                //Expected format:
-                //** Dealing down cards **
-                case '*':
-                    currentStreet = Street.Preflop;
-                    return false;
                 
                 //Expected Formats:
                 //"Player wins $5.18 USD"
                 case 'D':
                     action = ParseWinsAction(line);
                     break;
-
-                //Player4 is sitting out
-                case 't':
-                    return false;
-
-                //hvill32za could not respond in time.(disconnected)
-                //hvill32za could not respond in time
-                case ')':
-                case 'e':
-                    return false;
-
-                default:
-                    return false;
-                    // throw new ArgumentException("Unknown lastchar: '" + lastChar + "'");
             }
 
             if (action != null)
@@ -526,6 +522,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             // TODO: check if there are other possibilities
             return line.IndexOf(':') > -1;
+        }
+
+        static bool isChatLine(string line)
+        {
+            return line.Contains(": ");
         }
 
         static HandAction ParseWinsAction(string line, int potID = 0)
@@ -604,6 +605,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             const int deadBigBlindWidth = 24;//" posts big blind + dead ".Length
 
             string playerName;
+            int playerNameIndex = 0;
+
             char lastChar = line[line.Length - 2];
             if (lastChar == ']')
             {
@@ -631,39 +634,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     default:
                         throw new ArgumentException("Unkown posting Action: " + line);
                 }
-            }
-
-            int playerNameIndex = 0;
-            if (line.EndsWith("this hand."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" has left the table."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" has joined the table."))
-            {
-                return null;
-            }
-            else if (line.EndsWith(" seconds to respond."))
-            {
-                return null;
-            }
-            // Targuist1974 has been reconnected and has 20 seconds to act.
-            else if (line.EndsWith(" seconds to act."))
-            {
-                return null;
-            }
-            // tomatenqn is disconnected. We will wait for tomatenqn to reconnect for a maximum of 15 seconds.
-            else if (line.Contains(" is disconnected."))
-            {
-                return null;
-            }
-            //Your time bank will be activated in 6 secs. If you do not want it to be used, please act now.
-            else if (line.EndsWith(" please act now."))
-            {
-                return null;
             }
             else if (line.Contains(" shows"))
             {
@@ -730,7 +700,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 playerName = line.Remove(playerNameIndex);
                 return new HandAction(playerName, HandActionType.SHOW, 0m, street);
             }
-            throw new ArgumentException("Unknown Action: " + line);
+
+            return null;
         }
 
         static bool isWinType(string line, string type, ref int index)
@@ -986,6 +957,66 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 }
             }
             return null;
+        }
+
+        public int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex)
+        {
+            const int smallBlindWidth = 19;//" posts small blind ".Length
+            const int bigBlindWidth = 17;//" posts big blind ".Length
+            const int PostingWidth = 24;//" posts big blind + dead ".Length
+
+            for (int i = firstActionIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                char lastChar = line[line.Length - 2];
+                if (lastChar == ']')
+                {
+                    int amountStartIndex = line.LastIndexOf('[');
+                    string playerName;
+                    HandActionType action;
+                    decimal amount;
+
+                    char blindIdentifier = line[amountStartIndex - 9];
+
+                    switch (blindIdentifier)
+                    {
+                        //"Player posts big blind [$10 USD]."
+                        case 'i':
+                            playerName = line.Remove(amountStartIndex - bigBlindWidth);
+                            action = HandActionType.BIG_BLIND;
+                            amount = ParseDecimal(line, amountStartIndex + 2);
+                            break;
+
+                        //"Player posts small blind [$5 USD]."
+                        case 'l':
+                            playerName = line.Remove(amountStartIndex - smallBlindWidth);
+                            action = HandActionType.SMALL_BLIND;
+                            amount = ParseDecimal(line, amountStartIndex + 2);
+                            break;
+
+                        //Peacli posts big blind + dead [$3].
+                        case 'd':
+                            playerName = line.Remove(amountStartIndex - PostingWidth);
+                            action = HandActionType.POSTS;
+                            string deadString = line.Substring(amountStartIndex + 2, line.Length - amountStartIndex - 2 - 2);
+                            amount = ParseDecimal(line, amountStartIndex + 2);
+                            break;
+
+                        default:
+                            throw new ArgumentException("Unknown posting Action: " + line);
+                    }
+
+                    handActions.Add(new HandAction(playerName, action, amount, Street.Preflop));
+                }
+
+                if (line == "** Dealing down cards **")
+                {
+                    return i + 1;
+                }
+            }
+
+            throw new HandActionException(string.Join(Environment.NewLine, handLines), "No cards was dealt");
         }
     }
 }

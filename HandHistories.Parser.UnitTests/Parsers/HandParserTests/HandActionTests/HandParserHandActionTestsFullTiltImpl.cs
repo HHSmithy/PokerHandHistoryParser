@@ -14,6 +14,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+        [Test]
+        public void ParseHandActions_AllInOnFlop()
+        {
+            var expected = new List<HandAction>()
+            {
+                new HandAction("1mperial", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
+                new HandAction("Postrail", HandActionType.BIG_BLIND, 10m, Street.Preflop),
+                new HandAction("Darkking_pt", HandActionType.FOLD, Street.Preflop),
+                new HandAction("ginalisa18", HandActionType.CALL, 10m, Street.Preflop),
+                new HandAction("1mperial", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Postrail", HandActionType.RAISE, 30m, Street.Preflop),
+                new HandAction("ginalisa18", HandActionType.RAISE, 70m, Street.Preflop),
+                new HandAction("Postrail", HandActionType.CALL, 40m, Street.Preflop),
+
+                new HandAction("Postrail", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("ginalisa18", HandActionType.BET, 120m, Street.Flop),
+                new HandAction("Postrail", HandActionType.RAISE, 220m, Street.Flop, true),
+                new HandAction("ginalisa18", HandActionType.CALL, 100m, Street.Flop, true),
+                new HandAction("Postrail", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("ginalisa18", HandActionType.SHOW, 0m, Street.Showdown),
+                new WinningsAction("Postrail", HandActionType.WINS, 603m, 0),
+            };
+
+            TestParseActions("AllInOnFlop", expected);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get
@@ -28,7 +54,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Rene Lacoste", HandActionType.BET, 20m, Street.Flop),
                     new HandAction("ElkY", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("Rene Lacoste", HandActionType.UNCALLED_BET, 20m, Street.Flop),
-                    new HandAction("Rene Lacoste", HandActionType.MUCKS, 0m, Street.Flop),
+                    new HandAction("Rene Lacoste", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("Rene Lacoste", HandActionType.WINS, 39.50m, 0),
                 };
 
@@ -46,7 +72,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("goSuckout", HandActionType.BIG_BLIND, 10m, Street.Preflop),
                     new HandAction("gosuoposum1", HandActionType.FOLD, 0m, Street.Preflop),
                     new HandAction("goSuckout", HandActionType.UNCALLED_BET, 5m, Street.Preflop),
-                    new HandAction("goSuckout", HandActionType.MUCKS, 0m, Street.Preflop),
+                    new HandAction("goSuckout", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("goSuckout", HandActionType.WINS, 10m, 0),
                 };
 
@@ -69,7 +95,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("theking881", HandActionType.BET, 30m, Street.Flop),
                     new HandAction("jobetzu", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("theking881", HandActionType.UNCALLED_BET, 30m, Street.Flop),
-                    new HandAction("theking881", HandActionType.MUCKS, 0m, Street.Flop),
+                    new HandAction("theking881", HandActionType.MUCKS, 0m, Street.Showdown),
                     new WinningsAction("theking881", HandActionType.WINS, 99.50m, 0),
                 };
 

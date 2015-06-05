@@ -75,7 +75,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             foreach (var item in allLines)
             {
-                if (string.IsNullOrWhiteSpace(item))
+                string line = item.TrimEnd('\r', ' ');
+
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     if (handLines.Count > 0)
                     {
@@ -84,7 +86,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     }
                     continue;
                 }
-                handLines.Add(item.TrimEnd('\r', ' '));
+                handLines.Add(line);
             }
 
             if (handLines.Count > 0)
@@ -559,31 +561,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
 
-            Street currentStreet = Street.Preflop;
+            Street currentStreet;
 
-            for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
-            {
-                string handLine = handLines[lineNumber];
-
-                try
-                {
-                    bool isFinished = ParseLine(handLine, ref currentStreet, ref handActions);
-
-                    if (isFinished)
-                    {
-                        actionIndex = lineNumber + 1;
-                        break;
-                    }
-                }
-                catch (RunItTwiceHandException)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
-                }
-            }
+            actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out currentStreet);
 
             if (currentStreet == Street.Showdown)
             {
@@ -1311,6 +1291,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     playerList[playerName].HoleCards = HoleCards.FromCards(cards);
                 }
             }
+            else
+            {
+                //Check for player shows
+                for (int i = summaryIndex - 1; i > 0; i--)
+                {
+                    string line = handLines[i];
+
+                    if (line.EndsWith(")") && line.Contains(": shows ["))
+                    {
+                        int nameEndIndex = line.IndexOf(": shows [", StringComparison.Ordinal);
+
+                        string playerName = line.Remove(nameEndIndex);
+
+                        int cardsStartIndex = nameEndIndex + 9;
+                        int cardsEndIndex = line.IndexOf(']', cardsStartIndex);
+
+                        string cards = line.Substring(cardsStartIndex, cardsEndIndex - cardsStartIndex);
+
+                        playerList[playerName].HoleCards = HoleCards.FromCards(cards);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
 
             return playerList;
         }
@@ -1470,6 +1476,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             ParseShowDown(handLines, ref rit.Actions, secondShowDownIndex, GameType.Unknown);
 
             return rit;
+        }
+
+
+        public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street currentStreet)
+        {
+            currentStreet = Street.Preflop;
+
+            for (int lineNumber = firstActionIndex; lineNumber < handLines.Length; lineNumber++)
+            {
+                string handLine = handLines[lineNumber];
+
+                try
+                {
+                    bool isFinished = ParseLine(handLine, ref currentStreet, ref handActions);
+
+                    if (isFinished)
+                    {
+                        return lineNumber + 1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
+                }
+            }
+            throw new InvalidHandException(string.Join(Environment.NewLine, handLines));
         }
     }
 }

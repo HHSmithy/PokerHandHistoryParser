@@ -1,4 +1,5 @@
 ﻿using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using System;
@@ -16,7 +17,7 @@ namespace HandHistories.Parser.Parsers.Base
     {
         int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex);
 
-        //int ParseHandActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex);
+        int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street street);
 
         void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, GameType gameType);
     }

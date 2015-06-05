@@ -10,7 +10,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
     [TestFixture("OnGameIt")]
     [TestFixture("PokerStars", "$0.05-$0.10", "$0.50-$1", "$5-$10", "$100-$200", "$200-$400", "$1-$2")]
     [TestFixture("IPoker", "e0.05-e0.10", "£0.50-£1", "$5-$10")]
-    [TestFixture("Pacific", "$0.05-$0.10", "$0.50-$1", "$100-$200", "$5-$10")]
+    [TestFixture("Pacific", "$0.05-$0.10", "$0.50-$1", "$100-$200", "$5-$10", "$25-$50")]
     [TestFixture("Merge", "$0.05-$0.10", "$0.50-$1", "$1-$2", "$5-$10", "$10-$20")]
     // Note: Have to use e instead of € otherwise the test runner reports inconclusive. Have reported this bug.
     [TestFixture("Entraction", "e0.02-e0.04", "e2-e4", "e25-e50", "e0.50-e1", "e15-e30")]

@@ -14,14 +14,31 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
-        public void ParsePlayers_NoHoleCards()
+        public void ParsePlayers_ShowWithoutShowdown()
         {
-            //Seat 1: jedimaster82 ($1000 in chips) 
-            //Seat 2: OneMoreSpin ($1859.80 in chips) 
-            //Seat 3: FLATC@T ($2000 in chips) 
-            //Seat 4: KENZA_MILOU ($1000 in chips) 
-            //Seat 5: Legheliel ($2000 in chips) 
-            //Seat 6: danfiu ($2000 in chips) 
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("TheHoboKing", 187.76m, 1),
+                new Player("gio_pot7", 1312.61m, 2),
+                new Player("princepemega", 237.45m, 3),
+                new Player("Chip-phage", 400m, 4)
+                {
+                    HoleCards = HoleCards.ForOmaha(
+                    new Card('2', 'c'), 
+                    new Card('7', 'd'),
+                    new Card('8', 'c'),
+                    new Card('Q', 'h'))
+                },
+                new Player("YoungAKGun", 657.14m, 5),
+                new Player("Zsipali", 432.12m, 6),
+            });
+
+            TestParsePlayers("ShowWithoutShowdown", expected);
+        }
+
+        [Test]
+        public void ParsePlayers_RunItTwice()
+        {
             var expected = new PlayerList(new List<Player>()
             {
                 new Player("jedimaster82", 1000, 1),

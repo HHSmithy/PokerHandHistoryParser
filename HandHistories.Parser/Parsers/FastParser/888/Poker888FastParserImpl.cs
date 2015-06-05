@@ -11,11 +11,15 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.Strings;
+using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
     public sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
     {
+        static readonly CultureInfo invariant = CultureInfo.InvariantCulture;
+
         public override SiteName SiteName
         {
             get { return SiteName.Pacific; }
@@ -128,6 +132,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             switch (gameTypeString)
             {
                 case "No Limit Holdem":
+                case "No Limit Holdem Jackpot table":
                     return GameType.NoLimitHoldem;
                 case "Fix Limit Holdem":
                     return GameType.FixedLimitHoldem;
@@ -156,6 +161,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
+            bool isjackPotTable = handLines[2].Contains(" Jackpot table");
+           
             var playerList = ParsePlayers(handLines);
             var limit = ParseLimit(handLines);
 
@@ -176,17 +183,36 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             if (tableStack / limit.BigBlind / playerList.Count <= 17.5m)
             {
+                if (isjackPotTable)
+                {
+                    return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold, TableTypeDescription.Jackpot);
+                }
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
             }
-            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+            if (isjackPotTable)
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
+            }
+            else
+            {
+                return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
+            }
         }
 
-        private static readonly Regex LowLimitRegex = new Regex(@"([\d,]+|[\d,]+\.\d+)(?=/)", RegexOptions.Compiled);
-        private static readonly Regex HighLimitRegex = new Regex(@"(?<=/.)([\d,]+)(\.\d+){0,1}", RegexOptions.Compiled);
         protected override Limit ParseLimit(string[] handLines)
         {
-            string lowLimitString = LowLimitRegex.Match(handLines[2]).Value;
-            string highLimitString = HighLimitRegex.Match(handLines[2]).Value;
+            string line = handLines[2];
+
+            int LimitEndIndex = line.IndexOf(" Blinds", StringComparison.Ordinal);
+            string limitString = line.Remove(LimitEndIndex)
+                .Replace(" ", "")
+                .Replace("$", "")
+                ;
+
+            int splitIndex = limitString.IndexOf('/');
+
+            string lowLimitString = limitString.Remove(splitIndex);
+            string highLimitString = limitString.Substring(splitIndex + 1);
 
             decimal lowLimit = ParseAmount(lowLimitString);
             decimal highLimit = ParseAmount(highLimitString);
@@ -308,31 +334,37 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 {
                     int openSquareIndex = handLine.LastIndexOf('[');
                     string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
+
                     decimal amount = ParseAmount(amountString);
 
                     string action = handLine.Substring(openSquareIndex - 8, 7);
 
                     if (currentStreet == Street.Preflop)
                     {
-                        if (action.Equals("l blind")) // small blind
+                        if (action.Equals("l blind", StringComparison.Ordinal)) // small blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 19);
+                            amount = ParseAmount(amountString);
                             handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet));
                             continue;
                         }
-                        else if (action.Equals("g blind")) // big blind
+                        else if (action.Equals("g blind", StringComparison.Ordinal)) // big blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 17);
+                            amount = ParseAmount(amountString);
                             handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet));
                             continue;
                         }
-                        else if (action.Equals("d blind")) // dead blind
+                        else if(action.Equals("d blind", StringComparison.Ordinal))//dead blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 18);
+                            amount = ParseDeadBlindAmount(amountString);
                             handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet));
                             continue;
                         }
                     }
+
+                    amount = ParseAmount(amountString);
                     
                     if (action.EndsWith("raises"))
                     {
@@ -352,18 +384,17 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet));
                         continue;
                     }
-                    
                 }
-                else if (handLine.EndsWith("folds"))
+                else if (handLine.FastEndsWith("folds"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 6);
-                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, currentStreet));
                     continue;
                 }
                 else if (handLine.EndsWith("checks"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 7);
-                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, 0, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, currentStreet));
                     continue;
                 }                
 
@@ -373,7 +404,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return FixUncalledBets(handActions, null, null);
         }
 
-        private decimal ParseAmount(string amountString)
+        private static decimal ParseAmount(string amountString)
         {
             // this split helps us parsing dead posts like [$0.10 + $0.05]
             var splittedAmounts = amountString.Split('+');
@@ -385,6 +416,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             }
 
             return result;
+        }
+
+        static decimal ParseDeadBlindAmount(string amountString)
+        {
+            int plusIndex = amountString.IndexOf('+');
+            string amountStr1 = amountString.Remove(plusIndex);
+            string amountStr2 = amountString.Substring(plusIndex + 1);
+
+            decimal amount1 = ParseAmount(amountStr1);
+            decimal amount2 = ParseAmount(amountStr2);
+
+            return amount1 + amount2;
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)

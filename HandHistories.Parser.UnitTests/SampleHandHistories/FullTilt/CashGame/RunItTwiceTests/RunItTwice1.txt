@@ -1,0 +1,62 @@
+﻿
+Full Tilt Poker Game #35456787343: Table Myron (6 max) - CAP NL Hold'em - $5/$10 - 04:44:44 ET - 2015/04/08
+Seat 1: zekulya ($300), is sitting out
+Seat 2: ginalisa18 ($877.65)
+Seat 3: VanyaRabotaet ($609.35)
+Seat 4: 1mperial ($752.25)
+Seat 5: Postrail ($600)
+Seat 6: Darkking_pt ($300)
+VanyaRabotaet posts the small blind of $5
+1mperial posts the big blind of $10
+The button is in seat #2
+*** HOLE CARDS ***
+Dealt to Postrail [5s Ah]
+Postrail folds
+Darkking_pt raises to $20
+ginalisa18 calls $20
+VanyaRabotaet folds
+1mperial calls $10
+*** FLOP *** [Td 3d 3h] (Total Pot: $65, 3 Players)
+1mperial checks
+Darkking_pt bets $40
+ginalisa18 folds
+1mperial calls $40
+*** TURN *** [Td 3d 3h] [Qh] (Total Pot: $145, 2 Players)
+1mperial checks
+Darkking_pt bets $72.50
+1mperial has 15 seconds left to act
+1mperial raises to $240, and is capped
+Darkking_pt calls $167.50, and is capped
+Players agree to Run It Twice
+1mperial shows [Jd Qd]
+Darkking_pt shows [6d Ad]
+*** RIVER 1 *** [Td 3d 3h Qh] [Ac] (Total Pot: $625, 2 Players, 2 All-In)
+*** RIVER 2 *** [Td 3d 3h Qh] [2h] (Total Pot: $625, 2 Players, 2 All-In)
+*** SHOW DOWN 1 ***
+1mperial shows two pair, Queens and Threes
+Darkking_pt shows two pair, Aces and Threes
+*** SHOW DOWN 2 ***
+1mperial shows two pair, Queens and Threes
+Darkking_pt shows a pair of Threes
+Darkking_pt wins pot 1 ($311) with two pair, Aces and Threes
+1mperial wins pot 2 ($311) with two pair, Queens and Threes
+*** SUMMARY ***
+Total pot $625 | Rake $3
+*** SUMMARY 1 ***
+Pot 1 $311
+Board: [Td 3d 3h Qh Ac]
+Seat 1: zekulya is sitting out
+Seat 2: ginalisa18 (button) folded on the Flop
+Seat 3: VanyaRabotaet (small blind) folded before the Flop
+Seat 4: 1mperial (big blind) showed [Jd Qd] and lost with two pair, Queens and Threes
+Seat 5: Postrail didn't bet (folded)
+Seat 6: Darkking_pt showed [6d Ad] and won ($311) with two pair, Aces and Threes
+*** SUMMARY 2 ***
+Pot 2 $311
+Board: [Td 3d 3h Qh 2h]
+Seat 1: zekulya is sitting out
+Seat 2: ginalisa18 (button) folded on the Flop
+Seat 3: VanyaRabotaet (small blind) folded before the Flop
+Seat 4: 1mperial (big blind) showed [Jd Qd] and won ($311) with two pair, Queens and Threes
+Seat 5: Postrail didn't bet (folded)
+Seat 6: Darkking_pt showed [6d Ad] and lost with a pair of Threes
