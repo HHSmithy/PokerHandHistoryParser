@@ -97,8 +97,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("kliketiklok", HandActionType.CHECK,  0m, Street.Flop),
                                new HandAction("fyabcf", HandActionType.BET, 18m, Street.Flop),    
                                new HandAction("kliketiklok", HandActionType.RAISE,  36m, Street.Flop),
-                               new AllInAction("fyabcf", 192.15m, Street.Flop,true),    
-                               new AllInAction("kliketiklok", 50.91m, Street.Flop,false),    
+                               new HandAction("fyabcf", HandActionType.RAISE, 192.15m, Street.Flop, AllInAction: true),
+                               new HandAction("kliketiklok", HandActionType.CALL, 50.91m, Street.Flop, AllInAction: true),    
                                
                                new WinningsAction("fyabcf", HandActionType.WINS, 226.82m, 0),
                            };

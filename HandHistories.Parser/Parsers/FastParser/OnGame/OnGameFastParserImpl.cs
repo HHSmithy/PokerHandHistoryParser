@@ -535,37 +535,16 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     {
                         case 'l': // calls
                             playerName = handLine.Substring(0, currencyIndex - 7);
-                            if (isAllIn)
-                            {
-                                handActions.Add(new AllInAction(playerName, amount, currentStreet, false));   
-                            }
-                            else
-                            {
-                                handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet));
-                            }
+                            handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet, isAllIn));
                             break;
                         case 'e': // raises
                             // ex: zatli74 raises $1.00 to $1.00
                             playerName = handLine.Substring(0, currencyIndex - 8);
-                            if (isAllIn)
-                            {
-                                handActions.Add(new AllInAction(playerName, amount, currentStreet, true));   
-                            }
-                            else
-                            {
-                                handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet));
-                            }
+                            handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet, isAllIn));
                             break;
                         case 't': // bets
                             playerName = handLine.Substring(0, currencyIndex - 6);
-                            if (isAllIn)
-                            {
-                                handActions.Add(new AllInAction(playerName, amount, currentStreet, false));   
-                            }
-                            else
-                            {
-                                handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet));    
-                            }
+                            handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet, isAllIn));    
                             break;
                     }
                     continue;
