@@ -39,6 +39,14 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
             {
                 NegativeSign = "-",

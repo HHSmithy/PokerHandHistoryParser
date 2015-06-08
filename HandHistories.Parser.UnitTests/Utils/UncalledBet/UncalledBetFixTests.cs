@@ -119,5 +119,44 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
 
             TestUncalledbet("P1", 4m, hand);
         }
+
+        [TestCase]
+        public void UncalledBetTest_PartiallyUncalledRaise_2()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.CALL, 2m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.BET, 1m, Street.Flop),
+                new HandAction("P3", HandActionType.RAISE, 6m, Street.Flop),
+                new HandAction("P1", HandActionType.CALL, 1m, Street.Flop, true),
+                new HandAction("P2", HandActionType.CALL, 3m, Street.Flop, true),
+            };
+
+            TestUncalledbet("P3", 2m, hand);
+        }
+
+        [TestCase]
+        public void UncalledBetTest_PartiallyUncalledRaise_3()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.RAISE, 4m, Street.Preflop),
+                new HandAction("P4", HandActionType.CALL, 2m, Street.Preflop, true),
+            };
+
+            TestUncalledbet("P3", 2m, hand);
+        }
     }
 }

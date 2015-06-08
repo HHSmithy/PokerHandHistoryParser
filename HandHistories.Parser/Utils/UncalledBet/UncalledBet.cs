@@ -44,7 +44,7 @@ namespace HandHistories.Parser.Utils.Uncalled
                 case HandActionType.CALL:
                     if (lastAction.IsAllIn)
                     {
-                        handActions.Add(GetPartiallyUncalledRaise(realActions, lastAction));
+                        handActions.Add(GetPartiallyUncalledRaise(realActions));
                     }
                     break;
             }
@@ -52,27 +52,11 @@ namespace HandHistories.Parser.Utils.Uncalled
             return handActions;
         }
 
-        private static HandAction GetPartiallyUncalledRaise(List<HandAction> realActions, HandAction lastAction)
+        private static HandAction GetPartiallyUncalledRaise(List<HandAction> realActions)
         {
-            decimal calledAmount = 0;
+            var lastRaiser = realActions.Last(p => p.IsAggressiveAction);
 
-            List<HandAction> uncalledRaiseActions = null;
-
-            for (int i = realActions.Count - 1; i > 0; i--)
-            {
-                var action = realActions[i];
-                if (action.IsAggressiveAction)
-                {
-                    uncalledRaiseActions = realActions.Take(i + 1).ToList();
-                    break;
-                }
-
-                calledAmount += action.Amount;
-            }
-
-            var UncalledRaise = GetUncalledRaise(uncalledRaiseActions, uncalledRaiseActions.Last());
-
-            UncalledRaise.DecreaseAmount(calledAmount);
+            var UncalledRaise = GetUncalledRaise(realActions, lastRaiser);
 
             return UncalledRaise;
         }
@@ -81,15 +65,15 @@ namespace HandHistories.Parser.Utils.Uncalled
         /// 
         /// </summary>
         /// <param name="realActions">a list of handactions only containing CALL/BET/RAISE</param>
-        /// <param name="lastAction">the last realAction</param>
+        /// <param name="lastRaiser">the last realAction</param>
         /// <returns>an Uncalled Bet action</returns>
-        private static HandAction GetUncalledRaise(List<HandAction> realActions, HandAction lastAction)
+        private static HandAction GetUncalledRaise(List<HandAction> realActions, HandAction lastRaiser)
         {
             // amount to return is the amount the raise player invested - the 2nd largest amount invested by a different player
-            var totalInvestedAmount = realActions.Where(a => a.PlayerName.Equals(lastAction.PlayerName)).Sum(a => a.Amount);
+            var totalInvestedAmount = realActions.Where(a => a.PlayerName.Equals(lastRaiser.PlayerName)).Sum(a => a.Amount);
 
             // now we need to get the maximum amount invested by a different player involved in the hand
-            var totalInvestedAmountOtherPlayer = realActions.Where(a => !a.PlayerName.Equals(lastAction.PlayerName)).GroupBy(a => a.PlayerName)
+            var totalInvestedAmountOtherPlayer = realActions.Where(a => !a.PlayerName.Equals(lastRaiser.PlayerName)).GroupBy(a => a.PlayerName)
                                                             .Select(p => new
                                                             {
                                                                 PlayerName = p.Key,
@@ -98,7 +82,7 @@ namespace HandHistories.Parser.Utils.Uncalled
                                                             .Min(x => x.Invested); // money invested is negative, so take the "max" negative value
 
 
-            return new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, lastAction.Street);
+            return new HandAction(lastRaiser.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, lastRaiser.Street);
         }
 
         /// <summary>
