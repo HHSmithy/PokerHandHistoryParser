@@ -281,31 +281,22 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     //<RESULT WINTYPE="WINTYPE_HILO" PLAYER="ItalyToast" WIN="105.08" HAND="$(STR_BY_DEFAULT)" WINCARDS="" HANDEXT=" 8,7,5,2,A">
                     if (Line[1] == 'R')
                     {
-                        const int winTypeIndex = 8;
-                        string playerName;
-                        int playerEndIndex;
-                        if (Line[winTypeIndex] == 'W')
+                        string playerName = GetXMLAttributeValue(Line, "PLAYER");
+
+                        decimal amount = Decimal.Parse(GetXMLAttributeValue(Line, "WIN"), provider);
+
+                        if (amount > 0)
                         {
-                            //OmahaHiLo
-                            const int winTypeStartIndex = 17;
-                            int winTypeEndIndex = Line.IndexOf('\"', winTypeStartIndex);
-                            int playerStartIndex = winTypeEndIndex + 10;
-                            playerEndIndex = Line.IndexOf('\"', playerStartIndex);
-                            playerName = Line.Substring(playerStartIndex, playerEndIndex - playerStartIndex);
+                            actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
                         }
                         else
                         {
-                            const int playerStartIndex = 16;
-                            playerEndIndex = Line.IndexOf('\"', playerStartIndex);
-                            playerName = Line.Substring(playerStartIndex, playerEndIndex - playerStartIndex);
-                        }
-
-                        int winAmountStartIndex = playerEndIndex + 7;
-                        decimal amount = GetActionAmount(Line, winAmountStartIndex);
-
-                        if (amount != 0)
-                        {
-                            actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                            const string MuckHand =  "$(STR_G_MUCK)";
+                            string hand = GetXMLAttributeValue(Line, "HAND");
+                            if (hand == MuckHand)
+                            {
+                                actions.Add(new HandAction(playerName, HandActionType.MUCKS, amount, Street.Showdown));
+                            }
                         }
                     }
                 }
@@ -728,10 +719,23 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return BossCardLookup[cardID];
         }
 
+        /// <summary>
+        /// tries to find a XML attribute
+        /// </summary>
+        /// <param name="Line"></param>
+        /// <param name="Name"></param>
+        /// <returns>return the value of the attribute, if an attribute is not found, it returns null</returns>
         static string GetXMLAttributeValue(string Line, string Name)
         {
             string search = " " + Name + "=\"";
-            int startIndex = Line.IndexOf(search) + search.Length;
+            int startIndex = Line.IndexOf(search);
+
+            if (startIndex == -1)
+            {
+                return null;
+            }
+
+            startIndex += search.Length;
             int endIndex = Line.IndexOf('\"', startIndex);
             return Line.Substring(startIndex, endIndex - startIndex);
         }
