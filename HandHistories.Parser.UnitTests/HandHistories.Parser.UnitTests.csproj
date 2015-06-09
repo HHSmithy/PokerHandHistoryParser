@@ -118,6 +118,7 @@
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.CashGame.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Seats\HandParserSeatTypeTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\SplitUpMultipleHandsTests\HandParserSplitUpMultipleHanddsToLinesTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\SplitUpMultipleHandsTests\HandParserSplitUpMultipleHandsTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />

@@ -9,6 +9,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using System.Globalization;
 using System.Linq;
 using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
@@ -67,6 +68,51 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return base.SplitHandsLines(handText)
                 .TakeWhile(p => !p.StartsWith("Game #", StringComparison.Ordinal) && !p.EndsWith(" starts.", StringComparison.Ordinal))
                 .ToArray();
+        }
+
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            return SplitUpMultipleHandsToLines(rawHandHistories).Select(p => string.Join("\r\n", p));
+        }
+
+        public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
+        {
+            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', jump: 10, jumpAfter: 2);
+
+            List<string> handLines = new List<string>(50);
+
+            bool validHand = false;
+
+            foreach (var item in allLines)
+            {
+                if (!validHand)
+                {
+                    if (!item.StartsWith("***** Hand History", StringComparison.Ordinal))
+                    {
+                        continue;
+                    }
+                    validHand = true;
+                }
+
+                string line = item.TrimEnd('\r', ' ');
+
+                if (string.IsNullOrWhiteSpace(line) || 
+                    (line.StartsWith("Game #", StringComparison.Ordinal) && line.EndsWith(" starts.", StringComparison.Ordinal)))
+                {
+                    if (handLines.Count > 0)
+                    {
+                        yield return handLines.ToArray();
+                        handLines = new List<string>(50);
+                    }
+                    continue;
+                }
+                handLines.Add(line);
+            }
+
+            if (handLines.Count > 0)
+            {
+                yield return handLines.ToArray();
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)
