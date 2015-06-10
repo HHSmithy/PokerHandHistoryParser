@@ -733,7 +733,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                             //Skipping Second showdown, that is parsed with ParseRunItTwice
                             //*** SECOND SHOW DOWN ***
                             case 'E':
-                                continue;
+                                return;
 
                             default:
                                 throw new ArgumentException("Unhandled line: " + line);

@@ -433,6 +433,15 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         }
                         continue;
 
+                    case 'e':
+                        if (line == "Players agree to Run It Twice")
+                        {
+                            i++;
+                            ParseRunItTwiceShowDown_Run1(handLines, ref actions, i);
+                            return actions;
+                        }
+                        continue;
+
                     //Opponent3 has requested TIME
                     //jobetzu has 15 seconds left to act
                     default:
@@ -461,6 +470,40 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return true;
         }
 
+        public static void ParseRunItTwiceShowDown_Run1(string[] handLines, ref List<HandAction> actions, int lineIndex)
+        {
+            for (int i = lineIndex; i < handLines.Length; i++)
+            {
+                var line = handLines[i];
+
+                char lastChar = line[line.Length - 1];
+
+                if (lastChar == ']')
+                {
+                    actions.Add(ParseShowAction(line));
+                    continue;
+                }
+                else if (line == "*** SUMMARY ***")
+                {
+                    return;
+                }
+                else if (line.IndexOf(" wins pot 1 (", StringComparison.Ordinal) != -1)
+                {
+                    int nameEndIndex = line.IndexOf(" wins pot 1 (", StringComparison.Ordinal);
+
+                    string playerName = line.Remove(nameEndIndex);
+
+                    int amountStartIndex = line.IndexOf('(', nameEndIndex) + 1;
+                    int amountEndString = line.IndexOf(')', amountStartIndex);
+
+                    string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
+
+                    decimal amount = ParseAmount(amountString);
+
+                    actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                }
+            }
+        }
 
         public void ParseShowDown(string[] handLines, ref List<HandAction> actions, int lineIndex, GameType gametype)
         {
@@ -468,11 +511,15 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             {
                 var line = handLines[i];
 
+                if (line == "*** SUMMARY ***")
+                {
+                    return;
+                }
+
                 if (line.EndsWith(" mucks"))
                 {
                     actions.Add(new HandAction(line.Remove(line.Length - 6), HandActionType.MUCKS, 0m, Street.Showdown));
                 }
-
                 else if (line.Contains(" wins "))
                 {
                     int nameEndIndex = -1;
@@ -497,60 +544,27 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     int amountEndString = line.IndexOf(')', amountStartIndex);
 
                     string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
-                    decimal amount = decimal.Parse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+
+                    decimal amount = ParseAmount(amountString);
 
                     actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
                 }
                 else if (line.Contains(" shows ["))
                 {
-                    int nameEndIndex = line.IndexOf(" shows [", StringComparison.Ordinal);
-                    string playerName = line.Remove(nameEndIndex);
-
-                    actions.Add(new HandAction(playerName, HandActionType.SHOW, 0m, Street.Showdown));
-                }
-
-#warning duplicate parse winning actions
-                //We already parse winning actions, or is this a better way to parse winning actions even though it's slower?
-                //
-                //else if (line.Contains(" and won "))
-                //{
-                //    // as it's not absolutely clear what the name is, we grab the name out of the seating list
-                //    //    Seat 6: Psipsis showed [Ad 5d] and won ($0.51) with a pair of Aces
-                //    //    Seat 6: Psipsis (big blind) showed [Ad 5d] and won ($0.51) with a pair of Aces
-                //    // -> Seat 6: Psipsis ($0.85)
-                //    string playerName = ObtainPlayerNameFromShowdownLine(handLines, i);
-                //    if (string.IsNullOrWhiteSpace(playerName)) continue;
-
-                //    int amountStartIndex = line.IndexOf('(', line.IndexOf(" and won ", StringComparison.Ordinal)) + 1;
-                //    int amountEndString = line.IndexOf(')', amountStartIndex);
-
-                //    string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
-                //    decimal amount = decimal.Parse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
-
-                //    actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
-
-                //}
-                else if (line.Contains(" collected ("))
-                {
-                    if (actions.Any(a => a.IsWinningsAction)) continue;
-                    // as it's not absolutely clear what the name is, we grab the name out of the seating list
-                    // Seat 2: dude6974 (small blind) collected ($0.10), mucked
-                    // Seat 7: tatskie100 collected ($3.35)
-                    string playerName = ObtainPlayerNameFromShowdownLine(handLines, i);
-                    if (string.IsNullOrWhiteSpace(playerName)) continue;
-
-                    int amountStartIndex = line.LastIndexOf('(') + 1;
-                    int amountEndString = line.IndexOf(')', amountStartIndex);
-
-                    string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
-                    decimal amount = decimal.Parse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
-
-                    actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    actions.Add(ParseShowAction(line));
                 }
             }
         }
 
-        private string ObtainPlayerNameFromShowdownLine(string[] handLines, int index)
+        private static HandAction ParseShowAction(string line)
+        {
+            int nameEndIndex = line.IndexOf(" shows ", StringComparison.Ordinal);
+            string playerName = line.Remove(nameEndIndex);
+
+            return new HandAction(playerName, HandActionType.SHOW, 0m, Street.Showdown);
+        }
+
+        private static string ObtainPlayerNameFromShowdownLine(string[] handLines, int index)
         {
             var line = handLines[index];
             int seatIndex = line.LastIndexOf("Seat ", StringComparison.Ordinal);
@@ -697,6 +711,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         {
             var amountString = line.Substring(startIndex);
             return decimal.Parse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+        }
+
+        static decimal ParseAmount(string line)
+        {
+            return decimal.Parse(line, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
         }
 
         static HandAction ParseFoldCheckLine(string line, Street currentStreet)
@@ -1150,11 +1169,18 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             for (int i = RITScanIndex; i < handLines.Length; i++)
             {
                 string line = handLines[i];
+                char lastChar = line[line.Length - 1];
 
                 if (line == "*** SUMMARY ***")
                 {
                     break;
                 }
+
+                if (line.Contains(" shows "))
+                {
+                    RIT.Actions.Add(ParseShowAction(line));
+                }
+
                 int nameEndIndex = line.IndexOf(" wins pot 2 (", StringComparison.Ordinal);
                 if (nameEndIndex != -1)
                 {
