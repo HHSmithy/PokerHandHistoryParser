@@ -156,8 +156,7 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return HandActionType == HandActionType.RAISE ||
-                       IsAllInAction;
+                return HandActionType == HandActionType.RAISE;
             }
         }
 
@@ -165,11 +164,11 @@ namespace HandHistories.Objects.Actions
         {
             get
             {
-                return Street == Street.Preflop &&
-                       (HandActionType == HandActionType.RAISE || IsAllInAction);
+                return Street == Street.Preflop && HandActionType == HandActionType.RAISE;
             }
         }
 
+        [Obsolete]
         public bool IsAllInAction
         {
             get { return HandActionType == HandActionType.ALL_IN; }
@@ -192,8 +191,7 @@ namespace HandHistories.Objects.Actions
             get
             {
                 return HandActionType == HandActionType.RAISE ||                       
-                       HandActionType == HandActionType.BET ||
-                       IsAllInAction;
+                       HandActionType == HandActionType.BET;
             }
         }
 
