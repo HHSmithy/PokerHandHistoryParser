@@ -36,7 +36,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
                 new WinningsAction("1mperial", HandActionType.WINS, 311m, 0),
             };
 
-            RunItTwiceTest(expectedRun1, expectedRun2, "Td 3d 3h Qh 2h", "RunItTwice1");
+            RunItTwiceTest(expectedRun1, expectedRun2, "Td 3d 3h Qh Ac", "Td 3d 3h Qh 2h", "RunItTwice1");
         }
     }
 }

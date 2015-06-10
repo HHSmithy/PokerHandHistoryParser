@@ -38,7 +38,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
                 new WinningsAction("FLATC@T", HandActionType.WINS, 1503.50m, 0),
             };
 
-            RunItTwiceTest(expectedRun1, expectedRun2, "3d Kd 9h 8h Kc", "RunItTwice1");
+            RunItTwiceTest(expectedRun1, expectedRun2, "3d Kd 9h 8h 4s", "3d Kd 9h 8h Kc", "RunItTwice1");
         }
 
         [Test]
@@ -62,7 +62,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
                 new WinningsAction("Garnerus", HandActionType.WINS, 40.30m, 0),
             };
 
-            RunItTwiceTest(expectedRun1, expectedRun2, "6s 8h 6h Td 6c", "RunItTwice2");
+            RunItTwiceTest(expectedRun1, expectedRun2, "Qd Qs 4h Ts 7s", "6s 8h 6h Td 6c", "RunItTwice2");
         }
     }
 }

@@ -1042,6 +1042,11 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             Seat 5: Naturalblow (small blind) folded before the Flop
             Seat 6: BeerMySole (big blind) folded before the Flop*/
 
+            //RunItTwice Hand Board look like this:
+            //*** SUMMARY 1 ***
+            //Pot 1 $311
+            //Board: [Td 3d 3h Qh Ac]
+
             for (int lineNumber = handLines.Length - 2; lineNumber >= 0; lineNumber--)
             {
                 string line = handLines[lineNumber];
@@ -1050,15 +1055,35 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     return BoardCards.ForPreflop();
                 }
 
-                if (line[0] != 'B')
+                if (line[0] == 'B')
                 {
-                    continue;
+                    //this is a RunItTwice hand
+                    if (handLines[lineNumber - 1][0] == 'P')
+                    {
+                        return ParseRunItTwiceFirstBoard(handLines, lineNumber - 1);
+                    }
+                    else
+                    {
+                        return ParseBoard(line);
+                    }
                 }
-
-                return ParseBoard(line);
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
+        }
+
+        private BoardCards ParseRunItTwiceFirstBoard(string[] handLines, int startindex)
+        {
+            for (int i = startindex; i >= 0; i--)
+            {
+                string line = handLines[i];
+
+                if (line[0] == 'B')
+                {
+                    return ParseBoard(line);
+                }
+            }
+            throw new ArgumentException("RIT BoardCards not found");
         }
 
         private static BoardCards ParseBoard(string line)
@@ -1118,7 +1143,6 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
         public override RunItTwice ParseRunItTwice(string[] handLines)
         {
-            bool isRunItTwiceHand = false;
             int RITScanIndex = -1;
 
             for (int i = handLines.Length - 1; i > 0; i--)
@@ -1170,11 +1194,6 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             {
                 string line = handLines[i];
                 char lastChar = line[line.Length - 1];
-
-                if (line == "*** SUMMARY ***")
-                {
-                    break;
-                }
 
                 if (line.Contains(" shows "))
                 {
