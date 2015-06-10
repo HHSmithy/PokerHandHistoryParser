@@ -197,12 +197,29 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        /// <summary>
+        /// This includes all actions that you have to perform to be allowwed to play(BB/SS/ANTE)
+        /// </summary>
         public bool IsBlinds
         {
             get
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
+                       HandActionType == HandActionType.ANTE;
+            }
+        }
+
+        /// <summary>
+        /// All actions that can be performed before you are dealt a hand
+        /// </summary>
+        public bool IsPreGameAction
+        {
+            get
+            {
+                return HandActionType == HandActionType.SMALL_BLIND ||
+                       HandActionType == HandActionType.BIG_BLIND ||
+                       HandActionType == HandActionType.ANTE ||
                        HandActionType == HandActionType.POSTS;
             }
         }
