@@ -113,6 +113,8 @@
     <Compile Include="Parsers\HandSummaryParserTests\HeroNameTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_CashGame.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserTestLimitTests_MTT.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.SitAndGo.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.MultiTableTournament.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.CashGame.cs" />
@@ -1299,6 +1301,9 @@
     </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\InValidHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\NoLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

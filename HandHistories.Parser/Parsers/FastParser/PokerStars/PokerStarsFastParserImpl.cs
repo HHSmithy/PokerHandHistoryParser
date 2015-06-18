@@ -22,7 +22,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         static readonly TimeZoneInfo PokerStarsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
 
         private const int GameIdStartIndex = 17;
-        private const int TournamentIdStartindex = 43;
 
         public override bool RequiresAdjustedRaiseSizes
         {
@@ -183,11 +182,23 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
         }
 
+        static int GetTournamentIdStartIndex(string line)
+        {
+            const int TournamentLength = 14; //": Tournament #".length
+
+            return line.IndexOf(':', GameIdStartIndex) + TournamentLength;
+        }
+
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            char tournamentIdentifier = handLines[0][TournamentIdStartindex - 1];
+            string line = handLines[0];
+
+            var TournamentIdStartIndex = GetTournamentIdStartIndex(line);
+            char tournamentIdentifier = line[TournamentIdStartIndex - 1];
+            
             if (tournamentIdentifier == '#')
             {
+                //PokerStars Hand #132979405549: Tournament #1186639920
                 // this can actually also be a MTT
 
                 return PokerFormat.SitAndGo;
@@ -223,7 +234,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     firstDigitIndex = GameIdStartIndex;
                     break;
                 default:
-                    if (line[TournamentIdStartindex - 1] == '#')
+                    if (line[GetTournamentIdStartIndex(line) - 1] == '#')
                     {
                         firstDigitIndex = line.IndexOf('#') + 1;
                     }
@@ -246,6 +257,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             var format = ParsePokerFormat(handLines);
             if(format == PokerFormat.SitAndGo || format == PokerFormat.MultiTableTournament)
             {
+                var TournamentIdStartindex = GetTournamentIdStartIndex(handLines[0]);
+
                 var endIndex = handLines[0].IndexOf(",", TournamentIdStartindex, StringComparison.Ordinal);
 
                 return long.Parse(handLines[0].Substring(TournamentIdStartindex, endIndex - TournamentIdStartindex));
@@ -290,6 +303,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             var format = ParsePokerFormat(handLines);
             if (format.Equals(PokerFormat.SitAndGo))
             {
+                var TournamentIdStartindex = GetTournamentIdStartIndex(handLines[0]);
                 // Expect first line to look like 
                 // PokerStars Hand #121732576120: Tournament #974090903, $13.79+$1.21 USD Hold'em No Limit - Level III (25/50) - 2014/09/18 16:59:24 ET
                 var commaIndex = handLines[0].IndexOf(',', TournamentIdStartindex);
@@ -400,7 +414,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 var format = ParsePokerFormat(handLines);
                 if (format.Equals(PokerFormat.SitAndGo) || format.Equals(PokerFormat.MultiTableTournament))
                 {
-                    currency = Currency.All;
+                    currency = ParseTournamentCurrency(handLines[0]);
                 }
                 else
                 {
@@ -410,10 +424,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int slashIndex = limitSubstring.IndexOf('/');
             int endIndex = limitSubstring.IndexOf(' ');
-            if (endIndex == -1) endIndex = limitSubstring.IndexOf(')');
+            if (endIndex == -1) endIndex = limitSubstring.Length;
 
             string smallBlind = limitSubstring.Substring(0, slashIndex);
-            string bigBlind = limitSubstring.Substring(slashIndex + 1, endIndex - (slashIndex + 1) + 1);
+            string bigBlind = limitSubstring.Substring(slashIndex + 1, endIndex - slashIndex - 1);
 
             decimal small = decimal.Parse(smallBlind, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
             decimal big = decimal.Parse(bigBlind, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
@@ -427,12 +441,31 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 
+        private static Currency ParseTournamentCurrency(string line)
+        {
+            //PokerStars Hand #132979387288: Tournament #1186639920, $13.92+$1.08 USD Hold'em No Limit - Level IV (40/80) - 2015/03/31 21:05:54 
+            if (line.Contains(" USD "))
+            {
+                return Currency.USD;
+            }
+            if (line.Contains(" EUR "))
+            {
+                return Currency.EURO;
+            }
+            if (line.Contains(" GBP "))
+            {
+                return Currency.GBP;
+            }
+            throw new CurrencyException(line, "Unknown Tournament Currency");
+        }
+
         protected override Buyin ParseBuyin(string[] handLines)
         {
             // Expect the first line to look like:
             // PokerStars Hand #121723607468: Tournament #973955807, $2.30+$2.30+$0.40 USD Hold'em No Limit - Level XIII (600/1200)
             // PokerStars Hand #121732709812: Tournament #974092011, $55.56+$4.44 USD Hold'em No Limit - Level VI (100/200) - 2014/09/18 17:02:21 ET
             // this is obviously not needed for CashGame
+            var TournamentIdStartindex = GetTournamentIdStartIndex(handLines[0]);
 
             int startIndex = handLines[0].IndexOf(',', TournamentIdStartindex) + 2;
             int endIndex = handLines[0].IndexOf(' ', startIndex);
