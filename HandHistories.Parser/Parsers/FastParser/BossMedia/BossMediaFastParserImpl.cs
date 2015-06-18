@@ -14,6 +14,8 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
 using HandHistories.Parser.Utils.AllInAction;
+using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
@@ -38,7 +40,43 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None).Where(p => p.Length > 2 && p[1] != '?');
+            return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None)
+                .Where(p => p.Length > 2 && p[1] != '?')
+                .Select(p => "<HISTORY " + p);
+        }
+
+        public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
+        {
+            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', jump: 10, jumpAfter: 2);
+
+            List<string> handLines = new List<string>(50);
+
+            bool handFound = false;
+
+            foreach (var item in allLines)
+            {
+                string line = item.TrimEnd('\r', ' ');
+
+                if (line.StartsWith("<HISTORY ", StringComparison.Ordinal))
+                {
+                    handFound = true;
+                    if (handLines.Count > 0)
+                    {
+                        yield return handLines.ToArray();
+                        handLines = new List<string>(50);
+                    }
+                }
+
+                if (handFound)
+	            {
+		            handLines.Add(line);
+                }
+            }
+
+            if (handLines.Count > 0)
+            {
+                yield return handLines.ToArray();
+            }
         }
 
         protected override int ParseDealerPosition(string[] handLines)

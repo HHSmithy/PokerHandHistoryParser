@@ -15,6 +15,11 @@ namespace HandHistories.Objects.Actions
         [DataMember]
         public HandActionType HandActionType { get; protected set; }
 
+        /// <summary>
+        /// How much was added to the pot with this action.
+        /// If HandActionType is RAISE and the player have previously made a BET of 20 
+        /// and then makes a RAISE to 100 the amount is 80
+        /// </summary>
         [DataMember]
         public decimal Amount { get; private set; }
 
