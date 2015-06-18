@@ -47,7 +47,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
         {
-            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', jump: 10, jumpAfter: 2);
+            var allLines = rawHandHistories.Split('\n');
 
             List<string> handLines = new List<string>(50);
 
@@ -587,7 +587,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 {
                     const int playerNameStartIndex = 16;
                     int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
-                    string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
+                    string playerName = GetXMLAttributeValue(Line, "PLAYER");
                     Player player = plist[playerName];
 
                     if (!player.hasHoleCards)

@@ -158,5 +158,21 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
 
             TestUncalledbet("P3", 2m, hand);
         }
+
+        [TestCase]
+        public void UncalledBetTest_PartiallyUncalledBB_1()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 6m, Street.Preflop),
+                new HandAction("P3", HandActionType.CALL, 3m, Street.Preflop, true),
+                new HandAction("P4", HandActionType.CALL, 1m, Street.Preflop, true),
+            };
+
+            TestUncalledbet("P2", 3m, hand);
+        }
     }
 }

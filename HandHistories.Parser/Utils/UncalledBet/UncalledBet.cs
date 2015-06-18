@@ -54,7 +54,7 @@ namespace HandHistories.Parser.Utils.Uncalled
 
         private static HandAction GetPartiallyUncalledRaise(List<HandAction> realActions)
         {
-            var lastRaiser = realActions.Last(p => p.IsAggressiveAction);
+            var lastRaiser = realActions.Last(p => p.IsAggressiveAction || p.HandActionType == HandActionType.BIG_BLIND);
 
             var UncalledRaise = GetUncalledRaise(realActions, lastRaiser);
 
