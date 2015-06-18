@@ -17,7 +17,7 @@ using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
-    public class PokerStarsFastParserImpl : HandHistoryParserFastImpl, IThreeStateParser
+    public partial class PokerStarsFastParserImpl : HandHistoryParserFastImpl, IThreeStateParser
     {
         static readonly TimeZoneInfo PokerStarsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
 
@@ -300,33 +300,32 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             var startIndex = 0;
             var endIndex = 0;
 
+            string line = handLines[0];
+
             var format = ParsePokerFormat(handLines);
             if (format.Equals(PokerFormat.SitAndGo))
             {
-                var TournamentIdStartindex = GetTournamentIdStartIndex(handLines[0]);
-                // Expect first line to look like 
-                // PokerStars Hand #121732576120: Tournament #974090903, $13.79+$1.21 USD Hold'em No Limit - Level III (25/50) - 2014/09/18 16:59:24 ET
-                var commaIndex = handLines[0].IndexOf(',', TournamentIdStartindex);
-                var secondSpaceIndex = handLines[0].IndexOf(' ', commaIndex + 3);
-
-                // starts after the currency after the Buyin
-                startIndex = handLines[0].IndexOf(' ', secondSpaceIndex + 2) + 1;
-                endIndex = handLines[0].IndexOf('-') - 2;
+                return ParseTournamentGameType(line);
             }
 
             if (format.Equals(PokerFormat.CashGame))
             {
                 // Expect first line to look like 
                 // PokerStars Game #121735581349:  Hold'em No Limit ($0.02/$0.05 USD) - 2014/09/18 18:00:06 ET
-                var colonIndex = handLines[0].IndexOf(':', GameIdStartIndex);
+                var colonIndex = line.IndexOf(':', GameIdStartIndex);
 
                 // can be either 1 or 2 spaces after the colon
-                startIndex = (handLines[0][colonIndex + 2] == ' ') ? colonIndex + 3 : colonIndex + 2;
-                endIndex = handLines[0].IndexOf('(') - 2;
+                startIndex = (line[colonIndex + 2] == ' ') ? colonIndex + 3 : colonIndex + 2;
+                endIndex = line.IndexOf('(') - 2;
             }
 
             var gameTypeLength = endIndex - startIndex + 1;
 
+            return GetGameTypeFromLength(startIndex, line, gameTypeLength);
+        }
+
+        private static GameType GetGameTypeFromLength(int startIndex, string line, int gameTypeLength)
+        {
             // Faster to check the length vs doing an equality comparison
             switch (gameTypeLength)
             {
@@ -337,7 +336,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 13:
                     return GameType.FixedLimitHoldem;
                 case 17:
-                    string gameTypeString = handLines[0].Substring(startIndex, gameTypeLength);
+                    string gameTypeString = line.Substring(startIndex, gameTypeLength);
                     if (gameTypeString[0] == 'O')
                     {
                         return GameType.FixedLimitOmahaHiLo;
@@ -350,8 +349,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 11:
                     return GameType.FixedLimitOmaha;
                 default:
-                    string errorGameTypeString = handLines[0].Substring(startIndex, gameTypeLength);
-                    throw new UnrecognizedGameTypeException(handLines[0], "Unrecognized game-type: " + errorGameTypeString);
+                    string errorGameTypeString = line.Substring(startIndex, gameTypeLength);
+                    throw new UnrecognizedGameTypeException(line, "Unrecognized game-type: " + errorGameTypeString);
             }
         }
 

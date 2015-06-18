@@ -83,6 +83,7 @@
     <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
     <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
