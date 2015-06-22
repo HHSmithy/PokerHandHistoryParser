@@ -88,7 +88,6 @@
     <Compile Include="Cards\HoleCards.cs" />
     <Compile Include="Hand\RunItTwice.cs" />
     <Compile Include="Interfaces\IPushFoldApiProxy.cs" />
-    <Compile Include="ITimeStamped.cs" />
     <Compile Include="GameDescription\Limit.cs" />
     <Compile Include="GameDescription\PokerFormat.cs" />
     <Compile Include="Players\Player.cs" />
