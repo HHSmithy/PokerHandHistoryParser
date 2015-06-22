@@ -413,7 +413,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 var format = ParsePokerFormat(handLines);
                 if (format.Equals(PokerFormat.SitAndGo) || format.Equals(PokerFormat.MultiTableTournament))
                 {
-                    currency = ParseTournamentCurrency(handLines[0]);
+                    currency = Currency.CHIPS;
                 }
                 else
                 {
@@ -440,24 +440,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 
-        private static Currency ParseTournamentCurrency(string line)
-        {
-            //PokerStars Hand #132979387288: Tournament #1186639920, $13.92+$1.08 USD Hold'em No Limit - Level IV (40/80) - 2015/03/31 21:05:54 
-            if (line.Contains(" USD "))
-            {
-                return Currency.USD;
-            }
-            if (line.Contains(" EUR "))
-            {
-                return Currency.EURO;
-            }
-            if (line.Contains(" GBP "))
-            {
-                return Currency.GBP;
-            }
-            throw new CurrencyException(line, "Unknown Tournament Currency");
-        }
-
         protected override Buyin ParseBuyin(string[] handLines)
         {
             // Expect the first line to look like:
@@ -471,7 +453,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             string buyinSubstring = handLines[0].Substring(startIndex, endIndex - startIndex);
 
-            var currency = ParseCurrency(handLines[0], buyinSubstring[0]);
+            Currency currency;
+            if (buyinSubstring.EndsWith("FPP"))
+            {
+                currency = Currency.RAKE_POINTS;
+            }
+            else
+            {
+                currency = ParseCurrency(handLines[0], buyinSubstring[0]);
+            }
 
             decimal prizePoolValue;
             decimal rake;
@@ -488,6 +478,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             {
                 prizePoolValue = decimal.Parse(buyinSplit[0], NumberStyles.Currency, _numberFormatInfo);
                 rake = decimal.Parse(buyinSplit[1], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            }
+            else if (buyinSplit.Length == 1)
+            {
+                if (!buyinSplit[0].EndsWith("FPP"))
+                {
+                    throw new BuyinException(handLines[0], "Expected FPP Buyin Format");
+                }
+
+                prizePoolValue = 0;
+                rake = 0;
             }
             else
             {
