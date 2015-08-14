@@ -17,7 +17,7 @@ namespace HandHistories.Parser.Utils
 
         static bool CheckActionOrder(List<HandAction> list)
         {
-            bool BetOccured = false;
+            bool BetOccured = true;
             int blindEndIndex = -1;
 
             for (int i = 0; i < list.Count; i++)

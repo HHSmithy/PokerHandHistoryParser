@@ -203,6 +203,17 @@ namespace HandHistories.Objects.Actions
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
+                       HandActionType == HandActionType.ANTE;
+            }
+        }
+
+        public bool IsPreGameAction
+        {
+            get
+            {
+                return HandActionType == HandActionType.SMALL_BLIND ||
+                       HandActionType == HandActionType.BIG_BLIND ||
+                       HandActionType == HandActionType.ANTE ||
                        HandActionType == HandActionType.POSTS;
             }
         }
