@@ -10,13 +10,16 @@ namespace HandHistories.Parser.Utils
 {
     public static class HandIntegrity
     {
-        public static bool Check(HandHistory hand)
+        public static bool Check(HandHistory hand, out string reason)
         {
-            return CheckTotalPot(hand) && CheckActionOrder(hand.HandActions);
+            reason = null;
+
+            return CheckTotalPot(hand, out reason) && CheckActionOrder(hand.HandActions, out reason);
         }
 
-        static bool CheckActionOrder(List<HandAction> list)
+        static bool CheckActionOrder(List<HandAction> list, out string reason)
         {
+            reason = null;
             bool BetOccured = true;
             int blindEndIndex = -1;
 
@@ -75,13 +78,24 @@ namespace HandHistories.Parser.Utils
             return true;
         }
 
-        static bool CheckTotalPot(HandHistory hand)
+        static bool CheckTotalPot(HandHistory hand, out string reason)
         {
             var totalPot = hand.HandActions
                 .Where(p => p.IsGameAction || p.IsBlinds)
                 .Sum(p => p.Amount);
 
-            return Math.Abs(totalPot) == hand.TotalPot;
+            bool PotValid = Math.Abs(totalPot) == hand.TotalPot;
+
+            if (PotValid)
+            {
+                reason = null;
+            }
+            else
+            {
+                reason = string.Format("Total Pot not correct: {0} actions: {1}", hand.TotalPot, totalPot);
+            }
+
+            return PotValid;
         }
     }
 }
