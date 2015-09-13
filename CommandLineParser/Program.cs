@@ -38,14 +38,27 @@ namespace CommandLineParser
                     string fileText = new StreamReader(file).ReadToEnd();
                     var hands = fastParser.SplitUpMultipleHandsToLines(fileText);
                     var outputFile = new StreamWriter(file + ".csv");
-                    outputFile.WriteLine("DateOfHandUtc,HandId,DealerButtonPosition,TableName,GameDescription,NumPlayersActive,NumPlayersSeated,Rake,ComumnityCards,TotalPot,PlayerName,HoleCards,StartingStack,SeatNumber,ActionNumber,Amount,HandActionType,Street,IsAggressiveAction,IsAllIn,IsAllInAction,IsBlinds,IsGameAction,IsPreFlopRaise,IsRaise,IsWinningsAction");
+                    outputFile.WriteLine("DateOfHandUtc,HandId,DealerButtonPosition,TableName,GameDescription,NumPlayersActive,NumPlayersSeated,Rake,ComumnityCards,TotalPot,PlayerName,HoleCards,StartingStack,SeatNumber,ActionNumber,Amount,HandActionType,currentPostSize,Street,IsAggressiveAction,IsAllIn,IsAllInAction,IsBlinds,IsGameAction,IsPreFlopRaise,IsRaise,IsWinningsAction");
                     foreach (var hand in hands)
                     {
                         var parsedHand = fastParser.ParseFullHandHistory(hand, true);
 
+                        // probably not the best way to do this. This should be added to the ParseHandActions function or something.
+                        decimal currentPotSize = 0;
                         foreach (var action in parsedHand.HandActions)
                         {
-                            outputFile.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25}",
+                            if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.ANTE
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.BET
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.SMALL_BLIND
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.RAISE
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.BIG_BLIND
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.CALL
+                                || action.HandActionType ==  HandHistories.Objects.Actions.HandActionType.ALL_IN)
+                            {
+                                currentPotSize += action.Amount;
+                            }
+
+                            outputFile.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26}",
                                 parsedHand.DateOfHandUtc
                                 , parsedHand.HandId
                                 , parsedHand.DealerButtonPosition
@@ -63,6 +76,7 @@ namespace CommandLineParser
                                 , action.ActionNumber
                                 , action.Amount
                                 , action.HandActionType
+                                , currentPotSize
                                 , action.Street
                                 , action.IsAggressiveAction
                                 , action.IsAllIn
