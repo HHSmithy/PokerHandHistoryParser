@@ -45,8 +45,13 @@ namespace CommandLineParser
 
                         // probably not the best way to do this. This should be added to the ParseHandActions function or something.
                         decimal currentPotSize = 0;
+                        int actionNumber = 0;
                         foreach (var action in parsedHand.HandActions)
                         {
+                            // I tried to do this (this = 'actionNumber++') properly via the ParseHandActions function in Poker888FastParserImpl.cs file to be 1-1 with the raw handlines, however
+                            // I was getting some un-expected behavior when the action was all in and the winning action the handline index would be 0 so you would end up with
+                            // actions sequences like 1,2,3,4,5,6,0,8,9,10.
+                            actionNumber++;
                             if (action.HandActionType == HandHistories.Objects.Actions.HandActionType.ANTE
                                 || action.HandActionType == HandHistories.Objects.Actions.HandActionType.BET
                                 || action.HandActionType == HandHistories.Objects.Actions.HandActionType.SMALL_BLIND
@@ -73,7 +78,7 @@ namespace CommandLineParser
                                 , parsedHand.Players.First(p => p.PlayerName.Equals(action.PlayerName)).HoleCards
                                 , parsedHand.Players.First(p => p.PlayerName.Equals(action.PlayerName)).StartingStack
                                 , parsedHand.Players.First(p => p.PlayerName.Equals(action.PlayerName)).SeatNumber
-                                , action.ActionNumber
+                                , actionNumber
                                 , action.Amount
                                 , action.HandActionType
                                 , currentPotSize
