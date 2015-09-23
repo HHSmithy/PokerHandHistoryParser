@@ -22,6 +22,7 @@ select
        ,substring(holecards from 3 for 1) as second_card_value
        ,substring(holecards from 2 for 1) as first_card_suit
        ,substring(holecards from 4 for 1) as second_card_suit
+       ,substring(holecards from 2 for 1) = substring(holecards from 4 for 1) as suited
        ,startingstack
        ,seatnumber
        ,actionnumber
