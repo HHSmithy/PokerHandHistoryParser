@@ -4,6 +4,10 @@ drop table pokerhandhistory_showdowns;
 create table pokerhandhistory_showdowns as (
 select
        dateofhandutc
+       -- convert string to real timestamp
+       -- redshift does not support the to_timestamp function so you have to convert string to a unix timestamp
+       -- then convert the unix timestamp back to a timestamp
+       ,TIMESTAMP 'epoch' + (extract(epoch from cast(dateofhandutc as timestamp))) * INTERVAL '1 second' as dateofhandutc_ts
        ,handid
        ,dealerbuttonposition
        ,tablename
@@ -41,8 +45,8 @@ where
         where
             handactiontype = 'SHOW'
     )
-order by handid);
-
+order by handid
+);
 
 -- frequency distribution of holecards
 -- FYI, this will be a distribution of hands held until showdown because we do not know what a player has
@@ -55,4 +59,38 @@ group by holecards
 order by count(distinct handid) desc;
 
 
+-- working section .. 
+select 
+--       dateofhandutc
+       handid
+--       ,dealerbuttonposition
+--       ,tablename
+--       ,gamedescription
+--       ,numplayersactive
+--       ,numplayersseated
+--       ,rake
+       ,comumnitycards
+       ,totalpot
+       ,playername
+       ,holecards
+       ,first_card
+       ,second_card
+       ,first_card_value
+       ,second_card_value
+       ,first_card_suit
+       ,second_card_suit
+       ,suited
+       ,startingstack
+       ,seatnumber
+--       ,actionnumber
+       ,amount
+       ,handactiontype
+       ,currentpostsize
+       ,street
 
+from pokerhandhistory_showdowns
+where handid='321776574'
+order by handid
+limit 1000;
+
+-- end working section
