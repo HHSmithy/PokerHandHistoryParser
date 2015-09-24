@@ -27,3 +27,8 @@ create table pokerhandhistory (
        , IsRaise		VARCHAR(5)
        , IsWinningsAction 	VARCHAR(5)
 );
+
+
+copy pokerhandhistory from 's3://winthropstage/nick.888.backlog.1935.bigfile.csv.gz'
+credentials 'aws_access_key_id=HERE;aws_secret_access_key=HERE'
+delimiter ',' gzip;
