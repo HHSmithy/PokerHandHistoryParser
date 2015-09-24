@@ -61,6 +61,32 @@ group by holecards
 order by count(distinct handid) desc;
 
 
+-- create a contatenated list of actions so we can do some frequency analysis on what patterns occur most frequently
+drop table action_orderings;
+create table action_orderings as 
+select 
+       handid
+       , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
+       , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
+       , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
+       , listagg(amount, ',') within group (order by actionnumber) as amountorder
+       , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
+from pokerhandhistory_showdowns
+group by handid;
+
+-- frequency distribution of hand actions
+select 
+       count(distinct handid)
+       , actionorder
+       -- , playeractionorder
+       -- , seatnumberorder
+       -- , amountorder
+       -- , currentpotsizeorder
+from action_orderings 
+group by actionorder --, playeractionorder, seatnumberorder, amountorder, currentpotsizeorder
+order by count(distinct handid) desc;
+
+
 -- working section .. 
 select 
 --       dateofhandutc
@@ -96,22 +122,4 @@ order by handid, actionnumber
 limit 1000;
 
 select distinct handactiontype from pokerhandhistory;
-
-drop table actionKeyListHands;
-create table actionKeyListHands as 
-select 
-       handid
-       , listagg(handactiontype, ',') within group (order by actionnumber) as actionListKey 
-       , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
-       , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
-from pokerhandhistory_showdowns
-group by handid;
-
--- frequency distribution of hand actions
-select 
-       count(distinct handid)
-       , actionlistkey 
-from actionKeyListHands 
-group by actionlistkey 
-order by count(distinct handid) desc;
 -- end working section
