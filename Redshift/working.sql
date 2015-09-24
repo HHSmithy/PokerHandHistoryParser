@@ -37,11 +37,11 @@ select
        -- there are some instances where folds happend before blinds are posted creating a current pot size of 0
        -- we do this below to avoid a divide by zero
        , round(amount / case when lag(currentpostsize, 1) over (order by handid, actionnumber) = 0 then 1 
-       	 	       else lag(currentpostsize, 1) over (order by handid, actionnumber) end * 100) as pct_of_pot
+       	 	       else lag(currentpostsize, 1) over (order by handid, actionnumber) end * 100) as amount_pct_into_currentpot
        -- amount in big blinds
        , round(amount / CAST(substring(gamedescription from 27 for 1) as INT), 1) as num_big_blinds_in_amount
        -- potsize in big blinds
-       , round(currentpostsize / CAST(substring(gamedescription from 27 for 1) as INT), 1) as num_big_blinds_in_pot
+       , round(currentpostsize / CAST(substring(gamedescription from 27 for 1) as INT), 1) as num_big_blinds_in_currentpot
        ,handactiontype
        ,currentpostsize
        ,street
@@ -81,7 +81,10 @@ select
        , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
        , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
        , listagg(amount, ',') within group (order by actionnumber) as amountorder
+       , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as num_big_blinds_in_amountorder
+       , listagg(amount_pct_into_currentpot, ',') within group (order by actionnumber) as amount_pct_into_currentpotorder
        , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
+       , listagg(num_big_blinds_in_currentpot, ',') within group (order by actionnumber) as num_big_blinds_in_currentpotorder
 from pokerhandhistory_showdowns
 group by handid;
 
@@ -123,12 +126,15 @@ select
 --       ,seatnumber
        ,actionnumber
        ,amount
+       ,num_big_blinds_in_amount
+       ,amount_pct_into_currentpot
        ,handactiontype
---       ,currentpostsize
+       ,currentpostsize
+       ,num_big_blinds_in_currentpot
 --       ,street
 
 from pokerhandhistory_showdowns
--- where handid='321776574'
+where handid='321776925'
 order by handid, actionnumber
 limit 1000;
 
