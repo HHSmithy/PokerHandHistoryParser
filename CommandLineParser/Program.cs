@@ -52,7 +52,21 @@ namespace CommandLineParser
             hand = new List<Card>(maxHandSize);
             hand.Capacity = maxHandSize;
         }
-        
+        public Hand(string cards, int maxHandSize, int numCardsToRank)
+        {
+            if (cards.Length / 2 > maxHandSize)
+            {
+                throw new Exception("Error: list of cards > maxHandSize Can't add a list of cards to a hand that is greater than the maximum capacity of the hand.");
+            }
+
+            hand.Capacity = maxHandSize;
+            numCardsToRank = NumCardsToRank;
+            for (int i = 0; i < cards.Length; i += 2)
+            {
+                hand.Add(new Card((Card.Suit)cards[i + 1], (Card.Rank)cards[i]));
+            }
+
+        }
         public Hand(List<Card> cards, int maxHandSize, int numCardsToRank)
         {
             this.MaxHandSize = maxHandSize;
