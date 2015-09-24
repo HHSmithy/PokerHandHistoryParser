@@ -12,6 +12,8 @@ select
        ,dealerbuttonposition
        ,tablename
        ,gamedescription
+       ,substring(gamedescription from 24 for 1) as small_blind
+       ,substring(gamedescription from 27 for 1) as big_blind
        ,numplayersactive
        ,numplayersseated
        ,rake
@@ -45,15 +47,15 @@ where
         where
             handactiontype = 'SHOW'
     )
-order by handid
+order by handid, actionnumber
 );
 
 -- frequency distribution of holecards
 -- FYI, this will be a distribution of hands held until showdown because we do not know what a player has
 -- unless their hands makes it to a showdown.
-select 
+select
        holecards, count(distinct handid) as freq_count 
-from pokerhandhistory 
+from pokerhandhistory_showdowns36
 -- where holecards like 'A_T_' or holecards like 'T_A_'
 group by holecards
 order by count(distinct handid) desc;
@@ -73,24 +75,43 @@ select
        ,totalpot
        ,playername
        ,holecards
-       ,first_card
-       ,second_card
-       ,first_card_value
-       ,second_card_value
-       ,first_card_suit
-       ,second_card_suit
-       ,suited
+--       ,first_card
+--       ,second_card
+--       ,first_card_value
+--       ,second_card_value
+--       ,first_card_suit
+--       ,second_card_suit
+--       ,suited
        ,startingstack
-       ,seatnumber
---       ,actionnumber
+--       ,seatnumber
+       ,actionnumber
        ,amount
        ,handactiontype
-       ,currentpostsize
-       ,street
+--       ,currentpostsize
+--       ,street
 
 from pokerhandhistory_showdowns
-where handid='321776574'
-order by handid
+-- where handid='321776574'
+order by handid, actionnumber
 limit 1000;
 
+select distinct handactiontype from pokerhandhistory;
+
+drop table actionKeyListHands;
+create table actionKeyListHands as 
+select 
+       handid
+       , listagg(handactiontype, ',') within group (order by actionnumber) as actionListKey 
+       , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
+       , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
+from pokerhandhistory_showdowns
+group by handid;
+
+-- frequency distribution of hand actions
+select 
+       count(distinct handid)
+       , actionlistkey 
+from actionKeyListHands 
+group by actionlistkey 
+order by count(distinct handid) desc;
 -- end working section
