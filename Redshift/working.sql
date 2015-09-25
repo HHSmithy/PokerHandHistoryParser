@@ -5,10 +5,9 @@
 -- FYI, this will be a distribution of hands held until showdown because we do not know what a player has
 -- unless their hands makes it to a showdown.
 select
-       holecards, count(distinct handid) as freq_count 
-from pokerhandhistory_showdowns36
--- where holecards like 'A_T_' or holecards like 'T_A_'
-group by holecards
+	count(distinct handid) as freq_count 
+from pokerhandhistory_showdowns
+where holecards like 'A_T_' or holecards like 'T_A_'
 order by count(distinct handid) desc;
 
 
@@ -22,7 +21,8 @@ select
        -- , currentpotsizeorder
 from action_orderings 
 group by actionorder --, playeractionorder, seatnumberorder, amountorder, currentpotsizeorder
-order by count(distinct handid) desc;
+order by count(distinct handid) desc
+limit 100;
 
 select 
 --       dateofhandutc
@@ -64,4 +64,6 @@ limit 1000;
 select distinct handactiontype from pokerhandhistory;
 
 select handid, playername, seatnumber, actionnumber, amount, num_big_blinds_in_amount, currentpostsize, pct_of_pot, num_big_blinds_in_pot, handactiontype from pokerhandhistory_showdowns order by handid, actionnumber limit 1000;
+
+create table temp_extract as select handid, actionorder, seatnumberorder, pct_of_starting_stackorder, num_big_blinds_in_amountorder, amount_pct_into_currentpotorder, currentpotsizeorder, num_big_blinds_in_currentpotorder from action_orderings;
 -- end working section
