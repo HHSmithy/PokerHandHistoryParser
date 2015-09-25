@@ -1,5 +1,5 @@
--- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since
--- they will have hole cards. 
+-- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since-
+- they will have hole cards. 
 drop table pokerhandhistory_showdowns;
 create table pokerhandhistory_showdowns as (
 select
@@ -36,7 +36,7 @@ select
        -- percentage of pot
        -- there are some instances where folds happend before blinds are posted creating a current pot size of 0
        -- we do this below to avoid a divide by zero
-       , round(amount / startingstack) as pct_of_starting_stack
+       , round((amount / startingstack) * 100) as pct_of_starting_stack
        , round(amount / case when lag(currentpostsize, 1) over (order by handid, actionnumber) = 0 then 1 
        	 	       else lag(currentpostsize, 1) over (order by handid, actionnumber) end * 100) as amount_pct_into_currentpot
        -- amount in big blinds
