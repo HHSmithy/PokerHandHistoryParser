@@ -48,6 +48,7 @@ select
 --       ,seatnumber
        ,actionnumber
        ,amount
+       ,pct_of_starting_stack
        ,num_big_blinds_in_amount
        ,amount_pct_into_currentpot
        ,handactiontype
