@@ -1,5 +1,5 @@
--- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since-
-- they will have hole cards. 
+-- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since
+-- they will have hole cards. 
 drop table pokerhandhistory_showdowns;
 create table pokerhandhistory_showdowns as (
 select
@@ -71,6 +71,7 @@ select
        , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
        , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
        , listagg(amount, ',') within group (order by actionnumber) as amountorder
+       , listagg(pct_of_starting_stack, ',') within group (order by actionnumber) as pct_of_starting_stackorder
        , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as num_big_blinds_in_amountorder
        , listagg(amount_pct_into_currentpot, ',') within group (order by actionnumber) as amount_pct_into_currentpotorder
        , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
