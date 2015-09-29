@@ -1,3 +1,20 @@
+-- create a helper function to sort pokerhands otherwise, AdTs is a different hand than TsAd
+
+create function sortstartinghand (h varchar(4))
+  returns varchar(4)
+immutable
+as $$
+return ''.join(sorted([h[i:i+2] for i in range(0, len(h), 2)]))
+$$ language plpythonu;
+
+create function sortstring (s varchar)
+  returns varchar
+immutable
+as $$
+return ''.join(sorted(s))
+$$ language plpythonu;
+
+
 -- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since
 -- they will have hole cards. 
 drop table pokerhandhistory_showdowns;
@@ -29,6 +46,8 @@ select
        ,substring(holecards from 2 for 1) as first_card_suit
        ,substring(holecards from 4 for 1) as second_card_suit
        ,substring(holecards from 2 for 1) = substring(holecards from 4 for 1) as suited
+       -- reduce holecards to suited or offsuit to simplify analysis and reduce the number of distinct hands
+       ,(sortstring(first_card_value || second_card_value) || case when suited then 's' else 'o' end) as holecards_simple
        ,startingstack
        ,seatnumber
        ,actionnumber
