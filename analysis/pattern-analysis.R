@@ -1,9 +1,10 @@
-install.packages(c('Matrix', 'HMM', 'ngram'))
+library(tm)
 library(HMM)
-library(ngram)
+library(NLP)
+
 split_on_comma = function(s) { strsplit(s, ',') }
 
-d = read.transactions('/home/ubuntu/PokerHandHistoryParser/analysis/action-ordering-data/action_ordering_basketformat.tsv', format="basket", sep="|")
+d = read.csv('/home/ubuntu/PokerHandHistoryParser/analysis/action-ordering-data/action_ordering.csv', sep="|", header=FALSE)
 names(d) = c("handid","actionorder","seatnumberorder","amountorder","num_big_blinds_in_amountorder","amount_pct_into_currentpotorder","num_big_blinds_in_currentpotorder")
 
 # Split betting actions into a format that can be read by pattern mining algorithm
@@ -11,9 +12,9 @@ d_actions = apply(d[, 1:2], c(1,2), split_on_comma)
 #d2 = apply(d, c(1,2), split_on_comma)
 #names(d2) = c("handid","actionorder","seatnumberorder","amountorder","num_big_blinds_in_amountorder","amount_pct_into_currentpotorder","num_big_blinds_in_currentpotorder")
 
-d_actions_string = concat(unlist(d_actions[, 2]), collapse=' ')
-d_actions_2grams = ngram(d_actions_string, n=2)
-d_actions_3grams = ngram(d_actions_string, n=3)
-d_actions_4grams = ngram(d_actions_string, n=4)
+# d_actions_string = concat(unlist(d_actions[, 2]), collapse=' ')
+d_actions_2grams = ngrams(unlist(d_actions[, 2]), 2L)
+d_actions_2grams = vapply(d_actions_2grams, paste, "", collapse= " ")
 
-write(d_actions_2grams, file='2grams.txt')
+d_actions_3grams = ngrams(unlist(d_actions[, 2]), 3L)
+d_actions_3grams = vapply(d_actions_3grams, paste, "", collapse= " ")
