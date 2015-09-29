@@ -1,5 +1,6 @@
 -- create a helper function to sort pokerhands otherwise, AdTs is a different hand than TsAd
 
+drop function sortstartinghand(varchar(4));
 create function sortstartinghand (h varchar(4))
   returns varchar(4)
 immutable
@@ -7,6 +8,7 @@ as $$
 return ''.join(sorted([h[i:i+2] for i in range(0, len(h), 2)]))
 $$ language plpythonu;
 
+drop function sortstring(varchar);
 create function sortstring (s varchar)
   returns varchar
 immutable
@@ -47,7 +49,7 @@ select
        ,substring(holecards from 4 for 1) as second_card_suit
        ,substring(holecards from 2 for 1) = substring(holecards from 4 for 1) as suited
        -- reduce holecards to suited or offsuit to simplify analysis and reduce the number of distinct hands
-       ,(sortstring(first_card_value || second_card_value) || case when suited then 's' else 'o' end) as holecards_simple
+       ,sortstring(substring(holecards from 1 for 1) || substring(holecards from 3 for 1)) || case when substring(holecards from 2 for 1) = substring(holecards from 4 for 1) then 's' else 'o' end as holecards_simple
        ,startingstack
        ,seatnumber
        ,actionnumber
@@ -101,12 +103,14 @@ group by handid;
 
 -- Breakdown of betting patterns by individual holecards
 -- this lets us look at any frequent betting patters specific holecards might have
+drop table holecards_by_actiontype;
 create table holecards_by_actiontype as
 select 
        handid
        , playername
        , holecards
+       , holecards_simple
        , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
 from pokerhandhistory_showdowns
 where holecards != '  ' -- we don't care if we can't see their cards
-group by handid, playername, holecards;
+group by handid, playername, holecards, holecards_simple;
