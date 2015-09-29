@@ -69,6 +69,7 @@ select
        handid
        , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
        , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
+       , listagg(case when holecards = '  ' then 'NA' else holecards end, ',') within group (order by actionnumber) as holecardsorder
        , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
        , listagg(amount, ',') within group (order by actionnumber) as amountorder
        , listagg(pct_of_starting_stack, ',') within group (order by actionnumber) as pct_of_starting_stackorder
@@ -78,3 +79,15 @@ select
        , listagg(num_big_blinds_in_currentpot, ',') within group (order by actionnumber) as num_big_blinds_in_currentpotorder
 from pokerhandhistory_showdowns
 group by handid;
+
+-- Breakdown of betting patterns by individual holecards
+-- this lets us look at any frequent betting patters specific holecards might have
+create table holecards_by_actiontype as
+select 
+       handid
+       , playername
+       , holecards
+       , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
+from pokerhandhistory_showdowns
+where holecards != '  ' -- we don't care if we can't see their cards
+group by handid, playername, holecards;
