@@ -32,3 +32,13 @@ create table pokerhandhistory (
 copy pokerhandhistory from 's3://winthropstage/nick.888.backlog.1935.bigfile.csv.gz'
 credentials 'aws_access_key_id=HERE;aws_secret_access_key=HERE'
 delimiter ',' gzip;
+
+unload ('select * from action_orderings')
+to 's3://winthropstage/pokerhands/action_ordering_extract-'
+credentials 'aws_access_key_id=HERE;aws_secret_access_key=HERE'
+allowoverwrite;
+
+unload ('select * from holecards_by_actiontype')
+to 's3://winthropstage/pokerhands/holecards_by_actiontype_extract-'
+credentials 'aws_access_key_id=HERE;aws_secret_access_key=HERE'
+allowoverwrite;
