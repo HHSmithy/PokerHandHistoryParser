@@ -1,3 +1,4 @@
+\timing on
 -- create a helper function to sort pokerhands otherwise, AdTs is a different hand than TsAd
 
 drop function sortstartinghand(varchar(4));
@@ -88,7 +89,7 @@ drop table action_orderings;
 create table action_orderings as 
 select 
        handid
-       , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
+       , listagg(handactiontype || '-' || street, ',') within group (order by actionnumber) as actionorder
        , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
        , listagg(case when holecards = '  ' then 'NA' else holecards end, ',') within group (order by actionnumber) as holecardsorder
        , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
@@ -110,7 +111,18 @@ select
        , playername
        , holecards
        , holecards_simple
-       , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
+       , listagg(handactiontype || '-' || street, ',') within group (order by actionnumber) as actionorder
 from pokerhandhistory_showdowns
 where holecards != '  ' -- we don't care if we can't see their cards
 group by handid, playername, holecards, holecards_simple;
+
+drop table holecards_by_actiontype_freq;
+create table holecards_by_actiontype_freq as
+select 
+       holecards_simple
+       , count(handid)
+       , actionorder 
+from holecards_by_actiontype 
+-- where holecards_simple='AAo'
+group by holecards_simple, actionorder
+order by holecards_simple, count(handid) desc; --limit 20
