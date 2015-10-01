@@ -17,6 +17,16 @@ as $$
 return ''.join(sorted(s))
 $$ language plpythonu;
 
+-- extract a win from an actionorder string
+drop function getwin(s varchar(65535));
+create function getwin (s varchar(65535))
+       returns int
+immutable
+as $$
+sa = s.split(',')
+return int(sa[len(sa) - 1].split(':')[2])
+$$ language plpythonu;
+
 
 -- create a table for only hands which have a showdown.  We only care to analyze patterns from these hands since
 -- they will have hole cards. 
@@ -35,7 +45,7 @@ select
        ,CAST(substring(gamedescription from 24 for 1) as INT) as small_blind
        ,CAST(substring(gamedescription from 27 for 1) as INT) as big_blind
        ,numplayersactive
-       ,numplayersseated
+nn       ,numplayersseated
        ,rake
        ,comumnitycards
        ,totalpot
@@ -52,6 +62,7 @@ select
        -- reduce holecards to suited or offsuit to simplify analysis and reduce the number of distinct hands
        ,sortstring(substring(holecards from 1 for 1) || substring(holecards from 3 for 1)) || case when substring(holecards from 2 for 1) = substring(holecards from 4 for 1) then 's' else 'o' end as holecards_simple
        ,startingstack
+       ,round(startingstack / CAST(substring(gamedescription from 27 for 1) as INT)) as bb_in_startingstack
        ,seatnumber
        ,actionnumber
        ,amount
@@ -62,9 +73,9 @@ select
        , round(amount / case when lag(currentpostsize, 1) over (order by handid, actionnumber) = 0 then 1 
        	 	       else lag(currentpostsize, 1) over (order by handid, actionnumber) end * 100) as amount_pct_into_currentpot
        -- amount in big blinds
-       , round(amount / CAST(substring(gamedescription from 27 for 1) as INT), 1) as num_big_blinds_in_amount
+       , round(amount / CAST(substring(gamedescription from 27 for 1) as INT)) as num_big_blinds_in_amount
        -- potsize in big blinds
-       , round(currentpostsize / CAST(substring(gamedescription from 27 for 1) as INT), 1) as num_big_blinds_in_currentpot
+       , round(currentpostsize / CAST(substring(gamedescription from 27 for 1) as INT)) as num_big_blinds_in_currentpot
        ,handactiontype
        ,currentpostsize
        ,street
@@ -82,14 +93,12 @@ where
 order by handid, actionnumber
 );
 
-
-
 -- create a contatenated list of actions so we can do some frequency analysis on what patterns occur most frequently
 drop table action_orderings;
 create table action_orderings as 
 select 
        handid
-       , listagg(handactiontype || '-' || street, ',') within group (order by actionnumber) as actionorder
+       , listagg(handactiontype || ':' || street, ',') within group (order by actionnumber) as actionorder
        , listagg(playername, ',') within group (order by actionnumber) as playeractionorder
        , listagg(case when holecards = '  ' then 'NA' else holecards end, ',') within group (order by actionnumber) as holecardsorder
        , listagg(seatnumber, ',') within group (order by actionnumber) as seatnumberorder
@@ -109,20 +118,42 @@ create table holecards_by_actiontype as
 select 
        handid
        , playername
+       , startingstack
        , holecards
        , holecards_simple
-       , listagg(handactiontype || '-' || street, ',') within group (order by actionnumber) as actionorder
+       , round(abs(sum(case when amount < 0 then amount else 0 end)) / startingstack * 100) as pctofstackatrisk
+       , listagg(handactiontype || ':' || street || ':' || num_big_blinds_in_amount, ',') within group (order by actionnumber) as actionorderappends
+       , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
+       , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as numbigblindsorder
 from pokerhandhistory_showdowns
 where holecards != '  ' -- we don't care if we can't see their cards
-group by handid, playername, holecards, holecards_simple;
+group by handid, playername, startingstack, holecards, holecards_simple;
+select * from holecards_by_actiontype limit 10;
 
 drop table holecards_by_actiontype_freq;
 create table holecards_by_actiontype_freq as
 select 
        holecards_simple
        , count(handid)
-       , actionorder 
+       , case when actionorderappends like '%WINS%' then 1 else 0 end as iswin
+       , actionorderappends
+       , actionorder
+       , numbigblindsorder
+       , startingstack
 from holecards_by_actiontype 
 -- where holecards_simple='AAo'
-group by holecards_simple, actionorder
+group by holecards_simple, actionorder, actionorderappends, numbigblindsorder
 order by holecards_simple, count(handid) desc; --limit 20
+
+
+drop table holecards_by_actiontype_features;
+create table holecards_by_actiontype_features as
+select 
+       holecards_simple
+       ,"count"
+       , iswin
+       , case when iswin = 1 then cast(getwin(actionorderappends) as int) else 0 end as winamount
+       , actionorderappends
+       , actionorder
+       , numbigblindsorder
+from holecards_by_actiontype_freq;
