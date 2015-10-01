@@ -66,4 +66,18 @@ select distinct handactiontype from pokerhandhistory;
 select handid, playername, seatnumber, actionnumber, amount, num_big_blinds_in_amount, currentpostsize, pct_of_pot, num_big_blinds_in_pot, handactiontype from pokerhandhistory_showdowns order by handid, actionnumber limit 1000;
 
 create table temp_extract as select handid, actionorder, seatnumberorder, pct_of_starting_stackorder, num_big_blinds_in_amountorder, amount_pct_into_currentpotorder, currentpotsizeorder, num_big_blinds_in_currentpotorder from action_orderings;
+
+-- look at hand by amount won, their frequency "count" and amountwon/hand
+select 
+       holecards_simple
+       , round(avg(avgpctofstackatrisk)) as avgpctofstackatrisk
+       , round((sum(winamount) / sum(avgstartingstack)) * 100) as wonreltostack
+       , round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)) * 100) as risktorewardratio
+       , sum(winamount)
+       , sum("count")
+       , round(sum(winamount) / sum("count")) 
+from holecards_by_actiontype_features 
+group by holecards_simple
+order by round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)) * 100) desc;
 -- end working section
+
