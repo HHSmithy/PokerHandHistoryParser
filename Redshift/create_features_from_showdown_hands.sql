@@ -90,7 +90,6 @@ where
         where
             handactiontype = 'SHOW'
     )
-order by handid, actionnumber
 );
 
 -- create a contatenated list of actions so we can do some frequency analysis on what patterns occur most frequently
@@ -121,14 +120,14 @@ select
        , startingstack
        , holecards
        , holecards_simple
-       , round(abs(sum(case when amount < 0 then amount else 0 end)) / startingstack * 100) as pctofstackatrisk
+       , round(abs(sum(case when amount < 0 then num_big_blinds_in_amount else 0 end)) / bb_in_startingstack * 100) as pctofstackatrisk
        , listagg(handactiontype || ':' || street || ':' || num_big_blinds_in_amount, ',') within group (order by actionnumber) as actionorderappends
        , listagg(handactiontype, ',') within group (order by actionnumber) as actionorder
        , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as numbigblindsorder
 from pokerhandhistory_showdowns
 where holecards != '  ' -- we don't care if we can't see their cards
-group by handid, playername, startingstack, holecards, holecards_simple;
-select * from holecards_by_actiontype limit 10;
+group by handid, playername, bb_in_startingstack, holecards, holecards_simple;
+select * from holecards_by_actiontype where holecards_simple='38o' limit 10;
 
 drop table holecards_by_actiontype_freq;
 create table holecards_by_actiontype_freq as
@@ -136,14 +135,16 @@ select
        holecards_simple
        , count(handid)
        , case when actionorderappends like '%WINS%' then 1 else 0 end as iswin
+       , round(avg(pctofstackatrisk)) as avgpctofstackatrisk
+       , round(avg(bb_in_startingstack)) as avgstartingstack
        , actionorderappends
        , actionorder
        , numbigblindsorder
-       , startingstack
 from holecards_by_actiontype 
 -- where holecards_simple='AAo'
 group by holecards_simple, actionorder, actionorderappends, numbigblindsorder
 order by holecards_simple, count(handid) desc; --limit 20
+select * from holecards_by_actiontype_freq limit 10;
 
 
 drop table holecards_by_actiontype_features;
@@ -153,7 +154,10 @@ select
        ,"count"
        , iswin
        , case when iswin = 1 then cast(getwin(actionorderappends) as int) else 0 end as winamount
+       , avgpctofstackatrisk
+       , avgstartingstack
        , actionorderappends
        , actionorder
        , numbigblindsorder
 from holecards_by_actiontype_freq;
+select * from holecards_by_actiontype_features limit 10;
