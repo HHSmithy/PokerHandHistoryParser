@@ -71,13 +71,13 @@ create table temp_extract as select handid, actionorder, seatnumberorder, pct_of
 select 
        holecards_simple
        , round(avg(avgpctofstackatrisk)) as avgpctofstackatrisk
-       , round((sum(winamount) / sum(avgstartingstack)) * 100) as wonreltostack
-       , round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)) * 100) as risktorewardratio
-       , sum(winamount)
-       , sum("count")
-       , round(sum(winamount) / sum("count")) 
+       , round((sum(winamount) / sum(avgstartingstack)) * 100) as avgpctofstackwon
+       , round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)), 2) as risktorewardratio
+       , sum(winamount) as totalwinnings
+       , sum("count") as freq
+       , round(sum(winamount) / sum("count")) as winningsperhand
 from holecards_by_actiontype_features 
 group by holecards_simple
-order by round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)) * 100) desc;
+order by round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)), 2) desc;
 -- end working section
 
