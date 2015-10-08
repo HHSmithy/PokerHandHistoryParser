@@ -24,6 +24,10 @@ namespace CommandLineParser
             Two = 2, Three = 3, Four = 4, Five = 5, Six = 6, Seven = 7, Eight = 8, Nine = 9, Ten = 10, Jack = 11,
             Queen = 12, King = 13, Ace = 14
         };
+
+        Dictionary<char, Suit> str_to_suit = new Dictionary<char, Suit>();
+        Dictionary<char, Rank> str_to_rank = new Dictionary<char, Rank>();
+        
         Suit suit;
         Rank rank;
         // constructors
@@ -32,6 +36,34 @@ namespace CommandLineParser
         {
             suit = s;
             rank = r;
+        }
+        public Card(string c)
+        {
+            if (c.Length != 2)
+            {
+                throw new Exception("a string card must equal length of 2 and be in a format of RankSuit, example 'As' or 'Ks' for Ace of Spades, King of Spades");
+            }
+            str_to_suit.Add('s', Suit.Spade);
+            str_to_suit.Add('c', Suit.Club);
+            str_to_suit.Add('h', Suit.Heart);
+            str_to_suit.Add('d', Suit.Diamond);
+
+            str_to_rank.Add('2', Rank.Two);
+            str_to_rank.Add('3', Rank.Three);
+            str_to_rank.Add('4', Rank.Four);
+            str_to_rank.Add('5', Rank.Five);
+            str_to_rank.Add('6', Rank.Six);
+            str_to_rank.Add('7', Rank.Seven);
+            str_to_rank.Add('8', Rank.Eight);
+            str_to_rank.Add('9', Rank.Nine);
+            str_to_rank.Add('T', Rank.Ten);
+            str_to_rank.Add('J', Rank.Jack);
+            str_to_rank.Add('Q', Rank.Queen);
+            str_to_rank.Add('K', Rank.King);
+            str_to_rank.Add('A', Rank.Ace);
+            suit = str_to_suit[c[1]];
+            rank = str_to_rank[c[0]];
+
         }
         // properties. get and set values of the card object.
         public Suit SUIT { get { return suit; } set { suit = value; } }
@@ -58,12 +90,14 @@ namespace CommandLineParser
             {
                 throw new Exception("Error: list of cards > maxHandSize Can't add a list of cards to a hand that is greater than the maximum capacity of the hand.");
             }
-
+            
+            hand = new List<Card>(maxHandSize);
             hand.Capacity = maxHandSize;
-            numCardsToRank = NumCardsToRank;
-            for (int i = 0; i < cards.Length; i += 2)
+            this.NumCardsToRank = numCardsToRank;
+            this.MaxHandSize = maxHandSize;
+            for (int i = 0; i <= cards.Length-2; i += 2)
             {
-                hand.Add(new Card((Card.Suit)cards[i + 1], (Card.Rank)cards[i]));
+                hand.Add(new Card(cards.Substring(i, 2)));
             }
 
         }
@@ -802,6 +836,28 @@ namespace CommandLineParser
             var handHistoryParser = new Poker888FastParserImpl();
             HandHistoryParserFastImpl fastParser = handHistoryParser as HandHistoryParserFastImpl;
 
+            string handRank, handRank2;
+            HandEvaluator he = new HandEvaluator();
+            Hand h = new Hand("AsJcKdTs8c9c2h", 7, 5);
+            double hr = he.RankHand(h, out handRank);
+            he = new HandEvaluator();
+            Hand h2 = new Hand("KsJcTs8h2c3h9d", 7, 5);
+            double hr2 = he.RankHand(h2, out handRank2);
+            Console.WriteLine("hr1 {0}\nhr2 {1}", handRank, handRank2);
+
+            if (hr > hr2)
+            {
+                Console.WriteLine("hr1 wins");
+            }
+            else if (hr < hr2)
+            {
+                Console.WriteLine("hr2 wins");
+            }
+            else{
+                Console.WriteLine("tie");
+            }
+            Console.ReadLine();
+            return;
 
             try
             {
