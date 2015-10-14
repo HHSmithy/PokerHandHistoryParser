@@ -425,22 +425,27 @@ namespace CommandLineParser
                 // Rank Board Cards
                 if (community.Count > 0)
                 {
+                    // board rank without card
+                    he = new HandEvaluator();
+                    boardRankwithout = he.RankHand(new Hand(community, 7, 5), out handRank);
+
                     // board rank with card
                     he = new HandEvaluator();
                     community.Add(c);
-                    boardRankwith = he.RankHand(new Hand(community, community.Count, community.Count), out handRank);
+                    boardRankwith = he.RankHand(new Hand(community, 7, 5), out handRank);
                     community.Remove(c);
 
-                    // board rank without card
-                    boardRankwithout = he.RankHand(new Hand(community, community.Count, community.Count), out handRank);
+
                 }
                
                 // Any card that increases your position but does not increase the board position we consider an out. 
-                if (((int)handRanks[h] > (int)handWithoutCard[h]) && (int)boardRankwithout > (int)boardRankwith)
+                if (((int)handRanks[h] > (int)handWithoutCard[h]) && (int)boardRankwithout >= (int)boardRankwith)
                 {
+                    //Console.WriteLine("Card: {0}\nHoleCards: {1}\nCommunity: {2}\nHandRankWith: {3}\nHandRankWithout: {4}\nBoardRankWith: {5}\nBoardRankWithout: {6}", c.CardToString(), new Hand(holecards, 7,5).HandToString(), new Hand(community, 7 ,5).HandToString(), handRanks[h], handWithoutCard[h], boardRankwith, boardRankwithout);
                     handOuts[h]++;
                     handWhichOuts[h].Add(c);
-                }
+                    //Console.ReadLine();
+                } 
 
 
 
