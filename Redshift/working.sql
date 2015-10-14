@@ -72,12 +72,16 @@ select
        holecards_simple
        , round(avg(avgpctofstackatrisk)) as avgpctofstackatrisk
        , round((sum(winamount) / sum(avgstartingstack)) * 100) as avgpctofstackwon
+       , round(avg(winamount)) as avgwin
+       , round(case when avg(avglossamout) = 0 then 1 else avg(avglossamout) end) as avgloss
        , round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)), 2) as risktorewardratio
+       , round(sum(winamount) / round(case when sum(avglossamout) = 0 then 1 else sum(avglossamout) end), 2) as winlossratio
        , sum(winamount) as totalwinnings
+       , round(case when sum(avglossamout) = 0 then 1 else sum(avglossamout) end) as totalloss
        , sum("count") as freq
-       , round(sum(winamount) / sum("count")) as winningsperhand
+--       , round(sum(winamount) / sum("count")) as winningsperhand
 from holecards_by_actiontype_features 
-group by holecards_simple
-order by round((round(avg(avgpctofstackatrisk)) / round((sum(winamount) / sum(avgstartingstack)) * 100)), 2) desc;
+group by holecards_simple --, avglossamout
+order by round(avg(winamount) / case when avg(avglossamout) = 0 then 1 else avg(avglossamout) end, 2) desc;
 -- end working section
 
