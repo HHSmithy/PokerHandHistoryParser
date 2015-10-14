@@ -27,13 +27,38 @@ namespace CommandLineParser
 
         Dictionary<char, Suit> str_to_suit = new Dictionary<char, Suit>();
         Dictionary<char, Rank> str_to_rank = new Dictionary<char, Rank>();
-        
+
+
         Suit suit;
         Rank rank;
+        private void InitCard()
+        {
+            str_to_suit['s'] = Suit.Spade;
+            str_to_suit['c'] = Suit.Club;
+            str_to_suit['h'] = Suit.Heart;
+            str_to_suit['d'] = Suit.Diamond;
+            str_to_rank['2'] = Rank.Two;
+            str_to_rank['3'] = Rank.Three;
+            str_to_rank['4'] = Rank.Four;
+            str_to_rank['5'] = Rank.Five;
+            str_to_rank['6'] = Rank.Six;
+            str_to_rank['7'] = Rank.Seven;
+            str_to_rank['8'] = Rank.Eight;
+            str_to_rank['9'] = Rank.Nine;
+            str_to_rank['T'] = Rank.Ten;
+            str_to_rank['J'] = Rank.Jack;
+            str_to_rank['Q'] = Rank.Queen;
+            str_to_rank['K'] = Rank.King;
+            str_to_rank['A'] = Rank.Ace;
+        }
         // constructors
-        public Card() { }
+        public Card()
+        {
+            InitCard();
+        }
         public Card(Suit s, Rank r)
         {
+            InitCard();
             suit = s;
             rank = r;
         }
@@ -43,27 +68,15 @@ namespace CommandLineParser
             {
                 throw new Exception("a string card must equal length of 2 and be in a format of RankSuit, example 'As' or 'Ks' for Ace of Spades, King of Spades");
             }
-            str_to_suit.Add('s', Suit.Spade);
-            str_to_suit.Add('c', Suit.Club);
-            str_to_suit.Add('h', Suit.Heart);
-            str_to_suit.Add('d', Suit.Diamond);
-
-            str_to_rank.Add('2', Rank.Two);
-            str_to_rank.Add('3', Rank.Three);
-            str_to_rank.Add('4', Rank.Four);
-            str_to_rank.Add('5', Rank.Five);
-            str_to_rank.Add('6', Rank.Six);
-            str_to_rank.Add('7', Rank.Seven);
-            str_to_rank.Add('8', Rank.Eight);
-            str_to_rank.Add('9', Rank.Nine);
-            str_to_rank.Add('T', Rank.Ten);
-            str_to_rank.Add('J', Rank.Jack);
-            str_to_rank.Add('Q', Rank.Queen);
-            str_to_rank.Add('K', Rank.King);
-            str_to_rank.Add('A', Rank.Ace);
+            InitCard();
             suit = str_to_suit[c[1]];
             rank = str_to_rank[c[0]];
 
+        }
+        public string CardToString()
+        {
+            string cardstring = String.Format("{0}{1}", str_to_rank.First(p => p.Value == rank).Key, str_to_suit.First(k => k.Value == suit).Key);
+            return cardstring;
         }
         // properties. get and set values of the card object.
         public Suit SUIT { get { return suit; } set { suit = value; } }
@@ -90,12 +103,12 @@ namespace CommandLineParser
             {
                 throw new Exception("Error: list of cards > maxHandSize Can't add a list of cards to a hand that is greater than the maximum capacity of the hand.");
             }
-            
+
             hand = new List<Card>(maxHandSize);
             hand.Capacity = maxHandSize;
             this.NumCardsToRank = numCardsToRank;
             this.MaxHandSize = maxHandSize;
-            for (int i = 0; i <= cards.Length-2; i += 2)
+            for (int i = 0; i <= cards.Length - 2; i += 2)
             {
                 hand.Add(new Card(cards.Substring(i, 2)));
             }
@@ -210,10 +223,60 @@ namespace CommandLineParser
                 Console.WriteLine("{0} of {1}s", item.RANK, item.SUIT);
             }
         }
+        public string HandToString()
+        {
+            string handstring = "";
+            foreach (Card c in hand)
+            {
+                handstring += c.CardToString();
+            }
+            return handstring;
+        }
         // properties
         public List<Card> HAND { get { return hand; } set { hand = value; } }
 
 
+
+    }
+    class Deck
+    {
+        // a deck is a stack of cards.
+        List<Card> deck;
+        public Deck()
+        {
+            deck = new List<Card>();
+            // code to iterate through both enumerations of suit and card and add each pair to the deck.
+            foreach (Card.Suit suit in Enum.GetValues(typeof(Card.Suit)))
+            {
+                foreach (Card.Rank rank in Enum.GetValues(typeof(Card.Rank)))
+                {
+                    Card card = new Card(suit, rank);
+                    deck.Add(card);
+                }
+            }
+        }
+        // property for accessing the actual stack...(for interfacing with the dealer class)
+        public List<Card> DECK { get { return deck; } set { deck = value; } }
+
+        public void RemoveCards(List<Card> cardsToRemove)
+        {
+            deck.RemoveAll((c) =>
+            {
+                return cardsToRemove.Exists(p => p.SUIT == c.SUIT && p.RANK == c.RANK);
+            });
+        }
+
+
+        // for testing purposes.  sends text of cards in deck to console.
+        public void DisplayDeck()
+        {
+            int count = 0;
+            foreach (Card item in deck)
+            {
+                count++;
+                Console.WriteLine("Card {0} is {1} of {2}s", count, item.RANK.ToString(), item.SUIT.ToString());
+            }
+        }
 
     }
     class HandEvaluator
@@ -314,6 +377,90 @@ namespace CommandLineParser
             if (r.Count > 0)
                 result.AddRange(r);
             return result;
+        }
+        public Dictionary<Hand, int> ComputeOuts(Hand h, List<Card> holecards, List<Card> community, out Dictionary<Hand, List<Card>> whichouts)
+        {
+
+            Deck d = new Deck();
+            HandEvaluator he = new HandEvaluator();
+            Dictionary<Hand, int> handOuts = new Dictionary<Hand, int>();
+            Dictionary<Hand, List<Card>> handWhichOuts = new Dictionary<Hand, List<Card>>();
+            Dictionary<Hand, double> handRanks = new Dictionary<Hand, double>();
+            Dictionary<Hand, double> handWithoutCard = new Dictionary<Hand, double>();
+
+            // C# WHAT?  This codes no works
+            //List<string> testing = new List<string>();
+            //testing.Add("t");
+            //testing.Add("a");
+            //Console.WriteLine("{0}", testing);
+            //testing.Remove("t");
+            //Console.WriteLine("{0}", testing);
+            //return handOuts;
+            // END This codes no works
+
+            // initialize dict and remove visible cards to everyone.  Outs are only computed on cards we can't see.
+            handOuts.Add(h, 0);
+            handWhichOuts.Add(h, new List<Card>());
+            d.RemoveCards(community);
+            d.RemoveCards(holecards);
+            // for every card left in the deck not visible, see which cards unilaterally improve hands positions relative to eachother
+            // the card that produces a move to the best hand gets counted for that hand. 
+            foreach (Card c in d.DECK)
+            {
+
+
+                string handRank;
+                double boardRankwith = 0.0;
+                double boardRankwithout = 0.0;
+                // Rank with card
+                h.AddCard(c);
+                he = new HandEvaluator();
+                handRanks[h] = he.RankHand(h, out handRank);
+
+                // Rank without card
+                h.RemoveCard(c);
+                he = new HandEvaluator();
+                handWithoutCard[h] = he.RankHand(h, out handRank);
+
+                // Rank Board Cards
+                if (community.Count > 0)
+                {
+                    // board rank with card
+                    he = new HandEvaluator();
+                    community.Add(c);
+                    boardRankwith = he.RankHand(new Hand(community, community.Count, community.Count), out handRank);
+                    community.Remove(c);
+
+                    // board rank without card
+                    boardRankwithout = he.RankHand(new Hand(community, community.Count, community.Count), out handRank);
+                }
+               
+                // Any card that increases your position but does not increase the board position we consider an out. 
+                if (((int)handRanks[h] > (int)handWithoutCard[h]) && (int)boardRankwithout > (int)boardRankwith)
+                {
+                    handOuts[h]++;
+                    handWhichOuts[h].Add(c);
+                }
+
+
+
+                //// who ever is the winner after this card is delt gets that out. 
+                //// this is more for people watching the play-by-play rather than analysis.  Players only know what cards they can see. 
+                //foreach (KeyValuePair<Hand, double> kv in handRanksSort)
+                //{
+                //    handCurrentPosition[kv.Key] = handRanksSort.IndexOf(kv);
+
+                //    // keep a list of the number of outs and the actual cards which are considered outs for that hand. 
+                //    handOuts[handRanksSort[0].Key]++;
+                //    handWhichOuts[handRanksSort[0].Key].Add(c);
+                //}
+
+
+
+            }
+            whichouts = handWhichOuts;
+            return handOuts;
+
         }
         public double RankHand(Hand myHand, out string stringRank)
         {   // keep track of the current max full bin..this is used for ranking the cards
@@ -836,29 +983,6 @@ namespace CommandLineParser
             var handHistoryParser = new Poker888FastParserImpl();
             HandHistoryParserFastImpl fastParser = handHistoryParser as HandHistoryParserFastImpl;
 
-            string handRank, handRank2;
-            HandEvaluator he = new HandEvaluator();
-            Hand h = new Hand("AsJcKdTs8c9c2h", 7, 5);
-            double hr = he.RankHand(h, out handRank);
-            he = new HandEvaluator();
-            Hand h2 = new Hand("KsJcTs8h2c3h9d", 7, 5);
-            double hr2 = he.RankHand(h2, out handRank2);
-            Console.WriteLine("hr1 {0}\nhr2 {1}", handRank, handRank2);
-
-            if (hr > hr2)
-            {
-                Console.WriteLine("hr1 wins");
-            }
-            else if (hr < hr2)
-            {
-                Console.WriteLine("hr2 wins");
-            }
-            else{
-                Console.WriteLine("tie");
-            }
-            Console.ReadLine();
-            return;
-
             try
             {
                 // The true causes hand-parse errors to get thrown. If this is false, hand-errors will
@@ -871,7 +995,7 @@ namespace CommandLineParser
                     string fileText = new StreamReader(file).ReadToEnd();
                     var hands = fastParser.SplitUpMultipleHandsToLines(fileText);
                     var outputFile = new StreamWriter(file + ".csv");
-                    outputFile.WriteLine("DateOfHandUtc,HandId,DealerButtonPosition,TableName,GameDescription,NumPlayersActive,NumPlayersSeated,Rake,ComumnityCards,TotalPot,PlayerName,HoleCards,StartingStack,SeatNumber,ActionNumber,Amount,HandActionType,currentPostSize,Street,IsAggressiveAction,IsAllIn,IsAllInAction,IsBlinds,IsGameAction,IsPreFlopRaise,IsRaise,IsWinningsAction");
+                    outputFile.WriteLine("DateOfHandUtc,HandId,DealerButtonPosition,TableName,GameDescription,NumPlayersActive,NumPlayersSeated,Rake,ComumnityCards,TotalPot,PlayerName,HoleCards,StartingStack,SeatNumber,ActionNumber,Amount,HandActionType,Outs,CardOuts,CurrentHandRank,currentPostSize,Street,IsAggressiveAction,IsAllIn,IsAllInAction,IsBlinds,IsGameAction,IsPreFlopRaise,IsRaise,IsWinningsAction");
                     foreach (var hand in hands)
                     {
                         var parsedHand = fastParser.ParseFullHandHistory(hand, true);
@@ -891,12 +1015,96 @@ namespace CommandLineParser
                                 || action.HandActionType == HandHistories.Objects.Actions.HandActionType.RAISE
                                 || action.HandActionType == HandHistories.Objects.Actions.HandActionType.BIG_BLIND
                                 || action.HandActionType == HandHistories.Objects.Actions.HandActionType.CALL
-                                || action.HandActionType ==  HandHistories.Objects.Actions.HandActionType.ALL_IN)
+                                || action.HandActionType == HandHistories.Objects.Actions.HandActionType.ALL_IN)
                             {
                                 currentPotSize += action.Amount;
                             }
 
-                            outputFile.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26}",
+                            // Don't judge me.... this code is just chaos...but it's works. 
+                            string handRank;
+                            HandEvaluator he = new HandEvaluator();
+                            string handstring = String.Format("{0}{1}", parsedHand.Players.First(p => p.PlayerName.Equals(action.PlayerName)).HoleCards, parsedHand.ComumnityCards);
+                            string flopstring;
+                            string turnstring;
+                            string riverstring;
+                            string currenthandstring;
+                            Hand h = new Hand();
+                            // holecards
+                            Hand hc = new Hand();
+                            Dictionary<Hand, int> handOuts = new Dictionary<Hand, int>();
+                            Dictionary<Hand, List<Card>> cardouts;
+                            int outs = 0;
+                            List<Hand> hl;
+                            double hr = 0.0;
+                            string couts = "";
+                            if (handstring.Length >= 14)
+                            {
+                                currenthandstring = "";
+                                flopstring = handstring.Substring(4, 6);
+                                turnstring = handstring.Substring(10, 2);
+                                riverstring = handstring.Substring(12, 2);
+                                // build the hand play-by-play so we can get current hand ranking and also build in hand outs. 
+                                switch (action.Street)
+                                {
+
+                                    case HandHistories.Objects.Cards.Street.Preflop:
+                                        currenthandstring = handstring.Substring(0, 4);
+                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        hc = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+
+                                        hr = he.RankHand(h, out handRank);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new List<Card>(), out cardouts);
+                                        outs = handOuts[h];
+                                        // We do 52 here because making the list of cards (the outs) as a hand then printing it is easier.
+                                        // However, hand has a limitation to the number of cards which can exist in the hand.
+                                        // We will never have 52 outs so this limit will never be reached.
+                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
+                                        break;
+                                    case HandHistories.Objects.Cards.Street.Flop:
+                                        currenthandstring = handstring.Substring(0, 4) + flopstring;
+                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        hc = new Hand(handstring.Substring(0, 4), 7, 5);
+                                        hr = he.RankHand(h, out handRank);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring, 7, flopstring.Length / 2).HAND, out cardouts);
+                                        outs = handOuts[h];
+                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
+
+                                        break;
+                                    case HandHistories.Objects.Cards.Street.Turn:
+                                        currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring;
+                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        hc = new Hand(handstring.Substring(0, 4), 7, 5);
+
+                                        hr = he.RankHand(h, out handRank);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring, 7, (flopstring.Length + turnstring.Length) / 2).HAND, out cardouts);
+                                        outs = handOuts[h];
+                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
+
+                                        break;
+                                    case HandHistories.Objects.Cards.Street.River:
+                                        currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring + riverstring;
+                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        hc = new Hand(handstring.Substring(0, 4), 7, 5);
+                                        hr = he.RankHand(h, out handRank);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring + riverstring, 7, (flopstring.Length + turnstring.Length + riverstring.Length) / 2).HAND, out cardouts);
+                                        outs = handOuts[h];
+                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
+
+                                        break;
+                                    default:
+                                        hr = 0.0;
+                                        outs = 0;
+
+                                        break;
+                                }
+
+                            }
+                            else
+                            {
+                                hr = 0.0;
+                                outs = 0;
+                            }
+                            outputFile.WriteLine("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29}",
                                 parsedHand.DateOfHandUtc
                                 , parsedHand.HandId
                                 , parsedHand.DealerButtonPosition
@@ -914,6 +1122,9 @@ namespace CommandLineParser
                                 , actionNumber
                                 , action.Amount
                                 , action.HandActionType
+                                , outs.ToString()
+                                , couts
+                                , hr.ToString()
                                 , currentPotSize
                                 , action.Street
                                 , action.IsAggressiveAction
@@ -935,6 +1146,7 @@ namespace CommandLineParser
             catch (Exception ex) // Catch hand-parsing exceptions
             {
                 Console.WriteLine("Parsing Error: {0}", ex.Message); // Example logging.
+                Console.ReadLine();
             }
         }
     }
