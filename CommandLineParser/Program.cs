@@ -407,13 +407,12 @@ namespace CommandLineParser
             // the card that produces a move to the best hand gets counted for that hand. 
             foreach (Card c in d.DECK)
             {
-
-
                 string handRank;
                 double boardRankwith = 0.0;
                 double boardRankwithout = 0.0;
                 // Rank with card
                 h.AddCard(c);
+                //Console.WriteLine("NumCardsToRank: {0}\nMaxHandSize: {1}", h.NumCardsToRank, h.MaxHandSize);
                 he = new HandEvaluator();
                 handRanks[h] = he.RankHand(h, out handRank);
 
@@ -435,17 +434,34 @@ namespace CommandLineParser
                     boardRankwith = he.RankHand(new Hand(community, 7, 5), out handRank);
                     community.Remove(c);
 
+                    // Any card that increases your position one level and your position is at least 2 hand levels better than the board with the card.
+                    // we do two levels because if the board pairs and is a favorable pair to your hole cards, you hand will increase 2x. 2-pair -> board pairs -> full house.
+                    // all other cases should be handled by the if statement below. 
+                    if ((Math.Round(handRanks[h], 2) > Math.Round(handWithoutCard[h], 2)) && (Math.Abs((int)handRanks[h] - (int)boardRankwith)) >= 2)
+                    {
+                        //Console.WriteLine("Card: {0}\nHoleCards: {1}\nCommunity: {2}\nHandRankWith: {3}\nHandRankWithout: {4}\nBoardRankWith: {5}\nBoardRankWithout: {6}", c.CardToString(), new Hand(holecards, 7,5).HandToString(), new Hand(community, 7 ,5).HandToString(), handRanks[h], handWithoutCard[h], boardRankwith, boardRankwithout);
+                        handOuts[h]++;
+                        handWhichOuts[h].Add(c);
+                        //Console.ReadLine();
+                    }
+
+                    // The above if block does not catch all cases.  If you have the same rank as the board but a higher pair, three kind, etc.. these are still favorable outs.
+                    // Example:  Holecards:  Ac2s  Board:  As5d5c
+                    // Board has a pair and you have a pair, but your pair is better.
+                    if (Math.Round(handRanks[h], 2) > Math.Round(boardRankwith, 2) && (Math.Round(handRanks[h], 2) > Math.Round(handWithoutCard[h], 2)) && (int)handRanks[h] == (int)boardRankwith && ((int)handRanks[h] == 4 || (int)handRanks[h] == 5 || (int)handRanks[h] == 8))
+                    { // your hand is better than boards.  You hand with the card is better than your previous hand.  you have the same hand as the board.  and the hand is a straight, flush, or straight flush.
+                        //Console.WriteLine("Card: {0}\nHoleCards: {1}\nCommunity: {2}\nHandRankWith: {3}\nHandRankWithout: {4}\nBoardRankWith: {5}\nBoardRankWithout: {6}", c.CardToString(), new Hand(holecards, 7, 5).HandToString(), new Hand(community, 7, 5).HandToString(), handRanks[h], handWithoutCard[h], boardRankwith, boardRankwithout);
+
+                        handOuts[h]++;
+                        handWhichOuts[h].Add(c);
+                        //Console.ReadLine();
+
+                    }
+
 
                 }
-               
-                // Any card that increases your position but does not increase the board position we consider an out. 
-                if (((int)handRanks[h] > (int)handWithoutCard[h]) && (int)boardRankwithout >= (int)boardRankwith)
-                {
-                    //Console.WriteLine("Card: {0}\nHoleCards: {1}\nCommunity: {2}\nHandRankWith: {3}\nHandRankWithout: {4}\nBoardRankWith: {5}\nBoardRankWithout: {6}", c.CardToString(), new Hand(holecards, 7,5).HandToString(), new Hand(community, 7 ,5).HandToString(), handRanks[h], handWithoutCard[h], boardRankwith, boardRankwithout);
-                    handOuts[h]++;
-                    handWhichOuts[h].Add(c);
-                    //Console.ReadLine();
-                } 
+
+
 
 
 
@@ -1052,50 +1068,50 @@ namespace CommandLineParser
                                 switch (action.Street)
                                 {
 
-                                    case HandHistories.Objects.Cards.Street.Preflop:
-                                        currenthandstring = handstring.Substring(0, 4);
-                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
-                                        hc = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                    //case HandHistories.Objects.Cards.Street.Preflop:
+                                    //    currenthandstring = handstring.Substring(0, 4);
+                                    //    h = new Hand(currenthandstring, 7, 5);
+                                    //    hc = new Hand(currenthandstring, 7, 5);
 
-                                        hr = he.RankHand(h, out handRank);
-                                        handOuts = he.ComputeOuts(h, hc.HAND, new List<Card>(), out cardouts);
-                                        outs = handOuts[h];
-                                        // We do 52 here because making the list of cards (the outs) as a hand then printing it is easier.
-                                        // However, hand has a limitation to the number of cards which can exist in the hand.
-                                        // We will never have 52 outs so this limit will never be reached.
-                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
-                                        break;
+                                    //    hr = he.RankHand(h, out handRank);
+                                    //    handOuts = he.ComputeOuts(h, hc.HAND, new List<Card>(), out cardouts);
+                                    //    outs = handOuts[h];
+                                    //    // We do 52 here because making the list of cards (the outs) as a hand then printing it is easier.
+                                    //    // However, hand has a limitation to the number of cards which can exist in the hand.
+                                    //    // We will never have 52 outs so this limit will never be reached.
+                                    //    couts = new Hand(cardouts[h], 52, 5).HandToString();
+                                    //    break;
                                     case HandHistories.Objects.Cards.Street.Flop:
                                         currenthandstring = handstring.Substring(0, 4) + flopstring;
-                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        h = new Hand(currenthandstring, 7, 5);
                                         hc = new Hand(handstring.Substring(0, 4), 7, 5);
                                         hr = he.RankHand(h, out handRank);
-                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring, 7, flopstring.Length / 2).HAND, out cardouts);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring, 7, 5).HAND, out cardouts);
                                         outs = handOuts[h];
                                         couts = new Hand(cardouts[h], 52, 5).HandToString();
 
                                         break;
                                     case HandHistories.Objects.Cards.Street.Turn:
                                         currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring;
-                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        h = new Hand(currenthandstring, 7, 5);
                                         hc = new Hand(handstring.Substring(0, 4), 7, 5);
 
                                         hr = he.RankHand(h, out handRank);
-                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring, 7, (flopstring.Length + turnstring.Length) / 2).HAND, out cardouts);
+                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring, 7, 5).HAND, out cardouts);
                                         outs = handOuts[h];
                                         couts = new Hand(cardouts[h], 52, 5).HandToString();
 
                                         break;
-                                    case HandHistories.Objects.Cards.Street.River:
-                                        currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring + riverstring;
-                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
-                                        hc = new Hand(handstring.Substring(0, 4), 7, 5);
-                                        hr = he.RankHand(h, out handRank);
-                                        handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring + riverstring, 7, (flopstring.Length + turnstring.Length + riverstring.Length) / 2).HAND, out cardouts);
-                                        outs = handOuts[h];
-                                        couts = new Hand(cardouts[h], 52, 5).HandToString();
+                                    //case HandHistories.Objects.Cards.Street.River:
+                                    //    currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring + riverstring;
+                                    //    h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                    //    hc = new Hand(handstring.Substring(0, 4), 7, 5);
+                                    //    hr = he.RankHand(h, out handRank);
+                                    //    handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring + riverstring, 7, (flopstring.Length + turnstring.Length + riverstring.Length) / 2).HAND, out cardouts);
+                                    //    outs = handOuts[h];
+                                    //    couts = new Hand(cardouts[h], 52, 5).HandToString();
 
-                                        break;
+                                    //    break;
                                     default:
                                         hr = 0.0;
                                         outs = 0;
