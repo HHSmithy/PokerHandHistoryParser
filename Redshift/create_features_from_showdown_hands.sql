@@ -77,8 +77,19 @@ nn       ,numplayersseated
        -- potsize in big blinds
        , round(currentpostsize / CAST(substring(gamedescription from 27 for 1) as INT)) as num_big_blinds_in_currentpot
        ,handactiontype
+       ,outs
+       ,cardouts
+       ,currenthandrank
        ,currentpostsize
        ,street
+       ,isaggressiveaction
+       ,isallin
+       ,isallinaction
+       ,isblinds
+       ,isgameaction
+       ,ispreflopraise
+       ,israise
+       ,iswinningsaction
 from
     pokerhandhistory
 where
@@ -107,6 +118,7 @@ select
        , listagg(amount_pct_into_currentpot, ',') within group (order by actionnumber) as amount_pct_into_currentpotorder
        , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
        , listagg(num_big_blinds_in_currentpot, ',') within group (order by actionnumber) as num_big_blinds_in_currentpotorder
+       , listagg(outs, ',') within group (order by actionnumber) as outsorder
 from pokerhandhistory_showdowns
 group by handid;
 
