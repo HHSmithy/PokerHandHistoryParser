@@ -83,5 +83,18 @@ select
 from holecards_by_actiontype_features 
 group by holecards_simple --, avglossamout
 order by round(avg(winamount) / case when avg(avglossamout) = 0 then 1 else avg(avglossamout) end, 2) desc;
+
+select 
+       holecards_simple
+       ,street
+       ,handactiontype
+       ,num_big_blinds_in_amount
+       ,count(handid)
+from pokerhandhistory_showdowns
+where handactiontype not in ('MUCKS', 'WINS', 'UNCALLED_BET', 'FOLD', 'SHOW') and holecards_simple != 's' and isallin = 'False' and handactiontype not in ('BIG_BLIND', 'SMALL_BLIND')
+group by holecards_simple, num_big_blinds_in_amount, handactiontype, street
+having count(handid) > 9
+order by holecards_simple, count(handid) asc,  street, handactiontype
+limit 1000;
 -- end working section
 
