@@ -98,3 +98,22 @@ order by holecards_simple, count(handid) asc,  street, handactiontype
 limit 1000;
 -- end working section
 
+
+-- create a contatenated list of actions so we can do some frequency analysis on what patterns occur most frequently
+drop table aohc;
+create table aohc as
+select 
+       handid
+       , holecards_simple
+       , comumnitycards
+       , listagg(handactiontype || ':' || street, ',') within group (order by actionnumber) as actionorder
+       , listagg(currenthandrank, ',') within group (order by actionnumber) as currenthandrankorder
+       , listagg(amount, ',') within group (order by actionnumber) as amountorder
+       , listagg(pct_of_starting_stack, ',') within group (order by actionnumber) as pct_of_starting_stackorder
+       , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as num_big_blinds_in_amountorder
+       , listagg(amount_pct_into_currentpot, ',') within group (order by actionnumber) as amount_pct_into_currentpotorder
+       , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
+       , listagg(num_big_blinds_in_currentpot, ',') within group (order by actionnumber) as num_big_blinds_in_currentpotorder
+       , listagg(outs, ',') within group (order by actionnumber) as outsorder
+from pokerhandhistory_showdowns
+group by holecards_simple, handid, comumnitycards;
