@@ -1055,7 +1055,6 @@ namespace CommandLineParser
                             Dictionary<Hand, int> handOuts = new Dictionary<Hand, int>();
                             Dictionary<Hand, List<Card>> cardouts;
                             int outs = 0;
-                            List<Hand> hl;
                             double hr = 0.0;
                             string couts = "";
                             if (handstring.Length >= 14)
@@ -1067,20 +1066,6 @@ namespace CommandLineParser
                                 // build the hand play-by-play so we can get current hand ranking and also build in hand outs. 
                                 switch (action.Street)
                                 {
-
-                                    //case HandHistories.Objects.Cards.Street.Preflop:
-                                    //    currenthandstring = handstring.Substring(0, 4);
-                                    //    h = new Hand(currenthandstring, 7, 5);
-                                    //    hc = new Hand(currenthandstring, 7, 5);
-
-                                    //    hr = he.RankHand(h, out handRank);
-                                    //    handOuts = he.ComputeOuts(h, hc.HAND, new List<Card>(), out cardouts);
-                                    //    outs = handOuts[h];
-                                    //    // We do 52 here because making the list of cards (the outs) as a hand then printing it is easier.
-                                    //    // However, hand has a limitation to the number of cards which can exist in the hand.
-                                    //    // We will never have 52 outs so this limit will never be reached.
-                                    //    couts = new Hand(cardouts[h], 52, 5).HandToString();
-                                    //    break;
                                     case HandHistories.Objects.Cards.Street.Flop:
                                         currenthandstring = handstring.Substring(0, 4) + flopstring;
                                         h = new Hand(currenthandstring, 7, 5);
@@ -1102,16 +1087,14 @@ namespace CommandLineParser
                                         couts = new Hand(cardouts[h], 52, 5).HandToString();
 
                                         break;
-                                    //case HandHistories.Objects.Cards.Street.River:
-                                    //    currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring + riverstring;
-                                    //    h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
-                                    //    hc = new Hand(handstring.Substring(0, 4), 7, 5);
-                                    //    hr = he.RankHand(h, out handRank);
-                                    //    handOuts = he.ComputeOuts(h, hc.HAND, new Hand(flopstring + turnstring + riverstring, 7, (flopstring.Length + turnstring.Length + riverstring.Length) / 2).HAND, out cardouts);
-                                    //    outs = handOuts[h];
-                                    //    couts = new Hand(cardouts[h], 52, 5).HandToString();
+                                    case HandHistories.Objects.Cards.Street.River:
+                                        currenthandstring = handstring.Substring(0, 4) + flopstring + turnstring + riverstring;
+                                        h = new Hand(currenthandstring, 7, currenthandstring.Length / 2);
+                                        hc = new Hand(handstring.Substring(0, 4), 7, 5);
+                                        hr = he.RankHand(h, out handRank);
+                                        outs = 0; // No need to compute outs on the river.  No more cards to come. 
 
-                                    //    break;
+                                        break;
                                     default:
                                         hr = 0.0;
                                         outs = 0;
