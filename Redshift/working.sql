@@ -1,6 +1,12 @@
 
 -- working section .. 
 
+-- load errors query
+select le.starttime, d.query, d.line_number, d.colname, d.value,
+le.raw_line, le.err_reason    
+from stl_loaderror_detail d, stl_load_errors le
+where d.query = le.query
+order by le.starttime;
 -- frequency distribution of holecards
 -- FYI, this will be a distribution of hands held until showdown because we do not know what a player has
 -- unless their hands makes it to a showdown.
@@ -103,17 +109,18 @@ limit 1000;
 drop table aohc;
 create table aohc as
 select 
-       handid
+       func_sha1(handid) as handid
        , holecards_simple
        , comumnitycards
-       , listagg(handactiontype || ':' || street, ',') within group (order by actionnumber) as actionorder
-       , listagg(currenthandrank, ',') within group (order by actionnumber) as currenthandrankorder
-       , listagg(amount, ',') within group (order by actionnumber) as amountorder
-       , listagg(pct_of_starting_stack, ',') within group (order by actionnumber) as pct_of_starting_stackorder
-       , listagg(num_big_blinds_in_amount, ',') within group (order by actionnumber) as num_big_blinds_in_amountorder
-       , listagg(amount_pct_into_currentpot, ',') within group (order by actionnumber) as amount_pct_into_currentpotorder
-       , listagg(currentpostsize, ',') within group (order by actionnumber) as currentpotsizeorder
-       , listagg(num_big_blinds_in_currentpot, ',') within group (order by actionnumber) as num_big_blinds_in_currentpotorder
-       , listagg(outs, ',') within group (order by actionnumber) as outsorder
+       , func_sha1(playername) as playerid
+       , handactiontype
+       , street
+       , actionnumber
+       , case when (abs(num_big_blinds_in_currentpot) / nullif((abs(num_big_blinds_in_amount) / bb_in_startingstack), 0)) <= 100 then 'HIGH'
+       	     when (abs(num_big_blinds_in_currentpot) / nullif((abs(num_big_blinds_in_amount) / bb_in_startingstack), 0)) <= 300 then 'MED'
+	     else 'SMALL' end as bet_size
 from pokerhandhistory_showdowns
-group by holecards_simple, handid, comumnitycards;
+where handactiontype not in ('SHOW', 'WINS', 'UNCALLED_BET', 'MUCKS') and holecards_simple != 's'
+group by handid, holecards_simple, playername, comumnitycards, handactiontype, street, num_big_blinds_in_currentpot, num_big_blinds_in_amount, bb_in_startingstack, actionnumber;
+
+select * from aohc limit 20;
