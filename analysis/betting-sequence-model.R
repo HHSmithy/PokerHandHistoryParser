@@ -19,10 +19,10 @@ iseq = iseq[order(iseq$V1, iseq$V4), ]
 # Ensure the data is ordered properly by handid, playerid, and actionnumber
 temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
-# Create a single state model
+# Create a two state model
 dmm = depmix(list(V5~1, V6~1, V8~1)
 , data=temp_ordered
-, nstates=1
+, nstates=2
 , ntimes=iseq[,3]
 , family = list(multinomial(), multinomial(), multinomial()))
 
