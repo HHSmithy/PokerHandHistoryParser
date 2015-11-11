@@ -6,27 +6,29 @@ pdata = read.csv('/home/ubuntu/aohc.txt', sep = '|', header = FALSE)
 pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
-# Sample and Train a Single State Model
-stss = function(hand_list) {
+# Sample data and train a hidden markov model on pokerhands
+sthmm = function(hand_list, model=list(V5~1, V6~1, V8~1), numstates=2, fam=list(multinomial(), multinomial(), multinomial()), multiseries=TRUE) {
 	# Get all the hands from the originial dataset
-hand_list=c('AKo')
 temp = pdata[pdata$V2 %in% hand_list, ]
 
 # Aggregate counts so we know what actions are part of an independant series
 # We don't want the model to treat this as a single time series because each new hand play is independant
+if(multiseries) {
 iseq = aggregate(V2 ~ V1 + V4, temp, length)
 iseq = iseq[order(iseq$V1, iseq$V4), ]
+}
+else {iseq = NULL}
 
 # Ensure the data is ordered properly by handid, playerid, and actionnumber
 temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
 print("Creating Single State Model")
 # Create a 2 state model
-dmm = depmix(list(V5~1, V6~1, V8~1)
+dmm = depmix(model
 , data=temp_ordered
-, nstates=2
+, nstates=numstates
 , ntimes=iseq[,3]
-, family = list(multinomial(), multinomial(), multinomial()))
+, family = fam)
 
 # Optimize the model parameters
 fit.dmm = fit(dmm)
