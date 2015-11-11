@@ -105,16 +105,16 @@ fit.dmmR2 = fit(dmmR2)
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
 
 # Use the parameters from previous training to see how the model holds when we add more hands.
-pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
-pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
-pars = getpars(fit.dmmR2)
-responseinits = pars[7:npar(fit.dmmR2)]
-flags = c(unlist(getpars(fit.dmmR2, "fixed")))
-filter = flags[7:npar(fit.dmmR2)]
-responseinits_filter = responseinits[!filter]
-helper = function(x) { return(c(x, runif(2))) }
-responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
-names(responseinitsfinal) = NULL
+# pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
+# pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
+# pars = getpars(fit.dmmR2)
+# responseinits = pars[7:npar(fit.dmmR2)]
+# flags = c(unlist(getpars(fit.dmmR2, "fixed")))
+# filter = flags[7:npar(fit.dmmR2)]
+# responseinits_filter = responseinits[!filter]
+# helper = function(x) { return(c(x, runif(2))) }
+# responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
+# names(responseinitsfinal) = NULL
 
 
 # dmmR.op = depmix(list(V5~1, V6~1, V8~1)
