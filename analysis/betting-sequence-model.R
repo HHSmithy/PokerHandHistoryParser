@@ -7,9 +7,10 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
 # Sample and Train a Single State Model
-stss = function(d, hand_list) {
+stss = function(hand_list) {
 	# Get all the hands from the originial dataset
-temp = d[d$V2 %in% hand_list, ]
+hand_list=c('AKo')
+temp = pdata[pdata$V2 %in% hand_list, ]
 
 # Aggregate counts so we know what actions are part of an independant series
 # We don't want the model to treat this as a single time series because each new hand play is independant
@@ -19,10 +20,11 @@ iseq = iseq[order(iseq$V1, iseq$V4), ]
 # Ensure the data is ordered properly by handid, playerid, and actionnumber
 temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
-# Create a single state model
+print("Creating Single State Model")
+# Create a 2 state model
 dmm = depmix(list(V5~1, V6~1, V8~1)
 , data=temp_ordered
-, nstates=1
+, nstates=2
 , ntimes=iseq[,3]
 , family = list(multinomial(), multinomial(), multinomial()))
 
@@ -38,7 +40,7 @@ if(!exists('AK')) {
 # Patterns that "look like" player is holding AK or they are NOT holding AK
 # pdataAK = pdata[pdata$V2 %in% c('AKo'), ]
 # pdataAK = pdataAK[order(pdataAK$V1, pdataAK$V4, pdataAK$V7), ]
-AK = stss(pdata, c('AKo'))
+AK = stss(c('AKo'))
 }
 # > head(pdataAK)
 #                                               V1  V2         V3
