@@ -32,11 +32,11 @@ dmm = depmix(model
 
 print("Training HMM Parameters...")
 # Optimize the model parameters
-fit.dmm = fit(dmm)
+fit.dmm = fit(dmm, emcontrol=em.control(maxit=20))
 
 print("Creating Evaluation Matrix...")
 eval.dmm = cbind(temp_ordered, fit.dmm@posterior)
-eval.matrix = aggregate(V1 ~ state + V2, eval.dmm2.op, length)
+eval.matrix = aggregate(V1 ~ state + V2, eval.dmm, length)
 # Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
 r.object = list(eval.dmm, iseq, dmm, fit.dmm, eval.matrix)
 names(r.object) = c('eval.dataset', 'iseq', 'dmm', 'fit.dmm', 'eval.matrix')
