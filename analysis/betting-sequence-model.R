@@ -34,10 +34,12 @@ iseq = aggregate(V2 ~ V1 + V4, pdataAK, length)
 iseq = iseq[order(iseq$V1, iseq$V4), ]
 }
 
-if(!exists('iseq_all')){
-iseq_all = aggregate(V2 ~ V1 + V4, pdata, length)
-iseq_all = iseq_all[order(iseq_all$V1, iseq_all$V4), ]
-}
+# if(!exists('iseq_all')){
+# print("Aggregating ..")
+# iseq_all = aggregate(V2 ~ V1 + V4, pdata, length)
+# print("Sorting..")
+# iseq_all = iseq_all[order(iseq_all$V1, iseq_all$V4), ]
+# }
 
 # create a multivariate HMM -- 2 states since we only care about AKo .. either you got it or you don't.
 if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2, 
@@ -45,10 +47,12 @@ if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nst
 			     family = list(multinomial(), multinomial(), multinomial())) }
 
 
-# dmmR3 = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=3,
-#                              ntimes=iseq[,3],
-#                              family = list(multinomial(), multinomial(), multinomial()))
-# fit.dmmR3 = fit(dmmR3, emcontrol=em.control(maxit=25))
+# dmmR3 = depmix(list(V2~V5, V2~V6, V2~V8)
+#                , data=pdataAK
+# 	       , nstates=2
+# 	       ,family = list(multinomial(), multinomial(), multinomial()))
+
+# fit.dmmR3 = fit(dmmR3)
 
 # dmmR2 = depmix(list(V5~1, V6~1, V8~1, V2~1), data=pdataAK, nstates=2, 
 #		      	     ntimes=iseq[,3], 
@@ -58,4 +62,24 @@ if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nst
 # Optimize the HMM parameters
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
 
-dmmR.op = depmix(list(V2~V5, V2~V6, V2~V8), data=pdata, nstates=2, respstart=a[7:npar(fit.dmmR)], trstart=c(.5, .5, .5, .5), ntimes=iseq_all[,3], instart=a[1:2], family= list(multinomial(), multinomial(), multinomial()))
+# Use the parameters from previous training to see how the model holds when we add more hands.
+pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
+pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
+pars = getpars(fit.dmmR)
+responseinits = pars[7:npar(fit.dmmR)]
+flags = c(unlist(getpars(fit.dmmR, "fixed")))
+filter = flags[7:npar(fit.dmmR)]
+responseinits_filter = responseinits[!filter]
+helper = function(x) { return(c(x, runif(2, max=10, min=0))) } 
+responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
+
+
+dmmR.op = depmix(list(V5~1, V6~1, V8~1)
+	         , data=pdatasampled
+		 , nstates=2
+		 , respstart=responseinits_filter
+		 , trstart=c(.5,.5,.5,.5)
+		 , instart=pars[1:2]
+		 , family=list(multinomial(), multinomial(), multinomial()))
+
+fit.dmmR.op = fit(dmmR.op, equal=c(1,1,1,1,1,1,rep(c(0,1,1), 28)))
