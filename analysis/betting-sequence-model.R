@@ -7,6 +7,7 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 # Make a sample dataset with subset of hands for a 2 state HMM.
 # Patterns that "look like" player is holding AK or they are NOT holding AK
 pdataAK = pdata[pdata$V2 %in% c('AKo', '27o'), ]
+pdataAK = pdataAK[order(pdataAK$V1, pdataAK$V4, pdataAK$V7), ]
 }
 
 # > head(pdata_ordered)
@@ -28,12 +29,33 @@ pdataAK = pdata[pdata$V2 %in% c('AKo', '27o'), ]
 # Let the model know we have multiple independant sequences in this dataset
 # we treat each players sequence as independant, this isn't the greatest assumption, however,
 # for recurring behavior this is OK to make.
-if(!exists('ntimes')) { 
-ntimes = aggregate(V2 ~ V1 + V4, pdataAK_ordered, length)
-ntimes = ntimes[order(ntimes$V1, ntimes$V4), ]
+if(!exists('iseq')) { 
+iseq = aggregate(V2 ~ V1 + V4, pdataAK, length)
+iseq = iseq[order(iseq$V1, iseq$V4), ]
 }
+
+if(!exists('iseq_all')){
+iseq_all = aggregate(V2 ~ V1 + V4, pdata, length)
+iseq_all = iseq_all[order(iseq_all$V1, iseq_all$V4), ]
+}
+
 # create a multivariate HMM -- 2 states since we only care about AKo .. either you got it or you don't.
-if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK_ordered, nstates=2, ntimes=ntimes[,3], family = list(multinomial(), multinomial(), multinomial())) }
+if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2, 
+		      	     ntimes=iseq[,3], 
+			     family = list(multinomial(), multinomial(), multinomial())) }
+
+
+# dmmR3 = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=3,
+#                              ntimes=iseq[,3],
+#                              family = list(multinomial(), multinomial(), multinomial()))
+# fit.dmmR3 = fit(dmmR3, emcontrol=em.control(maxit=25))
+
+# dmmR2 = depmix(list(V5~1, V6~1, V8~1, V2~1), data=pdataAK, nstates=2, 
+#		      	     ntimes=iseq[,3], 
+#			     family = list(multinomial(), multinomial(), multinomial(), multinomial()))
+# fit.dmmR2 = fit(dmmR2)
 
 # Optimize the HMM parameters
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
+
+dmmR.op = depmix(list(V2~V5, V2~V6, V2~V8), data=pdata, nstates=2, respstart=a[7:npar(fit.dmmR)], trstart=c(.5, .5, .5, .5), ntimes=iseq_all[,3], instart=a[1:2], family= list(multinomial(), multinomial(), multinomial()))
