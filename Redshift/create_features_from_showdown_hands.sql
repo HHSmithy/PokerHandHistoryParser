@@ -45,7 +45,7 @@ select
        ,CAST(substring(gamedescription from 24 for 1) as INT) as small_blind
        ,CAST(substring(gamedescription from 27 for 1) as INT) as big_blind
        ,numplayersactive
-nn       ,numplayersseated
+       ,numplayersseated
        ,rake
        ,comumnitycards
        ,totalpot

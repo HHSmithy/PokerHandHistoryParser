@@ -1,6 +1,12 @@
 
 -- working section .. 
 
+-- load errors query
+select le.starttime, d.query, d.line_number, d.colname, d.value,
+le.raw_line, le.err_reason    
+from stl_loaderror_detail d, stl_load_errors le
+where d.query = le.query
+order by le.starttime;
 -- frequency distribution of holecards
 -- FYI, this will be a distribution of hands held until showdown because we do not know what a player has
 -- unless their hands makes it to a showdown.
@@ -98,3 +104,23 @@ order by holecards_simple, count(handid) asc,  street, handactiontype
 limit 1000;
 -- end working section
 
+
+-- create a contatenated list of actions so we can do some frequency analysis on what patterns occur most frequently
+drop table aohc;
+create table aohc as
+select 
+       func_sha1(handid) as handid
+       , holecards_simple
+       , comumnitycards
+       , func_sha1(playername) as playerid
+       , handactiontype
+       , street
+       , actionnumber
+       , case when (abs(num_big_blinds_in_currentpot) / nullif((abs(num_big_blinds_in_amount) / bb_in_startingstack), 0)) <= 100 then 'HIGH'
+       	     when (abs(num_big_blinds_in_currentpot) / nullif((abs(num_big_blinds_in_amount) / bb_in_startingstack), 0)) <= 300 then 'MED'
+	     else 'SMALL' end as bet_size
+from pokerhandhistory_showdowns
+where handactiontype not in ('SHOW', 'WINS', 'UNCALLED_BET', 'MUCKS') and holecards_simple != 's'
+group by handid, holecards_simple, playername, comumnitycards, handactiontype, street, num_big_blinds_in_currentpot, num_big_blinds_in_amount, bb_in_startingstack, actionnumber;
+
+select * from aohc limit 20;
