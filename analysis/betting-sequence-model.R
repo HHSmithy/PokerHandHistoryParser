@@ -34,9 +34,12 @@ print("Training HMM Parameters...")
 # Optimize the model parameters
 fit.dmm = fit(dmm)
 
+print("Creating Evaluation Matrix...")
+eval.dmm = cbind(temp_ordered, fit.dmm@posterior)
+eval.matrix = aggregate(V1 ~ state + V2, eval.dmm2.op, length)
 # Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
-r.object = list(temp_ordered, iseq, dmm, fit.dmm)
-names(r.object) = c('dataset', 'iseq', 'dmm', 'fit.dmm')
+r.object = list(eval.dmm, iseq, dmm, fit.dmm, eval.matrix)
+names(r.object) = c('eval.dataset', 'iseq', 'dmm', 'fit.dmm', 'eval.matrix')
 return(r.object)
 }
 
