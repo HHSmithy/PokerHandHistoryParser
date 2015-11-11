@@ -37,7 +37,7 @@ fit.dmm = fit(dmm)
 # Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
 r.object = list(temp_ordered, iseq, dmm, fit.dmm)
 names(r.object) = c('dataset', 'iseq', 'dmm', 'fit.dmm')
-return(list(temp_ordered, iseq, dmm, fit.dmm))
+return(r.object)
 }
 
 if(!exists('AK')) {
