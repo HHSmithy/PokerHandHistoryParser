@@ -22,7 +22,7 @@ else {iseq = NULL}
 # Ensure the data is ordered properly by handid, playerid, and actionnumber
 temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
-print("Creating Single State Model")
+print("Creating HMM Model...")
 # Create a 2 state model
 dmm = depmix(model
 , data=temp_ordered
@@ -30,6 +30,7 @@ dmm = depmix(model
 , ntimes=iseq[,3]
 , family = fam)
 
+print("Training HMM Parameters...")
 # Optimize the model parameters
 fit.dmm = fit(dmm)
 
