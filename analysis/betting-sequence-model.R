@@ -6,21 +6,40 @@ pdata = read.csv('/home/ubuntu/aohc.txt', sep = '|', header = FALSE)
 pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
-pdata_sample = function(d, hand_list) {
+# Sample and Train a Single State Model
+stss = function(d, hand_list) {
+	# Get all the hands from the originial dataset
 temp = d[d$V2 %in% hand_list, ]
-return(temp[order(temp$V1, temp$V4, temp$V7), ])
+
+# Aggregate counts so we know what actions are part of an independant series
+# We don't want the model to treat this as a single time series because each new hand play is independant
+iseq = aggregate(V2 ~ V1 + V4, temp, length)
+iseq = iseq[order(iseq$V1, iseq$V4), ]
+
+# Ensure the data is ordered properly by handid, playerid, and actionnumber
+temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
+
+# Create a single state model
+dmm = depmix(list(V5~1, V6~1, V8~1)
+, data=temp_ordered
+, nstates=1
+, ntimes=iseq[,3]
+, family = list(multinomial(), multinomial(), multinomial()))
+
+# Optimize the model parameters
+fit.dmm = fit(dmm)
+
+# Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
+return(list(temp_ordered, iseq, dmm, fit.dmm))
 }
 
-
-if(!exists('pdataAK')) {
+if(!exists('AK')) {
 # Make a sample dataset with subset of hands for a 2 state HMM.
 # Patterns that "look like" player is holding AK or they are NOT holding AK
 # pdataAK = pdata[pdata$V2 %in% c('AKo'), ]
 # pdataAK = pdataAK[order(pdataAK$V1, pdataAK$V4, pdataAK$V7), ]
-pdataAK = pdata_sample(pdata, c('AKo'))
-head(pdataAK)
+AK = stss(pdata, c('AKo'))
 }
-readline()
 # > head(pdataAK)
 #                                               V1  V2         V3
 # 512050  000036366e5344b5b24baa44b989aea35d800578 4Ao 8cKs9d9sTc
@@ -40,7 +59,7 @@ readline()
 # Let the model know we have multiple independant sequences in this dataset
 # we treat each players sequence as independant, this isn't the greatest assumption, however,
 # for recurring behavior this is OK to make.
-if(!exists('iseq')) { 
+if(!exists('iseq')) {
 iseq = aggregate(V2 ~ V1 + V4, pdataAK, length)
 iseq = iseq[order(iseq$V1, iseq$V4), ]
 }
@@ -53,8 +72,8 @@ iseq = iseq[order(iseq$V1, iseq$V4), ]
 # }
 
 # create a multivariate HMM -- 2 states since we only care about AKo .. either you got it or you don't.
-if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2, 
-		      	     ntimes=iseq[,3], 
+if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2,
+		      	     ntimes=iseq[,3],
 			     family = list(multinomial(), multinomial(), multinomial())) }
 
 
@@ -67,10 +86,11 @@ if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nst
 
 if(!exists('dmmR2')) {
 dmmR2 = depmix(list(V5~1, V6~1, V8~1)
-  	         , data=pdataAK
-		 , nstates=1
-		 , ntimes=iseq[,3]
-		 , family = list(multinomial(), multinomial(), multinomial()))
+, data=pdataAK
+, nstates=1
+, ntimes=iseq[,3]
+, family = list(multinomial(), multinomial(), multinomial()))
+
 fit.dmmR2 = fit(dmmR2)
 }
 
@@ -85,7 +105,7 @@ responseinits = pars[7:npar(fit.dmmR2)]
 flags = c(unlist(getpars(fit.dmmR2, "fixed")))
 filter = flags[7:npar(fit.dmmR2)]
 responseinits_filter = responseinits[!filter]
-helper = function(x) { return(c(x, runif(2))) } 
+helper = function(x) { return(c(x, runif(2))) }
 responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
 names(responseinitsfinal) = NULL
 
