@@ -4,13 +4,24 @@ pdata = read.csv('/home/ubuntu/aohc.txt', sep = '|', header = FALSE)
 # Order the data by sequence action number
 # This is important otherwise models won't have the proper sequence of action and will output shit.
 pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
-# Make a sample dataset with subset of hands for a 2 state HMM.
-# Patterns that "look like" player is holding AK or they are NOT holding AK
-pdataAK = pdata[pdata$V2 %in% c('AKo', '27o'), ]
-pdataAK = pdataAK[order(pdataAK$V1, pdataAK$V4, pdataAK$V7), ]
 }
 
-# > head(pdata_ordered)
+pdata_sample = function(d, hand_list) {
+temp = d[d$V2 %in% hand_list, ]
+return(temp[order(temp$V1, temp$V4, temp$V7), ])
+}
+
+
+if(!exists('pdataAK')) {
+# Make a sample dataset with subset of hands for a 2 state HMM.
+# Patterns that "look like" player is holding AK or they are NOT holding AK
+# pdataAK = pdata[pdata$V2 %in% c('AKo'), ]
+# pdataAK = pdataAK[order(pdataAK$V1, pdataAK$V4, pdataAK$V7), ]
+pdataAK = pdata_sample(pdata, c('AKo'))
+head(pdataAK)
+}
+readline()
+# > head(pdataAK)
 #                                               V1  V2         V3
 # 512050  000036366e5344b5b24baa44b989aea35d800578 4Ao 8cKs9d9sTc
 # 1134393 000036366e5344b5b24baa44b989aea35d800578 4Ao 8cKs9d9sTc
@@ -54,10 +65,14 @@ if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nst
 
 # fit.dmmR3 = fit(dmmR3)
 
-# dmmR2 = depmix(list(V5~1, V6~1, V8~1, V2~1), data=pdataAK, nstates=2, 
-#		      	     ntimes=iseq[,3], 
-#			     family = list(multinomial(), multinomial(), multinomial(), multinomial()))
-# fit.dmmR2 = fit(dmmR2)
+if(!exists('dmmR2')) {
+dmmR2 = depmix(list(V5~1, V6~1, V8~1)
+  	         , data=pdataAK
+		 , nstates=1
+		 , ntimes=iseq[,3]
+		 , family = list(multinomial(), multinomial(), multinomial()))
+fit.dmmR2 = fit(dmmR2)
+}
 
 # Optimize the HMM parameters
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
@@ -65,21 +80,24 @@ if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
 # Use the parameters from previous training to see how the model holds when we add more hands.
 pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
 pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
-pars = getpars(fit.dmmR)
-responseinits = pars[7:npar(fit.dmmR)]
-flags = c(unlist(getpars(fit.dmmR, "fixed")))
-filter = flags[7:npar(fit.dmmR)]
+pars = getpars(fit.dmmR2)
+responseinits = pars[7:npar(fit.dmmR2)]
+flags = c(unlist(getpars(fit.dmmR2, "fixed")))
+filter = flags[7:npar(fit.dmmR2)]
 responseinits_filter = responseinits[!filter]
-helper = function(x) { return(c(x, runif(2, max=10, min=0))) } 
+helper = function(x) { return(c(x, runif(2))) } 
 responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
+names(responseinitsfinal) = NULL
 
 
-dmmR.op = depmix(list(V5~1, V6~1, V8~1)
-	         , data=pdatasampled
-		 , nstates=2
-		 , respstart=responseinits_filter
-		 , trstart=c(.5,.5,.5,.5)
-		 , instart=pars[1:2]
-		 , family=list(multinomial(), multinomial(), multinomial()))
+# dmmR.op = depmix(list(V5~1, V6~1, V8~1)
+# dmmR.op = depmix(list(V2~V5, V2~V6, V2~V8)
+# 	         , data=pdatasampled
+# 		 , nstates=2
+# 		 , respstart=rep(responseinits, 3)
+# #		 , respstart=NULL
+# 		 , trstart=pars[3:6]
+# 		 , instart=pars[1:2]
+# 		 , family=list(multinomial(), multinomial(), multinomial()))
 
-fit.dmmR.op = fit(dmmR.op, equal=c(1,1,1,1,1,1,rep(c(0,1,1), 28)))
+#fit.dmmR.op = fit(dmmR.op)
