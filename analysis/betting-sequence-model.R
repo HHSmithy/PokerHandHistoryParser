@@ -32,7 +32,7 @@ dmm = depmix(model
 
 print("Training HMM Parameters...")
 # Optimize the model parameters
-fit.dmm = fit(dmm)
+fit.dmm = fit(dmm, emcontrol=em.control(maxit=20))
 
 print("Creating Evaluation Matrix...")
 eval.dmm = cbind(temp_ordered, fit.dmm@posterior)
