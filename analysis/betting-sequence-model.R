@@ -36,7 +36,7 @@ fit.dmm = fit(dmm)
 
 print("Creating Evaluation Matrix...")
 eval.dmm = cbind(temp_ordered, fit.dmm@posterior)
-eval.matrix = aggregate(V1 ~ state + V2, eval.dmm2.op, length)
+eval.matrix = aggregate(V1 ~ state + V2, eval.dmm, length)
 # Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
 r.object = list(eval.dmm, iseq, dmm, fit.dmm, eval.matrix)
 names(r.object) = c('eval.dataset', 'iseq', 'dmm', 'fit.dmm', 'eval.matrix')
@@ -108,26 +108,61 @@ fit.dmmR2 = fit(dmmR2)
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
 
 # Use the parameters from previous training to see how the model holds when we add more hands.
-pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
-pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
-pars = getpars(fit.dmmR2)
-responseinits = pars[7:npar(fit.dmmR2)]
-flags = c(unlist(getpars(fit.dmmR2, "fixed")))
-filter = flags[7:npar(fit.dmmR2)]
-responseinits_filter = responseinits[!filter]
-helper = function(x) { return(c(x, runif(2))) }
-responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
-names(responseinitsfinal) = NULL
+# pdatasampled = pdata[pdata$V2 %in% c('AKo', '8Ao', 'JTs'), ]
+# pdatasampled = pdatasampled[order(pdatasampled$V1, pdatasampled$V4, pdatasampled$V7), ]
+# pars = getpars(fit.dmmR2)
+# responseinits = pars[7:npar(fit.dmmR2)]
+# flags = c(unlist(getpars(fit.dmmR2, "fixed")))
+# filter = flags[7:npar(fit.dmmR2)]
+# responseinits_filter = responseinits[!filter]
+# helper = function(x) { return(c(x, runif(2))) }
+# responseinitsfinal = c(unlist(lapply(responseinits_filter, helper)))
+# names(responseinitsfinal) = NULL
 
+# Leverage parameters from one fitted HMM model to optimize another HMM model
+blendHMM = function(
+	fittedHmmToBlend
+	# Below are parameters for the new HMM model
+	, model=list(V5~1, V6~1, V8~1)
+  , hand_list
+	, numstates=2
+	, fam=list(multinomial(), multinomial(), multinomial())
+	, startresp=NULL
+	, starttr=NULL
+	, startinit=NULL
+	, multiseries=TRUE
+	, fix) {
 
-# dmmR.op = depmix(list(V5~1, V6~1, V8~1)
-# dmmR.op = depmix(list(V2~V5, V2~V6, V2~V8)
-# 	         , data=pdatasampled
-# 		 , nstates=2
-# 		 , respstart=rep(responseinits, 3)
-# #		 , respstart=NULL
-# 		 , trstart=pars[3:6]
-# 		 , instart=pars[1:2]
-# 		 , family=list(multinomial(), multinomial(), multinomial()))
+		temp = pdata[pdata$V2 %in% hand_list, ]
 
-#fit.dmmR.op = fit(dmmR.op)
+		# Aggregate counts so we know what actions are part of an independant series
+		# We don't want the model to treat this as a single time series because each new hand play is independant
+		if(multiseries) {
+		iseq = aggregate(V2 ~ V1 + V4, temp, length)
+		iseq = iseq[order(iseq$V1, iseq$V4), ]
+		}
+		else {iseq = NULL}
+
+		# Ensure the data is ordered properly by handid, playerid, and actionnumber
+		temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
+
+		print("Creating Blended HMM Model...")
+		bhmm = depmix(model
+			         , data=temp_ordered
+				 , nstates=numstates
+				 , respstart=startresp
+				 , trstart=starttr
+				 , instart=startinit
+				 , family=fam
+
+		print("Fitting Parameters to Model...")
+		fit.bhmm = fit(bhmm, emcontrol=em.control(rand=FALSE, maxit=20), equal=fix)
+
+		print("Creating Evaluation Matrix...")
+		eval.bhmm = cbind(temp_ordered, fit.bhmm@posterior)
+		eval.matrix = aggregate(V1 ~ state + V2, eval.bhmm, length)
+		# Return the dataset, the count of independant series, the single state model, and the fitted parameters of the model
+		r.object = list(eval.bhmm, iseq, bhmm, fit.bhmm, eval.matrix)
+		names(r.object) = c('eval.dataset', 'iseq', 'dmm', 'fit.dmm', 'eval.matrix')
+		return(r.object)
+	}
