@@ -147,13 +147,15 @@ blendHMM = function(
 		temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
 		print("Creating Blended HMM Model...")
-		bhmm = depmix(model
+		bhmm = depmix(response=model
 			         , data=temp_ordered
 				 , nstates=numstates
 				 , respstart=startresp
 				 , trstart=starttr
 				 , instart=startinit
+				 , ntimes=iseq[,3]
 				 , family=fam)
+	        print(npar(bhmm))
 
 		print("Fitting Parameters to Model...")
 		fit.bhmm = fit(bhmm, emcontrol=em.control(rand=FALSE, maxit=20), equal=fix)
