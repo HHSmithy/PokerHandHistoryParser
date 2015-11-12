@@ -153,7 +153,7 @@ blendHMM = function(
 				 , respstart=startresp
 				 , trstart=starttr
 				 , instart=startinit
-				 , family=fam
+				 , family=fam)
 
 		print("Fitting Parameters to Model...")
 		fit.bhmm = fit(bhmm, emcontrol=em.control(rand=FALSE, maxit=20), equal=fix)
