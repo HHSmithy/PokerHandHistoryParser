@@ -131,7 +131,7 @@ blendHMM = function(
 	, starttr=NULL
 	, startinit=NULL
 	, multiseries=TRUE
-	, fix) {
+	, fix=NULL) {
 
 		temp = pdata[pdata$V2 %in% hand_list, ]
 
@@ -158,7 +158,7 @@ blendHMM = function(
 	        print(npar(bhmm))
 
 		print("Fitting Parameters to Model...")
-		fit.bhmm = fit(bhmm, verbose=TRUE, emcontrol=em.control(maxit=20), equal=fix)
+		fit.bhmm = fit(bhmm, verbose=TRUE, emcontrol=em.control(maxit=20), fixed=fix)
 #		fit.bhmm = fit(bhmm, emcontrol=em.control(maxit=20), equal=fix)
 #		fit.bhmm = fit(bhmm, verbose=TRUE)
 
