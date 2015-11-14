@@ -7,9 +7,9 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
 # Sample data and train a hidden markov model on pokerhands
-sthmm = function(hand_list, model=list(V5~1, V6~1, V8~1), numstates=2, fam=list(multinomial(), multinomial(), multinomial()), multiseries=TRUE) {
+sthmm = function(element_list, model=list(V5~1, V6~1, V8~1), numstates=2, fam=list(multinomial(), multinomial(), multinomial()), multiseries=TRUE) {
 	# Get all the hands from the originial dataset
-temp = pdata[pdata$V2 %in% hand_list, ]
+temp = pdata[pdata$V2 %in% element_list, ]
 
 # Aggregate counts so we know what actions are part of an independant series
 # We don't want the model to treat this as a single time series because each new hand play is independant
@@ -122,18 +122,34 @@ if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
 # Leverage parameters from one fitted HMM model to optimize another HMM model
 blendHMM = function(
 	fittedHmmToBlend
+	,handsFromHmmToBlend
 	# Below are parameters for the new HMM model
 	, model=list(V5~1, V6~1, V8~1)
-  , hand_list
 	, numstates=2
 	, fam=list(multinomial(), multinomial(), multinomial())
 	, startresp=NULL
 	, starttr=NULL
 	, startinit=NULL
 	, multiseries=TRUE
+	, fixedhand='AKo'
+	, numhands=3
 	, fix=NULL) {
 
-		temp = pdata[pdata$V2 %in% hand_list, ]
+		hands= c(fixedhand, as.character(sample(unique(pdata$V2), numhands)))
+		hands = sort(hands)
+
+		temp = pdata[pdata$V2 %in% hands, ]
+
+		pars=getpars(fittedHmmToBlend)
+		totalparams = npar(fittedHmmToBlend)
+		initialparams = fittedHmmToBlend@nstates+(fittedHmmToBlend@nstates**2) + 1
+		responseinits = pars[initialparams:totalparams]
+		handsFromHmmToBlend = c('AKo', '27o', '55o', '5Ao')
+		idx = which(fixedhand == sort(handsFromHmmToBlend))
+		handpars = responseinits[seq(idx, length(responseinits), idx)]
+		helper = function(x, y) { return(c(rep(runif(1), idx-1), x, rep(runif(1), length(hands)-idx))) }
+		responseinitsfinal = unlist(lapply(handpars, function(z) helper(z,length(hands))))
+
 
 		# Aggregate counts so we know what actions are part of an independant series
 		# We don't want the model to treat this as a single time series because each new hand play is independant
@@ -150,18 +166,14 @@ blendHMM = function(
 		bhmm = depmix(response=model
 			         , data=temp_ordered
 				 , nstates=numstates
-				 , respstart=startresp
-				 , trstart=starttr
-				 , instart=startinit
+				 , respstart=exp(responseinitsfinal) / (1+exp(responseinitsfinal))
+				 , trstart=pars[numstates:numstates**2]
+				 , instart=pars[1:numstates]
 				 , ntimes=iseq[,3]
 				 , family=fam)
-	        print(npar(bhmm))
 
 		print("Fitting Parameters to Model...")
 		fit.bhmm = fit(bhmm, verbose=TRUE, emcontrol=em.control(maxit=20), fixed=fix)
-#		fit.bhmm = fit(bhmm, emcontrol=em.control(maxit=20), equal=fix)
-#		fit.bhmm = fit(bhmm, verbose=TRUE)
-
 
 		print("Creating Evaluation Matrix...")
 		eval.bhmm = cbind(temp_ordered, fit.bhmm@posterior)
