@@ -1,20 +1,20 @@
 starttime = proc.time()
 source('betting-sequence-model.R')
+source('server-sequence-model.R')
 
 handids = unique(pdata$V1)
 pdata.train.handids = sample(handids, length(handids) * .6)
 pdata.val.handids = handids[!handids %in% pdata.train.handids]
 
-# Load Monitoring Data
-if(!exists('mdata')){
-mdata = read.csv('./monitoring.txt', sep = '|', header = FALSE)
-mdata$V1 = as.character(mdata$V1)
-print(head(mdata))
-}
 
 if(!exists('Mr')) {
     print("Mr")		   
-    Mr = sthmm(mdata
+    
+    serverids = as.character(unique(mdata$V3))
+    mdata.train.serverids = as.character(sample(serverids, length(serverids) * .6))
+    mdata.val.serverids = serverids[!serverids %in% mdata.train.serverids]
+
+        Mr = msthmm(mdata
 	      , element_list=c('0532d304f8383d6520c4a5f0a230587397b054ae', '0b921e64d729de16c470563f567ef0382457beb5')
 	      , seqids = c('0532d304f8383d6520c4a5f0a230587397b054ae', '0b921e64d729de16c470563f567ef0382457beb5')
     	      , model=list(V12~1)
@@ -22,6 +22,17 @@ if(!exists('Mr')) {
 	      , fam=list(gaussian())
 	      , multiseries=FALSE
 	  )
+	  # print("Blending..")
+
+	  # Mrf = mblendHMM(mdata
+	  # , fittedHmmToBlend=Mr$fit.dmm
+	  # , serversFromHmmToBlend=c('0532d304f8383d6520c4a5f0a230587397b054ae', '0b921e64d729de16c470563f567ef0382457beb5')
+	  # , seqids = serverids
+	  # , model=list(V12~1, V11~1)
+	  # , fam=list(gaussian(), multinomial())
+	  # , fixedserver='0532d304f8383d6520c4a5f0a230587397b054ae'
+	  # , numservers=4)
+
 }
 
 
