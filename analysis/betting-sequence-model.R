@@ -7,9 +7,18 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
 # Sample data and train a hidden markov model on pokerhands
-sthmm = function(element_list, model=list(V5~1, V6~1, V8~1), numstates=2, fam=list(multinomial(), multinomial(), multinomial()), multiseries=TRUE) {
-	# Get all the hands from the originial dataset
+sthmm = function(
+		  element_list
+		  , seqids
+		  , model=list(V5~1, V6~1, V8~1)
+		  , numstates=2
+		  , fam=list(multinomial(), multinomial(), multinomial())
+		  , multiseries=TRUE
+		) {
+
+# Get all the hands from the originial dataset
 temp = pdata[pdata$V2 %in% element_list, ]
+temp = temp[temp$V1 %in% seqids, ]
 
 # Aggregate counts so we know what actions are part of an independant series
 # We don't want the model to treat this as a single time series because each new hand play is independant
@@ -124,6 +133,7 @@ blendHMM = function(
 	fittedHmmToBlend
 	,handsFromHmmToBlend
 	# Below are parameters for the new HMM model
+	, seqids
 	, model=list(V5~1, V6~1, V8~1)
 	, numstates=2
 	, fam=list(multinomial(), multinomial(), multinomial())
@@ -134,17 +144,18 @@ blendHMM = function(
 	, fixedhand='AKo'
 	, numhands=3
 	, fix=NULL) {
+	  	    print("Creating Validation Data..")
 
-		hands= c(fixedhand, as.character(sample(unique(pdata$V2), numhands)))
+		temp = pdata[pdata$V1 %in% seqids, ]
+		hands= c(fixedhand, sample(as.character(unique(temp$V2)), numhands))
 		hands = sort(hands)
 
-		temp = pdata[pdata$V2 %in% hands, ]
-
+		print("Extracting Parameters for fixed hands...")
+		# Extract parameters (transition / emission) probabilities for the hand we want to fix
 		pars=getpars(fittedHmmToBlend)
 		totalparams = npar(fittedHmmToBlend)
 		initialparams = fittedHmmToBlend@nstates+(fittedHmmToBlend@nstates**2) + 1
 		responseinits = pars[initialparams:totalparams]
-		handsFromHmmToBlend = c('AKo', '27o', '55o', '5Ao')
 		idx = which(fixedhand == sort(handsFromHmmToBlend))
 		handpars = responseinits[seq(idx, length(responseinits), idx)]
 		helper = function(x, y) { return(c(rep(runif(1), idx-1), x, rep(runif(1), length(hands)-idx))) }
@@ -153,6 +164,7 @@ blendHMM = function(
 
 		# Aggregate counts so we know what actions are part of an independant series
 		# We don't want the model to treat this as a single time series because each new hand play is independant
+		print("Creating Counts of Independant Series (Hand Sequences)...")
 		if(multiseries) {
 		iseq = aggregate(V2 ~ V1 + V4, temp, length)
 		iseq = iseq[order(iseq$V1, iseq$V4), ]
@@ -160,6 +172,7 @@ blendHMM = function(
 		else {iseq = NULL}
 
 		# Ensure the data is ordered properly by handid, playerid, and actionnumber
+		print("Ordering Hands...")
 		temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
 		print("Creating Blended HMM Model...")
