@@ -7,7 +7,13 @@ pdata.val.handids = handids[!handids %in% pdata.train.handids]
 
 if(!exists('AK')) {
     print("AK")
-    AK = sthmm(element_list=c('AKo'))
+    AK = sthmm(
+		element_list=c('AKo', '27o')
+		, seqids=pdata.train.handids
+		, model=list(V2~1, V5~1, V6~1, V8~1)
+		, numstates=2
+		, fam=list(multinomial(), multinomial(), multinomial(), multinomial())
+	      )
 }
 
 if(!exists('AKr')) {
@@ -29,7 +35,7 @@ AKf = blendHMM(
   , handsFromHmmToBlend=c('AKo', '27o')
   , seqids = pdata.val.handids
   , model=list(V2~V5, V2~V6, V2~V8)
-  , numhands=9)
+  , numhands=4)
   # State 2 is what we want to fix since in AKr model above is was accurate on AKo
 #  , startresp = exp(responseinitsfinal) / (1+exp(responseinitsfinal))
 #  , starttr = pars[3:6]
