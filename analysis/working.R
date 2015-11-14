@@ -5,10 +5,30 @@ handids = unique(pdata$V1)
 pdata.train.handids = sample(handids, length(handids) * .6)
 pdata.val.handids = handids[!handids %in% pdata.train.handids]
 
+# Load Monitoring Data
+if(!exists('mdata')){
+mdata = read.csv('./monitoring.txt', sep = '|', header = FALSE)
+mdata$V1 = as.character(mdata$V1)
+print(head(mdata))
+}
+
+if(!exists('Mr')) {
+    print("Mr")		   
+    Mr = sthmm(mdata
+	      , element_list=c('0532d304f8383d6520c4a5f0a230587397b054ae', '0b921e64d729de16c470563f567ef0382457beb5')
+	      , seqids = c('0532d304f8383d6520c4a5f0a230587397b054ae', '0b921e64d729de16c470563f567ef0382457beb5')
+    	      , model=list(V12~1)
+	      , numstates=2
+	      , fam=list(gaussian())
+	      , multiseries=FALSE
+	  )
+}
+
+
 if(!exists('AK')) {
     print("AK")
-    AK = sthmm(
-		element_list=c('AKo', '27o')
+    AK = sthmm(pdata
+		, element_list=c('AKo', '27o')
 		, seqids=pdata.train.handids
 		, model=list(V2~1, V5~1, V6~1, V8~1)
 		, numstates=2
@@ -18,8 +38,8 @@ if(!exists('AK')) {
 
 if(!exists('AKr')) {
     print("AKr")		   
-    AKr = sthmm(
-		element_list=c('AKo', '27o')
+    AKr = sthmm(pdata
+	      , element_list=c('AKo', '27o')
 	      , seqids = pdata.train.handids
     	      , model=list(V2~V5, V2~V6, V2~V8)
 	      , numstates=2
@@ -30,8 +50,8 @@ if(!exists('AKr')) {
 
 if(!exists('AKf')){
 print("AKf")
-AKf = blendHMM(
-  fittedHmmToBlend=AKr$fit.dmm
+AKf = blendHMM(pdata
+  , fittedHmmToBlend=AKr$fit.dmm
   , handsFromHmmToBlend=c('AKo', '27o')
   , seqids = pdata.val.handids
   , model=list(V2~V5, V2~V6, V2~V8)
@@ -46,7 +66,7 @@ AKf = blendHMM(
 
 # if(!exists('AKr10')){
 #     print("AKr10")
-#     AKr10 = sthmm(element_list=c('AKo', as.character(sample(unique(pdata$V2), 9))), model=list(V2~V5, V2~V6, V2~V8), numstates=2, fam=list(multinomial(), multinomial(), multinomial()))
+#     AKr10 = sthmm(pdata, element_list=c('AKo', as.character(sample(unique(pdata$V2), 9))), model=list(V2~V5, V2~V6, V2~V8), numstates=2, fam=list(multinomial(), multinomial(), multinomial()))
 # }
 
 stoptime = proc.time()

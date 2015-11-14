@@ -8,7 +8,8 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 
 # Sample data and train a hidden markov model on pokerhands
 sthmm = function(
-		  element_list
+		    mydata
+		  , element_list
 		  , seqids
 		  , model=list(V5~1, V6~1, V8~1)
 		  , numstates=2
@@ -18,7 +19,7 @@ sthmm = function(
 
 # Get all the hands from the originial dataset
 print("Creating Validation Data...")
-temp = pdata[pdata$V2 %in% element_list, ]
+temp = mydata[mydata$V2 %in% element_list, ]
 temp = temp[temp$V1 %in% seqids, ]
 
 # Aggregate counts so we know what actions are part of an independant series
@@ -57,8 +58,9 @@ return(r.object)
 
 # Leverage parameters from one fitted HMM model to optimize another HMM model
 blendHMM = function(
-	fittedHmmToBlend
-	,handsFromHmmToBlend
+	  mydata
+	, fittedHmmToBlend
+	, handsFromHmmToBlend
 	# Below are parameters for the new HMM model
 	, seqids
 	, model=list(V5~1, V6~1, V8~1)
@@ -73,7 +75,7 @@ blendHMM = function(
 	, fix=NULL) {
 	  	print("Creating Validation Data..")
 
-		temp = pdata[pdata$V1 %in% seqids, ]
+		temp = mydata[mydata$V1 %in% seqids, ]
 
 		hands = unique(as.character(temp$V2))
 		hands= c(fixedhand, sample(hands, numhands))
