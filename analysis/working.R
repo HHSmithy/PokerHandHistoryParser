@@ -44,10 +44,10 @@ AKf = blendHMM(
 }
 
 
-if(!exists('AKr10')){
-    print("AKr10")
-    AKr10 = sthmm(element_list=c('AKo', as.character(sample(unique(pdata$V2), 9))), model=list(V2~V5, V2~V6, V2~V8), numstates=2, fam=list(multinomial(), multinomial(), multinomial()))
-}
+# if(!exists('AKr10')){
+#     print("AKr10")
+#     AKr10 = sthmm(element_list=c('AKo', as.character(sample(unique(pdata$V2), 9))), model=list(V2~V5, V2~V6, V2~V8), numstates=2, fam=list(multinomial(), multinomial(), multinomial()))
+# }
 
 stoptime = proc.time()
 print(stoptime - starttime)
