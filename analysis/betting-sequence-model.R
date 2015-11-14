@@ -17,17 +17,20 @@ sthmm = function(
 		) {
 
 # Get all the hands from the originial dataset
+print("Creating Validation Data...")
 temp = pdata[pdata$V2 %in% element_list, ]
 temp = temp[temp$V1 %in% seqids, ]
 
 # Aggregate counts so we know what actions are part of an independant series
 # We don't want the model to treat this as a single time series because each new hand play is independant
+print("Creating Counts of Independant Series (Hand Sequences)...")
 if(multiseries) {
 iseq = aggregate(V2 ~ V1 + V4, temp, length)
 iseq = iseq[order(iseq$V1, iseq$V4), ]
 }
 else {iseq = NULL}
 
+print("Ordering the dataset into sequential order...")
 # Ensure the data is ordered properly by handid, playerid, and actionnumber
 temp_ordered = temp[order(temp$V1, temp$V4, temp$V7), ]
 
@@ -78,10 +81,10 @@ AK = stss(c('AKo'))
 # Let the model know we have multiple independant sequences in this dataset
 # we treat each players sequence as independant, this isn't the greatest assumption, however,
 # for recurring behavior this is OK to make.
-if(!exists('iseq')) {
-iseq = aggregate(V2 ~ V1 + V4, pdataAK, length)
-iseq = iseq[order(iseq$V1, iseq$V4), ]
-}
+# if(!exists('iseq')) {
+# iseq = aggregate(V2 ~ V1 + V4, pdataAK, length)
+# iseq = iseq[order(iseq$V1, iseq$V4), ]
+# }
 
 # if(!exists('iseq_all')){
 # print("Aggregating ..")
@@ -91,9 +94,9 @@ iseq = iseq[order(iseq$V1, iseq$V4), ]
 # }
 
 # create a multivariate HMM -- 2 states since we only care about AKo .. either you got it or you don't.
-if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2,
-		      	     ntimes=iseq[,3],
-			     family = list(multinomial(), multinomial(), multinomial())) }
+# if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nstates=2,
+# 		      	     ntimes=iseq[,3],
+# 			     family = list(multinomial(), multinomial(), multinomial())) }
 
 
 # dmmR3 = depmix(list(V2~V5, V2~V6, V2~V8)
@@ -103,15 +106,15 @@ if(!exists('dmmR')) { dmmR = depmix(list(V2~V5, V2~V6, V2~V8), data=pdataAK, nst
 
 # fit.dmmR3 = fit(dmmR3)
 
-if(!exists('dmmR2')) {
-dmmR2 = depmix(list(V5~1, V6~1, V8~1)
-, data=pdataAK
-, nstates=1
-, ntimes=iseq[,3]
-, family = list(multinomial(), multinomial(), multinomial()))
+# if(!exists('dmmR2')) {
+# dmmR2 = depmix(list(V5~1, V6~1, V8~1)
+# , data=pdataAK
+# , nstates=1
+# , ntimes=iseq[,3]
+# , family = list(multinomial(), multinomial(), multinomial()))
 
-fit.dmmR2 = fit(dmmR2)
-}
+# fit.dmmR2 = fit(dmmR2)
+# }
 
 # Optimize the HMM parameters
 if(!exists('fit.dmmR')) { fit.dmmR = fit(dmmR) }
@@ -147,8 +150,12 @@ blendHMM = function(
 	  	    print("Creating Validation Data..")
 
 		temp = pdata[pdata$V1 %in% seqids, ]
-		hands= c(fixedhand, sample(as.character(unique(temp$V2)), numhands))
+
+		hands = unique(as.character(temp$V2))
+		hands= c(fixedhand, sample(hands, numhands))
 		hands = sort(hands)
+
+		temp = temp[temp$V2 %in% hands, ]
 
 		print("Extracting Parameters for fixed hands...")
 		# Extract parameters (transition / emission) probabilities for the hand we want to fix
@@ -160,7 +167,6 @@ blendHMM = function(
 		handpars = responseinits[seq(idx, length(responseinits), idx)]
 		helper = function(x, y) { return(c(rep(runif(1), idx-1), x, rep(runif(1), length(hands)-idx))) }
 		responseinitsfinal = unlist(lapply(handpars, function(z) helper(z,length(hands))))
-
 
 		# Aggregate counts so we know what actions are part of an independant series
 		# We don't want the model to treat this as a single time series because each new hand play is independant
