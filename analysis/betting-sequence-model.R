@@ -7,7 +7,7 @@ pdata = pdata[order(pdata$V1, pdata$V4, pdata$V7), ]
 }
 
 # Sample data and train a hidden markov model on pokerhands
-sthmm = function(
+msthmm = function(
 		    mydata
 		  , element_list
 		  , seqids
