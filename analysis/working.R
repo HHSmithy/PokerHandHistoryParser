@@ -1,6 +1,6 @@
 starttime = proc.time()
 source('betting-sequence-model.R')
-source('server-sequence-model.R')
+# source('server-sequence-model.R')
 
 handids = unique(pdata$V1)
 pdata.train.handids = sample(handids, length(handids) * .6)
@@ -58,6 +58,26 @@ if(!exists('AKr')) {
 	  )
 }
 
+# Compute a 2-state hmm for every hand
+# we will use these to blend into a final model for all hands
+# this should be done distributed on a cluster
+if(!exists('hmm_each_hand')) {
+names = c()
+hmm_each_hand = lapply(unique(as.character(pdata$V2)), function(x) {
+	      stime = proc.time()
+	      print(x)
+	      names = c(names, x)
+	      temp = sthmm(pdata
+	      	      , element_list=c(x, '27o')
+	      	      , seqids = pdata.train.handids
+		      , model=list(V2~V5, V2~V6, V2~V8)
+		      , numstates=2
+		      , fam=list(multinomial(), multinomial(), multinomial()))
+	      print(proc.time() - stime)
+	      return(temp)
+	      
+  })
+}
 
 if(!exists('AKf')){
 print("AKf")
