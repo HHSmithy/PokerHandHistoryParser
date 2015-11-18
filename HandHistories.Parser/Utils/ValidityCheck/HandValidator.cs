@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
+using HandHistories.Parser.Utils.Pot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,16 +41,12 @@ namespace HandHistories.Parser.Utils
 			    var item = list[i];
 			    if (item.IsBlinds || item.HandActionType == HandActionType.ANTE)
 	            {
+                    reason = "Blind occuring after action: #" + i;
 		            return false;
                 }
 
                 if (item.Street != currentStreet)
                 {
-                    if ((int)item.Street < (int)currentStreet)
-                    {
-                        return false;
-                    }
-
                     BetOccured = false;
                     currentStreet = item.Street;
                 }
@@ -58,6 +55,7 @@ namespace HandHistories.Parser.Utils
                 {
                     if (BetOccured)
                     {
+                        reason = "Cant bet twice on same street: #" + i;
                         return false;
                     }
                     else
@@ -70,6 +68,7 @@ namespace HandHistories.Parser.Utils
                 {
                     if (!BetOccured)
                     {
+                        reason = "Cant raise without a bet/BB: #" + i;
                         return false;
                     }
                 }
@@ -80,11 +79,9 @@ namespace HandHistories.Parser.Utils
 
         static bool CheckTotalPot(HandHistory hand, out string reason)
         {
-            var totalPot = hand.HandActions
-                .Where(p => p.IsGameAction || p.IsBlinds)
-                .Sum(p => p.Amount);
+            decimal expectedPot = PotCalculator.CalculateTotalPot(hand);
 
-            bool PotValid = Math.Abs(totalPot) == hand.TotalPot;
+            bool PotValid = Math.Abs(expectedPot) == hand.TotalPot;
 
             if (PotValid)
             {
@@ -92,7 +89,7 @@ namespace HandHistories.Parser.Utils
             }
             else
             {
-                reason = string.Format("Total Pot not correct: {0} actions: {1}", hand.TotalPot, totalPot);
+                reason = string.Format("Total Pot not correct: {0} actions: {1}", hand.TotalPot, expectedPot);
             }
 
             return PotValid;

@@ -1256,6 +1256,21 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 throw new PlayersException(string.Empty, "Didn't break out of the seat reading block.");
             }
 
+
+            int DealtToHeroLineIndex = GetDealtToHeroLineIndex(handLines, lastLineRead);
+
+            string dealtLine = handLines[DealtToHeroLineIndex];
+            if (dealtLine[dealtLine.Length - 1] == ']' && dealtLine.StartsWith("Dealt to ", StringComparison.Ordinal))
+            {
+                const int nameStartIndex = 9;//"Dealt to ".Length
+                int cardsStartIndex = dealtLine.LastIndexOf('[') + 1;
+                int nameEndIndex = cardsStartIndex - 2;
+
+                string name = dealtLine.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
+                string cards = dealtLine.Substring(cardsStartIndex, dealtLine.Length - cardsStartIndex - 1);
+
+                playerList[name].HoleCards = HoleCards.FromCards(cards);
+            }
             // Looking for the showdown info which looks like this
             //*** SHOW DOWN ***
             //JokerTKD: shows [2s 3s Ah Kh] (HI: a pair of Sixes)
@@ -1351,6 +1366,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
 
             return playerList;
+        }
+
+        private int GetDealtToHeroLineIndex(string[] handLines, int lastLineRead)
+        {
+            for (int i = lastLineRead; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[0] == '*' && line[line.Length - 1] == '*')
+                {
+                    return i + 1;
+                }
+            }
+            throw new IndexOutOfRangeException("***HoleCards*** not found");
         }
 
         private int GetShowDownStartIndex(string[] handLines, int lastLineRead, int summaryIndex)

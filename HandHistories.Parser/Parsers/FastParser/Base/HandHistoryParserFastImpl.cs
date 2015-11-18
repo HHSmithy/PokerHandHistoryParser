@@ -236,7 +236,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 catch (Exception)
                 {
                     throw new ExtraHandParsingAction(handLines[0]);
-                }     
+                }
              
                 return handHistory;
             }

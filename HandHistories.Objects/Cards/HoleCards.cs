@@ -11,7 +11,7 @@ namespace HandHistories.Objects.Cards
 
         private HoleCards(string playerName, params Card [] cards) : base(cards)
         {
-            PlayerName = playerName;          
+            PlayerName = playerName;
         }
 
         public static HoleCards ForHoldem(Card card1, Card card2)
