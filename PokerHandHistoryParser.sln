@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EAA6EA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineParser", "CommandLineParser\CommandLineParser.csproj", "{E2394A36-8ABE-47ED-B9E0-5CF10305906F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandEvaluator", "HandEvaluator\HandEvaluator.csproj", "{65E81603-B0C4-4CBE-A709-F6058C9BB298}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,16 @@ Global
 		{E2394A36-8ABE-47ED-B9E0-5CF10305906F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E2394A36-8ABE-47ED-B9E0-5CF10305906F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E2394A36-8ABE-47ED-B9E0-5CF10305906F}.Release|x86.ActiveCfg = Release|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{65E81603-B0C4-4CBE-A709-F6058C9BB298}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

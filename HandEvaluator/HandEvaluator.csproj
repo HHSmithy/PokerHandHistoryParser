@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2394A36-8ABE-47ED-B9E0-5CF10305906F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{65E81603-B0C4-4CBE-A709-F6058C9BB298}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommandLineParser</RootNamespace>
-    <AssemblyName>CommandLineParser</AssemblyName>
+    <RootNamespace>HandEvaluator</RootNamespace>
+    <AssemblyName>HandEvaluator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,23 +41,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HandEvaluator\HandEvaluator.csproj">
-      <Project>{65e81603-b0c4-4cbe-a709-f6058c9bb298}</Project>
-      <Name>HandEvaluator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HandHistories.Objects\HandHistories.Objects.csproj">
-      <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
-      <Name>HandHistories.Objects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HandHistories.Parser\HandHistories.Parser.csproj">
-      <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
-      <Name>HandHistories.Parser</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
