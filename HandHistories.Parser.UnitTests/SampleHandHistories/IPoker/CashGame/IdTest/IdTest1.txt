@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6509000000">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Omaha PL €5/€10</gametype>  
+	          <tablename>Bispingen, 8310000000</tablename>
+	          <tablecurrency>EUR</tablecurrency>  
+	          <duration>N/A</duration>  
+	          <gamecount>N/A</gamecount>  
+	          <startdate>2015-11-08 15:29:17</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>PlayerName</nickname>  
+	          <bets>N/A</bets>  
+	          <wins>N/A</wins>  
+	          <chipsin>N/A</chipsin>
+			  		<chipsout>N/A</chipsout>
+			  		<ipoints>N/A</ipoints>
+        		<statuspoints>N/A</statuspoints>
+			  		<awardpoints>N/A</awardpoints>
+	            
+	    </general>  

@@ -1,54 +1,54 @@
-﻿PokerStars Hand #124689908714:  Omaha Pot Limit ($10/$20 USD) - 2014/11/08 0:40:18 WET [2014/11/07 19:40:18 ET]
+﻿PokerStars Hand #124680000000:  Omaha Pot Limit ($10/$20 USD) - 2014/10/21 15:15:15 WET [2014/10/21 15:15:15 ET]
 Table 'Pomona III' 6-max Seat #1 is the button
-Seat 1: jedimaster82 ($1000 in chips) 
-Seat 2: OneMoreSpin ($1859.80 in chips) 
-Seat 3: FLATC@T ($2000 in chips) 
-Seat 4: KENZA_MILOU ($1000 in chips) 
-Seat 5: Legheliel ($2000 in chips) 
-Seat 6: danfiu ($2000 in chips) 
-OneMoreSpin: posts small blind $10
-FLATC@T: posts big blind $20
+Seat 1: Player1 ($1000 in chips) 
+Seat 2: Player2 ($1859.80 in chips) 
+Seat 3: Player3 ($2000 in chips) 
+Seat 4: Player4 ($1000 in chips) 
+Seat 5: Player5 ($2000 in chips) 
+Seat 6: Player6 ($2000 in chips) 
+Player2: posts small blind $10
+Player3: posts big blind $20
 *** HOLE CARDS ***
-Dealt to OneMoreSpin [Qh 3c Ks 7c]
-KENZA_MILOU: raises $40 to $60
-Legheliel: calls $60
-danfiu: folds 
-jedimaster82: folds 
-OneMoreSpin: folds 
-FLATC@T: raises $190 to $250
-KENZA_MILOU: calls $190
-Legheliel: raises $760 to $1010
-FLATC@T said, "hehe"
-FLATC@T: calls $760
-KENZA_MILOU: calls $750 and is all-in
+Dealt to Player1 [Qh 3c Ks 7c]
+Player4: raises $40 to $60
+Player5: calls $60
+Player6: folds 
+Player1: folds 
+Player2: folds 
+Player3: raises $190 to $250
+Player4: calls $190
+Player5: raises $760 to $1010
+Player3 said, "hehe"
+Player3: calls $760
+Player4: calls $750 and is all-in
 *** FLOP *** [3d Kd 9h]
-FLATC@T: checks 
-Legheliel: checks 
+Player3: checks 
+Player5: checks 
 *** TURN *** [3d Kd 9h] [8h]
-FLATC@T: bets $990 and is all-in
-Legheliel said, "hero-fold"
-Legheliel: folds 
-Uncalled bet ($990) returned to FLATC@T
+Player3: bets $990 and is all-in
+Player5 said, "hero-fold"
+Player5: folds 
+Uncalled bet ($990) returned to Player3
 *** FIRST RIVER *** [3d Kd 9h 8h] [4s]
 *** SECOND RIVER *** [3d Kd 9h 8h] [Kc]
 *** FIRST SHOW DOWN ***
-FLATC@T: shows [Jd Ts Qd Qs] (a pair of Queens)
-FLATC@T collected $10 from side pot
-KENZA_MILOU: shows [7s 9s 7h Jh] (a pair of Nines)
-FLATC@T collected $1503.50 from main pot
+Player3: shows [Jd Ts Qd Qs] (a pair of Queens)
+Player3 collected $10 from side pot
+Player4: shows [7s 9s 7h Jh] (a pair of Nines)
+Player3 collected $1503.50 from main pot
 *** SECOND SHOW DOWN ***
-FLATC@T: shows [Jd Ts Qd Qs] (two pair, Kings and Queens)
-FLATC@T collected $10 from side pot
-KENZA_MILOU: shows [7s 9s 7h Jh] (two pair, Kings and Nines)
-FLATC@T collected $1503.50 from main pot
+Player3: shows [Jd Ts Qd Qs] (two pair, Kings and Queens)
+Player3 collected $10 from side pot
+Player4: shows [7s 9s 7h Jh] (two pair, Kings and Nines)
+Player3 collected $1503.50 from main pot
 *** SUMMARY ***
 Total pot $3030 Main pot $3007. Side pot $20. | Rake $3 
 Hand was run twice
 FIRST Board [3d Kd 9h 8h 4s]
 SECOND Board [3d Kd 9h 8h Kc]
-Seat 1: jedimaster82 (button) folded before Flop (didn't bet)
-Seat 2: OneMoreSpin (small blind) folded before Flop
-Seat 3: FLATC@T (big blind) showed [Jd Ts Qd Qs] and won ($1513.50) with a pair of Queens, and won ($1513.50) with two pair, Kings and Queens
-Seat 4: KENZA_MILOU showed [7s 9s 7h Jh] and lost with a pair of Nines, and lost with two pair, Kings and Nines
-Seat 5: Legheliel folded on the Turn
-Seat 6: danfiu folded before Flop (didn't bet)
+Seat 1: Player1 (button) folded before Flop (didn't bet)
+Seat 2: Player2 (small blind) folded before Flop
+Seat 3: Player3 (big blind) showed [Jd Ts Qd Qs] and won ($1513.50) with a pair of Queens, and won ($1513.50) with two pair, Kings and Queens
+Seat 4: Player4 showed [7s 9s 7h Jh] and lost with a pair of Nines, and lost with two pair, Kings and Nines
+Seat 5: Player5 folded on the Turn
+Seat 6: Player6 folded before Flop (didn't bet)

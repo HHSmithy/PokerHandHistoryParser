@@ -459,6 +459,26 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 playerList.Add(new Player(playerName, amount, seat));
             }
 
+            int heroCardsIndex = GetHeroCardsIndex(handLines, 6 + seatCount);
+
+            if (heroCardsIndex != -1)
+            {
+                string heroCardsLine = handLines[heroCardsIndex];
+                if (heroCardsLine[heroCardsLine.Length - 1] == ']' &&
+                    heroCardsLine.StartsWith("Dealt to ", StringComparison.Ordinal))
+                {
+                    int openSquareIndex = heroCardsLine.LastIndexOf('[');
+
+                    string cards = heroCardsLine.Substring(openSquareIndex + 2, heroCardsLine.Length - openSquareIndex - 2 - 2);
+                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+
+                    string playerName = heroCardsLine.Substring(9, openSquareIndex - 1 - 9);
+
+                    Player player = playerList.First(p => p.PlayerName.Equals(playerName));
+                    player.HoleCards = holeCards;
+                }
+            }
+            
             // Add hole-card info
             for (int i = handLines.Length - 2; i >= 0; i--)
             {
@@ -487,7 +507,20 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 }
             }
 
-                return playerList;
+            return playerList;
+        }
+
+        static int GetHeroCardsIndex(string[] handLines, int startIndex)
+        {
+            for (int i = startIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[0] == '*' && line[line.Length - 1] == '*')
+                {
+                    return i + 1;
+                }
+            }
+            return -1;
         }
 
         protected override BoardCards ParseCommunityCards(string[] handLines)

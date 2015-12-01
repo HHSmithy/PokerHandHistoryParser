@@ -212,23 +212,29 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 // if the cards are shown for this player
                 if(handLines[i].ToLower().Contains("showcards") && handLines[i].Contains(@"seat="""+playerSeat+@""""))
                 {
-                    // add all cards the player has ( 2 for hold'em / 4 for omaha )
-                    var cards = "";
-                    do
-                    {
-                        i++;
-                        handLines[i] = handLines[i].Replace("value=\"10\"", "value=\"T\"");
+                    var cards = ParseCardsFromLines(handLines, ref i);
 
-                        cards += handLines[i][13].ToString() + handLines[i][22].ToString();   
-                    } while (!handLines[i+1].Contains("</Action"));
-
-                    return HoleCards.FromCards(playerName, cards);
+                    return HoleCards.FromCards(playerName, cards.ToArray());
                 }
             }
             return null;
         }
 
-        private static string[] GetCardLinesFromHandLines(string[] handLines)
+        private static List<Card> ParseCardsFromLines(string[] handLines, ref int i)
+        {
+            // add all cards the player has ( 2 for hold'em / 4 for omaha )
+            List<Card> cards = new List<Card>();
+            do
+            {
+                i++;
+                handLines[i] = handLines[i].Replace("value=\"10\"", "value=\"T\"");
+
+                cards.Add(new Card(handLines[i][13], handLines[i][22]));
+            } while (!handLines[i + 1].Contains("</Action"));
+            return cards;
+        }
+
+        private static List<string> GetCardLinesFromHandLines(string[] handLines)
         {
             var cardLines = new List<string>();
             for (int i = 0; i < handLines.Count();i++)
@@ -255,7 +261,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 }
             }
 
-            return cardLines.ToArray();
+            return cardLines;
         }
 
         protected override GameType ParseGameType(string[] handLines)
@@ -597,6 +603,18 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                                    });
             }
 
+            int heroSeat = GetHeroSeatNumber(handLines);
+            int heroCardsIndex = GetHeroCardsFirstLineIndex(handLines, heroSeat, playerLines.Length + 1);
+
+
+            if (heroCardsIndex != -1)
+            {
+                var cards = ParseCardsFromLines(handLines, ref heroCardsIndex);
+
+                var player = playerList.FirstOrDefault(p => p.SeatNumber == heroSeat);
+                player.HoleCards = HoleCards.FromCards(player.PlayerName, cards.ToArray());
+            }
+
             foreach (Player player in playerList)
             {
                 // try to obtain the holecards for the player
@@ -610,13 +628,33 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return playerList;
         }
 
+        private int GetHeroCardsFirstLineIndex(string[] handLines, int heroSeat, int startIndex)
+        {
+            string heroDealtToEnd = "\"4\">";
+
+            for (int i = 0; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line.EndsWith(heroDealtToEnd, StringComparison.Ordinal))
+                {
+                    return i;
+                }
+                else if (line.EndsWith("</Action>", StringComparison.Ordinal))
+                {
+                    break;
+                }
+            }
+
+            return -1;
+        }
+
         protected override BoardCards ParseCommunityCards(string[] handLines)
         {            
-            string[] cardLines = GetCardLinesFromHandLines(handLines);
+            List<string> cardLines = GetCardLinesFromHandLines(handLines);
 
             string boardCards = "";
 
-            for (int i = 0; i < cardLines.Length; i++)
+            for (int i = 0; i < cardLines.Count; i++)
             {
                 string handLine = cardLines[i];
                 handLine = handLine.TrimStart();
@@ -632,10 +670,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         protected override string ParseHeroName(string[] handlines)
         {
-            string line = handlines[0];
-            const string playerSeat = " playerseat=\"";
-            string SeatString = GetAttribute(line, playerSeat);
-            int HeroSeatNumber = int.Parse(SeatString);
+            int HeroSeatNumber = GetHeroSeatNumber(handlines);
             
             var player = ParsePlayers(handlines).FirstOrDefault(p => p.SeatNumber == HeroSeatNumber);
 
@@ -644,6 +679,15 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 return player.PlayerName;
             }
             return null;
+        }
+
+        private static int GetHeroSeatNumber(string[] handlines)
+        {
+            string line = handlines[0];
+            const string playerSeat = " playerseat=\"";
+            string SeatString = GetAttribute(line, playerSeat);
+            int HeroSeatNumber = int.Parse(SeatString);
+            return HeroSeatNumber;
         }
 
         private int GetWinningsLineNumberFromHandLines(string[] handLines)

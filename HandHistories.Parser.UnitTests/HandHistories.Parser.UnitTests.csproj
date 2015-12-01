@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compression\HandHistoryGZipCompressorImplTests.cs" />
+    <Compile Include="FileIdentifiers\FileIdentifierTests.cs" />
     <Compile Include="Infrastructure\NinjectKernel.cs" />
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
     <Compile Include="Parsers\FastParserTests\BossMedia\BossMediaFastParserActionTests.cs" />
@@ -112,7 +113,8 @@
     <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests.cs" />
-    <Compile Include="Parsers\HandSummaryParserTests\HeroNameTests\HeroNameTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroDealtToTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_CashGame.cs" />
@@ -369,6 +371,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AnteAction.txt" />
+    <Content Include="SampleHandHistories\IPoker\CashGame\IdTest\IdTest1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\MinerFormat.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -584,6 +584,23 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
             }
 
+
+            var heroDealtToLineIndex = GetHeroCardsIndex(handLines, StartLine + numPlayers);
+            if (heroDealtToLineIndex != -1)
+            {
+                string heroCardsLine = handLines[heroDealtToLineIndex];
+
+                int openSquareIndex = heroCardsLine.LastIndexOf('[');
+
+                string cards = heroCardsLine.Substring(openSquareIndex + 1, heroCardsLine.Length - openSquareIndex - 1 - 1);
+                HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+
+                string playerName = heroCardsLine.Substring(11, openSquareIndex - 2 - 11);
+
+                Player player = playerList.First(p => p.PlayerName.Equals(playerName));
+                player.HoleCards = holeCards;
+            }
+
             // Parse the player showdown hole-cards
 
             for (int i = handLines.Length - 2; i >= 0; i--)
@@ -615,6 +632,19 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             }
 
             return playerList;
+        }
+
+        static int GetHeroCardsIndex(string[] handLines, int startIndex)
+        {
+            for (int i = startIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[line.Length - 1] == ']' && line.StartsWith("Dealing to"))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         protected override BoardCards ParseCommunityCards(string[] handLines)
