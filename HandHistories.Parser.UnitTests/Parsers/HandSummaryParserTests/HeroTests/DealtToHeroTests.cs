@@ -10,11 +10,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
     [TestFixture("Pacific", "3dJc")]
     [TestFixture("MicroGaming", "AhQsKs8c")]
     [TestFixture("BossMedia", "3dKd")]
-    class HeroDealtToTests : HandHistoryParserBaseTests
+    class DealtToHeroTests : HandHistoryParserBaseTests
     {
         private readonly string _expectedHeroHand;
 
-        public HeroDealtToTests(string site, string expectedHand)
+        public DealtToHeroTests(string site, string expectedHand)
             : base(site)
         {
             _expectedHeroHand = expectedHand;
