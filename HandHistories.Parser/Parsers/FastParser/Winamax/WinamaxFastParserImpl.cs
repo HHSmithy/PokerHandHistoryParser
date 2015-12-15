@@ -562,6 +562,23 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
             }
 
+            int ShowDownLineIndex = GetShowDownLineIndex(handLines, 2 + playerList.Count, handLines.Length - 3);
+            if (ShowDownLineIndex != -1)
+            {
+                for (int i = ShowDownLineIndex; i < handLines.Length; i++)
+                {
+                    string line = handLines[i];
+
+                    if (line.EndsWith(")", StringComparison.Ordinal) && line.Contains(" shows ["))
+                    {
+                        string name = GetPlayerNameFromHandLine(line);
+
+                        Player player = playerList.First(p => p.PlayerName.Equals(name));
+                        player.HoleCards = ParseHoleCards(line);
+                    }
+                }
+            }
+
             for (int i = handLines.Length - 1; i >= 0; i--)
             {
                 // Loop backward looking for lines like:
@@ -580,21 +597,42 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                 string name = GetPlayerNameFromHandLine(handLine);
 
-                int openSquareIndex = handLine.LastIndexOf('[');
-                int closeSquareIndex = handLine.LastIndexOf(']');
-                string holeCards = "";
-
-                if(openSquareIndex > -1 && closeSquareIndex > -1)
-                {
-                    holeCards = handLine.Substring(openSquareIndex + 1, closeSquareIndex - openSquareIndex -1);   
-                }
-
                 Player player = playerList.First(p => p.PlayerName.Equals(name));
-                player.HoleCards = HoleCards.FromCards(holeCards.Replace(" ", "").Replace(",", ""));
+                if (player.HoleCards == null)
+                {
+                    player.HoleCards = ParseHoleCards(handLine);
+                }
+            }
+            return playerList;
+        }
 
+        static HoleCards ParseHoleCards(string line)
+        {
+            int openSquareIndex = line.LastIndexOf('[') + 1;
+            int closeSquareIndex = line.LastIndexOf(']');
+
+            if (openSquareIndex == -1 || closeSquareIndex == -1)
+            {
+                return null;
             }
 
-            return playerList;
+            string holeCards = line.Substring(openSquareIndex, closeSquareIndex - openSquareIndex);
+
+            return HoleCards.FromCards(holeCards.Replace(" ", ""));
+        }
+
+        static int GetShowDownLineIndex(string[] handLines, int startIndex, int endIndex)
+        {
+            for (int i = endIndex; i > startIndex; i--)
+            {
+                string line = handLines[i];
+
+                if (line.StartsWith("*** SHOW DOWN ***", StringComparison.Ordinal))
+                {
+                    return i + 1;
+                }
+            }
+            return -1;
         }
 
         protected override BoardCards ParseCommunityCards(string[] handLines)

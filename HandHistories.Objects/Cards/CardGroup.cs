@@ -36,11 +36,11 @@ namespace HandHistories.Objects.Cards
                 {
                     continue;
                 }
-                cardsList.Add(new Card(cards[i++], cards[i]));
+               cardsList.Add(new Card(cards[i++], cards[i]));
             }
 
             return cardsList.ToArray();
-        }        
+        }
 
         public void AddCard(Card card)
         {

@@ -113,7 +113,7 @@
     <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests.cs" />
-    <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroDealtToTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\HeroTests\DealtToHeroTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />

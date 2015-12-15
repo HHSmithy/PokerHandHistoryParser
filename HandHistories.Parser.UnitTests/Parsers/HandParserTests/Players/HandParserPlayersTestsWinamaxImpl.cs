@@ -37,16 +37,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             get
             {
                 return new PlayerList()
-                           {
-                               new Player("PornstarX", 67.80m, 1),
-                               new Player("nico86190", 38.52m, 2)
-                                   {
-                                       HoleCards = HoleCards.FromCards("QhQc")
-                                   },
-                               new Player("-LePianiste-", 53.65m, 3),
-                               new Player("LEROISALO", 22.85m, 4),
-                               new Player("Matthieu_59_", 42.59m, 5)
-                           };
+                {
+                    new Player("PornstarX", 67.80m, 1),
+                    new Player("nico86190", 38.52m, 2)
+                    {
+                        HoleCards = HoleCards.FromCards("QhQc")
+                    },
+                    new Player("-LePianiste-", 53.65m, 3),
+                    new Player("LEROISALO", 22.85m, 4)
+                    {
+                        HoleCards = HoleCards.FromCards("KhAh")
+                    },
+                    new Player("Matthieu_59_", 42.59m, 5)
+                };
             }
         }
 
@@ -59,17 +62,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             get
             {
-                return new PlayerList()
-                           {
-                               new Player("scyllah374", 30, 1),
-                               new Player("RICO97133", 80.89m, 2),
-                               new Player("AtomeXxX", 18.85m, 3),
-                               new Player("trasto51", 30.77m, 4),
-                               new Player("sharon59221", 30.74m, 5)
-                                   {
-                                       HoleCards = HoleCards.FromCards("AhAs4cTd")
-                                   }
-                           };
+                return new PlayerList(){
+                    new Player("scyllah374", 30, 1),
+                    new Player("RICO97133", 80.89m, 2),
+                    new Player("AtomeXxX", 18.85m, 3),
+                    new Player("trasto51", 30.77m, 4)
+                    {
+                        HoleCards = HoleCards.FromCards("ThJs6hKh")
+                    },
+                    new Player("sharon59221", 30.74m, 5)
+                    {
+                        HoleCards = HoleCards.FromCards("AhAs4cTd")
+                    }};
             }
         }
 
