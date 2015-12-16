@@ -142,6 +142,8 @@ namespace HandHistories.Objects.Actions
                     return amount;
                 case HandActionType.POSTS:
                     return amount * -1;
+                case HandActionType.POSTS_DEAD:
+                    return amount * -1;
                 case HandActionType.ANTE:
                     return amount * -1;
                 case HandActionType.WINS_THE_LOW:

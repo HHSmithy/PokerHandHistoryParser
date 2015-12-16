@@ -23,7 +23,13 @@
         FIFTEEN_SECONDS_LEFT,
         FIVE_SECONDS_LEFT,
         MUCKS,
+        /// <summary>
+        /// POST that is added to your bet
+        /// </summary>
         POSTS,
+        /// <summary>
+        /// POST that is not added to your bet
+        /// </summary>
         POSTS_DEAD,
         DISCONNECTED,
         RECONNECTED,

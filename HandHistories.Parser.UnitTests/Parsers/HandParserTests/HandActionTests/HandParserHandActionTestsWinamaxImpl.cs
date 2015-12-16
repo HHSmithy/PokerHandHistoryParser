@@ -17,6 +17,32 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
         }
 
+        [Test]
+        public void PostingBBPostingSB_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                {
+                    new HandAction("totti6720", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("titi250", HandActionType.BIG_BLIND, 0.5m, Street.Preflop),
+                    new HandAction("Dbrz34", HandActionType.POSTS_DEAD, 0.25m, Street.Preflop),
+                    new HandAction("Dbrz34", HandActionType.POSTS, 0.5m, Street.Preflop),
+
+                    new HandAction("Dbrz34", HandActionType.CHECK, Street.Preflop),
+                    new HandAction("sined20", HandActionType.RAISE, 1.5m, Street.Preflop),
+                    new HandAction("fanf4K UR0", HandActionType.FOLD, Street.Preflop),
+                    new HandAction("totti6720", HandActionType.FOLD, Street.Preflop),
+                    new HandAction("titi250", HandActionType.FOLD, Street.Preflop),
+                    new HandAction("Dbrz34", HandActionType.CALL, 0.5m, Street.Preflop),
+
+                    new HandAction("Dbrz34", HandActionType.CHECK, Street.Flop),
+                    new HandAction("sined20", HandActionType.BET, 2.50m, Street.Flop),
+                    new HandAction("Dbrz34", HandActionType.FOLD, Street.Flop),
+                    new WinningsAction("sined20", HandActionType.WINS, 6.26m, 0)
+                };
+
+            TestParseActions("PostingDead", expectedActions);
+        }
+
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get

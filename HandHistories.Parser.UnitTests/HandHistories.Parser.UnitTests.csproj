@@ -1342,6 +1342,9 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\OmahaHiLo.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\PostingDead.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\Limits\Limit1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -249,6 +249,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
+            HandAction LastDeadAction = null;
+
             int startOfActionsIndex = -1;
 
             // we store this value for future deadmoney detection
@@ -384,7 +386,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                     // bkk2015 posts small blind 0.25€ out of position
                     // bkk2015 posts big blind 0.50€ out of position
-                    var deadMoney = handLine[handLine.Length-1] == 'n';
+                    var deadMoney = isDeadMoney(handLine);
                     if (deadMoney)
                     {
                         handLine = handLine.Substring(0, handLine.Length - 16);
@@ -399,9 +401,25 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         var handActionType = deadMoney ? HandActionType.POSTS : HandActionType.SMALL_BLIND;
 
                         var playerName = handLine.Substring(0, smallBlindIndex - 1);
-                        handActions.Add(new HandAction(playerName, handActionType, amount, Street.Preflop,isAllIn));
+                        var action = new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn);
 
                         smallBlindValue = amount;
+                        if (deadMoney)
+                        {
+                            if (LastDeadAction != null && LastDeadAction.PlayerName == playerName)
+                            {
+                                if (Math.Abs(LastDeadAction.Amount) > Math.Abs(action.Amount))
+                                {
+                                    action = new HandAction(action.PlayerName, HandActionType.POSTS_DEAD, action.Amount, action.Street);
+                                }
+                            }
+                            LastDeadAction = action;
+                            handActions.Add(action);
+                        }
+                        else
+                        {
+                            handActions.Add(action);
+                        }
                         continue;
                     }
 
@@ -410,7 +428,25 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         var handActionType = deadMoney ? HandActionType.POSTS : HandActionType.BIG_BLIND;
 
                         var playerName = handLine.Substring(0, bigBlindIndex - 1);
-                        handActions.Add(new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn));
+                        var action = new HandAction(playerName, handActionType, amount, Street.Preflop, isAllIn);
+                        
+
+                        if (deadMoney)
+                        {
+                            if (LastDeadAction != null && LastDeadAction.PlayerName == playerName)
+                            {
+                                if (Math.Abs(LastDeadAction.Amount) < Math.Abs(action.Amount))
+                                {
+                                    ConvertLastActionTo(handActions, HandActionType.POSTS_DEAD); 
+                                }
+                            }
+                            LastDeadAction = action;
+                            handActions.Add(action);
+                        }
+                        else
+                        {
+                            handActions.Add(action);
+                        }
                         continue;
                     }
 
@@ -418,7 +454,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 }
 
                 // Check for folds & checks
-                if (handLine[handLine.Length - 1] == 's')
+                char lastChar = handLine[handLine.Length - 1];
+                if (lastChar == 's')
                 {
                     if (handLine[handLine.Length - 2] == 'd') // folds
                     {
@@ -435,7 +472,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 else
                 {
                     // from here on we can skip lines that don't end on the EURO-symbol AND that are not allins
-                    if (handLine[handLine.Length - 1] != '€' && !isAllIn)
+                    if (lastChar != '€' && !isAllIn)
                     {
                         continue;
                     }
@@ -536,6 +573,19 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             }
 
             return handActions;
+        }
+
+        private void ConvertLastActionTo(List<HandAction> handActions, HandActionType handActionType)
+        {
+            var lastAction = handActions[handActions.Count - 1];
+            handActions.RemoveAt(handActions.Count - 1);
+            handActions.Add(new HandAction(lastAction.PlayerName, handActionType, lastAction.Amount, lastAction.Street));
+        }
+
+        private static bool isDeadMoney(string handLine)
+        {
+            var deadMoney = handLine[handLine.Length - 1] == 'n';
+            return deadMoney;
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)
