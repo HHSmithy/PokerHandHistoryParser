@@ -24,6 +24,7 @@
         FIVE_SECONDS_LEFT,
         MUCKS,
         POSTS,
+        POSTS_DEAD,
         DISCONNECTED,
         RECONNECTED,
         STANDS_UP,

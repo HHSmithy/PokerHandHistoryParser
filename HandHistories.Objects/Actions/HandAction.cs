@@ -223,7 +223,20 @@ namespace HandHistories.Objects.Actions
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
                        HandActionType == HandActionType.ANTE ||
-                       HandActionType == HandActionType.POSTS;
+                       HandActionType == HandActionType.POSTS ||
+                       HandActionType == HandActionType.POSTS_DEAD;
+            }
+        }
+
+        /// <summary>
+        /// POSTS & POSTS_DEAD
+        /// </summary>
+        public bool IsPostAction
+        {
+            get
+            {
+                return HandActionType == HandActionType.POSTS ||
+                       HandActionType == HandActionType.POSTS_DEAD;
             }
         }
 
@@ -241,6 +254,14 @@ namespace HandHistories.Objects.Actions
                     HandActionType == Actions.HandActionType.ALL_IN ||
                     HandActionType == Actions.HandActionType.CALL ||
                     HandActionType == Actions.HandActionType.RAISE;
+            }
+        }
+
+        public bool IsDead
+        {
+            get
+            {
+                return HandActionType == Actions.HandActionType.POSTS_DEAD;
             }
         }
     }
