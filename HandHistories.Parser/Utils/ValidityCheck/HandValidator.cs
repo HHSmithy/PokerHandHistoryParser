@@ -90,9 +90,16 @@ namespace HandHistories.Parser.Utils
             else
             {
                 reason = string.Format("Total Pot not correct: {0} actions: {1}", hand.TotalPot, expectedPot);
+                return false;
             }
 
-            return PotValid;
+            if (hand.Rake < 0)
+            {
+                reason = "Rake can not be smaller then zero: " + hand.Rake;
+                return false;
+            }
+
+            return true;
         }
     }
 }
