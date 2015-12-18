@@ -31,7 +31,7 @@ namespace HandHistories.Objects.Hand
         public string FullHandHistoryText { get; set; }
 
         /// <summary>
-        /// The sum of all bets and blinds excluding uncalled bets
+        /// The sum of all bets and blinds excluding uncalled bets and winnings
         /// </summary>
         public decimal? TotalPot { get; set; }
 
