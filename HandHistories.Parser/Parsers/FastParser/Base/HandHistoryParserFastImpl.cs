@@ -12,6 +12,7 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Pot;
 using HandHistories.Parser.Utils.Uncalled;
 using HandHistories.Parser.Utils.RaiseAdjuster;
+using HandHistories.Parser.Utils.AllInAction;
 
 namespace HandHistories.Parser.Parsers.FastParser.Base
 {
@@ -210,7 +211,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
                 if (RequiresAllInDetection)
                 {
-                    handHistory.HandActions = IdentifyAllInActions(handLines, handHistory.HandActions);
+                    handHistory.HandActions = AllInActionHelper.IdentifyAllInActions(handHistory.Players, handHistory.HandActions);
                 }
                 if (RequiresTotalPotCalculation)
                 {
@@ -503,7 +504,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
                 if (RequiresAllInDetection)
                 {
-                    handActions = IdentifyAllInActions(handLines, handActions);
+                    var playerList = ParsePlayers(handLines);
+
+                    handActions = AllInActionHelper.IdentifyAllInActions(playerList, handActions);
                 }
 
                 return handActions;
@@ -516,56 +519,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         // We pass the game-type in as it can change the actions and parsing logic
         protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown);
-
-        /// <summary>
-        /// Some sites (like IPoker) don't specifically identify All-In calls/raises. In these cases we need to parse the actions 
-        /// and reclassify certain actions as all-in
-        /// </summary>
-        protected List<HandAction> IdentifyAllInActions(string[] handLines, List<HandAction> handActions)
-        {
-            PlayerList playerList = ParsePlayers(handLines);
-
-            Dictionary<string, decimal> playerStackRemaining = new Dictionary<string, decimal>();
-
-            foreach (Player player in playerList)
-            {
-                playerStackRemaining.Add(player.PlayerName, player.StartingStack);
-            }
-
-            List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
-
-            foreach (HandAction action in handActions)
-            {
-                //Negative amounts represent putting money into the pot - ignore actions which aren't negative
-                if (action.Amount >= 0)
-                {
-                    identifiedActions.Add(action);
-                    continue;
-                }
-
-                //Skip actions which have already been identified
-                if (action.IsAllIn)
-                {
-                    identifiedActions.Add(action);       
-                    continue;
-                }
-
-                //Update the remaining stack with our action's amount
-                playerStackRemaining[action.PlayerName] += action.Amount;
-
-                if (playerStackRemaining[action.PlayerName] == 0)
-                {
-                    HandAction allInAction = new HandAction(action.PlayerName, action.HandActionType, action.Amount, action.Street, true);
-                    identifiedActions.Add(allInAction);
-                }
-                else
-                {
-                    identifiedActions.Add(action);       
-                }
-            }
-
-            return identifiedActions;
-        }
 
         /// <summary>
         /// Sometimes hand actions are listed out of order, but with an order number or timestamp (this happens on IPoker).
