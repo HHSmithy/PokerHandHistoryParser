@@ -23,6 +23,11 @@ namespace HandHistories.Objects.Actions
         [DataMember]
         public decimal Amount { get; private set; }
 
+        /// <summary>
+        /// Math.Abs(Amount)
+        /// </summary>
+        public decimal Absolute { get { return Math.Abs(Amount); } }
+
         [DataMember]
         public Street Street { get; private set; }
 
