@@ -11,6 +11,8 @@ namespace HandHistories.Parser.Utils
 {
     public static class HandIntegrity
     {
+        public static decimal MaxRakePercentage = 0.1m;
+
         public static bool Check(HandHistory hand, out string reason)
         {
             reason = null;
@@ -33,7 +35,6 @@ namespace HandHistories.Parser.Utils
                     break;
                 }
 			}
-
 
             Street currentStreet = Street.Preflop;
             for (int i = blindEndIndex; i < list.Count; i++)
@@ -96,6 +97,13 @@ namespace HandHistories.Parser.Utils
             if (hand.Rake < 0)
             {
                 reason = "Rake can not be smaller then zero: " + hand.Rake;
+                return false;
+            }
+            else if (hand.Rake > MaxRakePercentage * hand.TotalPot)
+            {
+                reason = string.Format("Rake is more than {0}%: {1}", 
+                    MaxRakePercentage * 100, 
+                    hand.Rake);
                 return false;
             }
 
