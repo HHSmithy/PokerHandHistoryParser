@@ -2,6 +2,7 @@
 {
     public enum HandActionType
     {
+        UNKNOWN = 0,
         FOLD,
         CALL,
         CHECK,
@@ -47,6 +48,5 @@
         GAME_CANCELLED,
         RABBIT,
         JACKPOTCONTRIBUTION,
-        UNKNOWN
     }
 }
