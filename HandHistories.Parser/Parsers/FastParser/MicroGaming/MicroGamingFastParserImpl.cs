@@ -322,15 +322,15 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         public override bool IsValidHand(string[] handLines)
         {
-
+            string line0 = handLines[0];
             //Check 1 - hand history version is 4
-            if (handLines[0].Contains("hhversion=\"4\"") == false)
+            if (!line0.Contains("hhversion=\"4\"") && !line0.Contains("hhversion=\"5\""))
             {
                 return false;
             }
 
             //Check 2 - Do we have a Game Tag
-            if (handLines[0].StartsWith("<Game") == false)
+            if (line0.StartsWith("<Game") == false)
             {
                 return false;
             }
