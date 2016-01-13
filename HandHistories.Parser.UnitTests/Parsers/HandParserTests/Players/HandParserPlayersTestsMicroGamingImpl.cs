@@ -128,7 +128,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 {
                     HoleCards = HoleCards.FromCards("Qd8hAh6c")
                 },
-                new Player("Player4", 426.00m, 4),
+                new Player("Player6", 426.00m, 6)
+                {
+                    IsSittingOut = true
+                },
             });
 
             TestParsePlayers("Hero", expected);

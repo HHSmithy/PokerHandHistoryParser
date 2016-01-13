@@ -3,7 +3,7 @@
       <Seat num="1" alias="Player1" unicodealias="UgBvAHQAdABpAGUARABpAHYAYQA=" balance="128.80" endbalance="116.80"/>
       <Seat num="2" alias="Player2" unicodealias="RAAwAHIAaQBzAA==" balance="532.00" endbalance="589.00"/>
       <Seat num="3" alias="Hero" unicodealias="SgBlAG4AaQBmAGYAZQByADEAMgAzAA==" balance="266.40" endbalance="218.40" dealer="true"/>
-      <Seat num="6" alias="Player4" unicodealias="SwByAGEAbQBSAG8AbAB5AGEAdAA=" balance="426.00" endbalance="426.00" sittingout="true"/>
+      <Seat num="6" alias="Player6" unicodealias="SwByAGEAbQBSAG8AbAB5AGEAdAA=" balance="426.00" endbalance="426.00" sittingout="true"/>
    </Seats>
    <Gameplay>
       <Action seq="1" type="SmallBlind" seat="1" value="2.00"/>

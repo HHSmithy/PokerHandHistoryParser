@@ -635,7 +635,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             for (int i = 0; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line.EndsWith(heroDealtToEnd, StringComparison.Ordinal))
+                if (line.EndsWith(heroDealtToEnd, StringComparison.Ordinal) && line.Contains("type=\"DealCards\""))
                 {
                     return i;
                 }
