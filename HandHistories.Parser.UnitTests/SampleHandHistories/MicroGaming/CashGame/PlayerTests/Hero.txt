@@ -1,4 +1,4 @@
-﻿<Game hhversion="5" id="987456879" date="2015-02-10 11:11:11" unicodetablename="SwBhAHQAcgB5AG4AIAAtACAArCA0ADAAMAAgAE0AYQB4AA==" tablename="Katryn - €400 Max" stakes="2|4" betlimit="PL" tabletype="Cash Game" unicodetabletype="QwBhAHMAaAAgAEcAYQBtAGUA" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="3" betamount="4800" istournament="0" totalplayers="4" tablesize="6" badbeat="false" currencyId="26" rake="300">
+﻿<Game hhversion="5" id="987456879" date="2011-02-10 11:11:11" unicodetablename="SwBhAHQAcgB5AG4AIAAtACAArCA0ADAAMAAgAE0AYQB4AA==" tablename="Katryn - €400 Max" stakes="2|4" betlimit="PL" tabletype="Cash Game" unicodetabletype="QwBhAHMAaAAgAEcAYQBtAGUA" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="3" betamount="4800" istournament="0" totalplayers="4" tablesize="6" badbeat="false" currencyId="26" rake="300">
    <Seats>
       <Seat num="1" alias="Player1" unicodealias="UgBvAHQAdABpAGUARABpAHYAYQA=" balance="128.80" endbalance="116.80"/>
       <Seat num="2" alias="Player2" unicodealias="RAAwAHIAaQBzAA==" balance="532.00" endbalance="589.00"/>

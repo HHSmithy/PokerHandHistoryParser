@@ -237,7 +237,17 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         private static List<string> GetCardLinesFromHandLines(string[] handLines)
         {
             var cardLines = new List<string>();
-            for (int i = 0; i < handLines.Count();i++)
+            int startIndex = 0;
+            for (int i = 0; i < handLines.Length; i++)
+            {
+                if (handLines[i].StartsWith("<A", StringComparison.OrdinalIgnoreCase))
+                {
+                    startIndex = i;
+                    break;
+                }
+            }
+
+            for (int i = startIndex; i < handLines.Count();i++)
             {
                 // there will never be more than 5 boardcards
                 if (cardLines.Count() == 5) break;
@@ -247,7 +257,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 var actionType = GetActionTypeFromActionLine(actionLine);
 
                 // we need to skip the lines where the players show or muck their cards
-                if (actionType.Equals(HandActionType.SHOW) || actionType.Equals(HandActionType.MUCKS))
+                if (actionType.Equals(HandActionType.SHOW) || actionType.Equals(HandActionType.MUCKS) || actionType.Equals(HandActionType.DEALT_HERO_CARDS))
                 {
                     do
                     {
@@ -567,6 +577,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 case "badbeatcontribution":
                     actionType = HandActionType.JACKPOTCONTRIBUTION;
                     break;
+                case "dealcards":
+                    actionType = HandActionType.DEALT_HERO_CARDS;
+                    break;
                 // at the moment we do not need to parse the following types
                 case "disconnect":
                 case "reconnect":
@@ -574,6 +587,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 case "dealturn":
                 case "dealriver":
                     break;
+
                 default:
                     actionType = HandActionType.UNKNOWN;
                     break;
