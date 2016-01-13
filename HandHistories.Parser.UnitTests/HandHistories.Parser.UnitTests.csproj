@@ -437,6 +437,7 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\PlayerTests\OmahaShowdown.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\PlayerTests\Hero.txt" />
     <Content Include="SampleHandHistories\MicroGaming\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

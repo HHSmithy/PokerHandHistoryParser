@@ -630,7 +630,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         private int GetHeroCardsFirstLineIndex(string[] handLines, int heroSeat, int startIndex)
         {
-            string heroDealtToEnd = "\"4\">";
+            string heroDealtToEnd = string.Concat("\"", heroSeat ,"\">");
 
             for (int i = 0; i < handLines.Length; i++)
             {

@@ -116,5 +116,22 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                            };
             }
         }
+
+        [Test]
+        public void ParsePlayers_Hero()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("Player1", 128.80m, 1),
+                new Player("Player2", 532.00m, 2),
+                new Player("Hero", 266.40m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("Qd8hAh6c")
+                },
+                new Player("Player4", 426.00m, 4),
+            });
+
+            TestParsePlayers("Hero", expected);
+        }
     }
 }
