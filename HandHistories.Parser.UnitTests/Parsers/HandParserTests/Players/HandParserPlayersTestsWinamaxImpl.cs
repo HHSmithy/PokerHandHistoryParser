@@ -81,5 +81,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             get { throw new NotImplementedException(); }
         }
+
+        [Test]
+        public void ParsePlayers_Hero()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("WM_Hero", 400m, 1)
+                {
+                    HoleCards = HoleCards.FromCards("4c5s")
+                },
+                new Player("Opponent1", 400m, 2),
+                new Player("Opponent2", 400m, 3),
+            });
+
+            TestParsePlayers("Hero", expected);
+        }
     }
 }

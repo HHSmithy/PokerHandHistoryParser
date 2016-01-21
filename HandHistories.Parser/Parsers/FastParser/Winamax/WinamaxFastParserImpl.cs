@@ -591,11 +591,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             // *** ANTE/BLINDS ***
 
             var playerList = new PlayerList();
-
+            int playerListEndLine = 0;
             for (int i = 2; i < handLines.Length; i++)
             {
                 // when the line starts with stars, we already have all players
-                if (handLines[i].StartsWith("***")) break;
+                if (handLines[i].StartsWith("***"))
+                {
+                    playerListEndLine = i;
+                    break;
+                }
 
                 int colonIndex = handLines[i].IndexOf(':');
                 int parenIndex = handLines[i].IndexOf('(');
@@ -605,6 +609,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 string amount = (handLines[i].Substring(parenIndex + 1, handLines[i].Length - parenIndex - 2));
 
                 playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
+            }
+
+            int heroCardsIndex = GetHeroCardsFirstLineIndex(handLines, playerListEndLine + 1);
+
+            if (heroCardsIndex != -1)
+            {
+                string line = handLines[heroCardsIndex];
+
+                string cards = GetCardStringFromLine(line);
+
+                const int nameStartIndex = 9;
+                int nameEndIndex = line.LastIndexOf('[') - 1;
+                string name = line.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
+
+                playerList[name].HoleCards = HoleCards.FromCards(cards);
             }
 
             int ShowDownLineIndex = GetShowDownLineIndex(handLines, 2 + playerList.Count, handLines.Length - 3);
@@ -651,6 +670,24 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             return playerList;
         }
 
+        private int GetHeroCardsFirstLineIndex(string[] handLines, int index)
+        {
+            for (int i = index; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line.EndsWith(" ***", StringComparison.Ordinal))
+                {
+                    return -1;
+                }
+
+                if (line[line.Length - 1] == ']' && line.StartsWith("Dealt to ", StringComparison.Ordinal))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         static HoleCards ParseHoleCards(string line)
         {
             int openSquareIndex = line.LastIndexOf('[') + 1;
@@ -689,7 +726,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             {
                 string handLine = handLines[i];
 
-                if(!handLine.StartsWith("Board: ["))
+                if(!handLine.StartsWith("Board: [", StringComparison.Ordinal))
                 {
                     continue;
                 }
@@ -801,6 +838,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 }
             }
             return null;
+        }
+
+        static string GetCardStringFromLine(string line)
+        {
+            int startIndex = line.LastIndexOf('[') + 1;
+            int endIndex = line.IndexOf(']', startIndex);
+
+            return line.Substring(startIndex, endIndex - startIndex);
         }
     }
 }

@@ -1,0 +1,16 @@
+﻿Winamax Poker - CashGame - HandId: #8765421-255-87965425854 - Holdem no limit (2€/4€) - 2013/04/19 11:22:01 UTC
+Table: 'Bamako 02' 3-max (real money) Seat #2 is the button
+Seat 1: WM_Hero (400€)
+Seat 2: Opponent1 (400€)
+Seat 3: Opponent2 (400€)
+*** ANTE/BLINDS ***
+Opponent1 posts small blind 2€
+WM_Hero posts big blind 4€
+Dealt to WM_Hero [4c 5s]
+*** PRE-FLOP *** 
+Opponent1 raises 4€ to 8€
+WM_Hero folds
+Opponent1 collected 12€ from pot
+*** SUMMARY ***
+Total pot 12€ | No rake
+Seat 2: Opponent1 (small blind) (button) won 12€

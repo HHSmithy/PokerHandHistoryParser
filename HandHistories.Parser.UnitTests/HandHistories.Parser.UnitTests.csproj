@@ -1362,6 +1362,9 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\MultipleHandsTests\10MultipleHands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\PlayerTests\Hero.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\PlayerTests\NoHoleCards.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
