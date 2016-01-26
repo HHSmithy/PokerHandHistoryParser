@@ -406,14 +406,15 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             char handActionType = Line[playerHandActionStartIndex];
             int playerNameStartIndex;
             string playerName;
+            int nameLength;
 
             switch (handActionType)
             {
                 //<ACTION TYPE="ACTION_ALLIN" PLAYER="SAMERRRR" VALUE="15972.51"></ACTION>
                 case 'A':
                     playerNameStartIndex = playerHandActionStartIndex + 15;
-                    playerName = GetActionPlayerName(Line, playerNameStartIndex);
-                    decimal amount = GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance);
+                    playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
+                    decimal amount = GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance);
                     HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
                     if (allInType == HandActionType.CALL)
                     {
@@ -425,11 +426,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 //<ACTION TYPE="ACTION_BET" PLAYER="ItalyToast" VALUE="600.00"></ACTION>
                 case 'B':
                     playerNameStartIndex = playerHandActionStartIndex + 13;
-                    playerName = GetActionPlayerName(Line, playerNameStartIndex);
+                    playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     return new HandAction(
                         playerName,
                         HandActionType.BET,
-                        GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance),
+                        GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance),
                         currentStreet
                         );
 
@@ -439,7 +440,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     if (Line[playerHandActionStartIndex + 1] == 'H')
                     {
                         playerNameStartIndex = playerHandActionStartIndex + 15;
-                        playerName = GetActionPlayerName(Line, playerNameStartIndex);
+                        playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                         return new HandAction(
                         playerName,
                         HandActionType.CHECK,
@@ -450,11 +451,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     else
                     {
                         playerNameStartIndex = playerHandActionStartIndex + 14;
-                        playerName = GetActionPlayerName(Line, playerNameStartIndex);
+                        playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                         return new HandAction(
                         playerName,
                         HandActionType.CALL,
-                        GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance),
+                        GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance),
                         currentStreet
                         );
                     }
@@ -462,7 +463,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 //<ACTION TYPE="ACTION_FOLD" PLAYER="Belanak"></ACTION>
                 case 'F':
                     playerNameStartIndex = playerHandActionStartIndex + 14;
-                    playerName = GetActionPlayerName(Line, playerNameStartIndex);
+                    playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     return new HandAction(
                         playerName,
                         HandActionType.FOLD,
@@ -473,11 +474,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 //<ACTION TYPE="ACTION_RAISE" PLAYER="ItalyToast" VALUE="400.00"></ACTION>
                 case 'R':
                     playerNameStartIndex = playerHandActionStartIndex + 15;
-                    playerName = GetActionPlayerName(Line, playerNameStartIndex);
+                    playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     return new HandAction(
                         playerName,
                         HandActionType.RAISE,
-                        GetActionAmount(Line, playerNameStartIndex + playerName.Length + fixedAmountDistance),
+                        GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance),
                         currentStreet
                         );
 
@@ -493,10 +494,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return decimal.Parse(amountString, provider);
         }
 
-        static string GetActionPlayerName(string Line, int startIndex)
+        static string GetActionPlayerName(string Line, int startIndex, out int length)
         {
             int endIndex = Line.IndexOf('\"', startIndex);
             string name = Line.Substring(startIndex, endIndex - startIndex);
+            length = name.Length;
             return System.Web.HttpUtility.HtmlDecode(name);
         }
 
