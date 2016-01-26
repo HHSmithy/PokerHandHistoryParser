@@ -11,7 +11,8 @@
     <RootNamespace>HandHistories.Parser.WindowsTestApp</RootNamespace>
     <AssemblyName>HandHistories.Parser.WindowsTestApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -65,7 +66,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,7 +85,7 @@
       <Name>HandHistories.Objects</Name>
     </ProjectReference>
     <ProjectReference Include="..\HandHistories.Parser\HandHistories.Parser.csproj">
-      <Project>{0F131DB6-4891-4A24-A529-87F4816B9923}</Project>
+      <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
       <Name>HandHistories.Parser</Name>
     </ProjectReference>
   </ItemGroup>
