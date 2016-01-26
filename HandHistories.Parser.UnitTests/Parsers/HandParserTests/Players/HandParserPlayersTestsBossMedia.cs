@@ -2,6 +2,7 @@
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 {
@@ -97,6 +98,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         protected override PlayerList ExpectedOmahaHiLoShowdownPlayers
         {
             get { throw new NotImplementedException(); }
+        }
+
+        [Test]
+        public void ParsePlayers_StrangePlayerName()
+        {
+            //<PLAYER NAME="Player1" SEAT="1" AMOUNT="400" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
+            //<PLAYER NAME="L&apos;POOL" SEAT="2" AMOUNT="60" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
+            //<PLAYER NAME="Player3" SEAT="3" AMOUNT="200" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
+            //<PLAYER NAME="Player4" SEAT="4" AMOUNT="470" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
+            //<PLAYER NAME="Player5" SEAT="5" AMOUNT="90" STATE="STATE_PLAYING" DEALER="Y"></PLAYER>
+
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("&&££ÖÖ", 400m, 1),
+                new Player("L'POOL", 60m, 2),
+                new Player("Player3", 200m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("JdJhKc7h")
+                },
+                new Player("Player4", 470m, 4),
+                new Player("Player5", 90m, 5),
+            });
+
+            TestParsePlayers("StrangePlayerNames", expected);
         }
     }
 }

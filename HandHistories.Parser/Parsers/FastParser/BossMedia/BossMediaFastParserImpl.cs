@@ -319,7 +319,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     //<RESULT WINTYPE="WINTYPE_HILO" PLAYER="ItalyToast" WIN="105.08" HAND="$(STR_BY_DEFAULT)" WINCARDS="" HANDEXT=" 8,7,5,2,A">
                     if (Line[1] == 'R')
                     {
-                        string playerName = GetXMLAttributeValue(Line, "PLAYER");
+                        string playerName = GetPlayerXMLAttributeValue(Line);
 
                         decimal amount = Decimal.Parse(GetXMLAttributeValue(Line, "WIN"), provider);
 
@@ -345,7 +345,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         static HandAction ParseAnte(string line)
         {
-            var playerName = GetXMLAttributeValue(line, "PLAYER");
+            var playerName = GetPlayerXMLAttributeValue(line);
 
             var amountStr = GetXMLAttributeValue(line, "VALUE");
 
@@ -496,7 +496,8 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         static string GetActionPlayerName(string Line, int startIndex)
         {
             int endIndex = Line.IndexOf('\"', startIndex);
-            return Line.Substring(startIndex, endIndex - startIndex);
+            string name = Line.Substring(startIndex, endIndex - startIndex);
+            return System.Web.HttpUtility.HtmlDecode(name);
         }
 
         private int getHandActionsStartIndex(string[] handLines)
@@ -530,6 +531,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 const int playerNameStartIndex = 14;
                 int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
                 string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
+                playerName = System.Web.HttpUtility.HtmlDecode(playerName);
 
                 if (playerName == "UNKNOWN")
                 {
@@ -560,7 +562,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     char actionTypeChar = Line[actionTypeCharIndex];
                     if (actionTypeChar == 'D')
                     {
-                        string playerName = GetXMLAttributeValue(Line, "PLAYER");
+                        string playerName = GetPlayerXMLAttributeValue(Line);
                         ParseDealtHand(handLines, i, plist[playerName]);
                     }
                 }
@@ -587,7 +589,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 {
                     const int playerNameStartIndex = 16;
                     int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
-                    string playerName = GetXMLAttributeValue(Line, "PLAYER");
+                    string playerName = GetPlayerXMLAttributeValue(Line);
                     Player player = plist[playerName];
 
                     if (!player.hasHoleCards)
@@ -757,6 +759,12 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return BossCardLookup[cardID];
         }
 
+        static string GetPlayerXMLAttributeValue(string Line)
+        {
+            var name = GetXMLAttributeValue(Line, "PLAYER");
+            return System.Web.HttpUtility.HtmlDecode(name);
+        }
+
         /// <summary>
         /// tries to find a XML attribute
         /// </summary>
@@ -809,7 +817,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 if (line[1] == 'C' && line[12] != 'b')
                 {
                     string HeroNameLine = handlines[i - 1];
-                    return GetXMLAttributeValue(HeroNameLine, "PLAYER");
+                    return GetPlayerXMLAttributeValue(HeroNameLine);
                 }
             }
             return null;

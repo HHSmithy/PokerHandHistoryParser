@@ -139,6 +139,9 @@
     <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\Ante.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\PlayerTests\StrangePlayerNames.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\BossMedia\MultiTableTournament\GameTypeTests\NoLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
