@@ -233,7 +233,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         public override bool IsValidHand(string[] handLines)
         {
-            return handLines[handLines.Length - 1].Contains(" collected ");
+            const string Collected = " collected ";
+            return handLines[handLines.Length - 1].Contains(Collected) || handLines[handLines.Length - 2].Contains(Collected);
         }
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
