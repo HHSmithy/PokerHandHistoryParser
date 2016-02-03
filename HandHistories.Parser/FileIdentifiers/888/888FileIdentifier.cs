@@ -35,6 +35,11 @@ namespace HandHistories.Parser.FileIdentifiers.Poker888
                 return false;
             }
 
+            if (filetext.Length < 220)
+            {
+                return false;
+            }
+
             foreach (var str in SiteStrings)
             {
                 int index = filetext.LastIndexOf(str, 200);
