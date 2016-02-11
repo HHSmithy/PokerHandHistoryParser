@@ -936,32 +936,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         static decimal ParseDecimal(string amountString)
         {
-            decimal amount;
-            while (!decimal.TryParse(amountString, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out amount))
-            {
-                CurrencyParsingErrors++;
-                LoopCurrency();
-                if (CurrencyParsingErrors > 3)
-                    throw new Exception("Unable to parse Amount " + amountString);
-            }
-            CurrencyParsingErrors = 0;
-            return amount;
-        }
+            string currencyRemoved = amountString.TrimStart('€', '$', '£');
 
-        static void LoopCurrency()
-        {
-            if (NumberFormatInfo.CurrencySymbol == "€")
-            {
-                NumberFormatInfo.CurrencySymbol = "£";
-            }
-            else if (NumberFormatInfo.CurrencySymbol == "£")
-            {
-                NumberFormatInfo.CurrencySymbol = "$";
-            }
-            else if (NumberFormatInfo.CurrencySymbol == "$")
-            {
-                NumberFormatInfo.CurrencySymbol = "€";
-            }
+            decimal amount = decimal.Parse(currencyRemoved, CultureInfo.InvariantCulture);
+
+            return amount;
         }
 
         protected override string ParseHeroName(string[] handlines)
