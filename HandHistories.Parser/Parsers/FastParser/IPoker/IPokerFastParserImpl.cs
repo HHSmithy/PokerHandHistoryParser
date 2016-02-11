@@ -20,16 +20,34 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        private readonly bool _isIpoker2;
-        private static int CurrencyParsingErrors;
-        [ThreadStatic]
-        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
+        private static readonly NumberFormatInfo NumberFormatInfo_EURO = new NumberFormatInfo
         {
             NegativeSign = "-",
             CurrencyDecimalSeparator = ".",
             CurrencyGroupSeparator = ",",
             CurrencySymbol = "€"
         };
+
+        private static readonly NumberFormatInfo NumberFormatInfo_USD = new NumberFormatInfo
+        {
+            NegativeSign = "-",
+            CurrencyDecimalSeparator = ".",
+            CurrencyGroupSeparator = ",",
+            CurrencySymbol = "€"
+        };
+
+        private static readonly NumberFormatInfo NumberFormatInfo_GBP = new NumberFormatInfo
+        {
+            NegativeSign = "-",
+            CurrencyDecimalSeparator = ".",
+            CurrencyGroupSeparator = ",",
+            CurrencySymbol = "£"
+        };
+
+        private readonly bool _isIpoker2;
+        private static int CurrencyParsingErrors;
+        [ThreadStatic]
+        private static readonly NumberFormatInfo NumberFormatInfo = NumberFormatInfo_EURO;
 
         public IPokerFastParserImpl(bool isIpoker2 = false)
         {
@@ -446,15 +464,15 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 case '$':
                     currency = Currency.USD;
-                    NumberFormatInfo.CurrencySymbol = "$";
+                    NumberFormatInfo.CurrencySymbol = NumberFormatInfo_USD;
                     break;
                 case '€':
                     currency = Currency.EURO;
-                    NumberFormatInfo.CurrencySymbol = "€";
+                    NumberFormatInfo = NumberFormatInfo_EURO;
                     break;
                 case '£':
                     currency = Currency.GBP;
-                    NumberFormatInfo.CurrencySymbol = "£";
+                    NumberFormatInfo = NumberFormatInfo_GBP;
                     break;
                 default:
                     string tagValue = GetCurrencyTagValue(handLines);
