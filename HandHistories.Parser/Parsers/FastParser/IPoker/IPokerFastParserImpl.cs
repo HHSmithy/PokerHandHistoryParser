@@ -22,6 +22,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private readonly bool _isIpoker2;
         private static int CurrencyParsingErrors;
+        [ThreadStatic]
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",
