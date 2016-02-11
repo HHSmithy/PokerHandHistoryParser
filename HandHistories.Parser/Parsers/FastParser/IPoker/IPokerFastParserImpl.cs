@@ -47,7 +47,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         private readonly bool _isIpoker2;
         private static int CurrencyParsingErrors;
         [ThreadStatic]
-        private static readonly NumberFormatInfo NumberFormatInfo = NumberFormatInfo_EURO;
+        private static NumberFormatInfo NumberFormatInfo = NumberFormatInfo_EURO;
 
         public IPokerFastParserImpl(bool isIpoker2 = false)
         {
@@ -464,7 +464,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 case '$':
                     currency = Currency.USD;
-                    NumberFormatInfo.CurrencySymbol = NumberFormatInfo_USD;
+                    NumberFormatInfo = NumberFormatInfo_USD;
                     break;
                 case '€':
                     currency = Currency.EURO;
@@ -480,15 +480,15 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     {
                         case "USD":
                             currency = Currency.USD;
-                            NumberFormatInfo.CurrencySymbol = "$";
+                            NumberFormatInfo = NumberFormatInfo_USD;
                             break;
                         case "GBP":
                             currency = Currency.GBP;
-                            NumberFormatInfo.CurrencySymbol = "£";
+                            NumberFormatInfo = NumberFormatInfo_GBP;
                             break;
                         case "EUR":
                             currency = Currency.EURO;
-                            NumberFormatInfo.CurrencySymbol = "€";
+                            NumberFormatInfo = NumberFormatInfo_EURO;
                             break;
                         default:
                             throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
