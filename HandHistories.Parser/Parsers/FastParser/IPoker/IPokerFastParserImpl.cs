@@ -556,12 +556,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             List<HandAction> actions = new List<HandAction>();
 
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
-            //The 2nd line after the </player> line is the beginning of the <round> rows
-
-            int offset =  23;
-
-            int startRow = offset + playerLines.Length + 2;
+            int startRow = GetRoundStart(handLines);// offset + playerLines.Length + 2;
 
             Street currentStreet = Street.Null;
             
@@ -605,6 +600,20 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             // we need to fix dead money postings at the end
             return FixDeadMoneyPosting(actions);
+        }
+
+        private int GetRoundStart(string[] handLines)
+        {
+            for (int i = 0; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                if (line[1] == 'r')
+                {
+                    return i;
+                }
+            }
+            throw new ArgumentOutOfRangeException("Round not Found");
         }
 
         private List<HandAction> FixDeadMoneyPosting(List<HandAction> actions)
