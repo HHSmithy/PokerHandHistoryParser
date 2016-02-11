@@ -13,6 +13,8 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Strings;
 using System.Runtime.CompilerServices;
+using HandHistories.Objects.Hand;
+using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
@@ -695,6 +697,35 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             }
 
             throw new CardException(string.Empty, "Read through hand backwards and didn't find a board or summary.");
+        }
+
+        protected override void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
+        {
+            if (handHistorySummary.Cancelled)
+            {
+                return;
+            }
+
+            for (int i = handLines.Length - 1; i > 0; i--)
+            {
+                string line = handLines[i];
+                if (line.StartsWith("Pot", StringComparison.Ordinal))
+                {
+                    //Pot: 80. Rake 2
+                    const int PotStartIndex = 5;
+                    int PotEndIndex = line.IndexOf('.', PotStartIndex);
+
+                    string TotalPotStr = line.Substring(PotStartIndex, PotEndIndex - PotStartIndex);
+
+                    handHistorySummary.TotalPot = decimal.Parse(TotalPotStr, CultureInfo.InvariantCulture);
+
+                    int RakeStartIndex = line.LastIndexOf(' ');
+                    string RakeStr = line.Substring(RakeStartIndex);
+
+                    handHistorySummary.Rake = decimal.Parse(RakeStr);
+                    break;
+                }
+            }
         }
 
         protected override string ParseHeroName(string[] handlines)
