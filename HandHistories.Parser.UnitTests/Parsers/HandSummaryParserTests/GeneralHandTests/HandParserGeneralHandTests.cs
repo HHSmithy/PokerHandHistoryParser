@@ -18,7 +18,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
     [TestFixture("FullTilt", 33728803548, "1/6/2014 10:11:48", 6, 4, 0.00, 0.10, "GeneralHand")]
     [TestFixture("MicroGaming", 5049092010, "9/23/2013 14:27:42",4,6, 0.00, 0.03, "GeneralHand")]
     [TestFixture("Winamax",5281577471, "10/24/2013 03:51:47",2,2, 0.98, 15.00, "GeneralHand")]
-    [TestFixture("WinningPoker", 261641541, "3/9/2014 16:53:43", 5, 6, null, null, "GeneralHand")]
+    [TestFixture("WinningPoker", 261641541, "3/9/2014 16:53:43", 5, 6, 0.41, 7.73, "GeneralHand")]
     [TestFixture("BossMedia", 2076693331L, "2/18/2014 0:15:38", 5, 5, 15.0, 10110.0, "GeneralHand")]
     class HandParserGeneralHandTests : HandHistoryParserBaseTests 
     {

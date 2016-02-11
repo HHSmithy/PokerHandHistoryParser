@@ -1,0 +1,42 @@
+﻿Game started at: 2014/3/25 21:47:0
+Game ID: 266919237 0.10/0.25 Cristalite (JP) - CAP - 6-Max - 2 (Hold'em)
+Seat 2 is the button
+Seat 1: gimpy777 (29.34).
+Seat 2: ac101921 (9.11).
+Seat 3: choptop (5).
+Seat 4: L6U11C2K1Y3 (0.24).
+Seat 5: ConverseX (25.76).
+Seat 6: iFlatNasty (5.40).
+Player choptop has small blind (0.10)
+Player L6U11C2K1Y3 allin (0.24)
+Player choptop received a card.
+Player choptop received a card.
+Player L6U11C2K1Y3 received a card.
+Player L6U11C2K1Y3 received a card.
+Player ConverseX received a card.
+Player ConverseX received a card.
+Player iFlatNasty received a card.
+Player iFlatNasty received a card.
+Player gimpy777 received a card.
+Player gimpy777 received a card.
+Player ac101921 received a card.
+Player ac101921 received a card.
+Player ConverseX folds
+Player iFlatNasty folds
+Player gimpy777 folds
+Player ac101921 folds
+Player choptop calls (0.15)
+Uncalled bet (0.01) returned to choptop
+*** FLOP ***: [7d 9d 9h]
+*** TURN ***: [7d 9d 9h] [7s]
+*** RIVER ***: [7d 9d 9h 7s] [10c]
+------ Summary ------
+Pot: 0.21. Rake 0.02
+Board: [7d 9d 9h 7s 10c]
+Player gimpy777 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player ac101921 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player choptop shows: Two pairs. 9s and 7s [2d 4h]. Bets: 0.24. Collects: 0. Loses: 0.24.
+*Player L6U11C2K1Y3 shows: Two pairs. 9s and 7s (kicker A) [Ks Ad]. Bets: 0.24. Collects: 0.21. Loses: 0.03.
+Player ConverseX does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player iFlatNasty does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2014/3/25 21:47:25

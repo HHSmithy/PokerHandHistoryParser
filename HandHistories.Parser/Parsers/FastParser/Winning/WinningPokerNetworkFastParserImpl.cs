@@ -175,7 +175,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = start; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line.IndexOf(" has big blind (") != -1)
+                if (line.EndsWith("received a card.", StringComparison.Ordinal))
                 {
                     return false;
                 }
@@ -713,7 +713,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     //Pot: 80. Rake 2
                     const int PotStartIndex = 5;
-                    int PotEndIndex = line.IndexOf('.', PotStartIndex);
+                    int PotEndIndex = line.IndexOf(' ', PotStartIndex) - 1;
 
                     string TotalPotStr = line.Substring(PotStartIndex, PotEndIndex - PotStartIndex);
 

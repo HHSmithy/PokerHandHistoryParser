@@ -11,7 +11,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
     {
         string GetCancelledHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName);
 
-        string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid);
+        string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid, int testNumber);
 
         string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType);
 

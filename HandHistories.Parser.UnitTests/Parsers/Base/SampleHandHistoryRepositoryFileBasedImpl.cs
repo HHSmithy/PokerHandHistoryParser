@@ -19,9 +19,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "ValidHandTests", "CancelledHand");
         }
 
-        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid)
+        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid) ? "ValidHand" : "InvalidHand");
+            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid ? "ValidHand" : "InvalidHand") + "_" + testNumber);
         }
 
         public string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType)

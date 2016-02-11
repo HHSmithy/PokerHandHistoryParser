@@ -364,10 +364,10 @@
     <Content Include="SampleHandHistories\FullTilt\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\FullTilt\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\FullTilt\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\FullTilt\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\FullTilt\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\ExtraHands\DataMinerHandIssue1.txt">
@@ -480,10 +480,10 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\OnGameIt\CashGame\Limits\EuroTable.txt">
@@ -645,10 +645,10 @@
     <Content Include="SampleHandHistories\Entraction\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\Entraction\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\GameTypeTests\FixedLimitHoldem.txt">
@@ -744,10 +744,10 @@
     <Content Include="SampleHandHistories\IPoker\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Merge\CashGame\GameTypeTests\FixedLimitHoldem.txt">
@@ -840,10 +840,10 @@
     <Content Include="SampleHandHistories\Merge\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\Merge\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\OnGame\CashGame\GameTypeTests\FixedLimitHoldem.txt">
@@ -939,10 +939,10 @@
     <Content Include="SampleHandHistories\OnGame\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\OnGame\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Pacific\CashGame\GameTypeTests\FixedLimitHoldem.txt">
@@ -1059,10 +1059,10 @@
     <Content Include="SampleHandHistories\Pacific\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\Pacific\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\CapNoLimitHoldem.txt">
@@ -1234,10 +1234,10 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\CancelledHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\PokerStars\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\HandActionTests\AllInHandWithShowdown.txt">
@@ -1315,10 +1315,10 @@
     <Content Include="SampleHandHistories\PartyPoker\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit1.txt">
@@ -1408,10 +1408,10 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Winamax\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\Winamax\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Winamax\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\Winamax\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\GameTypeTests\CapNoLimitHoldem.txt">
@@ -1528,10 +1528,16 @@
     <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\CancelledHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\InValidHand.txt">
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\InValidHand_2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\ValidHand.txt">
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\ValidHand_2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\InValidHand_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\WinningPoker\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

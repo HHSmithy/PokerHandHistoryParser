@@ -19,8 +19,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
     [TestFixture("MicroGaming")]
     [TestFixture("Winamax")]
     [TestFixture("WinningPoker")]
+    [TestFixture("WinningPoker", 2)]
     internal class HandParserValidHandTests : HandHistoryParserBaseTests
     {
+        int testNumber = 1;
+
+        public HandParserValidHandTests(string site, int testNumber)
+            : base(site)
+        {
+            this.testNumber = testNumber;
+        }
+
         public HandParserValidHandTests(string site)
             : base(site)
         {
@@ -31,7 +40,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [TestCase(false)]
         public void IsValidHand_Works(bool expected)
         {
-             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, expected);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, expected, testNumber);
 
             Assert.AreEqual(expected, GetSummmaryParser().IsValidHand(handText), "IHandHistorySummaryParser: IsValidHand");
             Assert.AreEqual(expected, GetParser().IsValidHand(handText), "IHandHistoryParser: IsValidHand");
@@ -40,7 +49,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [Test]
         public void SummaryParser_InvalidHand_RethrowFalse_ReturnsNull()
         {
-            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false, testNumber);
 
             Assert.IsNull(GetSummmaryParser().ParseFullHandSummary(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
@@ -48,7 +57,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [Test]
         public void FullParser_InvalidHand_RethrowFalse_ReturnsNull()
         {
-            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false, testNumber);
 
             Assert.IsNull(GetParser().ParseFullHandHistory(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
@@ -56,7 +65,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [Test]
         public void SummaryParser_InvalidHand_RethrowTrue_ThrowsException()
         {
-            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false, testNumber);
 
             Assert.Throws<InvalidHandException>(() => GetSummmaryParser().ParseFullHandSummary(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
@@ -64,7 +73,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [Test]
         public void FullParser_InvalidHand_RethrowTrue_ThrowsException()
         {
-            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false, testNumber);
 
             Assert.Throws<InvalidHandException>(() => GetParser().ParseFullHandHistory(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
@@ -117,7 +126,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         [Test]
         public void IsValidHand_Unique()
         {
-            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, true);
+            string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, true, testNumber);
 
             var handParser = GetParser();
             Assert.AreEqual(true, handParser.IsValidHand(handText), "IHandHistoryParser: IsValidHand");
