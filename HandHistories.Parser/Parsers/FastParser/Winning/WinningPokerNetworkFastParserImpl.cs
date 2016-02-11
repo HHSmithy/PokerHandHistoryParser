@@ -722,7 +722,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     int RakeStartIndex = line.LastIndexOf(' ');
                     string RakeStr = line.Substring(RakeStartIndex);
 
-                    handHistorySummary.Rake = decimal.Parse(RakeStr);
+                    handHistorySummary.Rake = decimal.Parse(RakeStr, CultureInfo.InvariantCulture);
                     break;
                 }
             }
