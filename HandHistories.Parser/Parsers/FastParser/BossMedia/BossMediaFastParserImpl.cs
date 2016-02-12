@@ -16,6 +16,7 @@ using System.Globalization;
 using HandHistories.Parser.Utils.AllInAction;
 using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Parser.Utils.Extensions;
+using System.Net;
 
 namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 {
@@ -499,7 +500,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             int endIndex = Line.IndexOf('\"', startIndex);
             string name = Line.Substring(startIndex, endIndex - startIndex);
             length = name.Length;
-            return System.Web.HttpUtility.HtmlDecode(name);
+            return WebUtility.HtmlDecode(name);
         }
 
         private int getHandActionsStartIndex(string[] handLines)
@@ -533,7 +534,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 const int playerNameStartIndex = 14;
                 int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
                 string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
-                playerName = System.Web.HttpUtility.HtmlDecode(playerName);
+                playerName = WebUtility.HtmlDecode(playerName);
 
                 if (playerName == "UNKNOWN")
                 {
@@ -764,7 +765,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         static string GetPlayerXMLAttributeValue(string Line)
         {
             var name = GetXMLAttributeValue(Line, "PLAYER");
-            return System.Web.HttpUtility.HtmlDecode(name);
+            return WebUtility.HtmlDecode(name);
         }
 
         /// <summary>
