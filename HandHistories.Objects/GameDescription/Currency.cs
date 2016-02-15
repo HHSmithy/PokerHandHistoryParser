@@ -19,6 +19,10 @@ namespace HandHistories.Objects.GameDescription
         /// IPoker: iPoints
         /// </summary>
         [EnumMember] RAKE_POINTS = 5,
+        /// <summary>
+        /// Used for Satelite tournament
+        /// </summary>
+        [EnumMember] SATELLITE = 6,
         [EnumMember] All = 7
     }
 }

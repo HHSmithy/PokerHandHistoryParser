@@ -265,5 +265,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             Assert.AreEqual(expectedActions, actualHand.HandActions);
         }
+
+        [Test]
+        public void PlayerDisconnected()
+        {
+            var handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, "Disconnect");
+            HandHistorySummary hand = GetSummmaryParser().ParseFullHandSummary(handText, true);
+
+            Assert.IsFalse(hand.Cancelled);
+        }
     }
 }

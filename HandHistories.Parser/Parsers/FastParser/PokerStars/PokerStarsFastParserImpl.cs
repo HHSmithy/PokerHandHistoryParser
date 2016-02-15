@@ -458,6 +458,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             {
                 currency = Currency.RAKE_POINTS;
             }
+            else if (buyinSubstring.Contains("Freeroll"))
+            {
+                currency = Currency.SATELLITE;
+            }
             else
             {
                 currency = ParseCurrency(handLines[0], buyinSubstring[0]);
@@ -566,7 +570,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     for (int k = i-1; k >= 2; k--)
                     {
                         var cancelledLine = handLines[k];
-                        bool cancelled = (cancelledLine[0] == 'H' && cancelledLine[cancelledLine.Length - 1] == 'd' && cancelledLine[cancelledLine.Length - 2] == 'e');
+                        bool cancelled = cancelledLine.EndsWith("Hand cancelled", StringComparison.Ordinal);
 
                         if (cancelled)
                         {

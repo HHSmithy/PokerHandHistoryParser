@@ -16,7 +16,7 @@ namespace HandHistories.Parser.Utils
 
             while (lineStartIndex != -1)
             {
-                lineEndIndex = FindXMLTagEnd(handText, lineStartIndex + 2);
+                lineEndIndex = FindXMLTagEnd(handText, lineStartIndex + 1);
 
                 string line = handText.Substring(lineStartIndex, lineEndIndex - lineStartIndex);
                 lines.Add(line);
@@ -39,7 +39,7 @@ namespace HandHistories.Parser.Utils
                 return text.IndexOf('>', startIndex + 2) + 1;
             }
 
-            int end = text.IndexOfAny(new char[] { '/', '<' }, startIndex + 1);
+            int end = text.IndexOfAny(new char[] { '/', '<' }, startIndex);
 
             if (end == -1)
             {
@@ -50,7 +50,11 @@ namespace HandHistories.Parser.Utils
             char c2 = text[end + 1];
             if (c == '/' && c2 == '>')
             {
-                return end + 1;
+                return end + 2;
+            }
+            else if (c == '/')
+            {
+                return -1;
             }
             else if (c == '<' && c2 == '/')
             {

@@ -1083,6 +1083,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\PotLimitOmahaHiLo.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\Disconnect.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
