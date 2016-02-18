@@ -9,7 +9,7 @@ namespace HandHistories.Parser.Utils
     {
         internal static string[] Split(string handText)
         {
-            int lineStartIndex = 0;
+            int lineStartIndex = handText.IndexOf('<');
             int lineEndIndex = 0;
 
             List<string> lines = new List<string>();
@@ -54,7 +54,7 @@ namespace HandHistories.Parser.Utils
             }
             else if (c == '/')
             {
-                return -1;
+                return text.IndexOf('>', end) + 1;
             }
             else if (c == '<' && c2 == '/')
             {
