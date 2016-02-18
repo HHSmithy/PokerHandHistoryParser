@@ -549,7 +549,10 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 int stackEndIndex = Line.IndexOf('\"', stackStartIndex);
                 decimal stack = decimal.Parse(Line.Substring(stackStartIndex, stackEndIndex - stackStartIndex), provider);
 
-                plist.Add(new Player(playerName, stack, seatNumber));
+                plist.Add(new Player(playerName, stack, seatNumber)
+                    {
+                        IsSittingOut = Line.Contains("STATE=\"STATE_SITOUT\"")
+                    });
             }
 
             //Parsing dealt cards
