@@ -639,6 +639,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             {
                 case "STATE_RESERVED":
                 case "STATE_SITOUT":
+                case "STATE_EMPTY":
                     return true;
                 default:
                     return false;

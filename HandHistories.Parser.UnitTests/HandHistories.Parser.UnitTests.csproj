@@ -1345,6 +1345,9 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\GeneralHands\NoRake.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

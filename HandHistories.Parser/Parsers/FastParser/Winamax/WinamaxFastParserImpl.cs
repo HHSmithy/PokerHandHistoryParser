@@ -803,14 +803,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                     int spaceAfterFirstNumber = totalLine.IndexOf(' ', 11);
 
                     string rake = totalLine.Substring(lastSpaceIndex + 1, totalLine.Length - lastSpaceIndex - 1);
-                    try
+
+                    if (totalLine.EndsWith("No rake"))
+                    {
+                        handHistorySummary.Rake = 0;
+                    }
+                    else
                     {
                         handHistorySummary.Rake = decimal.Parse(rake, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
-                    }
-                    catch (Exception)
-                    {
-                        // we can't parse "rake" in No rake -> 0.00m rake paid
-                        handHistorySummary.Rake = 0.0m;
                     }
                     
                     string totalPot = totalLine.Substring(10, spaceAfterFirstNumber - 10);

@@ -1,0 +1,19 @@
+﻿Winamax Poker - CashGame - HandId: #8270134-804-1382586707 - Omaha pot limit (1.00€/2.00€) - 2015/12/15 04:29:17 UTC
+Table: 'Port Elizabeth' 5-max (real money) Seat #0 is the button
+Seat 0: mrotsim (865.05€)
+Seat 1: BENJJJ111 (200€)
+Seat 2: kebab79 (266€)
+Seat 3: loveutou (242.46€)
+Seat 4: 1FlipMore (363.51€)
+*** ANTE/BLINDS ***
+kebab79 posts big blind 2.00€
+BENJJJ111 posts small blind 1.00€
+*** PRE-FLOP *** 
+loveutou folds
+1FlipMore folds
+mrotsim folds
+BENJJJ111 folds
+kebab79 collected 3€ from pot
+*** SUMMARY ***
+Total pot 3.00€ | No rake
+Seat 2: kebab79 (big blind) won 3€
