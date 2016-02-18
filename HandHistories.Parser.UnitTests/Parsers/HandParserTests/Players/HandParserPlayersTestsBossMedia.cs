@@ -122,6 +122,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             var expected = new PlayerList(new List<Player>()
             {
+                new Player("Player1", 0m, 1)
+                {
+                    IsSittingOut = true,
+                },
                 new Player("HERO", 175.44m, 2)
                 {
                     HoleCards = HoleCards.FromCards("7c2dKd4s")

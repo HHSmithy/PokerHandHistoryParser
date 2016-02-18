@@ -536,7 +536,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
                 playerName = WebUtility.HtmlDecode(playerName);
 
-                if (playerName == "UNKNOWN" || string.IsNullOrEmpty(playerName))
+                if (playerName == "UNKNOWN" || playerName == "")
                 {
                     continue;
                 }
@@ -549,9 +549,13 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 int stackEndIndex = Line.IndexOf('\"', stackStartIndex);
                 decimal stack = decimal.Parse(Line.Substring(stackStartIndex, stackEndIndex - stackStartIndex), provider);
 
+                var state = GetXMLAttributeValue(Line, "STATE");
+
+                bool sitout = IsSitOutState(state);
+
                 plist.Add(new Player(playerName, stack, seatNumber)
                     {
-                        IsSittingOut = Line.Contains("STATE=\"STATE_SITOUT\"")
+                        IsSittingOut = sitout
                     });
             }
 
@@ -627,6 +631,18 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 }
             }
             return plist;
+        }
+
+        private bool IsSitOutState(string state)
+        {
+            switch (state)
+            {
+                case "STATE_RESERVED":
+                case "STATE_SITOUT":
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         static void ParseDealtHand(string[] handLines, int currentLine, Player player)
