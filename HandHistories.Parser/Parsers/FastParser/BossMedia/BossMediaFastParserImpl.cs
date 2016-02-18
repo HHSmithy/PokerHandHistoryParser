@@ -536,7 +536,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
                 playerName = WebUtility.HtmlDecode(playerName);
 
-                if (playerName == "UNKNOWN")
+                if (playerName == "UNKNOWN" || string.IsNullOrEmpty(playerName))
                 {
                     continue;
                 }

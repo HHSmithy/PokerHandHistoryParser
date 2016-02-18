@@ -118,14 +118,27 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
+        public void ParsePlayers_STATE_RESERVED()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("HERO", 175.44m, 2)
+                {
+                    HoleCards = HoleCards.FromCards("7c2dKd4s")
+                },
+                new Player("Player4", 466.18m, 4)
+                {
+                    IsSittingOut = true,
+                },
+                new Player("Player5", 202.34m, 5),
+            });
+
+            TestParsePlayers("STATE_RESERVED", expected);
+        }
+
+        [Test]
         public void ParsePlayers_StrangePlayerName()
         {
-            //<PLAYER NAME="Player1" SEAT="1" AMOUNT="400" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
-            //<PLAYER NAME="L&apos;POOL" SEAT="2" AMOUNT="60" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
-            //<PLAYER NAME="Player3" SEAT="3" AMOUNT="200" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
-            //<PLAYER NAME="Player4" SEAT="4" AMOUNT="470" STATE="STATE_PLAYING" DEALER="N"></PLAYER>
-            //<PLAYER NAME="Player5" SEAT="5" AMOUNT="90" STATE="STATE_PLAYING" DEALER="Y"></PLAYER>
-
             var expected = new PlayerList(new List<Player>()
             {
                 new Player("&&££ÖÖ", 400m, 1),
