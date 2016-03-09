@@ -57,6 +57,30 @@ namespace HandHistories.Objects.Players
             return obj.ToString().Equals(ToString());
         }
 
+        public static bool operator ==(Player p1, Player p2)
+        {
+            if (ReferenceEquals(p1, null))
+            {
+                return ReferenceEquals(p1, p2);
+            }
+            else
+            {
+                return p1.Equals(p2);
+            }
+        }
+
+        public static bool operator !=(Player p1, Player p2)
+        {
+            if (ReferenceEquals(p1, null))
+            {
+                return !ReferenceEquals(p1, p2);
+            }
+            else
+            {
+                return !p1.Equals(p2);
+            }
+        }
+
         public override string ToString()
         {
             string s = string.Format("Seat {0}: {1} [{2}] with '{3}'", SeatNumber, PlayerName, StartingStack.ToString("N2"), (hasHoleCards ? HoleCards.ToString() : ""));

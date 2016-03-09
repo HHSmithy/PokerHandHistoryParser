@@ -28,7 +28,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             get { return false; }
         }
-               
+
         public virtual bool RequiresActionSorting
         {
             get { return false; }
@@ -53,7 +53,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             get { return false; }
         }
-     
+
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return HandSplitRegex.Split(rawHandHistories)
@@ -69,13 +69,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             }
         }
 
-        protected virtual string [] SplitHandsLines(string handText)
+        protected virtual string[] SplitHandsLines(string handText)
         {
-            string[] text = handText.Split(new [] { '\n' , '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] text = handText.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < text.Length; i++)
-			{
+            {
                 text[i] = text[i].Trim();
-			}
+            }
             return text;
         }
 
@@ -89,7 +89,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 if (IsValidOrCancelledHand(lines, out isCancelled) == false)
                 {
                     throw new InvalidHandException(handText ?? "NULL");
-                }                
+                }
 
                 return ParseFullHandSummary(lines, isCancelled);
             }
@@ -100,9 +100,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw;
                 }
 
-                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message,ex.StackTrace);
+                logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message, ex.StackTrace);
                 return null;
-            }     
+            }
         }
 
         protected HandHistorySummary ParseFullHandSummary(string[] handLines, bool isCancelled = false)
@@ -119,14 +119,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             handHistorySummary.FullHandHistoryText = string.Join("\r\n", handLines);
 
             try
-            {                
+            {
                 ParseExtraHandInformation(handLines, handHistorySummary);
             }
             catch
             {
                 throw new ExtraHandParsingAction(handLines[0]);
-            }            
-            
+            }
+
             return handHistorySummary;
         }
 
@@ -141,7 +141,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
             try
             {
-               handLines = SplitHandsLines(handText);
+                handLines = SplitHandsLines(handText);
             }
             catch (Exception ex)
             {
@@ -152,7 +152,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", handText, ex.Message, ex.StackTrace);
                 return null;
-            }    
+            }
 
             return ParseFullHandHistory(handLines, rethrowExceptions);
         }
@@ -164,7 +164,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 bool isCancelled;
                 if (IsValidOrCancelledHand(handLines, out isCancelled) == false)
                 {
-                    throw new InvalidHandException(string.Join("\r\n", handLines));                    
+                    throw new InvalidHandException(string.Join("\r\n", handLines));
                 }
 
                 //Set members outside of the constructor for easier performance analysis
@@ -207,7 +207,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
                 if (RequiresAdjustedRaiseSizes)
                 {
-                   handHistory.HandActions = RaiseAdjuster.AdjustRaiseSizes(handHistory.HandActions);                   
+                    handHistory.HandActions = RaiseAdjuster.AdjustRaiseSizes(handHistory.HandActions);
                 }
                 if (RequiresAllInDetection)
                 {
@@ -239,7 +239,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     throw new ExtraHandParsingAction(handLines[0]);
                 }
-             
+
+                SetActionNumbers(handHistory);
+
                 return handHistory;
             }
             catch (Exception ex)
@@ -251,7 +253,16 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 logger.Warn("Couldn't parse hand {0} with error {1} and trace {2}", string.Join("\r\n", handLines), ex.Message, ex.StackTrace);
                 return null;
-            }        
+            }
+        }
+
+        private static void SetActionNumbers(HandHistory handHistory)
+        {
+            for (int i = 0; i < handHistory.HandActions.Count; i++)
+            {
+                var action = handHistory.HandActions[i];
+                action.ActionNumber = i;
+            }
         }
 
         protected abstract string ParseHeroName(string[] handlines);
@@ -270,7 +281,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new PlayersException(handText, "ParseDealerPosition: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            }  
+            }
         }
 
         protected abstract int ParseDealerPosition(string[] handLines);
@@ -284,7 +295,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new ParseHandDateException(handText, "ParseDateUtc: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            }            
+            }
         }
 
         protected abstract DateTime ParseDateUtc(string[] handLines);
@@ -298,7 +309,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new HandIdException(handText, "ParseHandId: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract long ParseHandId(string[] handLines);
@@ -326,7 +337,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new TableNameException(handText, "ParseTableName: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract string ParseTableName(string[] handLines);
@@ -360,7 +371,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                                        ParseLimit(handLines),
                                        ParseBuyin(handLines),
                                        ParseTableType(handLines),
-                                       ParseSeatType(handLines)); 
+                                       ParseSeatType(handLines));
 
                 case PokerFormat.MultiTableTournament:
                     return new GameDescriptor(format,
@@ -385,7 +396,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new PokerFormatException(handText, "ParsePokerFormat: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract PokerFormat ParsePokerFormat(string[] handLines);
@@ -399,10 +410,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new SeatTypeException(handText, "ParseSeatType: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
-        protected abstract SeatType ParseSeatType(string [] handLines);
+        protected abstract SeatType ParseSeatType(string[] handLines);
 
         public GameType ParseGameType(string handText)
         {
@@ -413,7 +424,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new UnrecognizedGameTypeException(handText, "ParseGameType: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract GameType ParseGameType(string[] handLines);
@@ -427,7 +438,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new TableTypeException(handText, "ParseTableType: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract TableType ParseTableType(string[] handLines);
@@ -441,7 +452,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new LimitException(handText, "ParseLimit: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract Limit ParseLimit(string[] handLines);
@@ -469,7 +480,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new PlayersException(handText, "ParseNumPlayers: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         public bool IsValidHand(string handText)
@@ -490,7 +501,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             try
             {
-                string [] handLines = SplitHandsLines(handText);
+                string[] handLines = SplitHandsLines(handText);
                 GameType gameType = ParseGameType(handLines);
                 List<HandAction> handActions = ParseHandActions(handLines, gameType);
 
@@ -528,7 +539,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             return handActions.OrderBy(action => action.ActionNumber).ToList();
         }
-      
+
         public PlayerList ParsePlayers(string handText)
         {
             try
@@ -538,7 +549,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new PlayersException(handText, "ParsePlayers: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract PlayerList ParsePlayers(string[] handLines);
@@ -552,7 +563,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             catch (Exception ex)
             {
                 throw new CardException(handText, "ParseCommunityCards: Error:" + ex.Message + " Stack:" + ex.StackTrace);
-            } 
+            }
         }
 
         protected abstract BoardCards ParseCommunityCards(string[] handLines);

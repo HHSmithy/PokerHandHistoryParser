@@ -1,0 +1,38 @@
+﻿***** History for hand R5-526040000-10 *****
+Start hand: Sat Feb 10 22:00:00 CET 2015
+Table: Cheyenne [526040000] (POT_LIMIT OMAHA_HI €5/€10, Real money)
+User: HERO
+Button: seat 1
+Players in round: 4 (6)
+Seat 1: Player1 (€647.25)
+Seat 4: Player2 (€338.50)
+Seat 5: Player3 (€395)
+Seat 6: HERO (€425)
+Player2 posts small blind (€5)
+Player3 posts big blind (€10)
+---
+Dealing pocket cards
+Dealing to HERO: [7h, 8s, Ah, 9s]
+HERO raises €35 to €35
+Player1 folds
+Player2 calls €30
+Player3 folds
+--- Dealing flop [Ts, 6c, Qd]
+Player2 checks
+HERO checks
+--- Dealing turn [Ac]
+Player2 checks
+HERO bets €60
+Player2 calls €60
+--- Dealing river [2d]
+Player2 checks
+HERO checks
+---
+Summary:
+Main pot: €200 won by HERO (€195)
+Rake taken: €5
+Seat 1: Player1 (€647.25)
+Seat 4: Player2 (€243.50), net: -€95, [Qc, 4c, 8h, 9h] (PAIR QUEEN)
+Seat 5: Player3 (€385), net: -€10
+Seat 6: HERO (€525), net: +€100, [7h, 8s, Ah, 9s] (PAIR ACE)
+***** End of hand R5-526045761-10 *****

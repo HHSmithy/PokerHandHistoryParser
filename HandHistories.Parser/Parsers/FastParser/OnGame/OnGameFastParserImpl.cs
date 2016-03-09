@@ -27,6 +27,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             get { return true; }
         }
 
+        static readonly char[] CurrencyChars = new char[] { '€', '$' };
+
         private readonly NumberFormatInfo _numberFormatInfo;
         private readonly Currency _currency;
         // So the same parser can be used for It and Fr variations
@@ -306,17 +308,34 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
         {
             // Line 3 is:
             //  Table: San Marcos [244090560] (POT_LIMIT OMAHA_HI $0.25/$0.25, Real money)
+            var line = handLines[2];
 
-            int currencyIndex = handLines[2].IndexOf(_numberFormatInfo.CurrencySymbol, StringComparison.Ordinal);
+            int slashIndex = line.LastIndexOf('/');
+            int commaIndex = line.IndexOf(',', slashIndex + 1);
+            int currencyIndex = line.LastIndexOf(' ', slashIndex) + 1;
+            var sbstring = line.Substring(currencyIndex, slashIndex - currencyIndex);
+            var bbstring = line.Substring(slashIndex + 1, commaIndex - slashIndex - 1);
 
-            int slashIndex = handLines[2].IndexOf('/', currencyIndex + 1);
-            int commaIndex = handLines[2].IndexOf(',', slashIndex + 1);
-            var sbstring = handLines[2].Substring(currencyIndex, slashIndex - currencyIndex);
+            decimal smallBlind = decimal.Parse(sbstring.TrimStart(CurrencyChars), _numberFormatInfo);
+            decimal bigBlind = decimal.Parse(bbstring.TrimStart(CurrencyChars), _numberFormatInfo);
 
-            decimal smallBlind = decimal.Parse(sbstring, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
-            decimal bigBlind = decimal.Parse(handLines[2].Substring(slashIndex + 1, commaIndex - slashIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+            
+            var c = GetCurrency(sbstring[0]);
 
-            return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, _currency);
+            return Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, c);
+        }
+
+        private static Currency GetCurrency(char c)
+        {
+            switch (c)
+            {
+                case '$':
+                    return Currency.USD;
+                case '€':
+                    return Currency.EURO;
+                default:
+                    return Currency.PlayMoney;
+            }
         }
 
         protected override Buyin ParseBuyin(string[] handLines)

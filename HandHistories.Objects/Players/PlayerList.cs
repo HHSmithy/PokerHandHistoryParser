@@ -9,6 +9,7 @@ namespace HandHistories.Objects.Players
     [DataContract]
     public class PlayerList : IEnumerable<Player>
     {
+        [DataMember]
         private List<Player> _players = new List<Player>(10); 
 
         public PlayerList()
