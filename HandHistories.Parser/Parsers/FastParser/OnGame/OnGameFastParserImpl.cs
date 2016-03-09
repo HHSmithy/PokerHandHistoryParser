@@ -128,7 +128,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 //Rake taken: $0.12
                 if (handLine[0] == 'R')
                 {
-                    handHistory.Rake = decimal.Parse(handLine.Substring(12), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                    handHistory.Rake = decimal.Parse(handLine.Substring(12).TrimStart(CurrencyChars), _numberFormatInfo);
                 }
 
                 //Main pot: $1.28 won by cristimanea ($1.20)
@@ -138,7 +138,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     int colonIndex = handLine.IndexOf(':');
                     int wonIndex = handLine.IndexOf(" won by", colonIndex, StringComparison.Ordinal);
 
-                    handHistory.TotalPot += decimal.Parse(handLine.Substring(colonIndex + 2, wonIndex - colonIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                    handHistory.TotalPot += decimal.Parse(handLine.Substring(colonIndex + 2, wonIndex - colonIndex - 2).TrimStart(CurrencyChars), _numberFormatInfo);
                 }
 
                 // we hit the summary line
@@ -451,7 +451,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                         foreach (var winner in splitted)
                         {
                             int openParenIndex = winner.LastIndexOf('(');
-                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                            var amountStr = winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2).TrimStart(CurrencyChars);
+                            decimal amount = decimal.Parse(amountStr, _numberFormatInfo);
 
                             string playerName = winner.Substring(1, openParenIndex - 2);
 
@@ -469,7 +470,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                         foreach (var winner in splitted)
                         {
                             int openParenIndex = winner.LastIndexOf('(');
-                            decimal amount = decimal.Parse(winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                            var amountStr = winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2).TrimStart(CurrencyChars);
+                            decimal amount = decimal.Parse(amountStr, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
                             string playerName = winner.Substring(1, openParenIndex - 2);
 
@@ -489,7 +491,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     //  19kb72 posts big blind ($6.50) [all in]
 
                     int openParenIndex = handLine.LastIndexOf('(');
-                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2).TrimStart(CurrencyChars), _numberFormatInfo);
 
                     char blindIdentifier = handLine[openParenIndex - 10];
                     if (blindIdentifier == 'b') // big blind
@@ -537,7 +539,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     //New format 
                     //{playername} calls $13
 
-                    int currencyIndex = handLine.IndexOf(_numberFormatInfo.CurrencySymbol, StringComparison.Ordinal);
+                    int currencyIndex = handLine.LastIndexOf(' ') + 1;
 
                     int valueEndIndex = handLine.IndexOf(' ', currencyIndex);
                     if (valueEndIndex == -1)
@@ -549,7 +551,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                     var amountstr = handLine.Substring(currencyIndex, valueEndIndex - currencyIndex);
                     string playerName;
-                    decimal amount = decimal.Parse(amountstr, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
+                    decimal amount = decimal.Parse(amountstr.TrimStart(CurrencyChars), _numberFormatInfo);
                     switch (actionIdentifier)
                     {
                         case 'l': // calls
@@ -600,7 +602,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 int seatNumber = Int32.Parse(handLine.Substring(5, colonIndex - 5));
                 string amount = (handLine.Substring(parenIndex + 1, handLine.Length - parenIndex - 2));
 
-                playerList.Add(new Player(name, decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo), seatNumber));
+                playerList.Add(new Player(name, decimal.Parse(amount.TrimStart(CurrencyChars), _numberFormatInfo), seatNumber));
             }
 
 
