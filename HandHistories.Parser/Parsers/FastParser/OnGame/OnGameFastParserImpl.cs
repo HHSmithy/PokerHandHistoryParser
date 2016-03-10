@@ -539,7 +539,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     //New format 
                     //{playername} calls $13
 
-                    int currencyIndex = handLine.LastIndexOf(' ') + 1;
+                    int currencyIndex = handLine.IndexOfAny(CurrencyChars);
 
                     int valueEndIndex = handLine.IndexOf(' ', currencyIndex);
                     if (valueEndIndex == -1)

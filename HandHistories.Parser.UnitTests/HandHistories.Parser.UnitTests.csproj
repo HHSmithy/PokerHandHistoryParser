@@ -140,6 +140,9 @@
     <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\Ante.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\BossMedia\CashGame\HandActionTests\CallAllInHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\BossMedia\CashGame\PlayerTests\STATE_RESERVED.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -419,7 +419,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
                     if (allInType == HandActionType.CALL)
                     {
-                        amount = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions.Player(playerName));
+                        amount = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions.Player(playerName).Street(currentStreet));
                     }
 
                     return new HandAction(playerName, allInType, amount, currentStreet, true);
