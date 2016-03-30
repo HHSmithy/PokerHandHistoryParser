@@ -62,6 +62,15 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             get { return true; }
         }
 
+        protected override void FinalizeHandHistory(HandHistory Hand)
+        {
+            //The sitting out attribute is not present if the player is waiting for Big Blind
+            foreach (var player in Hand.Players)
+            {
+                player.IsSittingOut = Hand.HandActions.Player(player).Count() == 0;
+            }
+        }
+
         protected override string[] SplitHandsLines(string handText)
         {
             return Utils.XMLHandLineSplitter.Split(handText);

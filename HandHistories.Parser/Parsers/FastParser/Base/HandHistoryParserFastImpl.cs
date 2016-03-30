@@ -127,12 +127,22 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 throw new ExtraHandParsingAction(handLines[0]);
             }
 
+            FinalizeHandHistorySummary(handHistorySummary);
+
             return handHistorySummary;
         }
 
         protected virtual void ParseExtraHandInformation(string[] handLines, HandHistorySummary handHistorySummary)
         {
             // do nothing
+        }
+
+        protected virtual void FinalizeHandHistory(HandHistory Hand)
+        {
+        }
+
+        protected virtual void FinalizeHandHistorySummary(HandHistorySummary Hand)
+        {
         }
 
         public HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false)
@@ -239,6 +249,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     throw new ExtraHandParsingAction(handLines[0]);
                 }
+
+                FinalizeHandHistory(handHistory);
 
                 SetActionNumbers(handHistory);
 

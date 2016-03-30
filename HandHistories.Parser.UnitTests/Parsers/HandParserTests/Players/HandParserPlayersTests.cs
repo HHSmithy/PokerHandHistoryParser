@@ -13,6 +13,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
         }
 
+        protected void TestParsePlayers_FullHand(string fileName, PlayerList expectedPlayers)
+        {
+            string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "PlayerTests", fileName);
+
+            PlayerList playerList = GetParser().ParseFullHandHistory(handText).Players;
+
+            Assert.AreEqual(expectedPlayers.Count, playerList.Count, "Player List Count");
+            Assert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", playerList));
+        }
+
         protected void TestParsePlayers(string fileName, PlayerList expectedPlayers)
         {
             string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "PlayerTests", fileName);
