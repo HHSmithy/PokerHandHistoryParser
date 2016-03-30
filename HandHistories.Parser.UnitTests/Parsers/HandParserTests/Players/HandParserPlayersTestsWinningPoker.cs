@@ -168,5 +168,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                            };
             }
         }
+
+        [Test]
+        public void ParsePlayers_HoleCards_Omaha()
+        {
+            PlayerList players = new PlayerList()
+                           {
+                               new Player("Player1", 1158.75m, 1),
+                               new Player("Player2", 751m, 2),
+                               new Player("Player4", 985.66m, 4),
+                               new Player("Player5", 817.34m, 5)
+                               {
+                                   HoleCards = HoleCards.FromCards("9dJsKd5d")
+                               },
+                               new Player("Player6", 698m, 6)
+                               {
+                                   HoleCards = HoleCards.FromCards("QcTd3s4d")
+                               }
+                           };
+            TestParsePlayers("OmahaHoleCards", players);
+        }
     }
 }
