@@ -57,13 +57,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
             //return splitUpHands.Where(s => s.Equals("\r\n") == false);
 
-            return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => !string.IsNullOrWhiteSpace(s) && !s.Equals("\r\n") && !s.StartsWith("#Game No ", StringComparison.Ordinal));
         }
 
         private static readonly Regex DealerPositionRegex = new Regex(@"(?<=Seat )\d+", RegexOptions.Compiled);
         protected override int ParseDealerPosition(string[] handLines)
         {
-            return Int32.Parse(DealerPositionRegex.Match(handLines[4]).Value);
+            return Int32.Parse(DealerPositionRegex.Match(handLines[3]).Value);
         }
 
         private static readonly Regex DateLineRegex = new Regex(@"\d+ \d+ \d+ \d+\:\d+\:\d+", RegexOptions.Compiled);
@@ -71,7 +71,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         protected override DateTime ParseDateUtc(string[] handLines)
         {
             //Date looks like: 04 02 2012 23:59:48
-            string dateString = DateLineRegex.Match(handLines[2]).Value;
+            string dateString = DateLineRegex.Match(handLines[1]).Value;
             //Change string so it becomes 2012-02-04 23:59:48
             dateString = DateRegex.Replace(dateString, "$3-$2-$1 ");
 
@@ -87,10 +87,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return PokerFormat.CashGame;
         }
 
-        private static readonly Regex HandIdRegex = new Regex(@"(?<=#Game No \: )\d+", RegexOptions.Compiled);
         protected override long ParseHandId(string[] handLines)
         {
-            return long.Parse(HandIdRegex.Match(handLines[0]).Value);
+            string line = handLines[0];
+            int endIndex = line.LastIndexOf(' ');
+            int startIndex = line.LastIndexOf(' ', endIndex - 1);
+
+            string idString = line.Substring(startIndex, endIndex - startIndex);
+            return long.Parse(idString);
         }
 
         protected override long ParseTournamentId(string[] handLines)
@@ -102,7 +106,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         protected override string ParseTableName(string[] handLines)
         {
             //"Table Athens 10 Max (Real Money)" -> "Athens"
-            var tableName = TableNameRegex.Match(handLines[3]).Value;
+            var tableName = TableNameRegex.Match(handLines[2]).Value;
             tableName = tableName.Substring(0, tableName.Length - 19).TrimEnd();
             return tableName;
         }
@@ -110,7 +114,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         private static readonly Regex NumPlayersRegex = new Regex(@"(?<=Total number of players : )\d+", RegexOptions.Compiled);
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[5]).Value);
+            int seatCount = ParsePlayerCount(handLines);
 
             if (seatCount <= 2)
             {
@@ -133,7 +137,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         private static readonly Regex GameTypeRegex = new Regex(@"(?<=Blinds ).*(?= - )", RegexOptions.Compiled);
         protected override GameType ParseGameType(string[] handLines)
         {
-            string gameTypeString = GameTypeRegex.Match(handLines[2]).Value;
+            string gameTypeString = GameTypeRegex.Match(handLines[1]).Value;
             gameTypeString = gameTypeString.Replace(" Jackpot table", "");
             switch (gameTypeString)
             {
@@ -167,7 +171,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
-            bool isjackPotTable = handLines[2].Contains(" Jackpot table");
+            bool isjackPotTable = handLines[1].Contains(" Jackpot table");
            
             var playerList = ParsePlayers(handLines);
             var limit = ParseLimit(handLines);
@@ -207,7 +211,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override Limit ParseLimit(string[] handLines)
         {
-            string line = handLines[2];
+            string line = handLines[1];
 
             int LimitEndIndex = line.IndexOf(" Blinds", StringComparison.Ordinal);
             string limitString = line.Remove(LimitEndIndex)
@@ -439,13 +443,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override PlayerList ParsePlayers(string[] handLines)
         {
-            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[5]).Value);
+            const int PlayerListStartIndex = 5;
+            int seatCount = ParsePlayerCount(handLines);
 
             PlayerList playerList = new PlayerList();
 
             for (int i = 0; i < seatCount; i++)
             {
-                string handLine = handLines[6 + i];
+                string handLine = handLines[PlayerListStartIndex + i];
 
                 // Expected format:
                 //  Seat 1: Velmonio ( $1.05 )
@@ -460,7 +465,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 playerList.Add(new Player(playerName, amount, seat));
             }
 
-            int heroCardsIndex = GetHeroCardsIndex(handLines, 6 + seatCount);
+            int heroCardsIndex = GetHeroCardsIndex(handLines, PlayerListStartIndex + seatCount);
 
             if (heroCardsIndex != -1)
             {
@@ -509,6 +514,12 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             }
 
             return playerList;
+        }
+
+        private static int ParsePlayerCount(string[] handLines)
+        {
+            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[4]).Value);
+            return seatCount;
         }
 
         static int GetHeroCardsIndex(string[] handLines, int startIndex)

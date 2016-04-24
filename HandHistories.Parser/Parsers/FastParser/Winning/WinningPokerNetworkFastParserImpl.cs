@@ -703,7 +703,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         cards = cards.Replace("10", "T");
                         showdownPlayer.HoleCards = HoleCards.FromCards(cards);
                     }
-                   
                 }
             }
 

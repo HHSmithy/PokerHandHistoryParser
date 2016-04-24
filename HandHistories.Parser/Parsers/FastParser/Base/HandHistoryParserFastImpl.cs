@@ -584,5 +584,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Players who have no actions is set as sitout
+        /// </summary>
+        /// <param name="Hand"></param>
+        protected static void FixSitoutPlayers(HandHistory Hand)
+        {
+            //The sitting out attribute is not present if the player is waiting for Big Blind
+            foreach (var player in Hand.Players)
+            {
+                player.IsSittingOut = Hand.HandActions.FirstOrDefault(p => p.PlayerName == player.PlayerName) == null;
+            }
+        }
     }
 }

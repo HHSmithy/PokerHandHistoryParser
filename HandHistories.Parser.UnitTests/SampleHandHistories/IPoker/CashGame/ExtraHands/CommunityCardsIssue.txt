@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6572934909">
+ <general>
+  <mode>real</mode>
+  <gametype>Omaha PL €5/€10</gametype>
+  <tablename>Anton, 818304719</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:18:58</duration>
+  <gamecount>17</gamecount>
+  <startdate>2016-04-09 07:39:04</startdate>
+  <currency>USD</currency>
+  <nickname>PlayingNude</nickname>
+  <bets>€1,649.25</bets>
+  <wins>€328.75</wins>
+  <chipsin>€880</chipsin>
+  <chipsout>€834.50</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general>
+ <game gamecode="7021168716">
+  <general>
+   <startdate>2016-04-09 07:55:38</startdate>
+   <players>
+    <player win="€0" seat="1" chips="€400" dealer="0" name="nuziiiitaaa" bet="€0"/>
+    <player win="€0" seat="5" chips="€385" dealer="1" name="VinzentR" bet="€0"/>
+    <player win="€0" seat="6" chips="€1,510.50" dealer="0" name="ClassicThrash" bet="€5"/>
+    <player win="€455" seat="8" chips="€1,946.50" dealer="0" name="XDJT" bet="€288.50"/>
+    <player win="€0" seat="10" chips="€1,000" dealer="0" name="PlayingNude" bet="€165.50"/>
+   </players>
+  </general>
+  <round no="0">
+   <action player="ClassicThrash" type="1" cards="" sum="€5" no="1"/>
+   <action player="XDJT" type="2" cards="" sum="€10" no="2"/>
+  </round>
+  <round no="1">
+   <cards player="PlayingNude" type="Pocket">D10 S9 S8 D7</cards>
+   <action player="PlayingNude" type="23" cards="" sum="€30" no="3"/>
+   <cards player="nuziiiitaaa" type="Pocket">X X X X</cards>
+   <action player="nuziiiitaaa" type="0" cards="" sum="€0" no="4"/>
+   <cards player="VinzentR" type="Pocket">X X X X</cards>
+   <action player="VinzentR" type="0" cards="" sum="€0" no="5"/>
+   <cards player="ClassicThrash" type="Pocket">X X X X</cards>
+   <action player="ClassicThrash" type="0" cards="" sum="€0" no="6"/>
+   <cards player="XDJT" type="Pocket">X X X X</cards>
+   <action player="XDJT" type="3" cards="" sum="€20" no="7"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">DJ S7 C2 </cards>
+   <action player="XDJT" type="4" cards="" sum="€0" no="8"/>
+   <action player="PlayingNude" type="5" cards="" sum="€45.50" no="9"/>
+   <action player="XDJT" type="3" cards="" sum="€45.50" no="10"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S2</cards>
+   <action player="XDJT" type="4" cards="" sum="€0" no="11"/>
+   <action player="PlayingNude" type="4" cards="" sum="€0" no="12"/>
+  </round>
+  <round no="4">
+   <cards player="" type="River">D9</cards>
+   <action player="XDJT" type="4" cards="" sum="€0" no="13"/>
+   <action player="PlayingNude" type="5" cards="" sum="€90" no="14"/>
+   <action player="XDJT" type="23" cards="" sum="€213" no="15"/>
+   <action player="PlayingNude" type="0" cards="" sum="€0" no="16"/>
+  </round>
+ </game>
+</session>

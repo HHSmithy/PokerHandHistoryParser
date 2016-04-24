@@ -355,7 +355,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 handLine = handLine.TrimStart();
 
                 //If we don't have these letters at these positions, we're not a hand line
-                if (handLine[1] != 'c' || handLine[7] != 't')
+                if (handLine[1] != 'c' || handLine[2] != 'a')
                 {
                     continue;
                 }
@@ -782,16 +782,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             for (int i = 0; i < cardLines.Length; i++)
             {
-                string handLine = cardLines[i];
-                handLine = handLine.TrimStart();
+                string line = cardLines[i];
 
-                //To make sure we know the exact character location of each card, turn 10s into Ts (these are recognized by our parser)
-                //Had to change this to specific cases so we didn't accidentally change player names
-                handLine = handLine.Replace("10 ", "T ");
-                handLine = handLine.Replace("10<", "T<");
+                //Getting the cards Type
+                int typeIndex = line.IndexOf("e=\"", 10, StringComparison.Ordinal) + 3;
+                char typeChar = line[typeIndex];
 
                 //We only care about Pocket Cards
-                if (handLine[13] != 'P')
+                if (typeChar != 'P')
                 {
                     continue;
                 }
@@ -801,22 +799,26 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 //or:
                 //<cards type="Pocket" player="playername"></cards>
                 //We skip these lines
-                if (handLine[handLine.Length - 9] == 'X' || handLine[handLine.Length - 9] == '>')
+                if (line[line.Length - 9] == 'X' || line[line.Length - 9] == '>')
                 {
                     continue;
                 }
 
-                int playerNameStartIndex = 29;
-                int playerNameEndIndex = handLine.IndexOf('"', playerNameStartIndex) - 1;
-                string playerName = handLine.Substring(playerNameStartIndex,
+                int playerNameStartIndex = line.IndexOf("r=\"", 10, StringComparison.Ordinal) + 3;
+                int playerNameEndIndex = line.IndexOf('"', playerNameStartIndex) - 1;
+                string playerName = line.Substring(playerNameStartIndex,
                                                        playerNameEndIndex - playerNameStartIndex + 1);
                 Player player = playerList.First(p => p.PlayerName.Equals(playerName));
 
 
-                int playerCardsStartIndex = playerNameEndIndex + 3;
-                int playerCardsEndIndex = handLine.Length - 9;
-                string playerCardString = handLine.Substring(playerCardsStartIndex,
+                int playerCardsStartIndex = line.LastIndexOf('>', line.Length - 11) + 1;
+                int playerCardsEndIndex = line.Length - 9;
+                string playerCardString = line.Substring(playerCardsStartIndex,
                                                         playerCardsEndIndex - playerCardsStartIndex + 1);
+
+                ////To make sure we know the exact character location of each card, turn 10s into Ts (these are recognized by our parser)
+                ////Had to change this to specific cases so we didn't accidentally change player names
+                playerCardString = playerCardString.Replace("10", "T");
                 string[] cards = playerCardString.Split(' ');
                 if (cards.Length > 1)
                 {
@@ -853,24 +855,26 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 handLine = handLine.Replace("10", "T");
 
                 //The suit/ranks are reversed, so we need to reverse them when adding them to our board card string
+                int typeIndex = handLine.IndexOf("e=\"", StringComparison.Ordinal);
+                char streetChar = handLine[typeIndex + 3];
 
-                char streetChar = handLine[13];
+                int cardsStartIndex = handLine.LastIndexOf('>', handLine.Length - 9) + 1;
                 //Flop
                 if (streetChar == 'F')
                 {
-                    boardCards.Add(new Card(handLine[30], handLine[29]));
-                    boardCards.Add(new Card(handLine[33], handLine[32]));
-                    boardCards.Add(new Card(handLine[36], handLine[35]));
+                    boardCards.Add(new Card(handLine[cardsStartIndex + 1], handLine[cardsStartIndex]));
+                    boardCards.Add(new Card(handLine[cardsStartIndex + 4], handLine[cardsStartIndex + 3]));
+                    boardCards.Add(new Card(handLine[cardsStartIndex + 7], handLine[cardsStartIndex + 6]));
                 }
                 //Turn
                 if (streetChar == 'T')
                 {
-                    boardCards.Add(new Card(handLine[30], handLine[29]));
+                    boardCards.Add(new Card(handLine[cardsStartIndex + 1], handLine[cardsStartIndex]));
                 }
                 //River
                 if (streetChar == 'R')
                 {
-                    boardCards.Add(new Card(handLine[31], handLine[30]));
+                    boardCards.Add(new Card(handLine[cardsStartIndex + 1], handLine[cardsStartIndex]));
                     break;
                 }
             }

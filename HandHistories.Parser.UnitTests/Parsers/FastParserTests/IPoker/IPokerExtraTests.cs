@@ -1,4 +1,5 @@
-﻿using HandHistories.Objects.GameDescription;
+﻿using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
@@ -69,6 +70,18 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.IPoker
                 TableName = "Andreapol__No_DP_"
             };
             TestFullHandHistorySummary(expectedSummary, "DataMinerHandIssue1");
+        }
+
+        [Test]
+        public void CommunityCardsIssueTest()
+        {
+            string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "ExtraHands", "CommunityCardsIssue");
+
+            var actualCommunityCards = GetParser().ParseCommunityCards(handText);
+
+            var expected = BoardCards.Parse("Jd 7s 2c 2s 9d");
+
+            Assert.AreEqual(expected, actualCommunityCards);
         }
     }
 }

@@ -379,6 +379,9 @@
     <Content Include="SampleHandHistories\FullTilt\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\ExtraHands\CommunityCardsIssue.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\ExtraHands\DataMinerHandIssue1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -391,6 +394,9 @@
     </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\MultipleHandsTests\MinerFormat.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\WithShowdown2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\GameTypeTests\FixedLimitHoldem.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

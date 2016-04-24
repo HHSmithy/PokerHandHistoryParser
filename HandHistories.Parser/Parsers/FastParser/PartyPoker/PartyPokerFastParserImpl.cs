@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Linq;
 using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
@@ -1102,6 +1103,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             }
 
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No cards was dealt");
+        }
+
+        protected override void FinalizeHandHistory(HandHistory Hand)
+        {
+            FixSitoutPlayers(Hand);
         }
     }
 }
