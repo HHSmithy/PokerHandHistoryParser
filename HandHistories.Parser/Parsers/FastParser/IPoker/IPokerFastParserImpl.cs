@@ -140,13 +140,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return name;
         }
 
-
         protected override int ParseDealerPosition(string[] handLines)
         {
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
 
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
-
-            for (int i = 0; i < playerLines.Count(); i++)
+            for (int i = 0; i < playerLines.Count; i++)
             {
                 string playerLine = playerLines[i];
                 if (IsPlayerLineDealer(playerLine))
@@ -255,8 +253,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
-            int numPlayers = playerLines.Count();
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
+            int numPlayers = playerLines.Count;
 
             if (numPlayers <= 2)
             {
@@ -302,7 +300,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return handLines[8];
         }
 
-        protected string[] GetPlayerLinesFromHandLines(string[] handLines)
+        protected List<string> GetPlayerLinesFromHandLines(string[] handLines)
         {
             /*
               Returns all of the detail lines between the <players> tags
@@ -312,8 +310,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 <player seat="10" name="CraigyColesBRL" chips="£2,297.25" dealer="0" win="£15" bet="£10" rebuy="0" addon="0" />
               </players>             
              */
-
-
             int offset = GetFirstPlayerIndex(handLines);
             List<string> playerLines = new List<string>();
 
@@ -331,7 +327,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 line = line.TrimStart();
             }
 
-            return playerLines.ToArray();
+            return playerLines;
         }
 
         private int GetFirstPlayerIndex(string[] handLines)
@@ -346,7 +342,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             throw new IndexOutOfRangeException("Did not find first player");
         }
 
-        protected string[] GetCardLinesFromHandLines(string[] handLines)
+        protected List<string> GetCardLinesFromHandLines(string[] handLines)
         {
             List<string> cardLines = new List<string>();
             for (int i = 0; i < handLines.Length; i++)
@@ -363,7 +359,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 cardLines.Add(handLine);
             }
 
-            return cardLines.ToArray();
+            return cardLines;
         }
 
         protected override GameType ParseGameType(string[] handLines)
@@ -510,8 +506,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             //Check 3 - Do we have between 2 and 10 players?
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
-            if (playerLines.Count() < 2 || playerLines.Count() > 10)
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
+            if (playerLines.Count < 2 || playerLines.Count > 10)
             {
                 return false;
             }
@@ -635,8 +631,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }                
             }
 
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
-            for (int i = 0; i < playerLines.Length; i++)
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
+            for (int i = 0; i < playerLines.Count; i++)
             {
                 string playerLine = playerLines[i];
                 decimal winnings = GetWinningsFromPlayerLine(playerLine);                
@@ -697,7 +693,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return new HandAction(actionPlayerName, actionType, value, street, actionNumber);
         }
 
-        protected int GetRoundNumberFromLine(string handLine)
+        static int GetRoundNumberFromLine(string handLine)
         {
             int startPos = handLine.IndexOf(" n", StringComparison.Ordinal) + 5;
             int endPos = handLine.IndexOf('"', startPos) - 1;
@@ -705,7 +701,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return Int32.Parse(numString);            
         }
 
-        protected int GetActionNumberFromActionLine(string actionLine)
+        static int GetActionNumberFromActionLine(string actionLine)
         {
             int actionStartPos = actionLine.IndexOf(" n", StringComparison.Ordinal) + 5;
             int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
@@ -713,7 +709,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return Int32.Parse(actionNumString);
         }
 
-        protected string GetPlayerFromActionLine(string actionLine)
+        static string GetPlayerFromActionLine(string actionLine)
         {
             int nameStartPos = actionLine.IndexOf(" p", StringComparison.Ordinal) + 9;
             int nameEndPos = actionLine.IndexOf('"', nameStartPos) - 1;
@@ -721,7 +717,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return name;
         }
 
-        protected decimal GetValueFromActionLine(string actionLine)
+        static decimal GetValueFromActionLine(string actionLine)
         {
             int startPos = actionLine.IndexOf(" s", StringComparison.Ordinal) + 6;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
@@ -729,7 +725,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return ParseDecimal(value);
         }
 
-        protected int GetActionTypeFromActionLine(string actionLine)
+        static int GetActionTypeFromActionLine(string actionLine)
         {
             int actionStartPos = actionLine.IndexOf(" t", StringComparison.Ordinal) + 7;
             int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
@@ -746,11 +742,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 <player seat="5" name="player5" chips="$100000" dealer="0" win="$0" bet="$0" />
              */
 
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
 
             PlayerList playerList = new PlayerList();
 
-            for (int i = 0; i < playerLines.Length; i++)
+            for (int i = 0; i < playerLines.Count; i++)
             {
                 string playerName = GetNameFromPlayerLine(playerLines[i]);
                 decimal stack = GetStackFromPlayerLine(playerLines[i]);
@@ -778,9 +774,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
              * <cards type="Pocket" player="pepealas5">CA CK</cards>
              */
 
-            string[] cardLines = GetCardLinesFromHandLines(handLines);
+            List<string> cardLines = GetCardLinesFromHandLines(handLines);
 
-            for (int i = 0; i < cardLines.Length; i++)
+            for (int i = 0; i < cardLines.Count; i++)
             {
                 string line = cardLines[i];
 
@@ -844,9 +840,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
              * <cards type="Pocket" player="pepealas5">CA CK</cards>
              */
 
-            string[] cardLines = GetCardLinesFromHandLines(handLines);
+            List<string> cardLines = GetCardLinesFromHandLines(handLines);
 
-            for (int i = 0; i < cardLines.Length; i++)
+            for (int i = 0; i < cardLines.Count; i++)
             {
                 string handLine = cardLines[i];
                 handLine = handLine.TrimStart();

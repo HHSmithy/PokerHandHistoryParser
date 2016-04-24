@@ -91,7 +91,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         protected override int ParseDealerPosition(string[] handLines)
         {
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
 
             for (int i = 0; i < playerLines.Count(); i++)
             {
@@ -146,7 +146,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
             int numPlayers = playerLines.Count();
 
             if (numPlayers <= 2)
@@ -165,7 +165,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return SeatType.FromMaxPlayers(10);
         }
 
-        private string[] GetPlayerLinesFromHandLines(string[] handLines)
+        private List<string> GetPlayerLinesFromHandLines(string[] handLines)
         {
             var playerLines = new List<string>();
 
@@ -180,7 +180,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 if (TagChar == '/') break;
             }
 
-            return playerLines.ToArray();
+            return playerLines;
         }
 
         private static HoleCards GetPlayerCardsFromHandLines(string[] handLines, int playerSeat, string playerName)
@@ -339,7 +339,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             }
 
             //Check 3 - Do we have between 2 and 10 players?
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
             if (playerLines.Count() < 2 || playerLines.Count() > 10)
             {
                 return false;
@@ -607,9 +607,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         {
             var playerList = new PlayerList();
 
-            string[] playerLines = GetPlayerLinesFromHandLines(handLines);
+            List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
 
-            for (int i = 0; i < playerLines.Length; i++)
+            for (int i = 0; i < playerLines.Count; i++)
             {
                 string line = playerLines[i];
 
@@ -630,8 +630,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             }
 
             int heroSeat = GetHeroSeatNumber(handLines);
-            int heroCardsIndex = GetHeroCardsFirstLineIndex(handLines, heroSeat, playerLines.Length + 1);
-
+            int heroCardsIndex = GetHeroCardsFirstLineIndex(handLines, heroSeat, playerLines.Count + 1);
 
             if (heroCardsIndex != -1)
             {
