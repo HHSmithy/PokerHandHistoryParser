@@ -6,7 +6,7 @@ namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
     [DataContract]
-    public class Limit
+    public sealed class Limit
     {
         private Limit()
         {

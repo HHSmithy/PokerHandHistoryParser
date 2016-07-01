@@ -593,7 +593,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     //Player bubblebubble received card: [2h]
                     case ']':
-                        throw new Exception("This should not happen, if it does we need to fix it");
+                        receivingCards = true;
+                        break;
                     
                     case '.':
                         //Player bubblebubble is timed out.
