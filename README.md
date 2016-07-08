@@ -48,8 +48,8 @@ Future Upgrades
 
 Quickstart  
 -----------
-Commandline parser is in beta.
-`CommandLineParser.exe Directory/to/888/raw/logs`
+Commandline parser is in beta.  
+`CommandLineParser.exe Directory/to/888/raw/logs`  
 Outputs a csv for each raw text file that contains additional features for deeper analysis.
 Documentation
 -------------
