@@ -248,7 +248,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             Street currentStreet = Street.Preflop;
 
             List<HandAction> handActions = new List<HandAction>();
-
+            
             for (int i = 6; i < handLines.Length; i++)
             {
                 string handLine = handLines[i];
@@ -309,7 +309,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         
                         string playerName = handLine.Substring(0, openSquareIndex - 11);
 
-                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0, i));
                         continue;                        
                     }
 
@@ -317,13 +317,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     if (action.Equals("shows"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.SHOW, 0, currentStreet));
+                        handActions.Add(new HandAction(playerName, HandActionType.SHOW, 0, currentStreet, i));
                         continue;
                     }
                     else if (action.Equals("mucks"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, currentStreet));
+                        handActions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, currentStreet, i));
                         continue;
                     }
 
@@ -345,21 +345,21 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 19);
                             amount = ParseAmount(amountString);
-                            handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet));
+                            handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, currentStreet, i));
                             continue;
                         }
                         else if (action.Equals("g blind", StringComparison.Ordinal)) // big blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 17);
                             amount = ParseAmount(amountString);
-                            handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet));
+                            handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, currentStreet, i));
                             continue;
                         }
                         else if(action.Equals("d blind", StringComparison.Ordinal))//dead blind
                         {
                             string playerName = handLine.Substring(0, openSquareIndex - 18);
                             amount = ParseDeadBlindAmount(amountString);
-                            handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet));
+                            handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet, i));
                             continue;
                         }
                     }
@@ -369,39 +369,39 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     if (action.EndsWith("raises"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 8);
-                        handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet));
+                        handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet, i));
                         continue;
                     }
                     else if (action.EndsWith("bets"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 6);
-                        handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet));
+                        handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet, i));
                         continue;
                     }
                     else if (action.EndsWith("calls"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet));
+                        handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet, i));
                         continue;
                     }
                 }
                 else if (handLine.FastEndsWith("folds"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 6);
-                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet, i));
                     continue;
                 }
                 else if (handLine.EndsWith("checks"))
                 {
                     string playerName = handLine.Substring(0, handLine.Length - 7);
-                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, currentStreet));
+                    handActions.Add(new HandAction(playerName, HandActionType.CHECK, 0, currentStreet, i));
                     continue;
                 }                
 
                 throw new HandActionException(handLine, "Unknown handline.");
             }
 
-            return FixUncalledBets(handActions, null, null);
+            return FixUncalledBets(handActions, handLines.Length, null, null);
         }
 
         private static decimal ParseAmount(string amountString)
@@ -537,7 +537,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return null;
         }
 
-        private List<HandAction> FixUncalledBets(List<HandAction> handActions, decimal? totalPot, decimal? rake)
+        private List<HandAction> FixUncalledBets(List<HandAction> handActions, int actionNumber, decimal? totalPot, decimal? rake)
         {
             // Pacific does not correctly return uncalled bets, sometimes declaring them as winnings
             // as we calculate the rake manually, we need to make sure uncalledbets are declared correctly
@@ -615,8 +615,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         {
                             handActions.Remove(winAction);
                         }
-
-                        handActionToAdd = (new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, uncalledBet, Street.Showdown));
+                        handActionToAdd = (new HandAction(lastAction.PlayerName, HandActionType.UNCALLED_BET, uncalledBet, Street.Showdown, actionNumber));
                     }
                 }
             }

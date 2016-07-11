@@ -46,6 +46,11 @@ Future Upgrades
  * Single and multi-table tournament support
  * Ongoing support
 
+Quickstart  
+-----------
+Commandline parser is in beta.  
+`CommandLineParser.exe Directory/to/888/raw/logs`  
+Outputs a csv for each raw text file that contains additional features for deeper analysis.
 Documentation
 -------------
 
