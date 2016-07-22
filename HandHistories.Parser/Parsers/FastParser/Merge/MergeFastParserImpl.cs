@@ -12,6 +12,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Merge
 {
@@ -167,8 +168,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 <game id="56067014-1756" starttime="20120529031347" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Baja (56067014)|56067014|56067014-1756|false">             
              */
             string gameLine = handLines[1].TrimStart();
-            int nameStartIndex = gameLine.IndexOf("|") + 1;
-            int nameStartEndIndex = gameLine.IndexOf("|", nameStartIndex);
+            int nameStartIndex = gameLine.IndexOfFast("|") + 1;
+            int nameStartEndIndex = gameLine.IndexOfFast("|", nameStartIndex);
             string tableName = gameLine.Substring(nameStartIndex, nameStartEndIndex - nameStartIndex);
             return tableName;
         }
@@ -232,7 +233,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
         {
             string tableName = ParseTableName(handLines);
 
-            if (tableName.StartsWith("Bad Beat"))
+            if (tableName.StartsWithFast("Bad Beat"))
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
             }
@@ -488,7 +489,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             PlayerList playerList = new PlayerList();
 
             //Build a query for all cards elements which are "SHOWN" or "MUCKED" rather than "COMMUNITY"
-            IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards").Where(element => !element.Attribute("type").Value.StartsWith("C")).ToList();
+            IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards").Where(element => element.Attribute("type").Value[0] != 'C').ToList();
 
             foreach (XElement playerElement in players.Elements())
             {
@@ -526,7 +527,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards");
 
             //Find the last <card> element with type="community". This will have our board card list as its cards attribute value
-            XElement lastCardElement = cardElements.LastOrDefault(element => element.Attribute("type").Value.StartsWith("C"));
+            XElement lastCardElement = cardElements.LastOrDefault(element => element.Attribute("type").Value[0] == 'C');
 
             if (lastCardElement == null)
             {

@@ -10,6 +10,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.OnGame
 {
@@ -136,7 +137,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 else if (handLine[1] == 'i' || handLine[0] == 'M')
                 {
                     int colonIndex = handLine.IndexOf(':');
-                    int wonIndex = handLine.IndexOf(" won by", colonIndex, StringComparison.Ordinal);
+                    int wonIndex = handLine.IndexOfFast(" won by");
 
                     handHistory.TotalPot += decimal.Parse(handLine.Substring(colonIndex + 2, wonIndex - colonIndex - 2).TrimStart(CurrencyChars), _numberFormatInfo);
                 }
@@ -239,7 +240,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             //Seat 2: ONG_Hero ($200)
             string line = isHeroHandhistory(handLines) ? handLines[5] : handLines[4];
 
-            int SeatTypeEndIndex = line.EndsWith(")") ? line.IndexOf('(', SeatTypeStartIndex) : line.Length;
+            int SeatTypeEndIndex = line.EndsWithFast(")") ? line.IndexOf('(', SeatTypeStartIndex) : line.Length;
 
             int numPlayers = Int32.Parse(line.Substring(SeatTypeStartIndex, SeatTypeEndIndex - SeatTypeStartIndex));
             return numPlayers;
@@ -296,7 +297,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
         {
             string tableName = ParseTableName(handLines);
 
-            if (tableName.StartsWith("[SPEED]"))
+            if (tableName.StartsWithFast("[SPEED]"))
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Speed);
             }
@@ -345,8 +346,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
         public override bool IsValidHand(string[] handLines)
         {
-            return handLines[handLines.Length - 1].StartsWith("***** End of hand ") &&
-                   handLines[0].StartsWith("***** History for hand") &&
+            return handLines[handLines.Length - 1].StartsWithFast("***** End of hand ") &&
+                   handLines[0].StartsWithFast("***** History for hand") &&
                    handLines.Count() > 7;
         }
 
@@ -367,7 +368,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             {
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("Seat ") == false)
+                if (handLine.StartsWithFast("Seat ") == false)
                 {
                     startOfActionsIndex = i;
                     break;
@@ -386,12 +387,12 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             {
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("Seat ")) // done with actions once we reach the seat line again
+                if (handLine.StartsWithFast("Seat ")) // done with actions once we reach the seat line again
                 {
                     break;
                 }
 
-                bool isAllIn = handLine.EndsWith("all in]");
+                bool isAllIn = handLine.EndsWithFast("all in]");
                 if (isAllIn)
                 {
                     handLine = handLine.Substring(0, handLine.Length - 9); 
@@ -430,7 +431,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 //Dealing line may be "Dealing pocket cards"
                 //or "Dealing to {PlayerName}: [ Xy, Xy ]"
                 if (currentStreet == Street.Preflop &&
-                    handLine.StartsWith("Dealing"))
+                    handLine.StartsWithFast("Dealing"))
                 {
                     continue;
                 }
@@ -444,9 +445,9 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 {
                     // Main pot: $2.25 won by zatli74 ($2.14)
                     // Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
-                    if (handLine.StartsWith("Main pot:"))
+                    if (handLine.StartsWithFast("Main pot:"))
                     {
-                        var nameStart = handLine.IndexOf(" won by", StringComparison.Ordinal) + 7;
+                        var nameStart = handLine.IndexOfFast(" won by") + 7;
                         var splitted = handLine.Substring(nameStart).Split(',');
                         foreach (var winner in splitted)
                         {
@@ -461,9 +462,9 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                     }
                     // Side pot 1: $12.26 won by iplaymybest ($11.65)
                     // Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)
-                    if (handLine.StartsWith("Side pot "))
+                    if (handLine.StartsWithFast("Side pot "))
                     {
-                        var nameStart = handLine.IndexOf(" won by", StringComparison.Ordinal) + 7;
+                        var nameStart = handLine.IndexOfFast(" won by") + 7;
                         var splitted = handLine.Substring(nameStart).Split(',');
 
                         var potNumber = Int32.Parse(handLine[9].ToString());
@@ -631,12 +632,12 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("Seat") == false)
+                if (handLine.StartsWithFast("Seat") == false)
                 {
                     break;
                 }
 
-                if (handLine.EndsWith("]") == false)
+                if (handLine.EndsWithFast("]") == false)
                 {
                     continue;
                 }
@@ -660,7 +661,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             for (int i = startIndex; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line[line.Length - 1] == ']' && line.StartsWith("Dealing to"))
+                if (line[line.Length - 1] == ']' && line.StartsWithFast("Dealing to"))
                 {
                     return i;
                 }
@@ -676,9 +677,9 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             {
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("---") == false ||
+                if (handLine.StartsWithFast("---") == false ||
                     handLines.Length == 3 ||
-                    handLine.EndsWith("]") == false)
+                    handLine.EndsWithFast("]") == false)
                 {
                     continue;                    
                 }

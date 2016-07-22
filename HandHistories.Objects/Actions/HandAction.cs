@@ -7,7 +7,7 @@ namespace HandHistories.Objects.Actions
     [DataContract]
     [KnownType(typeof(WinningsAction))]
     [KnownType(typeof(AllInAction))]
-    public class HandAction
+    public partial class HandAction
     {
         [DataMember]
         public string PlayerName { get; private set; }
@@ -77,7 +77,7 @@ namespace HandHistories.Objects.Actions
 
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            return PlayerName.GetHashCode() ^ HandActionType.GetHashCode();
         }
 
         public override bool Equals(object obj)
@@ -85,7 +85,7 @@ namespace HandHistories.Objects.Actions
             HandAction handAction = obj as HandAction;
             if (handAction == null) return false;
 
-            return handAction.ToString().Equals(ToString());
+            return this == handAction;
         }
 
         public override string ToString()

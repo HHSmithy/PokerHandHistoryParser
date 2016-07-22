@@ -24,7 +24,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             List<HandAction> actionList = GetParser().ParseHandActions(handText);
 
             Assert.AreEqual(expectedActions.Count, actionList.Count, "Action List Count");
-            Assert.AreEqual(expectedActions, actionList);            
+            Assert.AreEqual(expectedActions, actionList);
         }
 
         protected abstract List<HandAction> ExpectedHandActionsBasicHand { get; }

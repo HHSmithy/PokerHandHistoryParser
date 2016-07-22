@@ -119,7 +119,7 @@
     <Compile Include="Utils\RaiseAdjuster\RaiseAdjuster.cs" />
     <Compile Include="Utils\ValidityCheck\HandValidator.cs" />
     <Compile Include="Utils\Pot\PotCalculator.cs" />
-    <Compile Include="Utils\Strings\StringExtensions.cs" />
+    <Compile Include="Utils\Extensions\StringExtensions.cs" />
     <Compile Include="Utils\Time\TimeZoneUtil.cs" />
     <Compile Include="Utils\UncalledBet\UncalledBet.cs" />
     <Compile Include="Utils\XMLHandLineSplitter.cs" />

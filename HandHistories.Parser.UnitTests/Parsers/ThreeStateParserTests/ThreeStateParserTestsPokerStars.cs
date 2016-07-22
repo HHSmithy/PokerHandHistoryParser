@@ -57,7 +57,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
 
         public void TestRunItTwice()
         {
-
             Assert.Throws<RunItTwiceHandException>(RunItTwiceTest);
         }
 

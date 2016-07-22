@@ -54,6 +54,15 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        public int SuitNumericValue
+        {
+            get
+            {
+                int suit = ((int)_card & SuitCardMask) >> 4;
+                return suit;
+            }
+        }
+
         public string CardStringValue
         {
             get { return _card.ToString().Substring(1); }
@@ -205,6 +214,11 @@ namespace HandHistories.Objects.Cards
 
         public override bool Equals(object obj)
         {
+            if (obj is Card)
+            {
+                return ((Card)obj)._card == _card;
+            }
+
             if (obj == null)
             {
                 return false;

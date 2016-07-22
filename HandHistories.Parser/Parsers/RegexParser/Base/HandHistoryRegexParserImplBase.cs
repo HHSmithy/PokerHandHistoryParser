@@ -11,6 +11,7 @@ using HandHistories.Parser.Compression;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.PartyPoker;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.RegexParser.Base
 {
@@ -271,23 +272,23 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
         {
             string tableName = ParseTableName(handText);
 
-            if (tableName.StartsWith("Super Speed"))
+            if (tableName.StartsWithFast("Super Speed"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.SuperSpeed);
-            if (tableName.StartsWith("Speed"))
+            if (tableName.StartsWithFast("Speed"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Speed);
-            if (tableName.StartsWith("Jackpot"))
+            if (tableName.StartsWithFast("Jackpot"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
-            if (tableName.StartsWith("20BB Min Speed"))
+            if (tableName.StartsWithFast("20BB Min Speed"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Speed, TableTypeDescription.Shallow);
-            if (tableName.StartsWith("20BB Min"))
+            if (tableName.StartsWithFast("20BB Min"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Shallow);
-            if (tableName.StartsWith("Deep"))
+            if (tableName.StartsWithFast("Deep"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Deep);
-            if (tableName.StartsWith("Heads Up Anonymous"))
+            if (tableName.StartsWithFast("Heads Up Anonymous"))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Anonymous);
-            if (tableName.StartsWith("Table "))
+            if (tableName.StartsWithFast("Table "))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
-            if (tableName.StartsWith("Heads Up "))
+            if (tableName.StartsWithFast("Heads Up "))
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
 
             return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
@@ -299,25 +300,27 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
         {
             return ParsePlayers(handText).Count;
         }
-       
+
+        static readonly char[] currencies = new char[] { '$', '€', '£' };
+
         protected virtual Currency ParseCurrency(string handText)
         {
             // todo this is a hack and slow, refactor!
-            if (handText.IndexOf(@"$") != -1)
+            int currencyIndex = handText.IndexOfAny(currencies);
+            if (currencyIndex != -1)
             {
-                return Currency.USD;
+                switch (handText[currencyIndex])
+                {
+                    case '$':
+                        return Currency.USD;
+                    case '€':
+                        return Currency.EURO;
+                    case '£':
+                        return Currency.GBP;
+                }
             }
-            if (handText.IndexOf("€") != -1)
-            {
-                return Currency.EURO;
-            }
-            if (handText.IndexOf(@"£") != -1)
-            {
-                return Currency.GBP;
-            }
-
             throw new LimitException(handText, "ParseCurrency: No currency found");
-        }        
+        }
 
         public int ParseDealerPosition(string handText)
         {

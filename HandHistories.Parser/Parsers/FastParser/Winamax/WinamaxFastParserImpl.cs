@@ -11,6 +11,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winamax
 {
@@ -57,8 +58,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         {
             // Line 2  is:
             // Table: 'Cardiff' 5-max (real money) Seat #4 is the button
-            var seatNumberIndex = handLines[1].IndexOf("#", StringComparison.Ordinal) + 1;
-            var spaceIndex = handLines[1].IndexOf(" ", seatNumberIndex, StringComparison.Ordinal);
+            var seatNumberIndex = handLines[1].IndexOfFast("#") + 1;
+            var spaceIndex = handLines[1].IndexOfFast(" ", seatNumberIndex);
 
             return Int32.Parse(handLines[1].Substring(seatNumberIndex, spaceIndex - seatNumberIndex));
         }
@@ -130,8 +131,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             // Line 2  is:
             // Table: 'Cardiff' 5-max (real money) Seat #4 is the button
 
-            int startIndex = handLines[1].IndexOf("'", StringComparison.Ordinal) + 1;
-            int endIndex = handLines[1].LastIndexOf("'", StringComparison.Ordinal);
+            int startIndex = handLines[1].IndexOfFast("'") + 1;
+            int endIndex = handLines[1].LastIndexOfFast("'");
             
             return handLines[1].Substring(startIndex, endIndex - startIndex);
         }
@@ -146,7 +147,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             int numPlayers = 0;
             for(int i = 3; i< handLines.Length; i++)
             {
-                if (handLines[i].StartsWith("***"))
+                if (handLines[i].StartsWithFast("***"))
                 {
                     numPlayers = i - 3;
                     break;
@@ -255,7 +256,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             {
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("Seat ") == false)
+                if (handLine.StartsWithFast("Seat ") == false)
                 {
                     startOfActionsIndex = i;
                     break;
@@ -274,50 +275,50 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             {
                 string handLine = handLines[i];
 
-                if(handLine.StartsWith("*** SUMMARY ***"))
+                if (handLine.StartsWithFast("*** SUMMARY ***"))
                 {
                     currentStreet = Street.Showdown;
                     i++;
                     continue;
                 }
 
-                if(handLine.StartsWith("*** "))
+                if (handLine.StartsWithFast("*** "))
                 {
-                    if (handLine.StartsWith("*** PRE-FLOP ***"))
+                    if (handLine.StartsWithFast("*** PRE-FLOP ***"))
                     {
                         currentStreet = Street.Preflop;
                         continue;
-                    } 
-                    if (handLine.StartsWith("*** FLOP *** ["))
+                    }
+                    if (handLine.StartsWithFast("*** FLOP *** ["))
                     {
                         currentStreet = Street.Flop;
                         continue;
                     }
-                    if (handLine.StartsWith("*** TURN *** ["))
+                    if (handLine.StartsWithFast("*** TURN *** ["))
                     {
                         currentStreet = Street.Turn;
                         continue;
                     }
-                    if (handLine.StartsWith("*** RIVER *** ["))
+                    if (handLine.StartsWithFast("*** RIVER *** ["))
                     {
                         currentStreet = Street.River;
                         continue;
                     }
-                    if (handLine.StartsWith("*** SHOW DOWN ***"))
+                    if (handLine.StartsWithFast("*** SHOW DOWN ***"))
                     {
                         currentStreet = Street.Showdown;
                         continue;
                     }
 
                     // skip the following lines
-                    if (handLine.StartsWith("*** PRE-FLOP ***")
-                     || handLine.StartsWith("*** ANTE/BLINDS ***"))
+                    if (handLine.StartsWithFast("*** PRE-FLOP ***")
+                     || handLine.StartsWithFast("*** ANTE/BLINDS ***"))
                     {
                         continue;
                     }
                 }
 
-                bool isAllIn = handLine.EndsWith("and is all-in");
+                bool isAllIn = handLine.EndsWithFast("and is all-in");
                 if (isAllIn)
                 {
                     handLine = handLine.Substring(0, handLine.Length - 14);
@@ -329,13 +330,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                     // Seat 3: xGras (button) won 6.07€
                     // Seat 4: KryptonII (button) showed [Qd Ah] and won 42.32€ with One pair : Aces
                     // Seat 1: Hitchhiker won 0.90€
-                    if(handLine.StartsWith("Seat "))
+                    if (handLine.StartsWithFast("Seat "))
                     {
-                        int wonIndex = handLine.IndexOf(" won ", StringComparison.Ordinal);
+                        int wonIndex = handLine.IndexOfFast(" won ");
 
                         if (wonIndex != -1)
                         {
-                            int currencyIndex = handLine.IndexOf(_numberFormatInfo.CurrencySymbol, wonIndex, StringComparison.Ordinal);
+                            int currencyIndex = handLine.IndexOfFast(_numberFormatInfo.CurrencySymbol, wonIndex);
 
                             decimal amount = decimal.Parse(handLine.Substring(wonIndex + 5, currencyIndex - wonIndex - 4), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
 
@@ -364,7 +365,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 // Blind posting
                 if(currentStreet.Equals(Street.Null))
                 {
-                    if (handLine.StartsWith("Dealt to "))
+                    if (handLine.StartsWithFast("Dealt to "))
                     {
                         continue;
                     }
@@ -376,8 +377,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         continue;
                     }
 
-                    var smallBlindIndex = handLine.IndexOf("posts small blind", StringComparison.Ordinal);
-                    var bigBlindIndex = handLine.IndexOf("posts big blind", StringComparison.Ordinal);
+                    var smallBlindIndex = handLine.IndexOfFast("posts small blind");
+                    var bigBlindIndex = handLine.IndexOfFast("posts big blind");
 
                     // bkk2015 posts small blind 0.25€ out of position
                     // bkk2015 posts big blind 0.50€ out of position
@@ -387,7 +388,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                         handLine = handLine.Substring(0, handLine.Length - 16);
                     }
 
-                    var amountStartIndex = handLine.LastIndexOf(" ", StringComparison.Ordinal);
+                    var amountStartIndex = handLine.LastIndexOfFast(" ");
 
                     var amount = decimal.Parse(handLine.Substring(amountStartIndex + 1, handLine.Length - amountStartIndex - 1), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
                    
@@ -595,7 +596,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             for (int i = 2; i < handLines.Length; i++)
             {
                 // when the line starts with stars, we already have all players
-                if (handLines[i].StartsWith("***"))
+                if (handLines[i].StartsWithFast("***"))
                 {
                     playerListEndLine = i;
                     break;
@@ -633,7 +634,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 {
                     string line = handLines[i];
 
-                    if (line.EndsWith(")", StringComparison.Ordinal) && line.Contains(" shows ["))
+                    if (line.EndsWithFast(")") && line.Contains(" shows ["))
                     {
                         string name = GetPlayerNameFromHandLine(line);
 
@@ -654,7 +655,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                 string handLine = handLines[i];
 
-                if (!handLine.StartsWith("Seat"))
+                if (!handLine.StartsWithFast("Seat"))
                 {
                     break;
                 }
@@ -675,12 +676,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             for (int i = index; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line.EndsWith(" ***", StringComparison.Ordinal))
+                if (line.EndsWithFast(" ***"))
                 {
                     return -1;
                 }
 
-                if (line[line.Length - 1] == ']' && line.StartsWith("Dealt to ", StringComparison.Ordinal))
+                if (line[line.Length - 1] == ']' && line.StartsWithFast("Dealt to "))
                 {
                     return i;
                 }
@@ -709,7 +710,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             {
                 string line = handLines[i];
 
-                if (line.StartsWith("*** SHOW DOWN ***", StringComparison.Ordinal))
+                if (line.StartsWithFast("*** SHOW DOWN ***"))
                 {
                     return i + 1;
                 }
@@ -726,7 +727,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             {
                 string handLine = handLines[i];
 
-                if(!handLine.StartsWith("Board: [", StringComparison.Ordinal))
+                if(!handLine.StartsWithFast("Board: ["))
                 {
                     continue;
                 }
@@ -746,31 +747,31 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
         {
             int colonIndex = handLine.IndexOf(':');
             int nameStartIndex = 0;
-            if(handLine.StartsWith("Seat ") && colonIndex > -1)
+            if (handLine.StartsWithFast("Seat ") && colonIndex > -1)
             {
                 nameStartIndex = colonIndex + 2;
             }
             // TODO: improve this
             // in order to find the end of the name we need to try some things:
-            int nameEndIndex = handLine.IndexOf(" (small blind) ", nameStartIndex, StringComparison.Ordinal);
+            int nameEndIndex = handLine.IndexOfFast(" (small blind) ", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" (big blind) ", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" (big blind) ", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" (button) ", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" (button) ", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" mucked", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" mucked", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" showed [", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" showed [", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" won ", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" won ", nameStartIndex);
 
             if (nameEndIndex == -1)
-                nameEndIndex = handLine.IndexOf(" shows [", nameStartIndex, StringComparison.Ordinal);
+                nameEndIndex = handLine.IndexOfFast(" shows [", nameStartIndex);
 
             string name = handLine.Substring(nameStartIndex, nameEndIndex - nameStartIndex);
 
@@ -804,7 +805,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                     string rake = totalLine.Substring(lastSpaceIndex + 1, totalLine.Length - lastSpaceIndex - 1);
 
-                    if (totalLine.EndsWith("No rake"))
+                    if (totalLine.EndsWithFast("No rake"))
                     {
                         handHistorySummary.Rake = 0;
                     }

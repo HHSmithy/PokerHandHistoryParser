@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HandHistories.Objects.Hand
 {
-    public class RunItTwice
+    public sealed class RunItTwice
     {
         /// <summary>
         /// The second board

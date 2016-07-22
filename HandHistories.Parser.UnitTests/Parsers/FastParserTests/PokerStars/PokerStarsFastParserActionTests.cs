@@ -12,7 +12,7 @@ using HandHistories.Parser.UnitTests.Parsers.Base;
 namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 {
     [TestFixture]
-    class PokerStarsFastParserActionTests : HandHistoryParserBaseTests 
+    class PokerStarsFastParserActionTests : HandHistoryParserBaseTests
     {
         public PokerStarsFastParserActionTests()
             : base("PokerStars")

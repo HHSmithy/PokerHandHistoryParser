@@ -11,7 +11,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils.Strings;
+using HandHistories.Parser.Utils.Extensions;
 using System.Runtime.CompilerServices;
 using HandHistories.Objects.Hand;
 using System.Globalization;
@@ -93,7 +93,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             StartIndex = tablenameLine.IndexOf(' ', StartIndex) + 1;
             string tableName = tablenameLine.Substring(StartIndex);
 
-            int GameTypeStartIndex = tableName.LastIndexOf("(");
+            int GameTypeStartIndex = tableName.LastIndexOf('(');
 
             return tableName.Remove(GameTypeStartIndex).Trim();
         }
@@ -155,7 +155,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         public override bool IsValidHand(string[] handLines)
         {
-            if (handLines[handLines.Length - 1].StartsWith("Game ended at:"))
+            if (handLines[handLines.Length - 1].StartsWithFast("Game ended at:"))
             {
                 return true;
             }
@@ -175,7 +175,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = start; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line.EndsWith("received a card.", StringComparison.Ordinal))
+                if (line.EndsWithFast("received a card."))
                 {
                     return false;
                 }
@@ -351,10 +351,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         throw new HandActionException(actionLine, "Unrecognized endChar \"" + endChar + "\"");
                 }
 
-                int playerNameEndIndex = actionLine.IndexOf(" posts (");
+                int playerNameEndIndex = actionLine.IndexOfFast(" posts (");
                 if (playerNameEndIndex == -1)
                 {
-                    playerNameEndIndex = actionLine.IndexOf(" straddle (");
+                    playerNameEndIndex = actionLine.IndexOfFast(" straddle (");
                 }
 
                 string playerName = actionLine.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
@@ -413,7 +413,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             string result = null;
             foreach (var player in playerList)
             {
-                if (actionLine.StartsWith("*Player " + player.PlayerName) && player.PlayerName.Length > length)
+                if (actionLine.StartsWithFast("*Player " + player.PlayerName) && player.PlayerName.Length > length)
                 {
                     length = player.PlayerName.Length;
                     result = player.PlayerName;
@@ -435,7 +435,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             string result = null;
             foreach (var player in playerList)
             {
-                if (actionLine.StartsWith("Player " + player.PlayerName) && player.PlayerName.Length > length)
+                if (actionLine.StartsWithFast("Player " + player.PlayerName) && player.PlayerName.Length > length)
                 {
                     length = player.PlayerName.Length;
                     result = player.PlayerName;
@@ -556,7 +556,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 //Parsing playerName
                 //PlayerName can contain '(' & ')'
                 int NameStartIndex = colonIndex + 2;
-                int NameEndIndex = playerLine.LastIndexOf(" (");
+                int NameEndIndex = playerLine.LastIndexOfFast(" (");
                 string playerName = playerLine.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
 
                 int stackSizeStartIndex = NameEndIndex + 2;
@@ -650,7 +650,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
                 else if (endChar == ']')
                 {
-                    int NameEndIndex = line.LastIndexOf(" rec", line.Length - 12, StringComparison.Ordinal);
+                    int NameEndIndex = line.LastIndexOfFast(" rec", line.Length - 12);
                     string playerName = line.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
 
                     char rank = line[line.Length - 3];
@@ -689,7 +689,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 int playerNameStartIndex = PlayerMinLength + (summaryLine[0] == '*' ? WinningStartOffset : 0);
                 int playerNameEndIndex = summaryLine.IndexOf(' ', playerNameStartIndex);
 
-                int ShowIndex = summaryLine.IndexOf(" shows: ");
+                int ShowIndex = summaryLine.IndexOfFast(" shows: ");
                 if (ShowIndex != -1)
                 {
                     string playerName = summaryLine.Substring(playerNameStartIndex, ShowIndex - playerNameStartIndex);
@@ -750,7 +750,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = handLines.Length - 1; i > 0; i--)
             {
                 string line = handLines[i];
-                if (line.StartsWith("Pot", StringComparison.Ordinal))
+                if (line.StartsWithFast("Pot"))
                 {
                     //Pot: 80. Rake 2
                     const int PotStartIndex = 5;
@@ -758,12 +758,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                     string TotalPotStr = line.Substring(PotStartIndex, PotEndIndex - PotStartIndex);
 
-                    handHistorySummary.TotalPot = decimal.Parse(TotalPotStr, CultureInfo.InvariantCulture);
+                    handHistorySummary.TotalPot = TotalPotStr.ParseAmount();
 
                     int RakeStartIndex = line.LastIndexOf(' ');
                     string RakeStr = line.Substring(RakeStartIndex);
 
-                    handHistorySummary.Rake = decimal.Parse(RakeStr, CultureInfo.InvariantCulture);
+                    handHistorySummary.Rake = RakeStr.ParseAmount();
                     break;
                 }
             }
@@ -774,10 +774,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             for (int i = 0; i < handlines.Length; i++)
             {
                 string line = handlines[i];
-                if (line[0] == 'P' && line.EndsWith("]"))
+                if (line[0] == 'P' && line[line.Length - 1] == ']')
                 {
                     const int NameStartIndex = 7;
-                    int NameEndIndex = line.LastIndexOf(" r");
+                    int NameEndIndex = line.LastIndexOfFast(" r");
                     return line.Substring(NameStartIndex, NameEndIndex - NameStartIndex);
                 }
             }

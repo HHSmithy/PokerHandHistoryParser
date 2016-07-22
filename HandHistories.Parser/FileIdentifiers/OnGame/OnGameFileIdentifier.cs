@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.FileIdentifiers.OnGame
 {
@@ -15,7 +16,7 @@ namespace HandHistories.Parser.FileIdentifiers.OnGame
 
         public bool Match(string filetext)
         {
-            return filetext.StartsWith("***** History for hand ");
+            return filetext.StartsWithFast("***** History for hand ");
         }
     }
 }

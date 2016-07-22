@@ -73,8 +73,11 @@
     <Compile Include="FileIdentifiers\FileIdentifierTests.cs" />
     <Compile Include="Infrastructure\NinjectKernel.cs" />
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
+    <Compile Include="Parsers\FastParserTests\888\PacificFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\BossMedia\BossMediaFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
+    <Compile Include="Parsers\FastParserTests\IPoker\IPokerFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\PartyPoker\PartyPokerFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
     <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsFullTilt.cs" />
     <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsPokerStars.cs" />

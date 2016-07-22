@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Utils
 {
@@ -24,7 +25,7 @@ namespace HandHistories.Parser.Utils
                 lineStartIndex = handText.IndexOf('<', lineEndIndex);
             }
 
-            if (lines[0].StartsWith("<?xml"))
+            if (lines[0].StartsWithFast("<?xml"))
             {
                 lines.RemoveAt(0);
             }

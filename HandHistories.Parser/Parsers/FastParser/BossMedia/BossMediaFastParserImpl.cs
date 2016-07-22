@@ -11,7 +11,6 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils.Strings;
 using System.Globalization;
 using HandHistories.Parser.Utils.AllInAction;
 using HandHistories.Parser.Utils.FastParsing;
@@ -58,7 +57,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             {
                 string line = item.TrimEnd('\r', ' ');
 
-                if (line.StartsWith("<HISTORY ", StringComparison.Ordinal))
+                if (line.StartsWithFast("<HISTORY "))
                 {
                     handFound = true;
                     if (handLines.Count > 0)
@@ -223,7 +222,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override bool IsValidHand(string[] handLines)
         {
-            if (handLines[0].StartsWith("ID=\"") || handLines[0].StartsWith("<HIST"))
+            if (handLines[0].StartsWithFast("ID=\"") || handLines[0].StartsWithFast("<HIST"))
             {
                 return true;
             }
@@ -797,7 +796,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         static string GetXMLAttributeValue(string Line, string Name)
         {
             string search = " " + Name + "=\"";
-            int startIndex = Line.IndexOf(search);
+            int startIndex = Line.IndexOf(search, StringComparison.Ordinal);
 
             if (startIndex == -1)
             {
@@ -816,7 +815,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             for (int i = handLines.Length - 1; i > 0; i--)
             {
                 string line = handLines[i];
-                if (line.StartsWith("<SHOWDOWN", StringComparison.Ordinal))
+                if (line.StartsWithFast("<SHOWDOWN"))
                 {
                     var TotalPot = GetXMLAttributeValue(line, "POT");
                     var Rake = GetXMLAttributeValue(line, "RAKE");

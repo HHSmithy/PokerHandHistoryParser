@@ -6,6 +6,7 @@ using HandHistories.Parser.Compression;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.RegexParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
 {
@@ -123,7 +124,7 @@ namespace HandHistories.Parser.Parsers.RegexParser.PartyPoker
                 // Handle 20BB tables, due to Party putting the limit up as 40% of the actual
                 // limit. So for instance 20BB party $100NL the limit is displayed as $40NL.
                 // No idea why this is so.               
-                if (tableName.StartsWith("20BB"))
+                if (tableName.StartsWithFast("20BB"))
                 {
                     gameLimitNoSlash = ((int)((Int32.Parse(gameLimitNoSlash) / 4.0) * 10.0)).ToString();
                 }

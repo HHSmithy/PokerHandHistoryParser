@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.FileIdentifiers.IPoker
 {
@@ -16,18 +17,18 @@ namespace HandHistories.Parser.FileIdentifiers.IPoker
         public bool Match(string filetext)
         {
             bool stage1 = false;
-            if (filetext.StartsWith("<?xml"))
+            if (filetext.StartsWithFast("<?xml"))
             {
                 stage1 = true;
             }
-            else if(filetext.StartsWith("<session sessioncode="))
+            else if(filetext.StartsWithFast("<session sessioncode="))
             {
                 return true;
             }
 
             if (stage1)
             {
-                if (filetext.LastIndexOf("<session sessioncode=", 200) != -1)
+                if (filetext.LastIndexOfFast("<session sessioncode=", 200) != -1)
                 {
                     return true;
                 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.FileIdentifiers.Winamax
 {
@@ -15,7 +16,7 @@ namespace HandHistories.Parser.FileIdentifiers.Winamax
 
         public bool Match(string filetext)
         {
-            return filetext.StartsWith("Winamax Poker - ");
+            return filetext.StartsWithFast("Winamax Poker - ");
         }
     }
 }

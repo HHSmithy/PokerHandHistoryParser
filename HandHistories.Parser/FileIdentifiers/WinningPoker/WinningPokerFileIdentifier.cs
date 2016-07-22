@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.FileIdentifiers.WinningPoker
 {
@@ -15,7 +16,7 @@ namespace HandHistories.Parser.FileIdentifiers.WinningPoker
 
         public bool Match(string filetext)
         {
-            return filetext.StartsWith("Game started at: ");
+            return filetext.StartsWithFast("Game started at: ");
         }
     }
 }

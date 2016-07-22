@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.FileIdentifiers.Poker888
 {
@@ -21,11 +22,11 @@ namespace HandHistories.Parser.FileIdentifiers.Poker888
         public bool Match(string filetext)
         {
             bool Stage1 = false;
-            if (filetext.StartsWith("#Game No : "))
+            if (filetext.StartsWithFast("#Game No : "))
             {
                 Stage1 = true;
             }
-            if (filetext.StartsWith("***** "))
+            if (filetext.StartsWithFast("***** "))
             {
                 Stage1 = true;
             }

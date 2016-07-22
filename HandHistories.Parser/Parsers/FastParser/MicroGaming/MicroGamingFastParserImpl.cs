@@ -13,6 +13,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using System.Globalization;
 using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Parser.Utils.AllInAction;
+using HandHistories.Parser.Utils.Extensions;
 using System.Xml;
 using System.IO;
 using System.Net;
@@ -202,10 +203,10 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     continue;
                 }
 
-                int showCardsIndex = showLine.IndexOf("type=\"ShowCards\"", 15, StringComparison.OrdinalIgnoreCase);
+                int showCardsIndex = showLine.IndexOfFast("type=\"ShowCards\"", 15);
 
                 // if the cards are shown for this player
-                if (showCardsIndex != -1 && showLine.LastIndexOf(seatString, StringComparison.Ordinal) != -1)
+                if (showCardsIndex != -1 && showLine.LastIndexOfFast(seatString) != -1)
                 {
                     var cards = ParseCardsFromLines(handLines, ref i);
 
@@ -252,7 +253,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                     do
                     {
                         i++;
-                    } while (!handLines[i].StartsWith("</Action>", StringComparison.Ordinal));
+                    } while (!handLines[i].StartsWithFast("</Action>"));
                 }
 
                 if (actionLine[1] == 'C')
@@ -333,7 +334,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             }
 
             //Check 2 - Do we have a Game Tag
-            if (line0.StartsWith("<Game") == false)
+            if (line0.StartsWithFast("<Game") == false)
             {
                 return false;
             }
@@ -375,7 +376,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 string typeString = GetActionTypeString(line);
 
                 // if the Street changes
-                if (typeString.StartsWith("deal", StringComparison.Ordinal))
+                if (typeString.StartsWithFast("deal"))
                 {
                     currentStreet = GetStreetFromActionTypeString(typeString);
                     continue;
@@ -416,7 +417,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             {
                 string line = handLines[i];
 
-                if (line.StartsWith("</", StringComparison.Ordinal))
+                if (line.StartsWithFast("</"))
                 {
                     index = i + 1;
                     return actions;
@@ -439,7 +440,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         static string GetEncodedAttribute(string line, string name)
         {
-            int startIndex = line.IndexOf(name, StringComparison.Ordinal) + name.Length;
+            int startIndex = line.IndexOfFast(name) + name.Length;
             int endIndex = line.IndexOf('\"', startIndex + 1);
 
             return WebUtility.HtmlDecode(line.Substring(startIndex, endIndex - startIndex));
@@ -447,7 +448,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         static string GetAttribute(string line, string name)
         {
-            int startIndex = line.IndexOf(name, StringComparison.Ordinal) + name.Length;
+            int startIndex = line.IndexOfFast(name) + name.Length;
             int endIndex = line.IndexOf('\"', startIndex + 1);
 
             return line.Substring(startIndex, endIndex - startIndex);
@@ -500,7 +501,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         static int GetActionNumberFromActionLine(string actionLine)
         {
-            if (actionLine.IndexOf(" seq=", 7, StringComparison.Ordinal) == -1) return -1;
+            if (actionLine.IndexOfFast(" seq=", 7) == -1) return -1;
 
             string actionNumString = GetAttribute(actionLine, " seq=\"");
             
@@ -661,11 +662,11 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             for (int i = 0; i < handLines.Length; i++)
             {
                 string line = handLines[i];
-                if (line.EndsWith(heroDealtToEnd, StringComparison.Ordinal) && line.Contains("type=\"DealCards\""))
+                if (line.EndsWithFast(heroDealtToEnd) && line.Contains("type=\"DealCards\""))
                 {
                     return i;
                 }
-                else if (line.EndsWith("</Action>", StringComparison.Ordinal))
+                else if (line.EndsWithFast("</Action>"))
                 {
                     break;
                 }
@@ -722,7 +723,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             for (int i = handLines.Length - 1; i > 0; i--)
             {
                 // search for the win tag
-                if (handLines[i].EndsWith("Win\">", StringComparison.Ordinal))
+                if (handLines[i].EndsWithFast("Win\">"))
                 {
                     return i + 1;
                 }

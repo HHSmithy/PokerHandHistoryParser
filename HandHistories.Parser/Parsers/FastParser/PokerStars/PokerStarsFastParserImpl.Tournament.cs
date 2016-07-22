@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 {
@@ -17,7 +18,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // PokerStars Hand #132690000000: Tournament #1174000000, 70FPP Hold'em No Limit - Level I (10/20) - 2015/03/01 17:32:02 ET
             var commaIndex = line.IndexOf(',', TournamentIdStartindex);
 
-            var endIndex = line.IndexOf("- ", commaIndex) - 1;
+            var endIndex = line.IndexOfFast("- ", commaIndex) - 1;
 
             //We need to work in re
             var secondSpaceIndex = line.IndexOf(' ', commaIndex + 3);
@@ -36,11 +37,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 string gameString = line.Substring(commaIndex + 2, endIndex - commaIndex - 2);
 
                 //if the length lookup fails we bruteforce the gametype
-                if (gameString.EndsWith("Hold'em No Limit", StringComparison.Ordinal))
+                if (gameString.EndsWithFast("Hold'em No Limit"))
                 {
                     return GameType.NoLimitHoldem;
                 }
-                if (gameString.EndsWith("Omaha Pot Limit", StringComparison.Ordinal))
+                if (gameString.EndsWithFast("Omaha Pot Limit"))
                 {
                     return GameType.PotLimitOmaha;
                 }

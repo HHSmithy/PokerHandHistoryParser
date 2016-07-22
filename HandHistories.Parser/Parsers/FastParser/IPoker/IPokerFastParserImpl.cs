@@ -13,6 +13,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -99,7 +100,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         int GetSeatNumberFromPlayerLine(string playerLine)
         {
-            int seatOffset = playerLine.IndexOf(" s", StringComparison.Ordinal) + 7;
+            int seatOffset = playerLine.IndexOfFast(" s") + 7;
             int seatEndOffset = playerLine.IndexOf('"', seatOffset);
             string seatNumberString = playerLine.Substring(seatOffset, seatEndOffset - seatOffset);
             return Int32.Parse(seatNumberString);            
@@ -107,14 +108,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         bool IsPlayerLineDealer(string playerLine)
         {
-            int dealerOffset = playerLine.IndexOf(" d", StringComparison.Ordinal);
+            int dealerOffset = playerLine.IndexOfFast(" d");
             int dealerValue = Int32.Parse(" " + playerLine[dealerOffset + 9]);
             return dealerValue == 1;
         }
 
         decimal GetStackFromPlayerLine(string playerLine)
         {
-            int stackStartPos = playerLine.IndexOf(" c", StringComparison.Ordinal) + 8;
+            int stackStartPos = playerLine.IndexOfFast(" c") + 8;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
             return ParseDecimal(stackString);
@@ -122,7 +123,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         decimal GetWinningsFromPlayerLine(string playerLine)
         {
-            int stackStartPos = playerLine.IndexOf(" w", StringComparison.Ordinal) + 6;
+            int stackStartPos = playerLine.IndexOfFast(" w") + 6;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
             if (stackString == "")
@@ -134,7 +135,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         string GetNameFromPlayerLine(string playerLine)
         {
-            int nameStartPos = playerLine.IndexOf(" n", StringComparison.Ordinal) + 7;
+            int nameStartPos = playerLine.IndexOfFast(" n") + 7;
             int nameEndPos = playerLine.IndexOf('"', nameStartPos) - 1;
             string name = playerLine.Substring(nameStartPos, nameEndPos - nameStartPos + 1);
             return name;
@@ -180,11 +181,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             //            Case 2, we have multiple <session> tags each holding a single <game> tag.
             //            We need our enumerable to have only case 2 representations for parsing
 
-            if (rawHandHistories.IndexOf("<session", StringComparison.Ordinal) == rawHandHistories.LastIndexOf("<session", StringComparison.Ordinal))
+            if (rawHandHistories.IndexOfFast("<session") == rawHandHistories.LastIndexOfFast("<session"))
             {
                 //We are case 1 - convert to case 2
 
-                int endOfGeneralInfoIndex = rawHandHistories.IndexOf("</general>", StringComparison.Ordinal);
+                int endOfGeneralInfoIndex = rawHandHistories.IndexOfFast("</general>");
 
                 if (endOfGeneralInfoIndex == -1)
                 {
@@ -406,7 +407,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             string tableName = ParseTableName(handLines);
 
-            if (tableName.StartsWith("(Shallow)"))
+            if (tableName.StartsWithFast("(Shallow)"))
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Shallow);
             }
@@ -499,8 +500,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         public override bool IsValidHand(string[] handLines)
         {
             //Check 1 - Are we in a Session Tag
-            if (handLines[0].StartsWith("<session") == false ||
-                handLines[handLines.Length - 1].StartsWith("</session") == false)
+            if (handLines[0].StartsWithFast("<session") == false ||
+                handLines[handLines.Length - 1].StartsWithFast("</session") == false)
             {
                 return false;
             }
@@ -560,7 +561,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 //If we're an action, parse the action and act accordingly
                 else if (handLine[1] == 'a')
                 {
-                    HandAction action = GetHandActionFromActionLine(handLine, currentStreet);                   
+                    HandAction action = ParseHandAction(handLine, currentStreet);                   
                     actions.Add(action);
                 }
             }
@@ -647,12 +648,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return winningAndShowCardActions;
         }
 
-        private HandAction GetHandActionFromActionLine(string handLine, Street street)
+        public static HandAction ParseHandAction(string line, Street street)
         {
-            int actionTypeNumber = GetActionTypeFromActionLine(handLine);
-            string actionPlayerName = GetPlayerFromActionLine(handLine);
-            decimal value = GetValueFromActionLine(handLine);
-            int actionNumber = GetActionNumberFromActionLine(handLine);
+            int actionTypeNumber = GetActionTypeFromActionLine(line);
+            string actionPlayerName = GetPlayerFromActionLine(line);
+            decimal value = GetValueFromActionLine(line);
+            int actionNumber = GetActionNumberFromActionLine(line);
             HandActionType actionType;
             switch (actionTypeNumber)
             {
@@ -674,7 +675,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 case 5:
                     actionType = HandActionType.BET;
                     break;
-                case 6://Both are all-ins but don't know the difference between them
+                case 6://Both are all-ins but we don't know the difference between them
                 case 7:
                     return new AllInAction(actionPlayerName, value, street, false, actionNumber);
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
@@ -688,14 +689,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     actionType = HandActionType.RAISE;
                     break;
                 default:
-                    throw new Exception(string.Format("Encountered unknown Action Type: {0} w/ line \r\n{1}", actionTypeNumber, handLine));
+                    throw new Exception(string.Format("Encountered unknown Action Type: {0} w/ line \r\n{1}", actionTypeNumber, line));
             }
             return new HandAction(actionPlayerName, actionType, value, street, actionNumber);
         }
 
         static int GetRoundNumberFromLine(string handLine)
         {
-            int startPos = handLine.IndexOf(" n", StringComparison.Ordinal) + 5;
+            int startPos = handLine.IndexOfFast(" n") + 5;
             int endPos = handLine.IndexOf('"', startPos) - 1;
             string numString = handLine.Substring(startPos, endPos - startPos + 1);
             return Int32.Parse(numString);            
@@ -703,7 +704,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         static int GetActionNumberFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf(" n", StringComparison.Ordinal) + 5;
+            int actionStartPos = actionLine.IndexOfFast(" n") + 5;
             int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
@@ -711,7 +712,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         static string GetPlayerFromActionLine(string actionLine)
         {
-            int nameStartPos = actionLine.IndexOf(" p", StringComparison.Ordinal) + 9;
+            int nameStartPos = actionLine.IndexOfFast(" p") + 9;
             int nameEndPos = actionLine.IndexOf('"', nameStartPos) - 1;
             string name = actionLine.Substring(nameStartPos, nameEndPos - nameStartPos + 1);
             return name;
@@ -719,7 +720,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         static decimal GetValueFromActionLine(string actionLine)
         {
-            int startPos = actionLine.IndexOf(" s", StringComparison.Ordinal) + 6;
+            int startPos = actionLine.IndexOfFast(" s") + 6;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
             string value = actionLine.Substring(startPos, endPos - startPos + 1);
             return ParseDecimal(value);
@@ -727,7 +728,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         static int GetActionTypeFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf(" t", StringComparison.Ordinal) + 7;
+            int actionStartPos = actionLine.IndexOfFast(" t") + 7;
             int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
@@ -757,7 +758,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                                    });
             }
 
-            var actionLines = handLines.Where(p => p.StartsWith("<act", StringComparison.Ordinal));
+            var actionLines = handLines.Where(p => p.StartsWithFast("<act"));
             foreach (var line in actionLines)
             {
                 string player = GetPlayerFromActionLine(line);
@@ -781,7 +782,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 string line = cardLines[i];
 
                 //Getting the cards Type
-                int typeIndex = line.IndexOf("e=\"", 10, StringComparison.Ordinal) + 3;
+                int typeIndex = line.IndexOfFast("e=\"", 10) + 3;
                 char typeChar = line[typeIndex];
 
                 //We only care about Pocket Cards
@@ -800,7 +801,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     continue;
                 }
 
-                int playerNameStartIndex = line.IndexOf("r=\"", 10, StringComparison.Ordinal) + 3;
+                int playerNameStartIndex = line.IndexOfFast("r=\"", 10) + 3;
                 int playerNameEndIndex = line.IndexOf('"', playerNameStartIndex) - 1;
                 string playerName = line.Substring(playerNameStartIndex,
                                                        playerNameEndIndex - playerNameStartIndex + 1);
@@ -851,7 +852,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 handLine = handLine.Replace("10", "T");
 
                 //The suit/ranks are reversed, so we need to reverse them when adding them to our board card string
-                int typeIndex = handLine.IndexOf("e=\"", StringComparison.Ordinal);
+                int typeIndex = handLine.IndexOfFast("e=\"");
                 char streetChar = handLine[typeIndex + 3];
 
                 int cardsStartIndex = handLine.LastIndexOf('>', handLine.Length - 9) + 1;
