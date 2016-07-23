@@ -17,38 +17,11 @@ using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
-    public sealed class IPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed partial class IPokerFastParserImpl : HandHistoryParserFastImpl
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        private static readonly NumberFormatInfo NumberFormatInfo_EURO = new NumberFormatInfo
-        {
-            NegativeSign = "-",
-            CurrencyDecimalSeparator = ".",
-            CurrencyGroupSeparator = ",",
-            CurrencySymbol = "€"
-        };
-
-        private static readonly NumberFormatInfo NumberFormatInfo_USD = new NumberFormatInfo
-        {
-            NegativeSign = "-",
-            CurrencyDecimalSeparator = ".",
-            CurrencyGroupSeparator = ",",
-            CurrencySymbol = "€"
-        };
-
-        private static readonly NumberFormatInfo NumberFormatInfo_GBP = new NumberFormatInfo
-        {
-            NegativeSign = "-",
-            CurrencyDecimalSeparator = ".",
-            CurrencyGroupSeparator = ",",
-            CurrencySymbol = "£"
-        };
-
         private readonly bool _isIpoker2;
-        private static int CurrencyParsingErrors;
-        [ThreadStatic]
-        private static NumberFormatInfo NumberFormatInfo = NumberFormatInfo_EURO;
 
         public IPokerFastParserImpl(bool isIpoker2 = false)
         {
@@ -118,7 +91,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int stackStartPos = playerLine.IndexOfFast(" c") + 8;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             string stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-            return ParseDecimal(stackString);
+            return stackString.ParseAmount();
         }
 
         decimal GetWinningsFromPlayerLine(string playerLine)
@@ -130,7 +103,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 return 0;
             }
-            return ParseDecimal(stackString);
+            return stackString.ParseAmount();
         }
 
         string GetNameFromPlayerLine(string playerLine)
@@ -216,6 +189,27 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
+            for (int i = 3; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                if (line[1] == '/')
+                {
+                    return PokerFormat.CashGame;
+                }
+                if (line.StartsWithFast("<tournamentname>"))
+                {
+                    if (line.Contains("SNG"))
+                    {
+                        return PokerFormat.SitAndGo;
+                    }
+                    else
+                    {
+                        return PokerFormat.MultiTableTournament;
+                    }
+                }
+            }
+
             return PokerFormat.CashGame;
         }
 
@@ -233,11 +227,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             throw new HandIdException(handLines[1], "Couldn't find handid");
-        }
-
-        protected override long ParseTournamentId(string[] handLines)
-        {
-            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -301,7 +290,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return handLines[8];
         }
 
-        protected List<string> GetPlayerLinesFromHandLines(string[] handLines)
+        static List<string> GetPlayerLinesFromHandLines(string[] handLines)
         {
             /*
               Returns all of the detail lines between the <players> tags
@@ -331,11 +320,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return playerLines;
         }
 
-        private int GetFirstPlayerIndex(string[] handLines)
+        static int GetFirstPlayerIndex(string[] handLines)
         {
             for (int i = 18; i < handLines.Length; i++)
             {
-                if (handLines[i][1] == 'p')
+                string line = handLines[i];
+                if (line[1] == 'p' && line[4] == 'y')
                 {
                     return i + 1;
                 }
@@ -435,15 +425,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 case '$':
                     currency = Currency.USD;
-                    NumberFormatInfo = NumberFormatInfo_USD;
                     break;
                 case '€':
                     currency = Currency.EURO;
-                    NumberFormatInfo = NumberFormatInfo_EURO;
                     break;
                 case '£':
                     currency = Currency.GBP;
-                    NumberFormatInfo = NumberFormatInfo_GBP;
                     break;
                 default:
                     string tagValue = GetCurrencyTagValue(handLines);
@@ -451,15 +438,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     {
                         case "USD":
                             currency = Currency.USD;
-                            NumberFormatInfo = NumberFormatInfo_USD;
                             break;
                         case "GBP":
                             currency = Currency.GBP;
-                            NumberFormatInfo = NumberFormatInfo_GBP;
                             break;
                         case "EUR":
                             currency = Currency.EURO;
-                            NumberFormatInfo = NumberFormatInfo_EURO;
                             break;
                         default:
                             throw new LimitException(handLines[0], "Unrecognized currency symbol " + currencySymbol);
@@ -469,18 +453,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             int slashIndex = limitString.IndexOf('/');
 
+            if (slashIndex == -1)
+            {
+                return null;
+            }
+
             string smallString = limitString.Remove(slashIndex);
-            decimal small = ParseDecimal(smallString);
+            decimal small = smallString.ParseAmount();
  
             string bigString = limitString.Substring(slashIndex + 1);
-            decimal big = ParseDecimal(bigString);
+            decimal big = bigString.ParseAmount();
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
-        }
-
-        protected override Buyin ParseBuyin(string[] handLines)
-        {
-            throw new NotImplementedException();
         }
 
         private string GetCurrencyTagValue(string[] handLines)
@@ -723,7 +707,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             int startPos = actionLine.IndexOfFast(" s") + 6;
             int endPos = actionLine.IndexOf('"', startPos) - 1;
             string value = actionLine.Substring(startPos, endPos - startPos + 1);
-            return ParseDecimal(value);
+            return value.ParseAmount();
         }
 
         static int GetActionTypeFromActionLine(string actionLine)
@@ -877,15 +861,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             return BoardCards.FromCards(boardCards.ToArray());
-        }
-
-        static decimal ParseDecimal(string amountString)
-        {
-            string currencyRemoved = amountString.TrimStart('€', '$', '£');
-
-            decimal amount = decimal.Parse(currencyRemoved, CultureInfo.InvariantCulture);
-
-            return amount;
         }
 
         protected override string ParseHeroName(string[] handlines)

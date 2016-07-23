@@ -42,6 +42,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
         }
 
         [Test]
+        public void ParseBlindActionLine_Calls_Throws()
+        {
+            Assert.Throws<HandActionException>(delegate
+            {
+                Parser.ParseBlindAction("pat_aug calls [$27]");
+            });
+        }
+
+        [Test]
         public void ParseRegularActionLine_Bet_Works()
         {
             HandAction handAction = Parser.ParseRegularActionLine("Jack3bet bets [$10.43]", Street.Flop);

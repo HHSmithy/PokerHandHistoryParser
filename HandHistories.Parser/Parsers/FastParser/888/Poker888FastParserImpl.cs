@@ -348,7 +348,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 }
             }
             
-            return handActions;//FixUncalledBets(handActions, null, null);
+            return handActions;
         }
 
         public static HandAction ParseRegularActionLine(string line, Street currentStreet)
@@ -391,19 +391,42 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             throw new HandActionException(line, "Unknown handline.");
         }
 
-        private int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int actionIndex)
+        static int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int actionIndex)
         {
             for (int i = actionIndex; i < handLines.Length; i++)
             {
                 string line = handLines[i];
 
-                if (line == "** Dealing down cards **")
+                if (line[0] == '*')
                 {
-                    return i + 1;
+                    if (line.StartsWithFast("** Dealing down cards **"))
+                    {
+                        return i + 1;
+                    }
+                    if (line.StartsWithFast("** Dealing "))
+                    {
+                        return i;
+                    }
+                    else if (line == "** Summary **")
+                    {
+                        return i;
+                    }
                 }
 
-                var action = ParseBlindAction(line);
-                handActions.Add(action);
+                try
+                {
+                    var action = ParseBlindAction(line);
+                    handActions.Add(action);
+                }
+                catch (HandActionException)
+                {
+                    var action = ParseRegularActionLine(line, Street.Preflop);
+                    handActions.Add(action);
+                }
+                catch
+                {
+                    throw;
+                }
             }
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No cards was dealt");
         }
@@ -415,6 +438,12 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             const int PostingWidth = 18;//" posts dead blind ".Length
             int openSquareIndex = line.LastIndexOf('[');
             string amountString = line.Substring(openSquareIndex + 1, line.Length - openSquareIndex - 2);
+
+            //there may be folds during the blinds
+            if (openSquareIndex == -1 || line[openSquareIndex - 2] != 'd')
+            {
+                throw new HandActionException(line, "Not a blindAction");
+            }
 
             string playerName;
             decimal amount;

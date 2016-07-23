@@ -85,6 +85,7 @@
     <Compile Include="Parsers\FastParser\BossMedia\BossMediaFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
     <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
     <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />

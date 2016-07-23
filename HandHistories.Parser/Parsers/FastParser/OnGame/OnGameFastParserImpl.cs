@@ -363,27 +363,12 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             var handHistory = new HandHistory();
             ParseExtraHandInformation(handLines, handHistory);
 
-            int startOfActionsIndex = -1;
-            for (int i = 6; i < handLines.Length; i++)
-            {
-                string handLine = handLines[i];
-
-                if (handLine.StartsWithFast("Seat ") == false)
-                {
-                    startOfActionsIndex = i;
-                    break;
-                }
-            }
-
-            if (startOfActionsIndex == -1)
-            {
-                throw new HandActionException(handLines[0], "Couldnt find the start of the actions");
-            }
+            int actionsIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>();
             Street currentStreet = Street.Preflop;
 
-            for (int i = startOfActionsIndex; i < handLines.Length; i++)
+            for (int i = actionsIndex; i < handLines.Length; i++)
             {
                 string handLine = handLines[i];
 
@@ -439,143 +424,176 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 if (handLine[handLine.Length - 1] == ':') // check for Summary: line
                 {
                     currentStreet = Street.Showdown;
-                }
-
-                if (currentStreet == Street.Showdown)
-                {
-                    // Main pot: $2.25 won by zatli74 ($2.14)
-                    // Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
-                    if (handLine.StartsWithFast("Main pot:"))
-                    {
-                        var nameStart = handLine.IndexOfFast(" won by") + 7;
-                        var splitted = handLine.Substring(nameStart).Split(',');
-                        foreach (var winner in splitted)
-                        {
-                            int openParenIndex = winner.LastIndexOf('(');
-                            var amountStr = winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2).TrimStart(CurrencyChars);
-                            decimal amount = decimal.Parse(amountStr, _numberFormatInfo);
-
-                            string playerName = winner.Substring(1, openParenIndex - 2);
-
-                            handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
-                        }
-                    }
-                    // Side pot 1: $12.26 won by iplaymybest ($11.65)
-                    // Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)
-                    if (handLine.StartsWithFast("Side pot "))
-                    {
-                        var nameStart = handLine.IndexOfFast(" won by") + 7;
-                        var splitted = handLine.Substring(nameStart).Split(',');
-
-                        var potNumber = Int32.Parse(handLine[9].ToString());
-                        foreach (var winner in splitted)
-                        {
-                            int openParenIndex = winner.LastIndexOf('(');
-                            var amountStr = winner.Substring(openParenIndex + 1, winner.Length - openParenIndex - 2).TrimStart(CurrencyChars);
-                            decimal amount = decimal.Parse(amountStr, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, _numberFormatInfo);
-
-                            string playerName = winner.Substring(1, openParenIndex - 2);
-
-                            handActions.Add(new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potNumber));
-                        }
-
-                    }
-
-                    continue;
+                    actionsIndex = i;
+                    break;
                 }
 
                 if (handLine[handLine.Length - 1] == ')' && currentStreet != Street.Showdown)
                 {
-                    // small-blind & big-blind lines ex:
-                    //  GlassILass posts small blind ($0.25)
-                    //  EvilJihnny99 posts big blind ($0.25)
-                    //  19kb72 posts big blind ($6.50) [all in]
-
-                    int openParenIndex = handLine.LastIndexOf('(');
-                    decimal amount = decimal.Parse(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 2).TrimStart(CurrencyChars), _numberFormatInfo);
-
-                    char blindIdentifier = handLine[openParenIndex - 10];
-                    if (blindIdentifier == 'b') // big blind
-                    {
-                        string playerName = handLine.Substring(0, openParenIndex - 17);
-                        handActions.Add(new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop));
-                        continue;
-                    }
-                    else if (blindIdentifier == 'a')  // small-blind
-                    {
-                        string playerName = handLine.Substring(0, openParenIndex - 19);
-                        handActions.Add(new HandAction(playerName, HandActionType.SMALL_BLIND, amount, Street.Preflop));
-                        continue;
-                    }
-                    else if (blindIdentifier == 'e') // posts - dead
-                    {
-                        string playerName = handLine.Substring(0, openParenIndex - 18);
-                        handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, Street.Preflop));
-                        continue;
-                    }
-
-                    throw new HandActionException(handLine, "Unknown hand-line: " + handLine);
-                }
-
-                // Check for folds & checks
-                if (handLine[handLine.Length - 1] == 's')
-                {
-                    if (handLine[handLine.Length - 2] == 'd') // folds
-                    {
-                        string playerName = handLine.Substring(0, handLine.Length - 6);
-                        handActions.Add(new HandAction(playerName, HandActionType.FOLD, 0, currentStreet));
-                    }
-                    else if (handLine[handLine.Length - 2] == 'k') // checks
-                    {
-                        string playerName = handLine.Substring(0, handLine.Length - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.CHECK, 0, currentStreet));
-                    }
+                    handActions.Add(ParseBlindAction(handLine));
                     continue;
                 }
                 else
                 {
-                    //Old format
-                    //{playername} calls $18.00
-
-                    //New format 
-                    //{playername} calls $13
-
-                    int currencyIndex = handLine.IndexOfAny(CurrencyChars);
-
-                    int valueEndIndex = handLine.IndexOf(' ', currencyIndex);
-                    if (valueEndIndex == -1)
-                    {
-                        valueEndIndex = handLine.Length;
-                    }
-
-                    char actionIdentifier = handLine[currencyIndex - 3];
-
-                    var amountstr = handLine.Substring(currencyIndex, valueEndIndex - currencyIndex);
-                    string playerName;
-                    decimal amount = decimal.Parse(amountstr.TrimStart(CurrencyChars), _numberFormatInfo);
-                    switch (actionIdentifier)
-                    {
-                        case 'l': // calls
-                            playerName = handLine.Substring(0, currencyIndex - 7);
-                            handActions.Add(new HandAction(playerName, HandActionType.CALL, amount, currentStreet, isAllIn));
-                            break;
-                        case 'e': // raises
-                            // ex: zatli74 raises $1.00 to $1.00
-                            playerName = handLine.Substring(0, currencyIndex - 8);
-                            handActions.Add(new HandAction(playerName, HandActionType.RAISE, amount, currentStreet, isAllIn));
-                            break;
-                        case 't': // bets
-                            playerName = handLine.Substring(0, currencyIndex - 6);
-                            handActions.Add(new HandAction(playerName, HandActionType.BET, amount, currentStreet, isAllIn));    
-                            break;
-                    }
-                    continue;
+                    handActions.Add(ParseRegularActionLine(handLine, currentStreet, isAllIn));
                 }
-
-                throw new HandActionException(handLine, "Unknown hand-line: " + handLine);
         }
+            if (currentStreet == Street.Showdown)
+            {
+                ParseShowdownActions(handLines, actionsIndex, handActions);
+            }
 
             return handActions;
+        }
+
+        public static void ParseShowdownActions(string[] handLines, int actionsIndex, List<HandAction> handActions)
+        {
+            for (int i = actionsIndex; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+
+                if (line.StartsWithFast("Seat ")) // done with actions once we reach the seat line again
+                {
+                    break;
+                }
+
+                // Main pot: $2.25 won by zatli74 ($2.14)
+                // Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)
+                if (line.StartsWithFast("Main pot:"))
+                {
+                    var nameStart = line.IndexOfFast(" won by") + 7;
+                    string winners = line.Substring(nameStart);
+
+
+                    var splitted = line.Substring(nameStart).Split(')');
+                    foreach (var winner in splitted.Where(p => !string.IsNullOrWhiteSpace(p)))
+                    {
+                        int openParenIndex = winner.LastIndexOf('(');
+                        var amountStr = winner.Substring(openParenIndex + 1);
+                        decimal amount = amountStr.ParseAmount();
+
+                        string playerName = winner.Substring(1, openParenIndex - 2).Trim();
+
+                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    }
+                }
+                // Side pot 1: $12.26 won by iplaymybest ($11.65)
+                // Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)
+                if (line.StartsWithFast("Side pot "))
+                {
+                    var nameStart = line.IndexOfFast(" won by") + 7;
+                    var splitted = line.Substring(nameStart).Split(')');
+
+                    var potNumber = Int32.Parse(line[9].ToString());
+                    foreach (var winner in splitted.Where(p => !string.IsNullOrWhiteSpace(p)))
+                    {
+                        int openParenIndex = winner.LastIndexOf('(');
+                        var amountStr = winner.Substring(openParenIndex + 1);
+                        decimal amount = amountStr.ParseAmount();
+
+                        string playerName = winner.Substring(1, openParenIndex - 2).Trim();
+
+                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potNumber));
+                    }
+
+                }
+            }
+        }
+
+        static int GetFirstActionIndex(string[] handLines)
+        {
+            for (int i = 6; i < handLines.Length; i++)
+            {
+                string handLine = handLines[i];
+
+                if (handLine.StartsWithFast("Seat ") == false)
+                {
+                    return i;
+                }
+            }
+            throw new ArgumentException("No Start Action Found");
+        }
+
+        public static HandAction ParseBlindAction(string line)
+        {
+            // small-blind & big-blind lines ex:
+            //  GlassILass posts small blind ($0.25)
+            //  EvilJihnny99 posts big blind ($0.25)
+            //  19kb72 posts big blind ($6.50) [all in]
+
+            int openParenIndex = line.LastIndexOf('(');
+            decimal amount = line.Substring(openParenIndex + 1, line.Length - openParenIndex - 2).ParseAmount();
+
+            char blindIdentifier = line[openParenIndex - 10];
+            if (blindIdentifier == 'b') // big blind
+            {
+                string playerName = line.Substring(0, openParenIndex - 17);
+                return new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop);
+            }
+            else if (blindIdentifier == 'a')  // small-blind
+            {
+                string playerName = line.Substring(0, openParenIndex - 19);
+                return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, Street.Preflop);
+            }
+            else if (blindIdentifier == 'e') // posts - dead
+            {
+                string playerName = line.Substring(0, openParenIndex - 18);
+                return new HandAction(playerName, HandActionType.POSTS, amount, Street.Preflop);
+            }
+
+            throw new HandActionException(line, "Unknown hand-line: " + line);
+        }
+
+        public static HandAction ParseRegularActionLine(string line, Street currentStreet, bool isAllIn)
+        {
+            string playerName;
+            // Check for folds & checks
+            if (line[line.Length - 1] == 's')
+            {
+                if (line[line.Length - 2] == 'd') // folds
+                {
+                    playerName = line.Substring(0, line.Length - 6);
+                    return new HandAction(playerName, HandActionType.FOLD, 0, currentStreet);
+                }
+                else if (line[line.Length - 2] == 'k') // checks
+                {
+                    playerName = line.Substring(0, line.Length - 7);
+                    return new HandAction(playerName, HandActionType.CHECK, 0, currentStreet);
+                }
+                return null;
+            }
+
+            //Old format
+            //{playername} calls $18.00
+
+            //New format 
+            //{playername} calls $13
+
+            int currencyIndex = line.IndexOfAny(CurrencyChars);
+            int valueEndIndex = line.IndexOf(' ', currencyIndex);
+            if (valueEndIndex == -1)
+            {
+                valueEndIndex = line.Length;
+            }
+
+            char actionIdentifier = line[currencyIndex - 3];
+            var amountstr = line.Substring(currencyIndex, valueEndIndex - currencyIndex);
+            decimal amount = amountstr.ParseAmount();
+            switch (actionIdentifier)
+            {
+                case 'l': // calls
+                    playerName = line.Substring(0, currencyIndex - 7);
+                    return new HandAction(playerName, HandActionType.CALL, amount, currentStreet, isAllIn);
+                case 'e': // raises
+                    // ex: zatli74 raises $1.00 to $1.00
+                    playerName = line.Substring(0, currencyIndex - 8);
+                    return new HandAction(playerName, HandActionType.RAISE, amount, currentStreet, isAllIn);
+                case 't': // bets
+                    playerName = line.Substring(0, currencyIndex - 6);
+                    return new HandAction(playerName, HandActionType.BET, amount, currentStreet, isAllIn);
+            }
+
+            throw new HandActionException(line, "Unknown hand-line: " + line);
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)

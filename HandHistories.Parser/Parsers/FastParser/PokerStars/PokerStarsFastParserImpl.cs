@@ -438,67 +438,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
 
-        protected override Buyin ParseBuyin(string[] handLines)
-        {
-            // Expect the first line to look like:
-            // PokerStars Hand #121723607468: Tournament #973955807, $2.30+$2.30+$0.40 USD Hold'em No Limit - Level XIII (600/1200)
-            // PokerStars Hand #121732709812: Tournament #974092011, $55.56+$4.44 USD Hold'em No Limit - Level VI (100/200) - 2014/09/18 17:02:21 ET
-            // this is obviously not needed for CashGame
-            var TournamentIdStartindex = GetTournamentIdStartIndex(handLines[0]);
-
-            int startIndex = handLines[0].IndexOf(',', TournamentIdStartindex) + 2;
-            int endIndex = handLines[0].IndexOf(' ', startIndex);
-
-            string buyinSubstring = handLines[0].Substring(startIndex, endIndex - startIndex);
-
-            Currency currency;
-            if (buyinSubstring.EndsWithFast("FPP"))
-            {
-                currency = Currency.RAKE_POINTS;
-            }
-            else if (buyinSubstring.Contains("Freeroll"))
-            {
-                currency = Currency.SATELLITE;
-            }
-            else
-            {
-                currency = ParseCurrency(handLines[0], buyinSubstring[0]);
-            }
-
-            decimal prizePoolValue;
-            decimal rake;
-            decimal knockoutValue = 0m;
-
-            var buyinSplit = buyinSubstring.Split('+');
-            if (buyinSplit.Length == 3)
-            {
-                prizePoolValue = buyinSplit[0].ParseAmount();
-                knockoutValue = buyinSplit[1].ParseAmount();
-                rake = buyinSplit[2].ParseAmount();
-            }
-            else if (buyinSplit.Length == 2)
-            {
-                prizePoolValue = buyinSplit[0].ParseAmount();
-                rake = buyinSplit[1].ParseAmount();
-            }
-            else if (buyinSplit.Length == 1)
-            {
-                if (!buyinSplit[0].EndsWithFast("FPP"))
-                {
-                    throw new BuyinException(handLines[0], "Expected FPP Buyin Format");
-                }
-
-                prizePoolValue = 0;
-                rake = 0;
-            }
-            else
-            {
-                throw new BuyinException(handLines[0], "Unrecognized Buyin Format");
-            }
-
-            return Buyin.FromBuyinRake(prizePoolValue, rake, currency, knockoutValue != 0m, knockoutValue);
-        }
-
         private Currency ParseCurrency(string handLine, char currencySymbol)
         {
             switch (currencySymbol)
@@ -995,7 +934,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
         }
 
-        public HandAction ParsePostingActionLine(string actionLine, int colonIndex, bool smallBlindPosted, bool bigBlindPosted)
+        public static HandAction ParsePostingActionLine(string actionLine, int colonIndex, bool smallBlindPosted, bool bigBlindPosted)
         {
             string playerName = actionLine.Substring(0, colonIndex);
             bool isAllIn = false;
@@ -1024,8 +963,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int firstDigitIndex;
             HandActionType handActionType;
-
-
 
             switch (identifierChar)
             {

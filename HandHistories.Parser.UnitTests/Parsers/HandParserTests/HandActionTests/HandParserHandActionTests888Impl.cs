@@ -17,6 +17,48 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
          [Test]
+         public void ParseHandActions_DealingCardsMissing()
+         {
+             List<HandAction> expectedActions = new List<HandAction>()
+             {
+                new HandAction("Player1", HandActionType.SMALL_BLIND, 2m, Street.Preflop),
+                new HandAction("Player2", HandActionType.BIG_BLIND, 4m, Street.Preflop),
+                new HandAction("Player3", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("Player1", HandActionType.CALL, 2m, Street.Preflop),
+                new HandAction("Player2", HandActionType.FOLD, 0m, Street.Preflop),
+                new WinningsAction("Player1", HandActionType.WINS, 8m, 0),
+             };
+
+             TestParseActions("DealingCardsMissing", expectedActions);
+         }
+
+         [Test]
+         public void ParseHandActions_DealingCardsMissing2()
+         {
+             List<HandAction> expectedActions = new List<HandAction>()
+             {
+                new HandAction("Player5", HandActionType.SMALL_BLIND, 10m, Street.Preflop),
+                new HandAction("Player1", HandActionType.BIG_BLIND, 20m, Street.Preflop),
+                new HandAction("Player2", HandActionType.RAISE, 70m, Street.Preflop),
+                new HandAction("Player4", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("Player5", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("Player1", HandActionType.RAISE, 200m, Street.Preflop),
+                new HandAction("Player2", HandActionType.CALL, 150m, Street.Preflop),
+
+                new HandAction("Player1", HandActionType.BET, 275m, Street.Flop),
+                new HandAction("Player2", HandActionType.RAISE, 1275m, Street.Flop),
+                new HandAction("Player1", HandActionType.RAISE, 1524m, Street.Flop, true),
+                new HandAction("Player2", HandActionType.CALL, 524m, Street.Flop),
+
+                new HandAction("Player1", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("Player2", HandActionType.SHOW, 0m, Street.Showdown),
+                new WinningsAction("Player2", HandActionType.WINS, 4044m, 0),
+             };
+
+             TestParseActions("DealingCardsMissing2", expectedActions);
+         }
+
+         [Test]
          public void ParseHandActions_PostingDead()
          {
              var expected = new List<HandAction>()
@@ -30,7 +72,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("gaokaipoker", HandActionType.FOLD, Street.Preflop),
                 new HandAction("icebbberg", HandActionType.FOLD, Street.Preflop),
                 new HandAction("whoisdrew", HandActionType.CHECK, Street.Preflop),
-
 
                 new HandAction("whoisdrew", HandActionType.CHECK, Street.Flop),
                 new HandAction("GYAMEPRO", HandActionType.CHECK, Street.Flop),

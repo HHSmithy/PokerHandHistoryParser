@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="641000000">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>  
+		<tablename>Twister €1 SNG, 848000000</tablename>
+		<tournamentcurrency></tournamentcurrency>  
+		<duration>00:04</duration>  
+		<gamecount>18</gamecount>  
+		<startdate>2015-01-01 01:01:01</startdate>  
+		<currency>EUR</currency>  
+		<nickname></nickname>  
+		<bets>3,975</bets>  
+		<wins>3,475</wins>  
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>0</ipoints>
+		<statuspoints>1.75</statuspoints>
+		<awardpoints>0</awardpoints>
+		<tournamentname>Twister €1 SNG</tournamentname>
+		<place>2</place>
+		<buyin>€0.67+€0.07+€0.26</buyin>
+		<totalbuyin>€1.00</totalbuyin>
+		<ipoints>0</ipoints>
+		<win>€0.00</win>
+		<statuspoints>1.75</statuspoints>
+		<awardpoints>0</awardpoints>  
+	</general>  
+<game gamecode="635000000">
+<general>
+	<startdate>2015-01-01 01:01:01</startdate>		  
+	<players>
+	<player seat="3" name="Player1" chips="500" dealer="1" win="290" bet="140" rebuy="0" addon="0" reg_code="6410000000"/>
+	<player seat="6" name="Player2" chips="500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+	<player seat="10" name="Player3" chips="500" dealer="0" win="0" bet="140" rebuy="0" addon="0" reg_code="-"/>
+	</players>
+</general>
+<round no="0">
+	<action no="1" player="Player2" type="1" sum="10" cards="[cards]"/>
+	<action no="2" player="Player3" type="2" sum="20" cards="[cards]"/>
+</round>
+<round no="1">
+	<cards type="Pocket" player="Player1">CK C6</cards>
+	<action no="3" player="Player1" type="23" sum="60" cards=""/>
+	<cards type="Pocket" player="Player2">
+	</cards>
+	<action no="4" player="Player2" type="0" sum="0" cards=""/>
+	<cards type="Pocket" player="Player3">HK C7</cards>
+	<action no="5" player="Player3" type="3" sum="40" cards=""/>
+</round>
+<round no="2">
+	<cards type="Flop" player="">SA DK SQ</cards>
+	<action no="7" player="Player1" type="3" sum="20" cards=""/>
+	<action no="6" player="Player3" type="5" sum="20" cards=""/>
+</round>
+<round no="3">
+	<cards type="Turn" player="">D6</cards>
+	<action no="9" player="Player1" type="3" sum="20" cards=""/>
+	<action no="8" player="Player3" type="5" sum="20" cards=""/>
+</round>
+<round no="4">
+	<cards type="River" player="">D5</cards>
+	<action no="11" player="Player1" type="23" sum="40" cards=""/>
+	<action no="10" player="Player3" type="5" sum="20" cards=""/>
+	<action no="12" player="Player3" type="3" sum="20" cards=""/>
+</round>
+</game>
+</session>

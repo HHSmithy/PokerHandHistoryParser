@@ -13,7 +13,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.PokerFor
     //[TestFixture("PokerStars", 109664415396L, "ZoomHand")]
     //[TestFixture("PokerStars", 109690806574L, "SidePot")]
     //[TestFixture("Merge", 533636922070L, "GeneralHand")]
-    //[TestFixture("IPoker", 5383708755L, "GeneralHand")]
+    [TestFixture("IPoker", 635000000L, "GeneralHand")]
     //[TestFixture("OnGame", 5361850810464L, "GeneralHand")]
     //[TestFixture("Pacific", 349736402, "GeneralHand")]
     //[TestFixture("Entraction", 2645975604, "GeneralHand")]

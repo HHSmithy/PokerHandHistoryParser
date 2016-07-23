@@ -313,10 +313,6 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
-            // this is needed for future uncalledbet fixes
-            var handHistory = new HandHistory();
-            ParseExtraHandInformation(handLines, handHistory);
-
             var actions = new List<HandAction>(handLines.Length);
             // TODO: implement
             int startIndex = FindHandActionsStart(handLines);
