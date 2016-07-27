@@ -34,8 +34,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
         {
             string handText = SampleHandHistoryRepository.GetLimitExampleHandHistoryText(format, Site, fileName);
             
-            Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetSummmaryParser().ParseLimit(handText).ToString(CultureInfo.InvariantCulture), "IHandHistorySummaryParser: ParseLimit");
-            Assert.AreEqual(expectedLimitString.Replace("e", "€"), GetParser().ParseLimit(handText).ToString(CultureInfo.InvariantCulture), "IHandHistoryParser: ParseLimit");
+            Assert.AreEqual(expectedLimitString.Replace("e", "€").Replace("A", "Ante-"), GetSummmaryParser().ParseLimit(handText).ToString(CultureInfo.InvariantCulture), "IHandHistorySummaryParser: ParseLimit");
+            Assert.AreEqual(expectedLimitString.Replace("e", "€").Replace("A", "Ante-"), GetParser().ParseLimit(handText).ToString(CultureInfo.InvariantCulture), "IHandHistoryParser: ParseLimit");
         }
 
         [TestCase(1)]

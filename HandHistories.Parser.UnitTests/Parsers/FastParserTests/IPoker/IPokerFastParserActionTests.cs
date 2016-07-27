@@ -1,14 +1,14 @@
-﻿using System;
+﻿using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
+using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Parsers.FastParser.IPoker;
+using HandHistories.Parser.UnitTests.Parsers.Base;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HandHistories.Objects.Actions;
-using HandHistories.Objects.Cards;
-using HandHistories.Objects.GameDescription;
-using NUnit.Framework;
-using HandHistories.Parser.UnitTests.Parsers.Base;
-using HandHistories.Parser.Parsers.Exceptions;
-using HandHistories.Parser.Parsers.FastParser.IPoker;
 
 namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.IPoker
 {

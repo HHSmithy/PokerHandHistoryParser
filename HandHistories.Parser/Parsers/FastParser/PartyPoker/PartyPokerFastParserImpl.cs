@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using HandHistories.Objects.Actions;
+﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
+using HandHistories.Parser.Utils.Pot;
+using HandHistories.Parser.Utils.Uncalled;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using HandHistories.Parser.Utils.FastParsing;
-using HandHistories.Parser.Utils.Extensions;
-using HandHistories.Objects.Hand;
 
 namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 {
-    public sealed class PartyPokerFastParserImpl : HandHistoryParserFastImpl
+    public sealed partial class PartyPokerFastParserImpl : HandHistoryParserFastImpl
     {
         private readonly SiteName _siteName;
 
@@ -31,12 +33,22 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             get { return _siteName; }
         }
 
+        public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
+        public override bool RequiresUncalledBetWinAdjustment
+        {
+            get { return true; }
+        }
+
         public override bool RequiresTotalPotCalculation
         {
             get { return true; }
         }
 
-        public override bool RequiresUncalledBetFix
+        public override bool RequiresAllInUpdates
         {
             get { return true; }
         }
@@ -183,6 +195,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
+            string line = handLines[1];
+
+            if (line.Contains("Buy-in Trny:"))
+            {
+                if (handLines[2].Contains("Table #"))
+                {
+                    return PokerFormat.MultiTableTournament;
+                }
+                else
+                {
+                    return PokerFormat.SitAndGo;
+                }
+            }
+
             return PokerFormat.CashGame;
         }
 
@@ -197,11 +223,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             string handId = handLines[0].Substring(firstDigitIndex, lastDigitIndex - firstDigitIndex);
             return long.Parse(handId);
-        }
-
-        protected override long ParseTournamentId(string[] handLines)
-        {
-            throw new NotImplementedException();
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -235,6 +256,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
         protected override GameType ParseGameType(string[] handLines)
         {
+            PokerFormat format = ParsePokerFormat(handLines);
+
+            if (format == PokerFormat.CashGame)
+            {
+                return ParseCashGameGametype(handLines);
+            }
+            else
+            {
+                return ParseGametypeTournament(handLines);
+            }
+        }
+
+        private static GameType ParseCashGameGametype(string[] handLines)
+        {
             // Expect the fourth line to look like this: 
             // "$600 USD PL Omaha - Thursday, September 25, 01:10:46 EDT 2014"
             string line = handLines[1];
@@ -242,7 +277,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             // can be either 1 or 2 spaces after the colon
             int startIndex = line.IndexOf(' ');
             startIndex = line.IndexOf(' ', startIndex + 1) + 1;
-            int endIndex = line.IndexOfFast(" -", startIndex);
+            int endIndex = line.IndexOf(" -", startIndex);
 
             int gameTypeLength = endIndex - startIndex;
             int gameLength = gameTypeLength - 3;
@@ -252,14 +287,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 case "FL":
                     switch (gameLength)
-	                {
+                    {
                         case 5://"Omaha".Length
                             return GameType.FixedLimitOmaha;
                         case 13://"Texas Hold'em".Length
                             return GameType.FixedLimitHoldem;
                         case 11://"Omaha Hi-Lo".Length
                             return GameType.FixedLimitOmahaHiLo;
-	                }
+                    }
                     break;
                 case "NL":
                     switch (gameLength)
@@ -294,6 +329,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         }
 
         protected override Limit ParseLimit(string[] handLines)
+        {
+            var format = ParsePokerFormat(handLines);
+            if (format == PokerFormat.CashGame)
+            {
+                return ParseCashgameLimit(handLines);
+            }
+            else
+            {
+                return ParseTournamentLimit(handLines);
+            }            
+        }
+
+        private Limit ParseCashgameLimit(string[] handLines)
         {
             // The different formats for the stakes:
             // "$5/$10 USD FL Texas Hold'em"
@@ -333,11 +381,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return ParseBuyInLimit(limitSubstring, currency);
         }
 
-        protected override Buyin ParseBuyin(string[] handLines)
-        {
-            throw new NotImplementedException();
-        }
-
         static Limit Parse20BBLimit(string limitSubstring, Currency currency)
         {
             decimal bigblind = limitSubstring.ParseAmount() * 0.4m;
@@ -361,6 +404,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 case '£':
                     currency = Currency.GBP;
                     break;
+
+                case 'N':
+                case 'P':
+                case 'F':
+                    return Currency.CHIPS;
+
                 default:
                     throw new LimitException(line, "Unrecognized currency symbol " + currencySymbol);
             }
@@ -432,16 +481,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
 
             for (int lineNumber = actionIndex; lineNumber < handLines.Length; lineNumber++)
             {
-                string handLine = handLines[lineNumber];
+                string line = handLines[lineNumber];
 
-                if (IsConnectionLost(handLine))
+                if (IsConnectionLost(line))
                 {
-                    throw new HandActionException(handLine, "Lost connection during HH saving, unable to parse file");
+                    throw new InvalidHandException(string.Join(Environment.NewLine, handLines), "Lost connection during HH saving, unable to parse file");
                 }
 
                 try
                 {
-                    var action = ParseRegularActionLine(handLine, ref currentStreet);
+                    var action = ParseRegularActionLine(line, ref currentStreet);
 
                     if (action != null)
                     {
@@ -454,20 +503,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     // AND the line does not start with a star
                     // !!! THIS SHOULD BE DISABLED FOR DEBUGGING PURPOSES !!!
                     var players = ParsePlayers(handLines);
-                    if (!players.Select(p => p.PlayerName).Any(handLine.Contains) && handLine[0] != '*')
+                    if (!players.Select(p => p.PlayerName).Any(line.Contains) && line[0] != '*')
                         continue;
 
                     // skip emoticon lines like
                     // zehnbube - no skill
                     // zehnbube - donkey fish
-                    if (players.Select(p => p.PlayerName + " -").Any(handLine.Contains))
+                    if (players.Select(p => p.PlayerName + " -").Any(line.Contains))
                         continue;
 
                     // if it's the last line, there can be some weird chat lines that we can ignore
                     if (lineNumber == handLines.Length - 1)
                         continue;
 
-                    throw new HandActionException(handLine, "Couldn't parse line '" + handLine + " with ex: " + ex.Message);
+                    throw new HandActionException(line, "Couldn't parse line '" + line + " with ex: " + ex.Message);
                 }
             }
 
@@ -532,8 +581,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     }
 
                 case 's':
-                    return ParseActionWithoutSize(line, currentStreet);
-
+                    //saboniiplz wins 28,304 chips
+                    if (line[line.Length - 2] == 'p')
+                    {
+                        return ParseWinsAction(line);
+                    }
+                    else
+                    {
+                        return ParseActionWithoutSize(line, currentStreet);
+                    }
+                    
                 //Expected Formats:
                 //"Player wins $5.18 USD"
                 case 'D':
@@ -552,10 +609,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         {
             //Expected Formats:
             //"Player wins $5.18 USD"
+            //Tournament format:
+            //saboniiplz wins 28,304 chips
             int nameEndIndex = line.IndexOfFast(" wins ");
             string playerName = line.Remove(nameEndIndex);
 
-            int amountStartIndex = nameEndIndex + 7;
+            int amountStartIndex = nameEndIndex + 6;
             decimal amount = ParseDecimal(line, amountStartIndex);
 
             if (potID != 0)
@@ -573,7 +632,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             const int allInLength = 12;//" is all-In  ".Length
 
             int amountStartIndex = line.LastIndexOf('[');
-            decimal amount = ParseDecimal(line, amountStartIndex + 2);
+            decimal amount = ParseDecimal(line, amountStartIndex + 1);
 
             char actionID = line[amountStartIndex - 3];
             string playerName;
@@ -594,7 +653,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 //"dr. spaz is all-In  [$4.90 USD]"
                 case 'n':
                     playerName = line.Remove(amountStartIndex - allInLength);
-                    return new AllInAction(playerName, amount, currentStreet, true);
+                    return new HandAction(playerName, HandActionType.ALL_IN, amount, currentStreet);
                 default:
                     throw new ArgumentException("Unknown actionID: " + line);
             }
@@ -660,13 +719,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 if (isWinType(line, " shows [", ref playerNameIndex))
                 {
                     playerName = line.Remove(playerNameIndex);
-                    return new HandAction(playerName, HandActionType.SHOW, 0m, street);
+                    return new HandAction(playerName, HandActionType.SHOW, 0m, Street.Showdown);
                 }
                 else if (line.Contains(" for low."))
                 {
                     playerNameIndex = line.IndexOfFast(" shows");
                     playerName = line.Remove(playerNameIndex);
-                    return new HandAction(playerName, HandActionType.SHOWS_FOR_LOW, 0m, street);
+                    return new HandAction(playerName, HandActionType.SHOWS_FOR_LOW, 0m, Street.Showdown);
                 }
                 else
                 {
@@ -679,7 +738,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                 int amountStartIndex = line.LastIndexOf('[');
                 if (isWinType(line, " wins [", ref playerNameIndex))
                 {
-                    decimal amount = ParseDecimal(line, amountStartIndex);
+                    decimal amount = ParseDecimal(line, amountStartIndex + 1);
                     return new WinningsAction(playerName, HandActionType.WINS, amount, 0);
                 }
 
@@ -712,13 +771,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 playerNameIndex = line.IndexOfFast(" does not ");
                 playerName = line.Remove(playerNameIndex);
-                return new HandAction(playerName, HandActionType.MUCKS, 0m, street);
+                return new HandAction(playerName, HandActionType.MUCKS, 0m, Street.Showdown);
             }
             else if (line.Contains(" doesn't show"))
             {
                 playerNameIndex = line.IndexOfFast(" doesn't show");
                 playerName = line.Remove(playerNameIndex);
-                return new HandAction(playerName, HandActionType.SHOW, 0m, street);
+                return new HandAction(playerName, HandActionType.SHOW, 0m, Street.Showdown);
             }
 
             return null;
@@ -819,9 +878,14 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     int openParenIndex = line.LastIndexOf('(');
 
                     string playerName = line.Substring(playerNameStartIndex, openParenIndex - playerNameStartIndex - 1);
-                    decimal stack = ParseDecimal(line, openParenIndex + 3);
+                    decimal stack = ParseDecimal(line, openParenIndex + 2);
 
                     playerList.Add(new Player(playerName, stack, seatNumber));
+
+                    if (isAnonymousPlayer(playerName))
+                    {
+                        throw new InvalidHandException(string.Join(", ", handLines), "Anonomous Player in Hand");
+                    }
                 }
 
                 // post blind
@@ -922,6 +986,15 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return playerList;
         }
 
+        static bool isAnonymousPlayer(string playerName)
+        {
+            if (playerName.Length == 6 || playerName.Length == 7)
+            {
+                return playerName.StartsWithFast("Player") && char.IsDigit(playerName[6]);
+            }
+            return false;
+        }
+
         static int GetHeroCardsIndex(string[] handLines, int startIndex)
         {
             for (int i = startIndex; i < handLines.Length; i++)
@@ -992,8 +1065,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             {
                 string line = handLines[i];
 
-                char lastChar = line[line.Length - 2];
-                if (lastChar == ']')
+                if (line[line.Length - 2] == ']' || line[line.Length - 1] == ']')
                 {
                     handActions.Add(ParseBlindAction(line));
                 }
@@ -1011,6 +1083,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             const int smallBlindWidth = 19;//" posts small blind ".Length
             const int bigBlindWidth = 17;//" posts big blind ".Length
             const int PostingWidth = 24;//" posts big blind + dead ".Length
+            const int AnteWidth = 12;//" posts big blind + dead ".Length
 
             string playerName;
             HandActionType action;
@@ -1044,6 +1117,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     amount = ParseDecimal(line, amountStartIndex + 1);
                     break;
 
+                //saboniiplz posts ante [400]
+                case 's':
+                    playerName = line.Remove(amountStartIndex - AnteWidth);
+                    action = HandActionType.ANTE;
+                    amount = ParseDecimal(line, amountStartIndex + 1);
+                    break;
                 default:
                     throw new ArgumentException("Unknown posting Action: " + line);
             }

@@ -56,7 +56,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             switch (Site)
             {
-                case SiteName.Winamax:
                 case SiteName.OnGame:
                 case SiteName.Pacific:
                 case SiteName.Entraction:

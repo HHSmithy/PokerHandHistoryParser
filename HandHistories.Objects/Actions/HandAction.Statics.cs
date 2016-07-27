@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HandHistories.Objects.Cards;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,5 +36,10 @@ namespace HandHistories.Objects.Actions
             return !(a == b);
         }
         #endregion
+
+        public static HandAction AllIn(string playername, HandActionType action, decimal amount, Street street, int actionNumber = 0)
+        {
+            return new HandAction(playername, action, street, true, actionNumber);
+        }
     }
 }

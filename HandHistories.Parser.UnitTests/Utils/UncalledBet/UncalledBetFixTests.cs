@@ -23,6 +23,20 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
             Assert.AreEqual(expectedAmount, lastAction.Amount);
         }
 
+        void TestUncalledbetWinsAdjustment(string expectedPlayer, decimal expectedWinAmount, List<HandAction> handActions)
+        {
+            var actions = UncalledBet.FixUncalledBetWins(UncalledBet.Fix(handActions));
+
+            var lastAction = actions.Last();
+            if (!lastAction.IsWinningsAction)
+            {
+                Assert.Fail("Winning is not last");
+            }
+
+            Assert.AreEqual(expectedPlayer, lastAction.PlayerName);
+            Assert.AreEqual(expectedWinAmount, lastAction.Amount);
+        }
+
         [TestCase]
         public void UncalledBetTest_NoFixRequired_1()
         {
@@ -173,6 +187,59 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
             };
 
             TestUncalledbet("P2", 3m, hand);
+        }
+
+        [TestCase]
+        public void UncalledBetTest_UncalledBetWinsFix_1()
+        {
+            var HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 0.2m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.BET, 0.1m, Street.Flop),
+                new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
+                new WinningsAction("P2", HandActionType.WINS, 0.5m, 0),
+            };
+
+            TestUncalledbetWinsAdjustment("P2", 0.4m, HandActions);
+        }
+
+        [TestCase]
+        public void UncalledBetTest_UncalledBetWinsFix_Special()
+        {
+            var HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.BET, 10m, Street.Flop),
+                new HandAction("P2", HandActionType.RAISE, 40m, Street.Flop),
+                new HandAction("P3", HandActionType.RAISE, 100m, Street.Flop, true),
+                new HandAction("P1", HandActionType.RAISE, 250m, Street.Flop, true),
+                new HandAction("P2", HandActionType.CALL, 30m, Street.Flop, true),
+                new HandAction("P3", HandActionType.UNCALLED_BET, 150m, Street.Flop),
+                new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
+                new WinningsAction("P2", HandActionType.WINS, 210m, 0),
+                new WinningsAction("P3", HandActionType.WINS, 220m, 0),
+            };
+
+            var actions = UncalledBet.FixUncalledBetWins(HandActions.ToList());
+
+            var expected = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.BET, 10m, Street.Flop),
+                new HandAction("P2", HandActionType.RAISE, 40m, Street.Flop),
+                new HandAction("P3", HandActionType.RAISE, 100m, Street.Flop, true),
+                new HandAction("P1", HandActionType.RAISE, 250m, Street.Flop, true),
+                new HandAction("P2", HandActionType.CALL, 30m, Street.Flop, true),
+                new HandAction("P3", HandActionType.UNCALLED_BET, 150m, Street.Flop),
+                new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
+                new WinningsAction("P2", HandActionType.WINS, 210m, 0),
+                new WinningsAction("P3", HandActionType.WINS, 70m, 0),
+            };
+
+            Assert.AreEqual(expected, actions);
         }
     }
 }

@@ -74,12 +74,17 @@
     <Compile Include="Infrastructure\NinjectKernel.cs" />
     <Compile Include="Parsers\Base\HandHistoryParserBaseTests.cs" />
     <Compile Include="Parsers\FastParserTests\888\PacificFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\888\PacificFastParseExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\BossMedia\BossMediaFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\MicroGaming\MicroGamingFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\OnGame\OnGameFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\PartyPoker\PartyPokerFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\PokerStars\PokerStarsFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\Winamax\WinamaxFastParserActionTests.cs" />
+    <Compile Include="Parsers\FastParserTests\Winning\WinningFastParserActionTests.cs" />
+    <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTestsMicroGamingImpl.MTT.cs" />
     <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsFullTilt.cs" />
     <Compile Include="Parsers\HandParserTests\RunItTwiceTests\HandParserRunItTwiceTestsPokerStars.cs" />
     <Compile Include="Parsers\HandParserTests\CommunityCardTests\HandParserCommunityCardTests.cs" />
@@ -117,14 +122,18 @@
     <Compile Include="Parsers\HandSummaryParserTests\GameTypes\HandParserGameTypeTests.cs" />
     <Compile Include="Parsers\Base\ISampleHandHistoryRepository.cs" />
     <Compile Include="Parsers\Base\SampleHandHistoryRepositoryFileBasedImpl.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests_SNG.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests_CashGame.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests_MTT.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\GeneralHandTests\HandParserGeneralHandTests.cs" />
     <Compile Include="Parsers\HandParserTests\HandActionTests\HandParserHandActionTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\HeroTests\DealtToHeroTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_MTT.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_CashGame.cs" />
-    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserTestLimitTests_MTT.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_SnG.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.SitAndGo.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.MultiTableTournament.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\PokerFormatTests\HandParserPokerFormatTests.CashGame.cs" />
@@ -139,6 +148,8 @@
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsFullTilt.cs" />
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsPokerStars.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\IntegrityTests\HandIntegrityTests.cs" />
+    <Compile Include="Utils\IntegrityTests\StreetIntegrityTests.cs" />
     <Compile Include="Utils\Pot\RakeCalculatorTests.cs" />
     <Compile Include="Utils\RaiseAdjuster\RaiseAdjusterTests.cs" />
     <Compile Include="Utils\UncalledBet\UncalledBetFixTests.cs" />
@@ -393,7 +404,9 @@
     <Content Include="SampleHandHistories\IPoker\CashGame\GeneralHands\HeroName.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AnteAction.txt" />
+    <Content Include="SampleHandHistories\IPoker\CashGame\HandActionTests\AnteAction.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\IdTest\IdTest1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -445,6 +458,9 @@
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\OmahaHiLo.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\HandActionTests\AllInHandWithUncalledBet.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\Limits\Limit1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -515,6 +531,16 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\ValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\MicroGaming\MultiTableTournament\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\MicroGaming\MultiTableTournament\GeneralHands\GeneralHand.txt">
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\MicroGaming\MultiTableTournament\HandActionTests\SBisAllin.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\OnGameIt\CashGame\Limits\EuroTable.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -522,6 +548,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\OnGame\CashGame\Limits\Limit6.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\OnGame\MultiTableTournament\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Pacific\CashGame\ExtraHands\SpecialCards.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Pacific\CashGame\GeneralHands\HeroName.txt">
@@ -558,6 +590,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PartyPoker\CashGame\MultipleHandsTests\5MultipleHands.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\CashGame\PlayerTests\WithAnonomous.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\MultiTableTournament\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PartyPoker\MultiTableTournament\GeneralHands\GeneralHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\BlindActionTests\Ante.txt">
@@ -1422,6 +1463,9 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\PlayerTests\WithShowdown.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\PlayerTests\WithSittingOut.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\Seats\6 Max.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1456,6 +1500,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\ValidHandTests\ValidHand_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Winamax\MultiTableTournament\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Winamax\SitAndGo\GeneralHands\GeneralHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\Winamax\MultiTableTournament\Limits\Limit1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\WinningPoker\CashGame\GameTypeTests\CapNoLimitHoldem.txt">

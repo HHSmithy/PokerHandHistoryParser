@@ -2,6 +2,7 @@
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Utils.Pot;
+using HandHistories.Parser.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,129 @@ namespace HandHistories.Parser.Utils
     {
         public static decimal MaxRakePercentage = 0.1m;
 
+        public static void Assert(HandHistory hand)
+        {
+            string reason = null;
+
+            if (!Check(hand, out reason))
+            {
+                throw new HandIntegrityException(reason);
+            }
+        }
+
         public static bool Check(HandHistory hand, out string reason)
         {
             reason = null;
+            return Check(hand, ValidationChecks.ALL, out reason);
+        }
 
-            return CheckTotalPot(hand, out reason) && CheckActionOrder(hand.HandActions, out reason);
+        public static bool Check(HandHistory hand, ValidationChecks checks, out string reason)
+        {
+            reason = null;
+            if (checks.HasFlag(ValidationChecks.TOTAL_POT))
+            {
+                if (!CheckTotalPot(hand, out reason))
+                {
+                    return false;
+                }
+            }
+            if (checks.HasFlag(ValidationChecks.STREET_ORDER))
+            {
+                if (!CheckStreetOrder(hand.HandActions, out reason))
+                {
+                    return false;
+                }
+            }
+            if (checks.HasFlag(ValidationChecks.BLIND_ORDER))
+            {
+                if (!CheckBlindOrder(hand.HandActions, out reason))
+                {
+                    return false;
+                }
+            }
+            if (checks.HasFlag(ValidationChecks.ACTION_ORDER))
+            {
+                if (!CheckActionOrder(hand.HandActions, out reason))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool CheckBlindOrder(List<HandAction> list, out string reason)
+        {
+            reason = null;
+            bool blindsEnded = false;
+            foreach (var item in list)
+            {
+                bool validBlindPhaseAction = item.IsBlinds
+                    || item.HandActionType == HandActionType.ANTE
+                    || item.HandActionType == HandActionType.POSTS
+                    || item.HandActionType == HandActionType.POSTS_DEAD;
+
+                if (blindsEnded && validBlindPhaseAction)
+                {
+                    reason = "Blind occuring after action: #" + item;
+		            return false;
+                }
+                if (!validBlindPhaseAction && item.HandActionType != HandActionType.FOLD)
+                {
+                    blindsEnded = true;
+                }
+            }
+            return true;
+        }
+
+        private static bool CheckStreetOrder(List<HandAction> actions, out string reason)
+        {
+            reason = null;
+            Street previousStreet = Street.Preflop;
+            foreach (var item in actions)
+            {
+                var nextStreet = item.Street;
+                switch (previousStreet)
+                {
+                    case Street.Preflop:
+                        if (nextStreet == Street.Turn || nextStreet == Street.River)
+                        {
+                            reason = string.Format("Jumping Street {0} -> {1}", previousStreet, nextStreet); 
+                            return false;
+                        }
+                        break;
+                    case Street.Flop:
+                        if (nextStreet == Street.Preflop || nextStreet == Street.River)
+                        {
+                            reason = string.Format("Jumping Street {0} -> {1}", previousStreet, nextStreet);
+                            return false;
+                        }
+                        break;
+                    case Street.Turn:
+                        if (nextStreet == Street.Preflop || nextStreet == Street.Flop)
+                        {
+                            reason = string.Format("Jumping Street {0} -> {1}", previousStreet, nextStreet);
+                            return false;
+                        }
+                        break;
+                    case Street.River:
+                        if (nextStreet == Street.Preflop || nextStreet == Street.Flop || nextStreet == Street.Turn)
+                        {
+                            reason = string.Format("Jumping Street {0} -> {1}", previousStreet, nextStreet);
+                            return false;
+                        }
+                        break;
+                    case Street.Showdown:
+                        if (nextStreet != Street.Showdown)
+                        {
+                            reason = string.Format("Jumping Street {0} -> {1}", previousStreet, nextStreet);
+                            return false;
+                        }
+                        break;
+                }
+                previousStreet = nextStreet;
+            }
+
+            return true;
         }
 
         static bool CheckActionOrder(List<HandAction> list, out string reason)
@@ -29,7 +148,12 @@ namespace HandHistories.Parser.Utils
             for (int i = 0; i < list.Count; i++)
 			{
                 var item = list[i];
-			    if (!item.IsBlinds && item.HandActionType != HandActionType.ANTE)
+                bool validBlindPhaseAction = item.IsBlinds 
+                    || item.HandActionType == HandActionType.ANTE
+                    || item.HandActionType == HandActionType.FOLD
+                    || item.HandActionType == HandActionType.POSTS
+                    || item.HandActionType == HandActionType.POSTS_DEAD;
+                if (!validBlindPhaseAction)
 	            {
 		            blindEndIndex = i;
                     break;
@@ -40,11 +164,6 @@ namespace HandHistories.Parser.Utils
             for (int i = blindEndIndex; i < list.Count; i++)
 			{
 			    var item = list[i];
-			    if (item.IsBlinds || item.HandActionType == HandActionType.ANTE)
-	            {
-                    reason = "Blind occuring after action: #" + i;
-		            return false;
-                }
 
                 if (item.Street != currentStreet)
                 {
@@ -69,7 +188,7 @@ namespace HandHistories.Parser.Utils
                 {
                     if (!BetOccured)
                     {
-                        reason = "Cant raise without a bet/BB: #" + i;
+                        reason = "Cant raise/call without a bet/BB: #" + i;
                         return false;
                     }
                 }
@@ -101,8 +220,8 @@ namespace HandHistories.Parser.Utils
             }
             else if (hand.Rake > MaxRakePercentage * hand.TotalPot)
             {
-                reason = string.Format("Rake is more than {0}%: {1}", 
-                    MaxRakePercentage * 100, 
+                reason = string.Format("Rake is more than {0:0.0%}: {1:0.00}", 
+                    MaxRakePercentage, 
                     hand.Rake);
                 return false;
             }

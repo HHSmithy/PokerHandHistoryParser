@@ -26,6 +26,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
         //}
 
         [Test]
+        public void ParseBlindActionLine_PostingTournamentAnte_Works()
+        {
+            HandAction handAction = Parser.ParseBlindAction("catskunkglad posts ante 20");
+
+            Assert.AreEqual(new HandAction("catskunkglad", HandActionType.ANTE, 20m, Street.Preflop), handAction);
+        }
+
+        [Test]
         public void ParseBlindActionLine_PostingSmallBlind_Works()
         {
             HandAction handAction = Parser.ParseBlindAction("BONUS 1OOO posts small blind ($0.50)");
@@ -40,6 +48,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
 
             Assert.AreEqual(new HandAction("fyabcf", HandActionType.BIG_BLIND, 1m, Street.Preflop), handAction);
         }
+
+        [Test]
+        public void ParseBlindActionLine_PostingBigBlind_Allin_Works()
+        {
+            HandAction handAction = Parser.ParseBlindAction("19kb72 posts big blind ($6.50) [all in]");
+
+            Assert.AreEqual(new HandAction("19kb72", HandActionType.BIG_BLIND, 6.5m, Street.Preflop, true), handAction);
+        }
+        
 
         [Test]
         public void ParseRegularActionLine_Bet_Works()
@@ -70,7 +87,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
         {
             HandAction handAction = Parser.ParseRegularActionLine("BONUS 1OOO raises $1.50 to $2.00", Street.Preflop, false);
 
-            Assert.AreEqual(new HandAction("BONUS 1OOO", HandActionType.RAISE, 1.50m, Street.Preflop), handAction);
+            Assert.AreEqual(new HandAction("BONUS 1OOO", HandActionType.RAISE, 2m, Street.Preflop), handAction);
         }
 
         [Test]

@@ -112,7 +112,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("PornstarX", HandActionType.BIG_BLIND, 0.5m, Street.Preflop),
                                new HandAction("nico86190", HandActionType.RAISE, 2.5m, Street.Preflop),
                                new HandAction("-LePianiste-", HandActionType.FOLD, 0, Street.Preflop),
-                               new AllInAction("LEROISALO", 22.85m, Street.Preflop, true),
+                               new HandAction("LEROISALO", HandActionType.RAISE, 22.85m, Street.Preflop, true),
                                new HandAction("Matthieu_59_", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("PornstarX", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("nico86190", HandActionType.CALL, 20.35m, Street.Preflop),

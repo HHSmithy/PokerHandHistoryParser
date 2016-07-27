@@ -15,16 +15,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         
         protected void TestGameType(GameType expected)
         {
-            string handText = SampleHandHistoryRepository.GetGameTypeHandHistoryText(PokerFormat.CashGame, Site, expected);
+            string handText = SampleHandHistoryRepository.GetGameTypeHandHistoryText(format, Site, expected);
 
             Assert.AreEqual(expected, GetSummmaryParser().ParseGameType(handText), "IHandHistorySummaryParser: ParseGameType");
             Assert.AreEqual(expected, GetParser().ParseGameType(handText), "IHandHistoryParser: ParseGameType");
-        }
-
-        [Test]
-        public void ParseGameType_ParsesNoLimitHoldem()
-        {
-            TestGameType(GameType.NoLimitHoldem);
         }
     }
 }

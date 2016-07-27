@@ -11,14 +11,17 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
 using HandHistories.Parser.Utils.Extensions;
-using System.Globalization;
 using HandHistories.Parser.Utils.Uncalled;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
     public sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
     {
-        static readonly CultureInfo invariant = CultureInfo.InvariantCulture;
+        static readonly NumberFormatInfo NumberFormat2 = new NumberFormatInfo()
+        {
+            NumberDecimalSeparator = ",",
+        };
 
         public override SiteName SiteName
         {
@@ -40,14 +43,6 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             get { return true; }
         }
 
-        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
-        {
-            NegativeSign = "-",
-            CurrencyDecimalSeparator = ".",
-            CurrencyGroupSeparator = ",",
-            CurrencySymbol = "$"
-        };
-
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             rawHandHistories = rawHandHistories.Replace("\r", "");
@@ -65,20 +60,22 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return Int32.Parse(DealerPositionRegex.Match(handLines[3]).Value);
         }
 
-        private static readonly Regex DateLineRegex = new Regex(@"\d+ \d+ \d+ \d+\:\d+\:\d+", RegexOptions.Compiled);
         private static readonly Regex DateRegex = new Regex(@"(\d+) (\d+) (\d+) ", RegexOptions.Compiled);
         protected override DateTime ParseDateUtc(string[] handLines)
         {
-            //Date looks like: 04 02 2012 23:59:48
-            string dateString = DateLineRegex.Match(handLines[1]).Value;
+            string line = handLines[1];
+            //Date looks like: $0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 10:56:05
+            int dateStartIndex = line.LastIndexOf('*') + 2;
+            string dateString = line.Substring(dateStartIndex);
             //Change string so it becomes 2012-02-04 23:59:48
             dateString = DateRegex.Replace(dateString, "$3-$2-$1 ");
 
             DateTime dateTime = DateTime.Parse(dateString);
 
-            DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, TimeZoneType.GMT);
+            //previously we converted the timezone but it seem Timezone is local and not always GMT
+            //DateTime utcTime = TimeZoneUtil.ConvertDateTimeToUtc(dateTime, TimeZoneType.GMT);
 
-            return utcTime;
+            return dateTime;
         }
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
@@ -153,8 +150,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     return GameType.NoLimitOmaha;         
                 case "Pot Limit OmahaHL":
                     return GameType.PotLimitOmahaHiLo;
-                default:                    
-                    throw new NotImplementedException("Unrecognized game type " + gameTypeString);
+                default:
+                    throw new UnrecognizedGameTypeException(gameTypeString, "");
             }
         }
 
@@ -213,9 +210,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             string line = handLines[1];
 
             int LimitEndIndex = line.IndexOfFast(" Blinds");
-            string limitString = line.Remove(LimitEndIndex)
-                .Replace(" ", "")
-                .Replace("$", "");
+            string limitString = line.Remove(LimitEndIndex);
 
             int splitIndex = limitString.IndexOf('/');
 
@@ -254,7 +249,6 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
         {
-
             int actionIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>(handLines.Length - actionIndex);
@@ -315,40 +309,60 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         continue;
                     }
 
-                    int openSquareIndex = line.LastIndexOf('[');
-
-                    // winnings hands have numbers such as:
-                    //  OprahTiltfre collected [ $2,500 ]
-                    if (char.IsDigit(line[line.Length - 3]))
+                    var action = ParseShowdownActionLine(line);
+                    if (action != null)
                     {
-                        string amountString = line.Substring(openSquareIndex + 1, line.Length - openSquareIndex - 1 - 1);
-                        decimal amount = ParseAmount(amountString);
-
-                        string playerName = line.Substring(0, openSquareIndex - 11);
-
-                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
-                        continue;
+                        handActions.Add(action);
                     }
-
-                    string action = line.Substring(openSquareIndex - 6, 5);
-                    if (action.Equals("shows"))
-                    {
-                        string playerName = line.Substring(0, openSquareIndex - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.SHOW, 0, currentStreet));
-                        continue;
-                    }
-                    else if (action.Equals("mucks"))
-                    {
-                        string playerName = line.Substring(0, openSquareIndex - 7);
-                        handActions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, currentStreet));
-                        continue;
-                    }
-
-                    throw new HandActionException(line, "Unparsed");
                 }
             }
             
             return handActions;
+        }
+
+        static readonly char[] suits = new char[]
+        {
+            's', 
+            'h', 
+            'c', 
+            'd'
+        };
+
+        static bool ContainsCards(string bracketStr)
+        {
+            return bracketStr.IndexOfAny(suits) != -1;
+        }
+
+        public static HandAction ParseShowdownActionLine(string line)
+        {
+            int openSquareIndex = line.LastIndexOf('[');
+
+            string bracketStr = line.Substring(openSquareIndex + 1, line.Length - openSquareIndex - 2);
+            // winnings hands have numbers such as:
+            //  OprahTiltfre collected [ $2,500 ]
+            if (!ContainsCards(bracketStr))
+            {
+                string amountString = line.Substring(openSquareIndex + 1, line.Length - openSquareIndex - 1 - 1);
+                decimal amount = ParseAmount(amountString);
+
+                string playerName = line.Substring(0, openSquareIndex - 11);
+
+                return new WinningsAction(playerName, HandActionType.WINS, amount, 0);
+            }
+
+            string action = line.Substring(openSquareIndex - 6, 5);
+            if (action.Equals("shows"))
+            {
+                string playerName = line.Substring(0, openSquareIndex - 7);
+                return new HandAction(playerName, HandActionType.SHOW, 0, Street.Showdown);
+            }
+            else if (action.Equals("mucks"))
+            {
+                string playerName = line.Substring(0, openSquareIndex - 7);
+                return new HandAction(playerName, HandActionType.MUCKS, 0, Street.Showdown);
+            }
+
+            throw new HandActionException(line, "Unparsed");
         }
 
         public static HandAction ParseRegularActionLine(string line, Street currentStreet)
@@ -435,12 +449,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         {
             const int smallBlindWidth = 19;//" posts small blind ".Length
             const int bigBlindWidth = 17;//" posts big blind ".Length
+            const int anteWidth = 12;//" posts ante ".Length
             const int PostingWidth = 18;//" posts dead blind ".Length
             int openSquareIndex = line.LastIndexOf('[');
             string amountString = line.Substring(openSquareIndex + 1, line.Length - openSquareIndex - 2);
 
             //there may be folds during the blinds
-            if (openSquareIndex == -1 || line[openSquareIndex - 2] != 'd')
+            if (openSquareIndex == -1 || (line[openSquareIndex - 2] != 'd' && line[openSquareIndex - 2] != 'e'))
             {
                 throw new HandActionException(line, "Not a blindAction");
             }
@@ -453,13 +468,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             {
                 case 'l':
                     actionType = HandActionType.SMALL_BLIND;
-                    amount = amountString.ParseAmount();
+                    amount = ParseAmount(amountString);
                     playerName = line.Substring(0, openSquareIndex - smallBlindWidth);
                     break;
                 case 'g':
                     actionType = HandActionType.BIG_BLIND;
-                    amount = amountString.ParseAmount();
+                    amount = ParseAmount(amountString);
                     playerName = line.Substring(0, openSquareIndex - bigBlindWidth);
+                    break;
+                case 't':
+                    actionType = HandActionType.ANTE;
+                    amount = ParseAmount(amountString);
+                    playerName = line.Substring(0, openSquareIndex - anteWidth);
                     break;
                 case 'd':
                     actionType = HandActionType.POSTS;
@@ -490,16 +510,25 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         private static decimal ParseAmount(string amountString)
         {
-            // this split helps us parsing dead posts like [$0.10 + $0.05]
-            var splittedAmounts = amountString.Split('+');
-            var result = 0.0m;
-
-            foreach (var amount in splittedAmounts)
+            if (amountString.Contains(','))
             {
-                result += amount.ParseAmountWS();
+                amountString = amountString.Trim(' ');
+                if (amountString.Length > 5 && amountString[amountString.Length - 5] == ',')
+                {
+                    var chars = amountString.Where(p => char.IsDigit(p) || p == ',');
+                    amountString = string.Concat(chars);
+
+                    return amountString.ParseAmount(NumberFormat2);
+                }
+            }
+            else if(amountString.Contains((char)160))
+            {
+                var chars = amountString.Where(p => char.IsDigit(p) || p == ',');
+                amountString = string.Concat(chars);
+                return amountString.ParseAmount();
             }
 
-            return result;
+            return amountString.ParseAmountWS();
         }
 
         static decimal ParseDeadBlindAmount(string amountString)
@@ -532,7 +561,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 int seat = int.Parse(handLine.Substring(5, colonIndex - 5));
                 string playerName = handLine.Substring(colonIndex + 2, openParenIndex - colonIndex - 3);
-                decimal amount = ParseAmount(handLine.Substring(openParenIndex + 3, handLine.Length - openParenIndex - 3 - 2));
+                decimal amount = ParseAmount(handLine.Substring(openParenIndex + 1, handLine.Length - openParenIndex - 1 - 2));
 
                 playerList.Add(new Player(playerName, amount, seat));
             }
@@ -548,7 +577,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     int openSquareIndex = heroCardsLine.LastIndexOf('[');
 
                     string cards = heroCardsLine.Substring(openSquareIndex + 2, heroCardsLine.Length - openSquareIndex - 2 - 2);
-                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+                    HoleCards holeCards = HoleCards.FromCards(FixPacificCards(cards));
 
                     string playerName = heroCardsLine.Substring(9, openSquareIndex - 1 - 9);
 
@@ -567,16 +596,19 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     break;                    
                 }
 
-                if (handLine.EndsWithFast("]") &&
-                    char.IsDigit(handLine[handLine.Length - 3]) == false)
+                if (!handLine.EndsWith("]"))
+	            {
+		            continue;
+                }
+
+                int openSquareIndex = handLine.LastIndexOf('[');
+                string bracketStr = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
+                if (ContainsCards(bracketStr))
                 {
                     // lines such as:
                     //  slyguyone2 shows [ Jd, As ]
-
-                    int openSquareIndex = handLine.IndexOf('[');
-
                     string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
-                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+                    HoleCards holeCards = HoleCards.FromCards(FixPacificCards(cards));
 
                     string playerName = handLine.Substring(0, openSquareIndex - 7);
 
@@ -588,9 +620,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return playerList;
         }
 
+        static string FixPacificCards(string str)
+        {
+            return str.Replace(",", "")
+                .Replace(" ", "")
+                .Replace("Kn", "J")
+                .Replace("D", "Q")
+                .Replace("E", "A");
+        }
+
         private static int ParsePlayerCount(string[] handLines)
         {
-            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[4]).Value);
+            int seatCount = FastInt.Parse(NumPlayersRegex.Match(handLines[4]).Value);
             return seatCount;
         }
 
@@ -638,7 +679,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
 
-                boardCards += cards.Replace(",", "").Replace(" ", "");
+                boardCards += FixPacificCards(cards);
             }
 
             return BoardCards.FromCards(boardCards);

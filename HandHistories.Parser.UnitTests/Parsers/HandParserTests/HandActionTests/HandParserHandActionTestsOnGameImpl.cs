@@ -119,7 +119,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                                new HandAction("alikator21", HandActionType.BET, 60, Street.Flop),                        
                                new HandAction("McCall901",  HandActionType.RAISE, 240, Street.Flop),
-                               new AllInAction("alikator21",  265, Street.Flop, true),
+                               new HandAction("alikator21", HandActionType.RAISE, 265m, Street.Flop, true),
                                new HandAction("McCall901", HandActionType.CALL, 85, Street.Flop),
 
                                new WinningsAction("alikator21", HandActionType.WINS, 354.50m, 0),                               

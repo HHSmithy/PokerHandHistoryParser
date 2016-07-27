@@ -1,0 +1,27 @@
+﻿***** History for hand T5-556000000-1 (TOURNAMENT: "€214 ChampionChip Turbo Qualifier Rebuy", R-10093-864, buy-in: €5) *****
+Start hand: Thu Jun 11 20:10:37 CEST 2014
+Table: Table #2 [5564200000] (NO_LIMIT TEXAS_HOLDEM 100/200, Chips)
+User: Player1
+Button: seat 6
+Players in round: 2 (10)
+Seat 6: Player1 (1500)
+Seat 10: Player2 (1500)
+Player1 posts small blind (100)
+Player2 posts big blind (200)
+---
+Dealing pocket cards
+Player1 calls 100
+Player2 checks
+--- Dealing flop [Ac, 2c, Ts]
+Player2 checks
+Player1 checks
+--- Dealing turn [2d]
+Player2 bets 300
+Player1 folds
+---
+Summary:
+Main pot: 400 won by Player2 (400)
+Rake taken: €0
+Seat 6: Player1 (1300), net: -200
+Seat 10: Player2 (1700), net: +200
+***** End of hand T5-556000000-1 *****

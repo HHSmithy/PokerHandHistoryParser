@@ -11,6 +11,7 @@ using HandHistories.Parser.Parsers.Factory;
 using System.Diagnostics;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Utils;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -49,6 +50,7 @@ namespace HandHistories.Parser.WindowsTestApp
 
             IHandHistoryParserFactory factory = new HandHistoryParserFactoryImpl();
             var handParser = factory.GetFullHandHistoryParser((SiteName) listBoxSite.SelectedItem);
+            bool validate = checkBox_validateHands.Checked;
 
             try
             {
@@ -64,6 +66,10 @@ namespace HandHistories.Parser.WindowsTestApp
                 foreach (var hand in hands)
                 {
                     var parsedHand = fastParser.ParseFullHandHistory(hand, true);
+                    if (validate)
+                    {
+                        HandIntegrity.Assert(parsedHand);
+                    }
                     parsedHands++;
                 }
 

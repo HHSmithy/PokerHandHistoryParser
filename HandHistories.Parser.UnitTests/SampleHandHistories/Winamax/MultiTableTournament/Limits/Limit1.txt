@@ -1,0 +1,19 @@
+﻿Winamax Poker - Tournament "BOOSTER" buyIn: €4.50 + €4.50 + €1 level: 4 - HandId: #657563431500000000-1-1459000000 - Holdem no limit (25/150/300) - 2016/04/03 20:21:55 UTC
+Table: 'BOOSTER(153100000)#052' 8-max (real money) Seat #8 is the button
+Seat 1: Player1 (20000)
+Seat 2: Player2 (20000)
+Seat 8: Player3 (20000)
+*** ANTE/BLINDS ***
+Player1 posts ante 25
+Player2 posts ante 25
+Player3 posts ante 25
+Player1 posts small blind 150
+Player2 posts big blind 300
+*** PRE-FLOP *** 
+Player3 folds
+Player1 raises 500 to 800
+Player2 folds
+Player1 collected 1175 from pot
+*** SUMMARY ***
+Total pot 1175 | No rake
+Seat 1: Player1 (small blind) won 1175

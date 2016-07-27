@@ -33,6 +33,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PartyPoker
         }
 
         [Test]
+        public void ParseBlindActionLine_PostingAnte_Works()
+        {
+            HandAction handAction = Parser.ParseBlindAction("saboniiplz posts ante [400]");
+
+            Assert.AreEqual(new HandAction("saboniiplz", HandActionType.ANTE, 400m, Street.Preflop), handAction);
+        }
+        
+        [Test]
         public void ParseBlindActionLine_PostingSmallBlind_Works()
         {
             HandAction handAction = Parser.ParseBlindAction("PUNISHER_DK posts small blind [$2 USD].");
@@ -100,6 +108,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PartyPoker
             HandAction handAction = Parser.ParseRegularActionLine("Player wins $5.18 USD", ref street);
 
             Assert.AreEqual(new WinningsAction("Player", HandActionType.WINS, 5.18m, 0), handAction);
+        }
+        
+        [Test]
+        public void ParseRegularActionLine_WinsTournament_Works()
+        {
+            Street street = Street.Preflop;
+            HandAction handAction = Parser.ParseRegularActionLine("saboniiplz wins 28,304 chips", ref street);
+
+            Assert.AreEqual(new WinningsAction("saboniiplz", HandActionType.WINS, 28304m, 0), handAction);
         }
     }
 }

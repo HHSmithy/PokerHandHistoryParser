@@ -64,14 +64,41 @@ namespace HandHistories.Parser.Utils.Extensions
         }
 
         /// <summary>
+        /// Removes any currency symbols before parsing
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static decimal ParseAmount(this string str, NumberFormatInfo numberFormat)
+        {
+            str = str.Trim('£', '€', '$');
+            return Decimal.Parse(str, numberFormat);
+        }
+
+        static readonly char[] ParseWSTrimChars = new char[]
+        {
+            '£', '€', '$', ' ', (char)160
+        };
+
+        /// <summary>
         /// Removes any currency symbols and whitespaces before parsing
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
         public static decimal ParseAmountWS(this string str)
         {
-            str = str.Trim('£', '€', '$', ' ');
+            str = str.Trim(ParseWSTrimChars);
             return Decimal.Parse(str, CultureInfo.InvariantCulture);
+        }
+
+        /// <summary>
+        /// Removes any currency symbols and whitespaces before parsing
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static decimal ParseAmountWS(this string str, NumberFormatInfo numberFormat)
+        {
+            str = str.Trim(ParseWSTrimChars);
+            return Decimal.Parse(str, numberFormat);
         }
     }
 }

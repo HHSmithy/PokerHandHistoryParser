@@ -55,7 +55,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 
         protected override PlayerList ExpectedWithSittingOutPlayers
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return new PlayerList() {
+                    new Player("Player1", 0, 1)
+                    {
+                        IsSittingOut = true
+                    },
+                    new Player("Player2", 2156.50m, 2)
+                    {
+                        HoleCards = HoleCards.FromCards("8cKs8sTs")
+                    },
+                    new Player("Player3", 476.40m, 3),
+                    new Player("HERO", 720m, 4)
+                    {
+                        HoleCards = HoleCards.FromCards("Kc8hKdAs")
+                    },
+                    new Player("Player5", 2113m, 5)
+                };
+            }
         }
 
         protected override PlayerList ExpectedOmahaShowdownPlayers

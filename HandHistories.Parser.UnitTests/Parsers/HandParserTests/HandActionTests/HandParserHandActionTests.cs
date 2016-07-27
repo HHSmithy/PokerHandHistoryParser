@@ -1,25 +1,33 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using HandHistories.Objects.Actions;
+﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
     abstract internal class HandParserHandActionTests : HandHistoryParserBaseTests
     {
+        PokerFormat format = PokerFormat.CashGame;
+
         protected HandParserHandActionTests(string site)
             : base(site)
         {
-        }       
+        }
+
+        protected HandParserHandActionTests(PokerFormat format, string site)
+            : base(site)
+        {
+            this.format = format;
+        }   
 
         protected void TestParseActions(string fileName, List<HandAction> expectedActions)
         {
-            string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "HandActionTests", fileName);
+            string handText = SampleHandHistoryRepository.GetHandExample(format, Site, "HandActionTests", fileName);
 
             List<HandAction> actionList = GetParser().ParseHandActions(handText);
 

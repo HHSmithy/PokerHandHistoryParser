@@ -4,12 +4,19 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {
-    [TestFixture("PokerStars")]
+    [TestFixture("PartyPoker")]
+    [TestFixture("MicroGaming")]
     class HandParserGameTypeTests_MTT : HandParserGameTypeTests
     {
         public HandParserGameTypeTests_MTT(string site)
             : base(PokerFormat.MultiTableTournament, site)
         {
+        }
+
+        [Test]
+        public void ParseGameType_ParsesNoLimitHoldem()
+        {
+            TestGameType(GameType.NoLimitHoldem);
         }
 
         //[Test]

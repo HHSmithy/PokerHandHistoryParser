@@ -59,6 +59,30 @@ namespace HandHistories.Parser.Utils.AllInAction
         }
 
         /// <summary>
+        /// Some sites (like IPoker) dont specify if allins are CALL/BET/RAISE so we we fix that after parsing actions.
+        /// We do that by assigning HandAction.HandActionType with HandActionType.ALL_IN
+        /// </summary>
+        public static List<HandAction> UpdateAllInActions(List<HandAction> handActions)
+        {
+            List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
+            foreach (HandAction action in handActions)
+            {
+                if (action.HandActionType == HandActionType.ALL_IN)
+                {
+                    HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
+
+                    identifiedActions.Add(new HandAction(action.PlayerName, actionType, action.Amount, action.Street, true));
+                }
+                else
+                {
+                    identifiedActions.Add(action);
+                }
+            }
+            
+            return identifiedActions;
+        }
+
+        /// <summary>
         /// Gets the ActionType for an unadjusted action amount
         /// </summary>
         /// <param name="playerName"></param>
@@ -75,8 +99,26 @@ namespace HandHistories.Parser.Utils.AllInAction
                 return HandActionType.BET;
             }
 
+            Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
 
-            if (Math.Abs(amount) <= Math.Abs(actions.Min(p => p.Amount)))
+            foreach (var action in streetActions)
+            {
+                if (!PutInPot.ContainsKey(action.PlayerName))
+                {
+                    PutInPot.Add(action.PlayerName, action.Amount);
+                }
+                else
+                {
+                    PutInPot[action.PlayerName] += action.Amount;
+                }
+            }
+
+            var contributed = Math.Abs(amount);
+            if (PutInPot.ContainsKey(playerName))
+            {
+                contributed += Math.Abs(PutInPot[playerName]);
+            }
+            if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
             {
                 return HandActionType.CALL;
             }

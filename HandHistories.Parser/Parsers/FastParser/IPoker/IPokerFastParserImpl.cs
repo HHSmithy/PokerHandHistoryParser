@@ -1,4 +1,13 @@
-﻿using System;
+﻿using HandHistories.Objects.Actions;
+using HandHistories.Objects.Cards;
+using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -7,13 +16,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
-using HandHistories.Objects.Actions;
-using HandHistories.Objects.Cards;
-using HandHistories.Objects.GameDescription;
-using HandHistories.Objects.Players;
-using HandHistories.Parser.Parsers.Exceptions;
-using HandHistories.Parser.Parsers.FastParser.Base;
-using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -51,12 +53,22 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             get { return true; }
         }
 
+        public override bool RequiresAllInUpdates
+        {
+            get { return true; }
+        }
+
         public override bool RequiresTotalPotCalculation
         {
             get { return true; }
         }
 
         public override bool RequiresUncalledBetFix
+        {
+            get { return true; }
+        }
+
+        public override bool RequiresUncalledBetWinAdjustment
         {
             get { return true; }
         }
@@ -71,22 +83,20 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             <player seat="8" name="Kristi48ru" chips="$6.43" dealer="1" win="$0.23" bet="$0.16" rebuy="0" addon="0" />
         */
 
-        int GetSeatNumberFromPlayerLine(string playerLine)
+        static int GetSeatNumberFromPlayerLine(string playerLine)
         {
             int seatOffset = playerLine.IndexOfFast(" s") + 7;
-            int seatEndOffset = playerLine.IndexOf('"', seatOffset);
-            string seatNumberString = playerLine.Substring(seatOffset, seatEndOffset - seatOffset);
-            return Int32.Parse(seatNumberString);            
+            return FastInt.Parse(playerLine, seatOffset);            
         }
 
-        bool IsPlayerLineDealer(string playerLine)
+        static bool IsPlayerLineDealer(string playerLine)
         {
-            int dealerOffset = playerLine.IndexOfFast(" d");
-            int dealerValue = Int32.Parse(" " + playerLine[dealerOffset + 9]);
+            int dealerOffset = playerLine.IndexOfFast(" d") + 9;
+            int dealerValue = FastInt.Parse(playerLine[dealerOffset]);
             return dealerValue == 1;
         }
 
-        decimal GetStackFromPlayerLine(string playerLine)
+        static decimal GetStackFromPlayerLine(string playerLine)
         {
             int stackStartPos = playerLine.IndexOfFast(" c") + 8;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
@@ -94,7 +104,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return stackString.ParseAmount();
         }
 
-        decimal GetWinningsFromPlayerLine(string playerLine)
+        static decimal GetWinningsFromPlayerLine(string playerLine)
         {
             int stackStartPos = playerLine.IndexOfFast(" w") + 6;
             int stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
@@ -106,7 +116,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return stackString.ParseAmount();
         }
 
-        string GetNameFromPlayerLine(string playerLine)
+        static string GetNameFromPlayerLine(string playerLine)
         {
             int nameStartPos = playerLine.IndexOfFast(" n") + 7;
             int nameEndPos = playerLine.IndexOf('"', nameStartPos) - 1;
@@ -390,7 +400,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 return GameType.PotLimitHoldem;
             }
 
-            throw new Exception("Could not parse GameType for hand.");
+            throw new UnrecognizedGameTypeException(gameTypeLine, "Could not parse GameType for hand.");
         }
 
         protected override TableType ParseTableType(string[] handLines)
@@ -455,6 +465,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             if (slashIndex == -1)
             {
+                //Tournaments dont have a limit string so we get the blinds from the BB action and SB action
+                //this is done in FinalizeHandHistory()
                 return null;
             }
 
@@ -660,8 +672,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     actionType = HandActionType.BET;
                     break;
                 case 6://Both are all-ins but we don't know the difference between them
-                case 7:
-                    return new AllInAction(actionPlayerName, value, street, false, actionNumber);
+                case 7://we let the AllInDetection take care of this
+                    actionType = HandActionType.ALL_IN;
+                    break;
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
                 case 9: //Case 9 is when a blind isn't posted - can be treated as sitting out
                     actionType = HandActionType.SITTING_OUT;
@@ -748,7 +761,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 string player = GetPlayerFromActionLine(line);
                 int type = GetActionNumberFromActionLine(line);
 
-                if (type != 8)
+                //action line may have an empty name and then we skip it
+                //<action no="3" sum="€0" cards="" type="9" player=""/>
+                if (type != 8 && player != "")
                 {
                     playerList[player].IsSittingOut = false;
                 }
@@ -877,6 +892,19 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }
             }
             return null;
+        }
+
+        protected override void FinalizeHandHistory(HandHistory Hand)
+        {
+            if (Hand.GameDescription.Limit == null)
+            {
+                var SB = Hand.HandActions.First(p => p.HandActionType == HandActionType.SMALL_BLIND);
+                var BB = Hand.HandActions.First(p => p.HandActionType == HandActionType.BIG_BLIND);
+                var Ante = Hand.HandActions.FirstOrDefault(p => p.HandActionType == HandActionType.ANTE);
+                bool haveAnte = Ante != null;
+
+                Hand.GameDescription.Limit = Limit.FromSmallBlindBigBlind(SB.Absolute, BB.Absolute, Currency.CHIPS, haveAnte, (haveAnte ? Ante.Amount : 0));
+            }
         }
     }
 }

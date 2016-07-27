@@ -24,6 +24,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         }
 
         [Test]
+        public void ParseGameType_ParsesNoLimitHoldem()
+        {
+            TestGameType(GameType.NoLimitHoldem);
+        }
+
+        [Test]
         public void ParseGameType_ParsesFixedLimitHoldem()
         {
             switch (Site)

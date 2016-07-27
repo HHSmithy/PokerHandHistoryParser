@@ -103,7 +103,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("joiso", HandActionType.BET, 300m, Street.Flop),
                                         new HandAction("LewisFriend", HandActionType.CALL, 300m, Street.Flop),
                                         new HandAction("Bluf_To_Much", HandActionType.CALL, 300m, Street.Flop),
-                                        new AllInAction("Crazy Elior", 382.50m, Street.Flop, true),
+                                        new HandAction("Crazy Elior", HandActionType.RAISE, 382.50m, Street.Flop, true),
                                         new HandAction("joiso", HandActionType.CALL, 82.50m, Street.Flop),
                                         new HandAction("LewisFriend", HandActionType.CALL, 82.50m, Street.Flop),
                                         new HandAction("Bluf_To_Much", HandActionType.CALL, 82.50m, Street.Flop),
@@ -276,7 +276,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("matze1987", HandActionType.CALL, 1m, Street.Preflop),
                                
                                new HandAction("numbush", HandActionType.BET, 2, Street.Flop),
-                               new AllInAction("matze1987", 10.94m, Street.Flop,true),
+                               new HandAction("matze1987", HandActionType.RAISE, 10.94m, Street.Flop,true),
                                new HandAction("numbush", HandActionType.CALL, 8.94m, Street.Flop),
 
                                new HandAction("numbush", HandActionType.SHOW, 0, Street.Showdown),

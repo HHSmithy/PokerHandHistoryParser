@@ -87,6 +87,7 @@
     <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
     <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />
     <Compile Include="Parsers\Factory\IHandHistoryParserFactory.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
@@ -118,11 +120,13 @@
     <Compile Include="Utils\Extensions\LazyStringSplitExtension.cs" />
     <Compile Include="Utils\FastParsing\FastParsing.cs" />
     <Compile Include="Utils\RaiseAdjuster\RaiseAdjuster.cs" />
+    <Compile Include="Utils\ValidityCheck\HandIntegrityException.cs" />
     <Compile Include="Utils\ValidityCheck\HandValidator.cs" />
     <Compile Include="Utils\Pot\PotCalculator.cs" />
     <Compile Include="Utils\Extensions\StringExtensions.cs" />
     <Compile Include="Utils\Time\TimeZoneUtil.cs" />
     <Compile Include="Utils\UncalledBet\UncalledBet.cs" />
+    <Compile Include="Utils\ValidityCheck\ValidationChecks.cs" />
     <Compile Include="Utils\XMLHandLineSplitter.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -40,6 +40,31 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             TestParseActions("Disconnected", actions);
         }
 
+        [Test]
+        public void AllInWithUncalledBet_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+            {
+                new HandAction("Player1", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
+                new HandAction("Player2", HandActionType.BIG_BLIND, 10m, Street.Preflop),
+
+                new HandAction("Player3", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("Player4", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("Player6", HandActionType.RAISE, 35m, Street.Preflop),
+                new HandAction("Player1", HandActionType.RAISE, 110m, Street.Preflop),
+                new HandAction("Player2", HandActionType.FOLD, 0, Street.Preflop),
+
+                new HandAction("Player6", HandActionType.RAISE, 320m, Street.Preflop),
+                new HandAction("Player1", HandActionType.CALL, 122m, Street.Preflop, true),
+                new HandAction("Player6", HandActionType.UNCALLED_BET, 117, Street.Preflop),
+                new HandAction("Player1", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("Player6", HandActionType.SHOW, 0m, Street.Showdown),
+                new WinningsAction("Player1", HandActionType.WINS, 481.5m, 0),
+            };
+
+            TestParseActions("AllInHandWithUncalledBet", expectedActions);
+        }
+
          protected override List<HandAction> ExpectedHandActionsBasicHand
          {
              get

@@ -38,7 +38,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Aquasces1", HandActionType.FOLD, 0m, Street.Turn),
                     new HandAction("COMON-JOE-JUG", HandActionType.FOLD, 0m, Street.Turn),
                     new HandAction("888game888", HandActionType.UNCALLED_BET, 46m, Street.Turn),
-                    new WinningsAction("888game888", HandActionType.WINS, 30m, 0)
+                    new WinningsAction("888game888", HandActionType.WINS, 46m, 0)
                 };
 
             TestParseActions("WaitBB", expectedActions);
@@ -64,7 +64,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("D3SISION", HandActionType.BET, 0.50m, Street.Flop),
                     new HandAction("rds44sdr", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("D3SISION", HandActionType.UNCALLED_BET, 0.50m, Street.Flop),
-                    new WinningsAction("D3SISION", HandActionType.WINS, 0.30m, 0)
+                    new WinningsAction("D3SISION", HandActionType.WINS, 0.80m, 0)
                 };
 
             TestParseActions("Straddle", expectedActions);
@@ -89,7 +89,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("kenzielee", HandActionType.BET, 0.52m, Street.Flop),
                     new HandAction("4ofakind7", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("kenzielee", HandActionType.UNCALLED_BET, 0.52m, Street.Flop),
-                    new WinningsAction("kenzielee", HandActionType.WINS, 0.54m, 0)
+                    new WinningsAction("kenzielee", HandActionType.WINS, 1.04m, 0)
                 };
 
             TestParseActions("Post", expectedActions);
@@ -112,7 +112,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("Venvellator", HandActionType.FOLD, 0m, Street.Preflop),
                                         new HandAction("TheKunttzz", HandActionType.FOLD, 0, Street.Preflop),
                                         new HandAction("tonyaces", HandActionType.UNCALLED_BET, 1m, Street.Preflop),
-                                        new WinningsAction("tonyaces", HandActionType.WINS, 1.5m, 0)
+                                        new WinningsAction("tonyaces", HandActionType.WINS, 2m, 0)
                                     };
 
             TestParseActions("PostingDead", expectedActions);
@@ -138,7 +138,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                         new HandAction("OhGoodGolly", HandActionType.FOLD, 0, Street.Flop),
 
                                         new HandAction("COMON-JOE-JUG", HandActionType.UNCALLED_BET, 39.75m, Street.Flop),                  
-                                        new WinningsAction("COMON-JOE-JUG", HandActionType.WINS, 25.75m, 0),
+                                        new WinningsAction("COMON-JOE-JUG", HandActionType.WINS, 39.75m, 0),
                                     };
 
             TestParseActions("StrangePlayerNames", expectedActions);
@@ -157,7 +157,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("VanishingFlames", HandActionType.FOLD, 0m, Street.Preflop),
                     new HandAction("cscwildcat1", HandActionType.FOLD, 0, Street.Preflop),
                     new HandAction("((((??????!!!!!!))))", HandActionType.UNCALLED_BET, 4m, Street.Preflop),
-                    new WinningsAction("((((??????!!!!!!))))", HandActionType.WINS, 6m, 0)
+                    new WinningsAction("((((??????!!!!!!))))", HandActionType.WINS, 10m, 0)
                 };
 
             TestParseActions("PlayerNameWithParanthesis", expectedActions);
@@ -179,7 +179,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("borjilius79", HandActionType.FOLD, 0, Street.Preflop),
 
                                new HandAction("Daviciko", HandActionType.UNCALLED_BET, 0.50m, Street.Preflop),
-                               new WinningsAction("Daviciko", HandActionType.WINS, 0.35m,0),
+                               new WinningsAction("Daviciko", HandActionType.WINS, 0.60m,0),
                            };
 
             TestParseActions("UncalledBet", expectedActions);
@@ -215,7 +215,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Pokergodacolyte", HandActionType.CHECK, 0m, Street.River),
                                new HandAction("cuzimwhite", HandActionType.CHECK, 0m, Street.River),
 
-                               new WinningsAction("HanSoloDolo", HandActionType.WINS, 33.75m,0),
+                               new WinningsAction("HanSoloDolo", HandActionType.WINS, 45.75m,0),
                            };
             }
         }
@@ -237,7 +237,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("FetusMunch", HandActionType.FOLD, 0, Street.Preflop),
 
                                new HandAction("LadyStack", HandActionType.UNCALLED_BET, 0.55m, Street.Preflop),
-                               new WinningsAction("LadyStack", HandActionType.WINS, 0.25m, 0),
+                               new WinningsAction("LadyStack", HandActionType.WINS, 0.50m, 0),
                            };
             }
         }
@@ -266,7 +266,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("STOPCRYINGB79", HandActionType.FOLD, 0, Street.River),
 
                                new HandAction("digbick30", HandActionType.UNCALLED_BET, 15.66m, Street.River),
-                               new WinningsAction("digbick30", HandActionType.WINS, 23m, 0),
+                               new WinningsAction("digbick30", HandActionType.WINS, 47m, 0),
                            };
             }
         }
@@ -285,10 +285,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("do not-call", HandActionType.CALL, 24m, Street.Preflop),
 
                                new HandAction("digbick30", HandActionType.BET, 71m, Street.Flop),
-                               new AllInAction("do not-call", 124m, Street.Flop, true),
+                               new HandAction("do not-call", HandActionType.RAISE, 124m, Street.Flop, true),
                                new HandAction("digbick30", HandActionType.CALL, 53m, Street.Flop),
 
-                               new WinningsAction("do not-call", HandActionType.WINS, 159m, 0)
+                               new WinningsAction("do not-call", HandActionType.WINS, 319m, 0)
                            };
             }
         }

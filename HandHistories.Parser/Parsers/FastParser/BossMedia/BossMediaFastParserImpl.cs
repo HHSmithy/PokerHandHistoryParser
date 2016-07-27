@@ -194,7 +194,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     }
                     break;
             }
-            throw new ArgumentException("UNKOWN GameType: Limit: " + limit + " Game: " + game);
+            throw new UnrecognizedGameTypeException(handLines[0], "UNKOWN GameType: Limit: " + limit + " Game: " + game);
         }
 
         protected override TableType ParseTableType(string[] handLines)
@@ -254,7 +254,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     {
                         //<ACTION TYPE="ACTION_
                         case 'A':
-                            actions.Add(ParseAction(Line, currentStreet, actions));
+                            actions.Add(ParseRegularAction(Line, currentStreet, actions));
                             break;
 
                         //<ACTION TYPE="HAND_
@@ -398,7 +398,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        static HandAction ParseAction(string Line, Street currentStreet, List<HandAction> actions)
+        public static HandAction ParseRegularAction(string Line, Street currentStreet, List<HandAction> actions)
         {
             const int playerHandActionStartIndex = 21;
             const int fixedAmountDistance = 9;
@@ -820,8 +820,8 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     var TotalPot = GetXMLAttributeValue(line, "POT");
                     var Rake = GetXMLAttributeValue(line, "RAKE");
 
-                    handHistorySummary.TotalPot = decimal.Parse(TotalPot, provider);
                     handHistorySummary.Rake = decimal.Parse(Rake, provider);
+                    handHistorySummary.TotalPot = decimal.Parse(TotalPot, provider) + handHistorySummary.Rake;
                 }
             }
         }
