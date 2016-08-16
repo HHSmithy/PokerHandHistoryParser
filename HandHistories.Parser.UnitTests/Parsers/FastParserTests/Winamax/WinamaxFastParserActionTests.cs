@@ -25,6 +25,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
             return new WinamaxFastParserImpl();
         }
 
+        List<HandAction> EmptyActions = new List<HandAction>();
+
         [Test]
         public void ParseBlindActionLine_PostingDead_Works()
         {
@@ -82,9 +84,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_Bet_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("totti6720 bets 4.70€", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("totti6720 bets 4.70€", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("totti6720", HandActionType.BET, 4.7m, Street.Flop), handAction);
         }
@@ -92,9 +92,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_Check_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("RICO97133 checks", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("RICO97133 checks", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("RICO97133", HandActionType.CHECK, 0m, Street.Flop), handAction);
         }
@@ -102,9 +100,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_Call_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("sharon59221 calls 1.35€", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("sharon59221 calls 1.35€", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("sharon59221", HandActionType.CALL, 1.35m, Street.Flop), handAction);
         }
@@ -112,9 +108,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_CallNoCurrency_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("sharon59221 calls 1.35", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("sharon59221 calls 1.35", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("sharon59221", HandActionType.CALL, 1.35m, Street.Flop), handAction);
         }
@@ -122,9 +116,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_Raise_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("trasto51 raises 1.05€ to 1.35€", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("trasto51 raises 1.05€ to 1.35€", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("trasto51", HandActionType.RAISE, 1.35m, Street.Flop), handAction);
         }
@@ -132,9 +124,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_RaiseNoCurrency_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("Doksrill raises 765 to 1305", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("Doksrill raises 765 to 1305", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("Doksrill", HandActionType.RAISE, 1305m, Street.Flop), handAction);
         }
@@ -142,19 +132,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_Fold_Works()
         {
-            Street street = Street.Flop;
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("-LePianiste- folds", street, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("-LePianiste- folds", Street.Flop, EmptyActions, 0);
 
             Assert.AreEqual(new HandAction("-LePianiste-", HandActionType.FOLD, 0m, Street.Flop), handAction);
         }
 
+        List<HandAction> UncalledBetTestActions_Preflop = new List<HandAction>()
+        {
+            new HandAction("", HandActionType.UNKNOWN, 0, Street.Preflop),
+        };
+
+        List<HandAction> UncalledBetTestActions_Flop = new List<HandAction>()
+        {
+            new HandAction("", HandActionType.UNKNOWN, 0, Street.Flop),
+        };
 
         [Test]
         public void ParseRegularActionLine_UncalledBet_Works()
         {
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("Uncalled bet of 1€ returned to tonQtaChatte", Street.Preflop, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("Uncalled bet of 1€ returned to tonQtaChatte", Street.Preflop, UncalledBetTestActions_Preflop, 0);
 
             Assert.AreEqual(new HandAction("tonQtaChatte", HandActionType.UNCALLED_BET, 1m, Street.Preflop), handAction);
         }
@@ -162,10 +158,28 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         [Test]
         public void ParseRegularActionLine_UncalledBet2_Works()
         {
-            List<HandAction> actions = new List<HandAction>();
-            HandAction handAction = Parser.ParseRegularAction("Uncalled bet of 210€ returned to generaltuvas", Street.Preflop, actions, 0);
+            HandAction handAction = Parser.ParseRegularAction("Uncalled bet of 210€ returned to generaltuvas", Street.Preflop, UncalledBetTestActions_Preflop, 0);
 
             Assert.AreEqual(new HandAction("generaltuvas", HandActionType.UNCALLED_BET, 210m, Street.Preflop), handAction);
+        }
+
+
+        //Example:
+        //Bradwong37 raises 17.58€ to 27.33€ and is all-in
+        //tonQtaChatte raises 17.58€ to 44.91€
+        //*** TURN *** [2d Qc 4d][9s]
+        //*** RIVER *** [2d Qc 4d 9s][Ad]
+        //Uncalled bet of 17.58€ returned to tonQtaChatte
+
+        /// <summary>
+        /// because winamax outpust the uncalledbets from allins on the river we need to adjust the street where it gets inserted
+        /// </summary>
+        [Test]
+        public void ParseRegularActionLine_UncalledBet_FlopToRiverJump_Works()
+        {
+            HandAction handAction = Parser.ParseRegularAction("Uncalled bet of 210€ returned to generaltuvas", Street.River, UncalledBetTestActions_Flop, 0);
+
+            Assert.AreEqual(new HandAction("generaltuvas", HandActionType.UNCALLED_BET, 210m, Street.Flop), handAction);
         }
     }
 }

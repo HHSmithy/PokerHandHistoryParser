@@ -1,0 +1,24 @@
+﻿PokerStars Hand #146611446051:  5 Card Omaha Pot Limit ($10/$20 USD) - 2016/01/07 4:52:58 ET
+Table 'Ebella II' 6-max Seat #3 is the button
+Seat 3: smc54 ($1600 in chips) 
+Seat 4: TonaaliAnttu ($2000 in chips) 
+smc54: posts small blind $10
+TonaaliAnttu: posts big blind $20
+*** HOLE CARDS ***
+smc54: calls $10
+TonaaliAnttu: checks 
+*** FLOP *** [4d 6d 4c]
+TonaaliAnttu: checks 
+smc54: checks 
+*** TURN *** [4d 6d 4c] [8h]
+TonaaliAnttu: checks 
+smc54: bets $39.50
+TonaaliAnttu: folds 
+Uncalled bet ($39.50) returned to smc54
+smc54 collected $39.50 from pot
+smc54: doesn't show hand 
+*** SUMMARY ***
+Total pot $40 | Rake $0.50 
+Board [4d 6d 4c 8h]
+Seat 3: smc54 (button) (small blind) collected ($39.50)
+Seat 4: TonaaliAnttu (big blind) folded on the Turn

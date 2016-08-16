@@ -31,6 +31,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         List<HandAction> EmptyActions = new List<HandAction>();
 
         [Test]
+        public void ParseRegularActionLine_BetsPreflop_Works()
+        {
+
+            HandAction handAction = Parser.ParseRegularAction("Player 68sternberg bets (60)", Street.Preflop, EmptyPlayerlist, EmptyActions, false);
+
+            Assert.AreEqual(new HandAction("68sternberg", HandActionType.RAISE, 60m, Street.Preflop), handAction);
+        }
+
+        [Test]
         public void ParseRegularActionLine_Bet_Works()
         {
             HandAction handAction = Parser.ParseRegularAction("Player digbick30 bets (15.66)", Street.Flop, EmptyPlayerlist,EmptyActions, false);

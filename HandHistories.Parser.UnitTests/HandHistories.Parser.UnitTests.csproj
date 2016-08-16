@@ -77,6 +77,8 @@
     <Compile Include="Parsers\FastParserTests\888\PacificFastParseExtraTests.cs" />
     <Compile Include="Parsers\FastParserTests\BossMedia\BossMediaFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests.cs" />
+    <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests_CashGame.cs" />
+    <Compile Include="Parsers\FastParserTests\IPoker\IPokerExtraTests_MTT.cs" />
     <Compile Include="Parsers\FastParserTests\IPoker\IPokerFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\MicroGaming\MicroGamingFastParserActionTests.cs" />
     <Compile Include="Parsers\FastParserTests\OnGame\OnGameFastParserActionTests.cs" />
@@ -414,6 +416,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\IPoker\CashGame\PlayerTests\WithShowdown2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\MultiTableTournament\ExtraHands\ShootOutTournament.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\IPoker\SitAndGo\GameTypeTests\NoLimitHoldem.txt">
@@ -1052,6 +1057,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\ZoomHand.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\NoLimitOmahaHiLo.txt">

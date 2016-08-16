@@ -14,11 +14,11 @@ namespace HandHistories.Parser.Utils
     {
         public static decimal MaxRakePercentage = 0.1m;
 
-        public static void Assert(HandHistory hand)
+        public static void Assert(HandHistory hand, ValidationChecks checks = ValidationChecks.ALL)
         {
             string reason = null;
 
-            if (!Check(hand, out reason))
+            if (!Check(hand, checks, out reason))
             {
                 throw new HandIntegrityException(reason);
             }

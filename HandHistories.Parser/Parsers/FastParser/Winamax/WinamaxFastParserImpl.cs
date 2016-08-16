@@ -445,7 +445,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
                 string amountStr = line.Substring(amountStart, amountEnd - amountStart);
                 string playerName = line.Substring(amountEnd + 13);
 
-                return new HandAction(playerName, HandActionType.UNCALLED_BET, amountStr.ParseAmount(), currentStreet);
+                var lastAction = handActions[handActions.Count - 1];
+
+                return new HandAction(playerName, HandActionType.UNCALLED_BET, amountStr.ParseAmount(), lastAction.Street);
             }
             else if (lastChar == 's')
             {

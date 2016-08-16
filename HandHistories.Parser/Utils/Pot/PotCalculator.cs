@@ -10,7 +10,8 @@ namespace HandHistories.Parser.Utils.Pot
     public static class PotCalculator
     {
         /// <summary>
-        /// Total Pot = all actions - uncalled bets - winnings
+        /// Total Pot = all actions - uncalled bets - winnings.
+        /// Dead small blinds are included
         /// </summary>
         /// <param name="hand"></param>
         /// <returns></returns>

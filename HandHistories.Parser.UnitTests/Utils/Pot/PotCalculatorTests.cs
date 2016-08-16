@@ -106,5 +106,23 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
 
             TestPotCalculator(80m, hand);
         }
+
+        [TestCase]
+        public void PotCalculatorTest_PostDead()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.POSTS_DEAD, 1m, Street.Preflop),
+                new HandAction("P3", HandActionType.POSTS, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.CHECK, 0m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 1m, Street.Preflop),
+            };
+
+            TestPotCalculator(7m, hand);
+        }
     }
 }

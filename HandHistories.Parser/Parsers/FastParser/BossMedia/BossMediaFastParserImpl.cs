@@ -38,6 +38,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             get { return true; }
         }
 
+        public override bool RequiresUncalledBetWinAdjustment
+        {
+            get { return true; }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None)
@@ -241,12 +246,13 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             int lineParseIndex = getHandActionsStartIndex(handLines);
             Street currentStreet = Street.Preflop;
             int showdownLine = -1;
+            bool BBPosted = false;
 
             for (int i = lineParseIndex; i < handLines.Length; i++)
             {
                 string Line = handLines[i];
                 char firstChar = Line[1];
-                //<ACTION TYPE="HAND_BLINDS" PLAYER="xxpppxx" KIND="HAND_SB" VALUE="100.00"></ACTION>
+                //<ACTION TYPE="HAND_BLINDS" PLAYER="bingbong12" KIND="HAND_SB" VALUE="100.00"></ACTION>
                 if (firstChar == 'A')
                 {
                     char actionType = Line[14];
@@ -282,7 +288,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
                                 //HAND_BLINDS
                                 case 'L':
-                                    actions.Add(ParseBlinds(Line));
+                                    actions.Add(ParseBlindAction(Line, ref BBPosted));
                                     break;
                                 default:
                                     throw new ArgumentOutOfRangeException("Unkown HAND_ action: " + handAction + " - " + Line);
@@ -372,7 +378,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
         }
 
-        public static HandAction ParseBlinds(string Line)
+        public static HandAction ParseBlindAction(string Line, ref bool BBPosted)
         {
             //<ACTION TYPE="HAND_BLINDS" PLAYER="fatima1975" KIND="HAND_SB" VALUE="0.02"></ACTION>
             //<ACTION TYPE="HAND_BLINDS" PLAYER="gasmandean" KIND="HAND_BB" VALUE="0.04"></ACTION>
@@ -390,9 +396,17 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 case 'S':
                     return new HandAction(playerName, HandActionType.SMALL_BLIND, amount, Street.Preflop);
                 case 'B':
-                    return new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop);
+                    if (BBPosted)
+                    {
+                        return new HandAction(playerName, HandActionType.POSTS, amount, Street.Preflop);
+                    }
+                    else
+                    {
+                        BBPosted = true;
+                        return new HandAction(playerName, HandActionType.BIG_BLIND, amount, Street.Preflop);
+                    }
                 case 'D':
-                    return new HandAction(playerName, HandActionType.POSTS, amount, Street.Preflop);
+                    return new HandAction(playerName, HandActionType.POSTS_DEAD, amount, Street.Preflop);
                 default:
                     throw new ArgumentException("Unknown blindType: " + blindType + " - " + Line);
             }

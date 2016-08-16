@@ -303,7 +303,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         throw new NotImplementedException("HandActionType: " + line);
                     }
                 case 'b':
-                    return new HandAction(PlayerName, HandActionType.BET, ParseActionAmountAfterPlayer(line), currentStreet);
+                    if (currentStreet == Street.Preflop)
+                    {
+                        return new HandAction(PlayerName, HandActionType.RAISE, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                    else
+                    {
+                        return new HandAction(PlayerName, HandActionType.BET, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
                 //Player PersnicketyBeagle allin (383)
                 case 'a':
                     var amount = ParseActionAmountAfterPlayer(line);

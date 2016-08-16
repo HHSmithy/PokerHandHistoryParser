@@ -33,7 +33,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("JoakimAF", HandActionType.FOLD, 0, Street.Preflop),
                 new HandAction("tuffgong", HandActionType.RAISE, 68, Street.Preflop),
                 new HandAction("spidercat", HandActionType.FOLD, 0, Street.Preflop),
-                new HandAction("tuffgong", HandActionType.MUCKS, 0m, Street.Preflop),
+                new HandAction("tuffgong", HandActionType.MUCKS, 0m, Street.Showdown),
                 new WinningsAction("tuffgong", HandActionType.WINS, 99m, 0),    
             };
 
@@ -76,9 +76,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Jeesuslaps", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("DuckGhoul", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("creys", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("_joker_", HandActionType.BET, 0.12m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.RAISE, 0.12m, Street.Preflop),
                                new HandAction("creys", HandActionType.FOLD, 0, Street.Preflop),
-                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Showdown),
                                new WinningsAction("_joker_", HandActionType.WINS, 0.16m, 0),                               
                            };
              }
@@ -96,7 +96,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Jeesuslaps", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("DuckGhoul", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("creys", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Preflop),
+                               new HandAction("_joker_", HandActionType.MUCKS, 0m, Street.Showdown),
                                new WinningsAction("_joker_", HandActionType.WINS, 0.08m, 0),                               
                            };
              }
@@ -117,7 +117,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("CrzyVndl", HandActionType.RAISE, 0.06m, Street.Preflop),
                                new HandAction("Muszkliii", HandActionType.RAISE, 0.14m, Street.Preflop),
                                new HandAction("CrzyVndl", HandActionType.FOLD, 0m, Street.Preflop),
-                               new HandAction("Muszkliii", HandActionType.MUCKS, 0, Street.Preflop),
+                               new HandAction("Muszkliii", HandActionType.MUCKS, 0, Street.Showdown),
                                new WinningsAction("Muszkliii", HandActionType.WINS, 0.23m, 0),                               
                            };
              }
@@ -136,7 +136,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("CrzyVndl", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("Muszkliii", HandActionType.FOLD, 0, Street.Preflop),
                                new HandAction("jugins", HandActionType.CALL, 0.01m, Street.Preflop),
-                               new HandAction("MrJohnCarter", HandActionType.BET, 0.12m, Street.Preflop),
+                               new HandAction("MrJohnCarter", HandActionType.RAISE, 0.12m, Street.Preflop),
                                new HandAction("jugins", HandActionType.CALL, 0.12m, Street.Preflop),
                                new HandAction("jugins", HandActionType.CHECK, 0m, Street.Flop),
                                new HandAction("MrJohnCarter", HandActionType.BET, 2.02m, Street.Flop, true),

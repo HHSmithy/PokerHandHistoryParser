@@ -387,10 +387,16 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
                 switch (typeString)
                 {
+                    case "muckcards":
+                        int seatMuck = GetPlayerSeatFromActionLine(line);
+                        string playerNameMuck = playerList.First(p => p.SeatNumber == seatMuck).PlayerName;
+                        actions.Add(new HandAction(playerNameMuck, HandActionType.MUCKS, Street.Showdown));
+                        continue;
+
                     case "showcards":
-                        int seat = GetPlayerSeatFromActionLine(line);
-                        string playerName = playerList.First(p => p.SeatNumber == seat).PlayerName;
-                        actions.Add(new HandAction(playerName, HandActionType.SHOW, Street.Showdown));
+                        int seatShow = GetPlayerSeatFromActionLine(line);
+                        string playerNameShow = playerList.First(p => p.SeatNumber == seatShow).PlayerName;
+                        actions.Add(new HandAction(playerNameShow, HandActionType.SHOW, Street.Showdown));
                         continue;
 
                     case "win":
@@ -511,6 +517,12 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 {
                     actionType = AllInActionHelper.GetAllInActionType(playerName, value, street, actions);
                 }
+            }
+
+            //Bet may occur during preflop, we need to change that to a raise
+            if (street == Street.Preflop && actionType == HandActionType.BET)
+            {
+                actionType = HandActionType.RAISE;
             }
 
             return new HandAction(playerName, actionType, value, street, AllIn, actionNumber);

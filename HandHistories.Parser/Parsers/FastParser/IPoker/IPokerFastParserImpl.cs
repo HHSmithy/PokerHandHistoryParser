@@ -898,12 +898,26 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             if (Hand.GameDescription.Limit == null)
             {
-                var SB = Hand.HandActions.First(p => p.HandActionType == HandActionType.SMALL_BLIND);
-                var BB = Hand.HandActions.First(p => p.HandActionType == HandActionType.BIG_BLIND);
+                var SB = Hand.HandActions.FirstOrDefault(p => p.HandActionType == HandActionType.SMALL_BLIND);
+                var BB = Hand.HandActions.FirstOrDefault(p => p.HandActionType == HandActionType.BIG_BLIND);
                 var Ante = Hand.HandActions.FirstOrDefault(p => p.HandActionType == HandActionType.ANTE);
                 bool haveAnte = Ante != null;
 
-                Hand.GameDescription.Limit = Limit.FromSmallBlindBigBlind(SB.Absolute, BB.Absolute, Currency.CHIPS, haveAnte, (haveAnte ? Ante.Amount : 0));
+                Limit limit;
+                if (SB == null && BB == null)
+                {
+                    limit = Limit.FromSmallBlindBigBlind(Ante.Absolute, Ante.Absolute, Currency.CHIPS);
+                }
+                else if (SB == null)
+                {
+                    limit = Limit.FromSmallBlindBigBlind(BB.Absolute, BB.Absolute, Currency.CHIPS, haveAnte, (haveAnte ? Ante.Absolute : 0));
+                }
+                else
+                {
+                    limit = Limit.FromSmallBlindBigBlind(SB.Absolute, BB.Absolute, Currency.CHIPS, haveAnte, (haveAnte ? Ante.Absolute : 0));
+                }
+
+                Hand.GameDescription.Limit = limit;
             }
         }
     }

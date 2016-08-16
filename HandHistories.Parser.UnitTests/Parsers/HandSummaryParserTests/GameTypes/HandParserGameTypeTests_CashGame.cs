@@ -171,9 +171,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         [Test]
         public void ParseGameType_ParsesFiveCardPotLimitOmaha()
         {
-            if (Site != SiteName.Entraction)
+            switch (Site)
             {
-                Assert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
+                case SiteName.Entraction:
+                case SiteName.PokerStars:
+                    break;
+
+                default:
+                    Assert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
+                    break;
             }
 
             TestGameType(GameType.FiveCardPotLimitOmaha);

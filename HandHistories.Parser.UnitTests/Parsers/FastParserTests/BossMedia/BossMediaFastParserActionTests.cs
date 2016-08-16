@@ -22,9 +22,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         {
         }
 
-        void TestBlindAction(HandAction expected, string line)
+        void TestBlindAction(HandAction expected, string line, bool BBPOsted = false)
         {
-            var action = Parser.ParseBlinds(line);
+            var action = Parser.ParseBlindAction(line, ref BBPOsted);
 
             Assert.AreEqual(expected, action);
         }
@@ -40,7 +40,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         [Test]
         public void ParseBlindActionLine_DeadSmallBlind()
         {
-            TestBlindAction(new HandAction("Player1", HandActionType.POSTS, 0.25m, Street.Preflop), "<ACTION TYPE=\"HAND_BLINDS\" PLAYER=\"Player1\" KIND=\"HAND_DSB\" VALUE=\"0.25\"></ACTION>");
+            TestBlindAction(new HandAction("Player1", HandActionType.POSTS_DEAD, 0.25m, Street.Preflop), "<ACTION TYPE=\"HAND_BLINDS\" PLAYER=\"Player1\" KIND=\"HAND_DSB\" VALUE=\"0.25\"></ACTION>");
+        }
+
+        [Test]
+        public void ParseBlindActionLine_Posts()
+        {
+            TestBlindAction(new HandAction("AllinAnna", HandActionType.POSTS, 200m, Street.Preflop), "<ACTION TYPE=\"HAND_BLINDS\" PLAYER=\"AllinAnna\" KIND=\"HAND_BB\" VALUE=\"200.00\"></ACTION>", true);
         }
 
         [Test]
