@@ -29,11 +29,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             var length = endIndex - startIndex;
 
-            try
-            {
-                return GetGameTypeFromLength(startIndex, line, length);
-            }
-            catch (Exception)
+            var gametype = GetGameTypeFromLength(startIndex, line, length);
+            if(gametype == GameType.Unknown)
             {
                 string gameString = line.Substring(commaIndex + 2, endIndex - commaIndex - 2);
 
@@ -47,8 +44,9 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     return GameType.PotLimitOmaha;
                 }
 
-                throw;
+                throw new UnrecognizedGameTypeException(line, "Unrecognized game-type: " + line);
             }
+            return gametype;
         }
 
         protected override Buyin ParseBuyin(string[] handLines)
@@ -96,13 +94,20 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
             else if (buyinSplit.Length == 1)
             {
-                if (!buyinSplit[0].EndsWithFast("FPP"))
+                if (buyinSplit[0].EndsWithFast("FPP"))
                 {
-                    throw new BuyinException(handLines[0], "Expected FPP Buyin Format");
+                    prizePoolValue = 0;
+                    rake = 0;
                 }
-
-                prizePoolValue = 0;
-                rake = 0;
+                else if (buyinSplit[0] == "Freeroll")
+                {
+                    prizePoolValue = 0;
+                    rake = 0;
+                }
+                else
+                {
+                    throw new BuyinException(handLines[0], "Expected FPP/Freeroll Buyin Format");
+                }
             }
             else
             {

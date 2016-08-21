@@ -14,7 +14,7 @@ namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
     {
         void TestAdjustedCallAllInAmount(decimal expectedAmount, List<HandAction> actions, string playerName, decimal amount)
         {
-            var result = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions.Player(playerName).ToList());
+            var result = AllInActionHelper.GetAdjustedAllInAmount(amount, actions.Player(playerName).ToList());
 
             Assert.AreEqual(expectedAmount, result);
         }

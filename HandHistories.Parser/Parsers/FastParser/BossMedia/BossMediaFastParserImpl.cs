@@ -43,6 +43,14 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             get { return true; }
         }
 
+        public override bool RequiresAllInUpdates
+        {
+            get
+            {
+                return base.RequiresAllInUpdates;
+            }
+        }
+
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None)
@@ -429,11 +437,9 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     playerNameStartIndex = playerHandActionStartIndex + 15;
                     playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     decimal amount = GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance);
+
+                    amount = AllInActionHelper.GetAdjustedAllInAmount(amount, actions.Player(playerName).Street(currentStreet));
                     HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
-                    if (allInType == HandActionType.CALL)
-                    {
-                        amount = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions.Player(playerName).Street(currentStreet));
-                    }
 
                     return new HandAction(playerName, allInType, amount, currentStreet, true);
 

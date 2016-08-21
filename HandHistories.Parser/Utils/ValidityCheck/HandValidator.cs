@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HandHistories.Objects.Players;
 
 namespace HandHistories.Parser.Utils
 {
@@ -61,6 +62,35 @@ namespace HandHistories.Parser.Utils
                     return false;
                 }
             }
+            if (checks.HasFlag(ValidationChecks.ACTION_TOTAL_AMOUNTS))
+            {
+                if (!CheckActionTotalAmounts(hand.Players, hand.HandActions, out reason))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool CheckActionTotalAmounts(PlayerList playerList, List<HandAction> list, out string reason)
+        {
+            foreach (var player in playerList)
+            {
+                var amounts = list.Player(player)
+                    .Where(p => !p.IsWinningsAction && p.HandActionType != HandActionType.UNCALLED_BET)
+                    .Sum(p => p.Absolute);
+
+                if (player.StartingStack < amounts)
+                {
+                    reason = string.Format("Player: \"{0}\" Action amounts ({1}) is more than the players stack({2})", 
+                        player.PlayerName,
+                        amounts,
+                        player.StartingStack);
+                    return false;
+                }
+            }
+
+            reason = null;
             return true;
         }
 

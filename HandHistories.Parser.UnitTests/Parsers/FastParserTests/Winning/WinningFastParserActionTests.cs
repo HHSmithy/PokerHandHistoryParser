@@ -80,6 +80,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         }
 
         [Test]
+        public void ParseRegularActionLine_Caps_Works()
+        {
+            HandAction handAction = Parser.ParseRegularAction("Player jayslowplay caps (3.50)", Street.Flop, EmptyPlayerlist, EmptyActions, false);
+
+            Assert.AreEqual(new HandAction("jayslowplay", HandActionType.ALL_IN, 3.50m, Street.Flop), handAction);
+        }
+
+        [Test]
         public void ParseShowdownActionLine_Wins_Works()
         {
             List<HandAction> actions = new List<HandAction>();

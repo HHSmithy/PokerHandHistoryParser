@@ -17,6 +17,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
 
         string GetLimitExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName);
 
+        string GetBuyinExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName);
+
         string GetTableExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, int tableTestNumber);
 
         string GetGeneralHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string name);

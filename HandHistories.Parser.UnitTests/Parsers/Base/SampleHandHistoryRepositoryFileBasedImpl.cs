@@ -34,6 +34,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "Limits", fileName);
         }
 
+        public string GetBuyinExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName)
+        {
+            return GetHandText(pokerFormat, siteName, "Buyins", fileName);
+        }
+
         public string GetTableExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, int tableTestNumber)
         {
             return GetHandText(pokerFormat, siteName, "Tables", "Table" + tableTestNumber);

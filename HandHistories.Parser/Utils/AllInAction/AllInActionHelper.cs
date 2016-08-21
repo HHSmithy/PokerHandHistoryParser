@@ -134,7 +134,7 @@ namespace HandHistories.Parser.Utils.AllInAction
         /// <param name="amount">The Call Action AMount</param>
         /// <param name="playerActions">The calling players previous actions</param>
         /// <returns>the adjusted call size</returns>
-        public static decimal GetAdjustedCallAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
+        public static decimal GetAdjustedAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
         {
             if (playerActions.Count() == 0)
             {

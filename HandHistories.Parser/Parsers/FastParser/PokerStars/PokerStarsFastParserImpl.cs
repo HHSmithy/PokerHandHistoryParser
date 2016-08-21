@@ -350,8 +350,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case 11:
                     return GameType.FixedLimitOmaha;
                 default:
-                    string errorGameTypeString = line.Substring(startIndex, gameTypeLength);
-                    throw new UnrecognizedGameTypeException(line, "Unrecognized game-type: " + errorGameTypeString);
+                    return GameType.Unknown;
             }
         }
 
@@ -398,18 +397,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             // SNG:  PokerStars Hand #121732709812: Tournament #974092011, $55.56+$4.44 USD Hold'em No Limit - Level VI (100/200) - 2014/09/18 17:02:21 ET
             // for SNGs we use the current BlindLevel as Limit
 
-            int startIndex = handLines[0].IndexOf('(', GameIdStartIndex) + 1;
-            int lastIndex = handLines[0].IndexOf(')', startIndex) - 1;
+            string line = handLines[0];
+            int startIndex = line.IndexOf('(', GameIdStartIndex) + 1;
+            int lastIndex = line.IndexOf(')', startIndex) - 1;
 
-            string limitSubstring = handLines[0].Substring(startIndex, lastIndex - startIndex + 1);
+            string limitSubstring = line.Substring(startIndex, lastIndex - startIndex + 1);
 
             // if the currencyIndex is Zero, we need to parse the Currency, otherwise we assume it's no defined currency
-            Currency currency;
-            try
-            {
-                currency = ParseCurrency(handLines[0], limitSubstring[0]);
-            }
-            catch (CurrencyException)
+            Currency currency = ParseCurrency(line, limitSubstring[0]);
+
+            if (currency == Currency.CHIPS)
             {
                 var format = ParsePokerFormat(handLines);
                 if (format.Equals(PokerFormat.SitAndGo) || format.Equals(PokerFormat.MultiTableTournament))
@@ -418,9 +415,10 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
                 else
                 {
-                    throw;
+                    throw new ArgumentException("Unrecognised Currency: " + line);
                 }
             }
+            
 
             int slashIndex = limitSubstring.IndexOf('/');
             int endIndex = limitSubstring.IndexOf(' ');
@@ -453,6 +451,19 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 case '£':
                     _numberFormatInfo.CurrencySymbol = "£";
                     return Currency.GBP;
+
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    return Currency.CHIPS;
+
                 default:
                     Currency currency;
                     if (!TryParseCurrency(handLine, out currency))

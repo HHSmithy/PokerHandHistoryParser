@@ -33,7 +33,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         {
             List<HandAction> actions = new List<HandAction>();
             var action = Parser.ParseRegularAction(line, Street.Flop, actions);
+            Assert.AreEqual(expected, action);
+        }
 
+        void TestAllinAction(HandAction expected, string line, Street street, List<HandAction> actions)
+        {
+            var action = Parser.ParseRegularAction(line, street, actions);
             Assert.AreEqual(expected, action);
         }
 
@@ -78,8 +83,36 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         {
             TestRegularAction(new HandAction("ItalyToast", HandActionType.CHECK, 0m, Street.Flop), "<ACTION TYPE=\"ACTION_CHECK\" PLAYER=\"ItalyToast\"></ACTION>");
         }
-        
 
+        [Test]
+        public void ParseAllinActionLine_CALL()
+        {
+            var actions = new List<HandAction>()
+            {
+                new HandAction("_FBK_", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                new HandAction("ItalyToast", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                new HandAction("vitylon", HandActionType.RAISE, 1.75m, Street.Preflop),
+                new HandAction("dön72", HandActionType.CALL, 1.75m, Street.Preflop),
+                new HandAction("ItalyToast", HandActionType.RAISE, 7.25m, Street.Preflop),
+                new HandAction("vitylon", HandActionType.RAISE, 19.25m, Street.Preflop),
+                new HandAction("dön72", HandActionType.CALL, 17.50m, Street.Preflop),
+            };
 
+            TestAllinAction(new HandAction("ItalyToast", HandActionType.CALL, 7m, Street.Preflop, true), "<ACTION TYPE=\"ACTION_ALLIN\" PLAYER=\"ItalyToast\" VALUE=\"14.25\"></ACTION>", Street.Preflop, actions);
+        }
+
+        [Test]
+        public void ParseAllinActionLine_RAISE()
+        {
+            var actions = new List<HandAction>()
+            {
+                new HandAction("_FBK_", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                new HandAction("ItalyToast", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                new HandAction("vitylon", HandActionType.RAISE, 1.75m, Street.Preflop),
+                new HandAction("dön72", HandActionType.CALL, 1.75m, Street.Preflop),
+            };
+
+            TestAllinAction(new HandAction("ItalyToast", HandActionType.RAISE, 7m, Street.Preflop, true), "<ACTION TYPE=\"ACTION_ALLIN\" PLAYER=\"ItalyToast\" VALUE=\"7.50\"></ACTION>", Street.Preflop, actions);
+        }
     }
 }

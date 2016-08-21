@@ -62,7 +62,7 @@ namespace HandHistories.Parser.WindowsTestApp
 
                 HandHistoryParserFastImpl fastParser = handParser as HandHistoryParserFastImpl;
 
-                var hands = fastParser.SplitUpMultipleHandsToLines(text);
+                var hands = fastParser.SplitUpMultipleHandsToLines(text.Trim());
                 foreach (var hand in hands)
                 {
                     var parsedHand = fastParser.ParseFullHandHistory(hand, true);
@@ -75,7 +75,11 @@ namespace HandHistories.Parser.WindowsTestApp
 
                 SW.Stop();
 
-                MessageBox.Show(this, "Parsed " + parsedHands + " hands." + Math.Round(SW.Elapsed.TotalMilliseconds, 2) + "ms");
+                string message = string.Format("Parsed {0} hands. {1}ms",
+                    parsedHands,
+                    Math.Round(SW.Elapsed.TotalMilliseconds, 2));
+
+                MessageBox.Show(this, message);
             }
             catch (Exception ex)
             {

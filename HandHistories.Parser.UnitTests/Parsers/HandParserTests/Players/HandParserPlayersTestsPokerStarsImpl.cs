@@ -14,6 +14,24 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
+        public void ParsePlayers_FiveCardOmaha()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("madmax84", 600m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("As5h4sAdJd")
+                },
+                new Player("manics16", 250m, 4)
+                {
+                    HoleCards = HoleCards.FromCards("9s7cTcAc3h")
+                },
+            });
+
+            TestParsePlayers("FiveCardOmaha", expected);
+        }
+
+        [Test]
         public void ParsePlayers_ShowWithoutShowdown()
         {
             var expected = new PlayerList(new List<Player>()

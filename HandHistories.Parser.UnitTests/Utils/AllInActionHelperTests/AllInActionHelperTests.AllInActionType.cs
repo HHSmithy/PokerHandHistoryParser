@@ -20,7 +20,7 @@ namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
         }
 
         [Test]
-        public void AllInPreflop()
+        public void AllInPreflop_RAISE()
         {
             List<HandAction> actions = new List<HandAction>()
             {
@@ -32,7 +32,25 @@ namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
         }
 
         [Test]
-        public void RaiseAllInFlop()
+        public void AllInPreflop_CALL()
+        {
+            var actions = new List<HandAction>()
+            {
+                new HandAction("_FBK_", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                new HandAction("ItalyToast", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                new HandAction("vitylon", HandActionType.RAISE, 1.75m, Street.Preflop),
+                new HandAction("dön72", HandActionType.CALL, 1.75m, Street.Preflop),
+                new HandAction("_FBK_", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("ItalyToast", HandActionType.RAISE, 7.25m, Street.Preflop),
+                new HandAction("vitylon", HandActionType.RAISE, 19.25m, Street.Preflop),
+                new HandAction("dön72", HandActionType.CALL, 17.50m, Street.Preflop),
+            };
+
+            TestAllInActionHelper("ItalyToast", 14.25m, Street.Preflop, actions, HandActionType.RAISE);
+        }
+
+        [Test]
+        public void AllInFlop_RAISE()
         {
             List<HandAction> actions = new List<HandAction>()
             {
@@ -51,7 +69,7 @@ namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
         }
 
         [Test]
-        public void CallAllInFlop()
+        public void AllInFlop_CALL()
         {
             List<HandAction> actions = new List<HandAction>()
             {

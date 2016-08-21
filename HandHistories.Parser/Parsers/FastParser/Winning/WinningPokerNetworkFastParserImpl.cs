@@ -290,13 +290,21 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 //checks or calls
                 case 'c':
                     //Player butta21 calls (20)
-                    if (line[actionIDIndex + 1] == 'h')
+                    //Player jayslowplay caps (3.50)
+                    //Player STOPCRYINGB79 checks
+                    char actionID2 = line[actionIDIndex + 2];
+                    if (actionID2 == 'e')
                     {
                         return new HandAction(PlayerName, HandActionType.CHECK, 0, currentStreet);
                     }
-                    else if (line[actionIDIndex + 1] == 'a')
+                    else if (actionID2 == 'l')
                     {
                         return new HandAction(PlayerName, HandActionType.CALL, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                    else if (actionID2 == 'p')
+                    {
+                        //TODO: Decide how to manage CAP hands
+                        return new HandAction(PlayerName, HandActionType.ALL_IN, ParseActionAmountAfterPlayer(line), currentStreet);
                     }
                     else
                     {

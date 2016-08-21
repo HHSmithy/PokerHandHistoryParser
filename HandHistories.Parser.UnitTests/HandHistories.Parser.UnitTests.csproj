@@ -145,6 +145,9 @@
     <Compile Include="Parsers\HandSummaryParserTests\SplitUpMultipleHandsTests\HandParserSplitUpMultipleHandsTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Tables\HandParserTableTypeTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\TournamentBuyinTests\TournamentBuyinTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\TournamentBuyinTests\TournamentBuyinTests_MTT.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\TournamentBuyinTests\TournamentBuyinTests_SnG.cs" />
     <Compile Include="Parsers\PerformanceTests\HandParserPerformanceTests.cs" />
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTests.cs" />
     <Compile Include="Parsers\ThreeStateParserTests\ThreeStateParserTestsFullTilt.cs" />
@@ -1245,6 +1248,9 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\MultipleHandsTests\NoNewLinesMultipleHands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\FiveCardOmaha.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\PlayerTests\NoHoleCards.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1411,7 +1417,16 @@
     <Content Include="SampleHandHistories\PartyPoker\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Buyins\Buyin1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\GameTypeTests\NoLimitHoldem.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\NoLimitHoldem.txt">

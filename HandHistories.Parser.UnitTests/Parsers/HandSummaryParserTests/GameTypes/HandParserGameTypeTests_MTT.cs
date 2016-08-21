@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {
+    [TestFixture("PokerStars")]
     [TestFixture("PartyPoker")]
     [TestFixture("MicroGaming")]
     class HandParserGameTypeTests_MTT : HandParserGameTypeTests

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
 {
-    [TestFixture("PokerStars", "40-80")]
+    [TestFixture("PokerStars", "40-80", "10-20")]
     [TestFixture("Winamax", "150-300-A25")]
     class HandParserLimitTests_MTT : HandParserLimitTests
     {
