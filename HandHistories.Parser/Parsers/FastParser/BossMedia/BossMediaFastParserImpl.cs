@@ -392,8 +392,8 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             //<ACTION TYPE="HAND_BLINDS" PLAYER="gasmandean" KIND="HAND_BB" VALUE="0.04"></ACTION>
             const int playerNameStartIndex = 35;
 
-            int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
-            string playerName = Line.Substring(playerNameStartIndex, playerNameEndIndex - playerNameStartIndex);
+            int nameLength;
+            string playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
 
             string amountStr = GetXMLAttributeValue(Line, "VALUE");
             decimal amount = decimal.Parse(amountStr, provider);

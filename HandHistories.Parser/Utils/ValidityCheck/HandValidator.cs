@@ -82,7 +82,7 @@ namespace HandHistories.Parser.Utils
         private static bool CheckPlayerListWitoutWithActions(PlayerList players, List<HandAction> actions, out string reason)
         {
             reason = null;
-            foreach (var player in players.Where(p => !p.IsSittingOut))
+            foreach (var player in players.Where(p => p.IsSittingOut))
             {
                 int actionCount = actions.Player(player).Count();
                 if (actionCount > 0)

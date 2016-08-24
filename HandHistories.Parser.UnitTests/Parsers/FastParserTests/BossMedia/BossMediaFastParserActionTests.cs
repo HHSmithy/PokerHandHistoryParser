@@ -114,5 +114,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
 
             TestAllinAction(new HandAction("ItalyToast", HandActionType.RAISE, 7m, Street.Preflop, true), "<ACTION TYPE=\"ACTION_ALLIN\" PLAYER=\"ItalyToast\" VALUE=\"7.50\"></ACTION>", Street.Preflop, actions);
         }
+
+        [Test]
+        public void ParseRegularActionLine_Call_StrangePlayerName()
+        {
+            TestRegularAction(new HandAction("><(((?>", HandActionType.CALL, 3.75m, Street.Flop), "<ACTION TYPE=\"ACTION_CALL\" PLAYER=\"&gt;&lt;(((?&gt;\" VALUE=\"3.75\"></ACTION>");
+        }
+
+        [Test]
+        public void ParseBlindActionLine_BigBlind_StrangePlayerName()
+        {
+            TestBlindAction(new HandAction("><(((?>", HandActionType.BIG_BLIND, 200m, Street.Preflop), "<ACTION TYPE=\"HAND_BLINDS\" PLAYER=\"&gt;&lt;(((?&gt;\" KIND=\"HAND_BB\" VALUE=\"200.00\"></ACTION>");
+        }
     }
 }
