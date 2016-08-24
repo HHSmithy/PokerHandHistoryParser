@@ -16,6 +16,10 @@ namespace HandHistories.Parser.Utils
         /// Checks if all actions by a player is less then or equal the players stack
         /// </summary>
         ACTION_TOTAL_AMOUNTS = 1 << 4,
+        /// <summary>
+        /// Checks that no players who are sitout also has actions in the hand
+        /// </summary>
+        PLAYERLIST_SITOUT_WITH_ACTIONS = 1 << 5,
         ALL = -1
     }
 }

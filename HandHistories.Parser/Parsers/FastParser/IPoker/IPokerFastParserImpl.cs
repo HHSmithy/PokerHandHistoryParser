@@ -759,7 +759,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             foreach (var line in actionLines)
             {
                 string player = GetPlayerFromActionLine(line);
-                int type = GetActionNumberFromActionLine(line);
+                int type = GetActionTypeFromActionLine(line);
 
                 //action line may have an empty name and then we skip it
                 //<action no="3" sum="€0" cards="" type="9" player=""/>

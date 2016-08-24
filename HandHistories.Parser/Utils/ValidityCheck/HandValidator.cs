@@ -69,6 +69,28 @@ namespace HandHistories.Parser.Utils
                     return false;
                 }
             }
+            if (checks.HasFlag(ValidationChecks.PLAYERLIST_SITOUT_WITH_ACTIONS))
+            {
+                if (!CheckPlayerListWitoutWithActions(hand.Players, hand.HandActions, out reason))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool CheckPlayerListWitoutWithActions(PlayerList players, List<HandAction> actions, out string reason)
+        {
+            reason = null;
+            foreach (var player in players.Where(p => !p.IsSittingOut))
+            {
+                int actionCount = actions.Player(player).Count();
+                if (actionCount > 0)
+                {
+                    reason = string.Format("Player: \"{0}\" is sitout and have {1} HandActions", player.PlayerName, actions);
+                    return false;
+                }
+            }
             return true;
         }
 
