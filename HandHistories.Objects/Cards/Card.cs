@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Linq;
 
 namespace HandHistories.Objects.Cards
 {
@@ -10,6 +12,30 @@ namespace HandHistories.Objects.Cards
     {
         const int SuitCardMask = 0xF0;
         const int RankCardMask = 0x0F;
+
+        public static readonly Card[] AllCards = GetAllCards();
+
+        private static Card[] GetAllCards()
+        {
+            List<Card> cards = new List<Card>(52);
+            foreach (var rank in (Card.CardValueEnum[])Enum.GetValues(typeof(Card.CardValueEnum)))
+            {
+                if (rank == CardValueEnum.Unknown)
+                {
+                    continue;
+                }
+                foreach (var suit in (Card.SuitEnum[])Enum.GetValues(typeof(Card.SuitEnum)))
+                {
+                    if (suit == SuitEnum.Unknown)
+                    {
+                        continue;
+                    }
+
+                    cards.Add(new Card(suit, rank));
+                }
+            }
+            return cards.ToArray();
+        }
 
         #region Properties
         private SuitEnum suit

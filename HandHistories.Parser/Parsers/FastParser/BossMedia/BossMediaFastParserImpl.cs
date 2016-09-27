@@ -438,8 +438,8 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     decimal amount = GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance);
 
-                    amount = AllInActionHelper.GetAdjustedAllInAmount(amount, actions.Player(playerName).Street(currentStreet));
-                    HandActionType allInType = AllInActionHelper.GetAllInActionType(playerName, amount, currentStreet, actions);
+                    amount = BossMediaAllInAdjuster.GetAdjustedAllInAmount(playerName, amount, currentStreet, actions);
+                    HandActionType allInType = BossMediaAllInAdjuster.GetAllInActionType(playerName, amount, currentStreet, actions);
 
                     return new HandAction(playerName, allInType, amount, currentStreet, true);
 

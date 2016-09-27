@@ -82,6 +82,7 @@
     <Compile Include="FileIdentifiers\WinningPoker\WinningPokerFileIdentifier.cs" />
     <Compile Include="Parsers\Base\IThreeStateParser.cs" />
     <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\BossMedia\BossMediaAllInAdjuster.cs" />
     <Compile Include="Parsers\FastParser\BossMedia\BossMediaFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
     <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
