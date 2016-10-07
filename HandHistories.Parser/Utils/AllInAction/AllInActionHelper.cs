@@ -127,21 +127,5 @@ namespace HandHistories.Parser.Utils.AllInAction
                 return HandActionType.RAISE;
             }
         }
-
-        /// <summary>
-        /// Gets the adjusted amount for a Call-AllIn action
-        /// </summary>
-        /// <param name="amount">The Call Action AMount</param>
-        /// <param name="playerActions">The calling players previous actions</param>
-        /// <returns>the adjusted call size</returns>
-        public static decimal GetAdjustedAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
-        {
-            if (playerActions.Count() == 0)
-            {
-                return amount;
-            }
-
-            return amount - Math.Abs(playerActions.Min(p => p.Amount));
-        }
     }
 }

@@ -28,7 +28,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         void TestAllInAdjustment(List<HandAction> actions, HandAction allinAction, HandActionType expectedType, decimal expectedAmount)
         {
             var allinType = BossMediaAllInAdjuster.GetAllInActionType(allinAction.PlayerName, allinAction.Absolute, allinAction.Street, actions);
-            var actualAmount = BossMediaAllInAdjuster.GetAdjustedAllInAmount(allinAction.PlayerName, allinAction.Absolute, allinAction.Street, actions);
+            var actualAmount = allinAction.Absolute;
+            if (allinType == HandActionType.CALL)
+            {
+                actualAmount = BossMediaAllInAdjuster.GetAdjustedCallAllInAmount(allinAction.PlayerName, allinAction.Absolute, allinAction.Street, actions);
+            }
 
             Assert.AreEqual(expectedType, allinType);
             Assert.AreEqual(expectedAmount, actualAmount);
@@ -62,7 +66,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
         }
 
         [TestCase]
-        public void Boss_RaiseAllinAdjustement_Flop_0()
+        public void Boss_CallRaiseAllinAdjustement_Flop_0()
         {
             List<HandAction> actions = new List<HandAction>()
             {
@@ -71,14 +75,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
                 new HandAction("P3", HandActionType.CALL, 2, Street.Preflop),
                 new HandAction("P1", HandActionType.RAISE, 12, Street.Preflop),
                 new HandAction("P2", HandActionType.CALL, 10, Street.Preflop),
-                new HandAction("P3", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("P3", HandActionType.CALL, 10, Street.Preflop),
 
-                new HandAction("P1", HandActionType.BET, 24, Street.Flop),
+                new HandAction("P1", HandActionType.BET, 20, Street.Flop),
+                new HandAction("P2", HandActionType.CALL, 20, Street.Flop),
+                new HandAction("P3", HandActionType.RAISE, 60, Street.Flop),
+                new HandAction("P1", HandActionType.CALL, 40, Street.Flop),
             };
 
-            var allinAction = new HandAction("P2", HandActionType.ALL_IN, 30, Street.Flop);
+            var allinAction = new HandAction("P2", HandActionType.ALL_IN, 100, Street.Flop);
 
-            TestAllInAdjustment(actions, allinAction, HandActionType.RAISE, 30);
+            TestAllInAdjustment(actions, allinAction, HandActionType.RAISE, 100);
         }
 
         [TestCase]
@@ -99,7 +106,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
 
             var allinAction = new HandAction("P2", HandActionType.ALL_IN, 36, Street.Preflop);
 
-            TestAllInAdjustment(actions, allinAction, HandActionType.RAISE, 34);
+            TestAllInAdjustment(actions, allinAction, HandActionType.RAISE, 36);
         }
     }
 }

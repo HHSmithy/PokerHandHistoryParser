@@ -10,7 +10,7 @@ using System.Text;
 namespace HandHistories.Parser.UnitTests.Utils.IntegrityTests
 {
     [TestFixture]
-    class StreetIntegrityTests : HandIntegrityTests
+    class StreetIntegrityTests : HandIntegrityBaseTests
     {
         public StreetIntegrityTests()
             : base(ValidationChecks.STREET_ORDER)

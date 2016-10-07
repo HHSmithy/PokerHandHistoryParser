@@ -25,7 +25,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override SiteName SiteName
         {
-            get { return Objects.GameDescription.SiteName.BossMedia; }
+            get { return SiteName.BossMedia; }
         }
 
         public override bool RequiresAdjustedRaiseSizes
@@ -41,14 +41,6 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         public override bool RequiresUncalledBetWinAdjustment
         {
             get { return true; }
-        }
-
-        public override bool RequiresAllInUpdates
-        {
-            get
-            {
-                return base.RequiresAllInUpdates;
-            }
         }
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
@@ -438,8 +430,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     playerName = GetActionPlayerName(Line, playerNameStartIndex, out nameLength);
                     decimal amount = GetActionAmount(Line, playerNameStartIndex + nameLength + fixedAmountDistance);
 
-                    amount = BossMediaAllInAdjuster.GetAdjustedAllInAmount(playerName, amount, currentStreet, actions);
                     HandActionType allInType = BossMediaAllInAdjuster.GetAllInActionType(playerName, amount, currentStreet, actions);
+                    if (allInType == HandActionType.CALL)
+                    {
+                        amount = BossMediaAllInAdjuster.GetAdjustedCallAllInAmount(playerName, amount, currentStreet, actions);
+                    }
 
                     return new HandAction(playerName, allInType, amount, currentStreet, true);
 
@@ -603,53 +598,66 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             }
 
             //Parse Showdown cards
-            for (int i = handLines.Length - 1; i > currentLine; i--)
+            int showDownIndex = GetShowdownStartIndex(handLines);
+            if (showDownIndex != -1)
             {
-                string Line = handLines[i];
-                char firstChar = Line[1];
-
-                if (firstChar == 'C')
+                Player currentPlayer = null;
+                for (int i = showDownIndex; i < handLines.Length; i++)
                 {
-                    continue;
-                }
+                    string Line = handLines[i];
+                    char firstChar = Line[1];
 
-                //<RESULT PLAYER="ItalyToast" WIN="10.00" HAND="$(STR_BY_DEFAULT)" WINCARDS="14 1 50 5 14 ">
-                if (firstChar == 'R')
-                {
-                    const int playerNameStartIndex = 16;
-                    int playerNameEndIndex = Line.IndexOf('\"', playerNameStartIndex);
-                    string playerName = GetPlayerXMLAttributeValue(Line);
-                    Player player = plist[playerName];
-
-                    if (!player.hasHoleCards)
+                    //<SHOWDOWN NAME="HAND_SHOWDOWN" POT="895.02" RAKE="15.00" MAINPOT="895.02" LEFTPOT="" RIGHTPOT="" STARTING="Player4">
+                    //<RESULT PLAYER="Player4" WIN="0.00" HAND="$(STR_G_WIN_PAIR) $(STR_G_CARDS_DEUCES)" WINCARDS="40 1 0 9 45 ">
+                    //<CARD LINK="46"></CARD>
+                    //<CARD LINK="1"></CARD>
+                    //<CARD LINK="9"></CARD>
+                    //<CARD LINK="47"></CARD></RESULT>
+                    if (firstChar == 'R')
                     {
-                        for (int cardIndex = i + 1; cardIndex <= i + 4 && cardIndex < handLines.Length; cardIndex++)
+                        string playerName = GetPlayerXMLAttributeValue(Line);
+                        var player = plist[playerName];
+                        if (!player.hasHoleCards)
                         {
-                            string cardLine = handLines[cardIndex];
-                            if (cardLine[1] != 'C')
-                            {
-                                break;
-                            }
+                            currentPlayer = player;
+                        }
+                        else
+                        {
+                            currentPlayer = null;
+                        }
+                        continue;
+                    }
 
-                            Card parsedCard = ParseCard(cardLine);
-                            if (!parsedCard.isEmpty)
+                    //<CARD LINK="9"></CARD>
+                    if (firstChar == 'C' && currentPlayer != null)
+                    {
+                        Card parsedCard = ParseCard(Line);
+                        if (!parsedCard.isEmpty)
+                        {
+                            if (currentPlayer.HoleCards == null)
                             {
-                                if (player.HoleCards == null)
-                                {
-                                    player.HoleCards = HoleCards.NoHolecards();
-                                }
-                                player.HoleCards.AddCard(parsedCard);
+                                currentPlayer.HoleCards = HoleCards.NoHolecards();
                             }
+                            currentPlayer.HoleCards.AddCard(parsedCard);
                         }
                     }
                 }
+            }
+            
+            return plist;
+        }
 
-                if (firstChar == 'S')
+        static int GetShowdownStartIndex(string[] handlines)
+        {
+            for (int i = handlines.Length - 1; i > 0; i--)
+            {
+                var line = handlines[i];
+                if (line[1] == 'S')
                 {
-                    break;
+                    return i;
                 }
             }
-            return plist;
+            return -1;
         }
 
         private bool IsSitOutState(string state)

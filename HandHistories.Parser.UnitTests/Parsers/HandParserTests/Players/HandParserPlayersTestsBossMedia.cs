@@ -66,29 +66,29 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             {
                 return new PlayerList()
                            {
-                               new Player("Supervic", 10985m, 1),
-                               new Player("Phyre", 13427m, 2),
-                               new Player("AllinAnna", 12995m, 3),
-                               new Player("ItalyToast", 8635m, 4)
+                               new Player("Player1", 2485.94m, 1),
+                               new Player("Player2", 2491.77m, 2),
+                               new Player("Player3", 7175.04m, 3),
+                               new Player("Player4", 2375.79m, 4)
                                {
                                    HoleCards = HoleCards.ForOmaha
                                    (
-                                   new Card('K', 'h'),
-                                   new Card('Q', 's'),
-                                   new Card('J', 'c'),
-                                   new Card('A', 'd')
+                                   new Card('8', 's'),
+                                   new Card('2', 'd'),
+                                   new Card('T', 'd'),
+                                   new Card('9', 's')
                                    )
                                },
-                               new Player("SAMERRRR", 15972.51m, 5)
+                               new Player("Player5", 440.01m, 5)
                                {
                                    HoleCards = HoleCards.ForOmaha
                                    (
-                                   new Card('J', 's'),
-                                   new Card('8', 'h'),
-                                   new Card('Q', 'h'),
-                                   new Card('7', 'd')
+                                   new Card('A', 's'),
+                                   new Card('Q', 's'),
+                                   new Card('Q', 'c'),
+                                   new Card('8', 'd')
                                    )
-                               }
+                               },
                            };
             }
         }
@@ -146,7 +146,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             var expected = new PlayerList(new List<Player>()
             {
                 new Player("&&££ÖÖ", 400m, 1),
-                new Player("L'POOL", 60m, 2),
+                new Player("L'POOL", 60m, 2)
+                {
+                    HoleCards = HoleCards.FromCards("9s9hQhJs")
+                },
                 new Player("Player3", 200m, 3)
                 {
                     HoleCards = HoleCards.FromCards("JdJhKc7h")

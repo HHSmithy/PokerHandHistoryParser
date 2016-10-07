@@ -71,7 +71,7 @@ namespace HandHistories.Parser.Utils
             }
             if (checks.HasFlag(ValidationChecks.PLAYERLIST_SITOUT_WITH_ACTIONS))
             {
-                if (!CheckPlayerListWitoutWithActions(hand.Players, hand.HandActions, out reason))
+                if (!CheckPlayerListSitoutWithActions(hand.Players, hand.HandActions, out reason))
                 {
                     return false;
                 }
@@ -79,7 +79,7 @@ namespace HandHistories.Parser.Utils
             return true;
         }
 
-        private static bool CheckPlayerListWitoutWithActions(PlayerList players, List<HandAction> actions, out string reason)
+        private static bool CheckPlayerListSitoutWithActions(PlayerList players, List<HandAction> actions, out string reason)
         {
             reason = null;
             foreach (var player in players.Where(p => p.IsSittingOut))
@@ -94,17 +94,28 @@ namespace HandHistories.Parser.Utils
             return true;
         }
 
-        private static bool CheckActionTotalAmounts(PlayerList playerList, List<HandAction> list, out string reason)
+        private static bool CheckActionTotalAmounts(PlayerList playerList, List<HandAction> actions, out string reason)
         {
             foreach (var player in playerList)
             {
-                var amounts = list.Player(player)
+                var amounts = actions.Player(player)
                     .Where(p => !p.IsWinningsAction && p.HandActionType != HandActionType.UNCALLED_BET)
                     .Sum(p => p.Absolute);
+
+                var allin = actions.Player(player).Any(p => p.IsAllIn);
 
                 if (player.StartingStack < amounts)
                 {
                     reason = string.Format("Player: \"{0}\" Action amounts ({1}) is more than the players stack({2})", 
+                        player.PlayerName,
+                        amounts,
+                        player.StartingStack);
+                    return false;
+                }
+
+                if (allin && player.StartingStack != amounts)
+                {
+                    reason = string.Format("Player: \"{0}\" is Allin but stack ({2}) is bigger then contribution to pot ({1})",
                         player.PlayerName,
                         amounts,
                         player.StartingStack);

@@ -9,10 +9,10 @@ using System.Text;
 
 namespace HandHistories.Parser.UnitTests.Utils.IntegrityTests
 {
-    abstract class HandIntegrityTests
+    abstract class HandIntegrityBaseTests
     {
         ValidationChecks checks;
-        protected HandIntegrityTests(ValidationChecks checks)
+        protected HandIntegrityBaseTests(ValidationChecks checks)
         {
             this.checks = checks;
         }

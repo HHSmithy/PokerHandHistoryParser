@@ -25,12 +25,12 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 #endif
     {
         /// <summary>
-        /// Gets the adjusted amount for a AllIn action before raise adjustments
+        /// Gets the adjusted amount for a Call AllIn action before raise adjustments
         /// </summary>
         /// <param name="amount">The Call Action AMount</param>
         /// <param name="playerActions">The calling players previous actions</param>
         /// <returns>the adjusted call size</returns>
-        public static decimal GetAdjustedAllInAmount(string player, decimal amount, Street street, IEnumerable<HandAction> handActions)
+        public static decimal GetAdjustedCallAllInAmount(string player, decimal amount, Street street, IEnumerable<HandAction> handActions)
         {
             var playerActions = handActions
                 .Player(player)
@@ -61,33 +61,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                 return HandActionType.BET;
             }
 
-            Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
-
-            foreach (var action in streetActions)
-            {
-                if (!PutInPot.ContainsKey(action.PlayerName))
-                {
-                    PutInPot.Add(action.PlayerName, action.Amount);
-                }
-                else
-                {
-                    PutInPot[action.PlayerName] += action.Amount;
-                }
-            }
-
-            var contributed = Math.Abs(amount);
-            if (PutInPot.ContainsKey(playerName))
-            {
-                contributed += Math.Abs(PutInPot[playerName]);
-            }
-            if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
+            if (streetActions.Any(p => p.Absolute > amount))
             {
                 return HandActionType.CALL;
             }
-            else
-            {
-                return HandActionType.RAISE;
-            }
+            return HandActionType.RAISE;
         }
     }
 }

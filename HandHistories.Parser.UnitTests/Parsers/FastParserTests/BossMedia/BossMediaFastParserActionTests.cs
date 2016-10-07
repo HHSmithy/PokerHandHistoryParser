@@ -112,7 +112,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.BossMedia
                 new HandAction("dön72", HandActionType.CALL, 1.75m, Street.Preflop),
             };
 
-            TestAllinAction(new HandAction("ItalyToast", HandActionType.RAISE, 7m, Street.Preflop, true), "<ACTION TYPE=\"ACTION_ALLIN\" PLAYER=\"ItalyToast\" VALUE=\"7.50\"></ACTION>", Street.Preflop, actions);
+            TestAllinAction(new HandAction("ItalyToast", HandActionType.RAISE, 7.5m, Street.Preflop, true), "<ACTION TYPE=\"ACTION_ALLIN\" PLAYER=\"ItalyToast\" VALUE=\"7.50\"></ACTION>", Street.Preflop, actions);
         }
 
         [Test]
