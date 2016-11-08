@@ -129,17 +129,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override TableType ParseTableType(string[] handLines)
         {
+            string gameLine = handLines[1];
             List<TableTypeDescription> descriptions = new List<TableTypeDescription>();
-            if (handLines[1].Contains("(JP)"))
+            if (gameLine.Contains("(JP)"))
             {
                 descriptions.Add(TableTypeDescription.Jackpot);
             }
-            if (handLines[1].Contains(" CAP "))
+            if (gameLine.Contains(" CAP ") || gameLine.Contains("(cap)"))
             {
                 descriptions.Add(TableTypeDescription.Cap);
             }
 
-            return TableType.FromTableTypeDescriptions(descriptions.ToArray());
+            return new TableType(descriptions);
         }
 
         protected override Limit ParseLimit(string[] handLines)
