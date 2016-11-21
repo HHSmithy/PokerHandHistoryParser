@@ -209,6 +209,10 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 }
 
                 int showCardsIndex = showLine.IndexOfFast("type=\"ShowCards\"", 15);
+                if (showCardsIndex == -1)
+                {
+                    showCardsIndex = showLine.IndexOfFast("type=\"MuckCards\"", 15);
+                }
 
                 // if the cards are shown for this player
                 if (showCardsIndex != -1 && showLine.LastIndexOfFast(seatString) != -1)

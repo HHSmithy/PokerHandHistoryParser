@@ -481,6 +481,9 @@
     <Content Include="SampleHandHistories\MicroGaming\CashGame\MultipleHandsTests\10MultipleHands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\MicroGaming\CashGame\PlayerTests\MuckingCards.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\PlayerTests\NoHoleCards.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

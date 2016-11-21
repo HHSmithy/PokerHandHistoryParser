@@ -164,5 +164,31 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 
             TestParsePlayers_FullHand("WaitingForBB", expected);
         }
+
+        [Test]
+        public void ParsePlayers_MuckingCards()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("Player1", 2000m, 1),
+                new Player("HERO", 2000m, 2)
+                {
+                    HoleCards = HoleCards.FromCards("3s5c4d5d")
+                },
+                new Player("Player3", 2000m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("6dAc3hAs")
+                },
+                new Player("Player5", 2000m, 5)
+                {
+                    HoleCards = HoleCards.FromCards("6s3dThTs")
+                },
+                new Player("Player6", 2000m, 6)
+                {
+                },
+            });
+
+            TestParsePlayers_FullHand("MuckingCards", expected);
+        }
     }
 }
