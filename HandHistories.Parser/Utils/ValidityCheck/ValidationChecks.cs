@@ -20,6 +20,10 @@ namespace HandHistories.Parser.Utils
         /// Checks that no players who are sitout also has actions in the hand
         /// </summary>
         PLAYERLIST_SITOUT_WITH_ACTIONS = 1 << 5,
+        /// <summary>
+        /// Checks that players who are sitin also has actions in the hand
+        /// </summary>
+        PLAYERLIST_SITIN_WITHOUT_ACTIONS = 1 << 6,
         ALL = -1
     }
 }

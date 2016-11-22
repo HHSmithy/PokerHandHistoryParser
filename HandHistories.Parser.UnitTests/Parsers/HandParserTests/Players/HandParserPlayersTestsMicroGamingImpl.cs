@@ -166,7 +166,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
-        public void ParsePlayers_MuckingCards()
+        public void ParsePlayers_MuckingHoleCards()
         {
             var expected = new PlayerList(new List<Player>()
             {
