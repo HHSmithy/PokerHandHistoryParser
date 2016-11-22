@@ -1,0 +1,19 @@
+﻿Winamax Poker - CashGame - HandId: #9200000-386-1479000000 - 5 Card Omaha Hi/Lo pot limit (5€/10€) - 2016/01/01 11:22:33 UTC
+Table: 'Marbella' 6-max (real money) Seat #3 is the button
+Seat 2: anananas7 (1292€)
+Seat 3: AmyDiamond (3139.11€)
+Seat 4: sheld0r (1000€)
+Seat 5: JDOUBLON12 (479€)
+Seat 6: milanda (1362€)
+*** ANTE/BLINDS ***
+sheld0r posts small blind 5€
+JDOUBLON12 posts big blind 10€
+*** PRE-FLOP *** 
+milanda raises 25€ to 35€
+AmyDiamond folds
+sheld0r folds
+JDOUBLON12 folds
+milanda collected 50€ from pot
+*** SUMMARY ***
+Total pot 50€ | No rake
+Seat 6: milanda won 50€

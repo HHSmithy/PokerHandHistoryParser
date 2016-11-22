@@ -52,8 +52,10 @@ namespace HandHistories.Objects.GameDescription
                 case "no limit omaha":
                     return GameType.NoLimitOmaha;
                 case "pot limit five card omaha hi-lo":
+                case "5 card omaha hi/lo pot limit":
                     return GameType.FiveCardPotLimitOmahaHiLo;
                 case "pot limit five card omaha":
+                case "5 card omaha pot limit":
                     return GameType.FiveCardPotLimitOmaha;
                 default:
                     string match = Enum.GetNames(typeof(GameType)).FirstOrDefault(g => g.ToLower().Equals(gameString.ToLower()));

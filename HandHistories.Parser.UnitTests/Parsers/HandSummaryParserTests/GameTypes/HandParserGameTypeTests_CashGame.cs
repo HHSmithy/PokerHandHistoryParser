@@ -184,5 +184,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
 
             TestGameType(GameType.FiveCardPotLimitOmaha);
         }
+
+        [Test]
+        public void ParseGameType_ParsesFiveCardPotLimitOmahaHiLo()
+        {
+            switch (Site)
+            {
+                case SiteName.Winamax:
+                    break;
+
+                default:
+                    Assert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
+                    break;
+            }
+
+            TestGameType(GameType.FiveCardPotLimitOmahaHiLo);
+        }
     }
 }

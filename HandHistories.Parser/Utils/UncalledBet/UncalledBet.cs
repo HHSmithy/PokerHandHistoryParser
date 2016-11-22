@@ -36,28 +36,34 @@ namespace HandHistories.Parser.Utils.Uncalled
                 }
             }
 
+            HandAction UncalledAction = null;
             switch (lastAction.HandActionType)
             {
                 case HandActionType.RAISE:
-                    handActions.Insert(insertIndex, GetUncalledRaise(realActions, lastAction));
+                    UncalledAction = GetUncalledRaise(realActions, lastAction);
                     break;
 
                 // when the last action before summary is a bet, we need to return that bet to the according player
                 case HandActionType.BET:
-                    handActions.Insert(insertIndex, GetUncalledBet(lastAction));
+                    UncalledAction =  GetUncalledBet(lastAction);
                     break;
 
                 // when the last action before the summary is the big blind, we need to return the difference between BB and SB
                 case HandActionType.BIG_BLIND:
-                    handActions.Insert(insertIndex, GetUncalledBigBlind(realActions, lastAction));
+                    UncalledAction =  GetUncalledBigBlind(realActions, lastAction);
                     break;
 
                 case HandActionType.CALL:
                     if (lastAction.IsAllIn)
                     {
-                        handActions.Insert(insertIndex, GetPartiallyUncalledRaise(realActions));
+                        UncalledAction =  GetPartiallyUncalledRaise(realActions);
                     }
                     break;
+            }
+
+            if (UncalledAction != null)
+            {
+                handActions.Insert(insertIndex, UncalledAction);
             }
 
             return handActions;
@@ -112,8 +118,14 @@ namespace HandHistories.Parser.Utils.Uncalled
                                                             })
                                                             .Min(x => x.Invested); // money invested is negative, so take the "max" negative value
 
+            var uncalledAmount = totalInvestedAmount - totalInvestedAmountOtherPlayer;
 
-            return new HandAction(lastRaiser.PlayerName, HandActionType.UNCALLED_BET, totalInvestedAmount - totalInvestedAmountOtherPlayer, lastRaiser.Street);
+            if (uncalledAmount == 0)
+	        {
+		         return null;
+	        }
+
+            return new HandAction(lastRaiser.PlayerName, HandActionType.UNCALLED_BET, uncalledAmount, lastRaiser.Street);
         }
 
         /// <summary>

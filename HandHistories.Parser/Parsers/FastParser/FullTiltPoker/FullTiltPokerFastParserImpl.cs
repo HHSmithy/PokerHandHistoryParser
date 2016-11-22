@@ -1213,6 +1213,22 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return RIT;
         }
 
+        protected override void FinalizeHandHistory(HandHistory Hand)
+        {
+            DetectSitOutPlayers(Hand);
+        }
+
+        private void DetectSitOutPlayers(HandHistory Hand)
+        {
+            foreach (var player in Hand.Players)
+            {
+                if (Hand.HandActions.Player(player).Count() == 0)
+                {
+                    player.IsSittingOut = true;
+                }
+            }
+        }
+
 
         public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street street)
         {

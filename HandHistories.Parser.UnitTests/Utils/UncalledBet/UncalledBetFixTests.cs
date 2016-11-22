@@ -13,14 +13,21 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
     [TestFixture]
     class UncalledBetFixTests
     {
-        void TestUncalledbet(string expectedPlayer, decimal expectedAmount, HandHistory hand)
+        void TestUncalledbet(string expectedPlayer, decimal? expectedAmount, HandHistory hand)
         {
             var actions = UncalledBet.Fix(hand.HandActions);
 
-            var lastAction = actions.Last();
+            var lastAction = actions.FirstOrDefault(p => p.HandActionType == HandActionType.UNCALLED_BET);
 
-            Assert.AreEqual(expectedPlayer, lastAction.PlayerName);
-            Assert.AreEqual(expectedAmount, lastAction.Amount);
+            if (expectedAmount == null)
+            {
+                Assert.AreEqual(null, lastAction);
+            }
+            else
+            {
+                Assert.AreEqual(expectedPlayer, lastAction.PlayerName);
+                Assert.AreEqual(expectedAmount, lastAction.Amount);
+            }
         }
 
         void TestUncalledbetWinsAdjustment(string expectedPlayer, decimal expectedWinAmount, List<HandAction> handActions)
@@ -56,6 +63,26 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
             };
 
             TestUncalledbet("P2", 0.1m, hand);
+        }
+
+        [TestCase]
+        public void UncalledBetTest_NoFixRequired_2()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 0.2m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 0.1m, Street.Preflop),
+                new HandAction("P2", HandActionType.CHECK, 0m, Street.Preflop),
+
+                new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("P2", HandActionType.BET, 0.4m, Street.Flop),
+                new HandAction("P1", HandActionType.CALL, 0.4m, Street.Flop, true),
+            };
+
+            TestUncalledbet("P2", null, hand);
         }
 
         [TestCase]

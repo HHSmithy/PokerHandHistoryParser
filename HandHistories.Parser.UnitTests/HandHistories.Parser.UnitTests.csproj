@@ -1431,6 +1431,9 @@
     <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\FiveCardPotLimitOmahaHiLo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\NoLimitHoldem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
