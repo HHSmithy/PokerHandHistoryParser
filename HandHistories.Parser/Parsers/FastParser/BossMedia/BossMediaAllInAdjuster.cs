@@ -18,11 +18,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
     /// -Player1 bets flop 40
     /// -Player1 ALLINs flop 80
     /// </summary>
-#if DEBUG
     public class BossMediaAllInAdjuster
-#else
-    class BossMediaAllInAdjuster
-#endif
     {
         /// <summary>
         /// Gets the adjusted amount for a Call AllIn action before raise adjustments

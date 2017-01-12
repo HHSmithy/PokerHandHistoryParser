@@ -82,7 +82,7 @@ namespace HandHistories.Objects.Cards
 
         public override string ToString()
         {
-            return string.Join("", Cards.Select(c => c.CardStringValue));
+            return string.Join("", Cards.Select(c => c.ToString()));
         }
 
         public override bool Equals(object obj)

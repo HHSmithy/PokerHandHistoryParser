@@ -71,8 +71,11 @@
     <Compile Include="Actions\WinningsAction.cs" />
     <Compile Include="Cards\BoardCards.cs" />
     <Compile Include="Cards\Card.cs" />
-    <Compile Include="Cards\Card.Enums.cs" />
+    <Compile Include="Cards\Card.Statics.cs" />
     <Compile Include="Cards\CardGroup.cs" />
+    <Compile Include="Cards\CardParser.cs" />
+    <Compile Include="Cards\CardValueEnum.cs" />
+    <Compile Include="Cards\SuitEnum.cs" />
     <Compile Include="GameDescription\Buyin.cs" />
     <Compile Include="GameDescription\Currency.cs" />
     <Compile Include="GameDescription\GameDescriptor.cs" />

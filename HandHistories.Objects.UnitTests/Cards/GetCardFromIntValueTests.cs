@@ -1,5 +1,6 @@
 ﻿using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using System;
 
 namespace HandHistories.Objects.UnitTests.Cards
 {
@@ -22,10 +23,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         [Test]
         public void TestCard_FromIntValue_Invalid()
         {
-            var card = Card.GetCardFromIntValue(-1);
-            Assert.IsTrue(card.isEmpty);
-            card = Card.GetCardFromIntValue(52);
-            Assert.IsTrue(card.isEmpty);
+            Assert.Throws<ArgumentOutOfRangeException>(delegate { Card.GetCardFromIntValue(-1); });
+            Assert.Throws<ArgumentOutOfRangeException>(delegate { Card.GetCardFromIntValue(52); });
         }
     }
 }

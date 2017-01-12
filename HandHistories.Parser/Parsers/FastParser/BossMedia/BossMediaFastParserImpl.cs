@@ -631,14 +631,14 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     //<CARD LINK="9"></CARD>
                     if (firstChar == 'C' && currentPlayer != null)
                     {
-                        Card parsedCard = ParseCard(Line);
-                        if (!parsedCard.isEmpty)
+                        Card? parsedCard = ParseCard(Line);
+                        if (parsedCard.HasValue)
                         {
                             if (currentPlayer.HoleCards == null)
                             {
                                 currentPlayer.HoleCards = HoleCards.NoHolecards();
                             }
-                            currentPlayer.HoleCards.AddCard(parsedCard);
+                            currentPlayer.HoleCards.AddCard(parsedCard.Value);
                         }
                     }
                 }
@@ -684,14 +684,14 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                     break;
                 }
 
-                Card parsedCard = ParseCard(Line);
-                if (!parsedCard.isEmpty)
+                Card? parsedCard = ParseCard(Line);
+                if (parsedCard.HasValue)
                 {
                     if (player.HoleCards == null)
                     {
                         player.HoleCards = HoleCards.NoHolecards();
                     }
-                    player.HoleCards.AddCard(parsedCard);
+                    player.HoleCards.AddCard(parsedCard.Value);
                 }
             }
         }
@@ -717,7 +717,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
                         {
                             break;
                         }
-                        board.AddCard(ParseCard(handLines[cardIndex]));
+                        var card = ParseCard(handLines[cardIndex]);
+                        if (card.HasValue)
+                        {
+                            board.AddCard(card.Value);
+                        }
                     }
                     break;
                 }
@@ -789,7 +793,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 	        #endregion
         };
 
-        static Card ParseCard(string Line)
+        static Card? ParseCard(string Line)
         {
             //<CARD LINK="b"></CARD> is unkown card
             //<CARD LINK="13"></CARD>
@@ -802,7 +806,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             string cardString = Line.Substring(cardIDStartIndex, cardIDEndIndex - cardIDStartIndex);
             if (cardString == "b")
 	        {
-		        return new Card();
+		        return null;
             }
             int cardID = int.Parse(cardString);
 

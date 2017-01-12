@@ -557,13 +557,16 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 //If we're an action, parse the action and act accordingly
                 else if (handLine[1] == 'a')
                 {
-                    HandAction action = ParseHandAction(handLine, currentStreet);                   
-                    actions.Add(action);
+                    HandAction action = ParseHandAction(handLine, currentStreet);
+                    if (action != null)
+                    {
+                        actions.Add(action);
+                    }
                 }
             }
 
             //Generate the show card + winnings actions
-            actions.AddRange(GetWinningAndShowCardActions(handLines));
+            actions.AddRange(GetWinningAndShowCardActions(handLines, actions));
 
             // we need to fix dead money postings at the end
             return FixDeadMoneyPosting(actions);
@@ -611,7 +614,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return actions;
         }
 
-        private List<HandAction> GetWinningAndShowCardActions(string[] handLines)
+        private List<HandAction> GetWinningAndShowCardActions(string[] handLines, List<HandAction> actions)
         {
             int actionNumber = Int32.MaxValue - 100;
 
@@ -623,6 +626,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 if (player.hasHoleCards)
                 {
+                    var folded = actions.Any(p => p.HandActionType == HandActionType.FOLD);
+                    if (folded)
+                    {
+                        continue;
+                    }
+
                     HandAction showCardsAction = new HandAction(player.PlayerName, HandActionType.SHOW, 0, Street.Showdown, actionNumber++);    
                     winningAndShowCardActions.Add(showCardsAction);
                 }                
@@ -677,7 +686,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     break;
                 case 8: //Case 8 is when a player sits out at the beginning of a hand 
                 case 9: //Case 9 is when a blind isn't posted - can be treated as sitting out
-                    actionType = HandActionType.SITTING_OUT;
+                    actionType = HandActionType.UNKNOWN;
                     break;
                 case 15:
                     actionType = HandActionType.ANTE;
@@ -687,6 +696,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     break;
                 default:
                     throw new Exception(string.Format("Encountered unknown Action Type: {0} w/ line \r\n{1}", actionTypeNumber, line));
+            }
+
+            if (actionType == HandActionType.UNKNOWN)
+            {
+                return null;
             }
             return new HandAction(actionPlayerName, actionType, value, street, actionNumber);
         }
