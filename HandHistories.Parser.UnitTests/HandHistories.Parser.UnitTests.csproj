@@ -271,7 +271,7 @@
     <Content Include="SampleHandHistories\BossMedia\CashGame\Tables\Table3.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
+    <Content Include="SampleHandHistories\Entraction\CashGame\GameTypeTests\PotLimitFiveCardOmaha.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Compile Include="Utils\IO\IFileReader.cs" />
@@ -1064,7 +1064,7 @@
     <Content Include="SampleHandHistories\PokerStars\CashGame\ExtraHands\ZoomHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\FiveCardPotLimitOmaha.txt">
+    <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\PotLimitFiveCardOmaha.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\PokerStars\CashGame\GameTypeTests\NoLimitOmahaHiLo.txt">
@@ -1431,7 +1431,7 @@
     <Content Include="SampleHandHistories\PokerStars\MultiTableTournament\Limits\Limit2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\FiveCardPotLimitOmahaHiLo.txt">
+    <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\PotLimitFiveCardOmahaHiLo.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\GameTypeTests\NoLimitHoldem.txt">

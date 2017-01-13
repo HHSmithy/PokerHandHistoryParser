@@ -311,7 +311,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             var actions = new List<HandAction>(handLines.Length);
             // TODO: implement

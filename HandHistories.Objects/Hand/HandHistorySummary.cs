@@ -30,6 +30,8 @@ namespace HandHistories.Objects.Hand
 
         public string FullHandHistoryText { get; set; }
 
+        public IEnumerable<string> FullHandHistoryLines { get; set; }
+
         /// <summary>
         /// The sum of all bets and blinds excluding uncalled bets and winnings. Includes Rake
         /// </summary>

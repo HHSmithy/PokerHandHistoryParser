@@ -195,7 +195,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 //Set members outside of the constructor for easier performance analysis
                 HandHistory handHistory = new HandHistory();
 
-                handHistory.FullHandHistoryText = string.Join("\r\n", handLines);
+                handHistory.FullHandHistoryLines = handLines;
                 handHistory.DateOfHandUtc = ParseDateUtc(handLines);
                 handHistory.GameDescription = ParseGameDescriptor(handLines);
                 handHistory.HandId = ParseHandId(handLines);
@@ -587,7 +587,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         // We pass the game-type in as it can change the actions and parsing logic
-        protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown);
+        protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType);
 
         /// <summary>
         /// Sometimes hand actions are listed out of order, but with an order number or timestamp (this happens on IPoker).

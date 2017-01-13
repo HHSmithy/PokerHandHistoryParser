@@ -247,7 +247,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             int actionIndex = GetFirstActionIndex(handLines);
 

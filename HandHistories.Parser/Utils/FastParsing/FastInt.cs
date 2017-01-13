@@ -28,7 +28,7 @@ namespace HandHistories.Parser.Utils.FastParsing
 
         public static int Parse(char text)
         {
-            if (text >= 0x30 && text <= 0x39)
+            if (0x30 <= text && text <= 0x39)
             {
                 return text - 0x30;
             }

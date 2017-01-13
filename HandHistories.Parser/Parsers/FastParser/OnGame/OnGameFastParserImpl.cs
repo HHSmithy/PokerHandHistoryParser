@@ -389,7 +389,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             // this is needed for future uncalledbet fixes
             var handHistory = new HandHistory();

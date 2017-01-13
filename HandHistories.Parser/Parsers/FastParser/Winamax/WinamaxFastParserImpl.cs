@@ -305,7 +305,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             var handActions = new List<HandAction>();
             var currentStreet = Street.Preflop;

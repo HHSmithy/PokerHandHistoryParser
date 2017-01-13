@@ -546,7 +546,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return false;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
 
@@ -918,7 +918,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             }
         }
 
-        public HandAction ParseMiscShowdownLine(string actionLine, int colonIndex, GameType gameType = GameType.Unknown)
+        public HandAction ParseMiscShowdownLine(string actionLine, int colonIndex)
+        {
+            return ParseMiscShowdownLine(actionLine, colonIndex, GameType.Unknown);
+        }
+
+        public HandAction ParseMiscShowdownLine(string actionLine, int colonIndex, GameType gameType)
         {
             // if the game type is Omaha HiLo can get colons like this after the Hi
             //  DOT19: shows [As 8h Ac Kd] (HI: two pair, Aces and Sixes)            

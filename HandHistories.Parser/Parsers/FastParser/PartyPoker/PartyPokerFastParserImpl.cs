@@ -467,7 +467,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
             return false;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
 

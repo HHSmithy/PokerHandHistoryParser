@@ -52,7 +52,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
         {
-            var allLines = rawHandHistories.Split('\n');
+            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', 15, 2);
 
             List<string> handLines = new List<string>(50);
 
@@ -156,7 +156,17 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            return SeatType.FromMaxPlayers(ParsePlayers(handLines).Count, false);
+            int players = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                string line = handLines[i + 1];
+                if (line[1] == 'P')
+                {
+                    players++;
+                }
+            }
+
+            return SeatType.FromMaxPlayers(players, false);
         }
 
         protected override GameType ParseGameType(string[] handLines)
@@ -240,7 +250,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             List<HandAction> actions = new List<HandAction>();
             int lineParseIndex = getHandActionsStartIndex(handLines);
@@ -557,7 +567,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
                 int seatStartIndex = playerNameEndIndex + 8;
                 int seatEndIndex = Line.IndexOf('\"', seatStartIndex);
-                int seatNumber = int.Parse(Line.Substring(seatStartIndex, seatEndIndex - seatStartIndex));
+                int seatNumber = FastInt.Parse(Line, seatStartIndex);
 
                 int stackStartIndex = seatEndIndex + 10;
                 int stackEndIndex = Line.IndexOf('\"', stackStartIndex);
@@ -828,7 +838,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
         static string GetXMLAttributeValue(string Line, string Name)
         {
             string search = " " + Name + "=\"";
-            int startIndex = Line.IndexOf(search, StringComparison.Ordinal);
+            int startIndex = Line.IndexOfFast(search);
 
             if (startIndex == -1)
             {

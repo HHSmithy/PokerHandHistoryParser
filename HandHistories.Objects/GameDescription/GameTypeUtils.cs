@@ -63,111 +63,113 @@ namespace HandHistories.Objects.GameDescription
             }
         }
        
-        public static string GetGameName(GameType gameType)
-        {
-            switch (gameType)
-            {
-                case GameType.NoLimitHoldem:
-                    return "NL Holdem";
-                case GameType.FixedLimitHoldem:
-                    return "FL Holdem";
-                case GameType.PotLimitOmaha:
-                    return "PLO";
-                case GameType.PotLimitOmahaHiLo:
-                    return "PLO Hi-Lo";
-                case GameType.PotLimitHoldem:
-                    return "Pot Limit Holdem";                
-                case GameType.Any:
-                    return "Any";
-                case GameType.CapNoLimitHoldem:
-                    return "Cap NL Holdem";
-                case GameType.CapPotLimitOmaha:
-                    return "Cap Pot Limit Omaha";
-                case GameType.Unknown:
-                    return "Unknown";
-                case GameType.FixedLimitOmahaHiLo:
-                    return "FL Omaha Hi-Lo";
-                case GameType.NoLimitOmahaHiLo:
-                    return "No Limit Omaha Hi-Lo";      
-                case GameType.NoLimitOmaha:
-                    return "No Limit Omaha";      
-                case GameType.FiveCardPotLimitOmahaHiLo:
-                    return "Pot Limit Five Card Omaha Hi-Lo";
-                case GameType.FiveCardPotLimitOmaha:
-                    return "Pot Limit Five Card Omaha";
-                case GameType.FixedLimitOmaha:
-                    return "Fixed Limit Omaha";
-                default:
-                    throw new NotImplementedException("GetGameName: Not implemented for " + gameType);
-            }
-        }
+        //public static string GetGameName(GameType gameType)
+        //{
+        //    switch (gameType)
+        //    {
+        //        case GameType.NoLimitHoldem:
+        //            return "NL Holdem";
+        //        case GameType.FixedLimitHoldem:
+        //            return "FL Holdem";
+        //        case GameType.PotLimitOmaha:
+        //            return "PLO";
+        //        case GameType.PotLimitOmahaHiLo:
+        //            return "PLO Hi-Lo";
+        //        case GameType.PotLimitHoldem:
+        //            return "Pot Limit Holdem";                
+        //        case GameType.Any:
+        //            return "Any";
+        //        case GameType.CapNoLimitHoldem:
+        //            return "Cap NL Holdem";
+        //        case GameType.CapPotLimitOmaha:
+        //            return "Cap Pot Limit Omaha";
+        //        case GameType.Unknown:
+        //            return "Unknown";
+        //        case GameType.FixedLimitOmahaHiLo:
+        //            return "FL Omaha Hi-Lo";
+        //        case GameType.NoLimitOmahaHiLo:
+        //            return "No Limit Omaha Hi-Lo";      
+        //        case GameType.NoLimitOmaha:
+        //            return "No Limit Omaha";      
+        //        case GameType.FiveCardPotLimitOmahaHiLo:
+        //            return "Pot Limit Five Card Omaha Hi-Lo";
+        //        case GameType.FiveCardPotLimitOmaha:
+        //            return "Pot Limit Five Card Omaha";
+        //        case GameType.FixedLimitOmaha:
+        //            return "Fixed Limit Omaha";
+        //        default:
+        //            throw new NotImplementedException("GetGameName: Not implemented for " + gameType);
+        //    }
+        //}
 
         public static string GetShortName(GameType gameType)
         {
-            switch (gameType)
-            {
-                case GameType.NoLimitHoldem:
-                    return "NLH";
-                case GameType.FixedLimitHoldem:
-                    return "FLH";
-                case GameType.PotLimitOmaha:
-                    return "PLO";
-                case GameType.PotLimitOmahaHiLo:
-                    return "PLOHiLo";
-                case GameType.PotLimitHoldem:
-                    return "PLH";                
-                case GameType.Any:
-                    return "Any";
-                case GameType.CapNoLimitHoldem:
-                    return "CapNLH";
-                case GameType.CapPotLimitOmaha:
-                    return "CapPLO";
-                case GameType.Unknown:
-                    return "Unknown";
-                case GameType.FixedLimitOmahaHiLo:
-                    return "FLOmahaHiLo";              
-                case GameType.NoLimitOmahaHiLo:
-                    return "NLOmahaHiLo";
-                case GameType.NoLimitOmaha:
-                    return "NLOmaha";
-                case GameType.FiveCardPotLimitOmahaHiLo:
-                    return "5Card-PLOHiLo";
-                case GameType.FiveCardPotLimitOmaha:
-                    return "5Card-PLO";
-                case GameType.FixedLimitOmaha:
-                    return "FLOmaha";
-                default:
-                    throw new NotImplementedException("GetGameName: Not implemented for " + gameType);
-            }
+            return "";
+
+            //switch (gameType)
+            //{
+            //    case GameType.NoLimitHoldem:
+            //        return "NLH";
+            //    case GameType.FixedLimitHoldem:
+            //        return "FLH";
+            //    case GameType.PotLimitOmaha:
+            //        return "PLO";
+            //    case GameType.PotLimitOmahaHiLo:
+            //        return "PLOHiLo";
+            //    case GameType.PotLimitHoldem:
+            //        return "PLH";                
+            //    case GameType.Any:
+            //        return "Any";
+            //    case GameType.CapNoLimitHoldem:
+            //        return "CapNLH";
+            //    case GameType.CapPotLimitOmaha:
+            //        return "CapPLO";
+            //    case GameType.Unknown:
+            //        return "Unknown";
+            //    case GameType.FixedLimitOmahaHiLo:
+            //        return "FLOmahaHiLo";              
+            //    case GameType.NoLimitOmahaHiLo:
+            //        return "NLOmahaHiLo";
+            //    case GameType.NoLimitOmaha:
+            //        return "NLOmaha";
+            //    case GameType.FiveCardPotLimitOmahaHiLo:
+            //        return "5Card-PLOHiLo";
+            //    case GameType.FiveCardPotLimitOmaha:
+            //        return "5Card-PLO";
+            //    case GameType.FixedLimitOmaha:
+            //        return "FLOmaha";
+            //    default:
+            //        throw new NotImplementedException("GetGameName: Not implemented for " + gameType);
+            //}
         }
 
-        public static string GetDisplayName(GameType gameType)
-        {
-            switch (gameType)
-            {
-                case GameType.NoLimitHoldem:
-                    return "No Limit Holdem";
-                case GameType.FixedLimitHoldem:
-                    return "Fixed Limit Holdem";
-                case GameType.PotLimitOmaha:
-                    return "Pot Limit Omaha";
-                case GameType.PotLimitOmahaHiLo:
-                    return "Pot Limit Omaha Hi-Lo";
-                case GameType.FixedLimitOmahaHiLo:
-                    return "Fixed Limit Omaha Hi-Lo";
-                case GameType.PotLimitHoldem:
-                    return "Pot Limit Holdem";
-                case GameType.Any:
-                    return "Any";
-                case GameType.CapNoLimitHoldem:
-                    return "Cap NL Holdem";
-                case GameType.CapPotLimitOmaha:
-                    return "Cap Pot Limit Omaha";
-                case GameType.Unknown:
-                    return "Unknown";
-                default:
-                    return gameType.ToString();
-            }
-        }
+        //public static string GetDisplayName(GameType gameType)
+        //{
+        //    switch (gameType)
+        //    {
+        //        case GameType.NoLimitHoldem:
+        //            return "No Limit Holdem";
+        //        case GameType.FixedLimitHoldem:
+        //            return "Fixed Limit Holdem";
+        //        case GameType.PotLimitOmaha:
+        //            return "Pot Limit Omaha";
+        //        case GameType.PotLimitOmahaHiLo:
+        //            return "Pot Limit Omaha Hi-Lo";
+        //        case GameType.FixedLimitOmahaHiLo:
+        //            return "Fixed Limit Omaha Hi-Lo";
+        //        case GameType.PotLimitHoldem:
+        //            return "Pot Limit Holdem";
+        //        case GameType.Any:
+        //            return "Any";
+        //        case GameType.CapNoLimitHoldem:
+        //            return "Cap NL Holdem";
+        //        case GameType.CapPotLimitOmaha:
+        //            return "Cap Pot Limit Omaha";
+        //        case GameType.Unknown:
+        //            return "Unknown";
+        //        default:
+        //            return gameType.ToString();
+        //    }
+        //}
     }
 }

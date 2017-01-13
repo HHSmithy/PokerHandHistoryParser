@@ -79,6 +79,7 @@
     <Compile Include="GameDescription\Buyin.cs" />
     <Compile Include="GameDescription\Currency.cs" />
     <Compile Include="GameDescription\GameDescriptor.cs" />
+    <Compile Include="GameDescription\GameTypes.Statics.cs" />
     <Compile Include="GameDescription\GameTypeUtils.cs" />
     <Compile Include="GameDescription\GameTypes.cs" />
     <Compile Include="GameDescription\LimitClassEnum.cs" />

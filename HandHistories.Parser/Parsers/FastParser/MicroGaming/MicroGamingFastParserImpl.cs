@@ -360,7 +360,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             var actions = new List<HandAction>();
 

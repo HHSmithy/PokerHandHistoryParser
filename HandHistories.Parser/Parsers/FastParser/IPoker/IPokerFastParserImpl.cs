@@ -519,7 +519,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             List<HandAction> actions = new List<HandAction>();
 

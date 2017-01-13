@@ -192,7 +192,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return true;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
         {
             const int MinimumLinesWithoutActions = 8;
             //Allocate the full list so we we dont get a reallocation for every add()
