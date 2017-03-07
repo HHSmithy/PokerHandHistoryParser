@@ -15,5 +15,7 @@ namespace HandHistories.Parser.Parsers.Base
         PlayerList ParsePlayers(string handText);
         
         BoardCards ParseCommunityCards(string handText);
+
+        string ParseHeroName(string handText);
     }
 }

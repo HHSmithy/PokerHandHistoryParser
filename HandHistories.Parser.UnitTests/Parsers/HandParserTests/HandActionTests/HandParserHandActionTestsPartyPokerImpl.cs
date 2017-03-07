@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using System;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -227,6 +228,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new WinningsAction("dr. spaz", HandActionType.WINS_SIDE_POT, 1.87m,  1),
                     new WinningsAction("dr. spaz", HandActionType.WINS, 20.66m, 0),
                 };
+            }
+        }
+
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                Assert.Ignore();
+                throw new NotImplementedException();
             }
         }
 

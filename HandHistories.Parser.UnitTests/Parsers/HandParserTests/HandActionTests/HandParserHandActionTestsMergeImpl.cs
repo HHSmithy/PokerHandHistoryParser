@@ -107,6 +107,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             }
         }
 
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                Assert.Ignore();
+                throw new NotImplementedException();
+            }
+        }
+
         protected override List<HandAction> ExpectedOmahaHiLoHand
         {
             get

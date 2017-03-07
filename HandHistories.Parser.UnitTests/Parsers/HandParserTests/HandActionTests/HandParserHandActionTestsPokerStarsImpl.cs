@@ -59,29 +59,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         }
 
         [Test]
-        public void UncalledBet_Works()
-        {
-            List<HandAction> expectedActions = new List<HandAction>()
-                                    {
-                                        new HandAction("here_we_gizo", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
-                                        new HandAction("PAARTYPAN", HandActionType.BIG_BLIND, 1m, Street.Preflop),
-
-                                        new HandAction("liscla223", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("Beeethoven87", HandActionType.RAISE, 3, Street.Preflop),
-                                        new HandAction("Jon9ball", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("here_we_gizo", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("PAARTYPAN", HandActionType.FOLD, 0, Street.Preflop),
-
-                                        new HandAction("Beeethoven87", HandActionType.UNCALLED_BET, 2, Street.Preflop),                  
-                                        new WinningsAction("Beeethoven87", HandActionType.WINS, 2.50m, 0),
-                                        new HandAction("Beeethoven87", HandActionType.MUCKS,0, Street.Showdown)
-                                        
-                                    };
-
-            TestParseActions("UncalledBet", expectedActions);
-        }
-
-        [Test]
         public void AllInHand_NeedsRaiseAdjusting_Works()
         {
             List<HandAction> expectedActions = new List<HandAction>()
@@ -283,6 +260,29 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("matze1987", HandActionType.SHOW, 0, Street.Showdown),
                                new WinningsAction("numbush", HandActionType.WINS, 23.57m, 0)
                            };
+            }
+        }
+
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                return new List<HandAction>()
+                {
+                    new HandAction("here_we_gizo", HandActionType.SMALL_BLIND, 0.5m, Street.Preflop),
+                    new HandAction("PAARTYPAN", HandActionType.BIG_BLIND, 1m, Street.Preflop),
+
+                    new HandAction("liscla223", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("Beeethoven87", HandActionType.RAISE, 3, Street.Preflop),
+                    new HandAction("Jon9ball", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("here_we_gizo", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("PAARTYPAN", HandActionType.FOLD, 0, Street.Preflop),
+
+                    new HandAction("Beeethoven87", HandActionType.UNCALLED_BET, 2, Street.Preflop),                  
+                    new WinningsAction("Beeethoven87", HandActionType.WINS, 2.50m, 0),
+                    new HandAction("Beeethoven87", HandActionType.MUCKS,0, Street.Showdown)
+                                        
+                };
             }
         }
 

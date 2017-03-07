@@ -59,9 +59,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "GameTypeTests", gameType.ToString());
         }
 
-        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street)
+        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString());
+            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString() + (testNumber == 1 ? "" : testNumber.ToString()));
         }
 
         public string GetMultipleHandExampleText(PokerFormat pokerFormat, SiteName siteName, int handCount)

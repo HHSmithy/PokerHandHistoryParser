@@ -2,6 +2,7 @@
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using System;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -290,6 +291,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                                new WinningsAction("do not-call", HandActionType.WINS, 319m, 0)
                            };
+            }
+        }
+
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                Assert.Ignore();
+                throw new NotImplementedException();
             }
         }
 

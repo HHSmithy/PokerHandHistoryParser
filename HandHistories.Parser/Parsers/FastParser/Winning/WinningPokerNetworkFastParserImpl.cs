@@ -749,7 +749,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Board: [3d 6h 2c Ah]
 
             BoardCards boardCards = BoardCards.ForPreflop();
-            for (int lineNumber = handLines.Length - 5; lineNumber >= 0; lineNumber--)
+            for (int lineNumber = handLines.Length - 4; lineNumber >= 0; lineNumber--)
             {
                 string line = handLines[lineNumber];
                 if (line[0] == '-')

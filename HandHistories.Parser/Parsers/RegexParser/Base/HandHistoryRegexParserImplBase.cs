@@ -447,6 +447,12 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
             {
                 throw new CardException(handText, "ParseHoleCards: Exception " + ex.Message);
             }
-        }       
+        }
+
+
+        public string ParseHeroName(string handText)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

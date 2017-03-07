@@ -39,6 +39,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         protected abstract List<HandAction> ExpectedHandActionsFoldedPreflop { get; }
         protected abstract List<HandAction> ExpectedHandActions3BetHand { get; }
         protected abstract List<HandAction> ExpectedHandActionsAllInHand { get; }
+        protected abstract List<HandAction> ExpectedHandActionsUncalledBetHand { get; }
         protected abstract List<HandAction> ExpectedOmahaHiLoHand { get; }
 
         [Test]
@@ -63,6 +64,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         public void ParseHandActions_AllInHand()
         {
             TestParseActions("AllInHandWithShowdown", ExpectedHandActionsAllInHand);
+        }
+
+        [Test]
+        public void ParseHandActions_UncalledBetHand()
+        {
+            switch (Site)
+            {
+                case SiteName.BossMedia:
+                case SiteName.PokerStars:
+                    TestParseActions("UncalledBet", ExpectedHandActionsUncalledBetHand);
+                    return;
+            }
+            Assert.Ignore();
         }
 
         [Test]

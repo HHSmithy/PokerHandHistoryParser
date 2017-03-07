@@ -21,6 +21,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
     [TestFixture("Winamax", "e0.05-e0.10", "e0.50-e1", "e5-e10")]
     [TestFixture("WinningPoker", "$2-$4", "$2-$4", "$0.10-$0.25")]
     [TestFixture("BossMedia", "$100-$200", "$5-$10", "$0.02-$0.04")]
+    [TestFixture("IGT", "$0.25-$0.50", "$10-$20")]
     class HandParserLimitTests_CashGame : HandParserLimitTests
     {
         public HandParserLimitTests_CashGame(string site, params string[] expectedLimits) 
@@ -45,6 +46,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
                 case SiteName.OnGameIt:
+                case SiteName.IGT:
                     Assert.Ignore(Site.ToString() + " doesn't have ante tables.");
                     break;
 
@@ -70,6 +72,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
                 case SiteName.OnGame:
+                case SiteName.IGT:
                     Assert.Ignore("Site doesn't have euro tables ( example ).");
                     break;
                 case SiteName.Entraction:
@@ -98,6 +101,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Limits
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
                 case SiteName.OnGameIt:
+                case SiteName.IGT:
                     Assert.Ignore("Site doesn't have euro tables.");
                     break;
                 default:

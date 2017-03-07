@@ -4,20 +4,21 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {
-    [TestFixture("PartyPoker", "JcKd")]
-    [TestFixture("PokerStars", "4s7h")]
-    [TestFixture("OnGame", "8h3c")]
-    [TestFixture("Pacific", "3dJc")]
-    [TestFixture("MicroGaming", "AhQsKs8c")]
-    [TestFixture("BossMedia", "3dKd")]
+    [TestFixture("PartyPoker", "PP_Hero")]
+    [TestFixture("PokerStars", "PS_Hero")]
+    [TestFixture("OnGame", "ONG_Hero")]
+    [TestFixture("Pacific", "PAC_Hero")]
+    [TestFixture("MicroGaming", "MGN_Hero")]
+    [TestFixture("BossMedia", "BO_Hero")]
+    [TestFixture("IGT", "HERO")]
     class DealtToHeroTests : HandHistoryParserBaseTests
     {
-        private readonly string _expectedHeroHand;
+        private readonly string _expectedHero;
 
-        public DealtToHeroTests(string site, string expectedHand)
+        public DealtToHeroTests(string site, string expectedName)
             : base(site)
         {
-            _expectedHeroHand = expectedHand;
+            _expectedHero = expectedName;
         }
 
         [Test]
@@ -25,10 +26,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             string hand = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, "HeroName");
 
-            var handhistory = GetParser().ParseFullHandHistory(hand);
+            var heroName = GetParser().ParseHeroName(hand);
 
-            var heroHand = handhistory.Hero.HoleCards.ToString();
-            Assert.AreEqual(_expectedHeroHand, heroHand, "IHandHistoryParser: ParseHeroHand");
+            Assert.AreEqual(_expectedHero, heroName, "IHandHistoryParser: ParseHeroName");
         }
     }
 }

@@ -15,6 +15,7 @@ using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Parsers.FastParser.BossMedia;
 using HandHistories.Parser.Parsers.FastParser.PartyPoker;
+using HandHistories.Parser.Parsers.JSONParser.IGT;
 
 namespace HandHistories.Parser.Parsers.Factory
 {
@@ -66,6 +67,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new WinningPokerNetworkFastParserImpl();
                 case SiteName.BossMedia:
                     return new BossMediaFastParserImpl();
+                case SiteName.IGT:
+                    return new IGTJSONParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No full regex parser for " + siteName);
             }
@@ -112,6 +115,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new WinningPokerNetworkFastParserImpl();
                 case SiteName.BossMedia:
                     return new BossMediaFastParserImpl();
+                case SiteName.IGT:
+                    return new IGTJSONParserImpl();
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No summary regex parser for " + siteName);
             }

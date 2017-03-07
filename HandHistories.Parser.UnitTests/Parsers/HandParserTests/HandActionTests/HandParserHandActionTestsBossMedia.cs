@@ -143,6 +143,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             }
         }
 
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                return new List<HandAction>()
+                {
+                    new HandAction("Player2", HandActionType.SMALL_BLIND, 25m, Street.Preflop),
+                    new HandAction("Player3", HandActionType.BIG_BLIND, 50m, Street.Preflop),
+
+                    new HandAction("Player4", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Player5", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Player1", HandActionType.RAISE, 112.50m, Street.Preflop),
+                    new HandAction("Player2", HandActionType.CALL, 87.5m, Street.Preflop),
+                    new HandAction("Player3", HandActionType.CALL, 62.50m, Street.Preflop),
+
+                    new HandAction("Player2", HandActionType.BET, 200m, Street.Flop),
+                    new HandAction("Player3", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("Player1", HandActionType.FOLD, 0m, Street.Flop),
+
+                    new WinningsAction("Player2", HandActionType.WINS, 329.07m, 0),  
+                };
+            }
+        }
+
         protected override List<HandAction> ExpectedOmahaHiLoHand
         {
             get

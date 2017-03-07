@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NLog.3.2.1\lib\net40\NLog.dll</HintPath>
@@ -104,6 +108,8 @@
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
+    <Compile Include="Parsers\JSONParser\Base\HandHistoryParserJSONImpl.cs" />
+    <Compile Include="Parsers\JSONParser\IGT\IGTJSONParserImpl.cs" />
     <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
     <Compile Include="Parsers\RegexParser\Base\IHandHistoryActionParser.cs" />
     <Compile Include="Parsers\RegexParser\PartyPoker\ActionTypeRegexPair.cs" />
@@ -119,7 +125,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\AllInAction\AllInActionHelper.cs" />
     <Compile Include="Utils\Extensions\LazyStringSplitExtension.cs" />
-    <Compile Include="Utils\FastParsing\FastParsing.cs" />
+    <Compile Include="Utils\FastParsing\FastInt.cs" />
     <Compile Include="Utils\RaiseAdjuster\RaiseAdjuster.cs" />
     <Compile Include="Utils\ValidityCheck\HandIntegrityException.cs" />
     <Compile Include="Utils\ValidityCheck\HandValidator.cs" />

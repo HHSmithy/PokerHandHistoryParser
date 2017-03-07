@@ -38,11 +38,6 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             get { return true; }
         }
 
-        public override bool RequiresUncalledBetWinAdjustment
-        {
-            get { return true; }
-        }
-
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return rawHandHistories.Split(new string[] { "<HISTORY " }, StringSplitOptions.None)
@@ -52,7 +47,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
         public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
         {
-            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', 15, 2);
+            var allLines = rawHandHistories.LazyStringSplitFastSkip('\n', 6, 2);
 
             List<string> handLines = new List<string>(50);
 
