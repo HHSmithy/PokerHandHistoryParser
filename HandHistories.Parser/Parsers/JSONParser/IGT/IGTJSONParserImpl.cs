@@ -192,13 +192,33 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
                 playerlist.Add(new Player(name, stack, seat) { IsSittingOut = state != "STATE_PLAYING" });
             }
 
+            var actionsJSON = handJSON["action"];
+            foreach (var action in actionsJSON)
+            {
+                string type = action["type"].ToString();
+                if (type.StartsWithFast("ACTION"))
+                {
+                    break;
+                }
+                else if (type == "HAND_DEAL")
+                {
+                    if (isDealtCards(action))
+                    {
+                        var playerName = action["player"].ToString();
+                        playerlist[playerName].HoleCards = ParseHoleCards(action["card"]);
+                        break;
+                    }
+                }
+            }
+
             var resultJSON = handJSON["showDown"]["result"];
             foreach (var result in resultJSON)
             {
                 var cardsJSON = result["card"];
                 if (cardsJSON != null && cardsJSON.Count() > 0)
                 {
-                    var cards = HoleCards.FromCards("", cardsJSON.Select(ParseCard).ToArray());
+                    var name = result["player"].ToString();
+                    playerlist[name].HoleCards = ParseHoleCards(cardsJSON);
                 }
             }
             return playerlist;
@@ -295,6 +315,11 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             int cardID = cardJSON["link"].Value<int>();
 
             return IGTCardLookup[cardID];
+        }
+
+        static HoleCards ParseHoleCards(JToken JSON)
+        {
+            return HoleCards.FromCards(null, JSON.Select(ParseCard).ToArray());
         }
 
         protected override int ParseDealerPosition(JObject JSON)
@@ -466,7 +491,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
         static bool isDealtCards(JToken JSON)
         {
             var cards = JSON["card"];
-            if (cards[0].ToString() == "b")
+            if (cards[0]["link"].ToString() == "b")
             {
                 return false;
             }
