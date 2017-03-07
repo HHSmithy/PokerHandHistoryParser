@@ -191,6 +191,16 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
 
                 playerlist.Add(new Player(name, stack, seat) { IsSittingOut = state != "STATE_PLAYING" });
             }
+
+            var resultJSON = handJSON["showDown"]["result"];
+            foreach (var result in resultJSON)
+            {
+                var cardsJSON = result["card"];
+                if (cardsJSON != null && cardsJSON.Count() > 0)
+                {
+                    var cards = HoleCards.FromCards("", cardsJSON.Select(ParseCard).ToArray());
+                }
+            }
             return playerlist;
         }
 
@@ -392,7 +402,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
 
         protected override TableType ParseTableType(JObject JSON)
         {
-            return new TableType();
+            return new TableType(TableTypeDescription.Regular);
         }
 
         protected override Limit ParseLimit(JObject JSON)
