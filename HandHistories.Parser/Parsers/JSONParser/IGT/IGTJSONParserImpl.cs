@@ -185,6 +185,11 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             foreach (var playerJSON in playersJSON)
             {
                 var name = playerJSON["name"].ToString();
+                if (name == "UNKNOWN")
+                {
+                    continue;
+                }
+
                 var stack = playerJSON["amount"].Value<decimal>();
                 var seat = playerJSON["seat"].Value<int>();
                 var state = playerJSON["state"].ToString();
