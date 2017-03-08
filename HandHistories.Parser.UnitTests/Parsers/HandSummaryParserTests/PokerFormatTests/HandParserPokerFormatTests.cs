@@ -45,8 +45,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.PokerFor
         [Test]
         public void ParsePokerFormat_Works()
         {
-            Assert.AreEqual(_format, GetSummmaryParser().ParseFullHandSummary(_handText).GameDescription.PokerFormat, "IHandHistorySummaryParser: PokerFormat");
-            Assert.AreEqual(_format, GetParser().ParseFullHandHistory(_handText).GameDescription.PokerFormat, "IHandHistoryParser: PokerFormat");
+            Assert.AreEqual(_format, GetSummmaryParser().ParsePokerFormat(_handText), "IHandHistorySummaryParser: PokerFormat");
+            Assert.AreEqual(_format, GetParser().ParsePokerFormat(_handText), "IHandHistoryParser: PokerFormat");
         }
     }
 }

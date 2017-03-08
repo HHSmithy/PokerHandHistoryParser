@@ -48,5 +48,7 @@ namespace HandHistories.Parser.Parsers.Base
         /// <param name="isCancelled"></param>
         /// <returns>True if the hand is valid, false if not. Outs the cancelled state.</returns>
         bool IsValidOrCancelledHand(string handText, out bool isCancelled);
+
+        PokerFormat ParsePokerFormat(string handText);
     }
 }

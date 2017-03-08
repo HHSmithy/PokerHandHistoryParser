@@ -454,5 +454,10 @@ namespace HandHistories.Parser.Parsers.RegexParser.Base
         {
             throw new NotImplementedException();
         }
+
+        public PokerFormat ParsePokerFormat(string handText)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
