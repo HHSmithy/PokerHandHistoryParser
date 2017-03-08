@@ -92,7 +92,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
                         actions.Add(ParseAllInAction(action, actions, currentStreet));
                         break;
 
-                    case "ACTION_ADJUSTMENT":
+                    case "ACTION_ADJUSTEMENT":
                         actions.Add(ParseAction(HandActionType.UNCALLED_BET, action, currentStreet));
                         break;
 
