@@ -23,6 +23,7 @@ namespace HandHistories.Objects.GameDescription
         /// Used for Satelite tournament
         /// </summary>
         [EnumMember] SATELLITE = 6,
-        [EnumMember] All = 7
+        [EnumMember] SEK = 7,
+        [EnumMember] All = 255,
     }
 }

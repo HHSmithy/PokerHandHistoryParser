@@ -452,7 +452,26 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             var items = limit.Split('/');
             var SB = items[0].ParseAmount();
             var BB = items[1].ParseAmount();
-            return Limit.FromSmallBlindBigBlind(SB, BB, Currency.USD);
+            return Limit.FromSmallBlindBigBlind(SB, BB, ParserCurrency(hand));
+        }
+
+        static Currency ParserCurrency(JToken hand)
+        {
+            string currency = hand["tableCurrency"].ToString();
+            switch (currency)
+            {
+                case "SEK":
+                    return Currency.SEK;
+
+                case "USD":
+                    return Currency.USD;
+
+                case "EUR":
+                    return Currency.EURO;
+
+                default:
+                    throw new ArgumentException("Unhandled Currrency: " + currency);
+            }
         }
 
         protected override int ParseNumPlayers(JObject JSON)
