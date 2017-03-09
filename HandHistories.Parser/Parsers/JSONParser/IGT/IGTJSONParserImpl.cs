@@ -39,7 +39,13 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             var showdownJSON = handJSON["showDown"];
 
             var totalpot = showdownJSON["pot"].Value<decimal>();
-            var rake = showdownJSON["rake"].Value<decimal>();
+            var rakeJSON = showdownJSON["rake"];
+
+            var rake = 0m;
+            if (rakeJSON != null)
+            {
+                rake = showdownJSON["rake"].Value<decimal>();
+            }
 
             summary.TotalPot = totalpot + rake;
             summary.Rake = rake;
