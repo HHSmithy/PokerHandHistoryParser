@@ -177,6 +177,9 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
                 case "HAND_BB":
                     return HandActionType.BIG_BLIND;
 
+                case "HAND_DSB":
+                    return HandActionType.POSTS_DEAD;
+
                 default:
                     throw new ArgumentException("Unhandled Blind Type");
             }

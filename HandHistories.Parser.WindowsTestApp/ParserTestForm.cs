@@ -12,6 +12,7 @@ using System.Diagnostics;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils;
+using HandHistories.Parser.Parsers.Base;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -38,6 +39,7 @@ namespace HandHistories.Parser.WindowsTestApp
             listBoxSite.Items.Add(SiteName.WinningPoker);
             listBoxSite.Items.Add(SiteName.MicroGaming);
             listBoxSite.Items.Add(SiteName.Winamax);
+            listBoxSite.Items.Add(SiteName.IGT);
         }
 
         private void buttonParse_Click(object sender, EventArgs e)
@@ -60,9 +62,9 @@ namespace HandHistories.Parser.WindowsTestApp
                 Stopwatch SW = new Stopwatch();
                 SW.Start();
 
-                HandHistoryParserFastImpl fastParser = handParser as HandHistoryParserFastImpl;
+                IHandHistoryParser fastParser = handParser as IHandHistoryParser;
 
-                var hands = fastParser.SplitUpMultipleHandsToLines(text.Trim());
+                var hands = fastParser.SplitUpMultipleHands(text.Trim());
                 foreach (var hand in hands)
                 {
                     var parsedHand = fastParser.ParseFullHandHistory(hand, true);
