@@ -186,5 +186,39 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
             TestParseActions("AnteAction", expectedActions);
         }
+
+        [Test]
+        //[Ignore("Issues with local dev environment running tests - this should work but can't verify and don't want to break builds.")]
+        public void PostingDeadParsingTest_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+                                    {
+                                        
+                                        new HandAction("Player5", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
+                                        new HandAction("HERO", HandActionType.BIG_BLIND, 10m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.POSTS, 10m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.POSTS_DEAD, 5m, Street.Preflop),
+
+                                        new HandAction("Player8", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("Player10", HandActionType.FOLD, 0m, Street.Preflop),
+                                        new HandAction("Player1", HandActionType.CHECK, 0m, Street.Preflop),
+                                        new HandAction("Player3", HandActionType.FOLD, 0m, Street.Preflop),                                      
+                                        new HandAction("Player5", HandActionType.CALL, 5m, Street.Preflop),  
+                                        new HandAction("HERO", HandActionType.CHECK, 0m, Street.Preflop),  
+
+                                        new HandAction("Player5", HandActionType.BET, 24.50m, Street.Flop),                                      
+                                        new HandAction("HERO", HandActionType.CALL, 24.50m, Street.Flop),   
+                                        new HandAction("Player1", HandActionType.FOLD, 0m, Street.Flop),   
+
+                                        new HandAction("Player5", HandActionType.BET, 60m, Street.Turn),                                      
+                                        new HandAction("HERO", HandActionType.FOLD, 0m, Street.Turn),
+                                     
+                                        //new HandAction("WWR141388412", HandActionType.SHOW, 0m, Street.Showdown),                                   
+                                        //new HandAction("keepfishing68", HandActionType.SHOW, 0m, Street.Showdown),   
+                                        new WinningsAction("Player5", HandActionType.WINS, 140m, 0),
+                                    };
+
+            TestParseActions("PostingDead", expectedActions);
+        }
     }
 }

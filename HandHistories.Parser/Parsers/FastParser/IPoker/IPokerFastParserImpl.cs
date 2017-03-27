@@ -588,30 +588,56 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private List<HandAction> FixDeadMoneyPosting(List<HandAction> actions)
         {
-            // sort the actions, because regular SB + BB actions are always the first actions ( although might not be the first in the hand history )
-            actions = actions.OrderBy(t => t.ActionNumber).ToList();
-            var bigBlindValue = 0.0m;
-            var looper = new List<HandAction>(actions);
-            foreach (var action in looper)
+            
+            var BBActions = actions.Count(p => p.HandActionType == HandActionType.BIG_BLIND);
+
+            if (BBActions >= 2)
             {
-                if (action.HandActionType.Equals(HandActionType.BIG_BLIND))
-                {
-                    if (bigBlindValue == 0.0m)
+                // sort the actions, because regular SB + BB actions are always the first actions ( although might not be the first in the hand history )
+                var bigBlindValue = 0.0m;
+                actions = actions.OrderBy(t => t.ActionNumber).ToList();
+
+                for (int i = 0; i < actions.Count; i++)
+			    {
+			        var action = actions[i];
+
+                    if (action.HandActionType != HandActionType.BIG_BLIND)
                     {
-                        bigBlindValue = Math.Abs(action.Amount);
                         continue;
                     }
 
-                    if (Math.Abs(action.Amount) > bigBlindValue)
+                    if (bigBlindValue == 0.0m)
                     {
-                        var newAction = new HandAction(action.PlayerName, HandActionType.POSTS, action.Amount, action.Street, action.ActionNumber);
-                        actions.Remove(action);
-                        actions.Add(newAction);
+                        bigBlindValue = action.Absolute;
+                        continue;
+                    }
+
+                    if (action.Absolute > bigBlindValue)
+                    {
+                        var post_amount = bigBlindValue;
+                        var dead_amount = action.Absolute - bigBlindValue;
+
+                        var postAction = new HandAction(action.PlayerName, HandActionType.POSTS, post_amount, action.Street, action.ActionNumber);
+                        var deadAction = new HandAction(action.PlayerName, HandActionType.POSTS_DEAD, dead_amount, action.Street, action.ActionNumber + 1);
+
+                        PushActionNumbers(actions, i + 1);
+
+                        actions[i] = postAction;
+                        actions.Insert(i + 1, deadAction);
                     }
                 }
             }
-
+            
             return actions;
+        }
+
+        static void PushActionNumbers(List<HandAction> actions, int startIndex)
+        {
+            for (int i = startIndex; i < actions.Count; i++)
+            {
+                var action = actions[i];
+                action.ActionNumber += 1;
+            }
         }
 
         private List<HandAction> GetWinningAndShowCardActions(string[] handLines, List<HandAction> actions)

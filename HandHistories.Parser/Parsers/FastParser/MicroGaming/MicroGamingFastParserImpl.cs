@@ -43,11 +43,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             get { return false; }
         }
 
-        public override bool RequiresActionSorting
-        {
-            get { return false; }
-        }
-
         public override bool RequiresAllInDetection
         {
             get { return false; }

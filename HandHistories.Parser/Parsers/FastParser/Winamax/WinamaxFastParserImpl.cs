@@ -36,11 +36,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             get { return true; }
         }
 
-        public override bool RequiresActionSorting
-        {
-            get { return false; }
-        }
-
         public override bool RequiresUncalledBetFix
         {
             get { return true; }

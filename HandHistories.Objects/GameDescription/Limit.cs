@@ -75,6 +75,8 @@ namespace HandHistories.Objects.GameDescription
                     return @"€";
                 case Currency.GBP:
                     return @"£";
+                case GameDescription.Currency.SEK:
+                    return "SEK";
                 case Currency.CHIPS:
                     return "";
                 case Currency.All:
