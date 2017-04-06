@@ -256,23 +256,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
 
         static Card[] IGTCardLookup = new Card[]
         {
-            #region Diamonds 0-12
-            new Card('A', 'd'),
-		    new Card('2', 'd'),
-            new Card('3', 'd'),
-            new Card('4', 'd'),
-            new Card('5', 'd'),
-            new Card('6', 'd'),
-            new Card('7', 'd'),
-            new Card('8', 'd'),
-            new Card('9', 'd'),
-            new Card('T', 'd'),
-            new Card('J', 'd'),
-            new Card('Q', 'd'),
-            new Card('K', 'd'),
-	        #endregion
-            #region Clubs 13-25
-            new Card('A', 'c'), 
+            #region Clubs 0-12
 		    new Card('2', 'c'),
             new Card('3', 'c'),
             new Card('4', 'c'),
@@ -285,9 +269,24 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             new Card('J', 'c'),
             new Card('Q', 'c'),
             new Card('K', 'c'),
+            new Card('A', 'c'), 
+	        #endregion
+            #region Diamonds 13-25
+		    new Card('2', 'd'),
+            new Card('3', 'd'),
+            new Card('4', 'd'),
+            new Card('5', 'd'),
+            new Card('6', 'd'),
+            new Card('7', 'd'),
+            new Card('8', 'd'),
+            new Card('9', 'd'),
+            new Card('T', 'd'),
+            new Card('J', 'd'),
+            new Card('Q', 'd'),
+            new Card('K', 'd'),
+            new Card('A', 'd'),
 	        #endregion
             #region Hearts 26-38
-            new Card('A', 'h'), 
 		    new Card('2', 'h'),
             new Card('3', 'h'),
             new Card('4', 'h'),
@@ -300,9 +299,9 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             new Card('J', 'h'),
             new Card('Q', 'h'),
             new Card('K', 'h'),
+            new Card('A', 'h'), 
 	        #endregion
             #region Spades 39-51
-            new Card('A', 's'),
 		    new Card('2', 's'),
             new Card('3', 's'),
             new Card('4', 's'),
@@ -315,6 +314,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             new Card('J', 's'),
             new Card('Q', 's'),
             new Card('K', 's'),
+            new Card('A', 's'),
 	        #endregion
         };
 

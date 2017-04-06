@@ -40,13 +40,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 {
                     new Player("HERO", 19.50m, 1)
                     {
-                        HoleCards = HoleCards.FromCards("Th8c3c9d")
+                        HoleCards = HoleCards.FromCards("Jh9d4dTc")
                     },
                     new Player("PLAYER2", 59.22m, 2),
                     new Player("PLAYER3", 134.67m, 3),
                     new Player("PLAYER4", 64.49m, 4)
                     {
-                        HoleCards = HoleCards.FromCards("2s3s4sKs")
+                        HoleCards = HoleCards.FromCards("3s4s5sAs")
                     },
                     new Player("PLAYER5", 99.17m, 5),
                 };

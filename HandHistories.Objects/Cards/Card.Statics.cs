@@ -35,6 +35,14 @@ namespace HandHistories.Objects.Cards
         }
         #endregion
 
+        public static Card Unknown
+        {
+            get
+            {
+                return new Card(CardValueEnum.Unknown, 0);
+            }
+        }
+
         public static Card GetCardFromIntValue(int value)
         {
             //Sanity check
