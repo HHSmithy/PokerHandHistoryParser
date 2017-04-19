@@ -81,9 +81,27 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             get
             {
-                Assert.Ignore();
                 return new List<HandAction>()
                 { 
+                    new HandAction("PLAYER5", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                    new HandAction("PLAYER1", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+
+                    new HandAction("PLAYER2", HandActionType.RAISE, 1.75m, Street.Preflop),
+                    new HandAction("HERO", HandActionType.CALL, 1.75m, Street.Preflop),
+                    new HandAction("PLAYER4", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("PLAYER5", HandActionType.RAISE, 7.25m, Street.Preflop),
+                    new HandAction("PLAYER1", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("PLAYER2", HandActionType.CALL, 5.75m, Street.Preflop),
+                    new HandAction("HERO", HandActionType.CALL, 5.75m, Street.Preflop),
+
+                    new HandAction("PLAYER5", HandActionType.CHECK, 0m, Street.Flop),
+                    new HandAction("PLAYER2", HandActionType.BET, 15.00m, Street.Flop),
+                    new HandAction("HERO", HandActionType.CALL, 13.52m, Street.Flop, true),
+                    new HandAction("PLAYER5", HandActionType.FOLD, 0m, Street.Flop),
+
+                    new HandAction("PLAYER2", HandActionType.UNCALLED_BET, 1.48m, Street.Flop),
+
+                    new WinningsAction("PLAYER2", HandActionType.WINS, 48.69m, 0)
                 };
             }
         }

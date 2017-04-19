@@ -30,7 +30,11 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
 
         protected override void FinalizeHandHistory(HandHistory hand)
         {
-            //hand.HandActions = RaiseAdjuster.AdjustRaiseSizes(hand.HandActions);
+            
+            //hand.TotalPot
+            //hand.TotalPot = PotCalculator.CalculateTotalPot(hand);
+            //hand.Rake = PotCalculator.CalculateRake(hand);
+            //hand.HandActions = UncalledBet.FixUncalledBetWins(hand.HandActions);
         }
 
         protected override void ParseExtraHandInformation(JObject JSON, HandHistorySummary summary)
@@ -49,6 +53,14 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
 
             summary.TotalPot = totalpot + rake;
             summary.Rake = rake;
+        }
+
+        protected override List<HandAction> AdjustHandActions(List<HandAction> actions)
+        {
+            actions = RaiseAdjuster.AdjustRaiseSizes(actions);
+            actions = UncalledBet.Fix(actions);
+
+            return actions;
         }
 
         protected override List<HandAction> ParseHandActions(JObject JSON)
@@ -99,7 +111,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
                         break;
 
                     case "ACTION_ADJUSTEMENT":
-                        actions.Add(ParseAmountAction(HandActionType.UNCALLED_BET, action, currentStreet));
+                        //actions.Add(ParseAmountAction(HandActionType.UNCALLED_BET, action, currentStreet));
                         break;
 
                     default:

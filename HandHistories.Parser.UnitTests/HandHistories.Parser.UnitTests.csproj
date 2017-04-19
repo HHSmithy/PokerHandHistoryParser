@@ -422,6 +422,9 @@
     <Content Include="SampleHandHistories\IGT\CashGame\HandActionTests\3BetHand.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SampleHandHistories\IGT\CashGame\HandActionTests\AllInHandWithShowdown.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SampleHandHistories\IGT\CashGame\HandActionTests\FoldedPreflop.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

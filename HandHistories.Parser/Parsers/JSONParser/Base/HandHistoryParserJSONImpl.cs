@@ -64,7 +64,7 @@ namespace HandHistories.Parser.Parsers.JSONParser.Base
             hand.NumPlayersSeated = ParseNumPlayers(JSON);
             hand.TableName = ParseTableName(JSON);
             hand.Players = ParsePlayers(JSON);
-            hand.HandActions = ParseHandActions(JSON);
+            hand.HandActions = AdjustHandActions(ParseHandActions(JSON));
             hand.GameDescription = ParseGameDescriptor(JSON);
             hand.ComumnityCards = ParseCommunityCards(JSON);
 
@@ -116,7 +116,12 @@ namespace HandHistories.Parser.Parsers.JSONParser.Base
 
         public List<HandAction> ParseHandActions(string handText)
         {
-            return ParseHandActions(GetJSONObject(handText));
+            return AdjustHandActions(ParseHandActions(GetJSONObject(handText)));
+        }
+
+        protected virtual List<HandAction> AdjustHandActions(List<HandAction> actions)
+        {
+            return AdjustHandActions(actions);
         }
 
         protected abstract PlayerList ParsePlayers(JObject JSON);
