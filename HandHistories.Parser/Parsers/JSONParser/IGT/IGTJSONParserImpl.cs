@@ -119,15 +119,21 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
                 }
             }
 
-            //Parse Winners
+            //Parse Winners & Shows/Mucks
             var showdownJSON = handJSON["showDown"];
             foreach (var resultJSON in showdownJSON["result"])
             {
+                string name = resultJSON["player"].ToString();
                 var winAmount = resultJSON["win"].Value<decimal>();
                 if (winAmount > 0)
                 {
-                    string name = resultJSON["player"].ToString();
                     actions.Add(new WinningsAction(name, HandActionType.WINS, winAmount, 0));
+                }
+
+                var cards = resultJSON["card"];
+                if (cards.Count() != 0)
+                {
+                    actions.Add(new HandAction(name, HandActionType.SHOW, Street.Showdown));
                 }
             }
 

@@ -72,7 +72,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("PLAYER1", HandActionType.CHECK, 0m, Street.River),
                     new HandAction("PLAYER4", HandActionType.CHECK, 0m, Street.River),
 
-                    new WinningsAction("PLAYER4", HandActionType.WINS, 1240m, 0)
+                    new HandAction("PLAYER1", HandActionType.SHOW, Street.Showdown),
+                    new WinningsAction("PLAYER4", HandActionType.WINS, 1240m, 0),
+                    new HandAction("PLAYER4", HandActionType.SHOW, Street.Showdown),
                 };
             }
         }
@@ -101,7 +103,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                     new HandAction("PLAYER2", HandActionType.UNCALLED_BET, 1.48m, Street.Flop),
 
-                    new WinningsAction("PLAYER2", HandActionType.WINS, 48.69m, 0)
+                    new WinningsAction("PLAYER2", HandActionType.WINS, 48.69m, 0),
+                    new HandAction("PLAYER2", HandActionType.SHOW, Street.Showdown),
                 };
             }
         }
