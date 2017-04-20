@@ -320,38 +320,50 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
             if (showdownLine != -1)
             {
-                //Parse Winners
-                for (int i = showdownLine + 1; i < handLines.Length; i++)
+                ParseShowdown(handLines, actions, showdownLine);
+            }
+
+            return actions;
+        }
+
+        static void ParseShowdown(string[] handLines, List<HandAction> actions, int showdownLine)
+        {
+            //Muckstring if you muck on showdown
+            const string MuckString1 = "$(STR_G_MUCK)";
+            //Muckstring if you win on uncalled bet
+            const string MuckString2 = "$(STR_BY_DEFAULT)";
+
+            //Parse Winners
+            for (int i = showdownLine + 1; i < handLines.Length; i++)
+            {
+                string Line = handLines[i];
+                //Normal
+                //<RESULT PLAYER="ammms" WIN="3.64" HAND="$(STR_G_WIN_PAIR) $(STR_G_CARDS_NINES)">
+                //OmahaHiLo
+                //<RESULT WINTYPE="WINTYPE_HILO" PLAYER="ItalyToast" WIN="105.08" HAND="$(STR_BY_DEFAULT)" WINCARDS="" HANDEXT=" 8,7,5,2,A">
+                if (Line[1] == 'R')
                 {
-                    string Line = handLines[i];
-                    //Normal
-                    //<RESULT PLAYER="ammms" WIN="3.64" HAND="$(STR_G_WIN_PAIR) $(STR_G_CARDS_NINES)">
-                    //OmahaHiLo
-                    //<RESULT WINTYPE="WINTYPE_HILO" PLAYER="ItalyToast" WIN="105.08" HAND="$(STR_BY_DEFAULT)" WINCARDS="" HANDEXT=" 8,7,5,2,A">
-                    if (Line[1] == 'R')
+                    string playerName = GetPlayerXMLAttributeValue(Line);
+
+                    decimal amount = Decimal.Parse(GetXMLAttributeValue(Line, "WIN"), provider);
+                    string hand = GetXMLAttributeValue(Line, "HAND");
+                    if (amount > 0)
                     {
-                        string playerName = GetPlayerXMLAttributeValue(Line);
-
-                        decimal amount = Decimal.Parse(GetXMLAttributeValue(Line, "WIN"), provider);
-
-                        if (amount > 0)
+                        if (hand != MuckString1 && hand != MuckString2)
                         {
-                            actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                            actions.Add(new HandAction(playerName, HandActionType.SHOW, amount, Street.Showdown));
                         }
-                        else
+                        actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    }
+                    else
+                    {
+                        if (hand == MuckString1)
                         {
-                            const string MuckHand =  "$(STR_G_MUCK)";
-                            string hand = GetXMLAttributeValue(Line, "HAND");
-                            if (hand == MuckHand)
-                            {
-                                actions.Add(new HandAction(playerName, HandActionType.MUCKS, amount, Street.Showdown));
-                            }
+                            actions.Add(new HandAction(playerName, HandActionType.MUCKS, amount, Street.Showdown));
                         }
                     }
                 }
             }
-
-            return actions;
         }
 
         static HandAction ParseAnte(string line)
