@@ -347,19 +347,21 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
                     decimal amount = Decimal.Parse(GetXMLAttributeValue(Line, "WIN"), provider);
                     string hand = GetXMLAttributeValue(Line, "HAND");
+
+                    if (hand != MuckString1 && hand != MuckString2)
+                    {
+                        actions.Add(new HandAction(playerName, HandActionType.SHOW, 0, Street.Showdown));
+                    }
+
                     if (amount > 0)
                     {
-                        if (hand != MuckString1 && hand != MuckString2)
-                        {
-                            actions.Add(new HandAction(playerName, HandActionType.SHOW, amount, Street.Showdown));
-                        }
                         actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
                     }
                     else
                     {
                         if (hand == MuckString1)
                         {
-                            actions.Add(new HandAction(playerName, HandActionType.MUCKS, amount, Street.Showdown));
+                            actions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, Street.Showdown));
                         }
                     }
                 }
