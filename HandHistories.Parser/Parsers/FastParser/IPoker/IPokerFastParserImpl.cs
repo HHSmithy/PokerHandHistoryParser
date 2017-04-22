@@ -496,8 +496,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         public override bool IsValidHand(string[] handLines)
         {
             //Check 1 - Are we in a Session Tag
-            if (handLines[0].StartsWithFast("<session") == false ||
-                handLines[handLines.Length - 1].StartsWithFast("</session") == false)
+            if (!handLines[0].StartsWithFast("<session"))
+            {
+                return false;
+            }
+
+            string lastLine = handLines[handLines.Length - 1];
+            if (!lastLine.StartsWithFast("</session")
+                && !lastLine.StartsWithFast("</game"))
             {
                 return false;
             }

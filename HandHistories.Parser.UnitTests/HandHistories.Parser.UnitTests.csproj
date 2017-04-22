@@ -135,6 +135,7 @@
     <Compile Include="Parsers\HandSummaryParserTests\HeroTests\DealtToHeroTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\HeroTests\HeroNameTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHandTests.cs" />
+    <Compile Include="Parsers\HandSummaryParserTests\IsValidHandTests\HandParserValidHM2ExportTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_MTT.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests.cs" />
     <Compile Include="Parsers\HandSummaryParserTests\Limits\HandParserLimitTests_CashGame.cs" />
@@ -593,6 +594,9 @@
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\Tables\Table4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SampleHandHistories\IPoker\CashGame\ValidHandTests\HMExport_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SampleHandHistories\MicroGaming\CashGame\ValidHandTests\InValidHand_1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

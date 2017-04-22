@@ -138,6 +138,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("ItalyToast", HandActionType.CALL, 3385m, Street.Preflop, true),
 
                     new HandAction("ItalyToast", HandActionType.MUCKS, Street.Showdown),
+                    new HandAction("SAMERRRR", HandActionType.SHOW, Street.Showdown),
                     new WinningsAction("SAMERRRR", HandActionType.WINS, 17555m, 0),  
                 };
             }
@@ -220,6 +221,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("Player1", HandActionType.BET, 3150m, Street.Turn),
                 new HandAction("HERO", HandActionType.CALL, 2575.02m, Street.Turn, true),
 
+                new HandAction("Player1", HandActionType.SHOW, Street.Showdown),
                 new WinningsAction("Player1", HandActionType.WINS, 8285.04m, 0),
                 new HandAction("HERO", HandActionType.MUCKS, Street.Showdown),
             };
