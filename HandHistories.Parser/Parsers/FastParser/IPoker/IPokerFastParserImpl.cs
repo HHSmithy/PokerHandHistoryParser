@@ -501,6 +501,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 return false;
             }
 
+            //Check 2 - check the end tag
             string lastLine = handLines[handLines.Length - 1];
             if (!lastLine.StartsWithFast("</session")
                 && !lastLine.StartsWithFast("</game"))
