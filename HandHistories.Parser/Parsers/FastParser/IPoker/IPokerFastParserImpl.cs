@@ -748,9 +748,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         static int GetActionNumberFromActionLine(string actionLine)
         {
             int actionStartPos = actionLine.IndexOfFast(" n") + 5;
-            int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
-            string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
-            return Int32.Parse(actionNumString);
+            return FastInt.Parse(actionLine, actionStartPos);
         }
 
         static string GetPlayerFromActionLine(string actionLine)
@@ -772,9 +770,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         static int GetActionTypeFromActionLine(string actionLine)
         {
             int actionStartPos = actionLine.IndexOfFast(" t") + 7;
-            int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
-            string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
-            return Int32.Parse(actionNumString);
+            return FastInt.Parse(actionLine, actionStartPos);
         }
 
         protected override PlayerList ParsePlayers(string[] handLines)
