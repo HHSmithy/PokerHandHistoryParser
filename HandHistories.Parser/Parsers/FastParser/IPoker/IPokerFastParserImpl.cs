@@ -857,14 +857,17 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 ////To make sure we know the exact character location of each card, turn 10s into Ts (these are recognized by our parser)
                 ////Had to change this to specific cases so we didn't accidentally change player names
                 playerCardString = playerCardString.Replace("10", "T");
-                string[] cards = playerCardString.Split(' ');
-                if (cards.Length > 1)
+
+                if (playerCardString.Length > 1)
                 {
-                    player.HoleCards = HoleCards.NoHolecards(player.PlayerName);
-                    foreach (string card in cards)
+                    player.HoleCards = HoleCards.NoHolecards();
+
+                    for (int j = 0; j < playerCardString.Length; j += 3)
                     {
-                        //Suit and rank are reversed in these strings, so we flip them around before adding
-                        player.HoleCards.AddCard(new Card(card[1], card[0]));
+                        char suit = playerCardString[j];
+                        char rank = playerCardString[j + 1];
+
+                        player.HoleCards.AddCard(new Card(rank, suit));
                     }
                 }
             }
