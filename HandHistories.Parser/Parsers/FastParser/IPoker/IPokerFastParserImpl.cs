@@ -349,7 +349,6 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             for (int i = 0; i < handLines.Length; i++)
             {
                 string handLine = handLines[i];
-                handLine = handLine.TrimStart();
 
                 //If we don't have these letters at these positions, we're not a hand line
                 if (handLine[1] != 'c' || handLine[2] != 'a')
