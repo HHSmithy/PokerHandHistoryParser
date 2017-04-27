@@ -68,7 +68,7 @@ namespace HandHistories.Objects.Players
 
         public Player this[string name]
         {
-            get { return _players.FirstOrDefault(p => p.PlayerName.Equals(name)); }
+            get { return _players.FirstOrDefault(p => p.PlayerName == name); }
         }
        
         public int Count
