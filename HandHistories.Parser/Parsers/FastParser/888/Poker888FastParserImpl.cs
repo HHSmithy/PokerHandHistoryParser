@@ -51,19 +51,21 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
             //return splitUpHands.Where(s => s.Equals("\r\n") == false);
 
-            return rawHandHistories.LazyStringSplit("\n\n").Where(s => !string.IsNullOrWhiteSpace(s) && !s.Equals("\r\n") && !s.StartsWithFast("#Game No "));
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => !string.IsNullOrWhiteSpace(s) && !s.Equals("\r\n"));
         }
 
         private static readonly Regex DealerPositionRegex = new Regex(@"(?<=Seat )\d+", RegexOptions.Compiled);
         protected override int ParseDealerPosition(string[] handLines)
         {
-            return Int32.Parse(DealerPositionRegex.Match(handLines[3]).Value);
+            int start = GetHandStartIndex(handLines);
+            return Int32.Parse(DealerPositionRegex.Match(handLines[start + 3]).Value);
         }
 
         private static readonly Regex DateRegex = new Regex(@"(\d+) (\d+) (\d+) ", RegexOptions.Compiled);
         protected override DateTime ParseDateUtc(string[] handLines)
         {
-            string line = handLines[1];
+            int start = GetHandStartIndex(handLines);
+            string line = handLines[start + 1];
             //Date looks like: $0.50/$1 Blinds No Limit Holdem - *** 06 01 2014 10:56:05
             int dateStartIndex = line.LastIndexOf('*') + 2;
             string dateString = line.Substring(dateStartIndex);
@@ -85,7 +87,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override long ParseHandId(string[] handLines)
         {
-            string line = handLines[0];
+            int start = GetHandStartIndex(handLines);
+            string line = handLines[start];
             int endIndex = line.LastIndexOf(' ');
             int startIndex = line.LastIndexOf(' ', endIndex - 1);
 
@@ -101,8 +104,9 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         private static readonly Regex TableNameRegex = new Regex(@"(?<=Table ).*$", RegexOptions.Compiled);
         protected override string ParseTableName(string[] handLines)
         {
+            int start = GetHandStartIndex(handLines);
             //"Table Athens 10 Max (Real Money)" -> "Athens"
-            var tableName = TableNameRegex.Match(handLines[2]).Value;
+            var tableName = TableNameRegex.Match(handLines[start + 2]).Value;
             tableName = tableName.Substring(0, tableName.Length - 19).TrimEnd();
             return tableName;
         }
@@ -133,7 +137,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         private static readonly Regex GameTypeRegex = new Regex(@"(?<=Blinds ).*(?= - )", RegexOptions.Compiled);
         protected override GameType ParseGameType(string[] handLines)
         {
-            string gameTypeString = GameTypeRegex.Match(handLines[1]).Value;
+            int start = GetHandStartIndex(handLines);
+            string gameTypeString = GameTypeRegex.Match(handLines[start + 1]).Value;
             gameTypeString = gameTypeString.Replace(" Jackpot table", "");
             switch (gameTypeString)
             {
@@ -167,7 +172,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
-            bool isjackPotTable = handLines[1].Contains(" Jackpot table");
+            int start = GetHandStartIndex(handLines);
+            bool isjackPotTable = handLines[start + 1].Contains(" Jackpot table");
            
             var playerList = ParsePlayers(handLines);
             var limit = ParseLimit(handLines);
@@ -207,7 +213,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override Limit ParseLimit(string[] handLines)
         {
-            string line = handLines[1];
+            int start = GetHandStartIndex(handLines);
+            string line = handLines[start + 1];
 
             int LimitEndIndex = line.IndexOfFast(" Blinds");
             string limitString = line.Remove(LimitEndIndex);
@@ -238,7 +245,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         {
             isCancelled = false;
 
-            var seatedPlayersLine = handLines[5];
+            int start = GetHandStartIndex(handLines);
+            var seatedPlayersLine = handLines[start + 5];
             if (seatedPlayersLine[seatedPlayersLine.Length - 1] == '1')
             {
                 isCancelled = true;
@@ -546,13 +554,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         protected override PlayerList ParsePlayers(string[] handLines)
         {
             const int PlayerListStartIndex = 5;
+            int start = GetHandStartIndex(handLines);
             int seatCount = ParsePlayerCount(handLines);
 
             PlayerList playerList = new PlayerList();
 
             for (int i = 0; i < seatCount; i++)
             {
-                string handLine = handLines[PlayerListStartIndex + i];
+                string handLine = handLines[PlayerListStartIndex + start + i];
 
                 // Expected format:
                 //  Seat 1: Velmonio ( $1.05 )
@@ -631,7 +640,8 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         private static int ParsePlayerCount(string[] handLines)
         {
-            int seatCount = FastInt.Parse(NumPlayersRegex.Match(handLines[4]).Value);
+            int start = GetHandStartIndex(handLines);
+            int seatCount = FastInt.Parse(NumPlayersRegex.Match(handLines[start + 4]).Value);
             return seatCount;
         }
 
@@ -699,6 +709,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 }
             }
             return null;
+        }
+
+        static int GetHandStartIndex(string[] handlines)
+        {
+            for (int i = 0; i < handlines.Length; i++)
+            {
+                if (handlines[i][0] == '*')
+                {
+                    return i;
+                }
+            }
+            throw new ArgumentException("Did not find start of hand");
         }
     }
 }

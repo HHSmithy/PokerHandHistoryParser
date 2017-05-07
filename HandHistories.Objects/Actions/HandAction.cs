@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Runtime.Serialization;
 using HandHistories.Objects.Cards;
+using System.Diagnostics;
 
 namespace HandHistories.Objects.Actions
 {
     [DataContract]
     [KnownType(typeof(WinningsAction))]
     [KnownType(typeof(AllInAction))]
+    [DebuggerDisplay("{ToString()}")]
     public partial class HandAction
     {
         [DataMember]
