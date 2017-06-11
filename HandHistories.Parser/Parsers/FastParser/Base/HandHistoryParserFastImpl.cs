@@ -20,7 +20,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        private static readonly Regex HandSplitRegex = new Regex("\r\n\r\n", RegexOptions.Compiled);
+        private static readonly Regex HandSplitRegex = new Regex("\r?\n\r?\n", RegexOptions.Compiled);
 
         public abstract SiteName SiteName { get; }
 
@@ -73,7 +73,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             return HandSplitRegex.Split(rawHandHistories)
                             .Where(s => string.IsNullOrWhiteSpace(s) == false)
-                            .Select(s => s.Trim('\r', 'n'));
+                            .Select(s => s.Trim('\r', '\n'));
         }
 
         public virtual IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)

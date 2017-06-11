@@ -6,14 +6,15 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTests
 {
-    [TestFixture("IPoker", 3305969126, 9)]
+    [TestFixture("IPoker", "FormatVersion17", 7558166000, 13)]
+    [TestFixture("IPoker", "UnformattedXmlHand", 3305969126, 9)]
     class HandParserHandFormatTests : HandHistoryParserBaseTests 
     {
         private readonly string _unformattedXmlHand;
         private readonly long _expectedHandId;
         private readonly int _expectedNumActions;
 
-        public HandParserHandFormatTests(string site, long handId, int expectedNumActions)
+        public HandParserHandFormatTests(string site, string handname, long handId, int expectedNumActions)
             : base(site)
         {
             _expectedHandId = handId;
@@ -21,7 +22,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTe
 
             try
             {
-                _unformattedXmlHand = SampleHandHistoryRepository.GetFormatHandHistoryText(PokerFormat.CashGame, Site, "UnformattedXmlHand");
+                _unformattedXmlHand = SampleHandHistoryRepository.GetFormatHandHistoryText(PokerFormat.CashGame, Site, handname);
             }
             catch (Exception ex)
             {
@@ -39,7 +40,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTe
             
             Assert.AreEqual(_expectedHandId, summary.HandId, "IHandHistorySummaryParser: ParseHandId");
             Assert.AreEqual(_expectedHandId, fullHandParse.HandId, "IHandHistoryParser: ParseHandId");
-            Assert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: ParseHandId");
+            Assert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: HandActionCount");
         }
 
     }

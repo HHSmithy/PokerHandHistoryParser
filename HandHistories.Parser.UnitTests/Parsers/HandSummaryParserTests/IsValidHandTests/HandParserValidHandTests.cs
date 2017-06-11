@@ -17,6 +17,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
     [TestFixture("Entraction")]
     [TestFixture("FullTilt")]
     [TestFixture("MicroGaming")]
+    [TestFixture("MicroGaming")]
     [TestFixture("Winamax")]
     [TestFixture("WinningPoker")]
     [TestFixture("WinningPoker", 2)]
@@ -87,7 +88,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
                 case SiteName.FullTilt:
                 case SiteName.IPoker:
                 case SiteName.OnGame:
-                case SiteName.MicroGaming:
                 case SiteName.BossMedia:
                 case SiteName.Ladbrokes:
                 case SiteName.Pacific:

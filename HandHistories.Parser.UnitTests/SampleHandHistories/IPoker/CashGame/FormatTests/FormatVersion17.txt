@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6692825000">
+ <general>
+  <client_version>17.1.7.1</client_version>
+  <uncalled_bet_enabled>false</uncalled_bet_enabled>
+  <mode>real</mode>
+  <gametype>Omaha PL €5/€10</gametype>
+  <tablename>Adendron, 817030000</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:00:00</duration>
+  <gamecount>0</gamecount>
+  <startdate>2017-05-23 00:00:00</startdate>
+  <currency>EUR</currency>
+  <nickname></nickname>
+  <bets>0.00</bets>
+  <wins>0.00</wins>
+  <chipsin>0.00</chipsin>
+  <chipsout>0.00</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general>
+ <game gamecode="7558166000">
+  <general>
+   <startdate>2017-05-23 00:00:00</startdate>
+   <players>
+    <player seat="1" bet="€120" dealer="0" chips="€553.20" win="€0" name="OverlordKing"/>
+    <player seat="3" bet="€464.50" dealer="0" chips="€464.50" win="€700.50" name="StayCalmAndCRAI"/>
+    <player seat="5" bet="€120" dealer="1" chips="€1,230.55" win="€0" name="15432Poker"/>
+   </players>
+  </general>
+  <round no="0">
+   <action no="1" sum="€5" player="OverlordKing" cards="" type="1"/>
+   <action no="2" sum="€10" player="StayCalmAndCRAI" cards="" type="2"/>
+  </round>
+  <round no="1">
+   <action no="3" sum="€30" player="15432Poker" cards="" type="23"/>
+   <cards player="OverlordKing" type="Pocket">X X X X</cards>
+   <action no="4" sum="€25" player="OverlordKing" cards="" type="3"/>
+   <cards player="StayCalmAndCRAI" type="Pocket">X X X X</cards>
+   <action no="5" sum="€120" player="StayCalmAndCRAI" cards="" type="23"/>
+   <action no="6" sum="€90" player="15432Poker" cards="" type="3"/>
+   <action no="7" sum="€90" player="OverlordKing" cards="" type="3"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D5 DT CQ</cards>
+   <action no="8" sum="€0" player="OverlordKing" cards="" type="4"/>
+   <action no="9" sum="€344.50" player="StayCalmAndCRAI" cards="" type="5"/>
+   <action no="10" sum="€0" player="15432Poker" cards="" type="0"/>
+   <action no="11" sum="€0" player="OverlordKing" cards="" type="0"/>
+  </round>
+ </game>
+</session>

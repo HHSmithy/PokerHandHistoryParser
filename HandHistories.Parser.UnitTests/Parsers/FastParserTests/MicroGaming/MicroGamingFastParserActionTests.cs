@@ -78,6 +78,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
             Assert.AreEqual(new HandAction("TestPlayer6", HandActionType.FOLD, 0m, Street.Flop), handAction);
         }
 
+        [Test]
+        public void ParseRegularActionLine_Posts_Works()
+        {
+            HandAction handAction = Parser.ParseActionFromActionLine("<Action seq=\"3\" type=\"PostedToPlay\" seat=\"6\" value=\"6.00\"/>", Street.Preflop, Playerlist1, EmptyActions);
+
+            Assert.AreEqual(new HandAction("TestPlayer6", HandActionType.POSTS, 6m, Street.Preflop), handAction);
+        }
+        
+
         //[Test]
         //public void ParseShowdownActionLine_Wins_Works()
         //{

@@ -274,21 +274,43 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         protected string GetGameTypeLineFromHandLines(string[] handLines)
         {
-            //This is the 4th line if we have the <session> tag header
-            return handLines[3];
+            //With the new format the gametype isnt neccesaryily on the same line
+            //The old format is on line with index 3
+            //Version 17 is is on line with index 6
+            for (int i = 3; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[1] == 'g')
+                {
+                    return line;
+                }
+            }
+
+            throw new ArgumentOutOfRangeException("GameType line not found");
         }
 
         protected string GetTableNameLineFromHandLines(string[] handLines)
         {
-            //This is the 5th line if we have the <session> tag header
-            return handLines[4];
+            //With the new format the TableName isnt neccesaryily on the same line
+            //The old format is on line with index 4
+            //Version 17 is is on line with index 7
+            for (int i = 3; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[1] == 't')
+                {
+                    return line;
+                }
+            }
+
+            throw new ArgumentOutOfRangeException("TableName line not found");
         }
 
         protected string GetStartDateFromHandLines(string[] handLines)
         {
             // in order to find the exact date of the hand we search the startdate of the hand ( and not the table )
             
-            for(int i=0; i<= handLines.Count(); i++)
+            for(int i = 0; i <= handLines.Length; i++)
             {
                 if(handLines[i].Contains("gamecode=\""))
                 {

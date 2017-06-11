@@ -84,13 +84,22 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
         {
             List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
 
-            for (int i = 0; i < playerLines.Count(); i++)
+            for (int i = 0; i < playerLines.Count; i++)
             {
                 string playerLine = playerLines[i];
                 if (IsPlayerLineDealer(playerLine))
                 {
                     return GetSeatNumberFromPlayerLine(playerLine);
                 }
+            }
+
+            /*
+             * If its a cancelled hand there is only one player in the hand but he isn't necissarily the dealer.
+             * We return -1 to indicate that there is no dealer
+             */
+            if (playerLines.Count == 1)
+            {
+                return -1;
             }
             throw new Exception("Could not locate dealer");
         }
@@ -339,20 +348,32 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 return false;
             }
 
+            return true;
+        }
+
+        static bool isCancelledHand(string[] handLines)
+        {
             //Check 3 - Do we have between 2 and 10 players?
             List<string> playerLines = GetPlayerLinesFromHandLines(handLines);
             if (playerLines.Count() < 2 || playerLines.Count() > 10)
             {
-                return false;
+                return true;
             }
-
-            return true;
+            return false;
         }
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
             isCancelled = false;
-            return IsValidHand(handLines);
+            if (!IsValidHand(handLines))
+            {
+                return false;
+            }
+            else
+            {
+                isCancelled = isCancelledHand(handLines);
+            }
+            return true;
         }
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)

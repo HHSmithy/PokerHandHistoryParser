@@ -18,6 +18,11 @@ namespace HandHistories.Objects.Hand
 
         public long HandId { get; set; }
 
+        /// <summary>
+        /// Dealers seat.
+        /// Get the dealer with Players[DealerButtonPosition].
+        /// Can be -1 if it's a cancelled hand.
+        /// </summary>
         public int DealerButtonPosition { get; set; }
 
         public string TableName { get; set; }

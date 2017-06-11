@@ -118,6 +118,8 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 case "BST": // British Summer TIme
                 case "CET":
                     return date.AddHours(-1);
+                case "WEST":
+                    return date.AddHours(1);
                 case "PST":
                     return date.AddHours(8);
                 case "PDT":

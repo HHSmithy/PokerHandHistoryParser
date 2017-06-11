@@ -51,7 +51,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
             //return splitUpHands.Where(s => s.Equals("\r\n") == false);
 
-            return rawHandHistories.LazyStringSplit("\n\n").Where(s => !string.IsNullOrWhiteSpace(s) && !s.Equals("\r\n"));
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => !string.IsNullOrWhiteSpace(s) && !s.Equals("\r\n") && s.Length > 60);
         }
 
         private static readonly Regex DealerPositionRegex = new Regex(@"(?<=Seat )\d+", RegexOptions.Compiled);
@@ -410,7 +410,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 return new HandAction(playerName, HandActionType.CHECK, currentStreet);
             }
 
-            throw new HandActionException(line, "Unknown handline.");
+            throw new HandActionException(line, "Unknown Player action line: " + line);
         }
 
         static int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int actionIndex)
