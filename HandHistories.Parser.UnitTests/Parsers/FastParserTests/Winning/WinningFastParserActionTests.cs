@@ -22,11 +22,6 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
         {
         }
 
-        protected WinningPokerNetworkFastParserImpl GetFastParser()
-        {
-            return new WinningPokerNetworkFastParserImpl();
-        }
-
         PlayerList EmptyPlayerlist = new PlayerList();
         List<HandAction> EmptyActions = new List<HandAction>();
 
@@ -86,6 +81,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
 
             Assert.AreEqual(new HandAction("jayslowplay", HandActionType.ALL_IN, 3.50m, Street.Flop), handAction);
         }
+
+         [Test]
+        public void ParseRegularActionLine_AllIn_Works()
+        {
+            HandAction handAction = Parser.ParseRegularAction("Player do not-call allin (124)", Street.Flop, EmptyPlayerlist, EmptyActions, false);
+
+            Assert.AreEqual(new HandAction("jayslowplay", HandActionType.ALL_IN, 124m, Street.Flop), handAction);
+        }
+        
 
         [Test]
         public void ParseShowdownActionLine_Wins_Works()

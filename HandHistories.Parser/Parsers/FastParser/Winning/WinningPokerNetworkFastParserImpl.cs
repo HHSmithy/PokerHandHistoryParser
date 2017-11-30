@@ -304,8 +304,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     }
                     else if (actionID2 == 'p')
                     {
-                        //TODO: Decide how to manage CAP hands
-                        return new HandAction(PlayerName, HandActionType.ALL_IN, ParseActionAmountAfterPlayer(line), currentStreet);
+                        var capAmount = ParseActionAmountAfterPlayer(line);
+                        var capActionType = AllInActionHelper.GetAllInActionType(PlayerName, capAmount, currentStreet, actions);
+                        return new HandAction(PlayerName, capActionType, capAmount, currentStreet, true);
                     }
                     else
                     {
@@ -322,9 +323,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     }
                 //Player PersnicketyBeagle allin (383)
                 case 'a':
-                    var amount = ParseActionAmountAfterPlayer(line);
-                    var actionType = AllInActionHelper.GetAllInActionType(PlayerName, amount, currentStreet, actions);
-                    return new HandAction(PlayerName, actionType, amount, currentStreet, true);
+                    var allinAmount = ParseActionAmountAfterPlayer(line);
+                    var allinActionType = AllInActionHelper.GetAllInActionType(PlayerName, allinAmount, currentStreet, actions);
+                    return new HandAction(PlayerName, allinActionType, allinAmount, currentStreet, true);
                 case 'm'://Player PersnicketyBeagle mucks cards
                 case 'i'://Player ECU7184 is timed out.
                     return null;
