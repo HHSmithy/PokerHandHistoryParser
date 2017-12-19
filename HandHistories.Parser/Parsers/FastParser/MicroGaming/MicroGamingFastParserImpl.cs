@@ -496,7 +496,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 case "dealriver":
                     return Street.River;
                 default:
-                    throw new ArgumentException("typeString");
+                    throw new ArgumentException("Unknown street: " + typeString);
             }
         }
 
