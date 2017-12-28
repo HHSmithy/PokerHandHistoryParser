@@ -881,11 +881,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
                     decimal stack = ParseDecimal(line, openParenIndex + 2);
 
                     playerList.Add(new Player(playerName, stack, seatNumber));
-
-                    if (isAnonymousPlayer(playerName))
-                    {
-                        throw new InvalidHandException(string.Join(", ", handLines), "Anonomous Player in Hand");
-                    }
                 }
 
                 // post blind
@@ -1133,6 +1128,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PartyPoker
         protected override void FinalizeHandHistory(HandHistory Hand)
         {
             FixSitoutPlayers(Hand);
+            if (Hand.Players.Any(p => isAnonymousPlayer(p.PlayerName)))
+	        {
+                var anonTableType = TableTypeDescription.Anonymous;
+		        Hand.GameDescription.TableType = new TableType(Hand.GameDescription.TableType.Concat(new List<TableTypeDescription>(){anonTableType}));
+	        }
         }
     }
 }
