@@ -29,11 +29,6 @@
         #region Showdown Actions
         SHOW,
         SHOWS_FOR_LOW,
-        WINS,
-        WINS_THE_LOW,
-        WINS_SIDE_POT,
-        TIES,
-        TIES_SIDE_POT,
         MUCKS,
         #endregion
 

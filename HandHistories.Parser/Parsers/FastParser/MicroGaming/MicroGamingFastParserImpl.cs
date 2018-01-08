@@ -623,9 +623,6 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 case "moneyreturned":
                     actionType = HandActionType.UNCALLED_BET;
                     break;
-                case "win":
-                    actionType = HandActionType.WINS;
-                    break;
                 case "postedtoplay":
                     actionType = HandActionType.POSTS;
                     break;
