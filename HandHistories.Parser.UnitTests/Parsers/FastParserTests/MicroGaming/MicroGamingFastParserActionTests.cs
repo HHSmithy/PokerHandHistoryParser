@@ -85,15 +85,5 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Winamax
 
             Assert.AreEqual(new HandAction("TestPlayer6", HandActionType.POSTS, 6m, Street.Preflop), handAction);
         }
-        
-
-        //[Test]
-        //public void ParseShowdownActionLine_Wins_Works()
-        //{
-        //    List<HandAction> actions = new List<HandAction>();
-        //    HandAction handAction = Parser.ParseWinningsAction("*Player johna52801 shows: One pair of Js [Jd Js]. Bets: 4.07. Collects: 7.73. Wins: 3.66.", EmptyPlayerlist, false);
-
-        //    Assert.AreEqual(new WinningsAction("johna52801", HandActionType.WINS, 7.73m, 0), handAction);
-        //}
     }
 }

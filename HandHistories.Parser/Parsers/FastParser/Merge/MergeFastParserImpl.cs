@@ -313,9 +313,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             }
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> actions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             PlayerList playerList = ParsePlayers(handLines);
 
@@ -342,7 +343,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             foreach (XElement winnerElement in winnerElements)
             {
                 WinningsAction winningsAction = GetWinningsActionFromWinnerElement(winnerElement, playerList);
-                actions.Add(winningsAction);
+                winners.Add(winningsAction);
             }
 
             return actions;
@@ -356,7 +357,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
             Player matchingPlayer = GetPlayerBySeatId(playerList, winnerSeatId);
 
-            return new WinningsAction(matchingPlayer.PlayerName, HandActionType.WINS, amount, potNumber, Int32.MaxValue);
+            return new WinningsAction(matchingPlayer.PlayerName, WinningsActionType.WINS, amount, potNumber);
         }
 
         private Player GetPlayerBySeatId(PlayerList playerList, int seatId)

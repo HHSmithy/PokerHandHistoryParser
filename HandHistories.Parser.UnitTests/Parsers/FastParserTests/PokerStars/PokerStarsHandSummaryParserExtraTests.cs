@@ -242,28 +242,33 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
             };
 
             var expectedActions = new List<HandAction>()
-                {
-                    new HandAction("vitinja", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
-                    new HandAction("/\\ntiHer[]", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
-                    new HandAction("Catharina111", HandActionType.CALL, 0.50m, Street.Preflop),
-                    new HandAction("Willo2319", HandActionType.CALL, 0.50m, Street.Preflop),
-                    new HandAction("vitinja", HandActionType.FOLD, 0m, Street.Preflop),
-                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0, Street.Preflop),
-                     new HandAction("/\\ntiHer[]", HandActionType.BET, 1, Street.Flop),
-                    new HandAction("Catharina111", HandActionType.FOLD, 0m, Street.Flop),
-                    new HandAction("Willo2319", HandActionType.CALL, 1m, Street.Flop),
-                    new HandAction("/\\ntiHer[]", HandActionType.BET, 1.50m, Street.Turn),
-                    new HandAction("Willo2319", HandActionType.CALL, 1.50m, Street.Turn),
-                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0m, Street.River),
-                    new HandAction("Willo2319", HandActionType.CHECK, 0m, Street.River),
-                    new HandAction("/\\ntiHer[]", HandActionType.SHOW, 0m, Street.Showdown),
-                     new HandAction("Willo2319", HandActionType.SHOW, 0m, Street.Showdown),
-                    new WinningsAction("Willo2319", HandActionType.WINS, 6.45m, 0),                               
-                };
+            {
+                new HandAction("vitinja", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                new HandAction("Catharina111", HandActionType.CALL, 0.50m, Street.Preflop),
+                new HandAction("Willo2319", HandActionType.CALL, 0.50m, Street.Preflop),
+                new HandAction("vitinja", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.BET, 1, Street.Flop),
+                new HandAction("Catharina111", HandActionType.FOLD, 0m, Street.Flop),
+                new HandAction("Willo2319", HandActionType.CALL, 1m, Street.Flop),
+                new HandAction("/\\ntiHer[]", HandActionType.BET, 1.50m, Street.Turn),
+                new HandAction("Willo2319", HandActionType.CALL, 1.50m, Street.Turn),
+                new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0m, Street.River),
+                new HandAction("Willo2319", HandActionType.CHECK, 0m, Street.River),
+                new HandAction("/\\ntiHer[]", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("Willo2319", HandActionType.SHOW, 0m, Street.Showdown),                
+            };
+
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Willo2319", WinningsActionType.WINS, 6.45m, 0),        
+            };
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "PlayerNameWithSlashesAndSquareBrackets");
 
             Assert.AreEqual(expectedActions, actualHand.HandActions);
+            Assert.AreEqual(expectedWinners, actualHand.Winners);
         }
 
         [Test]

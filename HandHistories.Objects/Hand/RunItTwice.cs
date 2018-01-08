@@ -18,5 +18,7 @@ namespace HandHistories.Objects.Hand
         /// All actions that occur during the second showdown
         /// </summary>
         public List<HandAction> Actions = new List<HandAction>();
+
+        public List<WinningsAction> Winners = new List<WinningsAction>();
     }
 }

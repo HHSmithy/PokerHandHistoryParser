@@ -17,15 +17,14 @@ namespace HandHistories.Parser.Utils.Pot
         /// <returns></returns>
         public static decimal CalculateTotalPot(HandHistory hand)
         {
-            var sum = hand.HandActions.Where(p => !p.IsWinningsAction).Sum(a => a.Amount);
+            var sum = hand.HandActions.Sum(a => a.Amount);
 
             return Math.Abs(sum);
         }
 
         public static decimal CalculateRake(HandHistory hand)
         {
-            var totalCollected = hand.HandActions
-                .Where(p => p.IsWinningsAction)
+            var totalCollected = hand.Winners
                 .Sum(p => p.Amount);
 
             return hand.TotalPot.Value - totalCollected;

@@ -245,9 +245,11 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> actions = new List<HandAction>();
+            winners = new List<WinningsAction>();
+
             int lineParseIndex = getHandActionsStartIndex(handLines);
             Street currentStreet = Street.Preflop;
             int showdownLine = -1;
@@ -320,13 +322,13 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
             if (showdownLine != -1)
             {
-                ParseShowdown(handLines, actions, showdownLine);
+                ParseShowdown(handLines, actions, winners, showdownLine);
             }
 
             return actions;
         }
 
-        static void ParseShowdown(string[] handLines, List<HandAction> actions, int showdownLine)
+        static void ParseShowdown(string[] handLines, List<HandAction> actions, List<WinningsAction> winners, int showdownLine)
         {
             //Muckstring if you muck on showdown
             const string MuckString1 = "$(STR_G_MUCK)";
@@ -355,7 +357,7 @@ namespace HandHistories.Parser.Parsers.FastParser.BossMedia
 
                     if (amount > 0)
                     {
-                        actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                        winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
                     }
                     else
                     {

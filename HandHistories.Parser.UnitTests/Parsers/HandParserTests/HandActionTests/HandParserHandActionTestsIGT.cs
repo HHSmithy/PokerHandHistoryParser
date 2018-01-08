@@ -25,6 +25,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             }
         }
 
+        protected override List<WinningsAction> ExpectedWinnersHandActionsBasicHand
+        {
+            get { throw new NotImplementedException(); }
+        }
+
         protected override List<HandAction> ExpectedHandActionsFoldedPreflop
         {
             get
@@ -40,9 +45,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("PLAYER4", HandActionType.FOLD, 0, Street.Preflop),
 
                     new HandAction("HERO", HandActionType.UNCALLED_BET, 2.5m, Street.Preflop),
-                    new WinningsAction("HERO", HandActionType.WINS, 5m, 0),  
+                     
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("HERO", WinningsActionType.WINS, 5m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActions3BetHand
@@ -73,10 +83,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("PLAYER4", HandActionType.CHECK, 0m, Street.River),
 
                     new HandAction("PLAYER1", HandActionType.SHOW, Street.Showdown),
-                    new WinningsAction("PLAYER4", HandActionType.WINS, 1240m, 0),
                     new HandAction("PLAYER4", HandActionType.SHOW, Street.Showdown),
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActions3BetHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("PLAYER4", WinningsActionType.WINS, 1240m, 0) }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsAllInHand
@@ -102,11 +116,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("PLAYER5", HandActionType.FOLD, 0m, Street.Flop),
 
                     new HandAction("PLAYER2", HandActionType.UNCALLED_BET, 1.48m, Street.Flop),
-
-                    new WinningsAction("PLAYER2", HandActionType.WINS, 48.69m, 0),
                     new HandAction("PLAYER2", HandActionType.SHOW, Street.Showdown),
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsAllInHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("PLAYER2", WinningsActionType.WINS, 48.69m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsUncalledBetHand
@@ -120,6 +137,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             }
         }
 
+        protected override List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand
+        {
+            get { throw new NotImplementedException(); }
+        }
+
         protected override List<HandAction> ExpectedOmahaHiLoHand
         {
             get
@@ -129,6 +151,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 {  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersOmahaHiLoHand
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

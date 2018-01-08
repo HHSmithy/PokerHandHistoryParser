@@ -18,7 +18,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
         {
         }
 
-        protected void RunItTwiceTest(List<HandAction> expectedActions_Run1, List<HandAction> expectedActions_Run2, string expectedBoardString_1, string expectedBoardString_2, string name)
+        protected void RunItTwiceTest(List<HandAction> expectedActions_Run1, List<HandAction> expectedActions_Run2, List<WinningsAction> expectedWinner_Run1, List<WinningsAction> expectedWinner_Run2, string expectedBoardString_1, string expectedBoardString_2, string name)
         {
             BoardCards expectedBoard1 = BoardCards.FromCards(expectedBoardString_1);
             BoardCards expectedBoard2 = BoardCards.FromCards(expectedBoardString_2);
@@ -34,6 +34,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
 
             Assert.AreEqual(expectedActions_Run1, Run1ShowdownActions);
             Assert.AreEqual(expectedActions_Run2, actualHand.RunItTwiceData.Actions);
+
+            Assert.AreEqual(expectedWinner_Run1, actualHand.Winners);
+            Assert.AreEqual(expectedWinner_Run2, actualHand.RunItTwiceData.Winners);
         }
     }
 }

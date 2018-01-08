@@ -6,8 +6,6 @@ using System.Diagnostics;
 namespace HandHistories.Objects.Actions
 {
     [DataContract]
-    [KnownType(typeof(WinningsAction))]
-    [KnownType(typeof(AllInAction))]
     [DebuggerDisplay("{ToString()}")]
     public partial class HandAction
     {
@@ -129,12 +127,6 @@ namespace HandHistories.Objects.Actions
             {
                 case HandActionType.CALL:
                     return amount*-1;                    
-                case HandActionType.WINS:
-                    return amount;                   
-                case HandActionType.WINS_SIDE_POT:
-                    return amount;                   
-                case HandActionType.TIES:
-                    return amount;
                 case HandActionType.RAISE:
                     return amount * -1;
                 case HandActionType.ALL_IN:
@@ -153,8 +145,6 @@ namespace HandHistories.Objects.Actions
                     return amount * -1;
                 case HandActionType.ANTE:
                     return amount * -1;
-                case HandActionType.WINS_THE_LOW:
-                    return amount;
                 case HandActionType.ADDS:
                     return 0.0M; // when someone adds to their stack it doesnt effect their winnings in the hand
                 case HandActionType.CHAT:
@@ -186,18 +176,6 @@ namespace HandHistories.Objects.Actions
         public bool IsAllInAction
         {
             get { return HandActionType == HandActionType.ALL_IN; }
-        }
-
-        public bool IsWinningsAction
-        {
-            get
-            {
-                return HandActionType == HandActionType.WINS ||
-                       HandActionType == HandActionType.WINS_SIDE_POT ||
-                       HandActionType == HandActionType.TIES || 
-                       HandActionType == HandActionType.TIES_SIDE_POT ||
-                       HandActionType == HandActionType.WINS_THE_LOW;
-            }
         }
 
         public bool IsAggressiveAction

@@ -224,7 +224,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     handHistory.RunItTwiceData = ParseRunItTwice(handLines);
                 }
 
-                handHistory.HandActions = ParseHandActions(handLines, handHistory.GameDescription.GameType);
+                List<WinningsAction> winners;
+                handHistory.HandActions = ParseHandActions(handLines, handHistory.GameDescription.GameType, out winners);
+                handHistory.Winners = winners;
 
                 if (RequiresActionSorting)
                 {
@@ -251,7 +253,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresUncalledBetWinAdjustment)
                 {
-                    handHistory.HandActions = UncalledBet.FixUncalledBetWins(handHistory.HandActions);
+                    handHistory.Winners = UncalledBet.FixUncalledBetWins(handHistory.HandActions, handHistory.Winners);
                 }
 
                 //Pot calculation mus be done after uncalledBetFix
@@ -550,13 +552,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         public abstract bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled);
 
-        public List<HandAction> ParseHandActions(string handText)
+        public List<HandAction> ParseHandActions(string handText, out List<WinningsAction> winners)
         {
             try
             {
                 string[] handLines = SplitHandsLines(handText);
                 GameType gameType = ParseGameType(handLines);
-                List<HandAction> handActions = ParseHandActions(handLines, gameType);
+                List<HandAction> handActions = ParseHandActions(handLines, gameType, out winners);
 
                 if (RequiresActionSorting)
                 {
@@ -587,7 +589,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         // We pass the game-type in as it can change the actions and parsing logic
-        protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType);
+        protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners);
 
         /// <summary>
         /// Sometimes hand actions are listed out of order, but with an order number or timestamp (this happens on IPoker).

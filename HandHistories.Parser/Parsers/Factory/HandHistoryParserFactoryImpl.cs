@@ -11,7 +11,6 @@ using HandHistories.Parser.Parsers.FastParser.OnGame;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.Parsers.FastParser.Winamax;
 using HandHistories.Parser.Parsers.FastParser._888;
-using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Parsers.FastParser.BossMedia;
 using HandHistories.Parser.Parsers.FastParser.PartyPoker;

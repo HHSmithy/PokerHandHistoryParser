@@ -192,11 +192,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return true;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             const int MinimumLinesWithoutActions = 8;
             //Allocate the full list so we we dont get a reallocation for every add()
             List<HandAction> handActions = new List<HandAction>(handLines.Length - MinimumLinesWithoutActions);
+            winners = new List<WinningsAction>();
             Street currentStreet = Street.Preflop;
 
             PlayerList playerList = ParsePlayers(handLines);
@@ -267,7 +268,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 if (actionLine[0] == '*')
                 {
                     var action = ParseWinningsAction(actionLine, playerList, PlayerWithSpaces);
-                    handActions.Add(action);
+                    winners.Add(action);
                 }
             }
             return handActions;
@@ -333,14 +334,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             throw new HandActionException(line, "HandActionType: " + line);
         }
 
-        public static HandAction ParseWinningsAction(string line, PlayerList playerList, bool PlayerWithSpaces)
+        public static WinningsAction ParseWinningsAction(string line, PlayerList playerList, bool PlayerWithSpaces)
         {
             string playerName = PlayerWithSpaces ? GetWinnerNameWithSpaces(line, playerList) : GetWinnerNameWithoutSpaces(line);
             int winAmountStartIndex = line.LastIndexOfFast("cts:") + 5;
             int winAmountEndIndex = line.IndexOfFast(". ", winAmountStartIndex);
             string winString = line.Substring(winAmountStartIndex, winAmountEndIndex - winAmountStartIndex);
             decimal winAmount = winString.ParseAmount();
-            return new WinningsAction(playerName, HandActionType.WINS, winAmount, 0);
+            return new WinningsAction(playerName, WinningsActionType.WINS, winAmount, 0);
         }
 
         private int ParsePosts(string[] handLines, List<HandAction> actions, int ActionsStart)

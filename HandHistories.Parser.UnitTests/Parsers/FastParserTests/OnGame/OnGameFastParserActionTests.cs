@@ -101,30 +101,30 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
         [Test]
         public void ParseShowDownActionLine_Wins1kplus_Works()
         {
-            List<HandAction> actions = new List<HandAction>();
-            Parser.ParseShowdownActions(new string[] { "Main pot: $1,238.40 won by AHULDAHRI ($1,236.40)" }, 0, actions);
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseShowdownActions(new string[] { "Main pot: $1,238.40 won by AHULDAHRI ($1,236.40)" }, 0, winners);
 
-            Assert.AreEqual(new WinningsAction("AHULDAHRI", HandActionType.WINS, 1236.40m, 0), actions[0]);
+            Assert.AreEqual(new WinningsAction("AHULDAHRI", WinningsActionType.WINS, 1236.40m, 0), winners[0]);
         }
 
         [Test]
         public void ParseShowDownActionLine_MultipleWinners_Works()
         {
-            List<HandAction> actions = new List<HandAction>();
-            Parser.ParseShowdownActions(new string[] { "Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)" }, 0, actions);
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseShowdownActions(new string[] { "Main pot: $710.00 won by alikator21 ($354.50), McCall901 ($354.50)" }, 0, winners);
 
-            Assert.AreEqual(new WinningsAction("alikator21", HandActionType.WINS, 354.50m, 0), actions[0]);
-            Assert.AreEqual(new WinningsAction("McCall901", HandActionType.WINS, 354.50m, 0), actions[1]);
+            Assert.AreEqual(new WinningsAction("alikator21", WinningsActionType.WINS, 354.50m, 0), winners[0]);
+            Assert.AreEqual(new WinningsAction("McCall901", WinningsActionType.WINS, 354.50m, 0), winners[1]);
         }
 
         [Test]
         public void ParseShowDownActionLine_MultipleWinnersSidePot_Works()
         {
-            List<HandAction> actions = new List<HandAction>();
-            Parser.ParseShowdownActions(new string[] { "Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)" }, 0, actions);
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseShowdownActions(new string[] { "Side pot 2: $11.10 won by zatli74 ($5.20), Hurtl ($5.20)" }, 0, winners);
 
-            Assert.AreEqual(new WinningsAction("zatli74", HandActionType.WINS_SIDE_POT, 5.20m, 2), actions[0]);
-            Assert.AreEqual(new WinningsAction("Hurtl", HandActionType.WINS_SIDE_POT, 5.20m, 2), actions[1]);
+            Assert.AreEqual(new WinningsAction("zatli74", WinningsActionType.WINS_SIDE_POT, 5.20m, 2), winners[0]);
+            Assert.AreEqual(new WinningsAction("Hurtl", WinningsActionType.WINS_SIDE_POT, 5.20m, 2), winners[1]);
         }
     }
 }

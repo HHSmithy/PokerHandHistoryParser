@@ -23,7 +23,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         protected void TestBlindActions(string fileName, List<HandAction> expectedActions)
         {
             List<HandAction> actions = new List<HandAction>();
-            parser.ParseBlindActions(GetBlindTest(fileName), ref actions, 0);
+            parser.ParseBlindActions(GetBlindTest(fileName), actions, 0);
 
             Assert.AreEqual(expectedActions, actions);
         }
@@ -38,12 +38,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             return GetTest("ShowDownActionTests", name);
         }
 
-        protected void TestShowDownActions(string fileName, List<HandAction> expectedActions)
+        protected void TestShowDownActions(string fileName, List<HandAction> expectedActions, List<WinningsAction> expectedWinners)
         {
             List<HandAction> actions = new List<HandAction>();
-            parser.ParseShowDown(GetShowDownTest(fileName), ref actions, 0, GameType.Unknown);
+            List<WinningsAction> winners = new List<WinningsAction>();
+            parser.ParseShowDown(GetShowDownTest(fileName), actions, winners, 0, GameType.Unknown);
 
             Assert.AreEqual(expectedActions, actions);
+            Assert.AreEqual(expectedWinners, winners);
         }
 
         string[] GetTest(string test, string name)
@@ -57,6 +59,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         protected virtual bool BlindChatEndingWithNumberTestable { get { return false; } }
 
         protected abstract List<HandAction> ExpectedShowDownActions_Wins { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersShowDownActions_Wins { get; }
         protected virtual bool ShowDownIgnoreActionsTestable { get { return true; } }
 
         [Test]
@@ -98,7 +101,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             {
                 Assert.Ignore();
             }
-            TestShowDownActions("Wins", ExpectedShowDownActions_Wins);
+            TestShowDownActions("Wins", ExpectedShowDownActions_Wins, ExpectedWinnersShowDownActions_Wins);
         }
 
         /// <summary>
@@ -111,7 +114,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             {
                 Assert.Ignore();
             }
-            TestShowDownActions("Ignore", new List<HandAction>());
+            TestShowDownActions("Ignore", new List<HandAction>(), new List<WinningsAction>());
         }
     }
 }

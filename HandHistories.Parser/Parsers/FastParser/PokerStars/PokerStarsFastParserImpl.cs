@@ -546,23 +546,24 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return false;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             // actions take place from the last seat info until the *** SUMMARY *** line            
 
             int actionIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>(handLines.Length - actionIndex);
+            winners = new List<WinningsAction>();
 
-            actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
+            actionIndex = ParseBlindActions(handLines, handActions, actionIndex);
 
             Street currentStreet;
 
-            actionIndex = ParseGameActions(handLines, ref handActions, actionIndex, out currentStreet);
+            actionIndex = ParseGameActions(handLines, handActions, winners, actionIndex, out currentStreet);
 
             if (currentStreet == Street.Showdown)
             {
-                ParseShowDown(handLines, ref handActions, actionIndex, gameType);
+                ParseShowDown(handLines, handActions, winners, actionIndex, gameType);
             }
             
             return handActions;
@@ -589,7 +590,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         /// <param name="handActions"></param>
         /// <param name="firstActionIndex"></param>
         /// <returns>Inde xwhere HandActions will Start</returns>
-        public int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex)
+        public int ParseBlindActions(string[] handLines, List<HandAction> handActions, int firstActionIndex)
         {
             // required for distinction between smallblind/bigblind/posts 
             var smallBlind = false;
@@ -660,7 +661,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No end of posting actions");
         }
 
-        public void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int actionIndex, GameType gameType)
+        public void ParseShowDown(string[] handLines, List<HandAction> handActions, List<WinningsAction> winners, int actionIndex, GameType gameType)
         {
             for (int i = actionIndex; i < handLines.Length; i++)
             {
@@ -675,7 +676,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     case 't':
                         if (line.EndsWithFast("pot"))
                         {
-                            handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                            winners.Add(ParseCollectedLine(line, Street.Showdown));
                         }
                         continue;
                     // templargio collected €6.08 from side pot-2
@@ -697,7 +698,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         
                         if (line[line.Length - 2] == '-')
                         {
-                            handActions.Add(ParseCollectedLine(line, Street.Showdown));
+                            winners.Add(ParseCollectedLine(line, Street.Showdown));
                         }
                         continue;
 
@@ -767,7 +768,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         /// <param name="currentStreet"></param>
         /// <param name="handActions"></param>
         /// <returns>True if we have reached the end of the action block.</returns>
-        private bool ParseLine(string line, ref Street currentStreet, ref List<HandAction> handActions)
+        private bool ParseLine(string line, ref Street currentStreet, List<HandAction> handActions, List<WinningsAction> winners)
         {
             //We filter out only possible line endings we want
             char lastChar = line[line.Length - 1];
@@ -849,7 +850,6 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int colonIndex = line.LastIndexOf(':'); // do backwards as players can have : in their name
 
-            HandAction handAction;
             switch (currentStreet)
             {
                 case Street.Showdown:
@@ -859,7 +859,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 default:
                     if (colonIndex > -1 && line[line.Length-1] != 't')
                     {
-                        handAction = ParseRegularActionLine(line, colonIndex, currentStreet);
+                        handActions.Add(ParseRegularActionLine(line, colonIndex, currentStreet));
                     }
                     else
                     {
@@ -868,13 +868,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                             return false;
                         }
 
-                        handAction = ParseCollectedLine(line, Street.Showdown);
+                        winners.Add(ParseCollectedLine(line, Street.Showdown));
                     }
 
                     break;
             }
-
-            handActions.Add(handAction);
 
             return false;
         }
@@ -1074,17 +1072,17 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             return new HandAction(playerName, actionType, amount, currentStreet, isAllIn);
         }
 
-        public HandAction ParseCollectedLine(string actionLine, Street currentStreet)
+        public WinningsAction ParseCollectedLine(string actionLine, Street currentStreet)
         {
             // 0 = main pot
             int potNumber = 0;
-            HandActionType handActionType = HandActionType.WINS;
+            WinningsActionType handActionType = WinningsActionType.WINS;
 
             // check for side pot lines like
             //  CinderellaBD collected $7 from side pot-2
             if (actionLine[actionLine.Length - 2] == '-')
             {
-                handActionType = HandActionType.WINS_SIDE_POT;
+                handActionType = WinningsActionType.WINS_SIDE_POT;
                 potNumber = Int32.Parse(actionLine[actionLine.Length - 1].ToString());
                 // This removes the ' from side pot-2' from the line
                 actionLine = actionLine.Substring(0, actionLine.Length - 16);
@@ -1094,7 +1092,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             else if (actionLine[actionLine.Length - 8] == 's')
             {
                 potNumber = 1;
-                handActionType = HandActionType.WINS_SIDE_POT;
+                handActionType = WinningsActionType.WINS_SIDE_POT;
                 // This removes the ' from side pot' from the line
                 actionLine = actionLine.Substring(0, actionLine.Length - 14);
             }
@@ -1499,13 +1497,13 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                 }
             }
 
-            ParseShowDown(handLines, ref rit.Actions, secondShowDownIndex, GameType.Unknown);
+            ParseShowDown(handLines, rit.Actions, rit.Winners, secondShowDownIndex, GameType.Unknown);
 
             return rit;
         }
 
 
-        public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street currentStreet)
+        public int ParseGameActions(string[] handLines, List<HandAction> handActions, List<WinningsAction> winners, int firstActionIndex, out Street currentStreet)
         {
             currentStreet = Street.Preflop;
 
@@ -1515,7 +1513,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                 try
                 {
-                    bool isFinished = ParseLine(handLine, ref currentStreet, ref handActions);
+                    bool isFinished = ParseLine(handLine, ref currentStreet, handActions, winners);
 
                     if (isFinished)
                     {

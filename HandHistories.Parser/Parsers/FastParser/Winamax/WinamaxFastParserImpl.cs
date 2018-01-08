@@ -300,9 +300,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             var handActions = new List<HandAction>();
+            winners = new List<WinningsAction>();
+
             var currentStreet = Street.Preflop;
             decimal smallBlindValue;
 
@@ -400,7 +402,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winamax
 
                             string name = GetPlayerNameFromHandLine(line);
 
-                            handActions.Add(new WinningsAction(name, HandActionType.WINS, amount, 0));
+                            winners.Add(new WinningsAction(name, WinningsActionType.WINS, amount, 0));
                         }
                     }
 

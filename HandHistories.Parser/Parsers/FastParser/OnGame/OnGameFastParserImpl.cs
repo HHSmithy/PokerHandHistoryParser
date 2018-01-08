@@ -391,7 +391,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             // this is needed for future uncalledbet fixes
             var handHistory = new HandHistory();
@@ -400,6 +400,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             int actionsIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>();
+            winners = new List<WinningsAction>();
             Street currentStreet = Street.Preflop;
 
             actionsIndex = ParseBlindActions(handLines, handActions, actionsIndex);
@@ -468,7 +469,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             }
             if (currentStreet == Street.Showdown)
             {
-                ParseShowdownActions(handLines, actionsIndex, handActions);
+                ParseShowdownActions(handLines, actionsIndex, winners);
             }
 
             return handActions;
@@ -489,7 +490,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
             throw new HandActionException(string.Join(Environment.NewLine, handLines), "No cards was dealt");
         }
 
-        public static void ParseShowdownActions(string[] handLines, int actionsIndex, List<HandAction> handActions)
+        public static void ParseShowdownActions(string[] handLines, int actionsIndex, List<WinningsAction> winners)
         {
             for (int i = actionsIndex; i < handLines.Length; i++)
             {
@@ -505,9 +506,6 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
                 if (line.StartsWithFast("Main pot:"))
                 {
                     var nameStart = line.IndexOfFast(" won by") + 7;
-                    string winners = line.Substring(nameStart);
-
-
                     var splitted = line.Substring(nameStart).Split(')');
                     foreach (var winner in splitted.Where(p => !string.IsNullOrWhiteSpace(p)))
                     {
@@ -517,7 +515,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                         string playerName = winner.Substring(1, openParenIndex - 2).Trim();
 
-                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                        winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
                     }
                 }
                 // Side pot 1: $12.26 won by iplaymybest ($11.65)
@@ -536,7 +534,7 @@ namespace HandHistories.Parser.Parsers.FastParser.OnGame
 
                         string playerName = winner.Substring(1, openParenIndex - 2).Trim();
 
-                        handActions.Add(new WinningsAction(playerName, HandActionType.WINS_SIDE_POT, amount, potNumber));
+                        winners.Add(new WinningsAction(playerName, WinningsActionType.WINS_SIDE_POT, amount, potNumber));
                     }
                 }
             }

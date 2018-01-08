@@ -114,9 +114,13 @@ namespace HandHistories.Parser.Parsers.JSONParser.Base
 
         protected abstract List<HandAction> ParseHandActions(JObject JSON);
 
-        public List<HandAction> ParseHandActions(string handText)
+        protected abstract List<WinningsAction> ParseWinners(JObject JSON);
+
+        public List<HandAction> ParseHandActions(string handText, out List<WinningsAction> winners)
         {
-            return AdjustHandActions(ParseHandActions(GetJSONObject(handText)));
+            var JSON = GetJSONObject(handText);
+            winners = ParseWinners(JSON);
+            return AdjustHandActions(ParseHandActions(JSON));
         }
 
         protected virtual List<HandAction> AdjustHandActions(List<HandAction> actions)

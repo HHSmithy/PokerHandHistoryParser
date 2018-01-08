@@ -21,7 +21,7 @@ namespace HandHistories.Parser.Utils.Uncalled
                 return handActions;
             }
 
-            var realActions = handActions.Where(a => a.IsGameAction && !a.IsWinningsAction && a.HandActionType != HandActionType.FOLD).ToList();
+            var realActions = handActions.Where(a => a.IsGameAction && a.HandActionType != HandActionType.FOLD).ToList();
 
             var lastAction = realActions[realActions.Count - 1];
 
@@ -74,19 +74,19 @@ namespace HandHistories.Parser.Utils.Uncalled
         /// </summary>
         /// <param name="handActions"></param>
         /// <returns></returns>
-        public static List<HandAction> FixUncalledBetWins(List<HandAction> handActions)
+        public static List<WinningsAction> FixUncalledBetWins(List<HandAction> handActions, List<WinningsAction> winners)
         {
             var uncalled = handActions.FirstOrDefault(p => p.HandActionType == HandActionType.UNCALLED_BET);
             if (uncalled != null)
             {
-                var winner = handActions.FirstOrDefault(p => p.IsWinningsAction && p.PlayerName == uncalled.PlayerName);
+                var winner = winners.FirstOrDefault(p => p.PlayerName == uncalled.PlayerName);
 
                 if (winner != null)
                 {
                     winner.DecreaseAmount(uncalled.Absolute);
                 }
             }
-            return handActions;
+            return winners;
         }
 
         private static HandAction GetPartiallyUncalledRaise(List<HandAction> realActions)

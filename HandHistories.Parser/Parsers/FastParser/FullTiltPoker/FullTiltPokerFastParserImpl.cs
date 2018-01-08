@@ -311,13 +311,14 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             var actions = new List<HandAction>(handLines.Length);
+            winners = new List<WinningsAction>();
             // TODO: implement
             int startIndex = FindHandActionsStart(handLines);
 
-            startIndex = ParseBlindActions(handLines, ref actions, startIndex);
+            startIndex = ParseBlindActions(handLines, actions, startIndex);
 
             Street currentStreet = Street.Preflop;
 
@@ -333,13 +334,13 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                 if (IsUncalledBetLine(line))
                 {
                     actions.Add(ParseUncalledBet(line, currentStreet));
-                    ParseShowDown(handLines, ref actions, i + 1, gameType);
+                    ParseShowDown(handLines, actions, winners, i + 1, gameType);
                     return actions;
                 }
 
                 if (line.Contains(" shows ["))
                 {
-                    ParseShowDown(handLines, ref actions, i, GameType.Unknown);
+                    ParseShowDown(handLines, actions, winners, i, GameType.Unknown);
 
                     return actions;
                 }
@@ -381,10 +382,10 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         continue;
 
                     case ')':
-                        action = ParseWinActionOrStreet(line, ref currentStreet);
-                        if (action != null)
+                        var winaction = ParseWinActionOrStreet(line, ref currentStreet);
+                        if (winaction != null)
                         {
-                            actions.Add(action);
+                            winners.Add(winaction);
                         }
                         break;
 
@@ -414,7 +415,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     //*** SHOW DOWN ***
                     //*** SUMMARY ***
                     case '*':
-                        ParseShowDown(handLines, ref actions, i, GameType.Unknown);
+                        ParseShowDown(handLines, actions, winners, i, GameType.Unknown);
 
                         return actions;
 
@@ -423,7 +424,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     case ']':
                         if (line.IndexOfFast(" shows [") != -1)
                         {
-                            ParseShowDown(handLines, ref actions, i, GameType.Unknown);
+                            ParseShowDown(handLines, actions, winners, i, GameType.Unknown);
                             return actions;
                         }
                         continue;
@@ -432,7 +433,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                         if (line == "Players agree to Run It Twice")
                         {
                             i++;
-                            ParseRunItTwiceShowDown_Run1(handLines, ref actions, i);
+                            ParseRunItTwiceShowDown_Run1(handLines, actions, winners, i);
                             return actions;
                         }
                         continue;
@@ -465,7 +466,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return true;
         }
 
-        public static void ParseRunItTwiceShowDown_Run1(string[] handLines, ref List<HandAction> actions, int lineIndex)
+        public static void ParseRunItTwiceShowDown_Run1(string[] handLines, List<HandAction> actions, List<WinningsAction> winners, int lineIndex)
         {
             for (int i = lineIndex; i < handLines.Length; i++)
             {
@@ -495,12 +496,12 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
                     decimal amount = ParseAmount(amountString);
 
-                    actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
                 }
             }
         }
 
-        public void ParseShowDown(string[] handLines, ref List<HandAction> actions, int lineIndex, GameType gametype)
+        public void ParseShowDown(string[] handLines, List<HandAction> actions, List<WinningsAction> winners, int lineIndex, GameType gametype)
         {
             for (int i = lineIndex; i < handLines.Length; i++)
             {
@@ -542,7 +543,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
                     decimal amount = ParseAmount(amountString);
 
-                    actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
                 }
                 else if (line.Contains(" shows ["))
                 {
@@ -579,7 +580,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return null;
         }
 
-        static HandAction ParseWinActionOrStreet(string line, ref Street currentStreet)
+        static WinningsAction ParseWinActionOrStreet(string line, ref Street currentStreet)
         {
             char idChar = line[line.Length - 2];
 
@@ -611,7 +612,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             }
         }
 
-        static HandAction ParseWinAction(string line)
+        static WinningsAction ParseWinAction(string line)
         {
             int amountStartIndex = line.IndexOf(NumberFormatInfo.CurrencySymbol, StringComparison.Ordinal);
             string amountString = line.Substring(amountStartIndex, line.Length - amountStartIndex - 1);
@@ -620,7 +621,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
 
             string playerName = line.Remove(amountStartIndex - 15); //" wins the pot (".Length
 
-            return new WinningsAction(playerName, HandActionType.WINS, amount, 0);
+            return new WinningsAction(playerName, WinningsActionType.WINS, amount, 0);
         }
 
         static Street ParseStreet(string line)
@@ -750,7 +751,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
             return null;
         }
 
-        public int ParseBlindActions(string[] handLines, ref List<HandAction> actions, int startIndex)
+        public int ParseBlindActions(string[] handLines, List<HandAction> actions, int startIndex)
         {
             for (int i = startIndex; i < handLines.Length; i++)
             {
@@ -1206,7 +1207,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
                     string amountString = line.Substring(amountStartIndex, amountEndString - amountStartIndex);
                     decimal amount = decimal.Parse(amountString, NumberFormatInfo);
 
-                    RIT.Actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                    RIT.Winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
                 }
             }
 
@@ -1230,7 +1231,7 @@ namespace HandHistories.Parser.Parsers.FastParser.FullTiltPoker
         }
 
 
-        public int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street street)
+        public int ParseGameActions(string[] handLines, List<HandAction> handActions, List<WinningsAction> winners, int firstActionIndex, out Street street)
         {
             throw new NotImplementedException();
         }

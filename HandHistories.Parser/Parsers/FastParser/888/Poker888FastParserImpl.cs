@@ -255,12 +255,12 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             int actionIndex = GetFirstActionIndex(handLines);
 
             List<HandAction> handActions = new List<HandAction>(handLines.Length - actionIndex);
-
+            winners = new List<WinningsAction>();
             actionIndex = ParseBlindActions(handLines, ref handActions, actionIndex);
 
             Street currentStreet = Street.Preflop;
@@ -317,11 +317,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         continue;
                     }
 
-                    var action = ParseShowdownActionLine(line);
-                    if (action != null)
-                    {
-                        handActions.Add(action);
-                    }
+                    ParseShowdownActionLine(line, handActions, winners);
                 }
             }
             
@@ -341,7 +337,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             return bracketStr.IndexOfAny(suits) != -1;
         }
 
-        public static HandAction ParseShowdownActionLine(string line)
+        public static void ParseShowdownActionLine(string line, List<HandAction> actions, List<WinningsAction> winners)
         {
             int openSquareIndex = line.LastIndexOf('[');
 
@@ -355,19 +351,22 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 string playerName = line.Substring(0, openSquareIndex - 11);
 
-                return new WinningsAction(playerName, HandActionType.WINS, amount, 0);
+                winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
+                return;
             }
 
             string action = line.Substring(openSquareIndex - 6, 5);
             if (action.Equals("shows"))
             {
                 string playerName = line.Substring(0, openSquareIndex - 7);
-                return new HandAction(playerName, HandActionType.SHOW, 0, Street.Showdown);
+                actions.Add(new HandAction(playerName, HandActionType.SHOW, 0, Street.Showdown));
+                return;
             }
             else if (action.Equals("mucks"))
             {
                 string playerName = line.Substring(0, openSquareIndex - 7);
-                return new HandAction(playerName, HandActionType.MUCKS, 0, Street.Showdown);
+                actions.Add(new HandAction(playerName, HandActionType.MUCKS, 0, Street.Showdown));
+                return;
             }
 
             throw new HandActionException(line, "Unparsed");

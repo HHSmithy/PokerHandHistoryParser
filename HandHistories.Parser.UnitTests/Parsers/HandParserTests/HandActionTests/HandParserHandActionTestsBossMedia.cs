@@ -38,11 +38,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("Player8", HandActionType.RAISE, 5000m, Street.Preflop),
                 new HandAction("Player1", HandActionType.FOLD, Street.Preflop),
                 new HandAction("Player2", HandActionType.FOLD, Street.Preflop),
-
-                new WinningsAction("Player8", HandActionType.WINS, 5800, 0)
             };
 
-            TestParseActions("Ante", expectedActions);
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Player8", WinningsActionType.WINS, 5800, 0)
+            };
+
+            TestParseActions("Ante", expectedActions, expectedWinners);
         }
 
         protected override List<HandAction> ExpectedHandActionsBasicHand
@@ -71,10 +74,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("1Mentalist", HandActionType.BET, 22.50m, Street.River),                  
                     new HandAction("ItalyToast", HandActionType.FOLD, 0, Street.River),
                     new HandAction("slejpner", HandActionType.FOLD,0, Street.River),
-
-                    new WinningsAction("1Mentalist", HandActionType.WINS, 29.26m, 0),  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsBasicHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("1Mentalist", WinningsActionType.WINS, 29.26m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsFoldedPreflop
@@ -88,10 +94,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                     new HandAction("ItalyToast", HandActionType.RAISE, 300, Street.Preflop),
                     new HandAction("ToyBoy66", HandActionType.FOLD, 0, Street.Preflop),
-
-                    new WinningsAction("ItalyToast", HandActionType.WINS, 400m, 0),  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("ItalyToast", WinningsActionType.WINS, 400m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActions3BetHand
@@ -113,10 +122,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Phyre", HandActionType.CHECK, 0m, Street.Flop),
                     new HandAction("Supervic", HandActionType.BET, 2200m, Street.Flop),
                     new HandAction("Phyre", HandActionType.FOLD, 0m, Street.Flop),
-
-                    new WinningsAction("Supervic", HandActionType.WINS, 2985m, 0)
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActions3BetHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("Supervic", WinningsActionType.WINS, 2985m, 0) }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsAllInHand
@@ -139,9 +151,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                     new HandAction("ItalyToast", HandActionType.MUCKS, Street.Showdown),
                     new HandAction("SAMERRRR", HandActionType.SHOW, Street.Showdown),
-                    new WinningsAction("SAMERRRR", HandActionType.WINS, 17555m, 0),  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsAllInHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("SAMERRRR", WinningsActionType.WINS, 17555m, 0) }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsUncalledBetHand
@@ -162,10 +178,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     new HandAction("Player2", HandActionType.BET, 200m, Street.Flop),
                     new HandAction("Player3", HandActionType.FOLD, 0m, Street.Flop),
                     new HandAction("Player1", HandActionType.FOLD, 0m, Street.Flop),
-
-                    new WinningsAction("Player2", HandActionType.WINS, 329.07m, 0),  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("Player2", WinningsActionType.WINS, 329.07m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedOmahaHiLoHand
@@ -193,10 +212,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                     new HandAction("ItalyToast", HandActionType.BET, 82m, Street.River),
                     new HandAction("Hannes_nr1", HandActionType.FOLD, 0m, Street.River),
-
-                    new WinningsAction("ItalyToast", HandActionType.WINS, 105.08m, 0),  
                 };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersOmahaHiLoHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("ItalyToast", WinningsActionType.WINS, 105.08m, 0), }; }
         }
 
         [TestCase]
@@ -222,11 +244,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("HERO", HandActionType.CALL, 2575.02m, Street.Turn, true),
 
                 new HandAction("Player1", HandActionType.SHOW, Street.Showdown),
-                new WinningsAction("Player1", HandActionType.WINS, 8285.04m, 0),
+                
                 new HandAction("HERO", HandActionType.MUCKS, Street.Showdown),
             };
 
-            TestParseActions("CallAllInHand", actions);
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Player1", WinningsActionType.WINS, 8285.04m, 0),
+            };
+
+            TestParseActions("CallAllInHand", actions, expectedWinners);
         }
     }
 }

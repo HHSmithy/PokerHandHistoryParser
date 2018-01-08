@@ -547,9 +547,10 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> actions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             int startRow = GetRoundStart(handLines);// offset + playerLines.Length + 2;
 
@@ -594,7 +595,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
 
             //Generate the show card + winnings actions
-            actions.AddRange(GetWinningAndShowCardActions(handLines, actions));
+            actions.AddRange(GetWinningAndShowCardActions(handLines, actions, winners));
 
             // we need to fix dead money postings at the end
             return FixDeadMoneyPosting(actions);
@@ -668,7 +669,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             }
         }
 
-        private List<HandAction> GetWinningAndShowCardActions(string[] handLines, List<HandAction> actions)
+        private List<HandAction> GetWinningAndShowCardActions(string[] handLines, List<HandAction> actions, List<WinningsAction> winners)
         {
             int actionNumber = Int32.MaxValue - 100;
 
@@ -699,8 +700,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 if (winnings > 0)
                 {
                     string playerName = GetNameFromPlayerLine(playerLine);
-                    WinningsAction winningsAction = new WinningsAction(playerName, HandActionType.WINS, winnings, 0, actionNumber++);
-                    winningAndShowCardActions.Add(winningsAction);
+                    WinningsAction winningsAction = new WinningsAction(playerName, WinningsActionType.WINS, winnings, 0);
+                    winners.Add(winningsAction);
                 }
             }
 

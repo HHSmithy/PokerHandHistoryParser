@@ -60,63 +60,77 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PartyPoker
         public void ParseRegularActionLine_Bet_Works()
         {
             Street street = Street.Flop;
-            HandAction handAction = Parser.ParseRegularActionLine("dr. spaz bets [$1.10 USD]", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("dr. spaz bets [$1.10 USD]", ref street, actions, winners);
 
-            Assert.AreEqual(new HandAction("dr. spaz", HandActionType.BET, 1.1m, Street.Flop), handAction);
+            Assert.AreEqual(new HandAction("dr. spaz", HandActionType.BET, 1.1m, Street.Flop), actions[0]);
         }
 
         [Test]
         public void ParseRegularActionLine_Check_Works()
         {
             Street street = Street.Flop;
-            HandAction handAction = Parser.ParseRegularActionLine("jott1982 checks", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("jott1982 checks", ref street, actions, winners);
 
-            Assert.AreEqual(new HandAction("jott1982", HandActionType.CHECK, 0m, Street.Flop), handAction);
+            Assert.AreEqual(new HandAction("jott1982", HandActionType.CHECK, 0m, Street.Flop), actions[0]);
         }
 
         [Test]
         public void ParseRegularActionLine_Call_Works()
         {
             Street street = Street.Preflop;
-            HandAction handAction = Parser.ParseRegularActionLine("TYRANNOMAN1 calls [$1.10 USD]", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+           Parser.ParseRegularActionLine("TYRANNOMAN1 calls [$1.10 USD]", ref street, actions, winners);
 
-            Assert.AreEqual(new HandAction("TYRANNOMAN1", HandActionType.CALL, 1.1m, Street.Preflop), handAction);
+           Assert.AreEqual(new HandAction("TYRANNOMAN1", HandActionType.CALL, 1.1m, Street.Preflop), actions[0]);
         }
 
         [Test]
         public void ParseRegularActionLine_Raise_Works()
         {
             Street street = Street.Preflop;
-            HandAction handAction = Parser.ParseRegularActionLine("Kelevra_91 raises [$0.25 USD]", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("Kelevra_91 raises [$0.25 USD]", ref street, actions, winners);
 
-            Assert.AreEqual(new HandAction("Kelevra_91", HandActionType.RAISE, 0.25m, Street.Preflop), handAction);
+            Assert.AreEqual(new HandAction("Kelevra_91", HandActionType.RAISE, 0.25m, Street.Preflop), actions[0]);
         }
 
         [Test]
         public void ParseRegularActionLine_Fold_Works()
         {
             Street street = Street.Preflop;
-            HandAction handAction = Parser.ParseRegularActionLine("hulkhoden1969 folds", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("hulkhoden1969 folds", ref street, actions, winners);
 
-            Assert.AreEqual(new HandAction("hulkhoden1969", HandActionType.FOLD, 0m, Street.Preflop), handAction);
+            Assert.AreEqual(new HandAction("hulkhoden1969", HandActionType.FOLD, 0m, Street.Preflop), actions[0]);
         }
 
         [Test]
         public void ParseRegularActionLine_Wins_Works()
         {
             Street street = Street.Preflop;
-            HandAction handAction = Parser.ParseRegularActionLine("Player wins $5.18 USD", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("Player wins $5.18 USD", ref street, actions, winners);
 
-            Assert.AreEqual(new WinningsAction("Player", HandActionType.WINS, 5.18m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("Player", WinningsActionType.WINS, 5.18m, 0), winners[0]);
         }
         
         [Test]
         public void ParseRegularActionLine_WinsTournament_Works()
         {
             Street street = Street.Preflop;
-            HandAction handAction = Parser.ParseRegularActionLine("saboniiplz wins 28,304 chips", ref street);
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseRegularActionLine("saboniiplz wins 28,304 chips", ref street, actions, winners);
 
-            Assert.AreEqual(new WinningsAction("saboniiplz", HandActionType.WINS, 28304m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("saboniiplz", WinningsActionType.WINS, 28304m, 0), winners[0]);
         }
     }
 }

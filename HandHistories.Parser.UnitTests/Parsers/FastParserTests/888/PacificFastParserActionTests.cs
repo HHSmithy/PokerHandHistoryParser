@@ -145,17 +145,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.Pacific
         [Test]
         public void ParseShowdownActionLine_Wins_Works()
         {
-            HandAction handAction = Parser.ParseShowdownActionLine("dbhbrb collected [ $2.50 ]");
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseShowdownActionLine("dbhbrb collected [ $2.50 ]", actions, winners);
 
-            Assert.AreEqual(new WinningsAction("dbhbrb", HandActionType.WINS, 2.5m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("dbhbrb", WinningsActionType.WINS, 2.5m, 0), winners[0]);
         }
 
         [Test]
         public void ParseShowdownActionLine_Wins2_Works()
         {
-            HandAction handAction = Parser.ParseShowdownActionLine("dbhbrb collected [ 2 $ ]");
+            List<HandAction> actions = new List<HandAction>();
+            List<WinningsAction> winners = new List<WinningsAction>();
+            Parser.ParseShowdownActionLine("dbhbrb collected [ 2 $ ]", actions, winners);
 
-            Assert.AreEqual(new WinningsAction("dbhbrb", HandActionType.WINS, 2m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("dbhbrb", WinningsActionType.WINS, 2m, 0), winners[0]);
         }
     }
 }

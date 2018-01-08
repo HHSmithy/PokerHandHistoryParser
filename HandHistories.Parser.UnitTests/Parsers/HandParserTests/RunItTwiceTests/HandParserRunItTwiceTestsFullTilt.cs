@@ -26,17 +26,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
             {
                 new HandAction("1mperial", HandActionType.SHOW, Street.Showdown),
                 new HandAction("Darkking_pt", HandActionType.SHOW, Street.Showdown),
-                new WinningsAction("Darkking_pt", HandActionType.WINS, 311m, 0),
+            };
+
+            var expectedWinners1 = new List<WinningsAction>()
+            {
+                new WinningsAction("Darkking_pt", WinningsActionType.WINS, 311m, 0),
             };
 
             var expectedRun2 = new List<HandAction>()
             {
                 new HandAction("1mperial", HandActionType.SHOW, Street.Showdown),
                 new HandAction("Darkking_pt", HandActionType.SHOW, Street.Showdown),
-                new WinningsAction("1mperial", HandActionType.WINS, 311m, 0),
             };
 
-            RunItTwiceTest(expectedRun1, expectedRun2, "Td 3d 3h Qh Ac", "Td 3d 3h Qh 2h", "RunItTwice1");
+            var expectedWinners2 = new List<WinningsAction>()
+            {
+                new WinningsAction("1mperial", WinningsActionType.WINS, 311m, 0),
+            };
+
+            RunItTwiceTest(expectedRun1, expectedRun2, expectedWinners1, expectedWinners2, "Td 3d 3h Qh Ac", "Td 3d 3h Qh 2h", "RunItTwice1");
         }
     }
 }

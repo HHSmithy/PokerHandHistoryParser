@@ -174,9 +174,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> handActions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             Street currentStreet = Street.Null;
 
@@ -223,7 +224,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                     name = handLine.Substring(0, firstSpaceIndexOf);
                     amount = decimal.Parse(handLine.Substring(lastSpaceIndex + 1, handLine.Length - lastSpaceIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
 
-                    handActions.Add(new WinningsAction(name, HandActionType.WINS, amount, 0));
+                    winners.Add(new WinningsAction(name, WinningsActionType.WINS, amount, 0));
                     continue;
                 }
 

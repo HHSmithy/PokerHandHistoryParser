@@ -34,11 +34,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("HERO", HandActionType.SHOW, 0, Street.Showdown),
                 new HandAction("Player7", HandActionType.SHOW, 0, Street.Showdown),
                 new HandAction("HERO", HandActionType.SHOW, 0, Street.Showdown),
-                new WinningsAction("HERO", HandActionType.WINS, 20m, 0),
-                new WinningsAction("Player7", HandActionType.WINS, 30m, 0), 
             };
 
-            TestParseActions("SBisAllin", actions);
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("HERO", WinningsActionType.WINS, 20m, 0),
+                new WinningsAction("Player7", WinningsActionType.WINS, 30m, 0), 
+            };
+
+            TestParseActions("SBisAllin", actions, expectedWinners);
         }
 
          protected override List<HandAction> ExpectedHandActionsBasicHand
@@ -50,6 +54,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              }
          }
 
+         protected override List<WinningsAction> ExpectedWinnersHandActionsBasicHand
+         {
+             get { throw new NotImplementedException(); }
+         }
+
          protected override List<HandAction> ExpectedHandActionsFoldedPreflop
          {
              get
@@ -57,6 +66,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                  Assert.Ignore();
                  throw new NotImplementedException();
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop
+         {
+             get { throw new NotImplementedException(); }
          }
 
          protected override List<HandAction> ExpectedHandActions3BetHand
@@ -68,6 +82,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              }
          }
 
+         protected override List<WinningsAction> ExpectedWinnersHandActions3BetHand
+         {
+             get { throw new NotImplementedException(); }
+         }
+
          protected override List<HandAction> ExpectedHandActionsAllInHand
          {
              get
@@ -75,6 +94,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                  Assert.Ignore();
                  throw new NotImplementedException();
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActionsAllInHand
+         {
+             get { throw new NotImplementedException(); }
          }
 
          protected override List<HandAction> ExpectedHandActionsUncalledBetHand
@@ -86,6 +110,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              }
          }
 
+         protected override List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand
+         {
+             get { throw new NotImplementedException(); }
+         }
+
          protected override List<HandAction> ExpectedOmahaHiLoHand
          {
              get
@@ -93,6 +122,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                  Assert.Ignore();
                  throw new NotImplementedException();
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersOmahaHiLoHand
+         {
+             get { throw new NotImplementedException(); }
          }
     }
 }

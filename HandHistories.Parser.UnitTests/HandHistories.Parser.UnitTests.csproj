@@ -1534,9 +1534,6 @@
     <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\FoldedPreflop.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\OmahaHiLo.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="SampleHandHistories\Winamax\CashGame\HandActionTests\PostingDead.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

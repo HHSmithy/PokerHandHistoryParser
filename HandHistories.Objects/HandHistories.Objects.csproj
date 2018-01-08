@@ -69,6 +69,7 @@
     <Compile Include="Actions\HandAction.Statics.cs" />
     <Compile Include="Actions\HandActionType.cs" />
     <Compile Include="Actions\WinningsAction.cs" />
+    <Compile Include="Actions\WinningsActionType.cs" />
     <Compile Include="Cards\BoardCards.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\Card.Statics.cs" />

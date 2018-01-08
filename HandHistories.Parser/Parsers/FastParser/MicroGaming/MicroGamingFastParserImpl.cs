@@ -376,9 +376,10 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
             return true;
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             var actions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             PlayerList playerList = ParsePlayers(handLines, false);
 
@@ -420,7 +421,7 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                         continue;
 
                     case "win":
-                        actions.AddRange(ParseWinActions(handLines, ref i, playerList));
+                        winners.AddRange(ParseWinActions(handLines, ref i, playerList));
                         continue;
 
                     default:
@@ -439,9 +440,9 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
 
         }
 
-        private IEnumerable<HandAction> ParseWinActions(string[] handLines, ref int index, PlayerList players)
+        private IEnumerable<WinningsAction> ParseWinActions(string[] handLines, ref int index, PlayerList players)
         {
-            List<HandAction> actions = new List<HandAction>();
+            var winners = new List<WinningsAction>();
             for (int i = index + 1; i < handLines.Length; i++)
             {
                 string line = handLines[i];
@@ -449,14 +450,14 @@ namespace HandHistories.Parser.Parsers.FastParser.MicroGaming
                 if (line.StartsWithFast("</"))
                 {
                     index = i + 1;
-                    return actions;
+                    return winners;
                 }
 
                 var amount = GetAmountFromActionLine(line);
                 int seat = GetSeatNumberFromPlayerLine(line);
                 string playerName = players.First(p => p.SeatNumber == seat).PlayerName;
 
-                actions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
+                winners.Add(new WinningsAction(playerName, WinningsActionType.WINS, amount, 0));
             }
 
             throw new ArgumentOutOfRangeException("WinActions");

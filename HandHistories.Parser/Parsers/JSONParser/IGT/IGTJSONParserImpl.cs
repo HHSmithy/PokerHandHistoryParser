@@ -124,12 +124,6 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             foreach (var resultJSON in showdownJSON["result"])
             {
                 string name = resultJSON["player"].ToString();
-                var winAmount = resultJSON["win"].Value<decimal>();
-                if (winAmount > 0)
-                {
-                    actions.Add(new WinningsAction(name, HandActionType.WINS, winAmount, 0));
-                }
-
                 var cards = resultJSON["card"];
                 if (cards.Count() != 0)
                 {
@@ -138,6 +132,25 @@ namespace HandHistories.Parser.Parsers.JSONParser.IGT
             }
 
             return actions;
+        }
+
+        protected override List<WinningsAction> ParseWinners(JObject handJSON)
+        {
+            //Parse Winners & Shows/Mucks
+            List<WinningsAction> winners = new List<WinningsAction>();
+
+            var showdownJSON = handJSON["history"][0]["showDown"];
+            foreach (var resultJSON in showdownJSON["result"])
+            {
+                string name = resultJSON["player"].ToString();
+                var winAmount = resultJSON["win"].Value<decimal>();
+                if (winAmount > 0)
+                {
+                    winners.Add(new WinningsAction(name, WinningsActionType.WINS, winAmount, 0));
+                }
+            }
+
+            return winners;
         }
 
         private HandAction ParseAllInAction(JToken action, List<HandAction> actions, Street currentStreet)

@@ -26,10 +26,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 new HandAction("Player3", HandActionType.FOLD, 0m, Street.Preflop),
                 new HandAction("Player1", HandActionType.CALL, 2m, Street.Preflop),
                 new HandAction("Player2", HandActionType.FOLD, 0m, Street.Preflop),
-                new WinningsAction("Player1", HandActionType.WINS, 8m, 0),
+               
              };
 
-             TestParseActions("DealingCardsMissing", expectedActions);
+             var expectedWinners = new List<WinningsAction>()
+             {
+                  new WinningsAction("Player1", WinningsActionType.WINS, 8m, 0),
+             };
+
+             TestParseActions("DealingCardsMissing", expectedActions, expectedWinners);
          }
 
          [Test]
@@ -52,10 +57,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                 new HandAction("Player1", HandActionType.SHOW, 0m, Street.Showdown),
                 new HandAction("Player2", HandActionType.SHOW, 0m, Street.Showdown),
-                new WinningsAction("Player2", HandActionType.WINS, 4044m, 0),
              };
 
-             TestParseActions("DealingCardsMissing2", expectedActions);
+             var expectedWinners = new List<WinningsAction>()
+             {
+                  new WinningsAction("Player2", WinningsActionType.WINS, 4044m, 0),
+             };
+
+             TestParseActions("DealingCardsMissing2", expectedActions, expectedWinners);
          }
 
          [Test]
@@ -84,11 +93,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
                 new HandAction("whoisdrew", HandActionType.SHOW, Street.Showdown),
                 new HandAction("GYAMEPRO", HandActionType.SHOW, Street.Showdown),
-
-                new WinningsAction("GYAMEPRO", HandActionType.WINS, 5.70m, 0),   
              };
 
-             TestParseActions("PostingDead", expected);
+             var expectedWinners = new List<WinningsAction>()
+             {
+                  new WinningsAction("GYAMEPRO", WinningsActionType.WINS, 5.70m, 0),
+             };
+
+             TestParseActions("PostingDead", expected, expectedWinners);
          }
 
          // due to our uncalledbetfix, we have an action that is not visible in the handhistories
@@ -106,9 +118,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("silas_tomkyn", HandActionType.CHECK, 0m, Street.Flop),
                                new HandAction("FCSM_1935", HandActionType.BET, 0.1m, Street.Flop),
                                new HandAction("silas_tomkyn", HandActionType.FOLD, 0m, Street.Flop),
-                               new WinningsAction("FCSM_1935", HandActionType.WINS, 0.19m, 0),
+                               
                            };
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActionsBasicHand
+         {
+             get { return new List<WinningsAction>() { new WinningsAction("FCSM_1935", WinningsActionType.WINS, 0.19m, 0), }; }
          }
 
          protected override List<HandAction> ExpectedHandActionsFoldedPreflop
@@ -123,9 +140,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("dbhbrb", HandActionType.RAISE, 2m, Street.Preflop),
                                new HandAction("Lesnik444", HandActionType.FOLD, 0m, Street.Preflop),
                                new HandAction("Griini", HandActionType.FOLD, 0m, Street.Preflop),
-                               new WinningsAction("dbhbrb", HandActionType.WINS, 2.50m, 0),
                            };
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop
+         {
+             get { return new List<WinningsAction>() { new WinningsAction("dbhbrb", WinningsActionType.WINS, 2.50m, 0) }; }
          }
 
          protected override List<HandAction> ExpectedHandActions3BetHand
@@ -151,9 +172,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("Jack3bet", HandActionType.CHECK, 0m, Street.Turn),
                                new HandAction("cashgamer15", HandActionType.BET, 36.10m, Street.River),
                                new HandAction("Jack3bet", HandActionType.FOLD, 0m, Street.River),
-                               new WinningsAction("cashgamer15", HandActionType.WINS, 34.30m, 0),                       
+                                                  
                            };
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActions3BetHand
+         {
+             get { return new List<WinningsAction>() { new WinningsAction("cashgamer15", WinningsActionType.WINS, 34.30m, 0) }; }
          }
 
          protected override List<HandAction> ExpectedHandActionsAllInHand
@@ -181,9 +207,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                                new HandAction("kiss014", HandActionType.CALL, 89.83m, Street.River,true),
                                new HandAction("qprcuz", HandActionType.SHOW, 0, Street.Showdown),
                                new HandAction("kiss014", HandActionType.SHOW, 0, Street.Showdown),
-                               new WinningsAction("qprcuz", HandActionType.WINS, 197.50m, 0),   
+                               
                            };
              }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersHandActionsAllInHand
+         {
+             get { return new List<WinningsAction>() { new WinningsAction("qprcuz", WinningsActionType.WINS, 197.50m, 0), }; }
          }
 
          protected override List<HandAction> ExpectedHandActionsUncalledBetHand
@@ -195,7 +226,17 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
              }
          }
 
+         protected override List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand
+         {
+             get { throw new NotImplementedException(); }
+         }
+
          protected override List<HandAction> ExpectedOmahaHiLoHand
+         {
+             get { throw new NotImplementedException(); }
+         }
+
+         protected override List<WinningsAction> ExpectedWinnersOmahaHiLoHand
          {
              get { throw new NotImplementedException(); }
          }

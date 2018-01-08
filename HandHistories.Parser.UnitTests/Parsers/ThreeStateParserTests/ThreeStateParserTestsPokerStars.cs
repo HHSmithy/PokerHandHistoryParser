@@ -38,9 +38,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                     {
                         new HandAction("numbush", HandActionType.SHOW, Street.Showdown),
                         new HandAction("matze1987", HandActionType.SHOW, Street.Showdown),
-                        new WinningsAction("numbush", HandActionType.WINS, 23.57m, 0),
                     };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersShowDownActions_Wins
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("numbush", WinningsActionType.WINS, 23.57m, 0), }; }
         }
 
         [Test]
@@ -50,9 +54,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
                     {
                         new HandAction("danfiu", HandActionType.SHOW, Street.Showdown),
                         new HandAction("KENZA_MILOU", HandActionType.SHOW, Street.Showdown),
-                        new WinningsAction("danfiu", HandActionType.WINS, 1097.32m, 0),
+                        
                     };
-            TestShowDownActions("AllinFlop", actions);
+
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("danfiu", WinningsActionType.WINS, 1097.32m, 0),
+            };
+
+            TestShowDownActions("AllinFlop", actions, expectedWinners);
         }
 
         public void TestRunItTwice()
@@ -65,7 +75,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             var hand = GetShowDownTest("RunItTwice");
 
              List<HandAction> actions = new List<HandAction>();
-            parser.ParseShowDown(hand, ref actions, 0, Objects.GameDescription.GameType.Unknown);
+             List<WinningsAction> winners = new List<WinningsAction>();
+            parser.ParseShowDown(hand, actions, winners, 0, Objects.GameDescription.GameType.Unknown);
         }
     }
 }

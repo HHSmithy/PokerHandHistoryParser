@@ -121,7 +121,7 @@ namespace HandHistories.Parser.Utils
             foreach (var player in playerList)
             {
                 var amounts = actions.Player(player)
-                    .Where(p => !p.IsWinningsAction && p.HandActionType != HandActionType.UNCALLED_BET)
+                    .Where(p => p.HandActionType != HandActionType.UNCALLED_BET)
                     .Sum(p => p.Absolute);
 
                 var allin = actions.Player(player).Any(p => p.IsAllIn);
@@ -244,6 +244,12 @@ namespace HandHistories.Parser.Utils
                     break;
                 }
 			}
+
+            //We only have valid actions if blind end index == -1
+            if (blindEndIndex == -1)
+            {
+                return true;
+            }
 
             Street currentStreet = Street.Preflop;
             for (int i = blindEndIndex; i < list.Count; i++)

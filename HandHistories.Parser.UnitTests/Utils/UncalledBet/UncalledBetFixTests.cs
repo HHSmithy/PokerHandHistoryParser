@@ -30,15 +30,10 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
             }
         }
 
-        void TestUncalledbetWinsAdjustment(string expectedPlayer, decimal expectedWinAmount, List<HandAction> handActions)
+        void TestUncalledbetWinsAdjustment(string expectedPlayer, decimal expectedWinAmount, List<HandAction> handActions, List<WinningsAction> winners)
         {
-            var actions = UncalledBet.FixUncalledBetWins(UncalledBet.Fix(handActions));
-
-            var lastAction = actions.Last();
-            if (!lastAction.IsWinningsAction)
-            {
-                Assert.Fail("Winning is not last");
-            }
+            var fixedWinners = UncalledBet.FixUncalledBetWins(UncalledBet.Fix(handActions), winners);
+            var lastAction = fixedWinners.Last();
 
             Assert.AreEqual(expectedPlayer, lastAction.PlayerName);
             Assert.AreEqual(expectedWinAmount, lastAction.Amount);
@@ -229,10 +224,15 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
                 new HandAction("P1", HandActionType.CHECK, 0m, Street.Flop),
                 new HandAction("P2", HandActionType.BET, 0.1m, Street.Flop),
                 new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
-                new WinningsAction("P2", HandActionType.WINS, 0.5m, 0),
+                
             };
 
-            TestUncalledbetWinsAdjustment("P2", 0.4m, HandActions);
+            var winners = new List<WinningsAction>() 
+            {
+                new WinningsAction("P2", WinningsActionType.WINS, 0.5m, 0),
+            };
+
+            TestUncalledbetWinsAdjustment("P2", 0.4m, HandActions, winners);
         }
 
         [TestCase]
@@ -247,11 +247,15 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
                 new HandAction("P2", HandActionType.CALL, 30m, Street.Flop, true),
                 new HandAction("P3", HandActionType.UNCALLED_BET, 150m, Street.Flop),
                 new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
-                new WinningsAction("P2", HandActionType.WINS, 210m, 0),
-                new WinningsAction("P3", HandActionType.WINS, 220m, 0),
             };
 
-            var actions = UncalledBet.FixUncalledBetWins(HandActions.ToList());
+            var winners = new List<WinningsAction>()
+            {
+                new WinningsAction("P2", WinningsActionType.WINS, 210m, 0),
+                new WinningsAction("P3", WinningsActionType.WINS, 220m, 0),
+            };
+
+            var fixedWinners = UncalledBet.FixUncalledBetWins(HandActions.ToList(), winners);
 
             var expected = new List<HandAction>
             {
@@ -262,11 +266,15 @@ namespace HandHistories.Parser.UnitTests.Utils.Uncalled
                 new HandAction("P2", HandActionType.CALL, 30m, Street.Flop, true),
                 new HandAction("P3", HandActionType.UNCALLED_BET, 150m, Street.Flop),
                 new HandAction("P1", HandActionType.FOLD, 0m, Street.Flop),
-                new WinningsAction("P2", HandActionType.WINS, 210m, 0),
-                new WinningsAction("P3", HandActionType.WINS, 70m, 0),
             };
 
-            Assert.AreEqual(expected, actions);
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("P2", WinningsActionType.WINS, 210m, 0),
+                new WinningsAction("P3", WinningsActionType.WINS, 70m, 0),
+            };
+
+            Assert.AreEqual(expectedWinners, fixedWinners);
         }
     }
 }

@@ -19,10 +19,6 @@ namespace HandHistories.Objects.Actions
             {
                 return false;
             }
-            if (a.IsWinningsAction || b.IsWinningsAction)
-            {
-                return a.ToString() == b.ToString();
-            }
 
             return a.HandActionType == b.HandActionType &&
                 a.Amount == b.Amount &&
