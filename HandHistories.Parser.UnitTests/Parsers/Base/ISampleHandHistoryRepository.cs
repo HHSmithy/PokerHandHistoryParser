@@ -11,11 +11,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
     {
         string GetCancelledHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName);
 
-        string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid);
+        string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid, int testNumber);
 
         string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType);
 
         string GetLimitExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName);
+
+        string GetBuyinExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName);
 
         string GetTableExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, int tableTestNumber);
 
@@ -25,7 +27,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
 
         string GetGameTypeHandHistoryText(PokerFormat pokerFormat, SiteName siteName, GameType gameType);
 
-        string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street);
+        string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street, int testNumber);
 
         string GetMultipleHandExampleText(PokerFormat pokerFormat, SiteName siteName, int handCount);
 

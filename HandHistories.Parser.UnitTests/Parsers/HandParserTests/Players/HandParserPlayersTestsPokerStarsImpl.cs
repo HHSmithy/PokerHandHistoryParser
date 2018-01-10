@@ -14,6 +14,24 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         }
 
         [Test]
+        public void ParsePlayers_FiveCardOmaha()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("madmax84", 600m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("As5h4sAdJd")
+                },
+                new Player("manics16", 250m, 4)
+                {
+                    HoleCards = HoleCards.FromCards("9s7cTcAc3h")
+                },
+            });
+
+            TestParsePlayers("FiveCardOmaha", expected);
+        }
+
+        [Test]
         public void ParsePlayers_ShowWithoutShowdown()
         {
             var expected = new PlayerList(new List<Player>()
@@ -41,26 +59,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
             var expected = new PlayerList(new List<Player>()
             {
-                new Player("jedimaster82", 1000, 1),
-                new Player("OneMoreSpin", 1859.80m, 2),
-                new Player("FLATC@T", 2000m, 3)
+                new Player("Player1", 1000, 1)
                 {
-                    HoleCards = HoleCards.ForOmaha(
-                    new Card('J', 'd'), 
-                    new Card('T', 's'),
-                    new Card('Q', 'd'),
-                    new Card('Q', 's'))
+                    HoleCards = HoleCards.FromCards("Qh3cKs7c")
                 },
-                new Player("KENZA_MILOU", 1000m, 4)
+                new Player("Player2", 1859.80m, 2),
+                new Player("Player3", 2000m, 3)
                 {
-                    HoleCards = HoleCards.ForOmaha(
-                    new Card('7', 's'), 
-                    new Card('9', 's'),
-                    new Card('7', 'h'),
-                    new Card('J', 'h'))
+                    HoleCards = HoleCards.FromCards("JdTsQdQs")
                 },
-                new Player("Legheliel", 2000m, 5),
-                new Player("danfiu", 2000m, 6),
+                new Player("Player4", 1000m, 4)
+                {
+                    HoleCards = HoleCards.FromCards("7s9s7hJh")
+                },
+                new Player("Player5", 2000m, 5),
+                new Player("Player6", 2000m, 6),
             });
 
             TestParsePlayers("RunItTwice", expected);

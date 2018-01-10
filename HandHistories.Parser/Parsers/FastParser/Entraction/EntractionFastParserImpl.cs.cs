@@ -10,6 +10,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Entraction
 {
@@ -48,7 +49,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
             {
                 string handLine = handLines[i];
 
-                if (handLine.StartsWith("Dealer:"))
+                if (handLine.StartsWithFast("Dealer:"))
                 {
                     string dealerName = handLine.Replace("Dealer:", "").TrimStart(' ');
 
@@ -164,7 +165,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
 
         public override bool IsValidHand(string[] handLines)
         {
-            return handLines[handLines.Length - 1].StartsWith("Game ended ");
+            return handLines[handLines.Length - 1].StartsWithFast("Game ended ");
         }
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
@@ -173,9 +174,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
             return IsValidHand(handLines);
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> handActions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             Street currentStreet = Street.Null;
 
@@ -192,7 +194,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
 
                 if (currentStreet == Street.Null)
                 {
-                    if (handLine.StartsWith("Dealer:"))
+                    if (handLine.StartsWithFast("Dealer:"))
                     {
                         currentStreet = Street.Preflop;
                     }
@@ -222,26 +224,26 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                     name = handLine.Substring(0, firstSpaceIndexOf);
                     amount = decimal.Parse(handLine.Substring(lastSpaceIndex + 1, handLine.Length - lastSpaceIndex - 1), System.Globalization.CultureInfo.InvariantCulture);
 
-                    handActions.Add(new WinningsAction(name, HandActionType.WINS, amount, 0));
+                    winners.Add(new WinningsAction(name, WinningsActionType.WINS, amount, 0));
                     continue;
                 }
 
-                if (handLine.StartsWith("Flop "))
+                if (handLine.StartsWithFast("Flop "))
                 {
                     currentStreet = Street.Flop;
                     continue;
                 }
-                if (handLine.StartsWith("Turn "))
+                if (handLine.StartsWithFast("Turn "))
                 {
                     currentStreet = Street.Turn;
                     continue;
                 }
-                if (handLine.StartsWith("River "))
+                if (handLine.StartsWithFast("River "))
                 {
                     currentStreet = Street.River;
                     continue;
                 }
-                if (handLine.StartsWith("Rake: "))
+                if (handLine.StartsWithFast("Rake: "))
                 {
                     break;
                 }
@@ -326,7 +328,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                 string handLine = handLines[i];
 
                 if (string.IsNullOrWhiteSpace(handLine) ||
-                    handLine.StartsWith("Dealer:"))
+                    handLine.StartsWithFast("Dealer:"))
                 {
                     break;
                 }
@@ -354,7 +356,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                     continue;                    
                 }
 
-                if (handLine.StartsWith("Dealer:"))
+                if (handLine.StartsWithFast("Dealer:"))
                 {
                     break;
                 }
@@ -398,12 +400,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Entraction
                     continue;
                 }
 
-                if (handLine.StartsWith("Dealer:"))
+                if (handLine.StartsWithFast("Dealer:"))
                 {
                     break;
                 }
 
-                if (handLine.StartsWith("River ") || handLine.StartsWith("Flop ") || handLine.StartsWith("Turn "))
+                if (handLine.StartsWithFast("River ") || handLine.StartsWithFast("Flop ") || handLine.StartsWithFast("Turn "))
                 {
                     int firstSpaceIndex = handLine.IndexOf(' ');
                     string board = handLine.Substring(firstSpaceIndex, handLine.Length - firstSpaceIndex);

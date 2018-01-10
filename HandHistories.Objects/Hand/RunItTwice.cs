@@ -7,9 +7,18 @@ using System.Text;
 
 namespace HandHistories.Objects.Hand
 {
-    public class RunItTwice
+    public sealed class RunItTwice
     {
+        /// <summary>
+        /// The second board
+        /// </summary>
         public BoardCards Board;
+
+        /// <summary>
+        /// All actions that occur during the second showdown
+        /// </summary>
         public List<HandAction> Actions = new List<HandAction>();
+
+        public List<WinningsAction> Winners = new List<WinningsAction>();
     }
 }

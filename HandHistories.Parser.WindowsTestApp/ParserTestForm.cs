@@ -11,6 +11,8 @@ using HandHistories.Parser.Parsers.Factory;
 using System.Diagnostics;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Utils;
+using HandHistories.Parser.Parsers.Base;
 
 namespace HandHistories.Parser.WindowsTestApp
 {
@@ -36,6 +38,8 @@ namespace HandHistories.Parser.WindowsTestApp
             listBoxSite.Items.Add(SiteName.Merge);
             listBoxSite.Items.Add(SiteName.WinningPoker);
             listBoxSite.Items.Add(SiteName.MicroGaming);
+            listBoxSite.Items.Add(SiteName.Winamax);
+            listBoxSite.Items.Add(SiteName.IGT);
         }
 
         private void buttonParse_Click(object sender, EventArgs e)
@@ -48,6 +52,7 @@ namespace HandHistories.Parser.WindowsTestApp
 
             IHandHistoryParserFactory factory = new HandHistoryParserFactoryImpl();
             var handParser = factory.GetFullHandHistoryParser((SiteName) listBoxSite.SelectedItem);
+            bool validate = checkBox_validateHands.Checked;
 
             try
             {
@@ -57,18 +62,26 @@ namespace HandHistories.Parser.WindowsTestApp
                 Stopwatch SW = new Stopwatch();
                 SW.Start();
 
-                HandHistoryParserFastImpl fastParser = handParser as HandHistoryParserFastImpl;
+                IHandHistoryParser fastParser = handParser as IHandHistoryParser;
 
-                var hands = fastParser.SplitUpMultipleHandsToLines(text);
+                var hands = fastParser.SplitUpMultipleHands(text.Trim());
                 foreach (var hand in hands)
                 {
                     var parsedHand = fastParser.ParseFullHandHistory(hand, true);
+                    if (validate)
+                    {
+                        HandIntegrity.Assert(parsedHand);
+                    }
                     parsedHands++;
                 }
 
                 SW.Stop();
 
-                MessageBox.Show(this, "Parsed " + parsedHands + " hands." + Math.Round(SW.Elapsed.TotalMilliseconds, 2) + "ms");
+                string message = string.Format("Parsed {0} hands. {1}ms",
+                    parsedHands,
+                    Math.Round(SW.Elapsed.TotalMilliseconds, 2));
+
+                MessageBox.Show(this, message);
             }
             catch (Exception ex)
             {

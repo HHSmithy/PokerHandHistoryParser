@@ -19,9 +19,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "ValidHandTests", "CancelledHand");
         }
 
-        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid)
+        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid) ? "ValidHand" : "InvalidHand");
+            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid ? "ValidHand" : "InvalidHand") + "_" + testNumber);
         }
 
         public string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType)
@@ -32,6 +32,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
         public string GetLimitExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName)
         {
             return GetHandText(pokerFormat, siteName, "Limits", fileName);
+        }
+
+        public string GetBuyinExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName)
+        {
+            return GetHandText(pokerFormat, siteName, "Buyins", fileName);
         }
 
         public string GetTableExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, int tableTestNumber)
@@ -54,9 +59,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "GameTypeTests", gameType.ToString());
         }
 
-        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street)
+        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString());
+            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString() + (testNumber == 1 ? "" : testNumber.ToString()));
         }
 
         public string GetMultipleHandExampleText(PokerFormat pokerFormat, SiteName siteName, int handCount)

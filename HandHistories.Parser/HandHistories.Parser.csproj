@@ -12,7 +12,8 @@
     <AssemblyName>HandHistories.Parser</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -49,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NLog.3.2.1\lib\net40\NLog.dll</HintPath>
@@ -56,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,12 +72,28 @@
     <Compile Include="Compression\HandHistoryGZipCompressorImpl.cs" />
     <Compile Include="Compression\HandHistoryTinyFormatCompressorImpl.cs" />
     <Compile Include="Compression\IHandHistoryCompressor.cs" />
+    <Compile Include="FileIdentifiers\888\888FileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\BossMedia\BossMediaFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\FileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\FullTiltPoker\FullTiltPokerFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\IFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\IGT\IGTFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\Ipoker\IPokerFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\MicroGaming\MicroGamingFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\OnGame\OnGameFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\PartyPoker\PartyPokerFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\PokerStars\PokerStarsFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\Winamax\WinamaxFileIdentifier.cs" />
+    <Compile Include="FileIdentifiers\WinningPoker\WinningPokerFileIdentifier.cs" />
     <Compile Include="Parsers\Base\IThreeStateParser.cs" />
     <Compile Include="Parsers\FastParser\888\Poker888FastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\BossMedia\BossMediaAllInAdjuster.cs" />
     <Compile Include="Parsers\FastParser\BossMedia\BossMediaFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Entraction\EntractionFastParserImpl.cs.cs" />
     <Compile Include="Parsers\FastParser\FullTiltPoker\FullTiltPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\MicroGaming\MicroGamingFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\OnGame\OnGameFastParserImpl.cs" />
     <Compile Include="Parsers\Factory\HandHistoryParserFactoryImpl.cs" />
     <Compile Include="Parsers\Factory\IHandHistoryParserFactory.cs" />
@@ -82,28 +104,27 @@
     <Compile Include="Parsers\FastParser\IPoker\IPokerFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Merge\MergeFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PartyPoker\PartyPokerFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.cs" />
+    <Compile Include="Parsers\FastParser\PokerStars\PokerStarsFastParserImpl.Tournament.cs" />
     <Compile Include="Parsers\FastParser\Winamax\WinamaxFastParserImpl.cs" />
     <Compile Include="Parsers\FastParser\Winning\WinningPokerNetworkFastParserImpl.cs" />
-    <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexActionParserImplBase.cs" />
-    <Compile Include="Parsers\RegexParser\Base\IHandHistoryActionParser.cs" />
-    <Compile Include="Parsers\RegexParser\PartyPoker\ActionTypeRegexPair.cs" />
-    <Compile Include="Parsers\RegexParser\PartyPoker\PartyActionRegexParserImpl.cs" />
-    <Compile Include="Parsers\RegexParser\PartyPoker\PartyHandHistoryRegexParserImpl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Parsers\RegexParser\Base\HandHistoryRegexParserImplBase.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Parsers\RegexParser\PartyPoker\PartySiteActionRegexes.cs" />
-    <Compile Include="Parsers\RegexParser\PartyPoker\SiteActionRegexes.cs" />
+    <Compile Include="Parsers\JSONParser\Base\HandHistoryParserJSONImpl.cs" />
+    <Compile Include="Parsers\JSONParser\IGT\IGTJSONParserImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializer\JSON\JSONHandSerializer.cs" />
     <Compile Include="Utils\AllInAction\AllInActionHelper.cs" />
     <Compile Include="Utils\Extensions\LazyStringSplitExtension.cs" />
-    <Compile Include="Utils\FastParsing\FastParsing.cs" />
+    <Compile Include="Utils\FastParsing\FastInt.cs" />
+    <Compile Include="Utils\RaiseAdjuster\RaiseAdjuster.cs" />
+    <Compile Include="Utils\ValidityCheck\HandIntegrityException.cs" />
+    <Compile Include="Utils\ValidityCheck\HandValidator.cs" />
     <Compile Include="Utils\Pot\PotCalculator.cs" />
-    <Compile Include="Utils\Strings\StringExtensions.cs" />
+    <Compile Include="Utils\Extensions\StringExtensions.cs" />
     <Compile Include="Utils\Time\TimeZoneUtil.cs" />
+    <Compile Include="Utils\UncalledBet\UncalledBet.cs" />
+    <Compile Include="Utils\ValidityCheck\ValidationChecks.cs" />
+    <Compile Include="Utils\XMLHandLineSplitter.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -136,6 +157,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

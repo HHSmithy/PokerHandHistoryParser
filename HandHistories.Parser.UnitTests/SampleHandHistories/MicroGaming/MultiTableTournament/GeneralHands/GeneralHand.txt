@@ -1,0 +1,36 @@
+﻿<Game hhversion="5" id="5835000000" date="2015-01-01 01:00:01" unicodetablename="" tablename="Christmas Day 26 - Apple Watch[161]:Table 11" stakes="10|20" betlimit="NL" tabletype="MTT" unicodetabletype="TQBUAFQA" gametypeid="1" gametype="Multi Table Hold&apos;em" realmoney="true" currencysymbol="" playerseat="6" betamount="5000" istournament="1" totalplayers="9" tablesize="9" badbeat="false" currencyId="-1">
+  <Seats>
+    <Seat num="1" alias="Player1" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+    <Seat num="2" alias="Player2" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+    <Seat num="3" alias="Player3" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+    <Seat num="4" alias="Player4" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+    <Seat num="5" alias="Player5" unicodealias="" balance="3000.00" endbalance="2950.00" dealer="true"/>
+    <Seat num="6" alias="Player6" unicodealias="" balance="3000.00" endbalance="2950.00"/>
+    <Seat num="7" alias="Player7" unicodealias="" balance="3000.00" endbalance="3100.00"/>
+    <Seat num="8" alias="Player8" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+    <Seat num="9" alias="Player9" unicodealias="" balance="3000.00" endbalance="3000.00"/>
+  </Seats>
+  <Gameplay>
+    <Action seq="1" type="SmallBlind" seat="6" value="10.00"/>
+    <Action seq="2" type="BigBlind" seat="7" value="20.00"/>
+    <Action seq="3" type="DealCards" seat="6">
+      <Card value="K" suit="d" id="38"/>
+      <Card value="6" suit="c" id="18"/>
+    </Action>
+    <Action seq="4" type="Fold" seat="8"/>
+    <Action seq="5" type="Fold" seat="9"/>
+    <Action seq="6" type="Fold" seat="1"/>
+    <Action seq="7" type="Fold" seat="2"/>
+    <Action seq="8" type="Fold" seat="3"/>
+    <Action seq="9" type="Fold" seat="4"/>
+    <Action seq="10" type="Raise" seat="5" value="50.00"/>
+    <Action seq="11" type="Call" seat="6" value="40.00"/>
+    <Action seq="12" type="AllIn" seat="7" value="2980.00"/>
+    <Action seq="13" type="Fold" seat="5"/>
+    <Action seq="14" type="Fold" seat="6"/>
+    <Action seq="15" type="MuckCards" seat="7"/>
+    <Action type="Win">
+      <Seat num="7" amount="3100.00" pot="0" type="" lowhandwin="0"/>
+    </Action>
+  </Gameplay>
+</Game>

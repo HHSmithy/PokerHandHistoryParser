@@ -5,6 +5,7 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
+using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Hand
 {
@@ -24,7 +25,9 @@ namespace HandHistories.Objects.Hand
             
         }
 
-        public List<HandAction> HandActions { get; set; }        
+        public List<HandAction> HandActions { get; set; }
+
+        public List<WinningsAction> Winners { get; set; }
 
         public BoardCards ComumnityCards { get; set; }
 

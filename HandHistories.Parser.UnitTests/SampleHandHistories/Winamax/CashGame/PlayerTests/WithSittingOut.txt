@@ -1,0 +1,35 @@
+﻿Winamax Poker - CashGame - HandId: #8222000-25-1000000000 - Omaha pot limit (10€/20€) - 2015/01/01 01:01:01 UTC
+Table: 'PoWers Player1 01' 5-max (real money) Seat #4 is the button
+Seat 1: Player1 ()
+Seat 2: Player2 (2156.50€)
+Seat 3: Player3 (476.40€)
+Seat 4: HERO (720€)
+Seat 5: Player5 (2113€)
+*** ANTE/BLINDS ***
+Player5 posts small blind 10€
+Player2 posts big blind 20€
+Dealt to HERO [Kc 8h Kd As]
+*** PRE-FLOP *** 
+Player3 folds
+HERO raises 30€ to 50€
+Player5 folds
+Player2 calls 30€
+*** FLOP *** [Ah Qd 3h]
+Player2 checks
+HERO bets 70€
+Player2 calls 70€
+*** TURN *** [Ah Qd 3h][2c]
+Player2 checks
+HERO checks
+*** RIVER *** [Ah Qd 3h 2c][Qc]
+Player2 bets 190€
+HERO calls 190€
+*** SHOW DOWN ***
+Player2 shows [8c Ks 8s Ts] (Two pairs : Queens and 8)
+HERO shows [Kc 8h Kd As] (Two pairs : Aces and Queens)
+HERO collected 626.50€ from pot
+*** SUMMARY ***
+Total pot 626.50€ | Rake 3.50€
+Board: [Ah Qd 3h 2c Qc]
+Seat 2: Player2 (big blind) showed [8c Ks 8s Ts] and lost with Two pairs : Queens and 8
+Seat 4: HERO (button) showed [Kc 8h Kd As] and won 626.50€ with Two pairs : Aces and Queens

@@ -1,54 +1,54 @@
-﻿<Game hhversion="4" id="5049091349" date="2013-09-23 14:27:33" unicodetablename="VAB1AHIAYgBvADoAIABNAGkAYwByAG8AIABOAEwASABFACAAMgAyACAALQAgAKwgMgAgAE0AYQB4AA==" tablename="Turbo: Micro NLHE 22 - €2 Max" stakes="0.01|0.02" betlimit="NL" tabletype="Cash Game" gametypeid="1" gametype="Hold&apos;em" realmoney="true" currencysymbol="rCA=" playerseat="0" betamount="0" istournament="0" totalplayers="6" tablesize="6" badbeat="false" rake="0">
+﻿<Game hhversion="5" id="987456879" date="2011-02-10 11:11:11" unicodetablename="SwBhAHQAcgB5AG4AIAAtACAArCA0ADAAMAAgAE0AYQB4AA==" tablename="Katryn - €400 Max" stakes="2|4" betlimit="PL" tabletype="Cash Game" unicodetabletype="QwBhAHMAaAAgAEcAYQBtAGUA" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="3" betamount="4800" istournament="0" totalplayers="4" tablesize="6" badbeat="false" currencyId="26" rake="300">
    <Seats>
-      <Seat num="1" alias="DuckGhoul" unicodealias="RAB1AGMAawBHAGgAbwB1AGwA" balance="2.02" endbalance="2.00"/>
-      <Seat num="2" alias="Str16b8" unicodealias="UwB0AHIAMQA2AGIAOAA=" balance="2.49" endbalance="2.49" sittingout="true"/>
-      <Seat num="3" alias="creys" unicodealias="YwByAGUAeQBzAA==" balance="0.34" endbalance="0.38"/>
-      <Seat num="4" alias="cHuA" unicodealias="YwBIAHUAQQA=" balance="1.76" endbalance="1.74"/>
-      <Seat num="5" alias="_joker_" unicodealias="XwBqAG8AawBlAHIAXwA=" balance="2.00" endbalance="2.00"/>
-      <Seat num="6" alias="Jeesuslaps" unicodealias="SgBlAGUAcwB1AHMAbABhAHAAcwA=" balance="2.00" endbalance="2.00" dealer="true"/>
+      <Seat num="1" alias="Player1" unicodealias="UgBvAHQAdABpAGUARABpAHYAYQA=" balance="132.80" endbalance="128.80"/>
+      <Seat num="2" alias="Player2" unicodealias="RAAwAHIAaQBzAA==" balance="400.00" endbalance="532.00" dealer="true"/>
+      <Seat num="3" alias="Hero" unicodealias="SgBlAG4AaQBmAGYAZQByADEAMgAzAA==" balance="397.40" endbalance="266.40"/>
+      <Seat num="6" alias="Player6" unicodealias="SwByAGEAbQBSAG8AbAB5AGEAdAA=" balance="426.00" endbalance="426.00" sittingout="true"/>
    </Seats>
    <Gameplay>
-      <Action seq="1" type="SmallBlind" seat="1" value="0.01"/>
-      <Action seq="2" type="BigBlind" seat="3" value="0.02"/>
-      <Action seq="3" type="Call" seat="4" value="0.02"/>
-      <Action seq="4" type="Fold" seat="5"/>
-      <Action seq="5" type="Fold" seat="6"/>
-      <Action seq="6" type="Call" seat="1" value="0.01"/>
-      <Action seq="7" type="Check" seat="3"/>
+      <Action seq="1" type="SmallBlind" seat="3" value="2.00"/>
+      <Action seq="2" type="BigBlind" seat="1" value="4.00"/>
+      <Action seq="3" type="DealCards" seat="3">
+         <Card value="7" suit="c" id="19"/>
+         <Card value="J" suit="s" id="10"/>
+         <Card value="K" suit="s" id="12"/>
+         <Card value="J" suit="c" id="23"/>
+      </Action>
+      <Action seq="4" type="Raise" seat="2" value="12.00"/>
+      <Action seq="5" type="Raise" seat="3" value="38.00"/>
+      <Action seq="6" type="Fold" seat="1"/>
+      <Action seq="7" type="Call" seat="2" value="28.00"/>
       <Action seq="8" type="DealFlop">
          <Card value="5" suit="d" id="16"/>
          <Card value="K" suit="s" id="30"/>
          <Card value="7" suit="c" id="11"/>
       </Action>
-      <Action seq="9" type="Check" seat="1"/>
-      <Action seq="10" type="Check" seat="3"/>
-      <Action seq="11" type="Check" seat="4"/>
-      <Action seq="12" type="DealTurn">
+      <Action seq="9" type="Bet" seat="3" value="25.00"/>
+      <Action seq="10" type="Call" seat="2" value="25.00"/>
+      <Action seq="11" type="DealTurn">
          <Card value="J" suit="c" id="17"/>
       </Action>
-      <Action seq="13" type="Check" seat="1"/>
-      <Action seq="14" type="Check" seat="3"/>
-      <Action seq="15" type="Check" seat="4"/>
-      <Action seq="16" type="DealRiver">
+      <Action seq="12" type="Check" seat="3"/>
+      <Action seq="13" type="Check" seat="2"/>
+      <Action seq="14" type="DealRiver">
          <Card value="7" suit="d" id="40"/>
       </Action>
-      <Action seq="17" type="Check" seat="1"/>
-      <Action seq="18" type="Check" seat="3"/>
-      <Action seq="19" type="Check" seat="4"/>
-      <Action seq="20" type="ShowCards" seat="1">
-         <Card value="6" suit="d" id="31"/>
-         <Card value="J" suit="d" id="36"/>
-      </Action>
-      <Action seq="21" type="ShowCards" seat="3">
+      <Action seq="15" type="Bet" seat="3" value="66.00"/>
+      <Action seq="16" type="Call" seat="2" value="66.00"/>
+      <Action seq="17" type="ShowCards" seat="3">
+         <Card value="7" suit="c" id="19"/>
          <Card value="J" suit="s" id="10"/>
          <Card value="K" suit="s" id="12"/>
+         <Card value="J" suit="c" id="23"/>
       </Action>
-      <Action seq="22" type="MuckCards" seat="4">
-         <Card value="9" suit="c" id="21"/>
-         <Card value="10" suit="c" id="22"/>
+      <Action seq="18" type="ShowCards" seat="2">
+         <Card value="8" suit="h" id="46"/>
+         <Card value="Q" suit="s" id="11"/>
+         <Card value="8" suit="s" id="7"/>
+         <Card value="A" suit="s" id="0"/>
       </Action>
       <Action type="Win">
-         <Seat num="3" amount="0.06" pot="0" type="" lowhandwin="0"/>
+         <Seat num="2" amount="263.00" pot="0" type="" lowhandwin="0"/>
       </Action>
    </Gameplay>
 </Game>

@@ -1,0 +1,36 @@
+﻿***** 888poker Hand History for Game 531071379 *****
+2 $/4 $ Blinds Pot Limit Omaha - *** 18 01 2016 18:29:43
+Table Caserta 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: ilovepinot ( 1 192,48 $ )
+Seat 2: Mpodafone ( 519,75 $ )
+Seat 4: ship_it_fi5h ( 636,15 $ )
+Seat 6: Din_Pappa ( 400 $ )
+Seat 7: alexepro ( 400 $ )
+Seat 9: Newuser55 ( 400 $ )
+Din_Pappa posts small blind [2 $]
+alexepro posts big blind [4 $]
+Newuser55 folds
+ilovepinot folds
+Mpodafone raises [14 $]
+ship_it_fi5h calls [14 $]
+Din_Pappa folds
+alexepro calls [10 $]
+** Dealing flop ** [ 4d, Ks, 2h ]
+alexepro checks
+Mpodafone checks
+ship_it_fi5h checks
+** Dealing turn ** [ Tc ]
+alexepro bets [12 $]
+Mpodafone calls [12 $]
+ship_it_fi5h folds
+** Dealing river ** [ Kd ]
+alexepro checks
+Mpodafone checks
+** Summary **
+alexepro shows [ Ec, Knc, 3h, 3c ]
+Mpodafone shows [ Kns, Th, 5c, Dc ]
+Mpodafone collected [ 64,60 $ ]
+
+#Game No : 531071562

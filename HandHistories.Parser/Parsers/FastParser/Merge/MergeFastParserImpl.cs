@@ -12,6 +12,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
+using HandHistories.Parser.Utils.Extensions;
 
 namespace HandHistories.Parser.Parsers.FastParser.Merge
 {
@@ -167,8 +168,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
                 <game id="56067014-1756" starttime="20120529031347" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120529|Baja (56067014)|56067014|56067014-1756|false">             
              */
             string gameLine = handLines[1].TrimStart();
-            int nameStartIndex = gameLine.IndexOf("|") + 1;
-            int nameStartEndIndex = gameLine.IndexOf("|", nameStartIndex);
+            int nameStartIndex = gameLine.IndexOfFast("|") + 1;
+            int nameStartEndIndex = gameLine.IndexOfFast("|", nameStartIndex);
             string tableName = gameLine.Substring(nameStartIndex, nameStartEndIndex - nameStartIndex);
             return tableName;
         }
@@ -232,7 +233,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
         {
             string tableName = ParseTableName(handLines);
 
-            if (tableName.StartsWith("Bad Beat"))
+            if (tableName.StartsWithFast("Bad Beat"))
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
             }
@@ -312,9 +313,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             }
         }
 
-        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
+        protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType, out List<WinningsAction> winners)
         {
             List<HandAction> actions = new List<HandAction>();
+            winners = new List<WinningsAction>();
 
             PlayerList playerList = ParsePlayers(handLines);
 
@@ -341,7 +343,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             foreach (XElement winnerElement in winnerElements)
             {
                 WinningsAction winningsAction = GetWinningsActionFromWinnerElement(winnerElement, playerList);
-                actions.Add(winningsAction);
+                winners.Add(winningsAction);
             }
 
             return actions;
@@ -355,7 +357,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
 
             Player matchingPlayer = GetPlayerBySeatId(playerList, winnerSeatId);
 
-            return new WinningsAction(matchingPlayer.PlayerName, HandActionType.WINS, amount, potNumber, Int32.MaxValue);
+            return new WinningsAction(matchingPlayer.PlayerName, WinningsActionType.WINS, amount, potNumber);
         }
 
         private Player GetPlayerBySeatId(PlayerList playerList, int seatId)
@@ -488,7 +490,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             PlayerList playerList = new PlayerList();
 
             //Build a query for all cards elements which are "SHOWN" or "MUCKED" rather than "COMMUNITY"
-            IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards").Where(element => !element.Attribute("type").Value.StartsWith("C")).ToList();
+            IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards").Where(element => element.Attribute("type").Value[0] != 'C').ToList();
 
             foreach (XElement playerElement in players.Elements())
             {
@@ -526,7 +528,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Merge
             IEnumerable<XElement> cardElements = gameElement.Elements("round").Elements("cards");
 
             //Find the last <card> element with type="community". This will have our board card list as its cards attribute value
-            XElement lastCardElement = cardElements.LastOrDefault(element => element.Attribute("type").Value.StartsWith("C"));
+            XElement lastCardElement = cardElements.LastOrDefault(element => element.Attribute("type").Value[0] == 'C');
 
             if (lastCardElement == null)
             {

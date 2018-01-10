@@ -58,13 +58,8 @@ namespace HandHistories.Tools.UnitTests
                     new HandAction("Bluf_To_Much", HandActionType.CALL, 600m, Street.River),
 
                     new HandAction("LewisFriend", HandActionType.SHOW, 0, Street.Showdown),
-                    new HandAction("Bluf_To_Much", HandActionType.SHOW, 0, Street.Showdown),
-                    new WinningsAction("Bluf_To_Much", HandActionType.WINS_SIDE_POT, 2100, 1),
-                    new WinningsAction("LewisFriend", HandActionType.WINS_SIDE_POT, 2100, 1),
-                                        
+                    new HandAction("Bluf_To_Much", HandActionType.SHOW, 0, Street.Showdown),           
                     new HandAction("Crazy Elior", HandActionType.SHOW, 0, Street.Showdown),
-                    new WinningsAction("Crazy Elior", HandActionType.WINS, 2637.50m, 0),
-                    new WinningsAction("LewisFriend", HandActionType.WINS, 2637.50m, 0),
                 };
 
         [Test]

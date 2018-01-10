@@ -1,0 +1,34 @@
+﻿<Game hhversion="5" id="987456879" date="2011-02-10 11:11:11" unicodetablename="SwBhAHQAcgB5AG4AIAAtACAArCA0ADAAMAAgAE0AYQB4AA==" tablename="Katryn - €400 Max" stakes="2|4" betlimit="PL" tabletype="Cash Game" unicodetabletype="QwBhAHMAaAAgAEcAYQBtAGUA" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="3" betamount="4800" istournament="0" totalplayers="4" tablesize="6" badbeat="false" currencyId="26" rake="300">
+   <Seats>
+      <Seat num="1" alias="Player1" unicodealias="UgBvAHQAdABpAGUARABpAHYAYQA=" balance="128.80" endbalance="116.80"/>
+      <Seat num="2" alias="Player2" unicodealias="RAAwAHIAaQBzAA==" balance="532.00" endbalance="589.00"/>
+      <Seat num="3" alias="Hero" unicodealias="SgBlAG4AaQBmAGYAZQByADEAMgAzAA==" balance="266.40" endbalance="218.40" dealer="true"/>
+      <Seat num="6" alias="Player6" unicodealias="SwByAGEAbQBSAG8AbAB5AGEAdAA=" balance="426.00" endbalance="426.00" sittingout="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="SmallBlind" seat="1" value="2.00"/>
+      <Action seq="2" type="BigBlind" seat="2" value="4.00"/>
+      <Action seq="3" type="DealCards" seat="3">
+         <Card value="Q" suit="d" id="37"/>
+         <Card value="8" suit="h" id="46"/>
+         <Card value="A" suit="h" id="39"/>
+         <Card value="6" suit="c" id="18"/>
+      </Action>
+      <Action seq="4" type="Raise" seat="3" value="12.00"/>
+      <Action seq="5" type="Call" seat="1" value="10.00"/>
+      <Action seq="6" type="Raise" seat="2" value="44.00"/>
+      <Action seq="7" type="Call" seat="3" value="36.00"/>
+      <Action seq="8" type="Fold" seat="1"/>
+      <Action seq="9" type="DealFlop">
+         <Card value="5" suit="d" id="30"/>
+         <Card value="5" suit="c" id="17"/>
+         <Card value="6" suit="h" id="44"/>
+      </Action>
+      <Action seq="10" type="Bet" seat="2" value="36.00"/>
+      <Action seq="11" type="Fold" seat="3"/>
+      <Action seq="12" type="MuckCards" seat="2"/>
+      <Action type="Win">
+         <Seat num="2" amount="141.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

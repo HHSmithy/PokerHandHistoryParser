@@ -17,6 +17,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
     [TestFixture("Winamax", "Istanbul", "Dublin", "Vienna 36","San Antonio")]
     [TestFixture("WinningPoker", "Braunite", "Baryte   (JP) - 2", "Baotite", "Oalitite   (JP)", "Wichita Falls 1/2 - 3", "Wichita Falls 1/2")]
     [TestFixture("BossMedia", "Diana 9", "Eva 9", "Moa 11")]
+    [TestFixture("IGT", "Ada73", "Gwen 263")]
     class HandParserTableNameTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedTables;

@@ -116,5 +116,79 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                            };
             }
         }
+
+        [Test]
+        public void ParsePlayers_Hero()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("Player1", 128.80m, 1),
+                new Player("Player2", 532.00m, 2),
+                new Player("Hero", 266.40m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("Qd8hAh6c")
+                },
+                new Player("Player6", 426.00m, 6)
+                {
+                    IsSittingOut = true
+                },
+            });
+
+            TestParsePlayers("Hero", expected);
+        }
+
+        [Test]
+        public void ParsePlayers_WaitingForBB()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("Player1", 2000m, 1),
+                new Player("Player2", 2017m, 2)
+                {
+                    HoleCards = HoleCards.FromCards("8h3hJcTc")
+                },
+                new Player("Player3", 0m, 3)
+                {
+                    IsSittingOut = true
+                },
+                new Player("HERO", 1970m, 4)
+                {
+                    HoleCards = HoleCards.FromCards("AcAd9d3d")
+                },
+                new Player("Player5", 2000m, 5)
+                {
+                    IsSittingOut = true
+                },
+                new Player("Player6", 2000m, 6),
+            });
+
+            TestParsePlayers_FullHand("WaitingForBB", expected);
+        }
+
+        [Test]
+        public void ParsePlayers_MuckingHoleCards()
+        {
+            var expected = new PlayerList(new List<Player>()
+            {
+                new Player("Player1", 2000m, 1),
+                new Player("HERO", 2000m, 2)
+                {
+                    HoleCards = HoleCards.FromCards("3s5c4d5d")
+                },
+                new Player("Player3", 2000m, 3)
+                {
+                    HoleCards = HoleCards.FromCards("6dAc3hAs")
+                },
+                new Player("Player5", 2000m, 5)
+                {
+                    HoleCards = HoleCards.FromCards("6s3dThTs")
+                },
+                new Player("Player6", 2000m, 6)
+                {
+                },
+            });
+
+            TestParsePlayers_FullHand("MuckingCards", expected);
+        }
     }
 }

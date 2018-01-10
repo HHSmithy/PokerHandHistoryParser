@@ -28,6 +28,11 @@ namespace HandHistories.Parser.Parsers.Exceptions
         public InvalidHandException(string handText) : base(handText) 
         {
         }
+
+        public InvalidHandException(string handText, string message)
+            : base(handText, message)
+        {
+        }
     }
 
     public class HandActionException : HandParseException

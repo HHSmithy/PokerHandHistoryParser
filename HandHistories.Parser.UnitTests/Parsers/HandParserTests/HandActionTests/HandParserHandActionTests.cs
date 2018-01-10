@@ -1,60 +1,101 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using HandHistories.Objects.Actions;
+﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
     abstract internal class HandParserHandActionTests : HandHistoryParserBaseTests
     {
+        PokerFormat format = PokerFormat.CashGame;
+
         protected HandParserHandActionTests(string site)
             : base(site)
         {
-        }       
+        }
 
-        protected void TestParseActions(string fileName, List<HandAction> expectedActions)
+        protected HandParserHandActionTests(PokerFormat format, string site)
+            : base(site)
         {
-            string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "HandActionTests", fileName);
+            this.format = format;
+        }   
 
-            List<HandAction> actionList = GetParser().ParseHandActions(handText);
+        //protected void TestParseActions(string fileName, List<HandAction> expectedActions)
+        //{
+        //    string handText = SampleHandHistoryRepository.GetHandExample(format, Site, "HandActionTests", fileName);
+
+        //    List<HandAction> actionList = GetParser().ParseHandActions(handText);
+
+        //    Assert.AreEqual(expectedActions.Count, actionList.Count, "Action List Count");
+        //    Assert.AreEqual(expectedActions, actionList);
+        //}
+
+        protected void TestParseActions(string fileName, List<HandAction> expectedActions, List<WinningsAction> expectedWinners)
+        {
+            string handText = SampleHandHistoryRepository.GetHandExample(format, Site, "HandActionTests", fileName);
+
+            List<WinningsAction> realWinners;
+            List<HandAction> actionList = GetParser().ParseHandActions(handText, out realWinners);
 
             Assert.AreEqual(expectedActions.Count, actionList.Count, "Action List Count");
-            Assert.AreEqual(expectedActions, actionList);            
+            Assert.AreEqual(expectedActions, actionList);
+            Assert.AreEqual(expectedWinners, realWinners);
         }
 
         protected abstract List<HandAction> ExpectedHandActionsBasicHand { get; }
         protected abstract List<HandAction> ExpectedHandActionsFoldedPreflop { get; }
         protected abstract List<HandAction> ExpectedHandActions3BetHand { get; }
         protected abstract List<HandAction> ExpectedHandActionsAllInHand { get; }
+        protected abstract List<HandAction> ExpectedHandActionsUncalledBetHand { get; }
         protected abstract List<HandAction> ExpectedOmahaHiLoHand { get; }
+
+        protected abstract List<WinningsAction> ExpectedWinnersHandActionsBasicHand { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersHandActions3BetHand { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersHandActionsAllInHand { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand { get; }
+        protected abstract List<WinningsAction> ExpectedWinnersOmahaHiLoHand { get; }
 
         [Test]
         public void ParseHandActions_BasicHand()
         {
-            TestParseActions("BasicHand", ExpectedHandActionsBasicHand);
+            TestParseActions("BasicHand", ExpectedHandActionsBasicHand, ExpectedWinnersHandActionsBasicHand);
         }
 
         [Test]
         public void ParseHandActions_FoldedPreflop()
         {
-            TestParseActions("FoldedPreflop", ExpectedHandActionsFoldedPreflop);
+            TestParseActions("FoldedPreflop", ExpectedHandActionsFoldedPreflop, ExpectedWinnersHandActionsFoldedPreflop);
         }
 
         [Test]
         public void ParseHandActions_3BetHand()
         {
-            TestParseActions("3BetHand", ExpectedHandActions3BetHand);
+            TestParseActions("3BetHand", ExpectedHandActions3BetHand, ExpectedWinnersHandActions3BetHand);
         }
 
         [Test]
         public void ParseHandActions_AllInHand()
         {
-            TestParseActions("AllInHandWithShowdown", ExpectedHandActionsAllInHand);
+            TestParseActions("AllInHandWithShowdown", ExpectedHandActionsAllInHand, ExpectedWinnersHandActionsAllInHand);
+        }
+
+        [Test]
+        public void ParseHandActions_UncalledBetHand()
+        {
+            switch (Site)
+            {
+                case SiteName.BossMedia:
+                case SiteName.PokerStars:
+                    TestParseActions("UncalledBet", ExpectedHandActionsUncalledBetHand, ExpectedWinnersHandActionsUncalledBetHand);
+                    return;
+            }
+            Assert.Ignore();
         }
 
         [Test]
@@ -69,7 +110,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                     break;
             }
 
-            TestParseActions("OmahaHiLo", ExpectedOmahaHiLoHand);
+            TestParseActions("OmahaHiLo", ExpectedOmahaHiLoHand, ExpectedWinnersOmahaHiLoHand);
         }  
     }
 }

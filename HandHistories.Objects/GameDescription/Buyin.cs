@@ -58,6 +58,8 @@ namespace HandHistories.Objects.GameDescription
                     return @"£";
                 case Currency.All:
                     return @"";
+                case Currency.SATELLITE:
+                    return "S";
                 default:
                     throw new Exception("Unrecognized currency " + Currency);
             }

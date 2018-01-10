@@ -9,6 +9,7 @@ namespace HandHistories.Objects.Players
     [DataContract]
     public class PlayerList : IEnumerable<Player>
     {
+        [DataMember]
         private List<Player> _players = new List<Player>(10); 
 
         public PlayerList()
@@ -67,7 +68,7 @@ namespace HandHistories.Objects.Players
 
         public Player this[string name]
         {
-            get { return _players.FirstOrDefault(p => p.PlayerName.Equals(name)); }
+            get { return _players.FirstOrDefault(p => p.PlayerName == name); }
         }
        
         public int Count

@@ -27,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,15 +66,21 @@
   <ItemGroup>
     <Compile Include="Actions\AllInAction.cs" />
     <Compile Include="Actions\HandAction.cs" />
+    <Compile Include="Actions\HandAction.Statics.cs" />
     <Compile Include="Actions\HandActionType.cs" />
     <Compile Include="Actions\WinningsAction.cs" />
+    <Compile Include="Actions\WinningsActionType.cs" />
     <Compile Include="Cards\BoardCards.cs" />
     <Compile Include="Cards\Card.cs" />
-    <Compile Include="Cards\Card.Enums.cs" />
+    <Compile Include="Cards\Card.Statics.cs" />
     <Compile Include="Cards\CardGroup.cs" />
+    <Compile Include="Cards\CardParser.cs" />
+    <Compile Include="Cards\CardValueEnum.cs" />
+    <Compile Include="Cards\SuitEnum.cs" />
     <Compile Include="GameDescription\Buyin.cs" />
     <Compile Include="GameDescription\Currency.cs" />
     <Compile Include="GameDescription\GameDescriptor.cs" />
+    <Compile Include="GameDescription\GameTypes.Statics.cs" />
     <Compile Include="GameDescription\GameTypeUtils.cs" />
     <Compile Include="GameDescription\GameTypes.cs" />
     <Compile Include="GameDescription\LimitClassEnum.cs" />
@@ -88,7 +96,6 @@
     <Compile Include="Cards\HoleCards.cs" />
     <Compile Include="Hand\RunItTwice.cs" />
     <Compile Include="Interfaces\IPushFoldApiProxy.cs" />
-    <Compile Include="ITimeStamped.cs" />
     <Compile Include="GameDescription\Limit.cs" />
     <Compile Include="GameDescription\PokerFormat.cs" />
     <Compile Include="Players\Player.cs" />
@@ -125,6 +132,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Serializer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

@@ -11,8 +11,9 @@ using HandHistories.Parser.UnitTests.Parsers.Base;
 
 namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 {
+    using Parser = PokerStarsFastParserImpl;
     [TestFixture]
-    class PokerStarsFastParserActionTests : HandHistoryParserBaseTests 
+    class PokerStarsFastParserActionTests : HandHistoryParserBaseTests
     {
         public PokerStarsFastParserActionTests()
             : base("PokerStars")
@@ -117,8 +118,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         [Test]
         public void ParsePostingActionLine_SmallBlind_Works()
         {
-            HandAction handAction =
-                GetPokerStarsFastParser().ParsePostingActionLine(@"bingo185: posts small blind $2.55", 8, false, false);
+            HandAction handAction = Parser.ParsePostingActionLine(@"bingo185: posts small blind $2.55", 8, false, false);
 
             Assert.AreEqual(new HandAction("bingo185", HandActionType.SMALL_BLIND, 2.55m, Street.Preflop), handAction);
         }
@@ -126,8 +126,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         [Test]
         public void ParsePostingActionLine_BigBlind_Works()
         {
-            HandAction handAction =
-                GetPokerStarsFastParser().ParsePostingActionLine(@"gaydaddy: posts big blind $1.23", 8, true, false);
+            HandAction handAction = Parser.ParsePostingActionLine(@"gaydaddy: posts big blind $1.23", 8, true, false);
 
             Assert.AreEqual(new HandAction("gaydaddy", HandActionType.BIG_BLIND, 1.23m, Street.Preflop), handAction);
         }
@@ -135,8 +134,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         [Test]
         public void ParsePostingActionLine_Ante_Works()
         {
-            HandAction handAction =
-                GetPokerStarsFastParser().ParsePostingActionLine(@"DallasAP2: posts the ante $1.05", 9, true, true);
+            HandAction handAction = Parser.ParsePostingActionLine(@"DallasAP2: posts the ante $1.05", 9, true, true);
 
             Assert.AreEqual(new HandAction("DallasAP2", HandActionType.ANTE, 1.05m, Street.Preflop), handAction);
         }
@@ -146,8 +144,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         {
 
             //fertre: posts small & big blinds $0.75
-            HandAction handAction =
-                GetPokerStarsFastParser().ParsePostingActionLine(@"fertre: posts small & big blinds $1.75", 6, true, true);
+            HandAction handAction = Parser.ParsePostingActionLine(@"fertre: posts small & big blinds $1.75", 6, true, true);
 
             Assert.AreEqual(new HandAction("fertre", HandActionType.POSTS, 1.75m, Street.Preflop), handAction);
         }
@@ -173,64 +170,64 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
         [Test]
         public void ParseCollectedLine_WithSidePot_Works()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"templargio collected $6.08 from side pot-2", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("templargio", HandActionType.WINS_SIDE_POT, 6.08m, 2), handAction);
+            Assert.AreEqual(new WinningsAction("templargio", WinningsActionType.WINS_SIDE_POT, 6.08m, 2), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_Works()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"alecc frost collected $1.25 from pot", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("alecc frost", HandActionType.WINS, 1.25m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("alecc frost", WinningsActionType.WINS, 1.25m, 0), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_WithColon_Works()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"wo_olly :D collected $0.57 from pot", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("wo_olly :D", HandActionType.WINS, 0.57m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("wo_olly :D", WinningsActionType.WINS, 0.57m, 0), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_MainPot_Works()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"bozzoTHEclow collected $245.23 from main pot", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("bozzoTHEclow", HandActionType.WINS, 245.23m, 0), handAction);
+            Assert.AreEqual(new WinningsAction("bozzoTHEclow", WinningsActionType.WINS, 245.23m, 0), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_SidePot()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"bozzoTHEclow collected $136.82 from side pot", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("bozzoTHEclow", HandActionType.WINS_SIDE_POT, 136.82m, 1), handAction);
+            Assert.AreEqual(new WinningsAction("bozzoTHEclow", WinningsActionType.WINS_SIDE_POT, 136.82m, 1), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_SidePot1()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"CinderellaBD collected $8.90 from side pot-1", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("CinderellaBD", HandActionType.WINS_SIDE_POT, 8.90m, 1), handAction);
+            Assert.AreEqual(new WinningsAction("CinderellaBD", WinningsActionType.WINS_SIDE_POT, 8.90m, 1), handAction);
         }
 
         [Test]
         public void ParseCollectedLine_SidePot2()
         {
-            HandAction handAction =
+            WinningsAction handAction =
                 GetPokerStarsFastParser().ParseCollectedLine(@"CinderellaBD collected $7 from side pot-2", Street.Preflop);
 
-            Assert.AreEqual(new WinningsAction("CinderellaBD", HandActionType.WINS_SIDE_POT, 7m, 2), handAction);
+            Assert.AreEqual(new WinningsAction("CinderellaBD", WinningsActionType.WINS_SIDE_POT, 7m, 2), handAction);
         }
 
         [Test]

@@ -1,0 +1,48 @@
+﻿PokerStars Hand #118723697322: Tournament #937193984, $0.91+$0.09 USD Hold'em No Limit - Level V (40/80) - 2014/07/13 18:48:13 ET
+Table '937193984 7' 9-max Seat #4 is the button
+Seat 2: w11cked (980 in chips) 
+Seat 3: siniakoza (952 in chips) 
+Seat 4: super190 (1156 in chips) 
+Seat 6: TSte (3766 in chips) 
+Seat 7: jas v121 (422 in chips) 
+Seat 8: colorado0054 (514 in chips) 
+Seat 9: kikax0 (304 in chips) 
+w11cked: posts the ante 8
+siniakoza: posts the ante 8
+super190: posts the ante 8
+TSte: posts the ante 8
+jas v121: posts the ante 8
+colorado0054: posts the ante 8
+kikax0: posts the ante 8
+TSte: posts small blind 40
+jas v121: posts big blind 80
+*** HOLE CARDS ***
+colorado0054: raises 426 to 506 and is all-in
+kikax0: calls 296 and is all-in
+w11cked: folds 
+siniakoza: folds 
+super190: folds 
+TSte: folds 
+jas v121: calls 334 and is all-in
+Uncalled bet (92) returned to colorado0054
+*** FLOP *** [5d 4d 7h]
+*** TURN *** [5d 4d 7h] [Qd]
+*** RIVER *** [5d 4d 7h Qd] [Jh]
+*** SHOW DOWN ***
+jas v121: shows [4s 5h] (two pair, Fives and Fours)
+colorado0054: shows [Jd Kd] (a flush, King high)
+colorado0054 collected 236 from side pot
+kikax0: shows [As 9d] (high card Ace)
+colorado0054 collected 984 from main pot
+jas v121 finished the tournament in 83rd place
+kikax0 finished the tournament in 84th place
+*** SUMMARY ***
+Total pot 1220 Main pot 984. Side pot 236. | Rake 0 
+Board [5d 4d 7h Qd Jh]
+Seat 2: w11cked folded before Flop (didn't bet)
+Seat 3: siniakoza folded before Flop (didn't bet)
+Seat 4: super190 (button) folded before Flop (didn't bet)
+Seat 6: TSte (small blind) folded before Flop
+Seat 7: jas v121 (big blind) showed [4s 5h] and lost with two pair, Fives and Fours
+Seat 8: colorado0054 showed [Jd Kd] and won (1220) with a flush, King high
+Seat 9: kikax0 showed [As 9d] and lost with high card Ace

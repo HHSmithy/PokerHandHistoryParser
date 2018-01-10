@@ -14,36 +14,73 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
         }
 
+        [Test]
+        public void AnteHand_Works()
+        {
+            List<HandAction> expectedActions = new List<HandAction>()
+            {
+                new HandAction("Player1", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player2", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player3", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player4", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player5", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player6", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player7", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player8", HandActionType.ANTE, 100m, Street.Preflop),
+                new HandAction("Player1", HandActionType.SMALL_BLIND, 1000m, Street.Preflop),
+                new HandAction("Player2", HandActionType.BIG_BLIND, 2000m, Street.Preflop),
+
+                new HandAction("Player3", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player4", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player5", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player6", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player7", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player8", HandActionType.RAISE, 5000m, Street.Preflop),
+                new HandAction("Player1", HandActionType.FOLD, Street.Preflop),
+                new HandAction("Player2", HandActionType.FOLD, Street.Preflop),
+            };
+
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Player8", WinningsActionType.WINS, 5800, 0)
+            };
+
+            TestParseActions("Ante", expectedActions, expectedWinners);
+        }
+
         protected override List<HandAction> ExpectedHandActionsBasicHand
         {
             get
             {
                 return new List<HandAction>()
-                                    {
-                                        new HandAction("1Mentalist", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.BIG_BLIND, 10m, Street.Preflop),
+                {
+                    new HandAction("1Mentalist", HandActionType.SMALL_BLIND, 5m, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.BIG_BLIND, 10m, Street.Preflop),
 
-                                        new HandAction("Matte10", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("slejpner", HandActionType.CALL, 10, Street.Preflop),
-                                        new HandAction("phallos", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("1Mentalist", HandActionType.CALL, 5, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Preflop),
+                    new HandAction("Matte10", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("slejpner", HandActionType.CALL, 10, Street.Preflop),
+                    new HandAction("phallos", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("1Mentalist", HandActionType.CALL, 5, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Preflop),
 
-                                        new HandAction("1Mentalist", HandActionType.CHECK, 0, Street.Flop),                  
-                                        new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Flop),
-                                        new HandAction("slejpner", HandActionType.CHECK,0, Street.Flop),
+                    new HandAction("1Mentalist", HandActionType.CHECK, 0, Street.Flop),                  
+                    new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Flop),
+                    new HandAction("slejpner", HandActionType.CHECK,0, Street.Flop),
 
-                                        new HandAction("1Mentalist", HandActionType.CHECK, 0, Street.Turn),                  
-                                        new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Turn),
-                                        new HandAction("slejpner", HandActionType.CHECK,0, Street.Turn),
+                    new HandAction("1Mentalist", HandActionType.CHECK, 0, Street.Turn),                  
+                    new HandAction("ItalyToast", HandActionType.CHECK, 0, Street.Turn),
+                    new HandAction("slejpner", HandActionType.CHECK,0, Street.Turn),
 
-                                        new HandAction("1Mentalist", HandActionType.BET, 22.50m, Street.River),                  
-                                        new HandAction("ItalyToast", HandActionType.FOLD, 0, Street.River),
-                                        new HandAction("slejpner", HandActionType.FOLD,0, Street.River),
-
-                                        new WinningsAction("1Mentalist", HandActionType.WINS, 29.26m, 0),  
-                                    };
+                    new HandAction("1Mentalist", HandActionType.BET, 22.50m, Street.River),                  
+                    new HandAction("ItalyToast", HandActionType.FOLD, 0, Street.River),
+                    new HandAction("slejpner", HandActionType.FOLD,0, Street.River),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsBasicHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("1Mentalist", WinningsActionType.WINS, 29.26m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsFoldedPreflop
@@ -51,16 +88,19 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             get
             {
                 return new List<HandAction>()
-                                    {
-                                        new HandAction("ItalyToast", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
-                                        new HandAction("ToyBoy66", HandActionType.BIG_BLIND, 200m, Street.Preflop),
+                {
+                    new HandAction("ItalyToast", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
+                    new HandAction("ToyBoy66", HandActionType.BIG_BLIND, 200m, Street.Preflop),
 
-                                        new HandAction("ItalyToast", HandActionType.RAISE, 300, Street.Preflop),
-                                        new HandAction("ToyBoy66", HandActionType.FOLD, 0, Street.Preflop),
-
-                                        new WinningsAction("ItalyToast", HandActionType.WINS, 400m, 0),  
-                                    };
+                    new HandAction("ItalyToast", HandActionType.RAISE, 300, Street.Preflop),
+                    new HandAction("ToyBoy66", HandActionType.FOLD, 0, Street.Preflop),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsFoldedPreflop
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("ItalyToast", WinningsActionType.WINS, 400m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedHandActions3BetHand
@@ -68,24 +108,27 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             get
             {
                 return new List<HandAction>()
-                                    {
-                                        new HandAction("Phyre", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
-                                        new HandAction("AllinAnna", HandActionType.BIG_BLIND, 200m, Street.Preflop),
+                {
+                    new HandAction("Phyre", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
+                    new HandAction("AllinAnna", HandActionType.BIG_BLIND, 200m, Street.Preflop),
 
-                                        new HandAction("ItalyToast", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("SAMERRRR", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("Supervic", HandActionType.RAISE, 400m, Street.Preflop),
-                                        new HandAction("Phyre", HandActionType.RAISE, 1300m, Street.Preflop),
-                                        new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("Supervic", HandActionType.CALL, 1000m, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("SAMERRRR", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Supervic", HandActionType.RAISE, 400m, Street.Preflop),
+                    new HandAction("Phyre", HandActionType.RAISE, 1300m, Street.Preflop),
+                    new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("Supervic", HandActionType.CALL, 1000m, Street.Preflop),
 
-                                        new HandAction("Phyre", HandActionType.CHECK, 0m, Street.Flop),
-                                        new HandAction("Supervic", HandActionType.BET, 2200m, Street.Flop),
-                                        new HandAction("Phyre", HandActionType.FOLD, 0m, Street.Flop),
-
-                                        new WinningsAction("Supervic", HandActionType.WINS, 2985m, 0)
-                                    };
+                    new HandAction("Phyre", HandActionType.CHECK, 0m, Street.Flop),
+                    new HandAction("Supervic", HandActionType.BET, 2200m, Street.Flop),
+                    new HandAction("Phyre", HandActionType.FOLD, 0m, Street.Flop),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActions3BetHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("Supervic", WinningsActionType.WINS, 2985m, 0) }; }
         }
 
         protected override List<HandAction> ExpectedHandActionsAllInHand
@@ -93,22 +136,55 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             get
             {
                 return new List<HandAction>()
-                                    {
-                                        new HandAction("Phyre", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
-                                        new HandAction("AllinAnna", HandActionType.BIG_BLIND, 200m, Street.Preflop),
+                {
+                    new HandAction("Phyre", HandActionType.SMALL_BLIND, 100m, Street.Preflop),
+                    new HandAction("AllinAnna", HandActionType.BIG_BLIND, 200m, Street.Preflop),
 
-                                        new HandAction("ItalyToast", HandActionType.RAISE, 450m, Street.Preflop),
-                                        new HandAction("SAMERRRR", HandActionType.RAISE, 1650, Street.Preflop),
-                                        new HandAction("Supervic", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("Phyre", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.RAISE, 4800m, Street.Preflop),
-                                        new HandAction("SAMERRRR", HandActionType.RAISE, 14322.51m, Street.Preflop, true),
-                                        new HandAction("ItalyToast", HandActionType.CALL, 3385m, Street.Preflop, true),
+                    new HandAction("ItalyToast", HandActionType.RAISE, 450m, Street.Preflop),
+                    new HandAction("SAMERRRR", HandActionType.RAISE, 1650, Street.Preflop),
+                    new HandAction("Supervic", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Phyre", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("AllinAnna", HandActionType.FOLD, 0, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.RAISE, 4800m, Street.Preflop),
+                    new HandAction("SAMERRRR", HandActionType.RAISE, 14322.51m, Street.Preflop, true),
+                    new HandAction("ItalyToast", HandActionType.CALL, 3385m, Street.Preflop, true),
 
-                                        new WinningsAction("SAMERRRR", HandActionType.WINS, 17555m, 0),  
-                                    };
+                    new HandAction("ItalyToast", HandActionType.MUCKS, Street.Showdown),
+                    new HandAction("SAMERRRR", HandActionType.SHOW, Street.Showdown),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsAllInHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("SAMERRRR", WinningsActionType.WINS, 17555m, 0) }; }
+        }
+
+        protected override List<HandAction> ExpectedHandActionsUncalledBetHand
+        {
+            get
+            {
+                return new List<HandAction>()
+                {
+                    new HandAction("Player2", HandActionType.SMALL_BLIND, 25m, Street.Preflop),
+                    new HandAction("Player3", HandActionType.BIG_BLIND, 50m, Street.Preflop),
+
+                    new HandAction("Player4", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Player5", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Player1", HandActionType.RAISE, 112.50m, Street.Preflop),
+                    new HandAction("Player2", HandActionType.CALL, 87.5m, Street.Preflop),
+                    new HandAction("Player3", HandActionType.CALL, 62.50m, Street.Preflop),
+
+                    new HandAction("Player2", HandActionType.BET, 200m, Street.Flop),
+                    new HandAction("Player3", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("Player1", HandActionType.FOLD, 0m, Street.Flop),
+                };
+            }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersHandActionsUncalledBetHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("Player2", WinningsActionType.WINS, 329.07m, 0), }; }
         }
 
         protected override List<HandAction> ExpectedOmahaHiLoHand
@@ -116,30 +192,68 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
             get
             {
                 return new List<HandAction>()
-                                    {
-                                        new HandAction("Von MÃ¶gen", HandActionType.SMALL_BLIND, 2.50m, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.BIG_BLIND, 5m, Street.Preflop),
+                {
+                    new HandAction("Von MÃ¶gen", HandActionType.SMALL_BLIND, 2.50m, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.BIG_BLIND, 5m, Street.Preflop),
 
-                                        new HandAction("KrossKajsa", HandActionType.FOLD, 0m, Street.Preflop),
-                                        new HandAction("Hannes_nr1", HandActionType.RAISE, 14.37m, Street.Preflop),
-                                        new HandAction("Von MÃ¶gen", HandActionType.CALL, 11.87m, Street.Preflop),
-                                        new HandAction("ItalyToast", HandActionType.CALL, 9.37m, Street.Preflop),
+                    new HandAction("KrossKajsa", HandActionType.FOLD, 0m, Street.Preflop),
+                    new HandAction("Hannes_nr1", HandActionType.RAISE, 14.37m, Street.Preflop),
+                    new HandAction("Von MÃ¶gen", HandActionType.CALL, 11.87m, Street.Preflop),
+                    new HandAction("ItalyToast", HandActionType.CALL, 9.37m, Street.Preflop),
 
-                                        new HandAction("Von MÃ¶gen", HandActionType.CHECK, 0, Street.Flop),
-                                        new HandAction("ItalyToast", HandActionType.CHECK, 0m, Street.Flop),
-                                        new HandAction("Hannes_nr1", HandActionType.BET, 32.33m, Street.Flop),
-                                        new HandAction("Von MÃ¶gen", HandActionType.FOLD, 0m, Street.Flop),
-                                        new HandAction("ItalyToast", HandActionType.CALL, 32.33m, Street.Flop),
+                    new HandAction("Von MÃ¶gen", HandActionType.CHECK, 0, Street.Flop),
+                    new HandAction("ItalyToast", HandActionType.CHECK, 0m, Street.Flop),
+                    new HandAction("Hannes_nr1", HandActionType.BET, 32.33m, Street.Flop),
+                    new HandAction("Von MÃ¶gen", HandActionType.FOLD, 0m, Street.Flop),
+                    new HandAction("ItalyToast", HandActionType.CALL, 32.33m, Street.Flop),
 
-                                        new HandAction("ItalyToast", HandActionType.CHECK, 0m, Street.Turn),
-                                        new HandAction("Hannes_nr1", HandActionType.CHECK, 0m, Street.Turn),
+                    new HandAction("ItalyToast", HandActionType.CHECK, 0m, Street.Turn),
+                    new HandAction("Hannes_nr1", HandActionType.CHECK, 0m, Street.Turn),
 
-                                        new HandAction("ItalyToast", HandActionType.BET, 82m, Street.River),
-                                        new HandAction("Hannes_nr1", HandActionType.FOLD, 0m, Street.River),
-
-                                        new WinningsAction("ItalyToast", HandActionType.WINS, 105.08m, 0),  
-                                    };
+                    new HandAction("ItalyToast", HandActionType.BET, 82m, Street.River),
+                    new HandAction("Hannes_nr1", HandActionType.FOLD, 0m, Street.River),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersOmahaHiLoHand
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("ItalyToast", WinningsActionType.WINS, 105.08m, 0), }; }
+        }
+
+        [TestCase]
+        public void ExpectedHandActionsCallAllInHand()
+        {
+            var actions = new List<HandAction>()
+            {
+                new HandAction("Player4", HandActionType.SMALL_BLIND, 50m, Street.Preflop),
+                new HandAction("Player5", HandActionType.BIG_BLIND, 100m, Street.Preflop),
+
+                new HandAction("Player1", HandActionType.CALL, 100m, Street.Preflop),
+                new HandAction("Player2", HandActionType.FOLD, Street.Preflop),
+                new HandAction("HERO", HandActionType.RAISE, 450m, Street.Preflop),
+                new HandAction("Player4", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("Player5", HandActionType.FOLD, 0, Street.Preflop),
+                new HandAction("Player1", HandActionType.CALL, 350m, Street.Preflop),
+
+                new HandAction("Player1", HandActionType.CHECK, 0m, Street.Flop),
+                new HandAction("HERO", HandActionType.BET, 1050m, Street.Flop),
+                new HandAction("Player1", HandActionType.CALL, 1050m, Street.Flop),
+
+                new HandAction("Player1", HandActionType.BET, 3150m, Street.Turn),
+                new HandAction("HERO", HandActionType.CALL, 2575.02m, Street.Turn, true),
+
+                new HandAction("Player1", HandActionType.SHOW, Street.Showdown),
+                
+                new HandAction("HERO", HandActionType.MUCKS, Street.Showdown),
+            };
+
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Player1", WinningsActionType.WINS, 8285.04m, 0),
+            };
+
+            TestParseActions("CallAllInHand", actions, expectedWinners);
         }
     }
 }

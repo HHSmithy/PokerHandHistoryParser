@@ -1,0 +1,36 @@
+﻿PokerStars Game #112993774783:  Hold'em No Limit ($0.50/$1.00 USD) - 2014/03/09 6:36:47 ET
+Table 'Achird 40-100 bb' 9-max Seat #8 is the button
+Seat 2: brtnboarder ($154.49 in chips)
+Seat 4: J.Fousse ($100 in chips)
+Seat 5: Poszi ($100 in chips)
+Seat 7: JuryMonster ($41.82 in chips)
+Seat 8: Dantistcopra ($157.61 in chips)
+brtnboarder: posts small blind $0.50
+Luxuswasser: is sitting out
+Luxuswasser leaves the table
+J.Fousse: posts big blind $1
+*** HOLE CARDS ***
+HadlyKey is disconnected
+Poszi: folds
+JuryMonster: folds
+Dantistcopra: folds
+brtnboarder: raises $1 to $2
+J.Fousse: calls $1
+*** FLOP *** [7c Ts 3h]
+brtnboarder: bets $2.48
+J.Fousse: calls $2.48
+*** TURN *** [7c Ts 3h] [8c]
+brtnboarder: checks
+J.Fousse: bets $6
+brtnboarder: folds
+Uncalled bet ($6) returned to J.Fousse
+J.Fousse collected $8.56 from pot
+J.Fousse: doesn't show hand
+*** SUMMARY ***
+Total pot $8.96 | Rake $0.40
+Board [7c Ts 3h 8c]
+Seat 2: brtnboarder (small blind) folded on the Turn
+Seat 4: J.Fousse (big blind) collected ($8.56)
+Seat 5: Poszi folded before Flop (didn't bet)
+Seat 7: JuryMonster folded before Flop (didn't bet)
+Seat 8: Dantistcopra (button) folded before Flop (didn't bet)

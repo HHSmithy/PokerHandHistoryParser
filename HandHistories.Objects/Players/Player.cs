@@ -7,7 +7,7 @@ using HandHistories.Objects.Cards;
 namespace HandHistories.Objects.Players
 {
     [DataContract]
-    public class Player
+    public sealed class Player
     {
         [DataMember]
         public string PlayerName { get; private set; }
@@ -48,13 +48,17 @@ namespace HandHistories.Objects.Players
 
         public override int GetHashCode()
         {
-            return ToString().GetHashCode();
+            return PlayerName.GetHashCode();
         }
 
         public override bool Equals(object obj)
         {
-            if (obj == null) return false;
-            return obj.ToString().Equals(ToString());
+            var other = obj as Player;
+            if (other != null)
+            {
+                return this == other;
+            }
+            return false;
         }
 
         public override string ToString()
@@ -67,6 +71,31 @@ namespace HandHistories.Objects.Players
             }
 
             return s;
+        }
+
+        public static bool operator ==(Player p1, Player p2)
+        {
+            if (ReferenceEquals(p1, p2))
+            {
+                return true;
+            }
+            else if (ReferenceEquals(p1, null) || ReferenceEquals(p2, null))
+            {
+                return false;
+            }
+            else
+            {
+                return p1.PlayerName == p2.PlayerName &&
+                    p1.SeatNumber == p2.SeatNumber &&
+                    p1.StartingStack == p2.StartingStack &&
+                    p1.HoleCards == p2.HoleCards &&
+                    p1.IsSittingOut == p2.IsSittingOut;
+            }
+        }
+
+        public static bool operator !=(Player p1, Player p2)
+        {
+            return !(p1 == p2);
         }
     }
 }

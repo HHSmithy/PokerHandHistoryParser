@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6577000000">
+ <general>
+  <mode>real</mode>
+  <gametype>Omaha PL $3/$6</gametype>
+  <tablename>Aspariegos, 819000000</tablename>
+  <tablecurrency>USD</tablecurrency>
+  <duration>01:00:00</duration>
+  <gamecount>100</gamecount>
+  <startdate>2016-01-01 01:01:01</startdate>
+  <currency>USD</currency>
+  <nickname>Player8</nickname>
+  <bets>€4,692.03</bets>
+  <wins>€6,169.20</wins>
+  <chipsin>€594</chipsin>
+  <chipsout>€2,532.80</chipsout>
+  <statuspoints>0.00</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+ </general>
+ <game gamecode="7040000000">
+  <general>
+   <startdate>2016-01-01 01:01:01</startdate>
+   <players>
+    <player bet="€21" seat="1" chips="€1000.00" dealer="0" name="Player1" win="€0"/>
+    <player bet="€573.10" seat="3" chips="€573.10" dealer="0" name="Player3" win="€0"/>
+    <player bet="€0" seat="5" chips="€1000.00" dealer="0" name="Player5" win="€0"/>
+    <player bet="€0" seat="6" chips="€1000" dealer="1" name="Player6" win="€0"/>
+    <player bet="€667" seat="8" chips="€1,275.70" dealer="0" name="Player8" win="€1,924.10"/>
+    <player bet="€673" seat="10" chips="€667" dealer="0" name="Player10" win="€0"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" player="Player8" type="1" sum="€3" no="1"/>
+   <action cards="" player="Player10" type="2" sum="€6" no="2"/>
+  </round>
+  <round no="1">
+   <cards player="Player1" type="Pocket">X X X X</cards>
+   <action cards="" player="Player1" type="23" sum="€21" no="3"/>
+   <cards player="Player3" type="Pocket">S6 D4 D9 S8</cards>
+   <action cards="" player="Player3" type="23" sum="€72" no="4"/>
+   <cards player="Player5" type="Pocket">X X X X</cards>
+   <action cards="" player="Player5" type="0" sum="€0" no="5"/>
+   <cards player="Player6" type="Pocket">X X X X</cards>
+   <action cards="" player="Player6" type="0" sum="€0" no="6"/>
+   <cards player="Player8" type="Pocket">SQ SA CK SK</cards>
+   <action cards="" player="Player8" type="23" sum="€240" no="7"/>
+   <cards player="Player10" type="Pocket">D3 HA CA HQ</cards>
+   <action cards="" player="Player10" type="23" sum="€667" no="8"/>
+   <action cards="" player="Player1" type="0" sum="€0" no="9"/>
+   <action cards="" player="Player3" type="7" sum="€501.10" no="10"/>
+   <action cards="" player="Player8" type="3" sum="€427" no="11"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">D2 HK H7 </cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">D7</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">CJ</cards>
+  </round>
+ </game>
+</session>
+
