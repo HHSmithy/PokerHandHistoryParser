@@ -20,6 +20,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             Site = (SiteName)Enum.Parse(typeof(SiteName), site);
         }
 
+        protected HandHistoryParserBaseTests(string site, string version)
+        {
+            SampleHandHistoryRepository = Kernel.Get<ISampleHandHistoryRepository>();
+            Site = (SiteName)Enum.Parse(typeof(SiteName), site);
+        }
+
         protected IKernel Kernel = new NinjectKernel();
 
         protected ISampleHandHistoryRepository SampleHandHistoryRepository;

@@ -58,6 +58,10 @@ namespace HandHistories.Objects.GameDescription
                     return @"£";
                 case Currency.All:
                     return @"";
+                case Currency.SATELLITE:
+                    return "S";
+                case Currency.CNY:
+                    return @"¥";
                 default:
                     throw new Exception("Unrecognized currency " + Currency);
             }
@@ -120,7 +124,7 @@ namespace HandHistories.Objects.GameDescription
                 return AllBuyin();
             }
 
-            if (buyinString[0] == 'B' || buyinString[0] == 'B') buyinString = buyinString.Substring(1);
+            if (buyinString[0] == 'B') buyinString = buyinString.Substring(1);
             string[] split = buyinString.Replace("c", "").Split('-');
             
             decimal prizePoolValue = Int32.Parse(split[0]) / 100.0m;

@@ -17,7 +17,7 @@ namespace HandHistories.Parser.Parsers.Base
         
         DateTime ParseDateUtc(string handText);
 
-        long ParseHandId(string handText);
+        long[] ParseHandId(string handText);
 
         string ParseTableName(string handText);
 
@@ -31,11 +31,13 @@ namespace HandHistories.Parser.Parsers.Base
 
         Limit ParseLimit(string handText);
 
-        int ParseNumPlayers(string handText);        
+        int ParseNumPlayers(string handText);
 
         /// <summary>
         /// An intial bit of verification to check if the hand text
         /// is valid. For instance Party hands must contain ' wins '.
+        /// The same hand may be valid for multiple sites, 
+        /// if you need identifaction of the hand use FileIdentifier.IdentifyHand() instead
         /// </summary>
         /// <param name="handText">The entire hand text.</param>
         /// <returns>True if the hand is valid. False if not.</returns>
@@ -48,5 +50,7 @@ namespace HandHistories.Parser.Parsers.Base
         /// <param name="isCancelled"></param>
         /// <returns>True if the hand is valid, false if not. Outs the cancelled state.</returns>
         bool IsValidOrCancelledHand(string handText, out bool isCancelled);
+
+        PokerFormat ParsePokerFormat(string handText);
     }
 }

@@ -25,7 +25,7 @@ namespace HandHistories.Objects.UnitTests.Serialization
         {
             _handHistory = new HandHistory()
                                {                                  
-                                   ComumnityCards =
+                                   CommunityCards =
                                        BoardCards.ForFlop(Card.GetCardFromIntValue(5), Card.GetCardFromIntValue(14),
                                                           Card.GetCardFromIntValue(40)),
                                    DateOfHandUtc = new DateTime(2012, 3, 20, 12, 30, 44),
@@ -42,7 +42,7 @@ namespace HandHistories.Objects.UnitTests.Serialization
                                                      {
                                                          new HandAction("Player1", HandActionType.POSTS, 0.25m, Street.Preflop)
                                                      },
-                                   HandId = 141234124,
+                                   HandId = HandID.From(141234124),
                                    NumPlayersSeated = 2,
                                    Players = new PlayerList()
                                                  {
@@ -59,7 +59,7 @@ namespace HandHistories.Objects.UnitTests.Serialization
             string serialized =
                 _serializationHandler.Serialize(_handHistory);
 
-            Assert.IsNotNullOrEmpty(serialized);
+            Assert.IsTrue(!string.IsNullOrEmpty(serialized));
         }
 
         [Test]

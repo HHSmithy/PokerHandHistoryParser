@@ -1,0 +1,34 @@
+﻿Hand #54760000 - Omaha(Pot Limit) - $0.10/$0.25 - 2019/04/25 14:10:24 UTC
+Morrison 6-max Seat #1 is the button
+Seat 1: pandabear44 ($12.63)
+Seat 2: GreatShannon ($20.00)
+Seat 3: Swedish Fish ($8.63)
+Seat 4: sever4523 ($0.00) is sitting out
+Seat 5: !? ($3945.11)
+Seat 6: EMUDGE ($25.60)
+Swedish Fish posts the small blind $0.10
+!? sits out
+EMUDGE posts the big blind $0.25
+GreatShannon waits for big blind
+*** HOLE CARDS ***
+pandabear44 calls $0.25
+Swedish Fish folds
+EMUDGE checks
+*** FLOP *** [5c 9c 7h]
+Main pot $0.57 | Rake $0.03
+EMUDGE checks
+pandabear44 bets $0.60
+EMUDGE calls $0.60
+*** TURN *** [5c 9c 7h] [Qs]
+Main pot $1.71 | Rake $0.09
+EMUDGE checks
+pandabear44 bets $1.80
+EMUDGE folds
+Uncalled bet ($1.80) returned to pandabear44
+pandabear44 does not show
+*** SUMMARY ***
+Total pot $1.71 | Rake $0.07 | JP Fee $0.02
+Board [5c 9c 7h Qs]
+Seat 1: pandabear44 did not show and won $1.71
+Seat 3: Swedish Fish (small blind) folded on the Pre-Flop
+Seat 6: EMUDGE (big blind) folded on the Turn

@@ -8,6 +8,6 @@ namespace HandHistories.Parser.Parsers.Factory
     {
         IHandHistoryParser GetFullHandHistoryParser(SiteName siteName);
 
-        IHandHistorySummaryParser GetHandHistorySummaryParser(SiteName siteName);        
+        IHandHistorySummaryParser GetHandHistorySummaryParser(SiteName siteName);
     }
 }

@@ -1,0 +1,41 @@
+﻿Game started at: 2014/3/9 0:38:42
+Game ID: 261454571 2/4 Baryte   (JP) - 2 (Hold'em)
+Seat 3 is the button
+Seat 2: Ra1syDa1sy (165.10).
+Seat 3: rexjellis (427.33).
+Seat 4: NoahSDsDad (402).
+Seat 5: bjv1105 (400).
+Seat 6: Ez24 (595.25).
+Player NoahSDsDad has small blind (2)
+Player bjv1105 has big blind (4)
+Player NoahSDsDad received a card.
+Player NoahSDsDad received a card.
+Player bjv1105 received a card.
+Player bjv1105 received a card.
+Player Ez24 received a card.
+Player Ez24 received a card.
+Player Ra1syDa1sy received a card.
+Player Ra1syDa1sy received a card.
+Player rexjellis received a card.
+Player rexjellis received a card.
+Player Ez24 folds
+Player Ra1syDa1sy raises (10)
+Player rexjellis folds
+Player NoahSDsDad folds
+Player bjv1105 calls (6)
+*** FLOP ***: [3c Kd Ad]
+Player bjv1105 checks
+Player Ra1syDa1sy checks
+*** TURN ***: [3c Kd Ad] [2s]
+Player bjv1105 bets (15)
+Player Ra1syDa1sy calls (15)
+*** RIVER ***: [3c Kd Ad 2s] [8d]
+Player bjv1105 bets (35)
+Player Ra1syDa1sy folds
+Uncalled bet (35) returned to bjv1105
+Player bjv1105 mucks cards
+------ Summary ------
+Pot: 49.75. Rake 2
+Board: [3c Kd Ad 2s 8d]
+Player Ra1syDa1sy does not show cards.Bets: 25. Collects: 0. Loses: 25.
+Player rexjellis does not show cards.Bets: 0. Collects: 0. Wins: 0.

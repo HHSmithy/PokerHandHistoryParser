@@ -73,6 +73,7 @@ namespace HandHistories.Objects.Cards
                 case Street.Turn:
                     return BoardCards.ForTurn(this[0], this[1], this[2], this[3]);
                 case Street.River:
+                case Street.Showdown:
                     return BoardCards.ForRiver(this[0], this[1], this[2], this[3], this[4]);
                 default:
                     throw new ArgumentException("Can't get board in for null street");

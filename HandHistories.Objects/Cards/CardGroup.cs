@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
+    [DebuggerDisplay("{ToString()}")]
     [DataContract]
     public abstract class CardGroup : IEnumerable<Card>
     {
@@ -36,11 +38,11 @@ namespace HandHistories.Objects.Cards
                 {
                     continue;
                 }
-                cardsList.Add(new Card(cards[i++], cards[i]));
+               cardsList.Add(new Card(cards[i++], cards[i]));
             }
 
             return cardsList.ToArray();
-        }        
+        }
 
         public void AddCard(Card card)
         {
@@ -82,7 +84,7 @@ namespace HandHistories.Objects.Cards
 
         public override string ToString()
         {
-            return string.Join("", Cards.Select(c => c.CardStringValue));
+            return string.Join("", Cards.Select(c => c.ToString()));
         }
 
         public override bool Equals(object obj)

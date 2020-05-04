@@ -32,8 +32,10 @@
             this.buttonParse = new System.Windows.Forms.Button();
             this.listBoxSite = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox_validateHands = new System.Windows.Forms.CheckBox();
+            this.checkBox_serialize = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.richTextBoxHandText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxHandText.Location = new System.Drawing.Point(3, 23);
             this.richTextBoxHandText.Name = "richTextBoxHandText";
-            this.tableLayoutPanel1.SetRowSpan(this.richTextBoxHandText, 2);
+            this.tableLayoutPanel1.SetRowSpan(this.richTextBoxHandText, 4);
             this.richTextBoxHandText.Size = new System.Drawing.Size(623, 651);
             this.richTextBoxHandText.TabIndex = 0;
             this.richTextBoxHandText.Text = "";
@@ -63,7 +65,7 @@
             this.listBoxSite.FormattingEnabled = true;
             this.listBoxSite.Location = new System.Drawing.Point(632, 23);
             this.listBoxSite.Name = "listBoxSite";
-            this.listBoxSite.Size = new System.Drawing.Size(141, 595);
+            this.listBoxSite.Size = new System.Drawing.Size(141, 549);
             this.listBoxSite.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -73,18 +75,33 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.richTextBoxHandText, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonParse, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.listBoxSite, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.checkBox_validateHands, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonParse, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.checkBox_serialize, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(776, 677);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(688, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Site";
             // 
             // label1
             // 
@@ -97,16 +114,25 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Hand History Text";
             // 
-            // label2
+            // checkBox_validateHands
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(688, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Site";
+            this.checkBox_validateHands.AutoSize = true;
+            this.checkBox_validateHands.Location = new System.Drawing.Point(632, 578);
+            this.checkBox_validateHands.Name = "checkBox_validateHands";
+            this.checkBox_validateHands.Size = new System.Drawing.Size(96, 17);
+            this.checkBox_validateHands.TabIndex = 5;
+            this.checkBox_validateHands.Text = "Validate hands";
+            this.checkBox_validateHands.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_serialize
+            // 
+            this.checkBox_serialize.AutoSize = true;
+            this.checkBox_serialize.Location = new System.Drawing.Point(632, 601);
+            this.checkBox_serialize.Name = "checkBox_serialize";
+            this.checkBox_serialize.Size = new System.Drawing.Size(108, 17);
+            this.checkBox_serialize.TabIndex = 5;
+            this.checkBox_serialize.Text = "Serialize to JSON";
+            this.checkBox_serialize.UseVisualStyleBackColor = true;
             // 
             // ParserTestForm
             // 
@@ -130,6 +156,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox_validateHands;
+        private System.Windows.Forms.CheckBox checkBox_serialize;
     }
 }
 

@@ -33,6 +33,11 @@ namespace HandHistories.Objects.GameDescription
         WinningPoker = 28,
         PartyPokerNJ = 29,
         PartyPokerEs = 30,
+        IGT = 31,
+        WinningPokerV1 = 32,
+        WinningPokerV2 = 33,
+        AsianPokerClubs = 34,
+        Upoker = 35,
         All = 63 // note: can't go higher than 63 due to bit value optimizations
     }
 }

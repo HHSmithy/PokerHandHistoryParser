@@ -1,0 +1,55 @@
+﻿<Game hhversion="5" id="5837000000" date="2015-01-01 01:01:01" unicodetablename="=" tablename="Christmas Day 26 - Apple Watch[16000000]:Table 10" stakes="10|20" betlimit="NL" tabletype="MTT" unicodetabletype="TQBUAFQA" gametypeid="1" gametype="Multi Table Hold&apos;em" realmoney="true" currencysymbol="" playerseat="6" betamount="2000" istournament="1" totalplayers="8" tablesize="9" badbeat="false" currencyId="-1">
+   <Seats>
+      <Seat num="1" alias="Player1" unicodealias="" balance="2790.00" endbalance="2790.00" sittingout="true"/>
+      <Seat num="2" alias="Player2" unicodealias="" balance="2790.00" endbalance="2790.00" sittingout="true"/>
+      <Seat num="3" alias="Player3" unicodealias="" balance="2790.00" endbalance="2790.00"/>
+      <Seat num="4" alias="Player4" unicodealias="" balance="2790.00" endbalance="2790.00" sittingout="true"/>
+      <Seat num="6" alias="HERO" unicodealias="" balance="10250.00" endbalance="10250.00" dealer="true"/>
+      <Seat num="7" alias="Player7" unicodealias="" balance="10.00" endbalance="30.00" sittingout="true"/>
+      <Seat num="8" alias="Player8" unicodealias="" balance="2790.00" endbalance="2770.00" sittingout="true"/>
+      <Seat num="9" alias="Player9" unicodealias="" balance="2790.00" endbalance="2790.00" sittingout="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="AllIn" seat="7" value="10.00"/>
+      <Action seq="2" type="BigBlind" seat="8" value="20.00"/>
+      <Action seq="3" type="DealCards" seat="6">
+         <Card value="4" suit="h" id="42"/>
+         <Card value="J" suit="d" id="36"/>
+      </Action>
+      <Action seq="4" type="Fold" seat="9"/>
+      <Action seq="5" type="Fold" seat="1"/>
+      <Action seq="6" type="Fold" seat="2"/>
+      <Action seq="7" type="Fold" seat="3"/>
+      <Action seq="8" type="Fold" seat="4"/>
+      <Action seq="9" type="Raise" seat="6" value="40.00"/>
+      <Action seq="10" type="Fold" seat="8"/>
+      <Action seq="11" type="MoneyReturned" seat="6" value="20.00"/>
+      <Action seq="12" type="ShowCards" seat="6">
+         <Card value="4" suit="h" id="42"/>
+         <Card value="J" suit="d" id="36"/>
+      </Action>
+      <Action seq="13" type="ShowCards" seat="7">
+         <Card value="3" suit="c" id="15"/>
+         <Card value="K" suit="h" id="51"/>
+      </Action>
+      <Action seq="14" type="DealFlop">
+         <Card value="8" suit="s" id="7"/>
+         <Card value="5" suit="h" id="43"/>
+         <Card value="9" suit="c" id="21"/>
+      </Action>
+      <Action seq="15" type="DealTurn">
+         <Card value="K" suit="c" id="25"/>
+      </Action>
+      <Action seq="16" type="DealRiver">
+         <Card value="9" suit="s" id="8"/>
+      </Action>
+      <Action seq="17" type="ShowCards" seat="6">
+         <Card value="4" suit="h" id="42"/>
+         <Card value="J" suit="d" id="36"/>
+      </Action>
+      <Action type="Win">
+         <Seat num="6" amount="20.00" pot="1" type="" lowhandwin="0"/>
+         <Seat num="7" amount="30.00" pot="0" type="" lowhandwin="0"/>
+      </Action>
+   </Gameplay>
+</Game>

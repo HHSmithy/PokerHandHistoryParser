@@ -1,6 +1,5 @@
 ﻿using System;
 using HandHistories.Objects.GameDescription;
-using HandHistories.Parser.Compression;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser.Entraction;
 using HandHistories.Parser.Parsers.FastParser.FullTiltPoker;
@@ -11,10 +10,13 @@ using HandHistories.Parser.Parsers.FastParser.OnGame;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.Parsers.FastParser.Winamax;
 using HandHistories.Parser.Parsers.FastParser._888;
-using HandHistories.Parser.Parsers.RegexParser.PartyPoker;
 using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Parsers.FastParser.BossMedia;
 using HandHistories.Parser.Parsers.FastParser.PartyPoker;
+using HandHistories.Parser.Parsers.JSONParser.IGT;
+using HandHistories.Parser.Parsers.LineCategoryParser.WinningPokerV2;
+using HandHistories.Parser.Parsers.LineCategoryParser.PartyPoker;
+using System.Text.RegularExpressions;
 
 namespace HandHistories.Parser.Parsers.Factory
 {
@@ -22,7 +24,6 @@ namespace HandHistories.Parser.Parsers.Factory
     {
         public HandHistoryParserFactoryImpl()
         {
-       
         }
 
         public IHandHistoryParser GetFullHandHistoryParser(SiteName siteName)
@@ -34,7 +35,7 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.PartyPokerNJ:
                 case SiteName.PartyPokerIt:
                 case SiteName.PartyPoker:
-                    return new PartyPokerFastParserImpl(siteName);
+                    return new PartyPokerLineCatParserImpl();
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
@@ -63,9 +64,21 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.Winamax:
                     return new WinamaxFastParserImpl();
                 case SiteName.WinningPoker:
+                    var wpnMulti = new MultiVersionParser();
+                    wpnMulti.Add(new WinningPokerNetworkFastParserImpl(), p => p.StartsWith("Game started at: "));
+                    wpnMulti.Add(new WinningPokerNetworkV2LineCatParserImpl(), p => p.StartsWith("Hand #"));
+                    return wpnMulti;
+                case SiteName.WinningPokerV1:
                     return new WinningPokerNetworkFastParserImpl();
+                case SiteName.WinningPokerV2:
+                    return new WinningPokerNetworkV2LineCatParserImpl();
                 case SiteName.BossMedia:
                     return new BossMediaFastParserImpl();
+                case SiteName.IGT:
+                    return new IGTJSONParserImpl();
+                case SiteName.AsianPokerClubs:
+                    var splitRegex = new Regex("PokerMaster Hand #", RegexOptions.Compiled);
+                    return new PokerStarsFastParserImpl(SiteName.AsianPokerClubs, splitRegex);
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No full regex parser for " + siteName);
             }
@@ -80,7 +93,7 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.PartyPokerNJ:
                 case SiteName.PartyPokerIt:
                 case SiteName.PartyPoker:
-                    return new PartyPokerFastParserImpl(siteName);
+                    return new PartyPokerLineCatParserImpl();
                 case SiteName.PokerStars:
                 case SiteName.PokerStarsFr:
                 case SiteName.PokerStarsIt:
@@ -109,9 +122,21 @@ namespace HandHistories.Parser.Parsers.Factory
                 case SiteName.Winamax:
                     return new WinamaxFastParserImpl();
                 case SiteName.WinningPoker:
+                    var wpnMulti = new MultiVersionParser();
+                    wpnMulti.Add(new WinningPokerNetworkFastParserImpl(), p => p.StartsWith("Game started at: "));
+                    wpnMulti.Add(new WinningPokerNetworkV2LineCatParserImpl(), p => p.StartsWith("Hand #"));
+                    return wpnMulti;
+                case SiteName.WinningPokerV1:
                     return new WinningPokerNetworkFastParserImpl();
+                case SiteName.WinningPokerV2:
+                    return new WinningPokerNetworkV2LineCatParserImpl();
                 case SiteName.BossMedia:
                     return new BossMediaFastParserImpl();
+                case SiteName.IGT:
+                    return new IGTJSONParserImpl();
+                case SiteName.AsianPokerClubs:
+                    var splitRegex = new Regex("PokerMaster Hand #", RegexOptions.Compiled);
+                    return new PokerStarsFastParserImpl(SiteName.AsianPokerClubs, splitRegex);
                 default:
                     throw new NotImplementedException("GetHandHistorySummaryParser: No summary regex parser for " + siteName);
             }

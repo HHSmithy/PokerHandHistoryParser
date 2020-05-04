@@ -1,0 +1,45 @@
+﻿Game # 2703545521 - 5-Card Omaha High Pot Limit EUR 0.10/0.20 - Table "Hebron"
+
+Players(max 6):
+zinzan 71                   (EUR 6.00 in seat 1)
+Kode9                       (EUR 48.64 in seat 2)
+Mrhomogay88                 (EUR 115.20 in seat 3)
+yjfdffgns                   (EUR 19.42 in seat 4)
+alamou                      (EUR 21.12 in seat 6)
+
+Dealer:                     yjfdffgns
+Small Blind:                alamou      (0.10)
+Big Blind:                  zinzan 71   (0.20)
+
+Kode9                       Raise       (0.57)
+Mrhomogay88                 Raise       (2.01)
+yjfdffgns                   Call        (2.01)
+alamou                      Fold
+zinzan 71                   Fold
+Kode9                       Call        (1.44)
+
+Flop                        7d - 3d - Qd
+
+Kode9                       Check
+Mrhomogay88                 Bet         (3.16)
+yjfdffgns                   Fold
+Kode9                       Call        (3.16)
+
+Turn                        7d - 3d - Qd - 2h
+
+Kode9                       Check
+Mrhomogay88                 Check
+
+River                       7d - 3d - Qd - 2h - Ad
+
+Kode9                       Check
+Mrhomogay88                 Check
+
+Kode9 shows:                9h - 6d - 8s - Qs - 8d
+
+Mrhomogay88 didn't show hand (4d - 2d - 5h - Ks - Ah)
+
+Kode9 wins:                 EUR 12.02
+Rake:                       EUR 0.63
+
+Game ended 2012-08-20 00:05:11 GMT+01:00

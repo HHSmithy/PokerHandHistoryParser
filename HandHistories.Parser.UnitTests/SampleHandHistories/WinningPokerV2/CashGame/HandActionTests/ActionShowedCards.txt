@@ -1,0 +1,43 @@
+Hand #240462066 - Omaha(Pot Limit) - $50.00/$100.00 - 2020/03/04 21:59:35 UTC
+7 Day No Rathole 50/100 PLO 9-max Seat #3 is the button
+Seat 1: hora ($6639.72)
+Seat 2: AlternativeOdds ($1000.00)
+Seat 3: kingart14 ($7442.21)
+Seat 4: BetBetBetShowWin ($1859.50)
+Seat 5: ADDIDDEEEEEEEE ($7897.25)
+Seat 6: yangis ($90495.79)
+Seat 7: benzrider ($8310.50)
+Seat 8: R.Lothbrok ($1397.00)
+Seat 9: greenshrub ($46080.67)
+BetBetBetShowWin posts the small blind $50.00
+ADDIDDEEEEEEEE posts the big blind $100.00
+R.Lothbrok waits for big blind
+*** HOLE CARDS ***
+Dealt to AlternativeOdds [7h 6s 9d 8h]
+yangis folds
+benzrider folds
+greenshrub folds
+hora raises $225.00 to $225.00
+AlternativeOdds folds
+kingart14 calls $225.00
+BetBetBetShowWin folds
+ADDIDDEEEEEEEE calls $125.00
+*** FLOP *** [Ah Jc Kh]
+Main pot $722.00 | Rake $3.00
+ADDIDDEEEEEEEE checks
+hora bets $399.00
+kingart14 folds
+ADDIDDEEEEEEEE folds
+Uncalled bet ($399.00) returned to hora
+hora shows [Qs 3d Js Ad] (two pair, Aces and Jacks [Ah Ad Js Jc Kh])
+*** SUMMARY ***
+Total pot $722.00 | Rake $2.76 | JP Fee $0.24
+Board [Ah Jc Kh]
+Seat 1: hora showed [Qs 3d Js Ad] and won $722.00 with two pair, Aces and Jacks [Ah Ad Js Jc Kh]
+Seat 2: AlternativeOdds folded on the Pre-Flop and did not bet
+Seat 3: kingart14 (button) folded on the Flop
+Seat 4: BetBetBetShowWin (small blind) folded on the Pre-Flop
+Seat 5: ADDIDDEEEEEEEE (big blind) folded on the Flop
+Seat 6: yangis folded on the Pre-Flop and did not bet
+Seat 7: benzrider folded on the Pre-Flop and did not bet
+Seat 9: greenshrub folded on the Pre-Flop and did not bet

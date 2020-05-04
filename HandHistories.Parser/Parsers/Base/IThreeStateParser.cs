@@ -15,10 +15,10 @@ namespace HandHistories.Parser.Parsers.Base
     /// </summary>
     public interface IThreeStateParser
     {
-        int ParseBlindActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex);
+        int ParseBlindActions(string[] handLines, List<HandAction> handActions, int firstActionIndex);
 
-        int ParseGameActions(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, out Street street);
+        int ParseGameActions(string[] handLines, List<HandAction> handActions, List<WinningsAction> winners, int firstActionIndex, out Street street);
 
-        void ParseShowDown(string[] handLines, ref List<HandAction> handActions, int firstActionIndex, GameType gameType);
+        void ParseShowDown(string[] handLines, List<HandAction> handActions, List<WinningsAction> winners, int firstActionIndex, GameType gameType);
     }
 }

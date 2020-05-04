@@ -1,0 +1,23 @@
+﻿Winamax Poker - CashGame - HandId: #11810000-240-1538700000 - 5 Card Omaha pot limit (10€/20€) - 2017/01/01 12:01:01 UTC
+Table: 'Middlesbrough 02' 6-max (real money) Seat #6 is the button
+Seat 1: Witty Kitty (593€)
+Seat 4: grega80 (12385.65€)
+Seat 5: fullflex96 (1200€)
+Seat 6: IBANGMIDGETS (3207€)
+*** ANTE/BLINDS ***
+Witty Kitty posts small blind 10€
+grega80 posts big blind 20€
+*** PRE-FLOP *** 
+IBANGMIDGETS folds
+Witty Kitty calls 10€
+grega80 raises 40€ to 60€
+Witty Kitty calls 40€
+*** FLOP *** [Qs Qc 4d]
+Witty Kitty checks
+grega80 bets 30€
+Witty Kitty folds
+grega80 collected 147€ from pot
+*** SUMMARY ***
+Total pot 147€ | Rake 3€
+Board: [Qs Qc 4d]
+Seat 4: grega80 (big blind) won 147€

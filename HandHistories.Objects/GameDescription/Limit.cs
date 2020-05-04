@@ -6,7 +6,7 @@ namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
     [DataContract]
-    public class Limit
+    public sealed class Limit
     {
         private Limit()
         {
@@ -75,6 +75,12 @@ namespace HandHistories.Objects.GameDescription
                     return @"€";
                 case Currency.GBP:
                     return @"£";
+                case Currency.SEK:
+                    return "SEK";
+                case Currency.CHIPS:
+                    return "";
+                case Currency.CNY:
+                    return @"¥";
                 case Currency.All:
                     return @"";
                 default:

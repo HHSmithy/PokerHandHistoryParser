@@ -1,0 +1,25 @@
+PokerStars Hand #113367101128: Omaha Pot Limit (¥25/¥50 CNY) - 2020/05/02 07:54:09 ET
+Table 'UPOK264191504' 6-max Seat #3 is the button
+Seat 3: 146701 (¥5113 in chips)
+Seat 4: 243637 (¥2100 in chips)
+Seat 6: 248854 (¥5236 in chips)
+243637: posts small blind ¥25
+248854: posts big blind ¥50
+*** HOLE CARDS ***
+Dealt to 243637 [Ad 9d 8c 6d]
+146701: raises ¥125 to ¥175
+243637: folds
+248854: calls ¥125
+*** FLOP *** [5s 5c 8h]
+248854: checks
+146701: bets ¥128
+248854: folds
+Uncalled bet (¥128) returned to 146701
+146701 collected ¥365 from pot
+146701: doesn't show hand
+*** SUMMARY ***
+Total pot ¥375 | Rake ¥10
+Board [5s 5c 8h]
+Seat 3: 146701 (button) collected (¥365)
+Seat 4: 243637 (small blind) folded before Flop
+Seat 6: 248854 (big blind) folded on the Flop

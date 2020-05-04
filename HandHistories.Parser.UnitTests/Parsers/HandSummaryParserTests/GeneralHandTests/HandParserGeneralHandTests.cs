@@ -3,26 +3,15 @@ using System.Globalization;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using HandHistories.Objects.Hand;
+using HandHistories.Parser.Utils;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralHandTests
 {
-    [TestFixture("PartyPoker", 13550319286L, "1/6/2014 09:15:12", 3, 9, null, null, "GeneralHand")]
-    [TestFixture("PokerStars", 109681313810L, "1/6/2014 12:21:05", 4, 6, 0.06, 1.27, "GeneralHand")]
-    [TestFixture("PokerStars", 109664415396L, "1/6/2014 00:22:42", 1, 6, 0.00, 2.50, "ZoomHand")]
-    [TestFixture("PokerStars", 109690806574L, "1/6/2014 16:19:47", 5, 6, 1.50, 39.78, "SidePot")]
-    [TestFixture("Merge", 533636922070L, "4/17/2012 01:58:48", 8, 9, null, null, "GeneralHand")]
-    [TestFixture("IPoker", 5383708755L, "1/6/2014 14:44:37", 6, 3, null, null, "GeneralHand")]
-    [TestFixture("OnGame", 5361850810464L, "1/6/2014 00:00:00", 8, 6, 0.00, 1.00, "GeneralHand")]
-    [TestFixture("Pacific", 349736402, "1/6/2014 22:40:28", 9, 2, null, null, "GeneralHand")]
-    [TestFixture("Entraction", 2645975604, "5/30/2012 13:49:35", 4, 2, null, null, "GeneralHand")]
-    [TestFixture("FullTilt", 33728803548, "1/6/2014 10:11:48", 6, 4, 0.00, 0.10, "GeneralHand")]
-    [TestFixture("MicroGaming", 5049092010, "9/23/2013 14:27:42",4,6, 0.00, 0.03, "GeneralHand")]
-    [TestFixture("Winamax",5281577471, "10/24/2013 03:51:47",2,2, 0.98, 15.00, "GeneralHand")]
-    [TestFixture("WinningPoker", 261641541, "3/9/2014 16:53:43", 5, 6, null, null, "GeneralHand")]
-    [TestFixture("BossMedia", 2076693331L, "2/18/2014 0:15:38", 5, 5, 15.0, 10110.0, "GeneralHand")]
-    class HandParserGeneralHandTests : HandHistoryParserBaseTests 
+    abstract class HandParserGeneralHandTests : HandHistoryParserBaseTests 
     {
-        private readonly long _expectedHandId;
+        private readonly PokerFormat _format;
+        private readonly string _expectedHandId;
         private readonly int _expectedDealerButtonPosition;
         private readonly int _expectedNumberOfPlayers;
         private readonly string _handFile;
@@ -31,8 +20,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
         private readonly DateTime _expectedDateTime;
         private readonly string _handText;
 
-        public HandParserGeneralHandTests(string site, 
-                                          long expectedHandId,
+        protected HandParserGeneralHandTests(PokerFormat format,
+                                          string site, 
+                                          string expectedHandId,
                                           string expectedDateOfHand,
                                           int expectedDealerButtonPosition,
                                           int expectedNumberOfPlayers,
@@ -41,6 +31,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
                                           string handFile)
             : base(site)
         {
+            _format = format;
             _expectedHandId = expectedHandId;
             _expectedDealerButtonPosition = expectedDealerButtonPosition;
             _expectedNumberOfPlayers = expectedNumberOfPlayers;
@@ -52,7 +43,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             {
                 _expectedDateTime = DateTime.Parse(expectedDateOfHand, new CultureInfo("en-US"));
 
-                _handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, _handFile);
+                _handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(format, Site, _handFile);
             }
             catch (Exception ex)
             {
@@ -63,8 +54,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
         [Test]
         public void ParseHandId_Works()
         {            
-            Assert.AreEqual(_expectedHandId, GetSummmaryParser().ParseHandId(_handText), "IHandHistorySummaryParser: ParseHandId");
-            Assert.AreEqual(_expectedHandId, GetParser().ParseHandId(_handText), "IHandHistoryParser: ParseHandId");
+            Assert.AreEqual(_expectedHandId, HandID.GetString(GetSummmaryParser().ParseHandId(_handText)), "IHandHistorySummaryParser: ParseHandId");
+            Assert.AreEqual(_expectedHandId, HandID.GetString(GetParser().ParseHandId(_handText)), "IHandHistoryParser: ParseHandId");
         }
 
         [Test]
@@ -117,6 +108,20 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
 
             Assert.AreEqual(_expectedNumberOfPlayers, GetSummmaryParser().ParseNumPlayers(_handText), "IHandHistorySummaryParser: ParseNumPlayers");
             Assert.AreEqual(_expectedNumberOfPlayers, GetParser().ParseNumPlayers(_handText), "IHandHistoryParser: ParseNumPlayers");
+        }
+
+        [Test]
+        public void ParsePokerFormat_Works()
+        {
+            Assert.AreEqual(_format, GetSummmaryParser().ParseFullHandSummary(_handText).GameDescription.PokerFormat, "IHandHistorySummaryParser: PokerFormat");
+            Assert.AreEqual(_format, GetParser().ParseFullHandHistory(_handText).GameDescription.PokerFormat, "IHandHistoryParser: PokerFormat");
+        }
+
+        [Test]
+        public void HandIntegrity_Works()
+        {
+            HandHistory hand = GetParser().ParseFullHandHistory(_handText);
+            HandIntegrity.Assert(hand);
         }
     }
 }

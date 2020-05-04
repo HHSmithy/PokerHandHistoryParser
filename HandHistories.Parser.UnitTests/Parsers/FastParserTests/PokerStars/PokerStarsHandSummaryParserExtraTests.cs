@@ -64,7 +64,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2014, 2, 21, 17, 45, 8),
                 DealerButtonPosition = 1,
-                HandId = 132630000000,
+                HandId = HandID.From(132630000000),
                 NumPlayersSeated = 6,
                 TableName = "Diotima"
             };
@@ -89,7 +89,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                                                                                },
                                                          DateOfHandUtc = new DateTime(2012, 7, 18, 16, 25, 8),
                                                          DealerButtonPosition = 9,
-                                                         HandId = 83504515230,
+                                                         HandId = HandID.From(83504515230),
                                                          NumPlayersSeated = 9,
                                                          TableName = "Hygiea IV 40-100 bb"
                                                      };
@@ -114,7 +114,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 7, 3, 51, 38),
                 DealerButtonPosition = 4,                
-                HandId = 61777648755,
+                HandId = HandID.From(61777648755),
                 NumPlayersSeated = 4,
                 TableName = "Tezcatlipoca III"
             };
@@ -138,7 +138,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 10, 11, 27, 21),
                 DealerButtonPosition = 1,
-                HandId = 61910233643,
+                HandId = HandID.From(61910233643),
                 NumPlayersSeated = 7,
                 TableName = "Toutatis III"
             };
@@ -162,7 +162,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2011, 5, 19, 00, 41, 04),
                 DealerButtonPosition = 1,
-                HandId = 62279382715,
+                HandId = HandID.From(62279382715),
                 NumPlayersSeated = 2,
                 TableName = "Isildur's PLO 50"
             };
@@ -186,14 +186,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2012, 9, 11, 4, 15, 11),
                 DealerButtonPosition = 1,
-                HandId = 86005187865,
+                HandId = HandID.From(86005187865),
                 NumPlayersSeated = 6,
                 TableName = "Stavropolis III 40-100 bb"
             };
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "ShowsDownSingleCard");
 
-            Assert.IsFalse(actualHand.Players["Zaza5573"].hasHoleCards);
+            Assert.IsTrue(actualHand.Players["Zaza5573"].hasHoleCards);
         }
 
         [Test]
@@ -212,7 +212,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2012, 9, 11, 7, 51, 48),
                 DealerButtonPosition = 4,
-                HandId = 86008517721,
+                HandId = HandID.From(86008517721),
                 NumPlayersSeated = 6,
                 TableName = "Muscida V 40-100 bb"
             };
@@ -236,34 +236,48 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
                 },
                 DateOfHandUtc = new DateTime(2012, 9, 11, 12, 39, 12),
                 DealerButtonPosition = 3,
-                HandId = 86015904171,
+                HandId = HandID.From(86015904171),
                 NumPlayersSeated = 4,
                 TableName = "Acamar IV CAP, Fast,20-50 bb"
             };
 
             var expectedActions = new List<HandAction>()
-                {
-                    new HandAction("vitinja", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
-                    new HandAction("/\\ntiHer[]", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
-                    new HandAction("Catharina111", HandActionType.CALL, 0.50m, Street.Preflop),
-                    new HandAction("Willo2319", HandActionType.CALL, 0.50m, Street.Preflop),
-                    new HandAction("vitinja", HandActionType.FOLD, 0m, Street.Preflop),
-                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0, Street.Preflop),
-                     new HandAction("/\\ntiHer[]", HandActionType.BET, 1, Street.Flop),
-                    new HandAction("Catharina111", HandActionType.FOLD, 0m, Street.Flop),
-                    new HandAction("Willo2319", HandActionType.CALL, 1m, Street.Flop),
-                    new HandAction("/\\ntiHer[]", HandActionType.BET, 1.50m, Street.Turn),
-                    new HandAction("Willo2319", HandActionType.CALL, 1.50m, Street.Turn),
-                    new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0m, Street.River),
-                    new HandAction("Willo2319", HandActionType.CHECK, 0m, Street.River),
-                    new HandAction("/\\ntiHer[]", HandActionType.SHOW, 0m, Street.Showdown),
-                     new HandAction("Willo2319", HandActionType.SHOW, 0m, Street.Showdown),
-                    new WinningsAction("Willo2319", HandActionType.WINS, 6.45m, 0),                               
-                };
+            {
+                new HandAction("vitinja", HandActionType.SMALL_BLIND, 0.25m, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.BIG_BLIND, 0.50m, Street.Preflop),
+                new HandAction("Catharina111", HandActionType.CALL, 0.50m, Street.Preflop),
+                new HandAction("Willo2319", HandActionType.CALL, 0.50m, Street.Preflop),
+                new HandAction("vitinja", HandActionType.FOLD, 0m, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0, Street.Preflop),
+                new HandAction("/\\ntiHer[]", HandActionType.BET, 1, Street.Flop),
+                new HandAction("Catharina111", HandActionType.FOLD, 0m, Street.Flop),
+                new HandAction("Willo2319", HandActionType.CALL, 1m, Street.Flop),
+                new HandAction("/\\ntiHer[]", HandActionType.BET, 1.50m, Street.Turn),
+                new HandAction("Willo2319", HandActionType.CALL, 1.50m, Street.Turn),
+                new HandAction("/\\ntiHer[]", HandActionType.CHECK, 0m, Street.River),
+                new HandAction("Willo2319", HandActionType.CHECK, 0m, Street.River),
+                new HandAction("/\\ntiHer[]", HandActionType.SHOW, 0m, Street.Showdown),
+                new HandAction("Willo2319", HandActionType.SHOW, 0m, Street.Showdown),                
+            };
+
+            var expectedWinners = new List<WinningsAction>()
+            {
+                new WinningsAction("Willo2319", WinningsActionType.WINS, 6.45m, 0),        
+            };
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "PlayerNameWithSlashesAndSquareBrackets");
 
             Assert.AreEqual(expectedActions, actualHand.HandActions);
+            Assert.AreEqual(expectedWinners, actualHand.Winners);
+        }
+
+        [Test]
+        public void PlayerDisconnected()
+        {
+            var handText = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, "Disconnect");
+            HandHistorySummary hand = GetSummmaryParser().ParseFullHandSummary(handText, true);
+
+            Assert.IsFalse(hand.Cancelled);
         }
     }
 }

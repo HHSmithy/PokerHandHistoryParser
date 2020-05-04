@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6673000000">
+ <general>
+  <mode>real</mode>
+  <gametype>Holdem PL €5/€10</gametype>
+  <tablename>TableName, 817000000</tablename>
+  <tablecurrency>EUR</tablecurrency>
+  <duration>00:10:00</duration>
+  <gamecount>1</gamecount>
+  <startdate>2016-01-01 01:01:01</startdate>
+  <currency>EUR</currency>
+  <nickname>HERO</nickname>
+  <bets>€407</bets>
+  <wins>€580</wins>
+  <chipsin>€1,000</chipsin>
+  <chipsout>€1,000</chipsout>
+  <statuspoints>21.03</statuspoints>
+  <awardpoints>21.03</awardpoints>
+  <ipoints>21.03</ipoints>
+ </general>
+ <game gamecode="7482000000">
+  <general>
+   <startdate>2016-01-01 01:01:01</startdate>
+   <players>
+    <player chips="€1,000" dealer="0" bet="€15" win="€0" seat="1" name="Player1"/>
+    <player chips="€1,000" dealer="1" bet="€0" win="€0" seat="3" name="Player3"/>
+    <player chips="€1,000" dealer="0" bet="€94.50" win="€140" seat="5" name="Player5"/>
+    <player chips="€1,000" dealer="0" bet="€34.50" win="€0" seat="6" name="HERO"/>
+    <player chips="€1,000" dealer="0" bet="€0" win="€0" seat="8" name="Player8"/>
+    <player chips="€1,000" dealer="0" bet="€0" win="€0" seat="10" name="Player10"/>
+   </players>
+  </general>
+  <round no="0">
+   <action sum="€5" no="1" cards="" player="Player5" type="1"/>
+   <action sum="€10" no="2" cards="" player="HERO" type="2"/>
+   <action sum="€15" no="3" cards="" player="Player1" type="2"/>
+  </round>
+  <round no="1">
+   <cards player="Player8" type="Pocket">X X X X</cards>
+   <action sum="€0" no="4" cards="" player="Player8" type="0"/>
+   <cards player="Player10" type="Pocket">X X X X</cards>
+   <action sum="€0" no="5" cards="" player="Player10" type="0"/>
+   <cards player="Player1" type="Pocket">X X X X</cards>
+   <action sum="€0" no="6" cards="" player="Player1" type="4"/>
+   <cards player="Player3" type="Pocket">X X X X</cards>
+   <action sum="€0" no="7" cards="" player="Player3" type="0"/>
+   <cards player="Player5" type="Pocket">X X X X</cards>
+   <action sum="€5" no="8" cards="" player="Player5" type="3"/>
+   <cards player="HERO" type="Pocket">HQ C2 SA C3</cards>
+   <action sum="€0" no="9" cards="" player="HERO" type="4"/>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">H8 S4 SQ</cards>
+   <action sum="€24.50" no="10" cards="" player="Player5" type="5"/>
+   <action sum="€24.50" no="11" cards="" player="HERO" type="3"/>
+   <action sum="€0" no="12" cards="" player="Player1" type="0"/>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">S7</cards>
+   <action sum="€60" no="13" cards="" player="Player5" type="5"/>
+   <action sum="€0" no="14" cards="" player="HERO" type="0"/>
+  </round>
+ </game>
+</session>

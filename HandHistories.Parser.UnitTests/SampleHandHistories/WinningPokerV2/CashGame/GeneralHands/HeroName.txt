@@ -1,0 +1,32 @@
+﻿Hand #55280000 - Omaha(Pot Limit) - $0.50/$1.00 - 2019/04/25 16:00:00 UTC
+Forreston 6-max Seat #2 is the button
+Seat 1: Player 1 ($102.25)
+Seat 2: WP_Hero ($40.00)
+WP_Hero posts the small blind $0.50
+Player 1 posts the big blind $1.00
+*** HOLE CARDS ***
+Dealt to WP_Hero [Ah Jh 3d Td]
+WP_Hero raises $2.50 to $3.00
+Player 1 raises $8.00 to $9.00
+WP_Hero calls $6.00
+*** FLOP *** [Jc 7h 6s]
+Main pot $17.50 | Rake $0.50
+Player 1 bets $18.00
+WP_Hero calls $18.00
+*** TURN *** [Jc 7h 6s] [9h]
+Main pot $53.50 | Rake $0.50
+Player 1 bets $54.00
+WP_Hero calls $13.00 and is all-in
+Uncalled bet ($41.00) returned to Player 1
+*** RIVER *** [Jc 7h 6s 9h] [8c]
+Main pot $79.50 | Rake $0.50
+*** SHOW DOWN ***
+Main pot $79.50 | Rake $0.50
+Player 1 shows [Kd Qd 5s Js] (a pair of Jacks [Js Jc Kd 9h 8c])
+WP_Hero shows [Ah Jh 3d Td] (a straight, Jack high [Jh Td 9h 8c 7h])
+WP_Hero collected $79.50 from main pot
+*** SUMMARY ***
+Total pot $79.50 | Rake $0.46 | JP Fee $0.04
+Board [Jc 7h 6s 9h 8c]
+Seat 1: Player 1 (big blind) showed [Kd Qd 5s Js] and lost with a pair of Jacks [Js Jc Kd 9h 8c]
+Seat 2: WP_Hero (button) showed [Ah Jh 3d Td] and won $79.50 with a straight, Jack high [Jh Td 9h 8c 7h]

@@ -1,0 +1,37 @@
+﻿Game started at: 2016/5/6 11:24:18
+Game ID: 633943719 25/50 Trevonite (PRR) (Omaha)
+Seat 4 is the button
+Seat 3: RunSoGood (1981.16).
+Seat 4: 420BLAZEIT (1915.84).
+Player 420BLAZEIT has small blind (25)
+Player RunSoGood has big blind (50)
+Player RunSoGood received a card.
+Player RunSoGood received a card.
+Player RunSoGood received a card.
+Player RunSoGood received a card.
+Player 420BLAZEIT received card: [As]
+Player 420BLAZEIT received card: [5s]
+Player 420BLAZEIT received card: [9d]
+Player 420BLAZEIT received card: [4h]
+Player 420BLAZEIT calls (25)
+Player RunSoGood raises (100)
+Player 420BLAZEIT calls (100)
+*** FLOP ***: [8h Ks 10s]
+Player RunSoGood checks
+Player 420BLAZEIT bets (170)
+Player RunSoGood calls (170)
+*** TURN ***: [8h Ks 10s] [9c]
+Player RunSoGood checks
+Player 420BLAZEIT checks
+*** RIVER ***: [8h Ks 10s 9c] [5d]
+Player RunSoGood bets (426)
+Player 420BLAZEIT is timed out.
+Player 420BLAZEIT folds
+Uncalled bet (426) returned to RunSoGood
+Player RunSoGood mucks cards
+------ Summary ------
+Pot: 639. Rake 0.96. JP fee 0.04
+Board: [5d Ks 7c Jc 7d]
+*Player RunSoGood mucks (does not show cards). Bets: 320. Collects: 639. Wins: 319.
+Player 420BLAZEIT does not show cards.Bets: 320. Collects: 0. Loses: 320.
+Game ended at: 2016/5/6 11:25:46

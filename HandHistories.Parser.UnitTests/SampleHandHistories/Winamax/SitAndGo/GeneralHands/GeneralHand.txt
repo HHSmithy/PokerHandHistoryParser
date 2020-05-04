@@ -1,0 +1,43 @@
+﻿Winamax Poker - Tournament "Sit&Go Freeroll" buyIn: Ticket only level: 3 - HandId: #619672044606324737-7-1452193258 - Omaha pot limit (30/60) - 2016/01/07 19:00:58 UTC
+Table: 'Sit&Go Freeroll(144278641)#0' 9-max (real money) Seat #1 is the button
+Seat 1: tomtom87700 (1440)
+Seat 2: alex093 (2152)
+Seat 4: Bearded Taco (5320)
+Seat 5: livio91760 (1055)
+Seat 6: patcoune (2228)
+Seat 7: Doksrill (1305)
+*** ANTE/BLINDS ***
+alex093 posts small blind 30
+Bearded Taco posts big blind 60
+*** PRE-FLOP *** 
+livio91760 calls 60
+patcoune folds
+Doksrill folds
+tomtom87700 calls 60
+alex093 calls 30
+Bearded Taco checks
+*** FLOP *** [Tc 7c 4c]
+alex093 checks
+Bearded Taco checks
+livio91760 checks
+tomtom87700 bets 60
+alex093 folds
+Bearded Taco folds
+livio91760 calls 60
+*** TURN *** [Tc 7c 4c][Qs]
+livio91760 checks
+tomtom87700 bets 60
+livio91760 calls 60
+*** RIVER *** [Tc 7c 4c Qs][5s]
+livio91760 checks
+tomtom87700 bets 60
+livio91760 calls 60
+*** SHOW DOWN ***
+livio91760 shows [Th Qc 2d Ks] (Two pairs : Queens and Tens)
+tomtom87700 shows [Jc 6d Jh 5c] (Flush Jack high)
+tomtom87700 collected 600 from pot
+*** SUMMARY ***
+Total pot 600 | No rake
+Board: [Tc 7c 4c Qs 5s]
+Seat 1: tomtom87700 (button) showed [Jc 6d Jh 5c] and won 600 with Flush Jack high
+Seat 5: livio91760 showed [Th Qc 2d Ks] and lost with Two pairs : Queens and Tens

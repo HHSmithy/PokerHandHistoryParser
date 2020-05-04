@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using NUnit.Framework;
+using HandHistories.Parser.Parsers.Exceptions;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 {
@@ -13,15 +14,25 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
         {
         }
 
+        [Test]
+        public void ParsePlayers_Anonmous_Throws()
+        {
+            var empty = new PlayerList();
+            Assert.Throws<PlayersException>(delegate
+            {
+                TestParsePlayers("WithAnonomous", empty);
+            });
+        }
+
         protected override PlayerList ExpectedNoHoleCardsPlayers
         {
             get
             {
                 return new PlayerList()
-                           {
-                               new Player("Kelevra_91", 24.49m, 2),
-                               new Player("hulkhoden1969", 10m, 5)
-                           };
+                {
+                    new Player("Kelevra_91", 24.49m, 2),
+                    new Player("hulkhoden1969", 10m, 5)
+                };
             }
         }
 
@@ -30,22 +41,35 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             get
             {
                 return new PlayerList()
-                           {
-                               new Player("poket Ass", 8.54m, 1)
-                                   {
-                                       HoleCards = HoleCards.FromCards("Ks6d")
-                                   },
-                               new Player("stal1969", 11m, 5)
-                                   {
-                                       HoleCards = HoleCards.FromCards("7h3c")
-                                   }
-                           };
+                {
+                    new Player("poket Ass", 8.54m, 1)
+                        {
+                            HoleCards = HoleCards.FromCards("Ks6d")
+                        },
+                    new Player("stal1969", 11m, 5)
+                        {
+                            HoleCards = HoleCards.FromCards("7h3c")
+                        }
+                };
             }
         }
 
         protected override PlayerList ExpectedWithSittingOutPlayers
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                return new PlayerList()
+                {
+                    new Player("zani", 1352.91m, 3),
+                    new Player("FOA", 313.73m, 5),
+                    new Player("p2", 449.61m, 2),
+                    new Player("p6", 533.05m, 6),
+                    new Player("p1", 500m, 1),
+                    new Player("Mirrion", 500m, 4){
+                        IsSittingOut = true
+                    },
+                };
+            }
         }
 
         protected override PlayerList ExpectedOmahaShowdownPlayers
@@ -53,16 +77,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             get
             {
                 return new PlayerList()
-                           {
-                               new Player("lunaemma", 108.86m, 1)
-                                   {
-                                       HoleCards = HoleCards.FromCards("3d9c2d6h")
-                                   },
-                               new Player("pexiM", 100m, 2)
-                                   {
-                                       HoleCards = HoleCards.FromCards("3hAsQc5s")
-                                   }
-                           };
+                {
+                    new Player("lunaemma", 108.86m, 1)
+                        {
+                            HoleCards = HoleCards.FromCards("3d9c2d6h")
+                        },
+                    new Player("pexiM", 100m, 2)
+                        {
+                            HoleCards = HoleCards.FromCards("3hAsQc5s")
+                        }
+                };
             }
         }
 
@@ -71,16 +95,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             get
             {
                 return new PlayerList()
-                           {
-                               new Player("DrunkSon88", 10m, 2)
-                               {
-                                       HoleCards = HoleCards.FromCards("2cQs8sKd")
-                               },
-                               new Player("Spuel2", 3.59m, 1)
-                               {
-                                       HoleCards = HoleCards.FromCards("JdTs8h5d")
-                               }
-                           };
+                {
+                    new Player("DrunkSon88", 10m, 2)
+                    {
+                            HoleCards = HoleCards.FromCards("2cQs8sKd")
+                    },
+                    new Player("Spuel2", 3.59m, 1)
+                    {
+                            HoleCards = HoleCards.FromCards("JdTs8h5d")
+                    }
+                };
             }
         }
     }

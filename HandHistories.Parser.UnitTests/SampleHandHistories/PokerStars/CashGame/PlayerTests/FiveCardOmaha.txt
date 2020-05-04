@@ -1,0 +1,33 @@
+﻿PokerStars Hand #147384467878:  5 Card Omaha Pot Limit ($3/$6 USD) - 2016/01/20 15:34:44 ET
+Table 'Mashona' 6-max Seat #3 is the button
+Seat 3: madmax84 ($600 in chips) 
+Seat 4: manics16 ($250 in chips) 
+madmax84: posts small blind $3
+manics16: posts big blind $6
+*** HOLE CARDS ***
+madmax84: raises $12 to $18
+manics16 said, "hu?"
+manics16: calls $12
+*** FLOP *** [Ah 5c 8d]
+manics16: checks 
+madmax84 said, "ok"
+madmax84 said, "but only"
+madmax84 said, "until u hnr"
+madmax84: checks 
+*** TURN *** [Ah 5c 8d] [Qc]
+manics16 said, "haha"
+manics16: checks 
+madmax84: bets $28.40
+manics16: calls $28.40
+*** RIVER *** [Ah 5c 8d Qc] [4h]
+manics16: checks 
+madmax84: checks 
+*** SHOW DOWN ***
+manics16: shows [9s 7c Tc Ac 3h] (a pair of Aces)
+madmax84: shows [As 5h 4s Ad Jd] (three of a kind, Aces)
+madmax84 collected $92.30 from pot
+*** SUMMARY ***
+Total pot $92.80 | Rake $0.50 
+Board [Ah 5c 8d Qc 4h]
+Seat 3: madmax84 (button) (small blind) showed [As 5h 4s Ad Jd] and won ($92.30) with three of a kind, Aces
+Seat 4: manics16 (big blind) showed [9s 7c Tc Ac 3h] and lost with a pair of Aces

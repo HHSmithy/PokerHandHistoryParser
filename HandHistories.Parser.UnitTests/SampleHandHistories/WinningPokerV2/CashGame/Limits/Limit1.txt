@@ -1,0 +1,21 @@
+﻿Hand #55280000 - Omaha(Pot Limit) - $0.50/$1.00 - 2019/02/26 16:57:50 UTC
+Forreston 2-max Seat #1 is the button
+Seat 1: Player1 ($100.00)
+Seat 2: Player2 ($40.00)
+Player1 posts the small blind $0.50
+Player2 posts the big blind $1.00
+*** HOLE CARDS ***
+Player1 raises $2.00 to $2.50
+Player2 calls $1.50
+*** FLOP *** [6h 8s Qs]
+Main pot $4.75 | Rake $0.25
+Player2 checks
+Player1 bets $3.75
+Player2 folds
+Uncalled bet ($3.75) returned to Player1
+Player1 does not show
+*** SUMMARY ***
+Total pot $4.75 | Rake $0.21 | JP Fee $0.04
+Board [6h 8s Qs]
+Seat 1: Player1 did not show and won $4.75
+Seat 2: Player2 (big blind) folded on the Flop

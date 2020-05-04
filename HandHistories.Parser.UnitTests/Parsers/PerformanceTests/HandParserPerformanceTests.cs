@@ -16,6 +16,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
     [TestFixture("Winamax")]
     [TestFixture("BossMedia")]
     [TestFixture("PartyPoker")]
+    [TestFixture("IGT")]
+    [TestFixture("WinningPokerV2")]
     internal class HandParserPerformanceTest : HandHistoryParserBaseTests
     {
         public HandParserPerformanceTest(string site)

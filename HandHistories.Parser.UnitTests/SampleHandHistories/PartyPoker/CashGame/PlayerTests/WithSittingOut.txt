@@ -1,18 +1,33 @@
-﻿***** Hand History for Game 11617233792 *****
-$5,000 USD NL Texas Hold'em - Tuesday, April 03, 21:18:30 EDT 2012
-Table Table  202250 (No DP) (Real Money)
-Seat 2 is the button
-Total number of players : 6/6 
-Seat 6: DirkDiggIer ( $5,000 USD )
-Seat 2: Kanu7 ( $5,000 USD )
-Seat 5: beebsela ( $5,000 USD )
-Seat 4: don_perignon ( $5,000 USD )
-Seat 3: subway96 ( $5,000 USD )
-Seat 1: weeee84 ( $5,000 USD )
-Kanu7 posts small blind [$25 USD].
-beebsela posts big blind [$50 USD].
+﻿***** Hand History for Game 17663030000 *****
+$500 USD PL Omaha - Wednesday, August 27, 14:20:02 EST 2018
+Table Budapest (Real Money)
+Seat 4 is the button
+Total number of players : 6/6
+Seat 3: zani ( $1352.91 )
+Seat 5: FOA ( $313.73 )
+Seat 2: p2 ( $449.61 )
+Seat 6: p6 ( $533.05 )
+Seat 1: p1 ( $500.00 )
+Seat 4: Mirrion ( $500.00 )
+Mirrion is sitting out
+FOA posts small blind [$2 USD].
+p6 posts big blind [$5 USD].
 ** Dealing down cards **
-Kanu7 raises [$75 USD]
-beebsela folds
-Kanu7 does not show cards.
-Kanu7 wins $150 USD
+p1 raises [$17 USD]
+p2 raises [$29 USD]
+zani folds
+FOA folds
+p6 folds
+p1 calls [$12 USD]
+** Dealing Flop ** [ 9s, Jc, 8d ]
+p1 checks
+p2 checks
+** Dealing Turn ** [ 8h ]
+p1 checks
+p2 checks
+** Dealing River ** [ 6h ]
+p1 checks
+p2 bets [$46.5 USD]
+p1 folds
+p2 does not show cards.
+p2 wins $108.50 USD

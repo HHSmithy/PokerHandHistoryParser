@@ -11,7 +11,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("T", "h");
 
-            Assert.AreEqual("Th", card.CardStringValue);
+            Assert.AreEqual("Th", card.ToString());
             Assert.AreEqual(34, card.CardIntValue);
         }
 
@@ -20,7 +20,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("T", "d");
 
-            Assert.AreEqual("Td", card.CardStringValue);
+            Assert.AreEqual("Td", card.ToString());
             Assert.AreEqual(21, card.CardIntValue);
         }
 
@@ -29,7 +29,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("2", "c");
 
-            Assert.AreEqual("2c", card.CardStringValue);
+            Assert.AreEqual("2c", card.ToString());
             Assert.AreEqual(0, card.CardIntValue);
         }
 
@@ -38,7 +38,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("A", "s");
 
-            Assert.AreEqual("As", card.CardStringValue);
+            Assert.AreEqual("As", card.ToString());
             Assert.AreEqual(51, card.CardIntValue);
         }
 
@@ -47,7 +47,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = Card.GetCardFromIntValue(51);
 
-            Assert.AreEqual("As", card.CardStringValue);
+            Assert.AreEqual("As", card.ToString());
             Assert.AreEqual(51, card.CardIntValue);
         }
 
@@ -56,7 +56,7 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("a", "S");
 
-            Assert.AreEqual("As", card.CardStringValue);
+            Assert.AreEqual("As", card.ToString());
             Assert.AreEqual(51, card.CardIntValue);
         }
 

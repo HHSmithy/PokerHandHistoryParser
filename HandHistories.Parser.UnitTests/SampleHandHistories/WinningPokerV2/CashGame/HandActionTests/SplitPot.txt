@@ -1,0 +1,47 @@
+﻿Hand #61702000 - Omaha(Pot Limit) - $50.00/$100.00 - 2019/08/11 19:10:20 UTC
+7 Day No Rathole 50/100 PLO 9-max Seat #3 is the button
+Seat 1: Player1 ($4486.50)
+Seat 3: Player3 ($1197.75)
+Seat 4: Player4 ($70.38)
+Seat 6: Player6 ($2356.24)
+Seat 8: Player8 ($3831.76)
+Seat 9: Player9 ($2346.00)
+Player4 posts the small blind $50.00
+Player6 posts the big blind $100.00
+Player8 waits for big blind
+*** HOLE CARDS ***
+Player9 raises $350.00 to $350.00
+Player1 calls $350.00
+Player3 folds
+Player4 calls $20.38 and is all-in
+Player6 calls $250.00
+*** FLOP *** [7s 9d 9c]
+Main pot $280.76 | Rake $0.76
+Side pot(1) $836.62 | Rake $2.24
+Player6 checks
+Player9 checks
+Player1 bets $344.00
+Player6 folds
+Player9 folds
+Uncalled bet ($344.00) returned to Player1
+*** TURN *** [7s 9d 9c] [Jd]
+Main pot $280.76 | Rake $0.76
+Side pot(1) $836.62 | Rake $2.24
+*** RIVER *** [7s 9d 9c Jd] [5h]
+Main pot $280.76 | Rake $0.76
+Side pot(1) $836.62 | Rake $2.24
+*** SHOW DOWN ***
+Main pot $280.76 | Rake $0.76
+Side pot(1) $836.62 | Rake $2.24
+Player1 shows [Ks 4c Js Jc] (a full house, Jacks full of Nines [Js Jd Jc 9d 9c])
+Player4 shows [2d 5s 6d Jh] (two pair, Jacks and Nines [Jh Jd 9d 9c 6d])
+Player1 collected $280.76 from main pot
+Player1 collected $836.62 from side pot-1
+*** SUMMARY ***
+Total pot $1117.38 | Rake $2.76 | JP Fee $0.24
+Board [7s 9d 9c Jd 5h]
+Seat 1: Player1 showed [Ks 4c Js Jc] and won $1117.38 with a full house, Jacks full of Nines [Js Jd Jc 9d 9c]
+Seat 3: Player3 (button) folded on the Pre-Flop
+Seat 4: Player4 (small blind) showed [2d 5s 6d Jh] and lost with two pair, Jacks and Nines [Jh Jd 9d 9c 6d]
+Seat 6: Player6 (big blind) folded on the Flop
+Seat 9: Player9 folded on the Flop

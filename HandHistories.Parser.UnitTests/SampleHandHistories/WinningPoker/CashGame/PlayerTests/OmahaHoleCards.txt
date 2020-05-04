@@ -1,0 +1,55 @@
+﻿Game started at: 2016/1/01 1:01:1
+Game ID: 606000000 5/10 Nasinite (Short) (PRR) (Omaha)
+Seat 4 is the button
+Seat 1: Player1 (1158.75).
+Seat 2: Player2 (751).
+Seat 4: Player4 (985.66).
+Seat 5: Player5 (817.34).
+Seat 6: Player6 (698).
+Player Player5 has small blind (5)
+Player Player6 has big blind (10)
+Player Player5 received a card.
+Player Player5 received a card.
+Player Player5 received a card.
+Player Player5 received a card.
+Player Player6 received a card: [Qc]
+Player Player6 received a card: [10d]
+Player Player6 received a card: [3s]
+Player Player6 received a card: [4d]
+Player Player1 received a card.
+Player Player1 received a card.
+Player Player1 received a card.
+Player Player1 received a card.
+Player Player2 received card.
+Player Player2 received card.
+Player Player2 received card.
+Player Player2 received card.
+Player Player4 received a card.
+Player Player4 received a card.
+Player Player4 received a card.
+Player Player4 received a card.
+Player Player1 folds
+Player Player2 folds
+Player Player4 folds
+Player Player5 calls (5)
+Player Player6 checks
+*** FLOP ***: [9c 8c Kc]
+Player Player5 checks
+Player Player6 bets (12.66)
+Player Player5 calls (12.66)
+*** TURN ***: [9c 8c Kc] [5c]
+Player Player5 checks
+Player Player6 checks
+*** RIVER ***: [9c 8c Kc 5c] [3d]
+Player Player5 checks
+Player Player6 checks
+Player Player6 mucks cards
+------ Summary ------
+Pot: 43.32. Rake 1.76. JP fee 0.24
+Board: [9c 8c Kc 5c 3d]
+Player Player1 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Player2 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Player4 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player Player5 shows: Two pairs. Ks and 9s [9d Js Kd 5d]. Bets: 22.66. Collects: 43.32. Wins: 20.66.
+Player Player6 mucks (does not show cards). Bets: 22.66. Collects: 0. Loses: 22.66.
+Game ended at: 2016/1/01 1:01:1

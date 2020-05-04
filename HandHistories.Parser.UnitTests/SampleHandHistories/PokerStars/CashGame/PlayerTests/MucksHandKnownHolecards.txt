@@ -1,0 +1,43 @@
+﻿PokerStars Hand #184977000000:  Omaha Pot Limit ($0.25/$0.50 USD) - 2018/01/01 01:01:01 CET [2018/01/01 01:01:01 ET]
+Table 'Diadem II' 6-max Seat #5 is the button
+Seat 1: Player 1 ($18.38 in chips) 
+Seat 2: MuckPlayer ($54.39 in chips) 
+Seat 3: Player 3 ($23.02 in chips) 
+Seat 4: Player 4 ($20.99 in chips) 
+Seat 5: HERO ($50 in chips) 
+Player 1: posts small blind $0.25
+MuckPlayer: posts big blind $0.50
+*** HOLE CARDS ***
+Dealt to HERO [8c 7c 9s 6d]
+Player 3: calls $0.50
+Player 4: raises $1.75 to $2.25
+HERO: calls $2.25
+Player 1: calls $2
+MuckPlayer: calls $1.75
+Player 3: calls $1.75
+*** FLOP *** [9h 9c 9d]
+Player 1: checks 
+MuckPlayer: bets $1.50
+Player 3: folds 
+Player 4: folds 
+HERO: calls $1.50
+Player 1: folds 
+*** TURN *** [9h 9c 9d] [4d]
+MuckPlayer: bets $3.50
+HERO: calls $3.50
+*** RIVER *** [9h 9c 9d 4d] [Qd]
+MuckPlayer: bets $5.50
+HERO: raises $16 to $21.50
+MuckPlayer: calls $16
+*** SHOW DOWN ***
+HERO: shows [8c 7c 9s 6d] (four of a kind, Nines)
+MuckPlayer: mucks hand 
+HERO collected $62.25 from pot
+*** SUMMARY ***
+Total pot $64.25 | Rake $2 
+Board [9h 9c 9d 4d Qd]
+Seat 1: Player 1 (small blind) folded on the Flop
+Seat 2: MuckPlayer (big blind) mucked [7s Ks Kh Qc]
+Seat 3: Player 3 folded on the Flop
+Seat 4: Player 4 folded on the Flop
+Seat 5: HERO (button) showed [8c 7c 9s 6d] and won ($62.25) with four of a kind, Nines

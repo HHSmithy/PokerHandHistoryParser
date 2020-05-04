@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6579000000">
+ <general>
+  <mode>real</mode>
+  <gametype>Holdem NL</gametype>
+  <tablename>Gold Rush €1,000, 877281755</tablename>
+  <tournamentcurrency>EUR</tournamentcurrency>
+  <duration>00:00:08</duration>
+  <gamecount>1</gamecount>
+  <startdate>2016-04-26 19:02:03</startdate>
+  <currency>USD</currency>
+  <nickname></nickname>
+  <bets>1</bets>
+  <wins>0</wins>
+  <chipsin>0</chipsin>
+  <chipsout>0</chipsout>
+  <statuspoints>0</statuspoints>
+  <awardpoints>0.00</awardpoints>
+  <ipoints>0.00</ipoints>
+  <tournamentcode>875000000</tournamentcode>
+  <tournamentname>Gold Rush €1,000</tournamentname>
+  <place>3061</place>
+  <buyin>Token</buyin>
+  <totalbuyin>€0</totalbuyin>
+  <win/>
+ </general>
+ <game gamecode="7046000000">
+  <general>
+   <startdate>2016-01-01 10:10:10</startdate>
+   <players>
+    <player addon="0" dealer="1" win="2" bet="1" chips="1" seat="3" reg_code="" rebuy="0" name="BingoPlayer"/>
+    <player addon="0" dealer="0" win="0" bet="1" chips="1" seat="8" reg_code="" rebuy="0" name="MrMagnificent"/>
+   </players>
+  </general>
+  <round no="0">
+   <action cards="" player="BingoPlayer" sum="1" type="15" no="1"/>
+   <action cards="" player="MrMagnificent" sum="1" type="15" no="2"/>
+  </round>
+  <round no="1">
+   <cards player="BingoPlayer" type="Pocket">H7 DK</cards>
+   <cards player="MrMagnificent" type="Pocket">C2 SQ</cards>
+  </round>
+  <round no="2">
+   <cards player="" type="Flop">S9 S6 H6 </cards>
+  </round>
+  <round no="3">
+   <cards player="" type="Turn">H8</cards>
+  </round>
+  <round no="4">
+   <cards player="" type="River">C6</cards>
+  </round>
+ </game>
+</session>

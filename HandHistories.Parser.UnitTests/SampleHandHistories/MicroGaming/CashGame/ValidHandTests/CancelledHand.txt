@@ -1,0 +1,14 @@
+﻿<Game hhversion="5" id="6505340843" date="2017-04-13 11:04:57" unicodetablename="SwBhAGwAbABlACAALQAgAKwgMgAwADAAIABNAGEAeAA=" tablename="Kalle - €200 Max" stakes="1|2" betlimit="PL" tabletype="Cash Game" unicodetabletype="QwBhAHMAaAAgAEcAYQBtAGUA" gametypeid="50" gametype="Omaha" realmoney="true" currencysymbol="rCA=" playerseat="4" betamount="0" istournament="0" totalplayers="1" tablesize="6" badbeat="false" currencyId="26" rake="0">
+   <Seats>
+      <Seat num="4" alias="RbZ" unicodealias="UgBiAFoA" balance="200.00" endbalance="200.00" dealer="true"/>
+   </Seats>
+   <Gameplay>
+      <Action seq="1" type="DealCards" seat="4">
+         <Card value="2" suit="s" id="1"/>
+         <Card value="4" suit="d" id="29"/>
+         <Card value="9" suit="h" id="47"/>
+         <Card value="2" suit="c" id="14"/>
+      </Action>
+      <Action seq="2" type="Fold" seat="4"/>
+   </Gameplay>
+</Game>

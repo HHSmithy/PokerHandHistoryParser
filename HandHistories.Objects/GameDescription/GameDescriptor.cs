@@ -32,7 +32,7 @@ namespace HandHistories.Objects.GameDescription
                               Buyin buyin,
                               TableType tableType,
                               SeatType seatType)
-            : this(PokerFormat.SitAndGo, siteName, gameType, buyin, tableType, seatType)
+            : this(PokerFormat.SitAndGo, siteName, gameType, null, buyin, tableType, seatType)
         {
             
         }
@@ -55,6 +55,7 @@ namespace HandHistories.Objects.GameDescription
         public GameDescriptor(PokerFormat pokerFormat,
                               SiteName siteName,
                               GameType gameType,
+                              Limit limit,
                               Buyin buyin,
                               TableType tableType,
                               SeatType seatType)
@@ -62,10 +63,12 @@ namespace HandHistories.Objects.GameDescription
             PokerFormat = pokerFormat;
             Site = siteName;
             GameType = gameType;
+            Limit = limit;
             Buyin = buyin;
             TableType = tableType;
             SeatType = seatType;
         }
+
         [DataMember]
         public PokerFormat PokerFormat { get; set; }
 

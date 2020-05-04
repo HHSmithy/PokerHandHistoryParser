@@ -1,0 +1,29 @@
+﻿PokerStars Hand #13297900000: Tournament #11866000000, $13.92+$1.08 USD Hold'em No Limit - Level IV (40/80) - 2015/03/31 21:06:11 CET [2015/03/31 15:06:11 ET]
+Table '1186000000 1' 6-max Seat #1 is the button
+Seat 1: Player1 (4821 in chips) 
+Seat 5: Player2 (4179 in chips) 
+Player1: posts the ante 10
+Player2: posts the ante 10
+Player1: posts small blind 40
+Player2: posts big blind 80
+*** HOLE CARDS ***
+Dealt to Player2 [3d 3c]
+Player1: raises 180 to 260
+Player2: raises 620 to 880
+Player1: raises 3931 to 4811 and is all-in
+Player2: calls 3289 and is all-in
+Uncalled bet (642) returned to Player1
+*** FLOP *** [8s 6s Td]
+*** TURN *** [8s 6s Td] [Ac]
+*** RIVER *** [8s 6s Td Ac] [4h]
+*** SHOW DOWN ***
+Player2: shows [3d 3c] (a pair of Threes)
+Player1: shows [Qd Ad] (a pair of Aces)
+Player1 collected 8358 from pot
+Player2 finished the tournament in 2nd place and received $29.23.
+Player1 wins the tournament and receives $54.29 - congratulations!
+*** SUMMARY ***
+Total pot 8358 | Rake 0 
+Board [8s 6s Td Ac 4h]
+Seat 1: Player1 (button) (small blind) showed [Qd Ad] and won (8358) with a pair of Aces
+Seat 5: Player2 (big blind) showed [3d 3c] and lost with a pair of Threes

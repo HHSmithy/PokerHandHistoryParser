@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL £0.05/£0.10</gametype>
+    <tablename>Denar, 754948381</tablename>
+    <tablecurrency>GBP</tablecurrency>
+    <duration>N/A</duration>
+    <gamecount>N/A</gamecount>
+    <startdate>2014-01-06 00:21:41</startdate>
+    <currency>EUR</currency>
+    <nickname>N/A</nickname>
+    <bets>N/A</bets>
+    <wins>N/A</wins>
+    <chipsin>N/A</chipsin>
+    <chipsout>N/A</chipsout>
+    <ipoints>N/A</ipoints>
+    <statuspoints>N/A</statuspoints>
+    <awardpoints>N/A</awardpoints>
+  </general>
+  <game gamecode="5382842237">
+    <general>
+      <startdate>2014-01-06 00:22:00</startdate>
+      <players>
+        <player seat="5" name="SSSSS1222" chips="£4.28" dealer="1" win="£0.30" bet="£0.20" rebuy="0" addon="0" reg_code="-" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="SSSSS1222" type="1" sum="£0.05" cards="[cards]" />
+      <action no="2" player="nawu" type="2" sum="£0.10" cards="[cards]" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="SSSSS1222">X X</cards>
+      <action no="3" player="SSSSS1222" type="23" sum="£0.20" cards="" />
+      <cards type="Pocket" player="nawu">X X</cards>
+      <action no="4" player="nawu" type="0" sum="£0" cards="" />
+    </round>
+  </game>
+</session>

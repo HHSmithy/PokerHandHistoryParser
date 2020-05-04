@@ -18,6 +18,15 @@ namespace HandHistories.Parser.Utils.Time
 
     public static class TimeZoneUtil
     {
+        static Dictionary<string, string> TimezoneAbbreviations = new Dictionary<string, string>()
+        {
+            { "CET", "Central Europe Standard Time"},
+            { "EST", "Eastern Standard Time" },
+            { "EDT", "Eastern Standard Time" },
+            { "PST", "Pacific Standard Time" },
+            { "GMT", "Greenwich Mean Time"},
+        };
+
         public static DateTime ConvertDateTimeToUtc(DateTime dateTime, TimeZoneType timeZone)
         {
             DateTime convertedUtcTime = TimeZoneInfo.ConvertTimeToUtc(dateTime, GetTimeZoneInfo(timeZone));
@@ -25,14 +34,14 @@ namespace HandHistories.Parser.Utils.Time
 
             return convertedUtcTime;
         }
-        
+
         // Reference for time zones:
         // http://www.xiirus.net/articles/article-_net-convert-datetime-from-one-timezone-to-another-7e44y.aspx
         public static TimeZoneInfo GetTimeZoneInfo(TimeZoneType timeZoneTypes)
         {
             string timeZoneId = "NotSet";
             try
-            {                
+            {
                 switch (timeZoneTypes)
                 {
                     case TimeZoneType.EST:
@@ -70,6 +79,12 @@ namespace HandHistories.Parser.Utils.Time
                 //Console.WriteLine("Registry data on the {0} zone has been corrupted.", timeZoneId);
                 throw;
             }
+
+        }
+
+        public static TimeZoneInfo GetTimeZoneFromAbbreviation(string timeZoneAbbr)
+        {
+            return TimeZoneInfo.FindSystemTimeZoneById(TimezoneAbbreviations[timeZoneAbbr]);
         }
     }
 }

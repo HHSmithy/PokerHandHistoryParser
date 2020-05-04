@@ -1,0 +1,39 @@
+﻿Hand #54760000 - Omaha(Pot Limit) - $0.10/$0.25 - 2019/04/22 14:20:31 UTC
+Tablename 6-max Seat #6 is the button
+Seat 1: Player1 ($12.73)
+Seat 3: Hero ($8.88)
+Seat 4: Player4 ($12.50)
+Seat 6: Player6 ($14.01)
+Player1 posts the small blind $0.10
+Hero posts the big blind $0.25
+Player4 posts $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Ad 3s Ts 4s]
+Player4 raises $0.60 to $0.85
+Player6 calls $0.85
+Player1 folds
+Hero folds
+*** FLOP *** [Kc Kh 3c]
+Main pot $1.95 | Rake $0.10
+Player4 bets $2.05
+Player6 calls $2.05
+*** TURN *** [Kc Kh 3c] [5d]
+Main pot $5.85 | Rake $0.30
+Player4 bets $6.15
+Player6 raises $11.11 to $11.11 and is all-in
+Player4 calls $3.45 and is all-in
+Uncalled bet ($1.51) returned to Player6
+*** RIVER *** [Kc Kh 3c 5d] [Jc]
+Main pot $24.09 | Rake $1.26
+*** SHOW DOWN ***
+Main pot $24.09 | Rake $1.26
+Player4 shows [4h 4c 7d 6c] (a flush, King high [Kc Jc 6c 4c 3c])
+Player6 shows [6s Ah 3d Kd] (a full house, Kings full of Threes [Kh Kd Kc 3d 3c])
+Player6 collected $24.09 from main pot
+*** SUMMARY ***
+Total pot $24.09 | Rake $1.02 | JP Fee $0.24
+Board [Kc Kh 3c 5d Jc]
+Seat 1: Player1 (small blind) folded on the Pre-Flop
+Seat 3: Hero (big blind) folded on the Pre-Flop
+Seat 4: Player4 showed [4h 4c 7d 6c] and lost with a flush, King high [Kc Jc 6c 4c 3c]
+Seat 6: Player6 (button) showed [6s Ah 3d Kd] and won $24.09 with a full house, Kings full of Threes [Kh Kd Kc 3d 3c]

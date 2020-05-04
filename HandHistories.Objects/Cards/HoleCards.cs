@@ -11,7 +11,7 @@ namespace HandHistories.Objects.Cards
 
         private HoleCards(string playerName, params Card [] cards) : base(cards)
         {
-            PlayerName = playerName;          
+            PlayerName = playerName;
         }
 
         public static HoleCards ForHoldem(Card card1, Card card2)
@@ -32,6 +32,16 @@ namespace HandHistories.Objects.Cards
         public static HoleCards ForOmaha(string playerName, Card card1, Card card2, Card card3, Card card4)
         {            
             return new HoleCards(playerName, card1, card2, card3, card4);
+        }
+
+        public static HoleCards ForOmaha5(Card card1, Card card2, Card card3, Card card4, Card card5)
+        {
+            return new HoleCards(string.Empty, card1, card2, card3, card4, card5);
+        }
+
+        public static HoleCards ForOmaha5(string playerName, Card card1, Card card2, Card card3, Card card4, Card card5)
+        {
+            return new HoleCards(playerName, card1, card2, card3, card4, card5);
         }
 
         public static HoleCards NoHolecards()
@@ -59,18 +69,16 @@ namespace HandHistories.Objects.Cards
         }
 
         public static HoleCards FromCards(string playerName, Card[] cards)
-         {
-             switch (cards.Length)
-             {
-                 case 0:
-                     return NoHolecards(playerName);
-                 case 2:
-                     return ForHoldem(playerName, cards[0], cards[1]);
-                 case 4:
-                     return ForOmaha(playerName, cards[0], cards[1], cards[2], cards[3]);
-                 default:
-                     throw new ArgumentException("Hole cards must contain atleast 0, 2 or 4 cards.");
-             }
-         }        
+        {
+            if (cards.Length == 0)
+            {
+                return NoHolecards();
+            }
+            if (cards.Length > 5)
+            {
+                throw new ArgumentException("Hole cards cant contain more than 5 cards.");
+            }
+            return new HoleCards(playerName, cards);
+        }       
     }
 }

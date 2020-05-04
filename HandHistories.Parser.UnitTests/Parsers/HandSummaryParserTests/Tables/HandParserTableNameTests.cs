@@ -5,23 +5,24 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
-    [TestFixture("PokerStars", "Sisyphus III 40-100 bb", "Alterf II 40-100 bb", "Alathfar IV 100-250 bb, Ante", "Kythera III 40-100 bb", "Klinkenberg Zoom 40-100 bb", "Antiphos IV CAP,20-50 bb")]
-    [TestFixture("PartyPoker", "Avatele", "Barnsley", "Caracas", "Karlsruhe")]
-    [TestFixture("OnGame", "Butte [362037295]", "Hallein [361993106]", "Kirkuk [361882901]", "[SPEED] Homs [361726027]")]
-    [TestFixture("IPoker", "Abengibre, 817034516", "Akcakent, 817034504", "Canton, 754721371", "(Shallow) Haalderen, 755803691")]
-    [TestFixture("Pacific", "Aberdeen", "Bottrop", "Carson", "Santarem", "Linz")]
-    [TestFixture("Merge", "Baja (56067014)", "Bad Beat - Rue St Catherine (56116487)", "Deal It Twice - Mississippi (56196868)", "Ming Tombs (56176485)")]
-    [TestFixture("Entraction", "Zaragoza", "Zaragoza", "Saravane", "Waco")]
-    [TestFixture("FullTilt", "Lynn", "Dega", "Oveja", "Link")]
-    [TestFixture("MicroGaming", "Turbo: Hijack 41 - €100 Max", "Turbo: Shuffle 111 - €4 Max", "Turbo: Micro NLHE 3 - €2 Max", "Cut-Off 17 - €200 Max")]
-    [TestFixture("Winamax", "Istanbul", "Dublin", "Vienna 36","San Antonio")]
-    [TestFixture("WinningPoker", "Braunite", "Baryte   (JP) - 2", "Baotite", "Oalitite   (JP)", "Wichita Falls 1/2 - 3", "Wichita Falls 1/2")]
-    [TestFixture("BossMedia", "Diana 9", "Eva 9", "Moa 11")]
+    [TestFixture("PokerStars", new string[] { "Sisyphus III 40-100 bb", "Alterf II 40-100 bb", "Alathfar IV 100-250 bb, Ante", "Kythera III 40-100 bb", "Klinkenberg Zoom 40-100 bb", "Antiphos IV CAP,20-50 bb" })]
+    [TestFixture("PartyPoker", new string[] { "Avatele", "Barnsley", "Caracas", "Karlsruhe" })]
+    [TestFixture("OnGame", new string[] { "Butte [362037295]", "Hallein [361993106]", "Kirkuk [361882901]", "[SPEED] Homs [361726027]" })]
+    [TestFixture("IPoker", new string[] { "Abengibre, 817034516", "Akcakent, 817034504", "Canton, 754721371", "(Shallow) Haalderen, 755803691" })]
+    [TestFixture("Pacific", new string[] { "Aberdeen", "Bottrop", "Carson", "Santarem", "Linz" })]
+    [TestFixture("Merge", new string[] { "Baja (56067014)", "Bad Beat - Rue St Catherine (56116487)", "Deal It Twice - Mississippi (56196868)", "Ming Tombs (56176485)" })]
+    [TestFixture("Entraction", new string[] { "Zaragoza", "Zaragoza", "Saravane", "Waco" })]
+    [TestFixture("FullTilt", new string[] { "Lynn", "Dega", "Oveja", "Link" })]
+    [TestFixture("MicroGaming", new string[] { "Turbo: Hijack 41 - €100 Max", "Turbo: Shuffle 111 - €4 Max", "Turbo: Micro NLHE 3 - €2 Max", "Cut-Off 17 - €200 Max" })]
+    [TestFixture("Winamax", new string[] { "Istanbul", "Dublin", "Vienna 36","San Antonio" })]
+    [TestFixture("WinningPoker", new string[] { "Braunite", "Baryte   (JP) - 2", "Baotite", "Oalitite   (JP)", "Wichita Falls 1/2 - 3", "Wichita Falls 1/2" })]
+    [TestFixture("BossMedia", new string[] { "Diana 9", "Eva 9", "Moa 11" })]
+    [TestFixture("IGT", new string[] { "Ada73", "Gwen 263" })]
     class HandParserTableNameTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedTables;
 
-        public HandParserTableNameTests(string site, params string [] expectedTables)
+        public HandParserTableNameTests(string site, string [] expectedTables)
             : base(site)
         {
             _expectedTables = expectedTables;            

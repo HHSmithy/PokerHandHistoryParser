@@ -1,0 +1,43 @@
+Game started at: 2017/11/30 7:32:55
+Game ID: 1064953017 15/30 (PRR) Topielec (Omaha)
+Seat 2 is the button
+Seat 2: sugar baby (1997.75).
+Seat 3: 5x5=10 (3795.62).
+Seat 4: Scout327 (1200).
+Seat 5: PLOwned (2838.75).
+Player Scout327 sitting out
+Player 5x5=10 has small blind (15)
+Player PLOwned has big blind (30)
+Player 5x5=10 received a card.
+Player 5x5=10 received a card.
+Player 5x5=10 received a card.
+Player 5x5=10 received a card.
+Player PLOwned received a card.
+Player PLOwned received a card.
+Player PLOwned received a card.
+Player PLOwned received a card.
+Player sugar baby received a card.
+Player sugar baby received a card.
+Player sugar baby received a card.
+Player sugar baby received a card.
+Player sugar baby raises (90)
+Player 5x5=10 folds
+Player PLOwned calls (60)
+*** FLOP ***: [6d 7d 7c]
+Player PLOwned bets (64)
+Player sugar baby calls (64)
+*** TURN ***: [6d 7d 7c] [Kc]
+Player PLOwned checks
+Player sugar baby checks
+*** RIVER ***: [6d 7d 7c Kc] [6h]
+Player PLOwned checks
+Player sugar baby checks
+Player PLOwned mucks cards
+------ Summary ------
+Pot: 320.75. Rake 2.17. JP fee 0.08
+Board: [6d 7d 7c Kc 6h]
+*Player sugar baby shows: Two pairs. Js and 7s [5c Jh 8c Jd]. Bets: 154. Collects: 320.75. Wins: 166.75.
+Player 5x5=10 does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player Scout327 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player PLOwned mucks (does not show cards). Bets: 154. Collects: 0. Loses: 154.
+Game ended at: 2017/11/30 7:34:7

@@ -1,0 +1,30 @@
+﻿***** 888poker Hand History for Game 374000000 *****
+$10/$20 Blinds Pot Limit Omaha - *** 01 01 2014 01:01:01
+Table Orlando 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: Player1 ( $2,019 )
+Seat 2: Player2 ( $2,964.25 )
+Seat 4: Player4 ( $2,371 )
+Seat 9: Player5 ( $6,306 )
+Player5 posts small blind [$10]
+Player1 posts big blind [$20]
+Player2 raises [$70]
+Player4 folds
+Player5 folds
+Player1 raises [$200]
+Player2 calls [$150]
+** Dealing flop ** [ 6h, Jh, Kc ]
+Player1 bets [$275]
+Player2 raises [$1,275]
+Player1 raises [$1,524]
+Player2 calls [$524]
+** Dealing turn ** [ Qh ]
+** Dealing river ** [ 9d ]
+** Summary **
+Player1 shows [ Ks, Jc, Ac, 6s ]
+Player2 shows [ 9h, Td, 7d, Kh ]
+Player2 collected [ $4,044 ]
+
+#Game No : 374398069
+

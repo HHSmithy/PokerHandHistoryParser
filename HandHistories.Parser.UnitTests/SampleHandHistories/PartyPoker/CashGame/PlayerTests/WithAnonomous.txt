@@ -1,0 +1,26 @@
+﻿***** Hand History for Game 14835000000 *****
+$200 USD PL Omaha - Monday, October 12, 01:01:01 CEST 2015
+Table Jerusalem (Real Money)
+Seat 1 is the button
+Total number of players : 2/6 
+Seat 1: Player1 ( $390 USD )
+Seat 2: HERO ( $200 USD )
+Player1 posts small blind [$1 USD].
+HERO posts big blind [$2 USD].
+** Dealing down cards **
+Dealt to HERO [  9s Qc Ks Tc ]
+WolfgangCutler raises [$5 USD]
+HERO calls [$4 USD]
+** Dealing Flop ** [ 8c, 7c, Qh ]
+HERO checks
+WolfgangCutler checks
+** Dealing Turn ** [ Jd ]
+HERO checks
+WolfgangCutler bets [$11 USD]
+HERO calls [$11 USD]
+** Dealing River ** [ Ts ]
+HERO checks
+WolfgangCutler checks
+HERO shows [ 7s, Qd, Ks, Th ]two pairs, Queens and Tens.
+WolfgangCutler shows [ 6d, 9s, 8h, 9c ]a straight, Eight to Queen.
+WolfgangCutler wins $33 USD from the main pot with a straight, Eight to Queen.

@@ -1,0 +1,31 @@
+﻿***** 888poker Hand History for Game 539304607 *****
+$0.05/$0.10 Blinds No Limit Holdem - *** 06 01 2014 00:00:50
+Table Sunrise 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 8
+Seat 1: JeksonBLR ( $5.94 )
+Seat 2: Berg_pl123 ( $5.86 )
+Seat 3: datigo ( $10.76 )
+Seat 4: Karwendel1 ( $10.10 )
+Seat 6: laeufergott ( $9.90 )
+Seat 7: GunShotDraw ( $13.52 )
+Seat 9: July16at ( $4 )
+Seat 10: carmel979 ( $7.17 )
+Karwendel1 posts small blind [$0.05]
+laeufergott posts big blind [$0.10]
+** Dealing down cards **
+GunShotDraw folds
+July16at folds
+carmel979 folds
+JeksonBLR folds
+Berg_pl123 calls [$0.10]
+datigo folds
+Karwendel1 calls [$0.05]
+laeufergott checks
+** Dealing flop ** [ 5c, Jc, 6d ]
+Karwendel1 bets [$0.30]
+laeufergott folds
+Berg_pl123 folds
+** Summary **
+Karwendel1 did not show his hand
+Karwendel1 collected [ $0.29 ]

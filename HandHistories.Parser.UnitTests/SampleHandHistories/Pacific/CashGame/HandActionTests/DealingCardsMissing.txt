@@ -1,0 +1,17 @@
+﻿***** 888poker Hand History for Game 717000000 *****
+$2/$4 Blinds No Limit Holdem - *** 01 04 2014 10:01:01
+Table Rochester 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: Player1 ( $148 )
+Seat 2: Player2 ( $400 )
+Seat 6: Player3 ( $411 )
+Player1 posts small blind [$2]
+Player2 posts big blind [$4]
+Player3 folds
+Player1 calls [$2]
+Player2 folds
+** Summary **
+Player1 collected [ $8 ]
+
+#Game No : 717507368

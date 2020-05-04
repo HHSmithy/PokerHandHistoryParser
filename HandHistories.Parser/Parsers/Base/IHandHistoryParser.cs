@@ -10,10 +10,12 @@ namespace HandHistories.Parser.Parsers.Base
     {
         HandHistory ParseFullHandHistory(string handText, bool rethrowExceptions = false);
         
-        List<HandAction> ParseHandActions(string handText);
+        List<HandAction> ParseHandActions(string handText, out List<WinningsAction> winners);
 
         PlayerList ParsePlayers(string handText);
         
         BoardCards ParseCommunityCards(string handText);
+
+        string ParseHeroName(string handText);
     }
 }

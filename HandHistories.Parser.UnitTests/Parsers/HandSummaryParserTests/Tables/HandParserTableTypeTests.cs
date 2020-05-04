@@ -4,19 +4,19 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
-    [TestFixture("PartyPoker", "Regular", "Regular", "Regular", "Regular")]
-    [TestFixture("PokerStars", "Regular", "Regular", "Deep", "Regular", "Zoom", "Cap")]
-    [TestFixture("OnGame", "Regular", "Regular", "Regular", "Speed")]
-    [TestFixture("IPoker", "Regular", "Regular", "Regular", "Shallow")]
-    [TestFixture("Pacific", "Regular", "Regular", "Regular", "Regular", "Jackpot")]
-    [TestFixture("Merge", "Regular", "Jackpot", "Regular", "Regular")]
-    [TestFixture("Entraction", "Regular", "Regular", "Regular", "Regular")]
-    [TestFixture("FullTilt", "Regular", "Regular", "Regular", "Regular")]
+    [TestFixture("PartyPoker", new string[] { "Regular", "Regular", "Regular", "Regular" })]
+    [TestFixture("PokerStars", new string[] { "Regular", "Regular", "Deep", "Regular", "Zoom", "Cap" })]
+    [TestFixture("OnGame", new string[] { "Regular", "Regular", "Regular", "Speed" })]
+    [TestFixture("IPoker", new string[] { "Regular", "Regular", "Regular", "Shallow" })]
+    [TestFixture("Pacific", new string[] { "Regular", "Regular", "Regular", "Regular", "Jackpot" })]
+    [TestFixture("Merge", new string[] { "Regular", "Jackpot", "Regular", "Regular" })]
+    [TestFixture("Entraction", new string[] { "Regular", "Regular", "Regular", "Regular" })]
+    [TestFixture("FullTilt", new string[] { "Regular", "Regular", "Regular", "Regular" })]
     class HandParserTableTypeTests : HandHistoryParserBaseTests
     {
         private readonly string[] _expectedTableTypeStrings;
 
-        public HandParserTableTypeTests(string site, params string[] expectedTableTypeStrings)
+        public HandParserTableTypeTests(string site, string[] expectedTableTypeStrings)
             : base(site)
         {
             _expectedTableTypeStrings = expectedTableTypeStrings;

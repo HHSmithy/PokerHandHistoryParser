@@ -5,7 +5,6 @@ using System.Text;
 using HandHistories.Parser.Compression;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Factory;
-using HandHistories.Parser.Parsers.RegexParser.Base;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using HandHistories.Parser.UnitTests.Utils.IO;
 using Ninject;

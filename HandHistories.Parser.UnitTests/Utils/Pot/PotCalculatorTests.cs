@@ -60,8 +60,11 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
 
                 new HandAction("P1", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
                 new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.River),
+            };
 
-                new WinningsAction("P1", HandActionType.WINS, 0.8m, 0),
+            hand.Winners = new List<WinningsAction>()
+            {
+                new WinningsAction("P1", WinningsActionType.WINS, 0.8m, 0),
             };
 
             TestPotCalculator(0.8m, hand);
@@ -80,8 +83,11 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P2", HandActionType.CHECK, 0m, Objects.Cards.Street.Preflop),
 
                 new HandAction("P1", HandActionType.FOLD, 0m, Objects.Cards.Street.Flop),
+            };
 
-                new WinningsAction("P2", HandActionType.WINS, 0.4m, 0),
+            hand.Winners = new List<WinningsAction>()
+            {
+                new WinningsAction("P2", WinningsActionType.WINS, 0.4m, 0),
             };
 
             TestPotCalculator(0.4m, hand);
@@ -100,11 +106,32 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
                 new HandAction("P2", HandActionType.RAISE, 60m, Street.Preflop, true),
                 new HandAction("P1", HandActionType.CALL, 29m, Street.Preflop, true),
                 new HandAction("P2", HandActionType.UNCALLED_BET, 22, Street.Preflop),
+            };
 
-                new WinningsAction("P2", HandActionType.WINS, 80m, 0),
+            hand.Winners = new List<WinningsAction>()
+            {
+                 new WinningsAction("P2", WinningsActionType.WINS, 80m, 0),
             };
 
             TestPotCalculator(80m, hand);
+        }
+
+        [TestCase]
+        public void PotCalculatorTest_PostDead()
+        {
+            HandHistory hand = new HandHistory();
+
+            hand.HandActions = new List<HandAction>
+            {
+                new HandAction("P1", HandActionType.SMALL_BLIND, 1m, Street.Preflop),
+                new HandAction("P2", HandActionType.BIG_BLIND, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.POSTS_DEAD, 1m, Street.Preflop),
+                new HandAction("P3", HandActionType.POSTS, 2m, Street.Preflop),
+                new HandAction("P3", HandActionType.CHECK, 0m, Street.Preflop),
+                new HandAction("P1", HandActionType.CALL, 1m, Street.Preflop),
+            };
+
+            TestPotCalculator(7m, hand);
         }
     }
 }

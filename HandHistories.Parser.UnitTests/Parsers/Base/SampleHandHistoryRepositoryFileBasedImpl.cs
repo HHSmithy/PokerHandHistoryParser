@@ -2,16 +2,23 @@ using System.Text;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Utils.IO;
+using System;
 
 namespace HandHistories.Parser.UnitTests.Parsers.Base
 {
     internal class SampleHandHistoryRepositoryFileBasedImpl : ISampleHandHistoryRepository
     {
         private readonly IFileReader _fileReader;
+        private readonly string _version;
 
         public SampleHandHistoryRepositoryFileBasedImpl(IFileReader fileReader)
         {
             _fileReader = fileReader;
+        }
+
+        public SampleHandHistoryRepositoryFileBasedImpl(IFileReader fileReader, string version) : this(fileReader)
+        {
+            _version = version;
         }
 
         public string GetCancelledHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName)
@@ -19,9 +26,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "ValidHandTests", "CancelledHand");
         }
 
-        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid)
+        public string GetValidHandHandHistoryText(PokerFormat pokerFormat, SiteName siteName, bool isValid, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid) ? "ValidHand" : "InvalidHand");
+            return GetHandText(pokerFormat, siteName, "ValidHandTests", (isValid ? "ValidHand" : "InvalidHand") + "_" + testNumber);
         }
 
         public string GetSeatExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, SeatType seatType)
@@ -32,6 +39,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
         public string GetLimitExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName)
         {
             return GetHandText(pokerFormat, siteName, "Limits", fileName);
+        }
+
+        public string GetBuyinExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, string fileName)
+        {
+            return GetHandText(pokerFormat, siteName, "Buyins", fileName);
         }
 
         public string GetTableExampleHandHistoryText(PokerFormat pokerFormat, SiteName siteName, int tableTestNumber)
@@ -54,9 +66,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
             return GetHandText(pokerFormat, siteName, "GameTypeTests", gameType.ToString());
         }
 
-        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street)
+        public string GetCommunityCardsHandHistoryText(PokerFormat pokerFormat, SiteName siteName, Street street, int testNumber)
         {
-            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString());
+            return GetHandText(pokerFormat, siteName, "StreetTests", street.ToString() + (testNumber == 1 ? "" : testNumber.ToString()));
         }
 
         public string GetMultipleHandExampleText(PokerFormat pokerFormat, SiteName siteName, int handCount)
@@ -71,7 +83,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.Base
 
         private string GetHandText(PokerFormat pokerFormat, SiteName siteName, string subFolderName, string textFileName)
         {
-            string subFolder = System.IO.Path.Combine(GetSampleHandHistoryFolder(pokerFormat, siteName), subFolderName);
+            string workPath = AppDomain.CurrentDomain.BaseDirectory;
+            string subFolder = System.IO.Path.Combine(workPath, GetSampleHandHistoryFolder(pokerFormat, siteName), subFolderName);
             string path = System.IO.Path.Combine(subFolder, textFileName) + ".txt";
 
             if (_fileReader.FileExists(path) == false)

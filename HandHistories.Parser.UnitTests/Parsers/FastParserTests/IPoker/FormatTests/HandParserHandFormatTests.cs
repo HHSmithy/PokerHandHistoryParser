@@ -6,22 +6,25 @@ using NUnit.Framework;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTests
 {
-    [TestFixture("IPoker", 3305969126, 8)]
+    [TestFixture("IPoker", "FormatVersion17", "7558166000", 12, 1)]
+    [TestFixture("IPoker", "UnformattedXmlHand", "3305969126", 8, 1)]
     class HandParserHandFormatTests : HandHistoryParserBaseTests 
     {
         private readonly string _unformattedXmlHand;
-        private readonly long _expectedHandId;
+        private readonly string _expectedHandId;
         private readonly int _expectedNumActions;
+        private readonly int _expectedNumWinners;
 
-        public HandParserHandFormatTests(string site, long handId, int expectedNumActions)
+        public HandParserHandFormatTests(string site, string handname, string handId, int expectedNumActions, int expectedWinners)
             : base(site)
         {
             _expectedHandId = handId;
             _expectedNumActions = expectedNumActions;
+            _expectedNumWinners = expectedWinners;
 
             try
             {
-                _unformattedXmlHand = SampleHandHistoryRepository.GetFormatHandHistoryText(PokerFormat.CashGame, Site, "UnformattedXmlHand");
+                _unformattedXmlHand = SampleHandHistoryRepository.GetFormatHandHistoryText(PokerFormat.CashGame, Site, handname);
             }
             catch (Exception ex)
             {
@@ -37,9 +40,11 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTe
             HandHistorySummary summary = GetSummmaryParser().ParseFullHandSummary(_unformattedXmlHand);
             HandHistory fullHandParse = GetParser().ParseFullHandHistory(_unformattedXmlHand);
             
-            Assert.AreEqual(_expectedHandId, summary.HandId, "IHandHistorySummaryParser: ParseHandId");
-            Assert.AreEqual(_expectedHandId, fullHandParse.HandId, "IHandHistoryParser: ParseHandId");
-            Assert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: ParseHandId");
+            Assert.AreEqual(_expectedHandId, summary.HandIdString, "IHandHistorySummaryParser: ParseHandId");
+            Assert.AreEqual(_expectedHandId, fullHandParse.HandIdString, "IHandHistoryParser: ParseHandId");
+            Assert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: HandActionCount");
+            Assert.AreEqual(_expectedNumWinners, fullHandParse.Winners.Count, "IHandHistoryParser: WinnerCount");
+
         }
 
     }

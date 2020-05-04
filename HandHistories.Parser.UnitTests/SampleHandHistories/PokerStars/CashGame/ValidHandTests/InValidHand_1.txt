@@ -1,0 +1,40 @@
+﻿PokerStars Game #109681289672:  Hold'em No Limit ($0.05/$0.10 USD) - 2014/01/06 7:20:20 ET
+Table 'Mora IV 100-250 bb, Ante' 6-max Seat #6 is the button
+Seat 1: robinsongo ($25 in chips) 
+Seat 2: Selim_Maroc ($15.02 in chips) 
+Seat 3: H6U5r ($25 in chips) 
+Seat 4: driessen10 ($38.57 in chips) 
+Seat 5: D9e7J0aV8u ($36.22 in chips) 
+Seat 6: smolniy27 ($9.17 in chips) 
+robinsongo: posts small blind $0.05
+Selim_Maroc: posts big blind $0.10
+robinsongo: posts the ante $0.02
+Selim_Maroc: posts the ante $0.02
+H6U5r: posts the ante $0.02
+driessen10: posts the ante $0.02
+D9e7J0aV8u: posts the ante $0.02
+smolniy27: posts the ante $0.02
+*** HOLE CARDS ***
+H6U5r: raises $0.20 to $0.30
+driessen10: folds 
+D9e7J0aV8u: folds 
+smolniy27: folds 
+robinsongo: calls $0.25
+Selim_Maroc: calls $0.20
+*** FLOP *** [3h 9s 2d]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: checks 
+*** TURN *** [3h 9s 2d] [4s]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: checks 
+*** RIVER *** [3h 9s 2d 4s] [Ts]
+robinsongo: checks 
+Selim_Maroc: checks 
+H6U5r: bets $0.72
+driessen10 is disconnected 
+robinsongo: folds 
+Selim_Maroc: folds 
+Uncalled bet ($0.72) returned to H6U5r
+H6U5r collected $0.97 from pot

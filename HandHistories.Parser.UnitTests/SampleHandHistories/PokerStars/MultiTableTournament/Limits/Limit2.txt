@@ -1,0 +1,36 @@
+﻿PokerStars Hand #116434951342: Tournament #910930978, Freeroll  Hold'em No Limit - Level I (10/20) - 2014/05/20 8:42:32 ET
+Table '910930978 309' 9-max Seat #2 is the button
+Seat 1: kindex05 (1500 in chips) is sitting out
+Seat 2: SaleSRB_86 (1490 in chips) 
+Seat 3: DISG17 (3030 in chips) out of hand (moved from another table into small blind)
+Seat 4: gornyk1973 (1500 in chips) is sitting out
+Seat 5: zsozso522 (1500 in chips) is sitting out
+Seat 6: ObamaCareasd (1500 in chips) 
+Seat 7: Bogdan555 (4510 in chips) 
+Seat 8: NokDawnDE (1500 in chips) is sitting out
+Seat 9: kostas123445 (1500 in chips) is sitting out
+gornyk1973: posts small blind 10
+zsozso522: posts big blind 20
+*** HOLE CARDS ***
+Dealt to ObamaCareasd [3h 4h]
+ObamaCareasd: folds 
+Bogdan555: folds 
+NokDawnDE: folds 
+kostas123445: folds 
+kindex05: folds 
+SaleSRB_86: folds 
+gornyk1973: folds 
+Uncalled bet (10) returned to zsozso522
+zsozso522 collected 20 from pot
+zsozso522: doesn't show hand 
+kostas123445 has returned
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: kindex05 folded before Flop (didn't bet)
+Seat 2: SaleSRB_86 (button) folded before Flop (didn't bet)
+Seat 4: gornyk1973 (small blind) folded before Flop
+Seat 5: zsozso522 (big blind) collected (20)
+Seat 6: ObamaCareasd folded before Flop (didn't bet)
+Seat 7: Bogdan555 folded before Flop (didn't bet)
+Seat 8: NokDawnDE folded before Flop (didn't bet)
+Seat 9: kostas123445 folded before Flop (didn't bet)

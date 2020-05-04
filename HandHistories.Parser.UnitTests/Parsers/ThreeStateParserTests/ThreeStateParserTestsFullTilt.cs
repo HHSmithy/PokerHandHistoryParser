@@ -56,12 +56,16 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             get
             {
                 return new List<HandAction>()
-                    {
-                        new HandAction("jobetzu", HandActionType.SHOW, Street.Showdown),
-                        new HandAction("theking881", HandActionType.MUCKS, Street.Showdown),
-                        new WinningsAction("jobetzu", HandActionType.WINS, 615.5m, 0),
-                    };
+                {
+                    new HandAction("jobetzu", HandActionType.SHOW, Street.Showdown),
+                    new HandAction("theking881", HandActionType.MUCKS, Street.Showdown),
+                };
             }
+        }
+
+        protected override List<WinningsAction> ExpectedWinnersShowDownActions_Wins
+        {
+            get { return new List<WinningsAction>() { new WinningsAction("jobetzu", WinningsActionType.WINS, 615.5m, 0), }; }
         }
     }
 }

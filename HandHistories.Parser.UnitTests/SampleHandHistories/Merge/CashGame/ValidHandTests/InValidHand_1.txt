@@ -1,0 +1,22 @@
+﻿<description type="Holdem" stakes="No Limit ($0.10/$0.25)"/>
+<game id="53363692-2070" starttime="20120417015848" numholecards="2" gametype="2" seats="9" realmoney="true" data="20120417|Yellowstone (53363692)|53363692|53363692-2070|false">
+	<players dealer="8">
+		<player seat="0" nickname="OMGIJAMMEDITALLIN" balance="$33.81" dealtin="true" />
+		<player seat="1" nickname="RajonRondo" balance="$20.35" dealtin="true" />
+		<player seat="2" nickname="Jopok6465" balance="$16.20" dealtin="true" />
+		<player seat="3" nickname="Valentina333" balance="$7.50" dealtin="true" />
+		<player seat="4" nickname="HolaAriolis" balance="$35.97" dealtin="true" />
+		<player seat="5" nickname="NYIslesFCP1" balance="$28.70" dealtin="true" />
+		<player seat="6" nickname="worldmanager" balance="$31.27" dealtin="true" />
+		<player seat="7" nickname="dk006lv" balance="$25.00" dealtin="true" />
+		<player seat="8" nickname="CrymeaFLOP" balance="$32.44" dealtin="true" />
+	</players>
+	<round id="BLINDS" sequence="1">
+		<event sequence="1" type="SMALL_BLIND" timestamp="1334645892296" player="0" amount="0.10"/>
+		<event sequence="2" type="BIG_BLIND" timestamp="1334645892593" player="1" amount="0.25"/>
+	</round>
+	<round id="PREFLOP" sequence="2">
+		<event sequence="3" type="CALL" timestamp="1334645894140" player="2" amount="0.25"/>
+		<event sequence="4" type="FOLD" timestamp="1334645901984" player="3"/>
+		<event sequence="5" type="FOLD" timestamp="1334645909312" player="4"/>
+		<event sequence="6" type="FOLD" timestamp="1334645911343" player="5"/>

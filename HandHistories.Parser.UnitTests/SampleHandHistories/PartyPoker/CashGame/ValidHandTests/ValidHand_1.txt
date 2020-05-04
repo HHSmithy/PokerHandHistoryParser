@@ -1,0 +1,22 @@
+﻿***** Hand History for Game 13551039167 *****
+$0.05/$0.10 USD NL Texas Hold'em - Monday, January 06, 11:42:48 EST 2014
+Table Gyumri (Real Money)
+Seat 1 is the button
+Total number of players : 6/6 
+Seat 2: IknowUrAho ( $10.05 USD )
+Seat 5: RoadTrips ( $20.76 USD )
+Seat 6: ahahhahahahahah ( $19.17 USD )
+Seat 1: kalamasz ( $10 USD )
+Seat 4: radpl ( $10 USD )
+Seat 3: wadereckons ( $16.23 USD )
+IknowUrAho posts small blind [$0.05 USD].
+wadereckons posts big blind [$0.10 USD].
+** Dealing down cards **
+RoadTrips raises [$0.30 USD]
+ahahhahahahahah folds
+kalamasz folds
+IknowUrAho raises [$0.95 USD]
+wadereckons folds
+RoadTrips folds
+IknowUrAho does not show cards.
+IknowUrAho wins $1.40 USD
