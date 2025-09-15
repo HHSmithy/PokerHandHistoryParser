@@ -12,7 +12,6 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Time;
 using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.Strings;
-using System.Globalization;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {

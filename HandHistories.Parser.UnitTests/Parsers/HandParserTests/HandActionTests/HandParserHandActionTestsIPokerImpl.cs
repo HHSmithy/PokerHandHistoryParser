@@ -5,6 +5,7 @@ using System.Text;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -108,7 +109,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             get
             {
-                Assert.Ignore("No Omaha Hi-Lo Testcase");
+                ClassicAssert.Ignore("No Omaha Hi-Lo Testcase");
                 throw new NotImplementedException();
             }
         }

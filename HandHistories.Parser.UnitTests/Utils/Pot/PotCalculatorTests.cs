@@ -3,6 +3,7 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Utils.Pot;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace HandHistories.Parser.UnitTests.Utils.Pot
         void TestPotCalculator(decimal ExpectedPot, HandHistory hand)
         {
             var calculatedPot = PotCalculator.CalculateTotalPot(hand);
-            Assert.AreEqual(ExpectedPot, calculatedPot);
+            ClassicAssert.AreEqual(ExpectedPot, calculatedPot);
         }
 
         [TestCase]

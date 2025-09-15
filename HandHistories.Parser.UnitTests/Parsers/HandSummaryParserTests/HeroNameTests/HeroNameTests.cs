@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {
@@ -32,7 +33,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             string hand = SampleHandHistoryRepository.GetGeneralHandHistoryText(PokerFormat.CashGame, Site, "HeroName");
 
             var handhistory = GetParser().ParseFullHandHistory(hand);
-            Assert.AreEqual(_expectedHeroName, handhistory.Hero.PlayerName, "IHandHistoryParser: ParseHeroName");
+            ClassicAssert.AreEqual(_expectedHeroName, handhistory.Hero.PlayerName, "IHandHistoryParser: ParseHeroName");
         }
     }
 }

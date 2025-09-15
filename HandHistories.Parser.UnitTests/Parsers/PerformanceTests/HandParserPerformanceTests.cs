@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 
 namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
@@ -44,7 +45,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.PerformanceTest
             double elapsedMillis = timer.Elapsed.TotalMilliseconds;
             Console.Write(Site + ": Time in milliseconds to parse " + handsCount + " hands: " + elapsedMillis);
             bool ExecutionTimeLessThanFiveSeconds = (elapsedMillis < 1000);
-            Assert.IsTrue(ExecutionTimeLessThanFiveSeconds, "Should take less than one seconds: Time Taken: " + elapsedMillis + "ms");
+            ClassicAssert.IsTrue(ExecutionTimeLessThanFiveSeconds, "Should take less than one seconds: Time Taken: " + elapsedMillis + "ms");
         }
     }
 }

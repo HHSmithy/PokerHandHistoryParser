@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameTypes
 {    
@@ -27,8 +28,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             string handText = SampleHandHistoryRepository.GetGameTypeHandHistoryText(PokerFormat.CashGame, Site, expected);
 
-            Assert.AreEqual(expected, GetSummmaryParser().ParseGameType(handText), "IHandHistorySummaryParser: ParseGameType");
-            Assert.AreEqual(expected, GetParser().ParseGameType(handText), "IHandHistoryParser: ParseGameType");
+            ClassicAssert.AreEqual(expected, GetSummmaryParser().ParseGameType(handText), "IHandHistorySummaryParser: ParseGameType");
+            ClassicAssert.AreEqual(expected, GetParser().ParseGameType(handText), "IHandHistoryParser: ParseGameType");
         }
         
         [Test]
@@ -37,10 +38,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             switch (Site)
             {
                 case SiteName.Winamax:
-                    Assert.Ignore(Site + " currently doesn't have FL example.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have FL example.");
                     return;
                 case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
+                    ClassicAssert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
                     return;
             }
             TestGameType(GameType.FixedLimitHoldem);
@@ -58,7 +59,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
             switch (Site)
             {
                 case SiteName.FullTilt:
-                    Assert.Ignore(Site + " currently doesn't have Pot Limit Omaha example.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have Pot Limit Omaha example.");
                     return;
             }
 
@@ -70,7 +71,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             if (Site != SiteName.Entraction)
             {
-                Assert.Ignore(Site + " currently doesn't have Fixed Limit Omaha HiLo.");
+                ClassicAssert.Ignore(Site + " currently doesn't have Fixed Limit Omaha HiLo.");
                 return;
             }
 
@@ -91,10 +92,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.Winamax:
                 case SiteName.PartyPoker:
                 case SiteName.BossMedia:
-                    Assert.Ignore(Site + " currently doesn't have pot limit holdem.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have pot limit holdem.");
                     break;
                 case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
+                    ClassicAssert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
                     return;
             }
 
@@ -119,10 +120,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.Winamax:
                 case SiteName.Pacific:
                 case SiteName.BossMedia:
-                    Assert.Ignore(Site + " currently doesn't have No Limit Omaha example.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have No Limit Omaha example.");
                     break;
                 case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
+                    ClassicAssert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
                     return;
             }
 
@@ -146,10 +147,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.Entraction:
                 case SiteName.Winamax:
                 case SiteName.BossMedia:
-                    Assert.Ignore(Site + " currently doesn't have No Limit Omaha HiLo example.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have No Limit Omaha HiLo example.");
                     break;
                 case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
+                    ClassicAssert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
                     return;
             }
 
@@ -166,10 +167,10 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
                 case SiteName.FullTilt:
                 case SiteName.Entraction:
                 case SiteName.Winamax:
-                    Assert.Ignore(Site + " currently doesn't have Pot Limit Omaha HiLo example.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have Pot Limit Omaha HiLo example.");
                     break;
                 case SiteName.WinningPoker:
-                    Assert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
+                    ClassicAssert.Ignore(Site + " does not make a diffrence for Fixed/No Limit/Limit");
                     return;
             }
 
@@ -181,7 +182,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GameType
         {
             if (Site != SiteName.Entraction)
             {
-                Assert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
+                ClassicAssert.Ignore(Site + " currently doesn't have sample for " + GameType.FiveCardPotLimitOmaha);
             }
 
             TestGameType(GameType.FiveCardPotLimitOmaha);

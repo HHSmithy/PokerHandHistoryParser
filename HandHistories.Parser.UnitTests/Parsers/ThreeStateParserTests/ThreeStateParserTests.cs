@@ -3,6 +3,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             List<HandAction> actions = new List<HandAction>();
             parser.ParseBlindActions(GetBlindTest(fileName), ref actions, 0);
 
-            Assert.AreEqual(expectedActions, actions);
+            ClassicAssert.AreEqual(expectedActions, actions);
         }
 
         protected string[] GetBlindTest(string name)
@@ -43,7 +44,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
             List<HandAction> actions = new List<HandAction>();
             parser.ParseShowDown(GetShowDownTest(fileName), ref actions, 0, GameType.Unknown);
 
-            Assert.AreEqual(expectedActions, actions);
+            ClassicAssert.AreEqual(expectedActions, actions);
         }
 
         string[] GetTest(string test, string name)
@@ -73,7 +74,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         {
             if (!BlindIgnoreActionsTestable)
             {
-                Assert.Ignore();
+                ClassicAssert.Ignore();
             }
             TestBlindActions("Ignore", new List<HandAction>());
         }
@@ -86,7 +87,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         {
             if (!BlindChatEndingWithNumberTestable)
             {
-                Assert.Ignore();
+                ClassicAssert.Ignore();
             }
             TestBlindActions("ChatNumber", new List<HandAction>());
         }
@@ -96,7 +97,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         {
             if (!ShowDownIgnoreActionsTestable)
             {
-                Assert.Ignore();
+                ClassicAssert.Ignore();
             }
             TestShowDownActions("Wins", ExpectedShowDownActions_Wins);
         }
@@ -109,7 +110,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         {
             if (!ShowDownIgnoreActionsTestable)
             {
-                Assert.Ignore();
+                ClassicAssert.Ignore();
             }
             TestShowDownActions("Ignore", new List<HandAction>());
         }

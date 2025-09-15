@@ -3,6 +3,7 @@ using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,8 +34,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         {
              string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, expected);
 
-            Assert.AreEqual(expected, GetSummmaryParser().IsValidHand(handText), "IHandHistorySummaryParser: IsValidHand");
-            Assert.AreEqual(expected, GetParser().IsValidHand(handText), "IHandHistoryParser: IsValidHand");
+            ClassicAssert.AreEqual(expected, GetSummmaryParser().IsValidHand(handText), "IHandHistorySummaryParser: IsValidHand");
+            ClassicAssert.AreEqual(expected, GetParser().IsValidHand(handText), "IHandHistoryParser: IsValidHand");
         }
 
         [Test]
@@ -42,7 +43,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         {
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
 
-            Assert.IsNull(GetSummmaryParser().ParseFullHandSummary(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
+            ClassicAssert.IsNull(GetSummmaryParser().ParseFullHandSummary(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
 
         [Test]
@@ -50,7 +51,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         {
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
 
-            Assert.IsNull(GetParser().ParseFullHandHistory(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
+            ClassicAssert.IsNull(GetParser().ParseFullHandHistory(handText, false), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
 
         [Test]
@@ -58,7 +59,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         {
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
 
-            Assert.Throws<InvalidHandException>(() => GetSummmaryParser().ParseFullHandSummary(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
+            ClassicAssert.Throws<InvalidHandException>(() => GetSummmaryParser().ParseFullHandSummary(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
 
         [Test]
@@ -66,7 +67,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
         {
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, false);
 
-            Assert.Throws<InvalidHandException>(() => GetParser().ParseFullHandHistory(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
+            ClassicAssert.Throws<InvalidHandException>(() => GetParser().ParseFullHandHistory(handText, true), "IHandHistorySummaryParser: ParseFullHandSummary");
         }
 
         [Test]
@@ -85,14 +86,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
                 case SiteName.Winamax:
                 case SiteName.Merge:
                 case SiteName.Entraction:
-                    Assert.Ignore("Site do not produce cancelled handhistories: " + Site);
+                    ClassicAssert.Ignore("Site do not produce cancelled handhistories: " + Site);
                     break;
             }
 
             string cancelledHandText = SampleHandHistoryRepository.GetCancelledHandHandHistoryText(PokerFormat.CashGame, Site);
             bool isCancelled;
-            Assert.IsTrue(GetSummmaryParser().IsValidOrCancelledHand(cancelledHandText, out isCancelled), "IHandHistorySummaryParser: IsCancelledHand");
-            Assert.IsTrue(isCancelled, "IHandHistoryParser: IsCancelledHand");
+            ClassicAssert.IsTrue(GetSummmaryParser().IsValidOrCancelledHand(cancelledHandText, out isCancelled), "IHandHistorySummaryParser: IsCancelledHand");
+            ClassicAssert.IsTrue(isCancelled, "IHandHistoryParser: IsCancelledHand");
         }
 
         List<IHandHistoryParser> GetAllParsers()
@@ -120,14 +121,14 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.IsValidH
             string handText = SampleHandHistoryRepository.GetValidHandHandHistoryText(PokerFormat.CashGame, Site, true);
 
             var handParser = GetParser();
-            Assert.AreEqual(true, handParser.IsValidHand(handText), "IHandHistoryParser: IsValidHand");
+            ClassicAssert.AreEqual(true, handParser.IsValidHand(handText), "IHandHistoryParser: IsValidHand");
 
             foreach (var otherParser in GetAllParsers()
                 .Where(p => p.SiteName != handParser.SiteName))
             {
                 try
                 {
-                    Assert.IsFalse(otherParser.IsValidHand(handText), "IHandHistoryParser: Should be invalid hand");
+                    ClassicAssert.IsFalse(otherParser.IsValidHand(handText), "IHandHistoryParser: Should be invalid hand");
                 }
                 catch
                 {

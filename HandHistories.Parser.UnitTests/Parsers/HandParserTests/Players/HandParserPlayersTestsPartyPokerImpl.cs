@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 {

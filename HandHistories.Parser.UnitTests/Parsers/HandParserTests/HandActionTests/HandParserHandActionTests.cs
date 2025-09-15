@@ -7,6 +7,7 @@ using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -23,8 +24,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 
             List<HandAction> actionList = GetParser().ParseHandActions(handText);
 
-            Assert.AreEqual(expectedActions.Count, actionList.Count, "Action List Count");
-            Assert.AreEqual(expectedActions, actionList);            
+            ClassicAssert.AreEqual(expectedActions.Count, actionList.Count, "Action List Count");
+            ClassicAssert.AreEqual(expectedActions, actionList);            
         }
 
         protected abstract List<HandAction> ExpectedHandActionsBasicHand { get; }
@@ -65,7 +66,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
                 case SiteName.Winamax:
                 case SiteName.Pacific:
                 case SiteName.WinningPoker:
-                    Assert.Ignore("No example for omaha hi-lo hands for site " + Site);
+                    ClassicAssert.Ignore("No example for omaha hi-lo hands for site " + Site);
                     break;
             }
 

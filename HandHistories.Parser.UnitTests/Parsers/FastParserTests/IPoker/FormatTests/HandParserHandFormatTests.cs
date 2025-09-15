@@ -3,6 +3,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTests
 {
@@ -25,21 +26,21 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.FormatTe
             }
             catch (Exception ex)
             {
-                Assert.Fail(ex.Message);
+                ClassicAssert.Fail(ex.Message);
             }
         }
 
         [Test]
         public void HandleUnformattedHand_Works()
         {
-            Assert.IsTrue(GetSummmaryParser().IsValidHand(_unformattedXmlHand));
+            ClassicAssert.IsTrue(GetSummmaryParser().IsValidHand(_unformattedXmlHand));
 
             HandHistorySummary summary = GetSummmaryParser().ParseFullHandSummary(_unformattedXmlHand);
             HandHistory fullHandParse = GetParser().ParseFullHandHistory(_unformattedXmlHand);
             
-            Assert.AreEqual(_expectedHandId, summary.HandId, "IHandHistorySummaryParser: ParseHandId");
-            Assert.AreEqual(_expectedHandId, fullHandParse.HandId, "IHandHistoryParser: ParseHandId");
-            Assert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: ParseHandId");
+            ClassicAssert.AreEqual(_expectedHandId, summary.HandId, "IHandHistorySummaryParser: ParseHandId");
+            ClassicAssert.AreEqual(_expectedHandId, fullHandParse.HandId, "IHandHistoryParser: ParseHandId");
+            ClassicAssert.AreEqual(_expectedNumActions, fullHandParse.HandActions.Count, "IHandHistoryParser: ParseHandId");
         }
 
     }
