@@ -2,6 +2,7 @@
 using HandHistories.Objects.Cards;
 using HandHistories.Parser.Utils.AllInAction;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace HandHistories.Parser.UnitTests.Utils.AllInActionHelperTests
         {
             var result = AllInActionHelper.GetAdjustedCallAllInAmount(amount, actions);
 
-            Assert.AreEqual(expectedAmount, result);
+            ClassicAssert.AreEqual(expectedAmount, result);
         }
 
         [Test]

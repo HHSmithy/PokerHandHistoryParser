@@ -3,6 +3,7 @@ using System.Linq;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpMultipleHandsTests
 {
@@ -36,9 +37,9 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
         {           
             IEnumerable<string> actualSplitHands = GetSummmaryParser().SplitUpMultipleHands(handText);
 
-            Assert.AreEqual(expectedHandCount, actualSplitHands.Count(), "IHandHistorySummaryParser: SplitUpMultipleHands");
+            ClassicAssert.AreEqual(expectedHandCount, actualSplitHands.Count(), "IHandHistorySummaryParser: SplitUpMultipleHands");
 
-            Assert.IsTrue(actualSplitHands.All(s => string.IsNullOrWhiteSpace(s) == false));
+            ClassicAssert.IsTrue(actualSplitHands.All(s => string.IsNullOrWhiteSpace(s) == false));
         }
 
         [TestCase(10)]
@@ -52,7 +53,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
         {
             if (Site != SiteName.PartyPoker)
             {
-                Assert.Ignore("No example for site " + Site);
+                ClassicAssert.Ignore("No example for site " + Site);
             }
             TestSplittingUpHands(expectedCount);
         }
@@ -62,7 +63,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
         {
             if (Site != SiteName.PokerStars)
             {
-                Assert.Ignore("No example for site " + Site);    
+                ClassicAssert.Ignore("No example for site " + Site);    
             }
 
             string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "MultipleHandsTests", "NoNewLinesMultipleHands");
@@ -75,7 +76,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.SplitUpM
         {
             if (Site != SiteName.IPoker)
             {
-                Assert.Ignore("No example for site " + Site);
+                ClassicAssert.Ignore("No example for site " + Site);
             }
 
             string handText = SampleHandHistoryRepository.GetHandExample(PokerFormat.CashGame, Site, "MultipleHandsTests", "MinerFormat");

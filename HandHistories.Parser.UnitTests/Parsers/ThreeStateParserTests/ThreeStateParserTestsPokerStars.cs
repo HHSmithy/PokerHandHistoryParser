@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using HandHistories.Parser.Parsers.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.ThreeStateParserTests
         public void TestRunItTwice()
         {
 
-            Assert.Throws<RunItTwiceHandException>(RunItTwiceTest);
+            ClassicAssert.Throws<RunItTwiceHandException>(RunItTwiceTest);
         }
 
         void RunItTwiceTest()

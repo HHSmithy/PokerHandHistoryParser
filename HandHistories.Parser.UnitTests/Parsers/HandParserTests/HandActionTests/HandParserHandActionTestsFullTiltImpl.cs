@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -140,7 +141,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             get
             {
-                Assert.Ignore("Hand Actions not implemented");
+                ClassicAssert.Ignore("Hand Actions not implemented");
                 throw new NotImplementedException();
             }
         }

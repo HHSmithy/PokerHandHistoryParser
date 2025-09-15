@@ -2,6 +2,7 @@
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.CommunityCardTests
 {
@@ -29,7 +30,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.CommunityCardTe
         {
             string handText = SampleHandHistoryRepository.GetCommunityCardsHandHistoryText(PokerFormat.CashGame, Site, expectedBoard.Street);
            
-            Assert.AreEqual(expectedBoard, GetParser().ParseCommunityCards(handText));
+            ClassicAssert.AreEqual(expectedBoard, GetParser().ParseCommunityCards(handText));
         }
 
         [Test]

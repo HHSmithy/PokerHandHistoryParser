@@ -3,6 +3,7 @@ using System.Globalization;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralHandTests
 {
@@ -56,15 +57,15 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             }
             catch (Exception ex)
             {
-                Assert.Fail(ex.Message);
+                ClassicAssert.Fail(ex.Message);
             }
         }
 
         [Test]
         public void ParseHandId_Works()
         {            
-            Assert.AreEqual(_expectedHandId, GetSummmaryParser().ParseHandId(_handText), "IHandHistorySummaryParser: ParseHandId");
-            Assert.AreEqual(_expectedHandId, GetParser().ParseHandId(_handText), "IHandHistoryParser: ParseHandId");
+            ClassicAssert.AreEqual(_expectedHandId, GetSummmaryParser().ParseHandId(_handText), "IHandHistorySummaryParser: ParseHandId");
+            ClassicAssert.AreEqual(_expectedHandId, GetParser().ParseHandId(_handText), "IHandHistoryParser: ParseHandId");
         }
 
         [Test]
@@ -72,8 +73,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
         {
             var summary = GetSummmaryParser().ParseFullHandSummary(_handText);
 
-            Assert.AreEqual(_expectedRake, summary.Rake, "Rake");
-            Assert.AreEqual(_expectedPotSize, summary.TotalPot, "TotalPot");
+            ClassicAssert.AreEqual(_expectedRake, summary.Rake, "Rake");
+            ClassicAssert.AreEqual(_expectedPotSize, summary.TotalPot, "TotalPot");
         }
 
         [Test]
@@ -82,12 +83,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             switch (Site)
             {
                 case SiteName.Unknown:
-                    Assert.Ignore("Not implemented for site " + Site);
+                    ClassicAssert.Ignore("Not implemented for site " + Site);
                     break;
             }
 
-            Assert.AreEqual(_expectedDateTime, GetSummmaryParser().ParseDateUtc(_handText), "IHandHistorySummaryParser: ParseDateUtc");
-            Assert.AreEqual(_expectedDateTime, GetParser().ParseDateUtc(_handText), "IHandHistoryParser: ParseDateUtc");
+            ClassicAssert.AreEqual(_expectedDateTime, GetSummmaryParser().ParseDateUtc(_handText), "IHandHistorySummaryParser: ParseDateUtc");
+            ClassicAssert.AreEqual(_expectedDateTime, GetParser().ParseDateUtc(_handText), "IHandHistoryParser: ParseDateUtc");
         }
 
 
@@ -97,12 +98,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             switch (Site)
             {
                 case SiteName.Unknown:
-                    Assert.Ignore("Not implemented for site " + Site);
+                    ClassicAssert.Ignore("Not implemented for site " + Site);
                     break;
             }
 
-            Assert.AreEqual(_expectedDealerButtonPosition, GetSummmaryParser().ParseDealerPosition(_handText), "IHandHistorySummaryParser: ParseDealerPosition");
-            Assert.AreEqual(_expectedDealerButtonPosition, GetParser().ParseDealerPosition(_handText), "IHandHistoryParser: ParseDealerPosition");
+            ClassicAssert.AreEqual(_expectedDealerButtonPosition, GetSummmaryParser().ParseDealerPosition(_handText), "IHandHistorySummaryParser: ParseDealerPosition");
+            ClassicAssert.AreEqual(_expectedDealerButtonPosition, GetParser().ParseDealerPosition(_handText), "IHandHistoryParser: ParseDealerPosition");
         }
 
         [Test]
@@ -111,12 +112,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.GeneralH
             switch (Site)
             {
                 case SiteName.Unknown:
-                    Assert.Ignore("Not implemented for site " + Site);
+                    ClassicAssert.Ignore("Not implemented for site " + Site);
                     break;
             }
 
-            Assert.AreEqual(_expectedNumberOfPlayers, GetSummmaryParser().ParseNumPlayers(_handText), "IHandHistorySummaryParser: ParseNumPlayers");
-            Assert.AreEqual(_expectedNumberOfPlayers, GetParser().ParseNumPlayers(_handText), "IHandHistoryParser: ParseNumPlayers");
+            ClassicAssert.AreEqual(_expectedNumberOfPlayers, GetSummmaryParser().ParseNumPlayers(_handText), "IHandHistorySummaryParser: ParseNumPlayers");
+            ClassicAssert.AreEqual(_expectedNumberOfPlayers, GetParser().ParseNumPlayers(_handText), "IHandHistoryParser: ParseNumPlayers");
         }
     }
 }

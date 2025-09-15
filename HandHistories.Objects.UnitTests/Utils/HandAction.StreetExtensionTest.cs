@@ -2,6 +2,7 @@
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Hand;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,10 @@ namespace HandHistories.Tools.UnitTests
     {
         void AssertStreetActions(List<HandAction> expected, List<HandAction> actual)
         {
-            Assert.AreEqual(expected.Count, actual.Count);
+            ClassicAssert.AreEqual(expected.Count, actual.Count);
             for (int i = 0; i < expected.Count; i++)
             {
-                Assert.AreEqual(expected[i], actual[i], "Not equal in index: " + i);
+                ClassicAssert.AreEqual(expected[i], actual[i], "Not equal in index: " + i);
             }
         }
 

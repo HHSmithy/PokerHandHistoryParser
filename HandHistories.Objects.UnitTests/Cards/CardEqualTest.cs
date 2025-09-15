@@ -1,5 +1,6 @@
 ﻿using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 
 namespace HandHistories.Objects.UnitTests.Cards

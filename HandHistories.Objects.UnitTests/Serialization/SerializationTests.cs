@@ -10,6 +10,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Objects.UnitTests.Utils.Serialization;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Objects.UnitTests.Serialization
 {
@@ -59,7 +60,7 @@ namespace HandHistories.Objects.UnitTests.Serialization
             string serialized =
                 _serializationHandler.Serialize(_handHistory);
 
-            Assert.IsNotNullOrEmpty(serialized);
+            ClassicAssert.IsFalse(string.IsNullOrWhiteSpace(serialized));
         }
 
         [Test]
@@ -69,7 +70,7 @@ namespace HandHistories.Objects.UnitTests.Serialization
 
             HandHistory deserailizedHandHistory = _serializationHandler.Deserialize<HandHistory>(serialized);
 
-            Assert.AreEqual(_handHistory, deserailizedHandHistory);
+            ClassicAssert.AreEqual(_handHistory, deserailizedHandHistory);
         }
     }
 }

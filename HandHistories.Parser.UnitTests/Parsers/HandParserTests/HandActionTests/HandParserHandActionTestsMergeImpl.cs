@@ -5,6 +5,7 @@ using System.Text;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
 {
@@ -111,7 +112,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.HandActionTests
         {
             get
             {
-                Assert.Ignore("HiLo parsing currently not supported.");
+                ClassicAssert.Ignore("HiLo parsing currently not supported.");
                 throw new NotImplementedException();
             }
         }

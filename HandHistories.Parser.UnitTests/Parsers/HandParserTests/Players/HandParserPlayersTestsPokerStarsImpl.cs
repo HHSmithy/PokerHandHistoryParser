@@ -2,6 +2,7 @@ using System;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.Players;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System.Collections.Generic;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players

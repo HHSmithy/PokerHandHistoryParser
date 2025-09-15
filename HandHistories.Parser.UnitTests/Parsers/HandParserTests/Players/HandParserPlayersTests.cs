@@ -4,6 +4,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 {
@@ -19,8 +20,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
 
             PlayerList playerList = GetParser().ParsePlayers(handText);
 
-            Assert.AreEqual(expectedPlayers.Count, playerList.Count, "Player List Count");
-            Assert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", playerList));
+            ClassicAssert.AreEqual(expectedPlayers.Count, playerList.Count, "Player List Count");
+            ClassicAssert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", playerList));
         }
 
         protected abstract PlayerList ExpectedNoHoleCardsPlayers { get; }
@@ -53,7 +54,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 case SiteName.PartyPoker:
                 case SiteName.PokerStars:
                 case SiteName.BossMedia:
-                    Assert.Ignore("No sitting out examples for " + Site);
+                    ClassicAssert.Ignore("No sitting out examples for " + Site);
                     break;
             }
 
@@ -66,7 +67,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
             switch (Site)
             {            
                 case SiteName.Pacific:
-                    Assert.Ignore("No omaha examples for " + Site);
+                    ClassicAssert.Ignore("No omaha examples for " + Site);
                     break;
             }
 
@@ -84,7 +85,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.Players
                 case SiteName.Pacific:
                 case SiteName.WinningPoker:
                 case SiteName.BossMedia:
-                    Assert.Ignore("No Hi-Lo examples for " + Site);
+                    ClassicAssert.Ignore("No Hi-Lo examples for " + Site);
                     break;
             }
 

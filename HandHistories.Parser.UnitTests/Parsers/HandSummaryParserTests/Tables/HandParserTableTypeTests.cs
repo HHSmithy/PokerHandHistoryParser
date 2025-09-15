@@ -1,6 +1,7 @@
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 {
@@ -28,13 +29,13 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Tables
 
             if (handText == null)
             {
-                Assert.Ignore("No Table" + tableTestNumber + ".txt found.");
+                ClassicAssert.Ignore("No Table" + tableTestNumber + ".txt found.");
             }
 
             string expectedTableTypeString = _expectedTableTypeStrings[tableTestNumber - 1];
 
-            Assert.AreEqual(expectedTableTypeString, GetSummmaryParser().ParseTableType(handText).ToString(), "IHandHistorySummaryParser: ParseTableName");
-            Assert.AreEqual(expectedTableTypeString, GetParser().ParseTableType(handText).ToString(), "IHandHistoryParser: ParseTableName");
+            ClassicAssert.AreEqual(expectedTableTypeString, GetSummmaryParser().ParseTableType(handText).ToString(), "IHandHistorySummaryParser: ParseTableName");
+            ClassicAssert.AreEqual(expectedTableTypeString, GetParser().ParseTableType(handText).ToString(), "IHandHistoryParser: ParseTableName");
         }
 
         [TestCase(1)]

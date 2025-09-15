@@ -1,5 +1,7 @@
 ﻿using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
+
 using System;
 
 namespace HandHistories.Objects.UnitTests.Cards
@@ -20,7 +22,7 @@ namespace HandHistories.Objects.UnitTests.Cards
             double elapsedMillis = timer.Elapsed.TotalMilliseconds;
             Console.Write("Time in milliseconds to generate " + numberOfCards + " cards: " + elapsedMillis);
             bool ExecutionTimeLessThanFiveSeconds = (elapsedMillis < 1000);
-            Assert.IsTrue(ExecutionTimeLessThanFiveSeconds, "Should take less than one seconds: Time Taken: " + elapsedMillis + "ms");
+            ClassicAssert.IsTrue(ExecutionTimeLessThanFiveSeconds, "Should take less than one seconds: Time Taken: " + elapsedMillis + "ms");
         }
     }
 }

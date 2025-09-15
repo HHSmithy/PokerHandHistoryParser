@@ -6,6 +6,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 {
@@ -22,12 +23,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistory actualHand = GetParser().ParseFullHandHistory(handText, true);
 
-            Assert.AreEqual(expectedHand.GameDescription, actualHand.GameDescription);
-            Assert.AreEqual(expectedHand.DealerButtonPosition, actualHand.DealerButtonPosition);
-            Assert.AreEqual(expectedHand.DateOfHandUtc, actualHand.DateOfHandUtc);
-            Assert.AreEqual(expectedHand.HandId, actualHand.HandId);
-            Assert.AreEqual(expectedHand.NumPlayersSeated, actualHand.NumPlayersSeated);
-            Assert.AreEqual(expectedHand.TableName, actualHand.TableName);
+            ClassicAssert.AreEqual(expectedHand.GameDescription, actualHand.GameDescription);
+            ClassicAssert.AreEqual(expectedHand.DealerButtonPosition, actualHand.DealerButtonPosition);
+            ClassicAssert.AreEqual(expectedHand.DateOfHandUtc, actualHand.DateOfHandUtc);
+            ClassicAssert.AreEqual(expectedHand.HandId, actualHand.HandId);
+            ClassicAssert.AreEqual(expectedHand.NumPlayersSeated, actualHand.NumPlayersSeated);
+            ClassicAssert.AreEqual(expectedHand.TableName, actualHand.TableName);
 
             return actualHand;
         }
@@ -38,12 +39,12 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistorySummary actualSummary = GetSummmaryParser().ParseFullHandSummary(handText, true);
 
-            Assert.AreEqual(expectedSummary.GameDescription, actualSummary.GameDescription);
-            Assert.AreEqual(expectedSummary.DealerButtonPosition, actualSummary.DealerButtonPosition);
-            Assert.AreEqual(expectedSummary.DateOfHandUtc, actualSummary.DateOfHandUtc);
-            Assert.AreEqual(expectedSummary.HandId, actualSummary.HandId);
-            Assert.AreEqual(expectedSummary.NumPlayersSeated, actualSummary.NumPlayersSeated);
-            Assert.AreEqual(expectedSummary.TableName, actualSummary.TableName);
+            ClassicAssert.AreEqual(expectedSummary.GameDescription, actualSummary.GameDescription);
+            ClassicAssert.AreEqual(expectedSummary.DealerButtonPosition, actualSummary.DealerButtonPosition);
+            ClassicAssert.AreEqual(expectedSummary.DateOfHandUtc, actualSummary.DateOfHandUtc);
+            ClassicAssert.AreEqual(expectedSummary.HandId, actualSummary.HandId);
+            ClassicAssert.AreEqual(expectedSummary.NumPlayersSeated, actualSummary.NumPlayersSeated);
+            ClassicAssert.AreEqual(expectedSummary.TableName, actualSummary.TableName);
 
             return actualSummary;
         }
@@ -193,7 +194,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "ShowsDownSingleCard");
 
-            Assert.IsFalse(actualHand.Players["Zaza5573"].hasHoleCards);
+            ClassicAssert.IsFalse(actualHand.Players["Zaza5573"].hasHoleCards);
         }
 
         [Test]
@@ -263,7 +264,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.FastParserTests.PokerStars
 
             HandHistory actualHand = TestFullHandHistory(expectedHand, "PlayerNameWithSlashesAndSquareBrackets");
 
-            Assert.AreEqual(expectedActions, actualHand.HandActions);
+            ClassicAssert.AreEqual(expectedActions, actualHand.HandActions);
         }
     }
 }

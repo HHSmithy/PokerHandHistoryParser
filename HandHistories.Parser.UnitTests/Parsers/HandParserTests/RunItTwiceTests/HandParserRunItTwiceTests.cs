@@ -4,6 +4,7 @@ using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandParserTests.RunItTwiceTests
 
             HandHistory actualHand = GetParser().ParseFullHandHistory(handText, true);
 
-            Assert.AreEqual(expectedBoard, actualHand.RunItTwiceData.Board);
-            Assert.AreEqual(expectedActions, actualHand.RunItTwiceData.Actions);
+            ClassicAssert.AreEqual(expectedBoard, actualHand.RunItTwiceData.Board);
+            ClassicAssert.AreEqual(expectedActions, actualHand.RunItTwiceData.Actions);
         }
     }
 }

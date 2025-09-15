@@ -1,6 +1,7 @@
 ﻿using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.UnitTests.Parsers.Base;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
 {
@@ -24,8 +25,8 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
         {
             string handText = SampleHandHistoryRepository.GetSeatExampleHandHistoryText(PokerFormat.CashGame, Site, expectedSeatType);
 
-            Assert.AreEqual(expectedSeatType, GetSummmaryParser().ParseSeatType(handText), "IHandHistorySummaryParser: ParseSeatType");
-            Assert.AreEqual(expectedSeatType, GetParser().ParseSeatType(handText), "IHandHistoryParser: ParseSeatType");
+            ClassicAssert.AreEqual(expectedSeatType, GetSummmaryParser().ParseSeatType(handText), "IHandHistorySummaryParser: ParseSeatType");
+            ClassicAssert.AreEqual(expectedSeatType, GetParser().ParseSeatType(handText), "IHandHistoryParser: ParseSeatType");
         }
 
         [Test]
@@ -34,7 +35,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
             switch (Site)
             {
                 case SiteName.MicroGaming:
-                    Assert.Ignore(Site + " currently only has anonymous HU tables");
+                    ClassicAssert.Ignore(Site + " currently only has anonymous HU tables");
                     break;
             }
             TestSeatType(SeatType.FromMaxPlayers(2));
@@ -61,7 +62,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.FullTilt:
                 case SiteName.MicroGaming:
                 case SiteName.Winamax:
-                    Assert.Ignore(Site + " currently doesn't have 4 max games.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have 4 max games.");
                     break;
             }            
 
@@ -82,7 +83,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
                 case SiteName.MicroGaming:
                 case SiteName.IPoker:
                 case SiteName.Winamax:
-                    Assert.Ignore(Site + " currently doesn't have 10 handed games.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have 10 handed games.");
                     break;
             }            
 
@@ -95,7 +96,7 @@ namespace HandHistories.Parser.UnitTests.Parsers.HandSummaryParserTests.Seats
             switch (Site)
             {
                 case SiteName.Winamax:
-                    Assert.Ignore(Site + " currently doesn't have 9 handed games.");
+                    ClassicAssert.Ignore(Site + " currently doesn't have 9 handed games.");
                     break;
             }
             TestSeatType(SeatType.FromMaxPlayers(9));

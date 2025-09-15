@@ -1,5 +1,7 @@
 ﻿using HandHistories.Objects.Cards;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
+
 
 namespace HandHistories.Objects.UnitTests.Cards
 {
@@ -11,8 +13,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("T", "h");
 
-            Assert.AreEqual("Th", card.CardStringValue);
-            Assert.AreEqual(34, card.CardIntValue);
+            ClassicAssert.AreEqual("Th", card.CardStringValue);
+            ClassicAssert.AreEqual(34, card.CardIntValue);
         }
 
         [Test]
@@ -20,8 +22,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("T", "d");
 
-            Assert.AreEqual("Td", card.CardStringValue);
-            Assert.AreEqual(21, card.CardIntValue);
+            ClassicAssert.AreEqual("Td", card.CardStringValue);
+            ClassicAssert.AreEqual(21, card.CardIntValue);
         }
 
         [Test]
@@ -29,8 +31,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("2", "c");
 
-            Assert.AreEqual("2c", card.CardStringValue);
-            Assert.AreEqual(0, card.CardIntValue);
+            ClassicAssert.AreEqual("2c", card.CardStringValue);
+            ClassicAssert.AreEqual(0, card.CardIntValue);
         }
 
         [Test]
@@ -38,8 +40,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("A", "s");
 
-            Assert.AreEqual("As", card.CardStringValue);
-            Assert.AreEqual(51, card.CardIntValue);
+            ClassicAssert.AreEqual("As", card.CardStringValue);
+            ClassicAssert.AreEqual(51, card.CardIntValue);
         }
 
         [Test]
@@ -47,8 +49,8 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = Card.GetCardFromIntValue(51);
 
-            Assert.AreEqual("As", card.CardStringValue);
-            Assert.AreEqual(51, card.CardIntValue);
+            ClassicAssert.AreEqual("As", card.CardStringValue);
+            ClassicAssert.AreEqual(51, card.CardIntValue);
         }
 
         [Test]
@@ -56,20 +58,20 @@ namespace HandHistories.Objects.UnitTests.Cards
         {
             Card card = new Card("a", "S");
 
-            Assert.AreEqual("As", card.CardStringValue);
-            Assert.AreEqual(51, card.CardIntValue);
+            ClassicAssert.AreEqual("As", card.CardStringValue);
+            ClassicAssert.AreEqual(51, card.CardIntValue);
         }
 
         [Test]
         public void NewCard_InvalidRank_ThrowsCardException()
         {
-            Assert.Throws<System.ArgumentException>(() => new Card("1", "d"), "Rank is not correctly formatted. Should be 2-9, T, J, Q, K or A.");            
+            ClassicAssert.Throws<System.ArgumentException>(() => new Card("1", "d"), "Rank is not correctly formatted. Should be 2-9, T, J, Q, K or A.");            
         }
 
         [Test]
         public void NewCard_InvalidSuit_ThrowsCardException()
         {
-            Assert.Throws<System.ArgumentException>(() => new Card("T", "x"), "Suit is not correctly formatted. Should be c, d, h or s.");
+            ClassicAssert.Throws<System.ArgumentException>(() => new Card("T", "x"), "Suit is not correctly formatted. Should be c, d, h or s.");
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using HandHistories.Parser.Compression;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace HandHistories.Parser.UnitTests.Compression
 {
